@@ -1,0 +1,148 @@
+
+nav.nav-left{
+    /* background-color: red; */
+    width: 12em;
+    font-size: 15px;
+    height: 100%;
+}
+
+div.left-menu{
+    display: flex;
+    align-items: center;
+    border: 1px solid transparent;
+    padding: 3px 3px;
+    margin: 0 0 15px 0;
+}
+
+
+nav.nav-left>div:nth-child(1)>a{
+    text-decoration: none;
+    color:black;
+    font-size: 13px;
+}
+
+
+nav.nav-left>header{
+    padding: 3px 7px;
+    margin: 10px 0 0 0;
+}
+
+div.nav-left-icon{
+    background-size: auto;
+    background-repeat: no-repeat;
+    display: inline-block;
+    height: 20px;
+    width: 20px;
+
+}
+
+li.left-menu{
+    transition: all .2s ease;
+    border: 1px solid transparent;
+    cursor: pointer;
+    align-items: center;
+    display: flex;
+    padding: 3px 3px;
+    justify-content: space-between;
+}
+li.left-menu>div, div.left-menu{
+    align-items: center;
+    display: flex;
+}
+
+.left-menu>div>a, div.left-menu>a{
+    margin-left: 5px;
+}
+
+.left-menu:hover{
+    border: 1px solid #ddd;
+    background: #fefefe;
+}
+
+
+div.nav-left-icon.news-feed{
+    background-image: url(https://static.xx.fbcdn.net/rsrc.php/v3/yD/r/zeSf-ifGzv1.png);
+    background-position: 0 -1325px;
+}
+
+div.nav-left-icon.messenger{
+    background-image: url(https://static.xx.fbcdn.net/rsrc.php/v3/yD/r/zeSf-ifGzv1.png);
+    background-position: 0 -170px;
+}
+
+div.nav-left-icon.idea{
+    background-image: url(https://static.xx.fbcdn.net/rsrc.php/v3/yD/r/zeSf-ifGzv1.png);
+    background-position: 0 -380px;
+}
+
+div.nav-left-icon.calendar{
+    background-image: url(https://static.xx.fbcdn.net/rsrc.php/v3/y1/r/PCTrfZN79_z.png);
+    background-position: 0 -21px;
+}
+
+div.nav-left-icon.events{
+    background-image: url(https://static.xx.fbcdn.net/rsrc.php/v3/yt/r/JQbi4HBVkPQ.png);
+    background-position: 0 -63px;
+}
+
+div.nav-left-icon.pages{
+    background-image: url(https://static.xx.fbcdn.net/rsrc.php/v3/yD/r/zeSf-ifGzv1.png);
+    background-position: 0 -233px;
+}
+
+div.nav-left-icon.friend-lists{
+    background-image: url(https://static.xx.fbcdn.net/rsrc.php/v3/yD/r/zeSf-ifGzv1.png);
+    background-position: 0 -884px;
+}
+
+div.nav-left-icon.fundraisers{
+    background-image: url(https://static.xx.fbcdn.net/rsrc.php/v3/yD/r/zeSf-ifGzv1.png);
+    background-position: 0 -947px;
+}
+
+div.nav-left-icon.memories{
+    background-image: url(https://static.xx.fbcdn.net/rsrc.php/v3/yD/r/zeSf-ifGzv1.png);
+    background-position: 0 -1388px;
+}
+
+div.nav-left-icon.see-more{
+    background-image: url(https://static.xx.fbcdn.net/rsrc.php/v3/yD/r/nvsdYm79QLU.png);
+    background-position: -220px -270px;
+}
+
+
+li.active{
+    border: 1px solid #ddd;
+    background: #fefefe;
+    font-weight: bold;
+}
+
+li.left-menu-see-more{
+    border: none;
+    background: none;
+    display: flex;
+    padding-left: 5px;
+    cursor: pointer;
+}
+
+li.left-menu-see-more>div>a{
+    color: #365899;
+    text-decoration: none;
+    font-size: 13px;
+
+}
+li.left-menu-see-more>div{
+    display: flex;
+}
+
+
+
+li.left-menu-see-more:hover{
+    border: none;
+    background: none;
+}
+
+
+li.left-menu>div>a, div.left-menu>a{
+    font-size: 13px;
+}
