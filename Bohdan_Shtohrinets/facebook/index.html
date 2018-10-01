@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+    <title>Facebook</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <i class="fab fa-facebook"></i>
+            <div class="search">
+                <input id="search-field" type="text" placeholder=" Search mail" name="search">
+                <button id="search-button" type="submit"><i class="fa fa-search"></i></button>
+            </div>
+            <ul class="menu">
+                <li><a href="#" class="menu_signs"><i class="fas fa-user-circle"></i> User</a></li>
+                <li><a href="#" class="menu_signs"> Home</a></li>
+                <li><a href="#" class="menu_signs"> Create</a></li>
+                <li>
+                    <a href="#"><i class="fas fa-user-friends buttons_menu"></i></a>
+                    <a href="#"><i class="fab fa-facebook-messenger"></i></a>
+                    <a href="#"><i class="fas fa-bell buttons_menu"></i></a>
+                </li>
+                <li><a><i class="fas fa-question-circle buttons_menu"></i></a></li>
+                <li><a href="#"><i class="fas fa-angle-down buttons_menu"></i></a></li>
+            </ul>
+        </nav>
+    </header>
+    <section id="container">
+        <section id="side_menu">
+            <ul class="sidebar">
+                <li class="link title"><a href="#"><i class="far fa-user-circle"></i> User name</a></li>
+                <li class="link active"><a href="#"><i class="far fa-newspaper"></i> News Feed</a></li>
+                <li class="title link"><a href="#"><i class="fab fa-facebook-messenger"></i> Messenger</a></li>
+                <li><b class="section_name">Shortcuts</b></li>
+                <li class="title link"><a href="#"><i class="fas fa-arrow-alt-circle-right"></i> Group Name</a></li>
+                <li><b class="section_name">Explore</b></li>
+                <li class="link"><a href="#"><i class="fas fa-calendar-alt"></i> Events</a></li>
+                <li class="link"><a href="#"><i class="fas fa-users"></i> Groups</a></li>
+                <li class="link"><a href="#"><i class="fab fa-font-awesome-flag"></i> Pages</a></li>
+                <li class="link"><a href="#"><i class="fas fa-user-friends"></i> Friend List</a></li>
+                <li class="drop_link"><i class="fas fa-angle-down"></i> <a href="#">See More</a>
+                    <!--TODO:-->
+                    <!--<ul class="drop-down">-->
+                        <!--<li><i class="fas fa-newspaper"></i> Pages Feed</li>-->
+                        <!--<li><i class="fas fa-gamepad"></i> Games</li>-->
+                        <!--<li><i class="fas fa-gift"></i> Offers</li>-->
+                        <!--<li><i class="fas fa-file-video"></i> Live Video</li>-->
+                        <!--<li><i class="fas fa-comment-dots"></i> Recommendations</li>-->
+                        <!--<li><i class="fab fa-adversal"></i> Recent Ad Activity</li>-->
+                        <!--<li><i class="fas fa-camera-retro"></i> Create a Frame</li>-->
+                        <!--<li><i class="fas fa-users"></i> Discover People</li>-->
+                        <!--<li><i class="fas fa-save"></i> Saved</li>-->
+                        <!--<li><i class="fas fa-sun"></i> Weather</li>-->
+                    <!--</ul>-->
+                    <!--TODO-->
+                </li>
+            </ul>
+        </section>
+        <section id="feed">
+            <section id="make_post">
+                <ul class="post_bar">
+                    <li><a href="#"><i class="fas fa-pen"></i> <b>Make Post</b></a></li>
+                    <li><a href="#"><i class="far fa-images"></i> <b>Photo/Video Album</b></a></li>
+                    <li><a href="#"><i class="fas fa-video"></i> <b>Live Video</b></a></li>
+                </ul>
+                <input type="text" value=" What`s on your mind user?">
+                <ul class="hashtag">
+                    <li><a href="#"><i class="fas fa-image"></i> Photo/Video</a></li>
+                    <li><a href="#"><i class="fas fa-user-tag"></i> Tag Friends</a></li>
+                    <li><a href="#"><i class="far fa-grin-beam"></i> Felling/Activ...</a></li>
+                </ul>
+            </section>
+            <section id="friend_post">
+                <table>
+                    <tr>
+                        <td class="image"><i class="fas fa-user-circle"></i></td>
+                        <td class="post_info">
+                            <a href="#"><b>User1</b></a>
+                            <p>1hr</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2" style="color: black"><p> An incredible day with friends!!!</p></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2"><img src="images/post1.jpeg" style="width: 100%"></td>
+                    </tr>
+                </table>
+                <ul class="feelings">
+                    <li><a href="#"><b><i class="fas fa-thumbs-up"></i> Like</b></a></li>
+                    <li><a href="#"><b><i class="fas fa-comment"></i> Comment</b></a></li>
+                    <li><a href="#"><b><i class="fas fa-share-square"></i> Share</b></a></li>
+                </ul>
+            </section>
+        </section>
+        <section id="events">
+            <section id="story">
+                <ul class="event_title">
+                    <li style="float: left"><a href="#"><b>Stories</b></a></li>
+                    <li><a href="#">Archive</a></li>
+                    <li><a href="#">Settings</a></li>
+                </ul>
+                <table>
+                    <tr>
+                        <td class="image"><i class="fas fa-plus-circle"></i></td>
+                        <td>
+                            <a href="#"><b>Add to Your Story</b></a>
+                            <p>Share a photo, video or write something</p>
+                        </td>
+                    </tr>
+                </table>
+            </section>
+            <section id="event_list">
+                <ul class="event_title">
+                    <li style="float: left"><a href="#"><b><i class="far fa-calendar"></i> 2 event invites</b></a></li>
+                </ul>
+            </section>
+            <section id="friend_request">
+                <ul class="event_title">
+                    <li style="float: left"><b>Friend request</b></li>
+                    <li><a href="#">See all</a></li>
+                </ul>
+                <table>
+                    <tr>
+                        <td class="image"><i class="fas fa-user-plus"></i></td>
+                        <td>
+                            <a href="#"><b>User 1</b></a>
+                            <p>5 mutual friends</p>
+                            <p><button type="submit">Confirm friend</button></p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="image"><i class="fas fa-user-plus"></i></td>
+                        <td>
+                            <a href="#"><b>User 2</b></a>
+                            <p>43 mutual friends</p>
+                            <p><button type="submit">Confirm friend</button></p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="image"><i class="fas fa-user-plus"></i></td>
+                        <td>
+                            <a href="#"><b>User 3</b></a>
+                            <p>4 mutual friends</p>
+                            <p><button type="submit">Confirm friend</button></p>
+                        </td>
+                    </tr>
+                </table>
+            </section>
+            <section id="people_u_know">
+                <ul class="event_title">
+                    <li style="float: left"><b>People You May Know</b></li>
+                    <li><a href="#">See all</a></li>
+                </ul>
+                <table>
+                    <tr>
+                        <td class="image"><i class="fas fa-user-plus"></i></td>
+                        <td>
+                            <a href="#"><b>User 1</b></a>
+                            <p>5 mutual friends</p>
+                            <p><button type="submit">Add friend</button></p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="image"><i class="fas fa-user-plus"></i></td>
+                        <td>
+                            <a href="#"><b>User 2</b></a>
+                            <p>43 mutual friends</p>
+                            <p><button type="submit">Add friend</button></p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="image"><i class="fas fa-user-plus"></i></td>
+                        <td>
+                            <a href="#"><b>User 3</b></a>
+                            <p>4 mutual friends</p>
+                            <p><button type="submit">Add friend</button></p>
+                        </td>
+                    </tr>
+                </table>
+            </section>
+        </section>
+    </section>
+</body>
+</html>
