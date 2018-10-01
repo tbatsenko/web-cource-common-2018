@@ -1,0 +1,118 @@
+div.aside-right{
+}
+
+aside.stories{
+    width: 15em;
+    height: 100%;
+    padding: 10px 12px;
+}
+
+div.aside-right-head{
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 12px;
+}
+
+div.horizontal-small{
+    width: 7.5em;
+    line-height: 22px;
+    justify-content: space-between;
+    display: flex;
+}
+
+div.horizontal-small>a{
+    font-size: 13px;
+}
+
+div.horizontal-small>span{
+    line-height: normal;
+    font-size: 13px;
+}
+
+.stories-icon.archive{
+    display: inline-block;
+    background: url("https://static.xx.fbcdn.net/rsrc.php/v3/yd/r/8M2_U-8yMz7.png");
+    background-size: auto;
+    background-repeat: no-repeat;
+    width: 12px;
+    height: 12px;
+    background-position: -37px -167px;
+    margin-right: 4px;
+}
+
+.story-img{
+    height: 52px;
+    width: 52px;
+    border-radius: 26px;
+}
+
+.story-item{
+    display: flex;
+    margin-bottom: .5em;
+}
+
+.story-text-container{
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+}
+
+.story-img-container{
+    margin-right: .5em;
+    border-radius: 50%;
+    border: 2px solid #3578e5;
+    height: 52px;
+    width: 52px;
+    padding: 2px;
+}
+
+.story-header{
+    font-size: 13px;
+    font-weight: 600;
+    color: #365899;
+}
+
+.story-description{
+    color: #8d949e;
+    font-weight: normal;
+    cursor: pointer;
+    font-size: 13px;
+}
+
+.icon-see-more{
+    background-image: url(https://static.xx.fbcdn.net/rsrc.php/v3/yD/r/nvsdYm79QLU.png);
+    background-position: -220px -270px;
+
+    background-size: auto;
+    background-repeat: no-repeat;
+    display: inline-block;
+    height: 20px;
+    width: 20px;
+}
+
+
+.stories-see-more{
+    font-size: 13px;
+    display: flex;
+}
+
+.your-story-img{
+    width: 24px;
+    height: 24px;
+    background: url("https://static.xx.fbcdn.net/rsrc.php/v3/yd/r/8M2_U-8yMz7.png");
+    background-position: 0 -180px;
+    
+}
+
+.your-story-img-container{
+    margin-right: .5em;
+    border-radius: 50%;
+    border: 1px solid #dadde1;
+    background: #f5f6f7;
+    height: 52px;
+    width: 74px;
+    justify-content: center;
+    align-items: center;
+    display: flex;  
+    padding: 2px;    
+}
