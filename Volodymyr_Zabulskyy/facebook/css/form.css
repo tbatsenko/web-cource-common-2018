@@ -1,0 +1,134 @@
+.form-container{
+    margin-bottom: 1em;
+}
+
+.form-main{
+    
+}
+
+.post-options-container{
+    padding: 8px 8px 8px 0;
+    display: flex;
+    font-size: 12px;
+    background: #f5f6f7;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+
+.post-option{
+    color: #365899;
+    font-weight: 600;
+    line-height: 14px;
+    padding: 0 10px;
+
+}
+
+span.active{
+    color: #4b4f56;
+}
+
+.left-border{
+    border-left: 1px solid #ccd0d5;
+}
+
+.form-options-ico{
+    width: 16px;
+    height: 16px;
+    float: left;
+    background: url("https://static.xx.fbcdn.net/rsrc.php/v3/yw/r/RcLlSjOkA5H.png");
+    background-repeat: no-repeat;
+}
+
+.form-options-ico.post{
+    background-position: -17px -349px;
+}
+
+.form-options-ico.photo{
+    background-position: -34px -349px;
+}
+
+.form-options-ico.video{
+    background: url("https://static.xx.fbcdn.net/rsrc.php/v3/yS/r/A_wTlD3H0Ah.png");
+    background-position: 0 -2717px;
+}
+
+.form-options-text{
+    padding-left: 7px;
+}
+
+.form-img{
+    height: 36px;
+    width: 36px;
+    border-radius: 18px;
+}
+
+.form-input-container{
+    display: flex;
+    padding: 10px;
+}
+
+.form-input{
+    height: 36px;
+    border: 0;
+    font-size: 14px;
+    color: #5f6274;
+}
+
+.form-img-container{
+    padding-right: 10px;
+}
+
+
+.form-options-container{
+    display: flex;
+    margin: 0 12px;
+    padding: 8px 0;
+    border-top: 1px solid #e9ebee;
+}
+
+.form-option-container{
+    margin-right: 6px;
+    padding: .5em .75em .5em 1em;
+    vertical-align: middle;
+    background: #f5f6f7;
+    border-radius: 18px;
+    box-shadow: none;
+    display: flex;
+    border: none;
+    display: flex;
+    align-items: center;
+}
+
+.form-option{
+    color: #4b4f56;
+    font-size: 12px;
+    font-weight: 600;
+    box-shadow: none;
+    border: none;
+    background: transparent;
+    padding-left: 10px;
+}
+
+.form-option-ico{
+    width: 20px;
+    height: 20px;
+    background: url("https://static.xx.fbcdn.net/rsrc.php/v3/yS/r/A_wTlD3H0Ah.png");
+
+}
+
+.form-option-ico.photo{
+    background-position: 0 -1451px;
+}
+
+.form-option-ico.tag{
+    background-position: 0 -905px;
+}
+
+.form-option-ico.activity{
+    background-position: 0 -800px;
+}
+
+.form-option-ico.dots{
+    background-position: 0 -2207px;
+}
