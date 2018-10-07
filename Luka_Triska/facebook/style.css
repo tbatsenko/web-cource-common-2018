@@ -1,0 +1,97 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+nav {
+    margin-top: -15px;
+    width: 100%;
+    background: #fff;
+}
+
+ul {
+    list-style: none;
+}
+
+#top-bar-navigation {
+    display: flex;
+    height: 46px;
+    align-items: center;
+    padding: 0 10px;
+    background: #3b5998;
+    color: #fff;
+    font-size: 0.9em;
+}
+
+#fa_search {
+    position: relative;
+    width: 300px;
+}
+
+#fa_search_button {
+    margin-right: 400px;
+}
+
+#inputText {
+    width: 100%;
+}
+
+form {
+    width: 300px;
+}
+
+#fa_logo {
+    margin: 0 5px 0 180px;
+    line-height: 40px;
+    height: 24px;
+    width: 24px;
+    display: inline-block;
+    background: url("https://static.xx.fbcdn.net/rsrc.php/v3/yF/r/1c0gE0MbEo8.png");
+    background-size: cover;
+}
+
+#top-bar-navigation li:not(:first-child):not(#fa_search) {
+    margin-left: 5px;
+}
+
+.bar-buttons {
+    height: 24px;
+    background-size: auto;
+    border: 0;
+    width: 24px;
+}
+
+#friend-requests-button {
+    margin-left: 10px;
+    background: url("https://static.xx.fbcdn.net/rsrc.php/v3/yx/r/0ZnQSqvnMOO.png") 0 -892px;
+}
+
+#messenger-button {
+    background: url("https://static.xx.fbcdn.net/rsrc.php/v3/yx/r/0ZnQSqvnMOO.png") 0 -942px;
+}
+
+#notifications-button {
+    background: url("https://static.xx.fbcdn.net/rsrc.php/v3/yx/r/0ZnQSqvnMOO.png") 0 -792px;
+}
+
+#account-switcher-button {
+    margin-left: 15px;
+    background: url("https://static.xx.fbcdn.net/rsrc.php/v3/yx/r/0ZnQSqvnMOO.png") 0 -470px;
+}
+
+#FAQ-button {
+    background: url("https://static.xx.fbcdn.net/rsrc.php/v3/yx/r/0ZnQSqvnMOO.png") 0 -992px;
+}
+
+#dropdown-button {
+    background: url("https://static.xx.fbcdn.net/rsrc.php/v3/yx/r/0ZnQSqvnMOO.png") 0 -842px;
+}
+
+aside {
+    margin-left: 150px;
+}
+
+h4 {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
