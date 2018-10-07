@@ -1,0 +1,147 @@
+
+nav.nav-top {
+    padding: .5em 0em;
+    background-color: #4267b2;
+    position: fixed;
+    width: 100%;
+}
+
+nav.nav-top>div{
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
+    align-items: center;
+
+    width: 65em;
+    margin: auto;
+
+}
+
+nav.nav-top>div>div{
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav.nav-top>div>div>form>input{
+    width: 25em;
+    border: solid .3em transparent;
+    border-radius: 2px 0 0 2px;
+}
+
+nav.nav-top>div>div>form>button{
+    width: 3em;
+    border: solid .3em transparent;
+    border-radius: 0 2px 2px 0px;
+    background: #fff;
+}
+
+nav.nav-top>div>div>form>button>img{
+    width: 1em;
+    height: 1em;
+}
+
+
+nav.nav-top>div>div>form{
+    display: flex;
+}
+
+nav.nav-top>div>div>ul>li>div{
+    align-items: center;
+    display: flex;
+    border-radius: 3px;
+    height: 24px;
+    border: 0;
+    padding: 1px .6em;
+    background: transparent;
+}
+
+
+nav.nav-top>div>div>ul>li{
+    display: flex;
+}
+
+
+nav.nav-top>div>div>ul>li>div>*{
+    color: #fff;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 12px;
+}
+
+
+nav.nav-top>div>div>ul{
+    list-style: none;
+    display: flex;
+    flex-flow: row;
+    margin: 0;
+}
+
+
+
+
+div.person-profile{
+    background: url("img/person.png");
+    height: 24px;
+    width: 24px;
+    background-size: 24px 24px;
+    border-radius: 24px;
+    margin-right: .7em;
+}
+
+
+nav.nav-top .hover-dark{
+    border-radius: 3px;
+}
+
+nav.nav-top .hover-dark:hover{
+    background: #3156a1;
+}
+
+li.line-after:after {
+    display: block;
+    width: 1px;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.11);
+    content: "";
+}
+
+/* nav.nav-top>div>div>ul>li:last-child:after {
+    background-color: rgba(0, 0, 0, 0);
+    content: "";
+} */
+
+nav>div>div>div.logo{
+    margin: 0 .5em 0 0;
+    background-image: url("https://static.xx.fbcdn.net/rsrc.php/v3/yx/r/0ZnQSqvnMOO.png");
+    background-repeat: no-repeat;
+    background-size: auto;
+    background-position: 0 -442px;
+    width: 24px;
+    height: 24px;
+}
+
+a.nav-top-icon{
+    background: url("https://static.xx.fbcdn.net/rsrc.php/v3/yx/r/0ZnQSqvnMOO.png");
+    width:24px;
+    height: 24px;
+    background-repeat: no-repeat;
+    background-size: auto;
+}
+
+a.nav-top-icon.people{
+    background-position: 0 -892px;
+}
+a.nav-top-icon.messenger{
+    background-position: 0 -942px;
+}
+a.nav-top-icon.notifications{
+    background-position: 0 -792px;
+}
+a.nav-top-icon.question{
+    background-position: 0 -992px;
+}
+a.nav-top-icon.dropdown{
+    background-position: 0 -842px;
+}

@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <style>
+        body {
+            font-family: "PT Serif", sans-serif;
+            padding: 0;
+            margin: 0;
+            background: url("../pattern.svg");
+            color: #ecf0f1;
+        }
+
+        div  {
+            padding: 10px;
+            margin: 10px;
+        }
+
+        #id1 {background: #9b59b6;}
+        #id2_1 {
+            background: #e74c3c;
+            position: absolute;
+            z-index: 3;
+            left: 40px;
+            top: 40px;
+            height: 40px;
+
+            opacity: 1;
+        }
+
+        #id2_2 {
+            background: #2c3e50;
+            position: absolute;
+            z-index: 2;
+            left: 80px;
+            top: 40px;
+            height: 40px;
+
+            opacity: 1;
+        }
+
+        #id3 {
+            opacity: 0.9;
+            background: #16a085;
+            position: relative;
+        }
+
+
+    </style>
+    <title>Document</title>
+</head>
+<body>
+    <div id="id1">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium, culpa doloribus earum fugiat odit quas saepe ut voluptate. Accusantium aperiam blanditiis cumque dolor exercitationem facere hic minus nemo sunt, temporibus?</div>
+    <div id="id3">
+        <div id="id2_1">Lorem ipsum </div>
+        <div id="id2_2">Lorem ipsum </div>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium, culpa doloribus earum fugiat odit quas saepe ut voluptate. Accusantium aperiam blanditiis cumque dolor exercitationem facere hic minus nemo sunt, temporibus?
+    </div>
+</body>
+</html>
