@@ -1,30 +1,32 @@
-div.aside-right{
+.aside-right{
+
 }
 
-aside.stories{
+.stories{
     width: 15em;
     height: 100%;
     padding: 10px 12px;
 }
 
-div.aside-right-head{
+.aside-right-head{
     display: flex;
     justify-content: space-between;
     padding-bottom: 12px;
 }
 
-div.horizontal-small{
-    width: 7.5em;
+.horizontal-small{
     line-height: 22px;
-    justify-content: space-between;
-    display: flex;
+        display: flex;
 }
 
-div.horizontal-small>a{
+.horizontal-small>a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
     font-size: 13px;
 }
 
-div.horizontal-small>span{
+.horizontal-small>span{
     line-height: normal;
     font-size: 13px;
 }
