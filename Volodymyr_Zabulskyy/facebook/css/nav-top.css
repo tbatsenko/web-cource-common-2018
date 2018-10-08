@@ -1,12 +1,14 @@
-
 .nav-top {
-    padding: .5em 0em;
+    padding: 7px 0;
     background-color: #4267b2;
     position: fixed;
     width: 100%;
-    justify-content: center;
+}
+.nav-top .nav-container {
     display: flex;
-
+    margin: 0 auto;
+    width: 1100px;
+    justify-content: space-between;
 }
 
 
@@ -27,7 +29,7 @@
 
 
 .nav-top .person-profile{
-    background: url("img/person.png");
+    background: url("../img/person.png");
     height: 24px;
     width: 24px;
     background-size: 24px 24px;
