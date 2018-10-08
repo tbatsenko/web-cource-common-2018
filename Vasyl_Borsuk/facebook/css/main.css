@@ -1,0 +1,190 @@
+body {
+    margin: 0 0 0 0;
+    font-family: Helvetica, Arial, sans-serif;
+    background-color: #e9ebee;
+    font-size: 13px;
+}
+
+button, a {
+    cursor: pointer;
+}
+
+button {
+    box-sizing: border-box;
+    border: none;
+}
+button:focus {
+    outline: none;
+}
+
+.logo {
+    padding: 0 0 0 0;
+    border: none;
+    background: transparent no-repeat;
+    background-size: auto;
+    display: block;
+    outline: none;
+}
+.box-24px {
+    height: 24px;
+    width: 24px;
+}
+.box-20px {
+    height: 20px;
+    width: 20px;
+}
+.box-18px {
+    height: 18px;
+    width: 18px;
+}
+.box-16px {
+    height: 16px;
+    width: 16px;
+}
+.box-14px {
+    height: 14px;
+    width: 14px;
+}
+.box-12px {
+    height: 12px;
+    width: 12px;
+}
+.top-menu-background {
+    background-image: url(https://www.facebook.com/rsrc.php/v3/yx/r/0ZnQSqvnMOO.png);
+}
+.left-menu-background {
+    background-image: url(https://www.facebook.com/rsrc.php/v3/yD/r/zeSf-ifGzv1.png);
+}
+.left-menu2-background {
+    background-image: url(https://www.facebook.com//rsrc.php/v3/yt/r/JQbi4HBVkPQ.png);
+}
+.main-menu-background {
+    background-image: url(https://www.facebook.com/rsrc.php/v3/y6/r/SsUFItYO-f_.png);
+}
+.right-menu-background {
+    background-image: url(https://www.facebook.com/rsrc.php/v3/yx/r/_ynA5DrSyoA.png);
+}
+.more-background {
+    background-image: url(https://www.facebook.com/rsrc.php/v3/yD/r/nvsdYm79QLU.png);
+}
+.emotions-background {
+    background-image: url("https://www.facebook.com/rsrc.php/v3/yl/r/xxqRJkcZ0ly.png");
+}
+.feeds-background {
+    background-image: url("https://facebook.com/rsrc.php/v3/yf/r/palWVhMO67o.png");
+}
+.myuser-photo {
+    content: url("https://scontent.fiev4-1.fna.fbcdn.net/v/t1.0-1/c12.0.40.40/p40x40/10354686_10150004552801856_220367501106153455_n.jpg?_nc_cat=1&oh=73d97835df15a76b6cda9e9a6254f466&oe=5C5DEAF8");
+}
+.user-photo {
+    box-sizing: border-box;
+    border-radius: 50%;
+    border: 1px solid rgba(0, 0, 0, .1);
+    object-fit: cover;
+}
+.user-link {
+    line-height: 1.38;
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 2px;
+}
+
+.grey-link {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-size: 12px;
+    font-weight: normal;
+    color: #616770;
+}
+
+.visually-hidden {
+    display: none;
+}
+
+ul {
+    list-style-type: none;
+}
+
+.vsplit-list li {
+    display: flex;
+    float: left;
+    padding: 0;
+}
+.vsplit-list>li:after {
+    display: block;
+    width: 1px;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.11);
+    color: #323a6f;
+    content: "";
+}
+.vsplit-list>li:last-child:after {
+    background-color: rgba(0, 0, 0, 0);
+    content: "";
+}
+
+.hover-underscore {
+    text-decoration: none;
+}
+.hover-underscore:hover {
+    text-decoration: underline;
+}
+
+.blue-text {
+    color: #365899;
+}
+
+main, #top-menu-nav {
+    display: flex;
+    flex-direction: row;
+    width: 1012px;
+    margin: auto;
+}
+
+main {
+    padding-top: 54px;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+main>* {
+    height: 100%;
+}
+
+main ul {
+    padding: 0;
+    margin: 0;
+}
+
+main h4 {
+    font-size: 13px;
+    color: #616770;
+    line-height: 15px;
+    margin: 0;
+    display: flex;
+    align-items: center;
+}
+
+#left-side-col {
+    width: 180px;
+}
+
+#news-section {
+    width: 500px;
+}
+
+#right-side-col {
+    width: 308px;
+}
+
+.window {
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    border: 1px solid #dddfe2;;
+    border-radius: 4px;
+    background-color: white;
+    width: 100%;
+    margin-bottom: 12px;
+}
