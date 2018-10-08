@@ -19,6 +19,11 @@ a {
 
 main {
     padding-top: 60px;
+    display: flex;
+    display: flex;
+    width: 1050px;
+    justify-content: space-between;
+    margin: auto;
 }
 
 main > div {
@@ -44,10 +49,10 @@ img.small {
     height: 20px;
 }
 
-span.indicator {
-    font-size: 11px;
-    color: #90949c;
+img{
+    color: transparent !important;
 }
+
 
 .panel {
     background: #fff;
