@@ -165,7 +165,7 @@ body>header{
 
 #top_menu .li_icon>button{
     /*padding-top: 3px;*/
-    /*vertical-align: center;*/
+    vertical-align: middle;
     /*margin-top: 5px;*/
 }
 
@@ -207,6 +207,10 @@ body>header{
 
 .side_menu_element{
     padding: 5px;
+}
+
+.side_menu_element>a>img{
+    vertical-align: middle;
 }
 
 .side_menu_element:hover, #side_menu>ul>li:nth-child(2)>ul>li:first-child{/*, #side_menu>ul li+li:first-child{*/
@@ -273,6 +277,11 @@ body>header{
     padding: 0;
     margin: 0;
     color: #365899;
+    /*vertical-align: middle;*/
+}
+
+#your_mind>header>ul>li>button>img{
+    vertical-align: middle;
 }
 
 #your_mind>section>*{
@@ -297,6 +306,10 @@ body>header{
     background-color: #f5f6f7;
     padding: 5px;
     border-radius: 16px;
+}
+
+#your_mind>footer>ul>li>button>img{
+    vertical-align: middle;
 }
 
 #stories{
