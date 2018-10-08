@@ -1,0 +1,113 @@
+#make-post-window header {
+    display: flex;
+    align-items: center;
+    border-radius: 4px 4px 0 0;
+    border-bottom: 1px solid #dddfe2;
+    background-color: #f5f6f7;
+    height: 33px;
+}
+
+#make-post-window button {
+    font-weight: bold;
+    font-size: 12px;
+    color: #4b4f56;
+}
+
+#make-post-window header button {
+    display: flex;
+    align-items: center;
+    background-color: transparent;
+}
+
+#pen-logo {
+    background-position: -17px -575px;
+}
+#photo-logo {
+    background-position: -34px -575px;
+}
+#video-logo {
+    background-position: 0 -2721px;
+}
+
+#make-post-body {
+    margin: 0 12px;
+}
+
+#make-post-top {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    height: 50px;
+    padding: 14px 0;
+}
+
+/*#make-post-top input[type="text"] {*/
+    /*height: 100%;*/
+    /*width: 100%;*/
+    /*border: none;*/
+    /*font-size: 14px;*/
+    /*font-weight: normal;*/
+    /*cursor: text;*/
+    /*padding: 12px;*/
+/*}*/
+#make-post-top textarea {
+    box-sizing: border-box;
+    height: 100%;
+    width: 100%;
+    border: none;
+    font-family: inherit;
+    font-size: 14px;
+    font-weight: normal;
+    cursor: text;
+    padding: 12px;
+    resize: none;
+}
+
+#make-post-top textarea:focus {
+    outline: none;
+}
+
+#make-post-window .user-photo {
+    width: 40px;
+    height: 40px;
+}
+
+#make-post-bottom {
+    border-top: 1px solid #e9ebee;
+    padding: 8px 0 8px 0;
+}
+
+#make-post-bottom li {
+    display: inline-block;
+    margin-right: 6px;
+}
+#make-post-bottom li:last-child {
+    margin-right: 6px;
+}
+
+#make-post-bottom button {
+    display: flex;
+    align-items: center;
+    float: left;
+    height: 32px;
+    border-radius: 18px;
+    padding: 0 12px 0 12px;
+    background: #f5f6f7;
+}
+
+#make-post-bottom button:hover {
+    background-color: #ebedf0;
+}
+
+.dots-logo {
+    background-position: 0 -2249px;
+}
+#photo-logo2 {
+    background-position: 0 -1451px;
+}
+#tag-friend-logo {
+    background-position: 0 -905px;
+}
+#smile-logo {
+    background-position: 0 -800px;
+}
