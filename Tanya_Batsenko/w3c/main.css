@@ -1,0 +1,29 @@
+body {
+    width: 960px;
+    margin: auto;
+    font-family: "PT Serif";
+}
+
+h1,
+h2,
+h3,
+h4 {
+    font-family: "PT Sans Caption";
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    color: #5a4fcc;
+}
+
+a[href*="#"] {
+    text-decoration: none;
+    border-bottom: 1px solid deeppink;
+}
+
+code
