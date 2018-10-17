@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css?family=Quicksand:400,700");
+
 body{
     margin: 0;
     padding: 0;
@@ -23,33 +25,6 @@ header .content{
 a{
     text-decoration: none;
     color: #0090D2;
-}
-
-header .logo{
-    height: 124px;
-    margin: 0;
-    padding-top: 30px;
-    width: 505px;
-}
-
-header .logo h1{
-    background: url(http://html5doctor.com/wp-content/themes/html5doctor2/images/logo.png) no-repeat;
-    display: block;
-    height: 96px;
-    text-indent: -9999em;
-}
-
-header .logo h2{
-    color: #FFF;
-    font-family: 'Quicksand','Helvetica Neue',Arial,sans-serif;
-    font-size: 16px;
-    font-style: italic;
-    font-weight: 400;
-    margin: 0;
-    left: 195px;
-    line-height: 1;
-    position: relative;
-    top: -25px;
 }
 
 h2{
@@ -147,11 +122,6 @@ h2{
     margin: 0 10px;
 }
 
-
-main{
-    display: block;
-}
-
 h1{
     font-family: 'Quicksand','Helvetica Neue',Arial, sans-serif;
     font-weight: bold;
@@ -235,7 +205,7 @@ article{
     font-size: 14px;
 }
 
-.post .entry{
+.entry{
     float: right;
     width: 500px;
 }
@@ -254,7 +224,7 @@ h3{
     font-family: 'Quicksand', 'Helvetica Neue', Arial, sans-serif;
 }
 
-.post .entry > p:first-of-type{
+.entry > p:first-of-type{
     font-size: 1.18em;
     line-height: 1.55;
 }
@@ -265,7 +235,7 @@ h3{
     width: 270px;
 }
 
-.secondary .mod{
+.mod{
     font-size: 14px;
     clear: left;
     margin: 0 0 40px 0;
