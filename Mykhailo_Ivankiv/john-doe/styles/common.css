@@ -1,0 +1,49 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat:400,400i,700");
+
+html,
+body {
+  font-family: Montserrat, sans-serif;
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+}
+
+h1 {
+    font-size: 40px;
+}
+
+h1 sub ,
+h2 sub ,
+h3 sub ,
+h4 sub {
+    font-size: 0.5em;
+    font-weight: bold;
+    color: #4c4c4c;
+    display: block;
+}
+
+.main-profile {
+  padding: 20px;
+  margin: 20px;
+  background: #f7f7f7;
+  width: 470px;
+  float: left;
+}
+
+.user-picture {
+  margin: auto;
+  display: block;
+  border-radius: 100%;
+  box-shadow: 0 7px 11px 0 rgba(116, 116, 116, 0.5);
+}
+
+.detailed-profile {
+  width: 960px;
+  margin: 20px 20px 20px 510px;
+}
+
+.column {
+  width: 440px;
+  float: left;
+  margin: 0 20px 0 0;
+}
