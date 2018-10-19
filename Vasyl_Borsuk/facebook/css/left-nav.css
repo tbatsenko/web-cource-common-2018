@@ -1,0 +1,104 @@
+#left-side-col section {
+    margin-bottom: 10px;
+    width: 100%;
+}
+
+#left-side-col h4 {
+    padding: 4px 0 4px 0;
+}
+
+#left-side-col .button-list li {
+    height: 30px;
+    width: 100%;
+}
+
+#left-side-col .hover-link {
+    display: flex;
+    align-items: center;
+    height: 30px;
+    width: 100%;
+    text-decoration: none;
+    color: black;
+    border: 1px solid transparent;
+    padding-left: 5px;
+}
+
+#left-side-col .hover-link:hover, #left-side-col .hover-link.selected {
+    background-color: #f0f2f5;
+    border-color: #dddfe2;
+}
+
+#left-side-col .link-text {
+    padding-left: 4px;
+}
+
+.hidden-app {
+    display: none;
+}
+
+#apps-more-button {
+    display: flex;
+    background-color: transparent;
+}
+
+#apps-more-button:active {
+    display: none;
+}
+
+#apps-more-button:active .hidden-app {
+    display: flex;
+}
+
+#more-logo {
+    background-position: -220px -270px;
+}
+
+#create-nav li {
+    display: flex;
+    float: left;
+    padding: 0;
+}
+
+#create-nav li:after {
+    display: block;
+    width: 10px;
+    height: 100%;
+    color: #90949c;
+    content: "·";
+}
+
+#create-nav li:last-child:after {
+    content: "";
+}
+
+#news-logo {
+    background-position: 0 -1325px;
+}
+
+#messages-logo {
+    background-position: 0 -170px;
+}
+
+#marketplace-logo {
+    background-position: 0 -1220px;
+}
+
+#groups-logo {
+    background-position: 0 -107px;
+}
+
+#pages-logo {
+    background-position: 0 -233px;
+}
+
+#events-logo {
+    background-position: 0 -42px;
+}
+
+#fundraisers-logo {
+    background-position: 0 -947px;
+}
+
+#friend-list-logo {
+    background-position: 0 -884px;
+}

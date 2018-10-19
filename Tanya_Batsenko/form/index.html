@@ -1,0 +1,48 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>Form Web HW tbatsenko</title>
+  <meta name="description" content="Form Web HW tbatsenko">
+  <meta name="tbatsenko" content="Web HW">
+</head>
+
+<body>
+    <form class="" action="../index.html" method="post">
+
+    <div>
+        <label for="name">Name</label>
+        <input type="text" name="name" required>
+    </div>
+
+    <div>
+        <label for="email">Email</label>
+        <input type="email" name="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" required>
+    </div>
+
+    <div>
+        <input type="radio" id="male"
+               name="gender" value="male" checked />
+        <label for="male">M</label>
+    </div>
+    <div>
+        <input type="radio" id="female"
+               name="gender" value="female" />
+        <label for="female">F</label>
+    </div>
+    <div>
+        <input type="radio" id="other"
+               name="gender" value="other" />
+        <label for="other">Other</label>
+    </div>
+
+    <div>
+        <label for="country">Country</label>
+        <input type="text" name="country" required>
+    </div>
+    <input type="submit" class="button" value="Submit">
+    </form>
+</body>
+</html>
