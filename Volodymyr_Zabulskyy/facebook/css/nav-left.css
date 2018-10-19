@@ -1,12 +1,12 @@
 
-nav.nav-left{
+.nav-left{
     /* background-color: red; */
     width: 12em;
     font-size: 15px;
     height: 100%;
 }
 
-div.left-menu{
+.nav-left .left-menu{
     display: flex;
     align-items: center;
     border: 1px solid transparent;
@@ -14,110 +14,125 @@ div.left-menu{
     margin: 0 0 15px 0;
 }
 
+.nav-left .indicator {
+    font-size: 11px;
+    color: #90949c;
+    float: right;
+}
 
-nav.nav-left>div:nth-child(1)>a{
+.nav-left .left-menu-text{
     text-decoration: none;
     color:black;
     font-size: 13px;
+    float: left;
 }
 
+.nav-left .left-menu-profile{
+    float: left;
+}
 
-nav.nav-left>header{
+.nav-left .left-menu-dots{
+    float: right;
+    background: url("https://static.xx.fbcdn.net/rsrc.php/v3/ye/r/wSKPH5OOIOY.png");
+    background-position: -326px -245px;
+    height: 20px;
+    width: 20px;
+}
+
+.nav-left .header-in-menu{
     padding: 3px 7px;
     margin: 10px 0 0 0;
 }
 
-div.nav-left-icon{
+.nav-left .nav-left-icon{
     background-size: auto;
     background-repeat: no-repeat;
-    display: inline-block;
     height: 20px;
     width: 20px;
-
+    float: left;
 }
 
-li.left-menu{
+.nav-left .left-menu-item{
     transition: all .2s ease;
     border: 1px solid transparent;
     cursor: pointer;
-    align-items: center;
-    display: flex;
     padding: 3px 3px;
-    justify-content: space-between;
+    height: 20px;
+    line-height: 20px;
 }
-li.left-menu>div, div.left-menu{
+.nav-left .left-menu{
     align-items: center;
     display: flex;
 }
 
-.left-menu>div>a, div.left-menu>a{
-    margin-left: 5px;
+.nav-left .left-menu-text{
+    margin-left: 8px;
 }
 
-.left-menu:hover{
+.nav-left .left-menu-item:hover{
     border: 1px solid #ddd;
     background: #fefefe;
 }
 
 
-div.nav-left-icon.news-feed{
+.nav-left .nav-left-icon.news-feed{
     background-image: url(https://static.xx.fbcdn.net/rsrc.php/v3/yD/r/zeSf-ifGzv1.png);
     background-position: 0 -1325px;
 }
 
-div.nav-left-icon.messenger{
+.nav-left .nav-left-icon.messenger{
     background-image: url(https://static.xx.fbcdn.net/rsrc.php/v3/yD/r/zeSf-ifGzv1.png);
     background-position: 0 -170px;
 }
 
-div.nav-left-icon.idea{
+.nav-left .nav-left-icon.idea{
     background-image: url(https://static.xx.fbcdn.net/rsrc.php/v3/yD/r/zeSf-ifGzv1.png);
     background-position: 0 -380px;
 }
 
-div.nav-left-icon.calendar{
+.nav-left .nav-left-icon.calendar{
     background-image: url(https://static.xx.fbcdn.net/rsrc.php/v3/y1/r/PCTrfZN79_z.png);
     background-position: 0 -21px;
 }
 
-div.nav-left-icon.events{
+.nav-left .nav-left-icon.events{
     background-image: url(https://static.xx.fbcdn.net/rsrc.php/v3/yt/r/JQbi4HBVkPQ.png);
     background-position: 0 -63px;
 }
 
-div.nav-left-icon.pages{
+.nav-left .nav-left-icon.pages{
     background-image: url(https://static.xx.fbcdn.net/rsrc.php/v3/yD/r/zeSf-ifGzv1.png);
     background-position: 0 -233px;
 }
 
-div.nav-left-icon.friend-lists{
+.nav-left .nav-left-icon.friend-lists{
     background-image: url(https://static.xx.fbcdn.net/rsrc.php/v3/yD/r/zeSf-ifGzv1.png);
     background-position: 0 -884px;
 }
 
-div.nav-left-icon.fundraisers{
+.nav-left .nav-left-icon.fundraisers{
     background-image: url(https://static.xx.fbcdn.net/rsrc.php/v3/yD/r/zeSf-ifGzv1.png);
     background-position: 0 -947px;
 }
 
-div.nav-left-icon.memories{
+.nav-left .nav-left-icon.memories{
     background-image: url(https://static.xx.fbcdn.net/rsrc.php/v3/yD/r/zeSf-ifGzv1.png);
     background-position: 0 -1388px;
 }
 
-div.nav-left-icon.see-more{
+.nav-left .nav-left-icon.see-more{
     background-image: url(https://static.xx.fbcdn.net/rsrc.php/v3/yD/r/nvsdYm79QLU.png);
     background-position: -220px -270px;
 }
 
 
-li.active{
+.nav-left .active{
     border: 1px solid #ddd;
     background: #fefefe;
     font-weight: bold;
 }
 
-li.left-menu-see-more{
+.nav-left .left-menu-see-more{
     border: none;
     background: none;
     display: flex;
@@ -125,24 +140,23 @@ li.left-menu-see-more{
     cursor: pointer;
 }
 
-li.left-menu-see-more>div>a{
+.nav-left .left-menu-see-more{
     color: #365899;
     text-decoration: none;
     font-size: 13px;
-
-}
-li.left-menu-see-more>div{
-    display: flex;
+    margin-top: 5px;
 }
 
-
-
-li.left-menu-see-more:hover{
+.nav-left .left-menu-see-more:hover{
     border: none;
     background: none;
 }
 
 
-li.left-menu>div>a, div.left-menu>a{
+.nav-left .left-menu-text{
     font-size: 13px;
+}
+
+.nav-left .see-more-link{
+    margin-left: 8px;
 }

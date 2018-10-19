@@ -1,32 +1,34 @@
-div.aside-right{
+.aside-right{
+
 }
 
-aside.stories{
+.stories{
     width: 15em;
     height: 100%;
     padding: 10px 12px;
 }
 
-div.aside-right-head{
+.aside-right-head{
     display: flex;
     justify-content: space-between;
     padding-bottom: 12px;
 }
 
-div.horizontal-small{
-    width: 7.5em;
-    line-height: 22px;
-    justify-content: space-between;
+.horizontal-small{
     display: flex;
+    align-items: center;
 }
 
-div.horizontal-small>a{
+.horizontal-small>a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
     font-size: 13px;
 }
 
-div.horizontal-small>span{
-    line-height: normal;
-    font-size: 13px;
+.horizontal-small>span{
+    padding: 0px 3px;
+    height: 22px;
 }
 
 .stories-icon.archive{
@@ -67,6 +69,7 @@ div.horizontal-small>span{
 }
 
 .story-header{
+    margin: 0;
     font-size: 13px;
     font-weight: 600;
     color: #365899;
