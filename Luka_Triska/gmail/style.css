@@ -6,8 +6,6 @@
 body {
     margin-left: 0;
     margin-right: 0;
-    /*padding-left: 0;*/
-    /*padding-right: 0;*/
     background-color: #fff;
     font-family: "Segoe UI", serif;
 }
@@ -19,11 +17,10 @@ body {
     height: 64px;
     padding-top: 8px;
     padding-left: 18px;
-    /*background-color: coral;*/
     display: flex;
 }
 
-#three-lines > a > img {
+#main-menu > a > img {
     margin-top: 18px;
 }
 
@@ -67,27 +64,33 @@ body {
 }
 
 #google-apps {
-    margin-left: 30px;
+    margin-left: 510px;
 }
 
-#google-apps > button {
+.top-bar-buttons {
     border: 0;
     background-color: #fff;
 
 }
 
-#google-apps > button > svg {
+#google-apps > button > a > svg {
+    height: 40px;
+    width: 42px;
+    margin-top: 20px;
+
+}
+
+#notifications > button > a > svg {
+    margin-top: 20px;
     height: 24px;
     width: 24px;
 }
 
-
-
-
-
-
-
-
+#user-logo > button > a > img {
+    margin: 14px 0 0 10px;
+    height: 35px;
+    width: 35px;
+}
 
 nav {
     margin-top: -15px;
