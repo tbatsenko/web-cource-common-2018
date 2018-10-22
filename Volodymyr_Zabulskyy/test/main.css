@@ -18,6 +18,11 @@ ul {
     background: #2979ff;
     border-radius: 5px 5px 0 0;
     height: 32px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2px 10px;
 }
 
 .recipient-name {
@@ -34,15 +39,9 @@ ul {
     display: block;
     border-radius: 100%;
 }
-
-.nav-ul {
-    height: 100%;
-}
-
 .nav-btn {
     padding: 0;
     border: 0;
-    margin: 0;
     width: 10px;
     height: 10px;
 }
@@ -54,3 +53,32 @@ ul {
 .left-item{
     float: left;
 }
+
+.nav-part{
+    display: flex;
+    align-items: center;
+}
+
+.nav-left>.nav-item{
+    margin: 0 5px;
+}
+
+.nav-right>.nav-item {
+    margin: 0 5px;
+}
+
+
+.field{
+    height: 384px;
+    width: 292px;
+    background: #fff;
+}
+
+.input-btn{
+    padding: 0;
+    border: 0;
+    width: 10px;
+    height: 10px;
+    margin: 0 5px;
+}
+
