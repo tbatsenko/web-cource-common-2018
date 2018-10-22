@@ -1,0 +1,61 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #e3f2fd;
+}
+
+.chat-mainframe {
+    width: 292px;
+    height: 384px;
+    background-color: white;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 108px;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    position: relative;
+}
+
+.chat-header {
+    height: 32px;
+    background-color: #2979ff;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+    overflow: hidden;
+}
+
+.profile-name {
+    display: inline-block;
+}
+
+.profile-name-text {
+    color: white;
+}
+
+.header-buttons {
+    display: inline-block;
+}
+
+.online-icon {
+    width: 6px;
+    height: 6px;
+    background-color: #69f0ae;
+    display: inline-block;
+}
+
+.message-form {
+    height: 62px;
+    position: absolute;
+    bottom: 0;
+    border-top: #e5e5e5 1px solid;
+}
+
+.message-to {
+    margin-top: 50px;
+    background-color: #f3f3f3;
+    border-radius: 100px;
+}
+
+.message-input {
+    margin: 0;
+}
