@@ -82,3 +82,9 @@ ul {
     margin: 0 5px;
 }
 
+.input-text{
+    width: 100%;
+    margin: 0;
+    padding: 10px 0;
+    border: 0;
+}
