@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Facebook Chat-box</title>
+    <link rel="stylesheet" type="text/css" href="styles/style.css" >
+</head>
+<body>
+<div class="facebook-chat">
+    <header class="top-bar">
+        <span class="top-bar__user-status">Status</span>
+        <h4 class="top-bar__username">Kristaps Elsins</h4>
+        <form class="top-bar__form">
+            <button class="top-bar__button top-bar__button_add">Add</button>
+            <button class="top-bar__button top-bar__button_video">Video</button>
+            <button class="top-bar__button top-bar__button_settings">Settings</button>
+            <button class="top-bar__button top-bar__button_close">Close</button>
+        </form>
+    </header>
+    <main class="chat">
+        <div class="user-message user-message_separate">
+            <a class="user-message__photo" href="#">User photo</a>
+            <span class="user-message__text">Yo, Can you update views?</span>
+        </div>
+        <time class="chat__message-time">Fri 11:30am</time>
+        <div class="user-message user-message_separate">
+            <a class="user-message__photo" href="#">User photo</a>
+            <span class="user-message__text">I can`t see update views yet</span>
+        </div>
+        <div class="user-message-group user-message-group_my-messages">
+            <div class="user-message user-message_my-message">
+                <span class="user-message__text user-message__text_my-message">Hi as I noted in Email last week - I am on vacation</span>
+            </div>
+            <div class="user-message user-message_my-message">
+                <span class="user-message__text user-message__text_my-message">I will be back next week</span>
+            </div>
+        </div>
+        <div class="user-message-group">
+            <div class="user-message">
+                <a class="user-message__photo" href="#">User photo</a>
+                <span class="user-message__text">Ahh sorry, missed that!</span>
+            </div>
+            <div class="user-message">
+                <a class="user-message__photo" href="#">User photo</a>
+                <span class="user-message__text ">Let`s talk next week</span>
+            </div>
+        </div>
+    </main>
+    <div class="text-area">
+        <input class="text-area__inputs" placeholder="Type a message...">
+        <form class="button-list">
+            <button class="text-area__button text-area__button_images">Images</button>
+            <button class="text-area__button text-area__button_gif">Gif</button>
+            <button class="text-area__button text-area__button_emodji">Emodji</button>
+            <button class="text-area__button text-area__button_calendar">Calendar</button>
+            <button class="text-area__button text-area__button_photo">Photo</button>
+        </form>
+    </div>
+</div>
+</body>
+</html>
