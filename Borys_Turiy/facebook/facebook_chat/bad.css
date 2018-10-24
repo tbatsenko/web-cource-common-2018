@@ -1,12 +1,13 @@
 .dot_online {
-    height: 10pt;
-    width: 10pt;
-    color: transparent;
-    background-color: #9ed870;
-    border-radius: 50%;
-    display: inline-block;
+  height: 10pt;
+  width: 10pt;
+  color: transparent;
+  background-color: #9ed870;
+  border-radius: 50%;
+  display: inline-block;
 }
-#chat_header{
-    height: 20pt;
-    background-color: #007FFF;
+
+#chat_header {
+  height: 20pt;
+  background-color: #007FFF;
 }

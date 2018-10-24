@@ -1,127 +1,131 @@
 <!doctype html>
 <html lang="en" xmlns="http://www.w3.org/1999/html">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
 </head>
 <body>
 <header>
-    <button id="Main Menu">-<br/>-<br/>-</button>
-    <button>
-        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTdjN10sU1HCIDlVqD853NdpWR39_slfaA0p1hh5qTkFXeALMgo8Q"
-             alt="ucu logo">
-    </button>
-    <form>
-        <input type="text" name="" value="" placeholder="Пошук">
-        <input type="submit" name="" value="Search">
-    </form>
-    <button id="Google_apps">...<br/>...</button>
-    <button id="Google_notifications">Notifications</button>
-    <button id="Google_account"><img src="https://lh3.googleusercontent.com/-UtFSfmDsQW8/W8VJt41tWEI/AAAAAAAACi8/OHqV11LvGL8IrtNtu2XGjAdTVy5ktZqMQCEwYBhgL/w278-h280-p/me.jpg"></button>
+  <button id="Main Menu">-<br/>-<br/>-</button>
+  <button>
+    <img
+        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTdjN10sU1HCIDlVqD853NdpWR39_slfaA0p1hh5qTkFXeALMgo8Q"
+        alt="ucu logo">
+  </button>
+  <form>
+    <input type="text" name="" value="" placeholder="Пошук">
+    <input type="submit" name="" value="Search">
+  </form>
+  <button id="Google_apps">...<br/>...</button>
+  <button id="Google_notifications">Notifications</button>
+  <button id="Google_account"><img
+      src="https://lh3.googleusercontent.com/-UtFSfmDsQW8/W8VJt41tWEI/AAAAAAAACi8/OHqV11LvGL8IrtNtu2XGjAdTVy5ktZqMQCEwYBhgL/w278-h280-p/me.jpg">
+  </button>
 </header>
 
 <hr>
 <nav>
-    </br>
-    <button id="compose-email">Compose</button>
-    <ul>
-        <li><a href="#">Inbox</a></li>
-        <li><a href="#">Starred</a></li>
-        <li><a href="#">Snoozed</a></li>
-        <li><a href="#">Sent</a></li>
-        <li><a href="#">Drafts</a></li>
-        <li>
-            <details>
-                <summary>Categories</summary>
-                <ul>
-                    <li><a href="#"></a>Social</li>
-                    <li><a href="#"></a>Updates</li>
-                    <li><a href="#"></a>Forums</li>
-                    <li><a href="#"></a>Promotions</li>
-                </ul>
-            </details>
-        </li>
-        <li>
-            <details>
-                <summary>More</summary>
-                <ul>
 
-                    <li><a href="#">Important</a></li>
-                    <li><a href="#">Chats</a></li>
-                    <li><a href="#">All mail</a></li>
-                    <li><a href="#">Spam</a></li>
-                    <li><a href="#">Trash</a></li>
-                    <li><a href="#">Manage labels</a></li>
-                    <li><a href="#">Create new label</a></li>
-                </ul>
-            </details>
-        </li>
-    </ul>
+  <button id="compose-email">Compose</button>
+  <ul>
+    <li><a href="#">Inbox</a></li>
+    <li><a href="#">Starred</a></li>
+    <li><a href="#">Snoozed</a></li>
+    <li><a href="#">Sent</a></li>
+    <li><a href="#">Drafts</a></li>
+    <li>
+      <details>
+        <summary>Categories</summary>
+        <ul>
+          <li><a href="#"></a>Social</li>
+          <li><a href="#"></a>Updates</li>
+          <li><a href="#"></a>Forums</li>
+          <li><a href="#"></a>Promotions</li>
+        </ul>
+      </details>
+    </li>
+    <li>
+      <details>
+        <summary>More</summary>
+        <ul>
+
+          <li><a href="#">Important</a></li>
+          <li><a href="#">Chats</a></li>
+          <li><a href="#">All mail</a></li>
+          <li><a href="#">Spam</a></li>
+          <li><a href="#">Trash</a></li>
+          <li><a href="#">Manage labels</a></li>
+          <li><a href="#">Create new label</a></li>
+        </ul>
+      </details>
+    </li>
+  </ul>
 </nav>
 
 <hr>
 <main id="Emails">
+  <header>
+    <button id="Select">Select</button>
+    <button id="Refresh">Refresh</button>
+    <button id="More">...</button>
+    <button id="Input_tools_switcher">kboard</button>
+    <button id="Settings">settings</button>
+  </header>
+
+
+  <section id="Unread">
     <header>
-        <button id="Select">Select</button>
-        <button id="Refresh">Refresh</button>
-        <button id="More">...</button>
-        <button id="Input_tools_switcher">kboard</button>
-        <button id="Settings">settings</button>
+      <h3>Unread</h3>
+      <button class="Messages_count">1-1 of 1</button>
+      <button class="Section_settings">...</button>
+    </header>
+    <ul>
+      <li>Blablacar Чудові новини</li>
+    </ul>
+  </section>
+  <section id="Else">
+    <header>
+      <h3>Everything else</h3>
+      <button class="Messages_count">1-1 of 1</button>
+      <button class="Section_settings">...</button>
     </header>
 
-
-    <section id="Unread">
-        <header>
-            <h3>Unread</h3>
-            <button class="Messages_count">1-1 of 1</button>
-            <button class="Section_settings">...</button>
-        </header>
-        <ul>
-            <li>Blablacar Чудові новини</li>
-        </ul>
-    </section>
-    <section id="Else">
-        <header>
-            <h3>Everything else</h3>
-            <button class="Messages_count">1-1 of 1</button>
-            <button class="Section_settings">...</button>
-        </header>
-
-        <ul>
-            <li>Yur Tepliukh(via google ) 123 - Invitation to collaborate</li>
-        </ul>
-    </section>
+    <ul>
+      <li>Yur Tepliukh(via google ) 123 - Invitation to collaborate</li>
+    </ul>
+  </section>
 </main>
 <section id="Chat_window">
-    <header>
-        <img src="https://lh3.googleusercontent.com/-UtFSfmDsQW8/W8VJt41tWEI/AAAAAAAACi8/OHqV11LvGL8IrtNtu2XGjAdTVy5ktZqMQCEwYBhgL/w278-h280-p/me.jpg"
-             alt="user pic">
-        <details>
-            <summary>X</summary>
-            <ul>
-                <li>Share your status</li>
-                <li>Notifications</li>
-                <li>General</li>
-            </ul>
-        </details>
-        <button id="New_conversation">+</button>
-    </header>
-    <ul id="Chats">
-        <li>Oleh Turiy</li>
-    </ul>
+  <header>
+    <img
+        src="https://lh3.googleusercontent.com/-UtFSfmDsQW8/W8VJt41tWEI/AAAAAAAACi8/OHqV11LvGL8IrtNtu2XGjAdTVy5ktZqMQCEwYBhgL/w278-h280-p/me.jpg"
+        alt="user pic">
+    <details>
+      <summary>X</summary>
+      <ul>
+        <li>Share your status</li>
+        <li>Notifications</li>
+        <li>General</li>
+      </ul>
+    </details>
+    <button id="New_conversation">+</button>
+  </header>
+  <ul id="Chats">
+    <li>Oleh Turiy</li>
+  </ul>
 </section>
 <footer>
-    <label for="Manage">2.94 GB (19%) of 15 GB used</label>
+  <label for="Manage">2.94 GB (19%) of 15 GB used</label>
 
-        <button id="Manage">Manage</button>
-        <button id="Terms">Terms</button>
-        <button id="Privacy">Privacy</button>
-        <button id="Program_policies">Proram Policies</button>
-    <label for="activity_details">Last account activity: 55 minutes ago</label>
-        <button id="activity_details">Details</button>
+  <button id="Manage">Manage</button>
+  <button id="Terms">Terms</button>
+  <button id="Privacy">Privacy</button>
+  <button id="Program_policies">Proram Policies</button>
+  <label for="activity_details">Last account activity: 55 minutes ago</label>
+  <button id="activity_details">Details</button>
 </footer>
 </body>
 </html>
