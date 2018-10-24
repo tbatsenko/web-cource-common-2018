@@ -20,10 +20,16 @@ a {
 main {
     padding-top: 60px;
     display: flex;
-    display: flex;
     width: 1050px;
     justify-content: space-between;
     margin: auto;
+}
+
+button{
+    padding: 0;
+    border: 0;
+    background-color: transparent;
+    color: transparent;
 }
 
 main > div {
