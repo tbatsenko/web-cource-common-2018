@@ -1,0 +1,44 @@
+{
+  "navigation": [
+    {
+      "items": [
+        "Home",
+        "Trending",
+        "Subscriptions"
+      ]
+    },
+    {
+      "title": "Library",
+      "items": [
+        "History",
+        "Watch Later",
+        "Liked videos"
+      ]
+    },
+    {
+      "title": "Subscription",
+      "items": [
+        "Popular on YouTube",
+        "Music",
+        "Sport",
+        "Games"
+      ]
+    },
+    {
+      "title": "More in YouTube",
+      "items": [
+        "Movies on YouTube",
+        "Games",
+        "Live"
+      ]
+    },
+    {
+      "items": [
+        "Settings",
+        "History",
+        "Help",
+        "Report"
+      ]
+    }
+  ]
+}
