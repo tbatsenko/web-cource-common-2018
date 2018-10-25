@@ -1,0 +1,39 @@
+{
+  "chat-header":[
+    {
+      "user-status":"Status",
+      "username":"Username",
+      "buttons":[
+        "Add",
+        "Video",
+        "Settings",
+        "Close"
+      ]
+    }
+  ],
+  "chat-messages":[
+    {
+      "time":"Fri 11:30am",
+      "photo":"User photo",
+      "messages":[
+        "Yo, Can you update views?",
+        "I can`t see update views yet",
+        "Hi as I noted in Email last week - I am on vacation",
+        "I will be back next week",
+        "Ahh sorry, missed that!",
+        "Let`s talk next week"
+      ]
+    }
+  ],
+  "user-text-field":[
+    {
+      "buttons":[
+        "Images",
+        "Gif",
+        "Emodji",
+        "Calendar",
+        "Photo"
+      ]
+    }
+  ]
+}
