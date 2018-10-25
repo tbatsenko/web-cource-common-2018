@@ -9,11 +9,11 @@
     <a class="icons" name="Notifications">Notifications</a>
 </header>
 
-<aside>
+<aside class="side-menu">
     {{#navigation}}
-        <h4>{{title}}</h4>
+        <h4 class="side-menu__title">{{title}}</h4>
         {{#items}}
-            <a href="#" class="nv">{{.}}</a>
+            <a href="#" class="side-menu__link">{{.}}</a>
         {{/items}}
     {{/navigation}}
 </aside>
