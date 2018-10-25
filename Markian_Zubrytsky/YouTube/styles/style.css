@@ -1,6 +1,7 @@
 body {
     margin: 0;
     padding: 0;
+    font-family: Roboto, Arial, sans-serif;
 }
 
 .wrapper {
@@ -88,4 +89,25 @@ body {
     margin-left: 9%;
     font-weight: bold;
     font-size: 18px;
+}
+
+.side-menu{
+    background-color: #ecf0f1;
+    display: block;
+    width: 240px;
+}
+
+.side-menu__title{
+    text-transform: uppercase;
+    color: grey;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.side-menu__link{
+    margin: auto;
+    text-transform: uppercase;
+    text-decoration: none;
+    display: block;
+    color: black;
 }
