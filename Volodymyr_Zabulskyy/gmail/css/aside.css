@@ -1,0 +1,13 @@
+.left-menu {
+    order: 2;
+    background-color: gold;
+    width: 10%;
+    min-width: 100px;
+    max-width: 300px;
+}
+
+.aside-option {
+    min-width: 100px;
+    height: 35px;
+    margin: 2px 0;
+}

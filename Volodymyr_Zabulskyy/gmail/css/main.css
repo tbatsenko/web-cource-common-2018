@@ -1,8 +1,10 @@
 body {
-    font-family: Helvetica, Arial, sans-serif;
+    font-family: Roboto, RobotoDraft, Helvetica, Arial, sans-serif;
     margin: 0;
     padding: 0;
     background-color: ghostwhite;
+    display: flex;
+    flex-flow: row wrap;
 }
 
 ul {
@@ -17,10 +19,13 @@ a {
     text-decoration: none;
 }
 
-main {
-    padding-top: 60px;
-    display: flex;
-    width: 1050px;
-    justify-content: space-between;
-    margin: auto;
+button {
+    border: 0;
+    overflow: hidden;
+    padding: 0;
+    cursor: pointer;
+}
+
+.btn-text{
+    display: none;
 }
