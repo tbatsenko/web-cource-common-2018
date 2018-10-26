@@ -1,0 +1,58 @@
+.chat-messages {
+  clear: both;
+  padding: 20px 10px;
+  width: 100%;
+  height: 274px; }
+  .chat-messages__message-time {
+    clear: both;
+    display: block;
+    text-align: center;
+    font-size: 10px;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: #828282;
+    letter-spacing: 0.3px;
+    margin-bottom: 10px; }
+
+.user-message-group {
+  float: left;
+  margin-bottom: 10px; }
+  .user-message-group_my-messages {
+    float: right; }
+
+.user-message {
+  position: relative;
+  clear: both;
+  float: left;
+  margin-bottom: 1px;
+  text-align: left; }
+  .user-message_my-message {
+    float: right;
+    max-width: 172px; }
+  .user-message_separate {
+    float: left;
+    margin-bottom: 10px; }
+  .user-message__photo {
+    float: left;
+    width: 28px;
+    height: 28px;
+    color: transparent;
+    border-radius: 20px;
+    background-color: grey;
+    margin-right: 5px; }
+  .user-message__text {
+    text-align: center;
+    padding: 5px 7px 5px 7px;
+    float: left;
+    font-size: 12px;
+    font-weight: 600;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #353535;
+    background-color: #f3f3f3;
+    border-radius: 100px; }
+    .user-message__text_my-message {
+      background-color: #2979ff;
+      color: #ffffff; }
+
+/*# sourceMappingURL=chat-messages.css.map */
