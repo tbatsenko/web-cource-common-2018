@@ -11,10 +11,10 @@
 }
 
 .characteristics__metric {
-    height: 2em;
-    display: block;
-    overflow: hidden;
-    position: relative;
+  height: 2em;
+  display: block;
+  overflow: hidden;
+  position: relative;
 }
 
 .characteristics__title--right {
@@ -41,8 +41,7 @@
   text-align: center;
 }
 
-
-.characteristics--ranges .characteristics__title{
-    font-size: 0.7rem;
-    color: #181818;
+.characteristics--ranges .characteristics__title {
+  font-size: 0.7rem;
+  color: #181818;
 }

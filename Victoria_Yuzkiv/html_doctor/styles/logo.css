@@ -1,25 +1,24 @@
-.logo{
-    background: url(http://html5doctor.com/wp-content/themes/html5doctor2/images/logo.png) no-repeat;
+.logo {
     display: block;
     height: 125px;
     margin: 0;
     padding-top: 30px;
     width: 505px;
-    background-position: 0 center;
+    background: url(http://html5doctor.com/wp-content/themes/html5doctor2/images/logo.png) no-repeat 0 center;
     color: transparent;
 }
 
-.logo sub{
+.logo sub {
     color: #FFF;
-    font-family: 'Quicksand','Helvetica Neue',Arial,sans-serif;
-    font-size: 16px;
+    font-family: 'Quicksand', 'Helvetica Neue', Arial, sans-serif;
+    font-size: 1rem;
     font-style: italic;
     font-weight: 300;
     margin: 0;
     left: 195px;
     position: absolute;
     top: 103px;
-    letter-spacing: 1.4px;
+    letter-spacing: 0.09em;
 }
 
 .logo a {
