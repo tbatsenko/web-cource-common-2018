@@ -70,10 +70,25 @@
     object-fit: contain;
   }
 
-  // messages
+  &__messages {
+    display: flex;
+    overflow-y: scroll;
+    padding: 16px;
+
+    &::-webkit-scrollbar {
+      width: 6px;
+      background-color: transparent;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background-color: $chat-box__bg-color__secondary;
+    }
+  }
+
 
   &__footer {
     border-top: 1px solid #e5e5e5;
+    min-height: 60px;
   }
 
   &__message-input {
@@ -125,6 +140,5 @@
     display: block;
     object-fit: contain;
   }
-
 
 }
