@@ -4,7 +4,10 @@
 .chat-box {
   width: 292px;
   height: 384px;
-  border-radius: 8px;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  border-radius: 4px 4px 0 0;
   box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.11);
   background-color: #ffffff;
 
@@ -66,5 +69,62 @@
     display: block;
     object-fit: contain;
   }
+
+  // messages
+
+  &__footer {
+    border-top: 1px solid #e5e5e5;
+  }
+
+  &__message-input {
+    padding: 7px 16px;
+    border: none;
+    width: 100%;
+    box-sizing: border-box;
+    font-size: 12px;
+    resize: none;
+    //font-weight: 600;
+    font-family: $chat-box__font-family;
+    color: $chat-box__font-color_nonactive;
+
+    &:focus {
+      outline: none;
+    }
+
+    &::placeholder {
+      font-family: OpenSans-Semibold, sans-serif;
+      color: $chat-box__font-color__secondary;
+    }
+  }
+
+  &__footer-actions {
+    display: flex;
+    align-items: center;
+    height: 21px;
+    padding: 0 16px 7px 16px;
+  }
+
+  &__footer-action-button {
+    background: none;
+    border: 0;
+    padding: 0;
+    margin: 0 11px 0 0;
+
+    &:hover {
+      cursor: pointer;
+    }
+
+    &:focus {
+      outline: none;
+    }
+  }
+
+  &__footer-action-icon {
+    height: inherit;
+    width: auto;
+    display: block;
+    object-fit: contain;
+  }
+
 
 }
