@@ -1,0 +1,6 @@
+@media ( 1200px > width > 600px) {
+  
+}
+
+.chat {border-radius: 10px; &__message {padding: 10px; &--my-message {margin: 10px;} }
+}
