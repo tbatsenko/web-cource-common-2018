@@ -1,13 +1,29 @@
 .left-menu {
     order: 2;
     background-color: gold;
-    width: 10%;
-    min-width: 100px;
-    max-width: 300px;
+    width: 16em;
 }
 
 .aside-option {
-    min-width: 100px;
+    min-width: 15em;
     height: 35px;
     margin: 2px 0;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 10em;
+    border-radius: 0 35px 35px 0;
+}
+
+.left-menu-ico {
+    margin: 0 10px 0 5px;
+    opacity: .7;
+}
+
+.left-menu-ico.active, .left-menu-ico.compose{
+    opacity: 1;
+}
+
+.active-btn{
+    color: #d93025;
 }
