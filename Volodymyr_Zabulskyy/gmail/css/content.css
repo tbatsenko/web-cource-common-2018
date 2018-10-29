@@ -1,6 +1,5 @@
 .content {
     order: 3;
     background: lightpink;
-    width: 90%;
-    min-width: 200px;
+    width: 90em;
 }
