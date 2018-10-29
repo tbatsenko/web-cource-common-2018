@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+@import 'header';
+
+body {
+    background-color: #e3f2fd;
+    display: flex;
+    justify-content: center;
+    font-family: 'Open Sans', Arial, Helvetica, sans-serif;
+    font-size: 12px;
+}
+
+button {
+    border: 0;
+    padding: 0;
+    background: transparent;
+}
+
+.chat {
+    width: 292px;
+    height: 384px;
+    border-radius: 8px;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.11);
+    background-color: #ffffff;
+    margin-top: 50px;
+}
+
