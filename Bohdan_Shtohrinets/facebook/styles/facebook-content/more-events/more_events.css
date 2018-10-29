@@ -1,0 +1,24 @@
+.more-events {
+  margin-top: 50px;
+  display: inline-block; }
+  .more-events__block {
+    margin-top: 10px;
+    width: 280px;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: white;
+    border: 1px solid #bdc3c7; }
+  .more-events__title {
+    margin: 0;
+    float: left;
+    color: #616770;
+    font-size: 13px;
+    font-weight: 600;
+    line-height: 13px; }
+  .more-events__watch-all {
+    float: right;
+    color: #4267b2;
+    font-size: 13px;
+    line-height: 12px; }
+
+/*# sourceMappingURL=more_events.css.map */
