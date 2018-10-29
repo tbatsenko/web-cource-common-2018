@@ -1,0 +1,70 @@
+.friend-requests{
+  position: relative;
+  height: 100px;
+
+  &__request-list{
+    display: block;
+    position: relative;
+  }
+}
+
+.requests{
+  &__user-image{
+    margin-right: 50px;
+    color: transparent;
+    display: inline-block;
+    position: relative;
+    top: 20px;
+    right: 90px;
+    width: 50px;
+    height: 50px;
+    background-color: rgb(245, 246, 247);
+    border: red;
+    border-radius: 30px;
+
+    &:before{
+      content: "";
+      height: 40px;
+      width: 40px;
+      position: absolute;
+      background: black;
+      left: 8px;
+      top: 7px;
+      background: url("https://static.xx.fbcdn.net/rsrc.php/v3/yF/r/1c0gE0MbEo8.png");
+      background-size: 40px;
+      background-position: 0 1391px;
+    }
+  }
+
+  &__user-name{
+    display: block;
+    position: absolute;
+    left: 70px;
+    top: 30px;
+    color: rgb(54, 88, 153);
+    font-size: 13px;
+    font-weight: 600;
+  }
+
+  &__other-info{
+    display: block;
+    position: absolute;
+    top: 34px;
+    left: 70px;
+    color: rgb(96, 103, 112);
+    font-size: 13px;
+  }
+
+  &__confirm-friend{
+    display: block;
+    position: absolute;
+    left: 70px;
+    top: 65px;
+    width: 116px;
+    color: rgb(29, 33, 41);
+    font-size: 13px;
+    padding: 2px;
+    background-color: rgb(245, 246, 247);
+    border: 1px solid #bdc3c7;
+  }
+}

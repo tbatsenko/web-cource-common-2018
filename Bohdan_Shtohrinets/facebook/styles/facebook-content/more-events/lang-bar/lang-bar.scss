@@ -1,0 +1,21 @@
+.lang-bar{
+  height: 60px;
+
+  &__language{
+    float: left;
+
+    &-button{
+      color: rgb(54, 88, 153);
+      font-size: 13px;
+      font-weight: 400;
+
+      &:hover{
+        text-decoration: underline;
+      }
+
+      &_active{
+        color: rgb(144, 148, 156);
+      }
+    }
+  }
+}
