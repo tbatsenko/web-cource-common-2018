@@ -1,0 +1,14 @@
+.lang-bar {
+  height: 60px; }
+  .lang-bar__language {
+    float: left; }
+    .lang-bar__language-button {
+      color: #365899;
+      font-size: 13px;
+      font-weight: 400; }
+      .lang-bar__language-button:hover {
+        text-decoration: underline; }
+      .lang-bar__language-button_active {
+        color: #90949c; }
+
+/*# sourceMappingURL=lang-bar.css.map */

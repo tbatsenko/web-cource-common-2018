@@ -1,0 +1,102 @@
+%button-base{
+  content: "";
+  height: 16px;
+  width: 16px;
+  position: absolute;
+}
+
+.make-post{
+  background-color: white;
+  border-radius: 5px;
+  border: 1px solid #bdc3c7;
+  margin-bottom: 10px;
+
+  &__header{
+    display: block;
+    background-color: rgb(245, 246, 247);
+
+    &__button{
+      position: relative;
+      font-size: 12px;
+      font-weight: 700;
+      padding: 5px 5px 5px 16px;
+      color: rgb(54, 88, 153);
+
+      &:after{
+        content: "";
+        height: 14px;
+        width: 1px;
+        display: inline-block;
+        background: #7f8c8d;
+        position: relative;
+        top:3px;
+        margin-left: 10px;
+        opacity: 0.45;
+      }
+
+      &:last-child:after{
+        display: none;
+      }
+
+      &_make{
+        &:before{
+          @extend %button-base;
+          left: 0;
+          top: 6px;
+          background: url("https://static.xx.fbcdn.net/rsrc.php/v3/yO/r/ek-jJz0BVf5.png");
+          background-position: 2px 134px;
+          background-size: 37px;
+        }
+      }
+
+      &_photo{
+        &:before{
+          @extend %button-base;
+          left: 0;
+          top: 6px;
+          background: url("https://static.xx.fbcdn.net/rsrc.php/v3/yO/r/ek-jJz0BVf5.png");
+          background-position: 26px 134px;
+          background-size: 37px;
+        }
+      }
+
+      &_live{
+        &:before{
+          @extend %button-base;
+          left: 0;
+          background: url("https://static.xx.fbcdn.net/rsrc.php/v3/yc/r/QmzuWbnAsWt.png");
+          background-position: 0 35px;
+          background-size: 37px;
+        }
+      }
+    }
+  }
+
+  &__user-text{
+    width: 100%;
+    color: rgb(29, 33, 41);
+    border: none;
+    border-bottom: 1px solid rgb(245, 246, 247);
+    border-top: 1px solid rgb(245, 246, 247);
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 18px;
+    min-height: 71px;
+    max-height: 100px;
+  }
+}
+
+.additional-options__button{
+  width: 117px;
+  background-color: rgb(245, 246, 247);
+  border-radius: 20px;
+  color: rgb(29, 33, 41);
+  font-size: 12px;
+  font-weight: 700;
+  margin: 5px 0 5px 5px;
+  display: inline-block;
+
+  &:hover{
+    background-color: #ecf0f1;
+  }
+}
