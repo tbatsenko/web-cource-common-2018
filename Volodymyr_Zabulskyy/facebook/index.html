@@ -11,7 +11,6 @@
     <link rel="stylesheet" href="css/nav-left.css">
     <link rel="stylesheet" href="css/article.css">
     <link rel="stylesheet" href="css/form.css">
-    <link rel="stylesheet" href="css/footer.css">
     <link rel="stylesheet" href="css/aside-right.css">
 </head>
 
@@ -19,41 +18,42 @@
 <nav class="nav-top">
     <div class="nav-container">
         <section class="nav-top-logo-container">
-                <img alt="facebook logo" class="logo"></img>
-                <form class="nav-top-form" action="search">
-                    <input class="nav-top-form-input" type="text" name="search" id="search" placeholder="Search">
-                    <button class="nav-top-form-button"><img class="inside-button-search" src="img/search.svg" alt="search"></button>
-                </form>
+            <button class="logo">Facebook</button>
+            <form class="nav-top-form" action="">
+                <input class="nav-top-form-input" type="text" name="search" id="search" placeholder="Search">
+                <button class="nav-top-form-button"><img class="inside-button-search" src="img/search.svg" alt="search">
+                </button>
+            </form>
         </section>
         <ul class="nav-top-menu-container">
             <li class="nav-top-menu-item hover-dark profile-item">
-                <img alt="profile" class="person-profile">
-                <a href="">Adolf</a>
+                <button class="person-profile">You</button>
+                <a class="nav-text" href="">Adolf</a>
             </li>
             <li class="line-after"></li>
             <li class="nav-top-menu-item hover-dark">
-                <a href="">Home</a>
+                <a  class="nav-text" href="">Home</a>
             </li>
             <li class="line-after"></li>
             <li class="nav-top-menu-item hover-dark">
-                <a href="">Create</a>
+                <a class="nav-text"  href="">Create</a>
             </li>
             <li class="line-after"></li>
             <li class="nav-top-menu-item ">
-                <img alt="people" class="nav-top-icon people">
+                <button class="nav-top-icon people">people</button>
             </li>
             <li class="nav-top-menu-item ">
-                <img alt="messenger" class="nav-top-icon messenger">
-            </li class="nav-top-menu-item ">
+                <button class="nav-top-icon messenger">messenger</button>
+            </li>
             <li class="nav-top-menu-item">
-                <img alt="notifications" class="nav-top-icon notifications">
+                <button class="nav-top-icon notifications">notifications</button>
             </li>
             <li class="line-after"></li>
             <li class="nav-top-menu-item ">
-                <img alt="question mark" class="nav-top-icon question">
+                <button class="nav-top-icon question">question</button>
             </li>
             <li class="nav-top-menu-item ">
-                <img alt="dropdown menu" class="nav-top-icon dropdown">
+                <button class="nav-top-icon dropdown">dropdown</button>
             </li>
         </ul>
     </div>
@@ -66,23 +66,24 @@
         </header>
         <ul>
             <li class="active left-menu-item">
-                <img alt="news feed"  class="nav-left-icon news-feed">
+                <img alt="news feed" class="nav-left-icon news-feed" src="">
                 <a class="left-menu-text">News Feed</a>
-                <img alt="more" class="left-menu-dots rnd small">
+                <im
+                        g alt="more" class="left-menu-dots rnd small">
             </li>
             <li class="left-menu-item">
-                <img alt="messenger" class="nav-left-icon messenger">
+                <img alt="messenger" class="nav-left-icon messenger" src="">
                 <a class="left-menu-text">Messenger</a>
             </li>
         </ul>
         <header class="header-in-menu">Shortcuts</header>
         <ul>
             <li class="left-menu-item">
-                <img alt="CS@UCU" class="nav-left-icon idea">
+                <img alt="CS@UCU" class="nav-left-icon idea" src="">
                 <a class="left-menu-text">CS@UCU</a>
             </li>
             <li class="left-menu-item">
-                <img alt="Event tomorrow" class="nav-left-icon calendar">
+                <img alt="Event tomorrow" class="nav-left-icon calendar" src="">
                 <a class="left-menu-text">Event tomorrow</a>
             </li>
         </ul>
@@ -105,7 +106,7 @@
                 <a class="left-menu-text">Fundraisers</a>
             </li>
             <li class="left-menu-item">
-                
+
                 <img alt="memories" class="nav-left-icon memories">
                 <a class="left-menu-text">Memories</a>
                 <span class="indicator">2</span></li>
@@ -117,12 +118,16 @@
     </nav>
     <article class="article-main">
         <section class="form-container panel">
-            <form class="form-main" action="idk">
+            <form class="form-main" action="">
                 <ul class="post-options-container">
-                    <li class="post-option "><img class="form-options-ico photo"><span class="form-options-text">Photo/Video Album</span></li>
-                    <li class="left-border post-option"><img class="form-options-ico post"><span class="form-options-text active">Compose post</span></li>
-                    <li class="left-border post-option "><img class="form-options-ico photo"><span class="form-options-text">Photo/Video Album</span></li>
-                    <li class="left-border post-option "><img class="form-options-ico video"><span class="form-options-text">Live Video</span></li>
+                    <li class="post-option "><img class="form-options-ico photo" src=""><span class="form-options-text">Photo/Video Album</span>
+                    </li>
+                    <li class="left-border post-option"><img class="form-options-ico post" src=""><span
+                            class="form-options-text active">Compose post</span></li>
+                    <li class="left-border post-option "><img class="form-options-ico photo" src=""><span
+                            class="form-options-text">Photo/Video Album</span></li>
+                    <li class="left-border post-option "><img class="form-options-ico video" src=""><span
+                            class="form-options-text">Live Video</span></li>
                 </ul>
                 <ul>
                     <li class="form-input-container">
@@ -130,9 +135,12 @@
                         <input class="form-input" type="text" name="asf" id="asfa" placeholder="What's on ur mind?">
                     </li>
                     <li class="form-options-container">
-                        <button class="form-option-container"><img class="form-option-ico photo"><span class="form-option">Photo/Video</span></button>
-                        <button class="form-option-container"><img class="form-option-ico tag"><span class="form-option">Tag friends</span></button>
-                        <button class="form-option-container"><img class="form-option-ico activity"><span class="form-option">Activity/Feeling</span></button>
+                        <button class="form-option-container"><img class="form-option-ico photo"><span
+                                class="form-option">Photo/Video</span></button>
+                        <button class="form-option-container"><img class="form-option-ico tag"><span
+                                class="form-option">Tag friends</span></button>
+                        <button class="form-option-container"><img class="form-option-ico activity"><span
+                                class="form-option">Activity/Feeling</span></button>
                         <button class="form-option-container"><img class="form-option-ico dots"></button>
                     </li>
                 </ul>
@@ -146,7 +154,7 @@
                         <div class="article-header-main">
                             <h4>
                                 <a class="acticle-author-name" href="">Marta Datsyuk</a> <span class="article-action">updated her profile picture.</span>
-                            </h4>  
+                            </h4>
                             <small class="article-header-annotation">
                                 <time><a href="">Yesterday at 00:26</a></time>
                                 <img class="article-ico globe">
@@ -162,7 +170,7 @@
                     <section class="likes-container">
                         <img class="reaction-ico thumbsup left-part">
                         <img class="reaction-ico love left-part">
-                        <small class=" left-part"> 
+                        <small class=" left-part">
                             <a href=""> Benito Mussolini, Joseph Stalin and 128 others</a>
                         </small>
                         <small class=" right-part">
@@ -172,193 +180,223 @@
                     <section class="reactions-list-container">
                         <ul class="reactions-list">
                             <li class="reactions-list-item">
-                                <button class="reactions-list-button"><img class="reactions-list-icon like">Like</button>
+                                <button class="reactions-list-button"><img class="reactions-list-icon like">
+                                    <span>Like</span>
+                                </button>
                             </li>
                             <li class="reactions-list-item">
-                                <button class="reactions-list-button"><img class="reactions-list-icon comment">Comment</button>
+                                <button class="reactions-list-button"><img class="reactions-list-icon comment">
+                                    <span>Comment</span>
+                                </button>
                             </li>
                             <li class="reactions-list-item">
-                                <button class="reactions-list-button"><img class="reactions-list-icon share">Share</button>
+                                <button class="reactions-list-button"><img class="reactions-list-icon share">
+                                    <span>Share</span>
+                                </button>
                             </li>
                         </ul>
                     </section>
                     <footer class="comment-area-container">
                         <img class="comment-area-author-img" src="img/person.png" alt="author">
-                        <input class="comment-area-input" type="text" name="" id="" placeholder="write a comment">  
+                        <input class="comment-area-input" type="text" name="" id="" placeholder="write a comment">
                         <div class="comment-area-ico-container">
                             <img class="comment-area-ico smile" alt="smile"/>
                             <img class="comment-area-ico photo" alt="photo"/>
                             <img class="comment-area-ico gif" alt="gif"/>
-                            <img class="comment-area-ico sticker" alt="sticker"/>   
-                        </div> 
+                            <img class="comment-area-ico sticker" alt="sticker"/>
+                        </div>
                     </footer>
                 </form>
             </article>
-                <article class="article-cas panel">
-                    <section class="header-container">
-                        <img class="article-author-img" src="img/person.png" alt="author">
-                        <header class="article-header">
-                            <div class="article-header-main">
-                                <h4>
-                                    <a class="acticle-author-name" href="">Shrek Chebureck</a> <span class="article-action">updated her profile picture.</span>
-                                </h4>  
-                                <small class="article-header-annotation">
-                                    <time><a href="">Today at 10:16</a></time>
-                                    <img class="article-ico globe">
-                                </small>
-                            </div>
-                            <img class="article-header-dots">
-                        </header>
+            <article class="article-cas panel">
+                <section class="header-container">
+                    <img class="article-author-img" src="img/shrek.png" alt="author">
+                    <header class="article-header">
+                        <div class="article-header-main">
+                            <h4>
+                                <a class="acticle-author-name" href="">Shrek Chebureck</a> <span
+                                    class="article-action"></span>
+                            </h4>
+                            <small class="article-header-annotation">
+                                <time><a href="">Today at 10:16</a></time>
+                                <img class="article-ico globe">
+                            </small>
+                        </div>
+                        <img class="article-header-dots">
+                    </header>
+                </section>
+                <section class="article-content">
+                    <p>
+                        I have a dream that one day this nation will rise up and live out the true meaning of its creed:
+                        "We hold these truths to be self-evident: that all men are created equal."
+                        <br>
+                        I have a dream that one day on the red hills of Georgia the sons of former slaves and the sons
+                        of former slave owners will be able to sit down together at the table of brotherhood.
+                        <br>
+                        I have a dream that one day even the state of Mississippi, a state sweltering with the heat of
+                        injustice, sweltering with the heat of oppression, will be transformed into an oasis of freedom
+                        and justice.
+                        <br>
+                        I have a dream that my four little children will one day live in a nation where they will not be
+                        judged by the color of their skin but by the content of their character.
+                        <br>
+                        I have a dream today.
+                    </p>
+                </section>
+                <form class="article-reaction-area">
+                    <section class="likes-container">
+                        <img class="reaction-ico thumbsup left-part">
+                        <img class="reaction-ico love left-part">
+                        <small class=" left-part">
+                            <a href=""> Benito Mussolini, Joseph Stalin and 128 others</a>
+                        </small>
+                        <small class=" right-part">
+                            2 Comments
+                        </small>
                     </section>
-                    <section class="article-content">
-                        <p>
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam quam facilis asperiores, natus numquam aut tempora! Impedit quibusdam necessitatibus provident voluptatibus id libero molestiae enim minus error nostrum! Cum, quod!
-                        </p>
+                    <section class="reactions-list-container">
+                        <ul class="reactions-list">
+                            <li class="reactions-list-item">
+                                <button class="reactions-list-button"><img class="reactions-list-icon like">Like
+                                </button>
+                            </li>
+                            <li class="reactions-list-item">
+                                <button class="reactions-list-button"><img class="reactions-list-icon comment"> Comment
+                                </button>
+                            </li>
+                            <li class="reactions-list-item">
+                                <button class="reactions-list-button"><img class="reactions-list-icon share"> Share
+                                </button>
+                            </li>
+                        </ul>
                     </section>
-                    <form class="article-reaction-area">
-                        <section class="likes-container">
-                                <img class="reaction-ico thumbsup left-part">
-                                <img class="reaction-ico love left-part">
-                                <small class=" left-part"> 
-                                    <a href=""> Benito Mussolini, Joseph Stalin and 128 others</a>
-                                </small>
-                                <small class=" right-part">
-                                    2 Comments
-                                </small>
-                            </section>
-                        <section class="reactions-list-container">
-                            <ul class="reactions-list">
-                                <li class="reactions-list-item">
-                                    <button class="reactions-list-button"><img class="reactions-list-icon like">Like</button>
-                                </li>
-                                <li class="reactions-list-item">
-                                    <button class="reactions-list-button"><img class="reactions-list-icon comment"> Comment</button>
-                                </li>
-                                <li class="reactions-list-item">
-                                    <button class="reactions-list-button"><img class="reactions-list-icon share"> Share</button>
-                                </li>
-                            </ul>
+                    <footer class="comment-area-container">
+                        <img class="comment-area-author-img" src="img/person.png" alt="author">
+                        <input class="comment-area-input" type="text" name="" id="" placeholder="write a comment">
+                        <section class="comment-area-ico-container">
+                            <img class="comment-area-ico smile" alt="smile"/>
+                            <img class="comment-area-ico photo" alt="photo"/>
+                            <img class="comment-area-ico gif" alt="gif"/>
+                            <img class="comment-area-ico sticker" alt="sticker"/>
                         </section>
-                        <footer class="comment-area-container">
-                            <img class="comment-area-author-img" src="img/person.png" alt="author">
-                            <input class="comment-area-input" type="text" name="" id="" placeholder="write a comment">  
-                            <div class="comment-area-ico-container">
-                                <img class="comment-area-ico smile" alt="smile"/>
-                                <img class="comment-area-ico photo" alt="photo"/>
-                                <img class="comment-area-ico gif" alt="gif"/>
-                                <img class="comment-area-ico sticker" alt="sticker"/>   
-                            </div> 
-                        </footer>
-                    </form>
-                </article>
-                <article class="article-cas panel">
-                    <section class="header-container">
-                        <img class="article-author-img" src="img/boldman.jpeg" alt="author">
-                        <header class="article-header">
-                            <div class="article-header-main">
-                                <h4>
-                                    <a class="acticle-author-name" href="">Galera Enterprise</a> <span class="article-action"> The best jobs opportunities</span>
-                                </h4>  
-                                <small class="article-header-annotation">
-                                    <span><a href="">sposnored</a></span>
-                                </small>
-                            </div>
-                            <img class="article-header-dots">
-                        </header>
+                    </footer>
+                </form>
+            </article>
+            <article class="article-cas panel">
+                <section class="header-container">
+                    <img class="article-author-img" src="img/boldman.jpeg" alt="author">
+                    <header class="article-header">
+                        <div class="article-header-main">
+                            <h4>
+                                <a class="acticle-author-name" href="">Galera Enterprise</a> <span
+                                    class="article-action"> The best jobs opportunities</span>
+                            </h4>
+                            <small class="article-header-annotation">
+                                <span><a href="">sposnored</a></span>
+                            </small>
+                        </div>
+                        <img class="article-header-dots">
+                    </header>
+                </section>
+                <section class="article-content">
+                    <p>
+                        No single job suits all of us, but many of the best ones have a few attributes in common: They
+                        pay well, challenge us year after year, match our talents and skills, aren't too stressful,
+                        offer room to advance throughout our careers and provide a satisfying work-life balance. Whether
+                        the position is in demand is also a consideration, especially among job seekers.
+                    </p>
+                    <img class="article-content-img" src="img/galera.jpg" alt="">
+                </section>
+                <form class="article-reaction-area">
+                    <section class="likes-container">
+                        <img class="reaction-ico thumbsup left-part">
+                        <img class="reaction-ico love left-part">
+                        <small class=" left-part">
+                            <a href=""> Benito Mussolini, Joseph Stalin and 128 others</a>
+                        </small>
+                        <small class=" right-part">
+                            2 Comments
+                        </small>
                     </section>
-                    <section class="article-content">
-                            <p>
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam quam facilis asperiores, natus numquam aut tempora! Impedit quibusdam necessitatibus provident voluptatibus id libero molestiae enim minus error nostrum! Cum, quod!
-                                </p>
-                            <img class="article-content-img" src="img/galera.jpg" alt="">
+                    <section class="reactions-list-container">
+                        <ul class="reactions-list">
+                            <li class="reactions-list-item">
+                                <button class="reactions-list-button"><img class="reactions-list-icon like">Like
+                                </button>
+                            </li>
+                            <li class="reactions-list-item">
+                                <button class="reactions-list-button"><img class="reactions-list-icon comment"> Comment
+                                </button>
+                            </li>
+                            <li class="reactions-list-item">
+                                <button class="reactions-list-button"><img class="reactions-list-icon share"> Share
+                                </button>
+                            </li>
+                        </ul>
                     </section>
-                    <form class="article-reaction-area">
-                        <section class="likes-container">
-                                <img class="reaction-ico thumbsup left-part">
-                                <img class="reaction-ico love left-part">
-                                <small class=" left-part"> 
-                                    <a href=""> Benito Mussolini, Joseph Stalin and 128 others</a>
-                                </small>
-                                <small class=" right-part">
-                                    2 Comments
-                                </small>
-                        </section>
-                        <section class="reactions-list-container">
-                            <ul class="reactions-list">
-                                <li class="reactions-list-item">
-                                    <button class="reactions-list-button"><img class="reactions-list-icon like">Like</button>
-                                </li>
-                                <li class="reactions-list-item">
-                                    <button class="reactions-list-button"><img class="reactions-list-icon comment"> Comment</button>
-                                </li>
-                                <li class="reactions-list-item">
-                                    <button class="reactions-list-button"><img class="reactions-list-icon share"> Share</button>
-                                </li>
-                            </ul>
-                        </section>
-                        <footer class="comment-area-container">
-                            <img class="comment-area-author-img" src="img/person.png" alt="author">
-                            <input class="comment-area-input" type="text" name="" id="" placeholder="write a comment">  
-                            <div class="comment-area-ico-container">
-                                <img class="comment-area-ico smile" alt="smile"/>
-                                <img class="comment-area-ico photo" alt="photo"/>
-                                <img class="comment-area-ico gif" alt="gif"/>
-                                <img class="comment-area-ico sticker" alt="sticker"/>   
-                            </div> 
-                        </footer>
-                    </form>
-                </article>
+                    <footer class="comment-area-container">
+                        <img class="comment-area-author-img" src="img/person.png" alt="author">
+                        <input class="comment-area-input" type="text" name="" id="" placeholder="write a comment">
+                        <div class="comment-area-ico-container">
+                            <img class="comment-area-ico smile" alt="smile"/>
+                            <img class="comment-area-ico photo" alt="photo"/>
+                            <img class="comment-area-ico gif" alt="gif"/>
+                            <img class="comment-area-ico sticker" alt="sticker"/>
+                        </div>
+                    </footer>
+                </form>
+            </article>
         </section>
     </article>
     <aside class="stories panel aside-right">
-            <nav class="aside-right-head">
-                <header class="header-in-menu">Stories</header>
-                <small class="horizontal-small">
-                    <a><img class="stories-icon archive"></img>Archive</a>
-                    <span class="dot">.</span>
-                    <a>Settings</a>
-                </small>
-            </nav>
+        <nav class="aside-right-head">
+            <header class="header-in-menu">Stories</header>
+            <small class="horizontal-small">
+                <a><img class="stories-icon archive" src=""/>Archive</a>
+                <span class="dot">.</span>
+                <a>Settings</a>
+            </small>
+        </nav>
 
-            <article>
-                <section class="story-item">
-                    <div class="your-story-img-container"><img class="your-story-img"></img></div> 
-                    <header class="story-text-container">
-                        <h4 class="story-header">Add to ur story</h4>
-                        <small class="story-description">Share a photo or video or write something</small>
-                    </header>
-                </section>
-                <section class="story-item">
-                    <div class="story-img-container"><img class="story-img" src="img/person.png" alt="profile"></div> 
-                    <header class="story-text-container">
-                        <profile><a class="story-header">Shreck Chebureck</a></profile>
-                        <small class="story-description">
-                            <time>20hr ago</time>
-                        </small>
-                    </header>
-                </section>
-                <section class="story-item">
-                    <div class="story-img-container"><img class="story-img" src="img/person.png" alt="profile"></div> 
-                    <header class="story-text-container">
-                        <profile><a class="story-header">Shreck Chebureck</a></profile>
-                        <small class="story-description">
-                            <time>20hr ago</time>
-                        </small>
-                    </header>
-                </section>
-                <section class="story-item">
-                    <div class="story-img-container"><img class="story-img" src="img/person.png" alt="profile"></div> 
-                    <header class="story-text-container">
-                        <profile><a class="story-header">Shreck Chebureck</a></profile>
-                        <small class="story-description">
-                            <time>20hr ago</time>
-                        </small>
-                    </header>
-                </section>
-                <footer class="stories-see-more">
-                    <img class="icon-see-more"></img>
-                    <a href="">See more...</a></footer>
-            </article>
+        <article>
+            <section class="story-item">
+                <div class="your-story-img-container"><img class="your-story-img"></img></div>
+                <header class="story-text-container">
+                    <h4 class="story-header">Add to ur story</h4>
+                    <small class="story-description">Share a photo or video or write something</small>
+                </header>
+            </section>
+            <section class="story-item">
+                <div class="story-img-container"><img class="story-img" src="img/person.png" alt="profile"></div>
+                <header class="story-text-container">
+                    <profile><a class="story-header">Shreck Chebureck</a></profile>
+                    <small class="story-description">
+                        <time>20hr ago</time>
+                    </small>
+                </header>
+            </section>
+            <section class="story-item">
+                <div class="story-img-container"><img class="story-img" src="img/person.png" alt="profile"></div>
+                <header class="story-text-container">
+                    <profile><a class="story-header">Shreck Chebureck</a></profile>
+                    <small class="story-description">
+                        <time>20hr ago</time>
+                    </small>
+                </header>
+            </section>
+            <section class="story-item">
+                <div class="story-img-container"><img class="story-img" src="img/person.png" alt="profile"></div>
+                <header class="story-text-container">
+                    <profile><a class="story-header">Shreck Chebureck</a></profile>
+                    <small class="story-description">
+                        <time>20hr ago</time>
+                    </small>
+                </header>
+            </section>
+            <footer class="stories-see-more">
+                <img class="icon-see-more" src="">
+                <a href="">See more...</a></footer>
+        </article>
     </aside>
 </main>
 

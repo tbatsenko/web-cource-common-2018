@@ -1,0 +1,9 @@
+{{#users}}
+    {{name.first}} -- {{name.last}}
+    <div>{{company}}</div>
+    <div>
+        {{#tags}}
+            <span class="tag">{{.}}</span>
+        {{/tags}}
+    </div>
+{{/users}}
