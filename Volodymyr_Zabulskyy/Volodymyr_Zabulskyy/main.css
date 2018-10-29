@@ -1,0 +1,116 @@
+body {
+    margin: auto;
+    width: 64em;
+    height: 36em;
+    display: flex;
+    font-family: "DejaVu Sans Light", serif;
+}
+
+button{
+    padding: 0;
+    border: 0;
+    background: none;
+}
+
+ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+h3{
+    margin: 0;
+}
+
+.person-ico{
+    width: 38px;
+    height: 38px;
+    margin-right: 12px;
+}
+
+.left-chat-menu{
+    display: flex;
+    flex-flow: column;
+    background: #3f3f5f;
+    width: 12em;
+}
+
+.app-name{
+    padding: 10px 10px;
+    color: white;
+}
+
+.people-list-item{
+    color: white;
+    display: flex;
+    padding: 16px 0 16px 12px;
+}
+
+.type-message{
+    padding: 10px;
+    border: 0;
+}
+
+.search-person {
+    padding: 0;
+
+
+}
+
+.people-list-item-shortcut{
+display: flex;
+    flex-flow: column;
+
+}
+
+.search-person-input {
+    color: white;
+    background: #585886;
+    width: 100%;
+    height: 2em;
+    border: 0;
+    padding: 10px 10px;
+}
+
+.message-field{
+    display: flex;
+    flex-flow: column;
+    padding: 1em 1em 0 1em;
+    overflow: auto;
+    height: 36em
+}
+
+.main-board{
+    background: #dcddf5;
+    width: 36em;
+}
+
+.message {
+    padding: 10px;
+    width: 24em;
+    margin: .2em 0;
+}
+
+.message.text-me{
+    background: #89a1fc;
+    align-self: end;
+    color: #ffffff;
+}
+
+.message.text-from{
+    background: #ffffff;
+    align-self: start;
+    color: #8785ab;
+}
+
+.type-message{
+    width: 100%;
+    height: 2em;
+}
+
+.board-header{
+    background: #585886;
+    padding: 10px;
+    color: #cac8ee;
+}
+
