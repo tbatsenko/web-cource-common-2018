@@ -6,10 +6,10 @@
         content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Gmail home</title>
-  <link rel="stylesheet" href="bad.scss">
   <script src="http://builds.handlebarsjs.com.s3.amazonaws.com/handlebars-v4.0.12.js"></script>
 </head>
 <body>
+
 <header>
   <button id="Main Menu">-<br/>-<br/>-</button>
   <button>
@@ -129,5 +129,17 @@
   <label for="activity_details">Last account activity: 55 minutes ago</label>
   <button id="activity_details">Details</button>
 </footer>
+
+<script src="http://builds.handlebarsjs.com.s3.amazonaws.com/handlebars-v4.0.12.js"></script>
+<script>
+  const render = async (templateURL, dataURL, container) => {
+    const source = await (await fetch(templateURL)).text();
+    const template = Handlebars.compile(source);
+    const data = await (await fetch(dataURL)).json();
+    container.innerHTML = template(data);
+  };
+  render("/template.handlebars", "/data.json", document.body)
+</script>
+
 </body>
 </html>
