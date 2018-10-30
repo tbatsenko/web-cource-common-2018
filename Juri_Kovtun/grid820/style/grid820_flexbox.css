@@ -1,0 +1,124 @@
+:root {
+    --current-width: 820px;
+    --gutter-width: 5px;
+    --basic-cell-width: calc(var(--current-width)/16 - 2 * var(--gutter-width));
+    --groundcolor_1-grid: #ffeaa7;
+    --groundcolor_2-container: #fdcb6e;
+    --groundcolor_3-body: #e17055;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    background-color: var(--groundcolor_3-body);
+}
+
+.container_16, .flex-container {
+    width: 820px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: var(--groundcolor_2-container);
+    /*overflow: hidden;*/
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.grid_1, .grid_2, .grid_3, .grid_4, .grid_5, .grid_6, .grid_7, .grid_8, .grid_9, .grid_10, .grid_11, .grid_12, .grid_13, .grid_14, .grid_15, .grid_16 {
+    margin: 0 var(--gutter-width);
+    background-color: var(--groundcolor_1-grid);
+}
+
+.grid_1 {width: var(--basic-cell-width);}
+.grid_2 {width: calc(var(--basic-cell-width) * 2 + 1 * 2 * var(--gutter-width));}
+.grid_3 {width: calc(var(--basic-cell-width) * 3 + 2 * 2 * var(--gutter-width));}
+.grid_4 {width: calc(var(--basic-cell-width) * 4 + 3 * 2 * var(--gutter-width));}
+.grid_5 {width: calc(var(--basic-cell-width) * 5 + 4 * 2 * var(--gutter-width));}
+.grid_6 {width: calc(var(--basic-cell-width) * 6 + 5 * 2 * var(--gutter-width));}
+.grid_7 {width: calc(var(--basic-cell-width) * 7 + 6 * 2 * var(--gutter-width));}
+.grid_8 {width: calc(var(--basic-cell-width) * 8 + 7 * 2 * var(--gutter-width));}
+.grid_9 {width: calc(var(--basic-cell-width) * 9 + 8 * 2 * var(--gutter-width));}
+.grid_10 {width: calc(var(--basic-cell-width) * 10 + 9 * 2 * var(--gutter-width));}
+.grid_11 {width: calc(var(--basic-cell-width) * 11 + 10 * 2 * var(--gutter-width));}
+.grid_12 {width: calc(var(--basic-cell-width) * 12 + 11 * 2 * var(--gutter-width));}
+.grid_13 {width: calc(var(--basic-cell-width) * 13 + 12 * 2 * var(--gutter-width));}
+.grid_14 {width: calc(var(--basic-cell-width) * 14 + 13 * 2 * var(--gutter-width));}
+.grid_15 {width: calc(var(--basic-cell-width) * 15 + 14 * 2 * var(--gutter-width));}
+.grid_16 {width: calc(var(--basic-cell-width) * 16 + 15 * 2 * var(--gutter-width));}
+
+.prefix_1 {padding-left: calc(var(--basic-cell-width) + 1 * 2 * var(--gutter-width));}
+.prefix_2 {padding-left: calc(var(--basic-cell-width) + 2 * 2 * var(--gutter-width));}
+.prefix_3 {padding-left: calc(var(--basic-cell-width) + 3 * 2 * var(--gutter-width));}
+.prefix_4 {padding-left: calc(var(--basic-cell-width) + 4 * 2 * var(--gutter-width));}
+.prefix_5 {padding-left: calc(var(--basic-cell-width) + 5 * 2 * var(--gutter-width));}
+.prefix_6 {padding-left: calc(var(--basic-cell-width) + 6 * 2 * var(--gutter-width));}
+.prefix_7 {padding-left: calc(var(--basic-cell-width) + 7 * 2 * var(--gutter-width));}
+.prefix_8 {padding-left: calc(var(--basic-cell-width) + 8 * 2 * var(--gutter-width));}
+.prefix_9 {padding-left: calc(var(--basic-cell-width) + 9 * 2 * var(--gutter-width));}
+.prefix_10 {padding-left: calc(var(--basic-cell-width) + 10 * 2 * var(--gutter-width));}
+.prefix_11 {padding-left: calc(var(--basic-cell-width) + 11 * 2 * var(--gutter-width));}
+.prefix_12 {padding-left: calc(var(--basic-cell-width) + 12 * 2 * var(--gutter-width));}
+.prefix_13 {padding-left: calc(var(--basic-cell-width) + 13 * 2 * var(--gutter-width));}
+.prefix_14 {padding-left: calc(var(--basic-cell-width) + 14 * 2 * var(--gutter-width));}
+.prefix_15 {padding-left: calc(var(--basic-cell-width) + 15 * 2 * var(--gutter-width));}
+
+.suffix_1 {padding-right: calc(var(--basic-cell-width) + 1 * 2 * var(--gutter-width));}
+.suffix_2 {padding-right: calc(var(--basic-cell-width) + 2 * 2 * var(--gutter-width));}
+.suffix_3 {padding-right: calc(var(--basic-cell-width) + 3 * 2 * var(--gutter-width));}
+.suffix_4 {padding-right: calc(var(--basic-cell-width) + 4 * 2 * var(--gutter-width));}
+.suffix_5 {padding-right: calc(var(--basic-cell-width) + 5 * 2 * var(--gutter-width));}
+.suffix_6 {padding-right: calc(var(--basic-cell-width) + 6 * 2 * var(--gutter-width));}
+.suffix_7 {padding-right: calc(var(--basic-cell-width) + 7 * 2 * var(--gutter-width));}
+.suffix_8 {padding-right: calc(var(--basic-cell-width) + 8 * 2 * var(--gutter-width));}
+.suffix_9 {padding-right: calc(var(--basic-cell-width) + 9 * 2 * var(--gutter-width));}
+.suffix_10 {padding-right: calc(var(--basic-cell-width) + 10 * 2 * var(--gutter-width));}
+.suffix_11 {padding-right: calc(var(--basic-cell-width) + 11 * 2 * var(--gutter-width));}
+.suffix_12 {padding-right: calc(var(--basic-cell-width) + 12 * 2 * var(--gutter-width));}
+.suffix_13 {padding-right: calc(var(--basic-cell-width) + 13 * 2 * var(--gutter-width));}
+.suffix_14 {padding-right: calc(var(--basic-cell-width) + 14 * 2 * var(--gutter-width));}
+.suffix_15 {padding-right: calc(var(--basic-cell-width) + 15 * 2 * var(--gutter-width));}
+
+.push_1, .push_2, .push_3, .push_4, .push_5, .push_6, .push_7, .push_8, .push_9, .push_10, .push_11, .push_12, .push_13, .push_14, .push_15,
+.pull_1, .pull_2, .pull_3, .pull_4, .pull_5, .pull_6, .pull_7, .pull_8, .pull_9, .pull_10, .pull_11, .pull_12, .pull_13, .pull_14, .pull_15 {position: relative;}
+
+
+.push_1 {left: calc(var(--basic-cell-width) * 1 + 1 * 2 * var(--gutter-width));}
+.push_2 {left: calc(var(--basic-cell-width) * 2 + 2 * 2 * var(--gutter-width));}
+.push_3 {left: calc(var(--basic-cell-width)* 3 + 3 * 2 * var(--gutter-width));}
+.push_4 {left: calc(var(--basic-cell-width) * 4 + 4 * 2 * var(--gutter-width));}
+.push_5 {left: calc(var(--basic-cell-width) * 5 + 5 * 2 * var(--gutter-width));}
+.push_6 {left: calc(var(--basic-cell-width) * 6 + 6 * 2 * var(--gutter-width));}
+.push_7 {left: calc(var(--basic-cell-width) * 7 + 7 * 2 * var(--gutter-width));}
+.push_8 {left: calc(var(--basic-cell-width) * 8 + 8 * 2 * var(--gutter-width));}
+.push_9 {left: calc(var(--basic-cell-width) * 9 + 9 * 2 * var(--gutter-width));}
+.push_10 {left: calc(var(--basic-cell-width) * 10 + 10 * 2 * var(--gutter-width));}
+.push_11 {left: calc(var(--basic-cell-width) * 11 + 11 * 2 * var(--gutter-width));}
+.push_12 {left: calc(var(--basic-cell-width) * 12 + 12 * 2 * var(--gutter-width));}
+.push_13 {left: calc(var(--basic-cell-width) * 13 + 13 * 2 * var(--gutter-width));}
+.push_14 {left: calc(var(--basic-cell-width) * 14 + 14 * 2 * var(--gutter-width));}
+.push_15 {left: calc(var(--basic-cell-width) * 15 + 15 * 2 * var(--gutter-width));}
+
+.pull_1 {left: calc(0px - (var(--basic-cell-width) * 1 + 1 * 2 * var(--gutter-width)));}
+.pull_2 {left: calc(0px - (var(--basic-cell-width) * 2 + 2 * 2 * var(--gutter-width)));}
+.pull_3 {left: calc(0px - (var(--basic-cell-width)* 3 + 3 * 2 * var(--gutter-width)));}
+.pull_4 {left: calc(0px - (var(--basic-cell-width) * 4 + 4 * 2 * var(--gutter-width)));}
+.pull_5 {left: calc(0px - (var(--basic-cell-width) * 5 + 5 * 2 * var(--gutter-width)));}
+.pull_6 {left: calc(0px - (var(--basic-cell-width) * 6 + 6 * 2 * var(--gutter-width)));}
+.pull_7 {left: calc(0px - (var(--basic-cell-width) * 7 + 7 * 2 * var(--gutter-width)));}
+.pull_8 {left: calc(0px - (var(--basic-cell-width) * 8 + 8 * 2 * var(--gutter-width)));}
+.pull_9 {left: calc(0px - (var(--basic-cell-width) * 9 + 9 * 2 * var(--gutter-width)));}
+.pull_10 {left: calc(0px - (var(--basic-cell-width) * 10 + 10 * 2 * var(--gutter-width)));}
+.pull_11 {left: calc(0px - (var(--basic-cell-width) * 11 + 11 * 2 * var(--gutter-width)));}
+.pull_12 {left: calc(0px - (var(--basic-cell-width) * 12 + 12 * 2 * var(--gutter-width)));}
+.pull_13 {left: calc(0px - (var(--basic-cell-width) * 13 + 13 * 2 * var(--gutter-width)));}
+.pull_14 {left: calc(0px - (var(--basic-cell-width) * 14 + 14 * 2 * var(--gutter-width)));}
+.pull_15 {left: calc(0px - (var(--basic-cell-width) * 15 + 15 * 2 * var(--gutter-width)));}
+
+
+.alpha {margin-left: 0;}
+
+.omega {margin-right: 0;}
+
+p {
+    margin: 0 0 10px 0;
+    padding: 15px 25px;
+}
