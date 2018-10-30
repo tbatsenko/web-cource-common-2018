@@ -8,6 +8,7 @@
   <title>My form</title>
 </head>
 <body>
+
 <form>
   <label for="full_name">
     Full Name: <input type="text" id="full_name" name="user_full_name">
@@ -291,5 +292,17 @@
   <button type="reset">Reset</button>
   <button type="submit">Submit</button>
 </form>
+
+<script src="http://builds.handlebarsjs.com.s3.amazonaws.com/handlebars-v4.0.12.js"></script>
+<script>
+  const render = async (templateURL, dataURL, container) => {
+    const source = await (await fetch(templateURL)).text();
+    const template = Handlebars.compile(source);
+    const data = await (await fetch(dataURL)).json();
+    container.innerHTML = template(data);
+  };
+  render("/template.handlebars", "/data.json", document.body)
+</script>
+
 </body>
 </html>

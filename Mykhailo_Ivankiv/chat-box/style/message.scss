@@ -1,0 +1,49 @@
+.message {
+  position: relative;
+  overflow: hidden;
+  margin: 10px 0;
+
+  &--me {
+    .message__text {
+      float: right;
+      background: #2979ff;
+      color: #ffffff;
+    }
+  }
+
+  &--friend {
+    .message__text {
+      margin-left: 34px;
+      float: left;
+      color: #353535;
+      background: #f3f3f3;
+    }
+  }
+
+  &__user-pic {
+    position: absolute;
+    top: 3px;
+    left: 1px;
+    height: 28px;
+    width: 28px;
+    border-radius: 100%;
+    object-fit: cover;
+  }
+
+  &__text {
+    clear: both;
+
+    font-family: OpenSans, sans-serif;
+
+    margin: 1px;
+    padding: 8px 12px;
+
+    &--single {
+      border-radius: 100px;
+    }
+
+    &--multiple {
+      border-radius: 14px;
+    }
+  }
+}
