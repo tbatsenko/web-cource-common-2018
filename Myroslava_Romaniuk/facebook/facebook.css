@@ -39,7 +39,7 @@ body {
     display: inline;
     margin-left: 50px;
 }
-.header li:not(:last-of-type):after, .header a li:after {
+.header li:after {
     content: "";
     height: 20px;
     width: 1px;
