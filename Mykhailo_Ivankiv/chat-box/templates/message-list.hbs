@@ -1,0 +1,22 @@
+{{#messages}}
+    <div class="
+                message
+                message--{{from}}
+            ">
+
+        {{#if isFromFriend}}
+            <img class="message__user-pic" src="{{userPic}}" alt="">
+        {{/if}}
+
+
+        {{#if singleMessage}}
+            {{#text}}
+                <div class="message__text message__text--single">{{&.}}</div>
+            {{/text}}
+        {{else}}
+            {{#text}}
+                <div class="message__text message__text--multiple">{{&.}}</div>
+            {{/text}}
+        {{/if}}
+    </div>
+{{/messages}}

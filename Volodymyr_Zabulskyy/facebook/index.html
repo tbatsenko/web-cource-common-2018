@@ -15,7 +15,7 @@
 </head>
 
 <body>
-<nav class="nav-top">
+<header class="nav-top">
     <div class="nav-container">
         <section class="nav-top-logo-container">
             <button class="logo">Facebook</button>
@@ -25,39 +25,42 @@
                 </button>
             </form>
         </section>
-        <ul class="nav-top-menu-container">
-            <li class="nav-top-menu-item hover-dark profile-item">
-                <button class="person-profile">You</button>
-                <a class="nav-text" href="">Adolf</a>
-            </li>
-            <li class="line-after"></li>
-            <li class="nav-top-menu-item hover-dark">
-                <a  class="nav-text" href="">Home</a>
-            </li>
-            <li class="line-after"></li>
-            <li class="nav-top-menu-item hover-dark">
-                <a class="nav-text"  href="">Create</a>
-            </li>
-            <li class="line-after"></li>
-            <li class="nav-top-menu-item ">
-                <button class="nav-top-icon people">people</button>
-            </li>
-            <li class="nav-top-menu-item ">
-                <button class="nav-top-icon messenger">messenger</button>
-            </li>
-            <li class="nav-top-menu-item">
-                <button class="nav-top-icon notifications">notifications</button>
-            </li>
-            <li class="line-after"></li>
-            <li class="nav-top-menu-item ">
-                <button class="nav-top-icon question">question</button>
-            </li>
-            <li class="nav-top-menu-item ">
-                <button class="nav-top-icon dropdown">dropdown</button>
-            </li>
-        </ul>
+        <nav>
+
+            <ul class="nav-top-menu-container">
+                <li class="nav-top-menu-item hover-dark profile-item">
+                    <button class="person-profile">You</button>
+                    <a class="nav-text" href="">Adolf</a>
+                </li>
+                <li class="line-after"></li>
+                <li class="nav-top-menu-item hover-dark">
+                    <a class="nav-text" href="">Home</a>
+                </li>
+                <li class="line-after"></li>
+                <li class="nav-top-menu-item hover-dark">
+                    <a class="nav-text" href="">Create</a>
+                </li>
+                <li class="line-after"></li>
+                <li class="nav-top-menu-item ">
+                    <button class="nav-top-icon people">people</button>
+                </li>
+                <li class="nav-top-menu-item ">
+                    <button class="nav-top-icon messenger">messenger</button>
+                </li>
+                <li class="nav-top-menu-item">
+                    <button class="nav-top-icon notifications">notifications</button>
+                </li>
+                <li class="line-after"></li>
+                <li class="nav-top-menu-item ">
+                    <button class="nav-top-icon question">question</button>
+                </li>
+                <li class="nav-top-menu-item ">
+                    <button class="nav-top-icon dropdown">dropdown</button>
+                </li>
+            </ul>
+        </nav>
     </div>
-</nav>
+</header>
 <main>
     <nav class="nav-left">
         <header class="left-menu-item header-top">
@@ -68,8 +71,7 @@
             <li class="active left-menu-item">
                 <img alt="news feed" class="nav-left-icon news-feed" src="">
                 <a class="left-menu-text">News Feed</a>
-                <im
-                        g alt="more" class="left-menu-dots rnd small">
+                <img alt="more" class="left-menu-dots rnd small" src="">
             </li>
             <li class="left-menu-item">
                 <img alt="messenger" class="nav-left-icon messenger" src="">
@@ -90,28 +92,28 @@
         <header class="header-in-menu">Explore</header>
         <ul>
             <li class="left-menu-item">
-                <img alt="events" class="nav-left-icon events">
+                <img alt="events" class="nav-left-icon events" src="">
                 <a class="left-menu-text">Events</a>
                 <span class="indicator">4</span></li>
             <li class="left-menu-item">
-                <img alt="pages" class="nav-left-icon pages">
+                <img alt="pages" class="nav-left-icon pages" src="">
                 <a class="left-menu-text">Pages</a>
             </li>
             <li class="left-menu-item">
-                <img alt="friends" class="nav-left-icon friend-lists">
+                <img alt="friends" class="nav-left-icon friend-lists" src="">
                 <a class="left-menu-text">Friend lists</a>
             </li>
             <li class="left-menu-item">
-                <img alt="fundraisers" class="nav-left-icon fundraisers">
+                <img alt="fundraisers" class="nav-left-icon fundraisers" src="">
                 <a class="left-menu-text">Fundraisers</a>
             </li>
             <li class="left-menu-item">
 
-                <img alt="memories" class="nav-left-icon memories">
+                <img alt="memories" class="nav-left-icon memories" src="">
                 <a class="left-menu-text">Memories</a>
                 <span class="indicator">2</span></li>
             <li class="left-menu-see-more">
-                <img alt="see more" class="nav-left-icon see-more">
+                <img alt="see more" class="nav-left-icon see-more" src="">
                 <a class="see-more-link" href="">See more...</a>
             </li>
         </ul>
@@ -120,9 +122,7 @@
         <section class="form-container panel">
             <form class="form-main" action="">
                 <ul class="post-options-container">
-                    <li class="post-option "><img class="form-options-ico photo" src=""><span class="form-options-text">Photo/Video Album</span>
-                    </li>
-                    <li class="left-border post-option"><img class="form-options-ico post" src=""><span
+                    <li class="post-option"><img class="form-options-ico post" src=""><span
                             class="form-options-text active">Compose post</span></li>
                     <li class="left-border post-option "><img class="form-options-ico photo" src=""><span
                             class="form-options-text">Photo/Video Album</span></li>
@@ -135,13 +135,13 @@
                         <input class="form-input" type="text" name="asf" id="asfa" placeholder="What's on ur mind?">
                     </li>
                     <li class="form-options-container">
-                        <button class="form-option-container"><img class="form-option-ico photo"><span
+                        <button class="form-option-container"><img class="form-option-ico photo" src=""><span
                                 class="form-option">Photo/Video</span></button>
-                        <button class="form-option-container"><img class="form-option-ico tag"><span
+                        <button class="form-option-container"><img class="form-option-ico tag" src=""><span
                                 class="form-option">Tag friends</span></button>
-                        <button class="form-option-container"><img class="form-option-ico activity"><span
+                        <button class="form-option-container"><img class="form-option-ico activity" src=""><span
                                 class="form-option">Activity/Feeling</span></button>
-                        <button class="form-option-container"><img class="form-option-ico dots"></button>
+                        <button class="form-option-container"><img class="form-option-ico dots" src=""></button>
                     </li>
                 </ul>
             </form>
@@ -157,10 +157,10 @@
                             </h4>
                             <small class="article-header-annotation">
                                 <time><a href="">Yesterday at 00:26</a></time>
-                                <img class="article-ico globe">
+                                <img class="article-ico globe" src="">
                             </small>
                         </div>
-                        <img class="article-header-dots">
+                        <img class="article-header-dots" src="">
                     </header>
                 </section>
                 <section class="article-content">
@@ -168,8 +168,8 @@
                 </section>
                 <form class="article-reaction-area">
                     <section class="likes-container">
-                        <img class="reaction-ico thumbsup left-part">
-                        <img class="reaction-ico love left-part">
+                        <img class="reaction-ico thumbsup left-part" src="">
+                        <img class="reaction-ico love left-part" src="">
                         <small class=" left-part">
                             <a href=""> Benito Mussolini, Joseph Stalin and 128 others</a>
                         </small>
@@ -180,17 +180,17 @@
                     <section class="reactions-list-container">
                         <ul class="reactions-list">
                             <li class="reactions-list-item">
-                                <button class="reactions-list-button"><img class="reactions-list-icon like">
+                                <button class="reactions-list-button"><img class="reactions-list-icon like" src="">
                                     <span>Like</span>
                                 </button>
                             </li>
                             <li class="reactions-list-item">
-                                <button class="reactions-list-button"><img class="reactions-list-icon comment">
+                                <button class="reactions-list-button"><img class="reactions-list-icon comment" src="">
                                     <span>Comment</span>
                                 </button>
                             </li>
                             <li class="reactions-list-item">
-                                <button class="reactions-list-button"><img class="reactions-list-icon share">
+                                <button class="reactions-list-button"><img class="reactions-list-icon share" src="">
                                     <span>Share</span>
                                 </button>
                             </li>
@@ -198,12 +198,12 @@
                     </section>
                     <footer class="comment-area-container">
                         <img class="comment-area-author-img" src="img/person.png" alt="author">
-                        <input class="comment-area-input" type="text" name="" id="" placeholder="write a comment">
+                        <input class="comment-area-input" type="text" name="" placeholder="write a comment">
                         <div class="comment-area-ico-container">
-                            <img class="comment-area-ico smile" alt="smile"/>
-                            <img class="comment-area-ico photo" alt="photo"/>
-                            <img class="comment-area-ico gif" alt="gif"/>
-                            <img class="comment-area-ico sticker" alt="sticker"/>
+                            <img class="comment-area-ico smile" alt="smile" src=""/>
+                            <img class="comment-area-ico photo" alt="photo" src=""/>
+                            <img class="comment-area-ico gif" alt="gif" src=""/>
+                            <img class="comment-area-ico sticker" alt="sticker" src=""/>
                         </div>
                     </footer>
                 </form>
@@ -219,10 +219,10 @@
                             </h4>
                             <small class="article-header-annotation">
                                 <time><a href="">Today at 10:16</a></time>
-                                <img class="article-ico globe">
+                                <img class="article-ico globe" src="">
                             </small>
                         </div>
-                        <img class="article-header-dots">
+                        <img class="article-header-dots" src="">
                     </header>
                 </section>
                 <section class="article-content">
@@ -245,8 +245,8 @@
                 </section>
                 <form class="article-reaction-area">
                     <section class="likes-container">
-                        <img class="reaction-ico thumbsup left-part">
-                        <img class="reaction-ico love left-part">
+                        <img class="reaction-ico thumbsup left-part" src="">
+                        <img class="reaction-ico love left-part" src="">
                         <small class=" left-part">
                             <a href=""> Benito Mussolini, Joseph Stalin and 128 others</a>
                         </small>
@@ -257,27 +257,27 @@
                     <section class="reactions-list-container">
                         <ul class="reactions-list">
                             <li class="reactions-list-item">
-                                <button class="reactions-list-button"><img class="reactions-list-icon like">Like
+                                <button class="reactions-list-button"><img class="reactions-list-icon like" src="">Like
                                 </button>
                             </li>
                             <li class="reactions-list-item">
-                                <button class="reactions-list-button"><img class="reactions-list-icon comment"> Comment
+                                <button class="reactions-list-button"><img class="reactions-list-icon comment" src=""> Comment
                                 </button>
                             </li>
                             <li class="reactions-list-item">
-                                <button class="reactions-list-button"><img class="reactions-list-icon share"> Share
+                                <button class="reactions-list-button"><img class="reactions-list-icon share" src=""> Share
                                 </button>
                             </li>
                         </ul>
                     </section>
                     <footer class="comment-area-container">
                         <img class="comment-area-author-img" src="img/person.png" alt="author">
-                        <input class="comment-area-input" type="text" name="" id="" placeholder="write a comment">
+                        <input class="comment-area-input" type="text" name="" placeholder="write a comment">
                         <section class="comment-area-ico-container">
-                            <img class="comment-area-ico smile" alt="smile"/>
-                            <img class="comment-area-ico photo" alt="photo"/>
-                            <img class="comment-area-ico gif" alt="gif"/>
-                            <img class="comment-area-ico sticker" alt="sticker"/>
+                            <img class="comment-area-ico smile" alt="smile" src=""/>
+                            <img class="comment-area-ico photo" alt="photo" src=""/>
+                            <img class="comment-area-ico gif" alt="gif" src=""/>
+                            <img class="comment-area-ico sticker" alt="sticker" src=""/>
                         </section>
                     </footer>
                 </form>
@@ -295,7 +295,7 @@
                                 <span><a href="">sposnored</a></span>
                             </small>
                         </div>
-                        <img class="article-header-dots">
+                        <img class="article-header-dots" src="">
                     </header>
                 </section>
                 <section class="article-content">
@@ -309,8 +309,8 @@
                 </section>
                 <form class="article-reaction-area">
                     <section class="likes-container">
-                        <img class="reaction-ico thumbsup left-part">
-                        <img class="reaction-ico love left-part">
+                        <img class="reaction-ico thumbsup left-part" src="">
+                        <img class="reaction-ico love left-part" src="">
                         <small class=" left-part">
                             <a href=""> Benito Mussolini, Joseph Stalin and 128 others</a>
                         </small>
@@ -321,15 +321,15 @@
                     <section class="reactions-list-container">
                         <ul class="reactions-list">
                             <li class="reactions-list-item">
-                                <button class="reactions-list-button"><img class="reactions-list-icon like">Like
+                                <button class="reactions-list-button"><img class="reactions-list-icon like" src="">Like
                                 </button>
                             </li>
                             <li class="reactions-list-item">
-                                <button class="reactions-list-button"><img class="reactions-list-icon comment"> Comment
+                                <button class="reactions-list-button"><img class="reactions-list-icon comment" src=""> Comment
                                 </button>
                             </li>
                             <li class="reactions-list-item">
-                                <button class="reactions-list-button"><img class="reactions-list-icon share"> Share
+                                <button class="reactions-list-button"><img class="reactions-list-icon share" src=""> Share
                                 </button>
                             </li>
                         </ul>
@@ -338,10 +338,10 @@
                         <img class="comment-area-author-img" src="img/person.png" alt="author">
                         <input class="comment-area-input" type="text" name="" id="" placeholder="write a comment">
                         <div class="comment-area-ico-container">
-                            <img class="comment-area-ico smile" alt="smile"/>
-                            <img class="comment-area-ico photo" alt="photo"/>
-                            <img class="comment-area-ico gif" alt="gif"/>
-                            <img class="comment-area-ico sticker" alt="sticker"/>
+                            <img class="comment-area-ico smile" alt="smile" src=""/>
+                            <img class="comment-area-ico photo" alt="photo" src=""/>
+                            <img class="comment-area-ico gif" alt="gif" src=""/>
+                            <img class="comment-area-ico sticker" alt="sticker" src=""/>
                         </div>
                     </footer>
                 </form>
@@ -360,7 +360,7 @@
 
         <article>
             <section class="story-item">
-                <div class="your-story-img-container"><img class="your-story-img"></img></div>
+                <div class="your-story-img-container"><img class="your-story-img" src=""></div>
                 <header class="story-text-container">
                     <h4 class="story-header">Add to ur story</h4>
                     <small class="story-description">Share a photo or video or write something</small>
@@ -369,7 +369,7 @@
             <section class="story-item">
                 <div class="story-img-container"><img class="story-img" src="img/person.png" alt="profile"></div>
                 <header class="story-text-container">
-                    <profile><a class="story-header">Shreck Chebureck</a></profile>
+                    <a class="story-header">Shreck Chebureck</a>
                     <small class="story-description">
                         <time>20hr ago</time>
                     </small>
@@ -378,7 +378,7 @@
             <section class="story-item">
                 <div class="story-img-container"><img class="story-img" src="img/person.png" alt="profile"></div>
                 <header class="story-text-container">
-                    <profile><a class="story-header">Shreck Chebureck</a></profile>
+                    <a class="story-header">Shreck Chebureck</a>
                     <small class="story-description">
                         <time>20hr ago</time>
                     </small>
@@ -387,7 +387,7 @@
             <section class="story-item">
                 <div class="story-img-container"><img class="story-img" src="img/person.png" alt="profile"></div>
                 <header class="story-text-container">
-                    <profile><a class="story-header">Shreck Chebureck</a></profile>
+                    <a class="story-header">Shreck Chebureck</a>
                     <small class="story-description">
                         <time>20hr ago</time>
                     </small>

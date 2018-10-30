@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Chat box</title>
+    <link rel="stylesheet" href="style/common.css">
+</head>
+<body>
+
+
+<script src="node_modules/handlebars/dist/handlebars.js"></script>
+<script>
+    const render = async (templateSrc, dataSrc, conteiner) => {
+      const templateStr = await (await fetch(templateSrc)).text();
+      const data = await (await fetch(dataSrc)).json();
+      const compiled = Handlebars.compile(templateStr)
+      conteiner.innerHTML = compiled(data);
+    };
+
+    const renderPage = async  () => {
+      await render("templates/chat-window.hbs", "data/conversation.json", document.body);
+      await render("templates/chat.hbs", "data/conversation.json", document.getElementById("window-payload"));
+      await render("templates/message-list.hbs", "data/conversation.json", document.getElementById("chat-payload"));
+      await render("templates/create-message.hbs", "data/conversation.json", document.getElementById("create-chat-message"));
+    }
+
+    renderPage();
+</script>
+</body>
+</html>
