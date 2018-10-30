@@ -1,0 +1,93 @@
+<header>
+  <button>open menu</button>
+  <h1><a href="https://www.youtube.com/">Youtube</a></h1>
+  <form action="">
+    <input title="Search">
+    <button>Submit</button>
+  </form>
+
+  <div class="user-options">
+    <button>Upload</button>
+    <button>Apps</button>
+    <button>Messages</button>
+    <button>Notifications</button>
+    <button>Profile</button>
+  </div>
+</header>
+<main>
+
+  <article>
+    <iframe id="video" width="640" height="360" src="https://www.youtube.com/embed/cRm54SJxcao" frameborder="0"
+            allowfullscreen></iframe>
+    <h2>{{video.title}}</h2>
+    <small>
+      {{video.views}}
+    </small>
+    <span class="video-options">
+        <button>Like {{video.likes}}</button>
+        <button>Dislike {{video.dislikes}}</button>
+        <button>Share</button>
+        <button>save</button>
+        <button>...</button>
+      </span>
+
+
+  </article>
+
+</main>
+<footer>
+  <a href="{{video.channel.link}}"><img
+      src="{{video.channel.logo}}"/></a>
+  <label for="author">{{video.channel.title}} Verified:{{video.channel.verified}}
+    <!--TODO:Verified icon-->
+    Published on
+    <time datetime={{video.publish-date-formatted}}>{{video.publish-date}}</time>
+  </label>
+  <button>Subscribe {{video.channel.subscribers}}</button>
+</footer>
+<aside>
+  {{comments.length}}Comments
+  <button title="Sort by">Sort By</button>
+  {{#comments}}
+    <br>
+    {{user-name}}
+    <br>
+    {{date}}
+    <br>
+    {{text}}
+    <br>
+    {{likes}}, {{dislikes}}
+    <button>Reply</button>
+    <button>View {{replies.length}} replies</button>
+  {{/comments}}
+</aside>
+<aside>
+  Up next
+  Autoplay
+  {{#next-video}}
+    <a href="{{link}}">
+      <img src="{{preview}}">
+      <h4>{{title}} </h4>
+      <small>{{channel}}, Verified:{{verified}}
+        {{views}} views
+      </small>
+    </a>
+  {{/next-video}}
+  {{#mix-video}}
+    <a href="{{link}}">
+      <img src="{{preview}}">
+      <h4>{{title}} </h4>
+      <small>{{channel}}, Verified:{{verified}}
+      </small>
+    </a>
+  {{/mix-video}}
+  {{#recommended-videos}}
+    <a href="{{link}}">
+      <img src="{{preview}}">
+      <h4>{{title}} </h4>
+      <small>{{channel}}, Verified:{{verified}}
+        {{views}} views
+      </small>
+    </a>
+  {{/recommended-videos}}
+</aside>
