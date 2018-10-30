@@ -1,0 +1,45 @@
+{
+  "messages": [
+    {
+      "singleMessage": true,
+      "isFromFriend": true,
+      "userPic":
+        "http://1ofdmq2n8tc36m6i46scovo2e-wpengine.netdna-ssl.com/wp-content/uploads/2016/11/Tobias-Erb_MPI-Marburg-300x207.jpg",
+
+      "time": "---",
+      "from": "friend",
+      "text": ["Yo, Can you update views?"]
+    },
+    {
+      "singleMessage": true,
+      "isFromFriend": true,
+
+      "userPic":
+        "http://1ofdmq2n8tc36m6i46scovo2e-wpengine.netdna-ssl.com/wp-content/uploads/2016/11/Tobias-Erb_MPI-Marburg-300x207.jpg",
+
+      "time": "---",
+      "from": "friend",
+      "text": ["I <b>can’t</b> see updated views yet"]
+    },
+
+    {
+      "singleMessage": false,
+
+      "from": "me",
+      "text": [
+        "Hi, as I noted in Email last week - I am on vacation.",
+        "I will be back next week"
+      ]
+    },
+    {
+      "singleMessage": false,
+      "isFromFriend": true,
+      "userPic":
+        "http://1ofdmq2n8tc36m6i46scovo2e-wpengine.netdna-ssl.com/wp-content/uploads/2016/11/Tobias-Erb_MPI-Marburg-300x207.jpg",
+
+      "time": "---",
+      "from": "friend",
+      "text": ["Ahh sorry, missed that!", "Let’s talk next week"]
+    }
+  ]
+}
