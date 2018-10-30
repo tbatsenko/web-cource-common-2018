@@ -1,0 +1,51 @@
+.user-text-field{
+  &__inputs{
+    padding: 10px;
+    width: 292px;
+    border-top: 1px solid #e5e5e5;
+    border-bottom: none;
+    border-left: none;
+    border-right: none;
+    font-size: 12px;
+    font-weight: 600;
+    color: #cdcdcd;
+  }
+  &__button{
+    margin-right: 5px;
+    margin-top: 5px;
+    color: transparent;
+    width: 16px;
+    height: 16px;
+    border: none;
+    background-color: inherit;
+
+    &_images{
+      margin-left: 10px;
+      background: url("/images/text-icon_picture/picture.png");
+      background-size: cover;
+    }
+
+    &_gif{
+      background: url("/images/text-icon_gif/gif.png");
+      background-size: cover;
+      width: 21px;
+    }
+
+    &_emodji{
+      background: url("/images/text-icon_smile/smile.png");
+      background-size: cover;
+    }
+
+    &_calendar{
+      background: url("/images/text-icon_calendar/calendar.png");
+      background-size: cover;
+      height: 18px;
+    }
+    &_photo{
+      background: url("/images/text-icon_camera/camera.png");
+      background-size: cover;
+      height: 17px;
+      width: 21px;
+    }
+  }
+}
