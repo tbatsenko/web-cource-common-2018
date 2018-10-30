@@ -7,6 +7,13 @@
 @import "main_page/photo_gallery/photo_gallery.css";
 @import "main_page/photo_gallery/photo_gallery_caption.css";
 @import "main_page/schooll-info/days_to_shooll_counter.css";
+@import "main_page/schooll-info/school-info_heading.css";
+@import "main_page/schooll-info/school-types.css";
+@import "main_page/schooll-info/days_to_school.css";
+@import "news/icon_of_day.css";
+
+
+
 #account{
     position: absolute;
     right: 15px;
@@ -18,3 +25,5 @@
 .clear-fix{
     clear: both;
 }
+
+.
