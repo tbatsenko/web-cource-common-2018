@@ -1,0 +1,26 @@
+:root {
+  --window-header-height: 32px;
+}
+.window {
+  display: flex;
+  flex-direction: column;
+
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.11);
+
+  height: 384px;
+  width: 292px;
+
+  margin: 30px auto;
+
+  &__header {
+    flex-grow: 0;
+    border-radius: 4px 4px 0 0;
+    background: #2979ff;
+    height: var(--window-header-height);
+  }
+
+  &__payload {
+    flex-grow: 1;
+    height: calc(100% - var(--window-header-height));
+  }
+}
