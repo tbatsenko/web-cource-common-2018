@@ -1,6 +1,9 @@
 // Variables
 @import "base";
 
+// Mixins
+@import "mixins";
+
 .chat-box {
   width: 292px;
   height: 384px;
@@ -72,17 +75,11 @@
 
   &__messages {
     display: flex;
+    flex: 1;
     overflow-y: scroll;
     padding: 16px;
 
-    &::-webkit-scrollbar {
-      width: 6px;
-      background-color: transparent;
-    }
-
-    &::-webkit-scrollbar-thumb {
-      background-color: $chat-box__bg-color__secondary;
-    }
+    @include chatbox-scrollbar;
   }
 
 
@@ -100,7 +97,9 @@
     resize: none;
     //font-weight: 600;
     font-family: $chat-box__font-family;
-    color: $chat-box__font-color_nonactive;
+    color: $chat-box__font-color__nonactive;
+
+    @include chatbox-scrollbar;
 
     &:focus {
       outline: none;
