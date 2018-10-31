@@ -1,0 +1,252 @@
+{
+  "header": {
+    "left_side": {
+      "menu": "menu",
+      "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/YouTube_Logo_2017.svg/1280px-YouTube_Logo_2017.svg.png"
+    },
+
+    "center": {
+      "search": "search"
+    },
+
+    "right_side": {
+      "button": [
+        "video_call",
+        "apps",
+        "send",
+        "notifications"
+      ],
+      "user": "https://yt3.ggpht.com/-PgzP_C3q5zs/AAAAAAAAAAI/AAAAAAAAAAA/4ogQWtkNFxE/s88-c-k-no-mo-rj-c0xffffff/photo.jpg"
+    }
+  },
+
+
+
+  "main": {
+    "left-nav": [
+      {
+        "buttons": [
+          {
+            "logo": "home",
+            "text": "Home"
+          },
+          {
+            "logo": "trending_up",
+            "text": "Trending"
+          },
+          {
+            "logo": "subscriptions",
+            "text": "Subscriptions"
+          }
+        ]
+      },
+      {
+        "header": "library",
+        "buttons": [
+          {
+            "logo": "history",
+            "text": "History"
+          },
+          {
+            "logo": "access_time",
+            "text": "Watch later"
+          },
+          {
+            "logo": "thumb_up",
+            "text": "Liked"
+          }
+        ]
+      },
+      {
+        "header": "subscriptions",
+        "buttons": [
+          {
+            "user": "https://yt3.ggpht.com/a-/AN66SAwlSxKP06bk5-1BXBAYl0VhFnpiwc4MuUuqRg=s88-mo-c-c0xffffffff-rj-k-no",
+            "text": "LeBwa"
+          },
+          {
+            "user": "https://yt3.ggpht.com/a-/AN66SAw9Bc-W-BZWisbNEZZUo-EsUZH9O6nhHvV-8A=s88-mo-c-c0xffffffff-rj-k-no",
+            "text": "EugeneSagaz"
+          },
+          {
+            "user": "https://yt3.ggpht.com/a-/AN66SAxWBOEmq7ym7YdPVD9-hOWNbReELId2TGNeWg=s88-mo-c-c0xffffffff-rj-k-no",
+            "text": "Koko"
+          }
+        ]
+      },
+      {
+        "header": "more from youtube",
+        "buttons": [
+          {
+            "logo": "local_movies",
+            "text": "YouTube Movies"
+          },
+          {
+            "logo": "games",
+            "text": "Gaming"
+          },
+          {
+            "logo": "live_tv",
+            "text": "Live"
+          }
+        ]
+      },
+      {
+        "buttons": [
+          {
+            "logo": "settings",
+            "text": "Settings"
+          },
+          {
+            "logo": "flag",
+            "text": "Report history"
+          },
+          {
+            "logo": "help",
+            "text": "Help"
+          },
+          {
+            "logo": "feedback",
+            "text": "Send feedback"
+          }
+        ]
+      }
+    ],
+    "center": [
+      {
+        "video-blocks": [
+          {
+            "title": "Recommended",
+            "video-rows": [
+              {
+                "videos": [
+                  {
+                    "image": "https://i.ytimg.com/vi/gyJQKcZ35zM/hqdefault.jpg?sqp=-oaymwEZCNACELwBSFXyq4qpAwsIARUAAIhCGAFwAQ==&rs=AOn4CLCFybB1Ie8h4SytHBDEbm5OymxZ-w",
+                    "title": "Koko",
+                    "author": "koko pictures",
+                    "views": "100500 views"
+                  },
+                  {
+                    "image": "https://i.ytimg.com/vi/gyJQKcZ35zM/hqdefault.jpg?sqp=-oaymwEZCNACELwBSFXyq4qpAwsIARUAAIhCGAFwAQ==&rs=AOn4CLCFybB1Ie8h4SytHBDEbm5OymxZ-w",
+                    "title": "Koko",
+                    "author": "koko pictures",
+                    "views": "100500 views"
+                  },
+                  {
+                    "image": "https://i.ytimg.com/vi/gyJQKcZ35zM/hqdefault.jpg?sqp=-oaymwEZCNACELwBSFXyq4qpAwsIARUAAIhCGAFwAQ==&rs=AOn4CLCFybB1Ie8h4SytHBDEbm5OymxZ-w",
+                    "title": "Koko",
+                    "author": "koko pictures",
+                    "views": "100500 views"
+                  },
+                  {
+                    "image": "https://i.ytimg.com/vi/gyJQKcZ35zM/hqdefault.jpg?sqp=-oaymwEZCNACELwBSFXyq4qpAwsIARUAAIhCGAFwAQ==&rs=AOn4CLCFybB1Ie8h4SytHBDEbm5OymxZ-w",
+                    "title": "Koko",
+                    "author": "koko pictures",
+                    "views": "100500 views"
+                  },
+                  {
+                    "image": "https://i.ytimg.com/vi/gyJQKcZ35zM/hqdefault.jpg?sqp=-oaymwEZCNACELwBSFXyq4qpAwsIARUAAIhCGAFwAQ==&rs=AOn4CLCFybB1Ie8h4SytHBDEbm5OymxZ-w",
+                    "title": "Koko",
+                    "author": "koko pictures",
+                    "views": "100500 views"
+                  },
+                  {
+                    "image": "https://i.ytimg.com/vi/gyJQKcZ35zM/hqdefault.jpg?sqp=-oaymwEZCNACELwBSFXyq4qpAwsIARUAAIhCGAFwAQ==&rs=AOn4CLCFybB1Ie8h4SytHBDEbm5OymxZ-w",
+                    "title": "Koko",
+                    "author": "koko pictures",
+                    "views": "100500 views"
+                  }
+                ]
+              },
+              {
+                "videos": [
+                  {
+                    "image": "https://i.ytimg.com/vi/gyJQKcZ35zM/hqdefault.jpg?sqp=-oaymwEZCNACELwBSFXyq4qpAwsIARUAAIhCGAFwAQ==&rs=AOn4CLCFybB1Ie8h4SytHBDEbm5OymxZ-w",
+                    "title": "Koko",
+                    "author": "koko pictures",
+                    "views": "100500 views"
+                  },
+                  {
+                    "image": "https://i.ytimg.com/vi/gyJQKcZ35zM/hqdefault.jpg?sqp=-oaymwEZCNACELwBSFXyq4qpAwsIARUAAIhCGAFwAQ==&rs=AOn4CLCFybB1Ie8h4SytHBDEbm5OymxZ-w",
+                    "title": "Koko",
+                    "author": "koko pictures",
+                    "views": "100500 views"
+                  },
+                  {
+                    "image": "https://i.ytimg.com/vi/gyJQKcZ35zM/hqdefault.jpg?sqp=-oaymwEZCNACELwBSFXyq4qpAwsIARUAAIhCGAFwAQ==&rs=AOn4CLCFybB1Ie8h4SytHBDEbm5OymxZ-w",
+                    "title": "Koko",
+                    "author": "koko pictures",
+                    "views": "100500 views"
+                  },
+                  {
+                    "image": "https://i.ytimg.com/vi/gyJQKcZ35zM/hqdefault.jpg?sqp=-oaymwEZCNACELwBSFXyq4qpAwsIARUAAIhCGAFwAQ==&rs=AOn4CLCFybB1Ie8h4SytHBDEbm5OymxZ-w",
+                    "title": "Koko",
+                    "author": "koko pictures",
+                    "views": "100500 views"
+                  },
+                  {
+                    "image": "https://i.ytimg.com/vi/gyJQKcZ35zM/hqdefault.jpg?sqp=-oaymwEZCNACELwBSFXyq4qpAwsIARUAAIhCGAFwAQ==&rs=AOn4CLCFybB1Ie8h4SytHBDEbm5OymxZ-w",
+                    "title": "Koko",
+                    "author": "koko pictures",
+                    "views": "100500 views"
+                  },
+                  {
+                    "image": "https://i.ytimg.com/vi/gyJQKcZ35zM/hqdefault.jpg?sqp=-oaymwEZCNACELwBSFXyq4qpAwsIARUAAIhCGAFwAQ==&rs=AOn4CLCFybB1Ie8h4SytHBDEbm5OymxZ-w",
+                    "title": "Koko",
+                    "author": "koko pictures",
+                    "views": "100500 views"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "title": "Not recommended",
+            "video-rows": [
+              {
+                "videos": [
+                  {
+                    "image": "https://i.ytimg.com/vi/gyJQKcZ35zM/hqdefault.jpg?sqp=-oaymwEZCNACELwBSFXyq4qpAwsIARUAAIhCGAFwAQ==&rs=AOn4CLCFybB1Ie8h4SytHBDEbm5OymxZ-w",
+                    "title": "Koko",
+                    "author": "koko pictures",
+                    "views": "100500 views"
+                  },
+                  {
+                    "image": "https://i.ytimg.com/vi/gyJQKcZ35zM/hqdefault.jpg?sqp=-oaymwEZCNACELwBSFXyq4qpAwsIARUAAIhCGAFwAQ==&rs=AOn4CLCFybB1Ie8h4SytHBDEbm5OymxZ-w",
+                    "title": "Koko",
+                    "author": "koko pictures",
+                    "views": "100500 views"
+                  },
+                  {
+                    "image": "https://i.ytimg.com/vi/gyJQKcZ35zM/hqdefault.jpg?sqp=-oaymwEZCNACELwBSFXyq4qpAwsIARUAAIhCGAFwAQ==&rs=AOn4CLCFybB1Ie8h4SytHBDEbm5OymxZ-w",
+                    "title": "Koko",
+                    "author": "koko pictures",
+                    "views": "100500 views"
+                  },
+                  {
+                    "image": "https://i.ytimg.com/vi/gyJQKcZ35zM/hqdefault.jpg?sqp=-oaymwEZCNACELwBSFXyq4qpAwsIARUAAIhCGAFwAQ==&rs=AOn4CLCFybB1Ie8h4SytHBDEbm5OymxZ-w",
+                    "title": "Koko",
+                    "author": "koko pictures",
+                    "views": "100500 views"
+                  },
+                  {
+                    "image": "https://i.ytimg.com/vi/gyJQKcZ35zM/hqdefault.jpg?sqp=-oaymwEZCNACELwBSFXyq4qpAwsIARUAAIhCGAFwAQ==&rs=AOn4CLCFybB1Ie8h4SytHBDEbm5OymxZ-w",
+                    "title": "Koko",
+                    "author": "koko pictures",
+                    "views": "100500 views"
+                  },
+                  {
+                    "image": "https://i.ytimg.com/vi/gyJQKcZ35zM/hqdefault.jpg?sqp=-oaymwEZCNACELwBSFXyq4qpAwsIARUAAIhCGAFwAQ==&rs=AOn4CLCFybB1Ie8h4SytHBDEbm5OymxZ-w",
+                    "title": "Koko",
+                    "author": "koko pictures",
+                    "views": "100500 views"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

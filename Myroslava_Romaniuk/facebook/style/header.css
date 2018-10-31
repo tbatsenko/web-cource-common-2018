@@ -1,0 +1,16 @@
+.header{
+    background-color: #4267b2;
+    height: 42px;
+}
+.header__wrapper{
+    width: 1000px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+}
+.header__left-placeholder{
+
+}
+.header__right-placeholder{
+    
+}
