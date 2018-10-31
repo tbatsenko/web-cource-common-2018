@@ -1,0 +1,211 @@
+.menu-icon {
+    margin-left: 25px;
+    vertical-align: middle;
+    display: inline-block;
+}
+
+.menu_line {
+    width: 15px;
+    height: 2px;
+    background-color: black;
+    margin: 2px 0;
+}
+
+.grid-icon {
+    display: inline-block;
+    vertical-align: middle;
+    margin: 1vw;
+}
+
+.grid-icon:hover > span > span {
+    opacity: .8;
+}
+
+.grid-icon > .layer {
+    width: 100%;
+    position: absolute;
+    left: 0;
+}
+
+/* style */
+
+.grid-icon--line {
+    position: relative;
+    width: 28px;
+    height: 28px;
+}
+
+.grid-icon--line > .layer {
+    height: 8px;
+}
+
+.grid-icon--line > .layer--primary {
+    top: 0;
+}
+
+.grid-icon--line > .layer--secondary {
+    top: 50%;
+    margin-top: -4px;
+}
+
+.grid-icon--line > .layer--tertiary {
+    bottom: 0;
+}
+
+.grid-icon--line > .layer > span {
+    position: absolute;
+    display: block;
+    width: 8px;
+    height: 100%;
+    box-sizing: border-box;
+    border: solid 2px #333;
+}
+
+.grid-icon--line > .layer > span:first-child {
+    left: 0;
+}
+
+.grid-icon--line > .layer > span:nth-child(2) {
+    left: 50%;
+    margin-left: -4px;
+}
+
+.grid-icon--line > .layer > span:last-child {
+    right: 0;
+}
+
+.grid-icon--fill {
+    position: relative;
+    width: 26px;
+    height: 26px;
+}
+
+.grid-icon--fill > .layer {
+    width: 100%;
+    height: 6px;
+}
+
+.grid-icon--fill > .layer--primary {
+    top: 0;
+}
+
+.grid-icon--fill > .layer--secondary {
+    top: 50%;
+    margin-top: -3px;
+}
+
+.grid-icon--fill > .layer--tertiary {
+    bottom: 0;
+}
+
+.grid-icon--fill > .layer > span {
+    position: absolute;
+    display: block;
+    width: 6px;
+    height: 100%;
+    background-color: #333;
+}
+
+.grid-icon--fill > .layer > span {
+    left: 50%;
+    margin-left: -3px;
+}
+
+.grid-icon--fill > .layer > span:before {
+    display: block;
+    content: "";
+    width: 6px;
+    height: 100%;
+    background-color: #333;
+    left: -10px;
+    position: absolute;
+}
+
+.grid-icon--fill > .layer > span:after {
+    display: block;
+    content: "";
+    width: 6px;
+    height: 100%;
+    background-color: #333;
+    right: -10px;
+    position: absolute;
+}
+
+.grid-icon--line2 {
+    position: relative;
+    width: 26px;
+    height: 26px;
+}
+
+.grid-icon--line2 > .layer {
+    height: 12px;
+}
+
+.grid-icon--line2 > .layer--primary {
+    top: 0;
+}
+
+.grid-icon--line2 > .layer--secondary {
+    bottom: 0;
+}
+
+.grid-icon--line2 > .layer > span {
+    position: absolute;
+    display: block;
+    width: 12px;
+    height: 100%;
+    box-sizing: border-box;
+    border: solid 2px #333;
+}
+
+.grid-icon--line2 > .layer > span:first-child {
+    left: 0;
+}
+
+.grid-icon--line2 > .layer > span:nth-child(2) {
+    right: 0;
+}
+
+.grid-icon--dashedline {
+    position: relative;
+    width: 24px;
+    height: 21px;
+}
+
+.grid-icon--dashedline > .layer {
+    height: 3px;
+}
+
+.grid-icon--dashedline > .layer--primary {
+    top: 0;
+}
+
+.grid-icon--dashedline > .layer--secondary {
+    top: 50%;
+    margin-top: -1.5px;
+}
+
+.grid-icon--dashedline > .layer--tertiary {
+    bottom: 0;
+}
+
+.grid-icon--dashedline > .layer > span {
+    position: absolute;
+    display: block;
+    width: 6px;
+    height: 100%;
+    background-color: #000;
+}
+
+.grid-icon--dashedline > .layer > span:first-child {
+    left: 0;
+}
+
+.grid-icon--dashedline > .layer > span:nth-child(2) {
+    left: 50%;
+    margin-left: -3px;
+}
+
+.grid-icon--dashedline > .layer > span:last-child {
+    right: 0;
+}

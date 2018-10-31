@@ -1,0 +1,8 @@
+.logo{
+    position: relative;
+}
+.logo__image{
+    margin-top: 7px;
+    height: 24px;
+	width: 24px;
+}
