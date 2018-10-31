@@ -1,0 +1,117 @@
+body{
+    padding: 0;
+    margin: 0;
+}
+
+.grey-line{
+    border-top: 1px solid #8c8b8b;
+    border-bottom: 1px solid #fff;
+}
+
+.header-navigation{
+    float: right;
+    margin-right: 10px;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.google-account{
+    border-radius: 10px;
+    border: 1px solid gray;
+    padding: 5px 3px 5px 3px;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.ucu-logo{
+    width: 90px;
+    height: auto;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.letter-in-circle{
+    width: 35px;
+    height: auto;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.icon-bell{
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.search-form {
+    padding: 1px;
+    margin-left: 40px;
+    display: inline-block;
+    width: 700px;
+    background-color: rgba(0,0,0,0.04);
+    border-radius: 7px;
+    position: relative;
+    vertical-align: middle;
+}
+
+.logo-img {
+    vertical-align: middle;
+    display: inline-block;
+    width: 130px;
+    height: auto;
+}
+
+.search-button{
+    display: inline-block;
+    border: none;
+    background: transparent;
+    width: 50px;
+    height: 46px;
+    vertical-align: middle;
+}
+
+.arrow-button{
+    border: none;
+    margin-left: 28px;
+    display: inline-block;
+    background: transparent;
+    width: 50px;
+    height: 46px;
+    vertical-align: middle;
+}
+
+.search-button:before {
+    position: absolute;
+    content: "";
+    width: 23px;
+    height: 23px;
+    background: url("../img/search_ic.png") no-repeat;
+    background-size: 23px;
+    top: 12px;
+    left: 12px;
+}
+.arrow-button:before {
+    position: absolute;
+    content: "";
+    width: 23px;
+    height: 23px;
+    background: url("../img/icon_arrow_down.png") no-repeat;
+    background-size: 23px;
+    top: 12px;
+    left: 655px;
+
+}
+
+.input-search{
+    display: inline-block;
+    width: 350px;
+    background-color: transparent;
+    color: black;
+    font: normal 16px Roboto,sans-serif;
+    height: 46px;
+    vertical-align: middle;
+    border: none;
+    padding: 11px 16px 11px 2px;
+}
