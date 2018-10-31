@@ -1,0 +1,11 @@
+@import "header/header.css";
+@import "header/header_text.css";
+@import "chats/chats.css";
+@import "chats/chats_header.css";
+@import "chats/chats_header_text.css";
+@import "body/body.css";
+@import "chats/search/search.css";
+@import "chats/search/search_icon.css";
+@import "chats/search/search_text.css";
+@import "chats/contact/contact.css";
+@import "chats/contact/contact_photo.css";
