@@ -1,0 +1,9 @@
+.friends{
+    display: inline;
+    margin-left: 80px;
+    position: fixed;
+}
+.friends__pictures{
+    width: 90px;
+    height: 90px;
+}
