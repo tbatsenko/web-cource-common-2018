@@ -1,0 +1,18 @@
+.search{
+    display: inline-block;
+    padding-top: 5px;
+    padding: 0px 5;
+    margin-left: 5px;
+    position: fixed;
+    width: 100%;
+    
+}
+.search__query{
+    display: inline-block;
+}
+.search__submit{
+    display: inline-block;
+    background-image: url("search.png") 25px 25px no-repeat;
+    padding-top: 5px;
+    margin-bottom: 5px;
+}
