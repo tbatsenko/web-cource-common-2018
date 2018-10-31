@@ -1,7 +1,11 @@
 .friends{
-    display: inline;
+    margin: auto;
+    position: relative;
+    padding: 0 0 10px 0;
+    background:#fdfeff;
+    margin-top: 10px;
     margin-left: 80px;
-    position: fixed;
+    display: inline-table;
 }
 .friends__pictures{
     width: 90px;
