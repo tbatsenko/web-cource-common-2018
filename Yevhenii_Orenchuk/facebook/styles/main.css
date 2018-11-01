@@ -1,0 +1,26 @@
+.feed {
+  background: lightcyan;
+  width: 500px;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+.navigation-bar,
+.feed,
+.right-menu {
+  margin-top: 55px;
+}
+.feed__post {
+  background-color: #f3f3f3;
+  margin-bottom: 10px;
+}
+.feed__item {
+  margin-bottom: 10px;
+  background-color: #e5e5e5;
+}
+.right-menu {
+  width: 244px;
+}
+
+.right-menu__stories {
+  background-color: lightgrey;
+}
