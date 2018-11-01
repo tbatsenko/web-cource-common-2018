@@ -1,4 +1,6 @@
 .navigation-bar {
   width: 180px;
   background-color: beige;
+  position: fixed;
+  left: 15em;
 }
