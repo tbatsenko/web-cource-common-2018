@@ -6,6 +6,9 @@
     width: 15em;
     height: 100%;
     padding: 10px 12px;
+    background: #fff;
+    border-radius: 5px;
+    border: 1px solid #ddd;
 }
 
 .aside-right-head{
@@ -43,6 +46,7 @@
 }
 
 .story-img{
+    object-fit: cover;
     height: 52px;
     width: 52px;
     border-radius: 26px;
@@ -112,8 +116,8 @@
     border-radius: 50%;
     border: 1px solid #dadde1;
     background: #f5f6f7;
-    height: 52px;
-    width: 74px;
+    min-height: 52px;
+    min-width: 52px;
     justify-content: center;
     align-items: center;
     display: flex;  

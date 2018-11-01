@@ -39,29 +39,6 @@ main > div {
     justify-content: space-between;
 }
 
-header.header-in-menu{
-    color: #616770;;
-    font-weight: 600;
-    font-size: 13px;
-    line-height: 22px;
-}
-
-img.rnd {
-    border-radius: 999px;
-}
-
-img.small {
-    width: 20px;
-    height: 20px;
-}
-
 img{
     color: transparent !important;
-}
-
-
-.panel {
-    background: #fff;
-    border-radius: 5px;
-    border: 1px solid #ddd;
 }
