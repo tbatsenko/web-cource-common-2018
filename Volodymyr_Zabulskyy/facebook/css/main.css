@@ -18,12 +18,9 @@ a {
 }
 
 main {
-    padding-top: 60px;
-    display: flex;
-    width: 1050px;
-    justify-content: space-between;
     margin: auto;
 }
+
 
 button{
     padding: 0;
@@ -32,13 +29,24 @@ button{
     color: transparent;
 }
 
-main > div {
-    display: flex;
-    width: 65em;
-    margin: auto;
-    justify-content: space-between;
+img
+{
+    color: transparent !important;
 }
 
-img{
-    color: transparent !important;
+
+.default-page{
+    display: flex;
+    justify-content: space-between;
+    flex-flow: row;
+    width: 1050px;
+    padding-top: 64px;
+}
+
+.profile-page{
+    padding-top: 42px;
+    display: flex;
+    justify-content: space-between;
+    flex-flow: column;
+    width: 815px;
 }

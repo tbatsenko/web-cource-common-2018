@@ -44,7 +44,7 @@
     flex-flow: row;
 }
 
-.main-field-container .article-header-annotation * {
+.main-field-container .article-header-annotation {
     color: #616770;
     font-size: 12px;
 }
@@ -112,7 +112,7 @@
     display: flex;
 }
 
-.main-field-container .likes-container * {
+.main-field-container .likes-container{
     cursor: pointer;
     color: #606770;
     font-size: 13px;
