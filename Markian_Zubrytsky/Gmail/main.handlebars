@@ -9,25 +9,25 @@
 </header>
 <aside class="left-menu">
     <button>Compose</button>
-    {{#navigation}}
+    {{#menu_navigation}}
         {{#button}}
             <button class="left-menu__link">{{&.}}</button>
         {{/button}}
-    {{/navigation}}
+    {{/menu_navigation}}
     <hr color="#f5f5f5">
     <button>Mark</button>
     <hr color="#f5f5f5">
 </aside>
 <main class="mails">
     <section class="mails__navigation">
-        <button class="mails__mail__button"><img src="images/select.png"></button>
-        <button class="mails__mail__button"><img src="images/refresh.png"></button>
-        <button class="mails__mail__button"><img src="images/more_vert.png"></button>
+        {{#mails_navigation}}
+            <button class="mails__mail__button"><img src="images/{{.}}"></button>
+        {{/mails_navigation}}
     </section>
     {{#mails}}
         <section class="mails__mail">
             {{#buttons}}
-                <button class="mails__mail__button">{{&.}}</button>
+                <button class="mails__mail__button"><img src="images/{{.}}"></button>
             {{/buttons}}
             <h4 class="mails__mail__title">{{title}}</h4>
             <p class="mails_mail__description">{{description}}</p>
@@ -36,7 +36,7 @@
     {{/mails}}
 </main>
 <aside class="right-menu">
-    <a href="#" class="right-menu__buttons"><img src="images/calendar_2x.png"></a>
-    <a href="#" class="right-menu__buttons"><img src="images/keep_2x.png"></a>
-    <a href="#" class="right-menu__buttons"><img src="images/tasks2_2x.png"></a>
+    {{#right-menu}}
+        <a href="#" class="right-menu__buttons"><img src="images/{{.}}"></a>
+    {{/right-menu}}
 </aside>
