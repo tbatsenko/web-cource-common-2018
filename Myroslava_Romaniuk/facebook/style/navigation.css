@@ -1,22 +1,18 @@
 .navigation{
     display: inline-block;
-    
-    padding: 0px 5;
-    align-items: center;
-
-}
-.navigation__item{
-    margin-top: 5px 0 0 0;
-}
+ }
 .navigation__item--icon_people{
-    height:25px;
-    width: 25px;
+    height: 24px;
+    width: 24px;
+    vertical-align: middle;
 }
 .navigation__item--icon_messages{
-    height:25px;
-    width: 25px;
+    height: 20px;
+    width: 20px;
+    vertical-align: middle;
 }
 .navigation__item--icon_bell{
-    height:25px;
-    width: 25px;
+    height: 24px;
+    width: 24px;
+    vertical-align: middle;
 }
