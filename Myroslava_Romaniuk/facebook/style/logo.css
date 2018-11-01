@@ -1,0 +1,8 @@
+.logo{
+    display: inline;
+}
+.logo__image{
+    height: 24px;
+    width: 24px;
+    vertical-align: middle;
+}
