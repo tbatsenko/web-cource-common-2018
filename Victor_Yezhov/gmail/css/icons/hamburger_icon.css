@@ -1,0 +1,15 @@
+.hamburger-icon_line {
+    width: 20px;
+    height: 2px;
+    background-color: grey;
+    margin: 6px 0;
+}
+.hamburger-icon:hover{
+    border-radius: 100%;
+    background-color: red;
+}
+
+.hamburger_icon{
+    grid-area: hamburger;
+    display: inline-block;
+}

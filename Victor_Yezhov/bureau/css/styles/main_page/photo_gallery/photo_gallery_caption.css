@@ -1,0 +1,10 @@
+.link_hover_red {
+  color: #3b5998;
+  text-decoration-line: underline;
+  text-decoration-color: #3b5998;
+}
+.link_hover_red:hover {
+  color: red;
+  text-decoration-color: red;
+}
+/*# sourceMappingURL=photo_gallery_caption.css.map */

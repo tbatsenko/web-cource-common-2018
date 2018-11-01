@@ -14,13 +14,11 @@
 
 .nav-top .nav-top-logo-container{
     display: flex;
-    display: flex;
     flex-flow: row;
     align-items: center;
 }
 
 .nav-top .nav-top-menu-container{
-    display: flex;
     display: flex;
     flex-flow: row;
     list-style: none;
@@ -52,7 +50,7 @@
 }
 
 
-.nav-top .nav-top-menu-item *{
+.nav-top .nav-text{
     color: #fff;
     text-decoration: none;
     font-weight: 700;
@@ -77,14 +75,12 @@
     height: 100%;
     background-color: rgba(0, 0, 0, 0.11);
     content: "";
-    /* margin-left: 10px; */
 }
 
 .nav-top .logo{
     margin: 0 .5em 0 0;
     background-image: url("https://static.xx.fbcdn.net/rsrc.php/v3/yx/r/0ZnQSqvnMOO.png");
     background-repeat: no-repeat;
-    background-size: auto;
     background-position: 0 -442px;
     width: 24px;
     height: 24px;
@@ -93,7 +89,7 @@
 .nav-top .nav-top-form-button{
     width: 3em;
     border: solid .3em transparent;
-    border-radius: 0 2px 2px 0px;
+    border-radius: 0 2px 2px 0;
     background: #fff;
 }
 

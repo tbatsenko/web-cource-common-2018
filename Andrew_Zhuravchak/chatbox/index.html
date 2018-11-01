@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Facebook Like Chatbox</title>
+
+    <link rel="stylesheet" href="styles/main.css">
+</head>
+<body class="pretty-body-for-presentation">
+
+<script src="node_modules/handlebars/dist/handlebars.js"></script>
+<script>
+  const render = async (templateSrc, dataSrc, conteiner) => {
+    const templateStr = await (await fetch(templateSrc)).text()
+    const data = await (await fetch(dataSrc)).json()
+    const compiled = Handlebars.compile(templateStr)
+    conteiner.innerHTML = compiled(data)
+  }
+
+  const renderPage = async () => {
+    await render('templates/chat-window.hbs', 'data/conversation.json', document.body)
+    await render('templates/messages-list.hbs', 'data/conversation.json', document.getElementById('chat-box-messages'))
+    await render('templates/chat-header.hbs', 'data/conversation.json', document.getElementById('chat-box-header'))
+    await render('templates/chat-input.hbs', 'data/conversation.json', document.getElementById('chat-box-input'))
+  }
+
+  renderPage()
+</script>
+
+</body>
+</html>
