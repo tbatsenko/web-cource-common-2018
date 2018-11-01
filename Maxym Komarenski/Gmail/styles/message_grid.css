@@ -1,0 +1,75 @@
+.container-for-one-message {
+    display: grid;
+    grid-template-columns: 70px 150px auto 50px;
+    grid-template-rows: auto;
+    grid-template-areas:
+            "buttons reciver message-text date";
+    border-top: 1px solid #e6e6e6;
+    border-bottom: 1px solid #fff;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    font-family: Roboto,RobotoDraft,Helvetica,Arial,sans-serif;
+    font-size: 12px;
+    letter-spacing: .2px;
+    margin-right: 3px;
+}
+
+.container-for-one-message:hover{
+    box-shadow: inset 1px 0 0 #dfe1e5, inset -1px 0 0 #dfe1e5,0 1px 3px 1px #d8dade;
+}
+
+.button-in-message{
+    display: flex;
+    grid-area: buttons;
+}
+
+.who-wrote-the-message{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    font-weight: bold;
+    grid-area: reciver;
+
+}
+
+.tex-of-message{
+    grid-area: message-text;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    color: #5f6368;
+    text-align: left;
+
+}
+
+.tex-of-message b{
+    color: black;
+    font-weight: 700;
+}
+
+.date{
+    grid-area: date;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    color: black;
+    font-weight: 700;
+}
+
+.star-button {
+    margin-left: 10px;
+    width: 20px;
+    height: 20px;
+    border: none;
+    background: url('https://www.gstatic.com/images/icons/material/system/1x/check_box_outline_blank_black_20dp.png') no-repeat center;
+    background-size: 20px;
+}
+
+.square-button{
+    margin-left: 10px;
+    width: 20px;
+    height: 20px;
+    border: none;
+    background: url('https://www.gstatic.com/images/icons/material/system/1x/star_border_black_20dp.png') no-repeat center;
+    background-size: 20px;
+}

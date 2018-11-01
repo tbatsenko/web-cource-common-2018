@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Facebook Main Page</title>
+  <link rel="stylesheet" href="styles/facebook.css">
+</head>
+<body>
+<script src="http://builds.handlebarsjs.com.s3.amazonaws.com/handlebars-v4.0.12.js"></script>
+<script>
+  const render = async (templateURL, dataURL, container) => {
+    const source = await (await fetch(templateURL)).text();
+    const template = Handlebars.compile(source);
+    const data = await (await fetch(dataURL)).json();
+    container.innerHTML = template(data);
+  };
+  render("/template.handlebars", "/data.json", document.body)
+</script>
+</body>
+</html>

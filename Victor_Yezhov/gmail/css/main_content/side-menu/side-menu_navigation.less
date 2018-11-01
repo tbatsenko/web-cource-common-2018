@@ -1,0 +1,71 @@
+
+.side-menu_navigation_list{
+  list-style-type: none;
+  padding: 0;
+}
+.side-menu_navigation_list li{
+  width: 240px;
+  padding: 10px 12px 10px 26px;
+  border-bottom-right-radius:40px;
+  border-top-right-radius:40px;
+
+  -webkit-font-smoothing: antialiased;
+  font-family: Roboto,RobotoDraft,Helvetica,Arial,sans-serif;
+  font-size: .875rem;
+  letter-spacing: .2px;
+  color: #202124;
+  text-shadow: none;
+
+}
+
+.side-menu_navigation_list li:hover{
+  background-color: #e8eaed;
+}
+#incoming_letters_li{
+  background-color: #fce8e6;
+  color: #d93025;
+}
+#incoming_letters_li::before{
+  .li_props();
+  background: url('https://www.gstatic.com/images/icons/material/system/1x/inbox_gm_googlered600_20dp.png') no-repeat;
+}
+#marked_letters_li::before{
+  .li_props();
+  background: url('https://www.gstatic.com/images/icons/material/system/1x/grade_black_20dp.png') no-repeat;
+}
+
+#postponed_letters_li::before{
+  .li_props();
+  background: url('https://www.gstatic.com/images/icons/material/system/1x/watch_later_black_20dp.png') no-repeat;
+
+}
+
+#important_letters_li::before{
+  .li_props();
+  background: url('https://www.gstatic.com/images/icons/material/system/1x/label_important_black_20dp.png') no-repeat;
+
+}
+#sent_letters_li::before{
+  .li_props();
+  background: url('https://www.gstatic.com/images/icons/material/system/1x/send_black_20dp.png') no-repeat;
+}
+
+#white_papers_letters_li::before{
+  .li_props();
+  background: url('https://www.gstatic.com/images/icons/material/system/1x/insert_drive_file_black_20dp.png') no-repeat;
+
+}
+
+#categories_li::before{
+  .li_props();
+  background:url('https://www.gstatic.com/images/icons/material/system/1x/arrow_drop_down_black_20dp.png') no-repeat;
+}
+
+.li_props{
+  content: "";
+  display: block;
+  float: left;
+  width: 20px;
+  height: 20px;
+  margin-right: 20px;
+}

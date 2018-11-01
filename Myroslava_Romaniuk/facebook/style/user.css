@@ -1,0 +1,14 @@
+.user{
+    margin-top: 10px;
+    margin-left: 80px;
+    display: inline-table;
+}
+.user__profile{
+    height: 120px;
+    width: 120px;
+    object-fit: contain;
+    border-radius: 100%;
+}
+.user__navigation{
+    display: inline-block;
+}
