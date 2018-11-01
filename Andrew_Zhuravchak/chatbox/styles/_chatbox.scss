@@ -1,10 +1,18 @@
 // Variables
 @import "base";
 
-// Mixins
-@import "mixins";
-
 @import "messages";
+
+@mixin chatbox-scrollbar {
+  &::-webkit-scrollbar {
+    width: 6px;
+    background-color: transparent;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: $chat-box__bg-color__secondary;
+  }
+}
 
 .chat-box {
   width: 292px;

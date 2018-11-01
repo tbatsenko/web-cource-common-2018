@@ -7,7 +7,7 @@
   &--friend {
     .message-group__text {
       margin-left: 35px;
-      background-color: #f3f3f3;
+      background-color: $chat-box__bg-color__secondary;
       float: left;
 
       &:first-of-type:not(:last-of-type) {
@@ -22,8 +22,8 @@
 
   &--me {
     .message-group__text {
-      background-color: #2979ff;
-      color: #fff;
+      background-color: $chat-box__bg-color;
+      color: $chat-box__font-color_active;
       float: right;
 
       &:first-of-type:not(:last-of-type) {
@@ -55,7 +55,7 @@
     vertical-align: middle;
     font-family: $chat-box__font-family;
     font-size: 12px;
-    color: #353535;
+    color: $chat-box__font-color__nonactive;
     border-radius: 14px;
     clear: both;
 
@@ -69,6 +69,5 @@
     font-weight: bold;
     color: #828282;
     text-align: center;
-    margin-bottom: 7px;
   }
 }
