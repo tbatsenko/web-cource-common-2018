@@ -11,16 +11,11 @@
   align-items: center;
 }
 .search__facebook-icon {
-  background-image: url("https://static.xx.fbcdn.net/rsrc.php/v3/y0/r/k83FuosQjjR.png");
   background-position: 0px -442px;
-  background-size: 29px 1475px;
-  background-repeat: no-repeat;
   height: 24px;
   width: 24px;
-  text-indent: -999px;
 }
 .search {
-  /*margin: auto;*/
   height: 24px;
   display: flex;
   align-items: center;
@@ -59,9 +54,6 @@
   display: inline-block;
   height: 14px;
   width: 14px;
-  background-image: url("https://static.xx.fbcdn.net/rsrc.php/v3/yF/r/1c0gE0MbEo8.png");
-  background-repeat: no-repeat;
-  background-size: 29px 1475px;
   background-position: 0 -1445px;
 }
 .navigation-menu {
@@ -99,11 +91,13 @@
   background-position: 0 -467px;
   height: 24px;
   width: 24px;
+  opacity: .6;
 }
 .button__messages {
   background-position: 0 -717px;
   height: 24px;
   width: 24px;
+  opacity: .6;
 }
 .button__messages:active {
   background-position: 0 -742px;
@@ -113,6 +107,7 @@
   background-position: 0 -617px;
   height: 24px;
   width: 24px;
+  opacity: .6;
 }
 .button__notifications:active {
   background-position: 0 -642px;
@@ -122,17 +117,18 @@
   background-position: 0 -1153px;
   height: 20px;
   width: 20px;
+  opacity: .6;
 }
 .button__menu {
   background-position: 0 -1326px;
   height: 16px;
   width: 16px;
+  opacity: .6;
 }
-.button-properties {
+.facebook-icons {
   background-image: url("https://static.xx.fbcdn.net/rsrc.php/v3/yF/r/1c0gE0MbEo8.png");
   background-repeat: no-repeat;
   background-size: 29px 1475px;
-  opacity: .6;
   cursor: pointer;
   border: 0;
   text-indent: -999px;

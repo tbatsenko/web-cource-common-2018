@@ -1,7 +1,7 @@
 .feed {
   background: lightcyan;
   width: 500px;
-  margin-left: 20px;
+  margin-left: 200px;
   margin-right: 20px;
 }
 .navigation-bar,
@@ -12,6 +12,10 @@
 .feed__post {
   background-color: #f3f3f3;
   margin-bottom: 10px;
+  height: 155px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 .feed__item {
   margin-bottom: 10px;
@@ -20,7 +24,11 @@
 .right-menu {
   width: 244px;
 }
-
 .right-menu__stories {
   background-color: lightgrey;
+}
+.post__attachments {
+  /*bottom: 0;*/
+  /*align-self: flex-end;*/
+  background-color: #2979ff;
 }
