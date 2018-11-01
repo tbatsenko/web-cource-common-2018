@@ -48,7 +48,7 @@ body{
 
 .search-form {
     padding: 1px;
-    margin-left: 80px;
+    margin-left: 50px;
     display: inline-block;
     height: 60px;
     width: 700px;
@@ -147,7 +147,7 @@ body{
 
 .container-for-grid{
     display: grid;
-    grid-template-columns: 200px auto;
+    grid-template-columns: 240px auto;
     grid-template-rows: auto;
     grid-template-areas:
             "sidebar main"
@@ -184,7 +184,7 @@ body{
     border: none;
     background-color: transparent;
     font-family: Roboto,RobotoDraft,Helvetica,Arial,sans-serif;
-    font-size: 16px;
+    font-size: 13px;
     vertical-align: middle;
     margin-left: 17px;
 }
@@ -203,6 +203,9 @@ body{
     margin-right: 10px;
 }
 
+.messages{
+    list-style-type: none;
+}
 
 .incoming-button{
     font-weight: bold;
