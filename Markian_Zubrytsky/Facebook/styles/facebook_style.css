@@ -1,0 +1,56 @@
+body{
+    margin: 0;
+    background-color: #e9ebee;
+    padding: 0;
+}
+
+.hdr{
+    background-color: #4267b2;
+    height: 5%;
+    width: 100%;
+}
+
+.logo{
+    width: 35px;
+    height: 55%;
+    margin-top: 10px;
+    margin-left: 15%;
+}
+
+.glob_src{
+    margin-top: auto;
+    width: 20%;
+    border: none;
+    vertical-align: 30%;
+    padding-top: 10px;
+}
+
+#mypage{
+    margin-left: 10%;
+}
+
+.hdr_btn{
+    border: none;
+    background-color: #4267b2;
+    height: 30px;
+    width: 5%;
+    vertical-align: 50%;
+    color: white;
+}
+
+#right-buttons{
+    display: inline;
+    margin-left: 10%;
+    vertical-align: middle;
+    background-color: transparent;
+}
+
+.logo_btns{
+    background-color: transparent;
+    border: none;
+    vertical-align: center;
+}
+
+.left-menu{
+
+}
