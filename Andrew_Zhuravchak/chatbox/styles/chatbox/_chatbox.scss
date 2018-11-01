@@ -4,6 +4,8 @@
 // Mixins
 @import "mixins";
 
+@import "messages";
+
 .chat-box {
   width: 292px;
   height: 384px;
@@ -76,6 +78,7 @@
   &__messages {
     display: flex;
     flex: 1;
+    flex-direction: column;
     overflow-y: scroll;
     padding: 16px;
 
@@ -130,6 +133,10 @@
 
     &:focus {
       outline: none;
+    }
+
+    &:last-child {
+      margin-right: 0;
     }
   }
 
