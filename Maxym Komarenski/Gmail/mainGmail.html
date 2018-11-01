@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <title>Вхідні повідомлення</title>
     <link rel="stylesheet" href="styles/style.css">
-    <link rel="stylesheet" href="styles/icons.css"
+    <link rel="stylesheet" href="styles/icons.css">
+    <link rel="stylesheet" href="styles/message_grid.css">
 </head>
 <body>
 <header>
@@ -15,10 +16,7 @@
         <div class="menu_line"></div>
     </div>
 
-
-
     <img src="img/logo_gmail.png" class="logo-img">
-
 
     <form class="search-form">
         <button class="search-button"></button>
@@ -50,7 +48,9 @@
     <hr class="grey-line">
 
 </header>
-<div class="container-for-grid">
+
+
+<article class="container-for-grid">
     <aside class="side-navigation-bar">
         <button class="write-mail-button">Написати</button>
 
@@ -67,20 +67,47 @@
     </aside>
 
     <aside class="aside-groups">
+
         <hr class="grey-line">
         <img src="https://lh5.googleusercontent.com/-XdUIqdMkCWA/AAAAAAAAAAI/AAAAAAAAAAA/4252rscbv5M/s28-c-k-no/photo.jpg" id="account-photo">
         Smth
 
-
     </aside>
 
     <article class="all-messages">
-        <ul>
-            <li>повідомлення довге довге довге довге довге довге довге довге довге довге довге довге</li>
-            <li>повідомлення</li>
-        </ul>
+
+        <div class="container-for-one-message">
+            <div class="button-in-message">
+                <button class="star-button"></button>
+                <button class="square-button"></button>
+            </div>
+            <div class="who-wrote-the-message">Ivankiv M.</div>
+            <div class="tex-of-message"><b>Робіть веб суки</b> -Не зробите, вам пізда</div>
+            <div class="date">13:12</div>
+        </div>
+
+
+        <div class="container-for-one-message">
+            <div class="button-in-message">
+                <button class="star-button"></button>
+                <button class="square-button"></button>
+            </div>
+            <div class="who-wrote-the-message">Ivankiv M.</div>
+            <div class="tex-of-message"><b>Робіть веб суки</b> -Не зробите, вам пізда</div>
+            <div class="date">13:12</div>
+        </div>
+
+        <div class="container-for-one-message">
+            <div class="button-in-message">
+                <button class="star-button"></button>
+                <button class="square-button"></button>
+            </div>
+            <div class="who-wrote-the-message">Ivankiv M.</div>
+            <div class="tex-of-message"><b>Робіть веб суки</b> -Не зробите, вам пізда</div>
+            <div class="date">13:12</div>
+        </div>
     </article>
 
-</div>
+</article>
 </body>
 </html>
