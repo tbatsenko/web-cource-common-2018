@@ -1,14 +1,10 @@
-.school-types{
+.school-types {
   box-sizing: border-box;
   border-left: 1px gainsboro solid;
   height: inherit;
-  float: left;
 }
-.school-types ul{
+.school-types ul {
   padding-left: 2%;
   list-style-type: none;
 }
-
-.school-types h2{
-
-}
+/*# sourceMappingURL=school-types.css.map */
