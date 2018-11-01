@@ -1,8 +1,8 @@
 .logo{
-    position: relative;
+    display: inline;
 }
 .logo__image{
-    margin-top: 7px;
     height: 24px;
-	width: 24px;
+    width: 24px;
+    vertical-align: middle;
 }
