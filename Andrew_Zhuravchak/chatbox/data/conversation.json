@@ -1,0 +1,34 @@
+{
+  "messages": [
+    {
+      "fromFriend": true,
+      "userPic": "https://icon-icons.com/icons2/876/PNG/512/masculine-avatar-on-circle_icon-icons.com_68297.png",
+      "text": ["Yo, Can you update views? Yo, Can you update views? Yo, Can you update views?"],
+      "date": ""
+    },
+    {
+      "fromFriend": true,
+      "userPic": "https://icon-icons.com/icons2/876/PNG/512/masculine-avatar-on-circle_icon-icons.com_68297.png",
+      "text": ["I can't see yet", "Hey, hey!!!"],
+      "date": "FRI 11:30AM"
+    },
+    {
+      "fromFriend": false,
+      "userPic": "",
+      "text": ["Hi, as I noted in Email last week - I am on vacation.", "Thank you :-)"],
+      "date": ""
+    },
+    {
+      "fromFriend": true,
+      "userPic": "https://icon-icons.com/icons2/876/PNG/512/masculine-avatar-on-circle_icon-icons.com_68297.png",
+      "text": ["I can't see yet", "Hey, hey!!!"],
+      "date": "FRI 11:30AM"
+    },
+    {
+      "fromFriend": false,
+      "userPic": "",
+      "text": ["Hi, as I noted in Email last week - I am on vacation.", "Thank you :-)"],
+      "date": ""
+    }
+  ]
+}
