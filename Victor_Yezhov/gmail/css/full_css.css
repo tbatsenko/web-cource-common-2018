@@ -1,0 +1,12 @@
+@import "icons/hamburger_icon.css";
+@import "header/header.css";
+@import "header/logo.css";
+@import "header/search-form.css";
+@import "header/user-actions.css";
+@import "main_content/side-menu/side-menu.css";
+@import "main_content/main_container.css";
+@import "main_content/side-menu/side-menu_write-button.css";
+@import "main_content/side-menu/side-menu_navigation.css";
+body{
+    margin: 0;
+}

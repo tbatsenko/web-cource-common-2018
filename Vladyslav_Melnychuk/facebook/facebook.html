@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Facebook</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/languages.css">
+    <link rel="stylesheet" href="styles/stories.css">
+    <link rel="stylesheet" href="styles/post_form.css">
+    <link rel="stylesheet" href="styles/main_sidebar.css">
+</head>
+<body>
+<header class="header">
+    <nav class="search-nav">
+        <div class="logo-img"></div>
+        <label>
+            <input class="search" type="search" placeholder="Search"><!--
+         --><button class="search-button">
+                <!--<span class="search-ico"></span>-->
+            </button>
+        </label>
+        <nav class="main-nav">
+            <ul class="main-nav-out nav-list">
+                <li class="menu-item"><a>User</a></li>
+                <li class="menu-item"><a>Home</a></li>
+                <li class="menu-item">
+                    <button>Create</button>
+                </li>
+            </ul>
+            <ul class="local-nav nav-list">
+                <li>
+                    <button class="friends ico">Friends</button>
+                </li>
+                <li>
+                    <button class="msg ico">Messages</button>
+                </li>
+                <li>
+                    <button class="notification ico">Notifications</button>
+                </li>
+            </ul>
+            <button>Help</button>
+        </nav>
+    </nav>
+</header>
+<main>
+    <aside class="aside-nav">
+        <nav class="content-nav">
+            <ul class="content-nav__ul">
+                <li class="content-nav__li">Vlad Melnychuk</li>
+            </ul>
+            <ul class="content-nav__ul">
+                    <li class="content-nav__li content-nav__button--active-tab"><button class="content-nav__button content-nav__button--news content-nav__button--active">News Feed</button></li>
+                <li class="content-nav__li"><button class="content-nav__button content-nav__button--messenger">Messenger</button></li>
+            </ul>
+            <h3 class="content-nav__list-label">Shortcuts</h3>
+            <ul class="content-nav__ul">
+                <li class="content-nav__li"><button class="content-nav__button content-nav__button--page">8 Gaming</button></li>
+                <li class="content-nav__li"><button class="content-nav__button content-nav__button--page">Page 8</button></li>
+            </ul>
+            <h3 class="content-nav__list-label">Explore</h3>
+            <ul class="content-nav__ul">
+                <li class="content-nav__li"><button class="content-nav__button content-nav__button--groups">Events</button></li>
+                <li class="content-nav__li"><button class="content-nav__button content-nav__button--events">Groups</button></li>
+                <li class="content-nav__li">
+                    <button class="content-nav__button">See more</button>
+                </li>
+            </ul>
+        </nav>
+    </aside>
+    <section class="posts">
+        <form class="new-post-form post-section-box">
+            <header class="new-post-form__header">
+                <nav class="new-post-form__nav">
+                    <button class="new-post-form__button-h new-post-form__button-h--post">Make Post</button>
+                    <button class="new-post-form__button-h new-post-form__button-h--media">Photo/Video Album</button>
+                    <button class="new-post-form__button-h new-post-form__button-h--live">Live Video</button>
+                </nav>
+            </header>
+            <div class="new-post-form__textarea-wrapper">
+                <label>
+                    <textarea class="new-post-form__textarea" placeholder="What's on your mind, Vlad?"></textarea>
+                </label>
+            </div>
+            <footer class="new-post-form__footer">
+                <button class="new-post-form__button-f new-post-form__button-f--lists">List</button>
+                <button class="new-post-form__button-f new-post-form__button-f--media">Photo/Video</button>
+                <button class="new-post-form__button-f new-post-form__button-f--tag">Tag Friends</button>
+                <button class="new-post-form__button-f new-post-form__button-f--more"></button>
+            </footer>
+        </form>
+        <article class="post post-section-box">
+
+        </article>
+    </section>
+    <aside class="content-creation">
+        <section class="stories-section content-creation-box">
+            <header class="stories-section__header">
+                <h3 class="stories-section__title">Stories</h3>
+                <nav class="stories">
+                    <button class="stories__button">Archive</button>
+                    <button class="stories__button">Settings</button>
+                </nav>
+            </header>
+            <section class="story-element">
+                <button class="story-element__icon"></button>
+                <div class="story-element__text">
+                    <h4 class="story-element__header">Add to your story</h4>
+                    <p class="story-element__sub">Share a photo, video or write something.</p>
+                </div>
+            </section>
+        </section>
+        <section class="events content-creation-box">
+            <strong>1 event invite</strong>
+        </section>
+        <section class="friend-requests content-creation-box">
+            <header>
+                <h3>Friend Requests</h3>
+                <nav>
+                    <button>See all</button>
+                </nav>
+            </header>
+            <div class="friend-request f1"></div>
+            <div class="friend-request f2"></div>
+            <div class="friend-request f3"></div>
+        </section>
+        <section class="language-selection content-creation-box">
+            <nav class="languages">
+                <a href="#" class="languages__link">English (US)</a>
+                <a href="#" class="languages__link">Українська</a>
+                <a href="#" class="languages__link">Русский</a>
+                <a href="#" class="languages__link">Espanol</a>
+                <a href="#" class="languages__link">Portugues (Brasil)</a>
+            </nav>
+        </section>
+        <section class="suggestions">
+
+        </section>
+    </aside>
+</main>
+</body>
+</html>

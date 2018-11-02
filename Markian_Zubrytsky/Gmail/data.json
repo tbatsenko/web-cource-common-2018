@@ -1,0 +1,169 @@
+{
+  "menu_navigation": [
+    {
+      "button": "<img src='images/inbox_gm.png'>Inbox"
+    },
+    {
+      "button": "<img src='images/star_black.png'>Starred"
+    },
+    {
+      "button": "<img src='images/watch_later_black.png'>Snoozed"
+    },
+    {
+      "button": "<img src='images/send.png'>Sent"
+    },
+    {
+      "button": "<img src='images/drafts.png'>Drafts"
+    },
+    {
+      "button": "<img src='images/expand_more.png'>More"
+    }
+  ],
+  "mails_navigation": [
+    "select.png",
+    "refresh.png",
+    "more_vert.png"
+  ],
+  "mails": [
+    {
+      "buttons": [
+        "select.png",
+        "star_black.png"
+      ],
+      "title": "Steam ",
+      "description": "You have sold item om Community Market ",
+      "date": "26 Oct"
+    },
+    {
+      "buttons": [
+        "select.png",
+        "star_black.png"
+      ],
+      "title": "no-reply ",
+      "description": "Registration Confirmed ",
+      "date": "26 Oct"
+    },
+    {
+      "buttons": [
+        "select.png",
+        "star_black.png"
+      ],
+      "title": "Discount ",
+      "description": "Thanks for purchase ",
+      "date": "22 Oct"
+    },
+    {
+      "buttons": [
+        "select.png",
+        "star_black.png"
+      ],
+      "title": "Telegram ",
+      "description": "Please verify your email address ",
+      "date": "10 Oct"
+    },
+    {
+      "buttons": [
+        "select.png",
+        "star_black.png"
+      ],
+      "title": "HackerRank Team ",
+      "description": "Improve your coding skills with 30 Days of Code ",
+      "date": "2 Oct"
+    },
+    {
+      "buttons": [
+        "select.png",
+        "star_black.png"
+      ],
+      "title": "Google Account ",
+      "description": "Secure system notification ",
+      "date": "22 Sep"
+    },
+    {
+      "buttons": [
+        "select.png",
+        "star_black.png"
+      ],
+      "title": "Google Photos ",
+      "description": "Mark, you have missed something in Google Photos ",
+      "date": "17 Sep"
+    },
+    {
+      "buttons": [
+        "select.png",
+        "star_black.png"
+      ],
+      "title": "Google Pay ",
+      "description": "Mark, now you are able to use Google Pay ",
+      "date": "6 Sep"
+    },
+    {
+      "buttons": [
+        "select.png",
+        "star_black.png"
+      ],
+      "title": "Coursera ",
+      "description": "Recommended courses for you ",
+      "date": "27 Aug"
+    },
+    {
+      "buttons": [
+        "select.png",
+        "star_black.png"
+      ],
+      "title": "Ivan Ivanov ",
+      "description": "(no subject) ",
+      "date": "21 Aug"
+    },
+    {
+      "buttons": [
+        "select.png",
+        "star_black.png"
+      ],
+      "title": "Unity Technologies ",
+      "description": "Fresh out from the oven from Unite ",
+      "date": "12 Aug"
+    },
+    {
+      "buttons": [
+        "select.png",
+        "star_black.png"
+      ],
+      "title": "Arduino Programming ",
+      "description": "[Arduino MOOC] Week 2 begins! ",
+      "date": "4 Aug"
+    },
+    {
+      "buttons": [
+        "select.png",
+        "star_black.png"
+      ],
+      "title": "Mak555 ",
+      "description": "Photos of backpack ",
+      "date": "23 Jul"
+    },
+    {
+      "buttons": [
+        "select.png",
+        "star_black.png"
+      ],
+      "title": "RedBull ",
+      "description": "RedBull Hardline is coming! ",
+      "date": "15 Jul"
+    },
+    {
+      "buttons": [
+        "select.png",
+        "star_black.png"
+      ],
+      "title": "JetBrains ",
+      "description": "JetBrains Privacy Policy Updates ",
+      "date": "9 Jul"
+    }
+  ],
+  "right-menu": [
+    "calendar_2x.png",
+    "keep_2x.png",
+    "tasks2_2x.png"
+  ]
+}
