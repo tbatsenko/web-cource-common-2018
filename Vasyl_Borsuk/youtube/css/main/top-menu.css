@@ -1,0 +1,40 @@
+.header__left {
+  width: 240px;
+}
+
+.header__center {
+  width: calc(100% - 240px);
+}
+
+.header {
+  display: flex;
+  box-sizing: border-box;
+  height: 56px;
+  width: 100%;
+  align-items: center;
+  box-shadow: 0 1px 5px 1px black;
+  z-index: 2;
+}
+.header__left {
+  padding-left: 16px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  box-sizing: border-box;
+}
+.header__left .button--top-menu {
+  margin-right: 24px;
+}
+.header__center {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-right: 16px;
+}
+.header__buttons {
+  display: flex;
+  flex-direction: row;
+}
+
+/*# sourceMappingURL=top-menu.css.map */
