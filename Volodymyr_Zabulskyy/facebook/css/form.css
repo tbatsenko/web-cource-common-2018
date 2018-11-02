@@ -56,8 +56,12 @@ span.active{
     background-position: 0 -2717px;
 }
 
-.posting-form__option__txt{
+.posting-form__option__txt, .posting-form__option__txt-active{
     padding-left: 7px;
+}
+
+.posting-form__option__txt-active{
+    color: #4b4f56;
 }
 
 .posting-form__input__profile-img{

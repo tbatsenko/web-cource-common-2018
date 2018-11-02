@@ -108,7 +108,7 @@
                 <ul class="posting-form__options">
                     <li class="posting-form__option">
                         <div class="posting-form__option__ico_post"></div>
-                        <span class="posting-form__option__txt active">Compose post</span></li>
+                        <span class="posting-form__option__txt-active">Compose post</span></li>
                     <li class="posting-form__option_left-border">
                         <div class="posting-form__option__ico_photo"></div>
                         <span class="posting-form__option__txt">Photo/Video Album</span></li>
@@ -136,88 +136,90 @@
                     </div>
             </form>
         </section>
-        <section class="section-main">
-            <article class="article-cas">
-                <section class="header-container">
-                    <img class="article-author-img" src="img/person.png" alt="author">
-                    <header class="article-header">
-                        <div class="article-header-main">
+        <section class="posts-section">
+            <article class="post-section__article">
+                <section class="post-section__article_header_container">
+                    <img class="post-section__article_header__author-img" src="img/person.png" alt="author">
+                    <header class="post-section__article_header__article-header">
+                        <div class="post-section__article_header__txt-container">
                             <h4>
-                                <a class="acticle-author-name" href="">Marta Datsyuk</a> <span class="article-action">updated her profile picture.</span>
+                                <a class="post-section__article_header__author-name" href="">Marta Datsyuk</a> <span class="article-action">updated her profile picture.</span>
                             </h4>
-                            <small class="article-header-annotation">
+                            <small class="post-section__article_header__annotation">
                                 <time><a href="">Yesterday at 00:26</a></time>
-                                <svg class="article-ico globe"></svg>
+                                <svg class="post-section__article_header__ico_globe"></svg>
                             </small>
                         </div>
-                        <div class="article-header-dots"></div>
+                        <div class="post-section__article_header_dots"></div>
                     </header>
                 </section>
-                <section class="article-content">
-                    <img class="article-content-img" src="img/owl.jpg" alt="">
+                <section class="post-section__article_content">
+                    <img class="post-section__article_content__img" src="img/owl.jpg" alt="">
                 </section>
-                <form class="article-reaction-area">
-                    <section class="likes-container">
-                        <div class="reaction-ico thumbsup left-part"></div>
-                        <div class="reaction-ico love left-part"></div>
-                        <small class=" left-part">
-                            <a href=""> Benito Mussolini, Joseph Stalin and 128 others</a>
-                        </small>
-                        <small class=" right-part">
-                            2 Comments
-                        </small>
-                    </section>
-                    <section class="reactions-list-container">
-                        <ul class="reactions-list">
-                            <li class="reactions-list-item">
-                                <button class="reactions-list-button">
-                                    <svg class="reactions-list-icon like"></svg>
+
+                <section class="post-section__article_reaction_area__likes-container">
+                    <div class="post-section__article_reaction_area__thumbsup"></div>
+                    <div class="post-section__article_reaction_area__love"></div>
+                    <small class="post-section__article_reaction_area__who-reacted">
+                        <a href=""> Benito Mussolini, Joseph Stalin and 128 others</a>
+                    </small>
+                    <small class="post-section__article_reaction_area__how-many-comments">
+                        2 Comments
+                    </small>
+                </section>
+
+                <form class="post-section__article_post-reaction">
+                    <section class="post-section__article_post-reaction__reaction-options">
+                        <ul class="post-section__article_post-reaction__reaction-options_list">
+                            <li class="post-section__article_post-reaction__reaction-options_list-item">
+                                <button class="post-section__article_post-reaction__reaction-options_button">
+                                    <svg class="post-section__article_post-reaction__reaction-options_like"></svg>
                                     <span>Like</span>
                                 </button>
                             </li>
-                            <li class="reactions-list-item">
-                                <button class="reactions-list-button">
-                                    <svg class="reactions-list-icon comment"></svg>
+                            <li class="post-section__article_post-reaction__reaction-options_list-item">
+                                <button class="post-section__article_post-reaction__reaction-options_button">
+                                    <svg class="post-section__article_post-reaction__reaction-options_comment"></svg>
                                     <span>Comment</span>
                                 </button>
                             </li>
-                            <li class="reactions-list-item">
-                                <button class="reactions-list-button">
-                                    <svg class="reactions-list-icon share"></svg>
+                            <li class="post-section__article_post-reaction__reaction-options_list-item">
+                                <button class="post-section__article_post-reaction__reaction-options_button">
+                                    <svg class="post-section__article_post-reaction__reaction-options_share"></svg>
                                     <span>Share</span>
                                 </button>
                             </li>
                         </ul>
                     </section>
-                    <footer class="comment-area-container">
-                        <img class="comment-area-author-img" src="img/person.png" alt="author">
-                        <input class="comment-area-input" type="text" name="" placeholder="write a comment">
-                        <div class="comment-area-ico-container">
-                            <div class="comment-area-ico smile"></div>
-                            <div class="comment-area-ico photo"></div>
-                            <div class="comment-area-ico gif"></div>
-                            <div class="comment-area-ico sticker"></div>
+                    <footer class="post-section__article_post-reaction__post-comment">
+                        <img class="post-section__article_post-reaction__post-comment_author-img" src="img/person.png" alt="author">
+                        <input class="post-section__article_post-reaction__post-comment_input" type="text" name="" placeholder="write a comment">
+                        <div class="post-section__article_post-reaction__post-comment_comment-options">
+                            <div class="post-section__article_post-reaction__post-comment_comment-option_smile"></div>
+                            <div class="post-section__article_post-reaction__post-comment_comment-option_photo"></div>
+                            <div class="post-section__article_post-reaction__post-comment_comment-option_gif"></div>
+                            <div class="post-section__article_post-reaction__post-comment_comment-option_sticker"></div>
                         </div>
                     </footer>
                 </form>
             </article>
-            <article class="article-cas">
-                <section class="header-container">
-                    <img class="article-author-img" src="img/shrek.png" alt="author">
-                    <header class="article-header">
-                        <div class="article-header-main">
+            <article class="post-section__article">
+                <section class="post-section__article_header_container">
+                    <img class="post-section__article_header__author-img" src="img/shrek.png" alt="author">
+                    <header class="post-section__article_header__article-header">
+                        <div class="post-section__article_header__txt-container">
                             <h4>
-                                <a class="acticle-author-name" href="">Shrek Chebureck</a>
+                                <a class="post-section__article_header__author-name" href="">Shrek Chebureck</a>
                             </h4>
-                            <small class="article-header-annotation">
+                            <small class="post-section__article_header__annotation">
                                 <time><a href="">Today at 10:16</a></time>
-                                <svg class="article-ico globe"></svg>
+                                <svg class="post-section__article_header__ico_globe globe"></svg>
                             </small>
                         </div>
-                        <div class="article-header-dots"></div>
+                        <div class="post-section__article_header_dots"></div>
                     </header>
                 </section>
-                <section class="article-content">
+                <section class="post-section__article_content">
                     <p>
                         I have a dream that one day this nation will rise up and live out the true meaning of its creed:
                         "We hold these truths to be self-evident: that all men are created equal."
@@ -235,117 +237,117 @@
                         I have a dream today.
                     </p>
                 </section>
-                <form class="article-reaction-area">
-                    <section class="likes-container">
-                        <div class="reaction-ico thumbsup left-part"></div>
-                        <div class="reaction-ico love left-part"></div>
-                        <small class=" left-part">
+                <form class="post-section__article_post-reaction">
+                    <section class="post-section__article_reaction_area__likes-container">
+                        <div class="post-section__article_reaction_area__thumbsup"></div>
+                        <div class="post-section__article_reaction_area__love"></div>
+                        <small class=" post-section__article_reaction_area__who-reacted">
                             <a href=""> Benito Mussolini, Joseph Stalin and 128 others</a>
                         </small>
-                        <small class=" right-part">
+                        <small class=" post-section__article_reaction_area__how-many-comments">
                             2 Comments
                         </small>
                     </section>
-                    <section class="reactions-list-container">
-                        <ul class="reactions-list">
-                            <li class="reactions-list-item">
-                                <button class="reactions-list-button">
-                                    <svg class="reactions-list-icon like"></svg>
+                    <section class="post-section__article_post-reaction__reaction-options">
+                        <ul class="post-section__article_post-reaction__reaction-options_list">
+                            <li class="post-section__article_post-reaction__reaction-options_list-item">
+                                <button class="post-section__article_post-reaction__reaction-options_button">
+                                    <svg class="post-section__article_post-reaction__reaction-options_like"></svg>
                                     Like
                                 </button>
                             </li>
-                            <li class="reactions-list-item">
-                                <button class="reactions-list-button">
-                                    <svg class="reactions-list-icon comment"></svg>
+                            <li class="post-section__article_post-reaction__reaction-options_list-item">
+                                <button class="post-section__article_post-reaction__reaction-options_button">
+                                    <svg class="post-section__article_post-reaction__reaction-options_comment"></svg>
                                     Comment
                                 </button>
                             </li>
-                            <li class="reactions-list-item">
-                                <button class="reactions-list-button">
-                                    <svg class="reactions-list-icon share"></svg>
+                            <li class="post-section__article_post-reaction__reaction-options_list-item">
+                                <button class="post-section__article_post-reaction__reaction-options_button">
+                                    <svg class="post-section__article_post-reaction__reaction-options_share"></svg>
                                     Share
                                 </button>
                             </li>
                         </ul>
                     </section>
-                    <footer class="comment-area-container">
-                        <img class="comment-area-author-img" src="img/person.png" alt="author">
-                        <input class="comment-area-input" type="text" name="" placeholder="write a comment">
-                        <section class="comment-area-ico-container">
-                            <div class="comment-area-ico smile"></div>
-                            <div class="comment-area-ico photo"></div>
-                            <div class="comment-area-ico gif"></div>
-                            <div class="comment-area-ico sticker"></div>
+                    <footer class="post-section__article_post-reaction__post-comment">
+                        <img class="post-section__article_post-reaction__post-comment_author-img" src="img/person.png" alt="author">
+                        <input class="post-section__article_post-reaction__post-comment_input" type="text" name="" placeholder="write a comment">
+                        <section class="post-section__article_post-reaction__post-comment_comment-options">
+                            <div class="post-section__article_post-reaction__post-comment_comment-option_smile"></div>
+                            <div class="post-section__article_post-reaction__post-comment_comment-option_photo"></div>
+                            <div class="post-section__article_post-reaction__post-comment_comment-option_gif"></div>
+                            <div class="post-section__article_post-reaction__post-comment_comment-option_sticker"></div>
                         </section>
                     </footer>
                 </form>
             </article>
-            <article class="article-cas">
-                <section class="header-container">
-                    <img class="article-author-img" src="img/boldman.jpeg" alt="author">
-                    <header class="article-header">
-                        <div class="article-header-main">
+            <article class="post-section__article">
+                <section class="post-section__article_header_container">
+                    <img class="post-section__article_header__author-img" src="img/boldman.jpeg" alt="author">
+                    <header class="post-section__article_header__article-header">
+                        <div class="post-section__article_header__txt-container">
                             <h4>
-                                <a class="acticle-author-name" href="">Galera Enterprise</a> <span
-                                    class="article-action"> The best jobs opportunities</span>
+                                <a class="post-section__article_header__author-name" href="">Galera Enterprise</a> <span
+                                    class="post-section__article_header__subtext"> The best jobs opportunities</span>
                             </h4>
-                            <small class="article-header-annotation">
+                            <small class="post-section__article_header__annotation">
                                 <span><a href="">sposnored</a></span>
                             </small>
                         </div>
-                        <div class="article-header-dots"></div>
+                        <div class="post-section__article_header_dots"></div>
                     </header>
                 </section>
-                <section class="article-content">
+                <section class="post-section__article_content">
                     <p>
                         No single job suits all of us, but many of the best ones have a few attributes in common: They
                         pay well, challenge us year after year, match our talents and skills, aren't too stressful,
                         offer room to advance throughout our careers and provide a satisfying work-life balance. Whether
                         the position is in demand is also a consideration, especially among job seekers.
                     </p>
-                    <img class="article-content-img" src="img/galera.jpg" alt="">
+                    <img class="post-section__article_content__img" src="img/galera.jpg" alt="">
                 </section>
-                <form class="article-reaction-area">
-                    <section class="likes-container">
-                        <div class="reaction-ico thumbsup left-part"></div>
-                        <div class="reaction-ico love left-part"></div>
-                        <small class=" left-part">
+                <form class="post-section__article_post-reaction">
+                    <section class="post-section__article_reaction_area__likes-container">
+                        <div class="post-section__article_reaction_area__thumbsup"></div>
+                        <div class="post-section__article_reaction_area__love"></div>
+                        <small class=" post-section__article_reaction_area__who-reacted">
                             <a href=""> Benito Mussolini, Joseph Stalin and 128 others</a>
                         </small>
-                        <small class=" right-part">
+                        <small class=" post-section__article_reaction_area__how-many-comments">
                             2 Comments
                         </small>
                     </section>
-                    <section class="reactions-list-container">
-                        <ul class="reactions-list">
-                            <li class="reactions-list-item">
-                                <button class="reactions-list-button">
-                                    <svg class="reactions-list-icon like"></svg>
+                    <section class="post-section__article_post-reaction__reaction-options">
+                        <ul class="post-section__article_post-reaction__reaction-options_list">
+                            <li class="post-section__article_post-reaction__reaction-options_list-item">
+                                <button class="post-section__article_post-reaction__reaction-options_button">
+                                    <svg class="post-section__article_post-reaction__reaction-options_like"></svg>
                                     Like
                                 </button>
                             </li>
-                            <li class="reactions-list-item">
-                                <button class="reactions-list-button">
-                                    <svg class="reactions-list-icon comment"></svg>
+                            <li class="post-section__article_post-reaction__reaction-options_list-item">
+                                <button class="post-section__article_post-reaction__reaction-options_button">
+                                    <svg class="post-section__article_post-reaction__reaction-options_comment"></svg>
                                     Comment
                                 </button>
                             </li>
-                            <li class="reactions-list-item">
-                                <button class="reactions-list-button">
-                                    <svg class="reactions-list-icon share"></svg>
+                            <li class="post-section__article_post-reaction__reaction-options_list-item">
+                                <button class="post-section__article_post-reaction__reaction-options_button">
+                                    <svg class="post-section__article_post-reaction__reaction-options_share"></svg>
                                     Share
                                 </button>
                             </li>
                         </ul>
                     </section>
-                    <footer class="comment-area-container">
-                        <img class="comment-area-author-img" src="img/person.png" alt="author">
-                        <input class="comment-area-input" type="text" name="" id="" placeholder="write a comment">
-                        <div class="comment-area-ico-container">
-                            <div class="comment-area-ico smile"></div>
-                            <div class="comment-area-ico photo"></div>
-                            <div class="comment-area-ico gif"></div>
-                            <div class="comment-area-ico sticker"></div>
+                    <footer class="post-section__article_post-reaction__post-comment">
+                        <img class="post-section__article_post-reaction__post-comment_author-img" src="img/person.png" alt="author">
+                        <input class="post-section__article_post-reaction__post-comment_input" type="text" name="" id="" placeholder="write a comment">
+                        <div class="post-section__article_post-reaction__post-comment_comment-options">
+                            <div class="post-section__article_post-reaction__post-comment_comment-option_smile"></div>
+                            <div class="post-section__article_post-reaction__post-comment_comment-option_photo"></div>
+                            <div class="post-section__article_post-reaction__post-comment_comment-option_gif"></div>
+                            <div class="post-section__article_post-reaction__post-comment_comment-option_sticker"></div>
                         </div>
                     </footer>
                 </form>
@@ -355,12 +357,12 @@
     <aside class="stories-panel">
         <nav class="stories-panel__heading">
             <header class="stories-panel__heading-txt">Stories</header>
-            <small class="horizontal-small">
+            <small class="stories-panel__heading_annotation">
                 <a>
-                    <div class="stories-icon archive"></div>
+                    <div class="stories-panel__heading_archive-ico"></div>
                     Archive
                 </a>
-                <span class="dot">.</span>
+                <span class="stories-panel__heading_dot">.</span>
                 <a>Settings</a>
             </small>
         </nav>
