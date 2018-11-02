@@ -1,5 +1,8 @@
 body{
     font-family: OpenSans, sans-serif;
+    width: 292px;
+    height: auto;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 header {
@@ -65,7 +68,8 @@ header main{
 
 article{
     width: 292px;
-    height: 352px;
+    height: 228px;
+    margin-top: 10px;
 }
 
 .messages {
@@ -93,8 +97,17 @@ article{
     font-size: 12px;
 }
 
+.him + .him {
+    margin-top: 1px;
+    border-radius: 0 100px 100px 100px;
+}
+
 .him + .me{
     margin-top: 16px;
+}
+
+.me + .him {
+    border-radius: 100px 100px 100px 0;
 }
 
 .date{
@@ -110,4 +123,36 @@ article{
 .me + .me {
     margin-top: 1px;
     border-radius: 100px 0 100px 100px;
+}
+
+.aside-input{
+    width: 292px;
+    height: auto;
+}
+
+.input-text {
+    border: none;
+    font-family: OpenSans, sans-serif;
+    font-weight: bold;
+    font-size: 12px;
+    color: #cdcdcd;
+    margin-left: 16px;
+}
+
+.line {
+    border-top: 1px solid #e6e6e6;
+    border-bottom: 1px solid #fff;
+}
+
+.buttons-under-input{
+    list-style-type: none;
+    display: flex;
+    justify-content: left;
+    margin-left: 12px;
+    padding: 0 0 10px;
+}
+
+.buttons-under-input li button{
+    background: transparent;
+    border: none;
 }
