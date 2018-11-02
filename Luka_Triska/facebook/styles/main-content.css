@@ -1,25 +1,47 @@
-#main-content {
-    margin-top: 5px;
-    margin-right: 5px;
-    vertical-align: top;
-    display: inline-block;
-    float: left;
-    width: 650px;
-    height: auto;
-    /*background-color: blue;*/
+.container {
+    display: flex;
+    flex-flow: row wrap;
+    font-weight: bold;
+    text-align: center;
 }
 
-#right-side-menu {
-    height: 300px;
-    /*width: 400px;*/
-    float: right;
-    /*background-color: aqua;*/
-    /*position: fixed;*/
-
-    margin-right: 150px;
+.container > * {
+    flex: 1 100%;
 }
 
-#create-container {
+/*The following two properties make the page resize its contents
+depending on the screen you're viewing it from*/
+
+@media all and (min-width: 600px) {
+    .aside {
+        flex: 1 auto;
+    }
+}
+
+@media all and (min-width: 800px) {
+    .main {
+        flex: 3 0;
+    }
+
+    .aside-1 {
+        order: 1;
+    }
+
+    .main {
+        order: 2;
+    }
+
+    .aside-2 {
+        order: 3;
+    }
+
+    .footer {
+        order: 4;
+    }
+}
+
+
+.main .create-container {
     width: auto;
     height: 110px;
     /*border: 0;*/
@@ -92,29 +114,9 @@
     vertical-align: center;
 }
 
-
 h4 {
     margin: 0;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 /*
 #profile-image {

@@ -1,7 +1,0 @@
-{
-"version": 3,
-"mappings": "AAAA,iBAAiB;EACf,QAAQ,EAAE,MAAM;EAChB,MAAM,EAAE,IAAI;EACZ,KAAK,EAAE,MAAM",
-"sources": ["facebook-content.scss"],
-"names": [],
-"file": "facebook-content.css"
-}

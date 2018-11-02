@@ -1,0 +1,30 @@
+{
+  "header": [
+    {
+      "left_buttons": [
+        "logo",
+        "Main",
+        "Find friends"
+      ]
+    },
+    {
+      "right_buttons": [
+        "<img src='images/friends.png'>",
+        "<img src='images/messages.png'>",
+        "<img src='images/notifications.png'>",
+        "<img src='images/help.png'>",
+        "<img src='images/dropdown.png'>"
+      ]
+    }
+  ],
+  "left-menu": [
+    "Mark Zubrytsky",
+    "<img class='nv_btn_img' src='images/feed.png'> News",
+    "<img class='nv_btn_img' src='images/messenger.png'> Messenger",
+    "<img class='nv_btn_img' src='images/groups.png'> Groups",
+    "<img class='nv_btn_img' src='images/pages.png'> Fan-club",
+    "<img class='nv_btn_img' src='images/events.png'> Events",
+    "<img class='nv_btn_img' src='images/fundraisers.png'> Fundraisers",
+    "<img class='nv_btn_img' src='images/dropdown.png'> More"
+  ]
+}
