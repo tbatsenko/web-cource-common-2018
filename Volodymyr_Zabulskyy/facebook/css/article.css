@@ -1,65 +1,58 @@
-.article-main {
+.main-field-container {
     width: 36em;
 }
 
-.article-main .section-main {
-
-}
-
-.article-main .article-cas {
+.post-section__article {
     background: #fff;
     border-radius: 5px;
     border: 1px solid #ddd;
     margin-bottom: 1em;
 }
 
-.article-main .header-container {
+.post-section__article_header_container {
     padding: 12px 12px 0;
     display: flex;
     align-items: center;
     padding-bottom: 13px;
 }
 
-.article-main .article-author-img {
+.post-section__article_header__author-img {
     width: 36px;
+    object-fit: cover;
     height: 36px;
     border-radius: 18px;
     border: 1px solid #eee;
     margin-right: 10px;
 }
 
-.article-main .article-header {
+.post-section__article_header__article-header {
     display: flex;
     flex-flow: row;
     justify-content: space-between;
     width: 100%;
 }
 
-.article-main .acticle-author-name {
+.post-section__article_header__author-name {
     font-size: 14px;
     line-height: 1.38;
     font-weight: 600;
 
 }
 
-.article-main .article-action {
-
-}
-
-.article-main .article-header-annotation {
+.post-section__article_header__annotation {
     display: flex;
     flex-flow: row;
 }
 
-.article-main .article-header-annotation * {
+.post-section__article_header__annotation {
     color: #616770;
     font-size: 12px;
 }
 
-.article-main .article-content {
+.post-section__article_content {
 }
 
-.article-main .article-content > p {
+.post-section__article_content > p {
     margin: 6px 0;
     font-size: 14px;
     font-weight: normal;
@@ -68,25 +61,27 @@
 
 }
 
-.article-main .article-content-img {
+.post-section__article_content__img {
+    object-fit: cover;
     width: 100%;
     height: auto;
+    max-height: 600px;
 
 }
 
-.article-main .article-header-dots {
+.post-section__article_header_dots {
     height: 20px;
     width: 20px;
     background: url("https://static.xx.fbcdn.net/rsrc.php/v3/yf/r/palWVhMO67o.png");
     background-position: -284px -245px;
 }
 
-.article-main .article-header-main {
+.post-section__article_header__txt-container {
     display: flex;
     flex-flow: column;
 }
 
-.article-main .article-header-main > h4 {
+.post-section__article_header__txt-container > h4 {
     margin: 0;
     color: #616770;
     padding-right: 22px;
@@ -95,7 +90,7 @@
     line-height: 1.38;
 }
 
-.article-main .article-ico.globe {
+.post-section__article_header__ico_globe {
     width: 12px;
     height: 12px;
     background: url("https://static.xx.fbcdn.net/rsrc.php/v3/yf/r/palWVhMO67o.png");
@@ -105,34 +100,36 @@
     margin-left: 5px;
 }
 
-.article-main .article-reaction-area {
+.post-section__article_post-reaction {
 
 }
 
-.article-main .likes-container {
+.post-section__article_reaction_area__likes-container {
     padding: 10px 20px;
     height: 15px;
 }
 
-.article-main .likes-container > span {
+.post-section__article_reaction_area__likes-container > span {
     display: flex;
 }
 
-.article-main .likes-container * {
+.post-section__article_reaction_area__likes-container{
     cursor: pointer;
     color: #606770;
     font-size: 13px;
 }
 
-.article-main .likes-container .left-part {
+.post-section__article_reaction_area__likes-container .post-section__article_reaction_area__who-reacted {
     float: left;
+    line-height: 18px;
+    padding-left: 5px;
 }
 
-.article-main .likes-container .right-part {
+.post-section__article_reaction_area__likes-container .post-section__article_reaction_area__how-many-comments {
     float: right;
 }
 
-.article-main .reactions-list {
+.post-section__article_post-reaction__reaction-options_list {
     display: flex;
     justify-content: space-evenly;
     border-top: 1px solid #d5d9df;
@@ -140,16 +137,16 @@
     padding: 5px 0;
 }
 
-.article-main .reactions-list-item {
+.post-section__article_post-reaction__reaction-options_list-item {
     width: 100%;
     padding: 0 1px;
 }
 
-.article-main .reactions-list-button:hover {
+.post-section__article_post-reaction__reaction-options_button:hover {
     background: #e9ecf0;
 }
 
-.article-main .reactions-list-button {
+.post-section__article_post-reaction__reaction-options_button {
     background: none;
     border: none;
     font-weight: 400;
@@ -166,51 +163,57 @@
 
 }
 
-.article-main .reactions-list-container {
+.post-section__article_post-reaction__reaction-options {
     border-bottom: 1px solid #d5d9df;
 }
 
-.article-main .reactions-list-icon {
+.post-section__article_post-reaction__reaction-options_share, .post-section__article_post-reaction__reaction-options_comment, .post-section__article_post-reaction__reaction-options_like {
     margin-right: 3px;
     height: 18px;
     width: 18px;
     background: url("https://static.xx.fbcdn.net/rsrc.php/v3/yl/r/xxqRJkcZ0ly.png");
 }
 
-.article-main .reactions-list-icon.share {
+.post-section__article_post-reaction__reaction-options_share {
     background-position: 0 -293px;
 }
 
-.article-main .reactions-list-icon.comment {
+.post-section__article_post-reaction__reaction-options_comment {
     background-position: -19px -198px;
 }
 
-.article-main .reactions-list-icon.like {
+.post-section__article_post-reaction__reaction-options_like {
     background: url("https://static.xx.fbcdn.net/rsrc.php/v3/yf/r/palWVhMO67o.png");
     background-position: -389px -245px;
 }
 
-.article-main .reaction-ico {
+.post-section__article_reaction_area__love, .post-section__article_reaction_area__thumbsup{
+    float: left;
     background: url("https://static.xx.fbcdn.net/rsrc.php/v3/yl/r/xxqRJkcZ0ly.png");
     height: 16px;
     width: 16px;
     margin-right: 2px;
 }
 
-.article-main .reaction-ico.thumbsup {
+.post-section__article_reaction_area__who-reacted{
+    float: left;
+}
+
+.post-section__article_reaction_area__thumbsup {
     background-position: -17px -526px;
 }
 
-.article-main .reaction-ico.love {
+.post-section__article_reaction_area__love {
     background-position: 0 -509px;
 }
 
-.article-main .comment-area-container {
+.post-section__article_post-reaction__post-comment {
     display: flex;
     padding: 10px 15px;
 }
 
-.article-main .comment-area-author-img {
+.post-section__article_post-reaction__post-comment_author-img {
+    object-fit: cover;
     width: 36px;
     height: 36px;
     border-radius: 18px;
@@ -218,7 +221,7 @@
     margin-right: 10px;
 }
 
-.article-main .comment-area-input {
+.post-section__article_post-reaction__post-comment_input {
     padding: 5px 15px;
     width: 100%;
     background-color: #f2f3f5;
@@ -227,7 +230,7 @@
     border-right: none;
 }
 
-.article-main .comment-area-ico-container {
+.post-section__article_post-reaction__post-comment_comment-options {
     padding: 5px 15px;
     display: flex;
     align-items: center;
@@ -239,24 +242,24 @@
     border-left: none;
 }
 
-.article-main .comment-area-ico {
+.post-section__article_post-reaction__post-comment_comment-option_smile, .post-section__article_post-reaction__post-comment_comment-option_photo, .post-section__article_post-reaction__post-comment_comment-option_gif, .post-section__article_post-reaction__post-comment_comment-option_sticker {
     height: 16px;
     width: 16px;
     background: url("https://static.xx.fbcdn.net/rsrc.php/v3/y3/r/ZpN7MehwMck.png");
 }
 
-.article-main .comment-area-ico.smile {
+.post-section__article_post-reaction__post-comment_comment-option_smile {
     background-position: 0 -168px;
 }
 
-.article-main .comment-area-ico.photo {
+.post-section__article_post-reaction__post-comment_comment-option_photo {
     background-position: -46px -57px;
 }
 
-.article-main .comment-area-ico.gif {
+.post-section__article_post-reaction__post-comment_comment-option_gif {
     background-position: -34px -168px;
 }
 
-.article-main .comment-area-ico.sticker {
+.post-section__article_post-reaction__post-comment_comment-option_sticker {
     background-position: -34px -219px;
 }
