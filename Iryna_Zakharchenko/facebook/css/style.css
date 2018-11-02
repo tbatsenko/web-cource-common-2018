@@ -4,7 +4,6 @@ body{
     font-family: Helvetica, Arial, sans-serif;
 }
 
-<<<<<<< HEAD
 .header{
     display: flex;
     justify-content: space-evenly;
@@ -14,15 +13,6 @@ body{
     /*justify-content: space-between;*/
     align-items: center;
     height: 2em;
-=======
-header{
-    display: flex;
-    justify-content: center;
-    background: #4267b2;
-    padding-top: 8px;
-    /*position: fixed;*/
-    /*justify-content: space-between;*/
->>>>>>> parent of 64dd120... Merge branch 'master' of /home/zabulskyy/UCU/Web/web-cource-common with conflicts.
 
 }
 
@@ -33,7 +23,6 @@ header{
     width: 1.7em;
 }
 
-<<<<<<< HEAD
 .header-left {
     float: left;
 
@@ -59,17 +48,6 @@ header{
 }
 
 .search-form{
-=======
-.icons.header-facebook-icon{
-    background-position: 0 -442px;
-    height: 1.7em;
-    width: 1.7em;
-    padding-left: 0.3em;
-    color: transparent;
-}
-
-.header-form{
->>>>>>> parent of 64dd120... Merge branch 'master' of /home/zabulskyy/UCU/Web/web-cource-common with conflicts.
     border: 1px solid #3b5998;
     float: left;
     display: flex;
@@ -77,11 +55,7 @@ header{
     border-radius: 3px;
 }
 
-<<<<<<< HEAD
 .search-form__input{
-=======
-.header-input{
->>>>>>> parent of 64dd120... Merge branch 'master' of /home/zabulskyy/UCU/Web/web-cource-common with conflicts.
     max-width: 100em;
     padding-left: 0.3em;
     height: 1.65em;
@@ -91,11 +65,7 @@ header{
     border-radius: 0.1em 0 0 0.1em;
 }
 
-<<<<<<< HEAD
 .search-form__button{
-=======
-.header-search{
->>>>>>> parent of 64dd120... Merge branch 'master' of /home/zabulskyy/UCU/Web/web-cource-common with conflicts.
     border-radius: 0 0.1em 0.1em 0;
     border: none;
     cursor: pointer;
@@ -110,11 +80,7 @@ header{
     /*background-size: 1.1em 1.1em;*/
 }
 
-<<<<<<< HEAD
 .icons.search-form__button{
-=======
-.icons.header-search{
->>>>>>> parent of 64dd120... Merge branch 'master' of /home/zabulskyy/UCU/Web/web-cource-common with conflicts.
     background-position: 19px -1440px;
     background-size: 32px 1475px;
     border-radius: 0 0.1em 0.1em 0;
@@ -141,39 +107,23 @@ header{
     /*color: #fff;*/
 }
 
-<<<<<<< HEAD
 .header-right__profile-details{
-=======
-.profile-details{
->>>>>>> parent of 64dd120... Merge branch 'master' of /home/zabulskyy/UCU/Web/web-cource-common with conflicts.
     display: flex;
 
 }
 
-<<<<<<< HEAD
 .header-right__profile-picture{
-=======
-.header-profile-picture{
->>>>>>> parent of 64dd120... Merge branch 'master' of /home/zabulskyy/UCU/Web/web-cource-common with conflicts.
     height: 1.9em;
     width: 1.9em;
     border-radius: 50%;
     padding-right: 0.2em;
 }
 
-<<<<<<< HEAD
 .header-right__button-create{
     color: #fff;
 }
 
 .header-right__button__transparent>button{
-=======
-.navigation-create-button{
-    color: #fff;
-}
-
-.navigation-transparent-button>button{
->>>>>>> parent of 64dd120... Merge branch 'master' of /home/zabulskyy/UCU/Web/web-cource-common with conflicts.
     color: transparent;
 }
 
@@ -209,11 +159,7 @@ a {
     text-decoration: none;
 }
 
-<<<<<<< HEAD
 .icons.header-right__button-friends{
-=======
-.icons.navigation-friends{
->>>>>>> parent of 64dd120... Merge branch 'master' of /home/zabulskyy/UCU/Web/web-cource-common with conflicts.
     background-position: 0 -892px;;
     /*background-size: 1.1em 1.1em;*/
 
@@ -222,11 +168,7 @@ a {
     text-align: center;
 }
 
-<<<<<<< HEAD
 .icons.header-right__button-messages{
-=======
-.icons.navigation-messages{
->>>>>>> parent of 64dd120... Merge branch 'master' of /home/zabulskyy/UCU/Web/web-cource-common with conflicts.
     background-position: 0 -942px;;
     /*background-size: 1.1em 1.1em;*/
 
@@ -234,40 +176,24 @@ a {
     text-align: center;
 }
 
-<<<<<<< HEAD
 .icons.header-right__button-notifications{
-=======
-.icons.navigation-notifications{
->>>>>>> parent of 64dd120... Merge branch 'master' of /home/zabulskyy/UCU/Web/web-cource-common with conflicts.
     background-position: 0 -792px;
     cursor: pointer;
     text-align: center;
 }
 
-<<<<<<< HEAD
 .icons.header-right__button-help{
-=======
-.icons.navigation-help{
->>>>>>> parent of 64dd120... Merge branch 'master' of /home/zabulskyy/UCU/Web/web-cource-common with conflicts.
     cursor: pointer;
     text-align: center;
     background-position: 0 -992px;
 }
 
-<<<<<<< HEAD
 .icons.header-right__button-other{
-=======
-.icons.navigation-other{
->>>>>>> parent of 64dd120... Merge branch 'master' of /home/zabulskyy/UCU/Web/web-cource-common with conflicts.
     cursor: pointer;
     text-align: center;
     background-position: 0 -842px;
 }
 
-<<<<<<< HEAD
 .header-right__button__transparent{
     color: transparent;
 }
-=======
-.navigation-transparent-button{}
->>>>>>> parent of 64dd120... Merge branch 'master' of /home/zabulskyy/UCU/Web/web-cource-common with conflicts.
