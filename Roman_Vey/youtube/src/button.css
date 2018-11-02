@@ -1,0 +1,26 @@
+.button {
+  background-color: transparent;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+.button_round {
+  height: 40px;
+  width: 40px;
+  border-radius: 100%;
+}
+.button_round:hover {
+  background-color: #eceaea;
+}
+.button_type_svg {
+  fill: #A0A0A0;
+}
+.button__image {
+  height: 30px;
+  width: 30px;
+  border-radius: 100%;
+}
+
+/*# sourceMappingURL=button.css.map */
