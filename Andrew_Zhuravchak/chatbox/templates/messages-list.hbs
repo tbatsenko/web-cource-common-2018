@@ -2,7 +2,7 @@
 
     <div class="message-group message-group--{{#if fromFriend}}friend{{ else }}me{{/if}}">
         {{#if date}}
-            <span class="message-group__date">{{ date }}</span>
+            <time datetime="{{ date }}" class="message-group__date">{{ date }}</time>
         {{/if}}
 
         {{#if fromFriend}}
