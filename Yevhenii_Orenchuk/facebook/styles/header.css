@@ -10,6 +10,15 @@
   justify-content: space-evenly;
   align-items: center;
 }
+.header__facebook-icons {
+  background-image: url("https://static.xx.fbcdn.net/rsrc.php/v3/yF/r/1c0gE0MbEo8.png");
+  background-repeat: no-repeat;
+  background-size: 29px 1475px;
+  cursor: pointer;
+  border: 0;
+  text-indent: -999px;
+  background-color: transparent;
+}
 .search__facebook-icon {
   background-position: 0px -442px;
   height: 24px;
@@ -17,8 +26,6 @@
 }
 .search {
   height: 24px;
-  display: flex;
-  align-items: center;
 }
 .search-form {
   height: 24px;
@@ -57,47 +64,55 @@
   background-position: 0 -1445px;
 }
 .navigation-menu {
-  display: flex;
-  align-items: center;
+
 }
-.navigation-menu__item {
-  padding: 5px 10px;
-  font-size: 12px;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, ".SFNSText-Regular",
-    sans-serif;
-  font-weight: bold;
+.navigation-menu__section-1 {
+  height: 25px;
 }
-.navigation-menu__item:hover {
+.navigation-menu__section-1:hover {
   background-color: pink;
 }
-.navigation-menu__item:before {
-  content: "";
-  display: block;
-  height: 18px;
-  left: -1px;
-  position: absolute;
-  top: 12px;
-  width: 1px;
-  background-color: darkred;
+.navigation-menu__section-2 {
+  height: 25px;
+  margin-right: 5px;
+}
+.navigation-menu__section-2:hover {
+  background-color: pink;
+}
+.navigation-menu__section-3 {
+  margin-left: 5px;
+  margin-right: 5px;
+}
+.navigation-menu__section-4 {
+  margin-left: 5px;
 }
 .navigation-menu_font {
+  font-size: 12px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, ".SFNSText-Regular",
+  sans-serif;
+  font-weight: bold;
   color: white;
-  text-decoration: none;
+  padding: 5px 10px;
 }
-.navigation-menu__button {
-
+.navigation-menu__profile-picture {
+  border-radius: 50%;
+  overflow: hidden;
+  width: 24px;
+  height: 24px;
 }
 .button__requests {
   background-position: 0 -467px;
   height: 24px;
   width: 24px;
   opacity: .6;
+  margin: 2px;
 }
 .button__messages {
   background-position: 0 -717px;
   height: 24px;
   width: 24px;
   opacity: .6;
+  margin: 2px;
 }
 .button__messages:active {
   background-position: 0 -742px;
@@ -108,6 +123,7 @@
   height: 24px;
   width: 24px;
   opacity: .6;
+  margin: 2px;
 }
 .button__notifications:active {
   background-position: 0 -642px;
@@ -118,20 +134,13 @@
   height: 20px;
   width: 20px;
   opacity: .6;
+  margin: 2px;
 }
 .button__menu {
   background-position: 0 -1326px;
   height: 16px;
   width: 16px;
   opacity: .6;
+  margin: 2px;
 }
-.facebook-icons {
-  background-image: url("https://static.xx.fbcdn.net/rsrc.php/v3/yF/r/1c0gE0MbEo8.png");
-  background-repeat: no-repeat;
-  background-size: 29px 1475px;
-  cursor: pointer;
-  border: 0;
-  text-indent: -999px;
-  background-color: transparent;
-  margin: 1px;
-}
+

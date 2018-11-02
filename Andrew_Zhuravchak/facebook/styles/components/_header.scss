@@ -1,0 +1,24 @@
+.header {
+  height: 43px;
+  background-color: #4267b2;
+  display: flex;
+  padding-right: 205px;
+  justify-content: center;
+
+  &__nav {
+    display: flex;
+    justify-content: center;
+    padding: 8.5px 0;
+    width: 100%;
+
+  }
+
+  &__nav-logo {
+    display: block;
+    width: 26px;
+    height: 26px;
+    margin-right: 5px;
+    background-size: auto;
+    background: url(../images/icons.png) no-repeat 0 -441px;
+  }
+}
