@@ -1,0 +1,67 @@
+@photo_width: 469px;
+@photo_height: 1140px;
+
+@font-face {
+  font-family: AvenirNext-Bold; /* Имя шрифта */
+  src: url("../../fonts/AvenirNext-Bold.ttf"); /* Путь к файлу со шрифтом */
+}
+@font-face {
+  font-family: AvenirNext-Regular; /* Имя шрифта */
+  src: url("../../fonts/AvenirNext-Regular.ttf"); /* Путь к файлу со шрифтом */
+}
+.photo-info{
+  float: left;
+  margin-right: 70px;
+}
+
+.main-photo{
+  width: @photo_width;
+  height: @photo_height;
+  background:linear-gradient(to bottom, rgba(255, 253, 248, 0.68), rgba(151, 111, 17, 0.68)),
+  url("https://res.cloudinary.com/dh2chxfzx/image/upload/c_scale,h_900,o_100,q_100,w_469/v1541170697/john-doe.jpg") no-repeat center;
+  background-size: cover;
+}
+.stats{
+  position: absolute;
+  top: @photo_height - 30*4.5;
+  left:  90px;
+}
+
+.stats_definition-name{
+
+  width: 120px;
+  font-weight: bold;
+  .text_props();
+}
+.stats_definition-value{
+  margin-left: 150px;
+  .text_props();
+}
+
+.text_props{
+  height: 30px;
+  text-shadow: 0 1px 4px rgba(72, 72, 72, 0.5);
+  font-family: AvenirNext-Regular, serif;
+  font-size: 22px;
+  text-align: left;
+  color: #ffffff;
+}
+
+.quote{
+  position: absolute;
+  top: 850px;
+  left: 90px;
+  height: 102px;
+  text-shadow: 0 1px 4px rgba(72, 72, 72, 0.5);
+  font-family: AvenirNext-Regular, serif;
+  font-size: 25px;
+  font-weight: 500;
+  font-style: italic;
+  text-align: center;
+  color: #ffffff;
+}
+
+
+
+dt, dd { display: inline-block; float: left; }
+dt { clear: left; }
