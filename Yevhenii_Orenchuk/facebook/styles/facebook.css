@@ -1,0 +1,28 @@
+.body {
+  margin: 0;
+  background-color: rgb(233, 235, 238);
+  display: flex;
+  justify-content: center;
+  font-size: 12px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, ".SFNSText-Regular",
+  sans-serif;
+}
+.centered {
+  display: flex;
+  align-items: center;
+}
+.link-decoration {
+  text-decoration: none;
+}
+.list-item-decoration {
+  list-style-type: none;
+  padding: 5px;
+}
+.list-item-decoration:hover {
+  background-color: #69f0ae;
+}
+.list-decoration {
+  margin-top: 0;
+  margin-bottom: 5px;
+  padding: 0;
+}

@@ -1,0 +1,52 @@
+.aside-block{
+    padding-bottom: 10px;
+    border-bottom: #EEEEEE solid 1px;
+    &__header{
+        cursor: pointer;
+        padding-top: 15px;
+        padding-bottom: 10px;
+        font-size: 14px;
+        font-weight: bold;
+        margin-left: 30px;
+        text-transform: uppercase;
+        color: #696969;
+        &:hover{
+            color: black;
+        }
+    }
+    &__button{
+        width: 100%;
+        height: 40px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        cursor: pointer;
+        padding: auto 10px;
+        font-size: 14px;
+        font-family: Roboto, Arial, sans-serif;
+        &:hover{
+            background-color: #DCDCDC;
+        }
+    }
+    &__icon{
+        width: 24px;
+        height: 24px;
+        margin-left: 30px;
+        &:hover{
+            fill: #FF0000;
+        }
+    }
+    &__text{
+        margin-left: 10px;
+        width: 120px;
+        color: #181818;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
+    }
+    &__counter{
+        width: 50px;
+        margin-left: 10px;    
+        color: #9F9FA6;
+    }
+}

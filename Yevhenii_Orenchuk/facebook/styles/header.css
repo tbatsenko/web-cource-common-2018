@@ -1,0 +1,146 @@
+.header {
+  top: 0;
+  margin: 0;
+  background-color: #4267b2;
+  border-bottom: 1px solid #29487d;
+  width: 100%;
+  height: 43px;
+  display: flex;
+  position: fixed;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.header__facebook-icons {
+  background-image: url("https://static.xx.fbcdn.net/rsrc.php/v3/yF/r/1c0gE0MbEo8.png");
+  background-repeat: no-repeat;
+  background-size: 29px 1475px;
+  cursor: pointer;
+  border: 0;
+  text-indent: -999px;
+  background-color: transparent;
+}
+.search__facebook-icon {
+  background-position: 0px -442px;
+  height: 24px;
+  width: 24px;
+}
+.search {
+  height: 24px;
+}
+.search-form {
+  height: 24px;
+  margin-left: 5px;
+  background-color: white;
+  display: flex;
+  border-radius: 3px;
+  overflow: hidden;
+  border: 1px solid #3b5998;
+}
+.search-form__input {
+  padding: 0 0 0 10px;
+  width: 400px;
+  border: none;
+  height: 24px;
+  font-size: 14px;
+}
+.search-form__button {
+  width: 46px;
+  height: 24px;
+  padding: 0;
+  border: none;
+  background-color: #f5f6f7;
+  cursor: pointer;
+}
+.search-form__button:hover {
+  background-color: rgb(235, 237, 240);
+}
+.search-form__button:active {
+  background-color: #4080ff;
+}
+.search-form__button-icon {
+  display: inline-block;
+  height: 14px;
+  width: 14px;
+  background-position: 0 -1445px;
+}
+.navigation-menu {
+
+}
+.navigation-menu__section-1 {
+  height: 25px;
+}
+.navigation-menu__section-1:hover {
+  background-color: pink;
+}
+.navigation-menu__section-2 {
+  height: 25px;
+  margin-right: 5px;
+}
+.navigation-menu__section-2:hover {
+  background-color: pink;
+}
+.navigation-menu__section-3 {
+  margin-left: 5px;
+  margin-right: 5px;
+}
+.navigation-menu__section-4 {
+  margin-left: 5px;
+}
+.navigation-menu_font {
+  font-size: 12px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, ".SFNSText-Regular",
+  sans-serif;
+  font-weight: bold;
+  color: white;
+  padding: 5px 10px;
+}
+.navigation-menu__profile-picture {
+  border-radius: 50%;
+  overflow: hidden;
+  width: 24px;
+  height: 24px;
+}
+.button__requests {
+  background-position: 0 -467px;
+  height: 24px;
+  width: 24px;
+  opacity: .6;
+  margin: 2px;
+}
+.button__messages {
+  background-position: 0 -717px;
+  height: 24px;
+  width: 24px;
+  opacity: .6;
+  margin: 2px;
+}
+.button__messages:active {
+  background-position: 0 -742px;
+  opacity: 1;
+}
+.button__notifications {
+  background-position: 0 -617px;
+  height: 24px;
+  width: 24px;
+  opacity: .6;
+  margin: 2px;
+}
+.button__notifications:active {
+  background-position: 0 -642px;
+  opacity: 1;
+}
+.button__help {
+  background-position: 0 -1153px;
+  height: 20px;
+  width: 20px;
+  opacity: .6;
+  margin: 2px;
+}
+.button__menu {
+  background-position: 0 -1326px;
+  height: 16px;
+  width: 16px;
+  opacity: .6;
+  margin: 2px;
+}
+
