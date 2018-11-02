@@ -24,24 +24,24 @@
     line-height: 22px;
 }
 
-.horizontal-small {
+.stories-panel__heading_annotation {
     display: flex;
     align-items: center;
 }
 
-.horizontal-small > a {
+.stories-panel__heading_annotation > a {
     display: flex;
     justify-content: center;
     align-items: center;
     font-size: 13px;
 }
 
-.horizontal-small > span {
+.stories-panel__heading_annotation > span {
     padding: 0px 3px;
     height: 22px;
 }
 
-.stories-icon.archive {
+.stories-panel__heading_archive-ico {
     display: inline-block;
     background: url("https://static.xx.fbcdn.net/rsrc.php/v3/yd/r/8M2_U-8yMz7.png");
     background-size: auto;
