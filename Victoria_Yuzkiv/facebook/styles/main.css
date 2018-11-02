@@ -1,8 +1,0 @@
-@import "header.css";
-@import "left-nav.css";
-
-#container {
-    overflow: hidden;
-    margin: auto;
-    width: 1020px;
-}

@@ -1,0 +1,26 @@
+.button{
+    background-color: transparent;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    &_round{
+        height: 40px;
+        width: 40px;
+        border-radius: 100%;
+        
+        &:hover{
+            background-color: rgb(236, 234, 234);
+        }
+    }
+    &_type_svg{
+        fill: #A0A0A0;
+    }
+    &__image{
+        height: 30px;
+        width: 30px;
+        border-radius: 100%;
+    }
+    
+}

@@ -1,0 +1,20 @@
+.language-selection {
+  height: 34px;
+  margin-top: 12px;
+}
+
+.languages__link {
+  text-decoration: none;
+  color: #365899;
+  cursor: pointer;
+  font-size: 13px;
+}
+
+.languages__link:not(:last-child):after {
+  content: " -";
+  color: #90949c;
+}
+
+.languages__link:hover {
+  text-decoration: underline;
+}

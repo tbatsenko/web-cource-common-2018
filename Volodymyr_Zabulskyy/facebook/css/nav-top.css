@@ -1,33 +1,32 @@
-.nav-top {
+.main-toolbar {
     padding: 7px 0;
     background-color: #4267b2;
     position: fixed;
     width: 100%;
 }
-.nav-top .nav-container {
+
+.main-toolbar__container {
     display: flex;
     margin: 0 auto;
     width: 1050px;
     justify-content: space-between;
 }
 
-
-.nav-top .nav-top-logo-container{
+.main-toolbar__toolbar-container {
     display: flex;
     flex-flow: row;
     align-items: center;
 }
 
-.nav-top .nav-top-menu-container{
+.main-tool-bar__navigation-list {
     display: flex;
     flex-flow: row;
     list-style: none;
     margin: 0;
 }
 
-
-.nav-top .person-profile{
-    background: url("../img/person.png");
+.main-tool-bar__profile-section-img {
+    object-fit: cover;
     height: 24px;
     width: 24px;
     background-size: 24px 24px;
@@ -35,41 +34,25 @@
     margin-right: .7em;
 }
 
-.nav-top .profile-item{
+.main-tool-bar__navigation-list-link, .main-tool-bar__profile-section-txt, .main-tool-bar__profile-section {
     display: flex;
-}
-
-.nav-top .nav-top-menu-item {
     align-items: center;
-    display: flex;
-    border-radius: 3px;
-    height: 24px;
-    border: 0;
-    padding: 1px 10px;
-    background: transparent;
-}
-
-
-.nav-top .nav-text{
     color: #fff;
     text-decoration: none;
     font-weight: 700;
     font-size: 12px;
-}
-
-.nav-top .nav-top .hover-dark{
+    height: 24px;
+    border: 0;
+    padding: 1px 10px;
+    background: transparent;
     border-radius: 3px;
 }
 
-.nav-top .nav-top .hover-dark:hover{
+.main-tool-bar__navigation-list-link:hover, .main-tool-bar__profile-section-txt:hover {
     background: #3156a1;
 }
 
-.nav-top .line-after{
-
-}
-
-.nav-top .line-after {
+.main-toolbar .main-tool-bar__line-after {
     display: block;
     width: 1px;
     height: 100%;
@@ -77,58 +60,63 @@
     content: "";
 }
 
-.nav-top .logo{
+.main-toolbar__fb-logo {
     margin: 0 .5em 0 0;
-    background-image: url("https://static.xx.fbcdn.net/rsrc.php/v3/yx/r/0ZnQSqvnMOO.png");
-    background-repeat: no-repeat;
-    background-size: auto;
-    background-position: 0 -442px;
+    background: url("https://static.xx.fbcdn.net/rsrc.php/v3/yx/r/0ZnQSqvnMOO.png") no-repeat 0 -442px;
     width: 24px;
     height: 24px;
 }
 
-.nav-top .nav-top-form-button{
+.main-tool-bar__search-button {
     width: 3em;
     border: solid .3em transparent;
     border-radius: 0 2px 2px 0;
-    background: #fff;
+    background: #ebedf0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.nav-top .nav-top-form-button .inside-button-search{
-    width: 1em;
-    height: 1em;
+.main-tool-bar__search-button-ico {
+    background: url("https://static.xx.fbcdn.net/rsrc.php/v3/yh/r/xs_zpaJOZfw.png") 0 -1331px;
+    width: 14px;
+    height: 14px;
 }
 
-.nav-top .nav-top-form{
+.main-tool-bar__form {
     display: flex;
 }
 
-.nav-top .nav-top-form-input{
+.main-tool-bar__search-input {
     width: 25em;
     border: solid .3em transparent;
-border-radius: 2px 0 0 2px;
+    border-radius: 2px 0 0 2px;
 }
 
-.nav-top .nav-top-icon{
-    background: url("https://static.xx.fbcdn.net/rsrc.php/v3/yx/r/0ZnQSqvnMOO.png");
-    width:24px;
+.main-tool-bar__navigation-list-button_people, .main-tool-bar__navigation-list-button_messenger, .main-tool-bar__navigation-list-button_notifications, .main-tool-bar__navigation-list-button_question, .main-tool-bar__navigation-list-button_dropdown {
+    width: 24px;
     height: 24px;
-    background-repeat: no-repeat;
+    background: url("https://static.xx.fbcdn.net/rsrc.php/v3/yx/r/0ZnQSqvnMOO.png") no-repeat;
     background-size: auto;
+    margin: 0 .5em;
 }
 
-.nav-top .nav-top-icon.people{
+.main-tool-bar__navigation-list-button_people {
     background-position: 0 -892px;
 }
-.nav-top .nav-top-icon.messenger{
+
+.main-tool-bar__navigation-list-button_messenger {
     background-position: 0 -942px;
 }
-.nav-top .nav-top-icon.notifications{
+
+.main-tool-bar__navigation-list-button_notifications {
     background-position: 0 -792px;
 }
-.nav-top .nav-top-icon.question{
+
+.main-tool-bar__navigation-list-button_question {
     background-position: 0 -992px;
 }
-.nav-top .nav-top-icon.dropdown{
+
+.main-tool-bar__navigation-list-button_dropdown {
     background-position: 0 -842px;
 }
