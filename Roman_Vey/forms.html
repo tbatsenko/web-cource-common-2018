@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Forms</title>
+</head>
+<body>
+    <form action="">
+        <fieldset>
+            <legend>Main info</legend>
+            <input type="text" placeholder="Roman" required>
+            <input type="email" placeholder="myemail@gmail.com" required>
+
+            <select name="country" id="country" required>
+                <option value="Ukraine">Ukraine</option>
+                <option value="England">England</option>
+                <option value="Madagaskar">Madagaskar</option>
+
+
+            </select>
+        </fieldset>
+        <fieldset>
+            <legend>Additional info</legend>
+            <input type="radio" id="male" name="contact" value="male">
+            <label for="male">Male</label>
+            
+            <input type="radio" id="female" name="contact" value="female">
+            <label for="female">Female</label>
+
+            <textarea name="description" placeholder="About me..."></textarea>
+        </fieldset>
+        <input type="submit" value="Register me!">
+    </form>
+</body>
+</html>

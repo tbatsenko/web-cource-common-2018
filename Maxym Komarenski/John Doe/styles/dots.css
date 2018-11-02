@@ -1,0 +1,19 @@
+.gray-dot{
+    margin-top: 14px;
+    height: 22px;
+    width: 22px;
+    margin-left: 14px;
+    background-color: #d2d2d2;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.brawn-dot {
+    margin-top: 14px;
+    height: 22px;
+    width: 22px;
+    margin-left: 14px;
+    background-color: #c7ac6d;
+    border-radius: 50%;
+    display: inline-block;
+}
