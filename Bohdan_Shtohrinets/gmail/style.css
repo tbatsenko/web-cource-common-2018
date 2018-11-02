@@ -1,0 +1,686 @@
+html,body{
+    margin: 0;
+    padding: 0;
+    font-family: Roboto,RobotoDraft,Helvetica,Arial,sans-serif;
+    background-color: white;
+}
+*{
+    box-sizing: border-box;
+}
+
+#main-header{
+    position: fixed;
+    height: 64px;
+    width: 1536px;
+    padding: 8px;
+    border-bottom: 1px solid #ecf0f1;
+}
+
+button.main_menu{
+    margin: 0 0 0 10px;
+    border: none;
+    height: 48px;
+    width: 48px;
+    overflow: hidden;
+    color: transparent;
+    position: relative;
+    vertical-align: middle;
+    background-color: inherit;
+    border-radius: 30px;
+}
+.main_menu:before{
+    content: "";
+    height: 24px;
+    width: 24px;
+    position: absolute;
+    background: black;
+    left: 12px;
+    top: 12px;
+    background: url("images/main_menu.png");
+    background-size: 24px;
+}
+.main_menu:hover{
+    background-color: #ecf0f1;
+}
+
+#logo{
+    margin: 0 5px 0 0;
+    vertical-align: middle;
+    overflow: hidden;
+    width: 109px;
+    height: 40px;
+    color: transparent;
+    display: inline-block;
+    background: url("https://ssl.gstatic.com/ui/v1/icons/mail/rfr/logo_gmail_lockup_default_1x.png");
+    background-size: cover;
+}
+
+#search{
+    display: inline;
+    width: 722px;
+    height: 48px;
+    background-color: #ecf0f1;
+    margin-left: 75px;
+}
+#search button.search-button{
+    width: 50px;
+    height: 46px;
+    border: none;
+    /*border: 1px solid red;*/
+    vertical-align: middle;
+    color: transparent;
+    background-color: inherit;
+    position: relative;
+    overflow: hidden;
+    border-bottom-left-radius: 10px;
+    border-top-left-radius: 10px;
+}
+
+#search button.search-button:before{
+    content: "";
+    height: 18px;
+    width: 18px;
+    position: absolute;
+    background: black;
+    left: 15px;
+    top: 13px;
+    background: url("images/search.png");
+    background-size: 18px;
+}
+
+#search button.search-button:active{
+    background-color: #bdc3c7;
+    border-radius: 30px;
+}
+
+#search input.input-field{
+    height: 46px;
+    width: 587px;
+    vertical-align: middle;
+    background-color: inherit;
+    border: none;
+    font-size: 16px;
+}
+#search button.search-options{
+    width: 50px;
+    height: 46px;
+    vertical-align: middle;
+    color: transparent;
+    background-color: inherit;
+    position: relative;
+    overflow: hidden;
+    border: none;
+    border-bottom-right-radius: 10px;
+    border-top-right-radius: 10px;
+}
+#search button.search-options:before{
+    content: "";
+    height: 18px;
+    width: 18px;
+    position: absolute;
+    background: black;
+    left: 15px;
+    top: 13px;
+    background: url("images/searchmenu_properties.png");
+    background-size: 18px;
+}
+
+#right-buttons{float: right;}
+
+.adds_button,
+.notification_button,
+.user-button{
+    margin-right: 10px;
+    vertical-align: middle;
+    width: 40px;
+    height: 40px;
+    display: inline-block;
+    color: transparent;
+    position: relative;
+    overflow: hidden;
+    border: none;
+    border-radius: 30px;
+    background-color: inherit;
+}
+
+.adds_button:before,
+.notification_button:before,
+.user-button:before{
+    content: "";
+    height: 18px;
+    width: 18px;
+    position: absolute;
+}
+
+.adds_button:before{
+    left: 11px;
+    top: 11px;
+    background: url("images/adds_button.png");
+    background-size: 18px;
+}
+.notification_button:before{
+    left: 10px;
+    top: 11px;
+    background: url("images/bell.png");
+    background-size: 20px;
+}
+.adds_button:hover,
+.notification_button:hover{
+    background-color: #ecf0f1;
+}
+
+.user-field{
+    padding: 5px;
+    margin-right: 10px;
+    vertical-align: middle;
+    display: inline-block;
+    width: 134px;
+    height: 48px;
+    border: 1px solid #bdc3c7;
+    border-radius: 10px;
+    position: relative;
+}
+.user-field:hover{
+    background-color: #ecf0f1;
+}
+.user-field:active{
+    background-color: white;
+    box-shadow: 1px 1px 5px #bdc3c7;
+}
+
+.user-button{
+    top: 4px;
+    left: 5px;
+    position: relative;
+    background-color: #2ecc71;
+    width: 30px;
+    height: 30px;
+}
+
+.user-button:before{
+    height: 30px;
+    width: 30px;
+    top:0;
+    right: 0;
+    background: url("images/user.png");
+    background-size: cover;
+}
+.user-field img{
+    top:2px;
+    left:2px;
+    position: relative;
+    vertical-align: middle;
+    width: 60%;
+}
+
+#left_content{
+    width: 72px;
+    position: fixed;
+    top:64px;
+}
+
+#mail_left_menu{
+    border-bottom: 1px solid #ecf0f1;
+    height: 136px;
+    width: 72px;
+    overflow: hidden;
+}
+
+#mail_left_menu:hover{overflow: auto;}
+
+.write_mail{
+    margin: 10px auto;
+    display: block;
+    width:56px;
+    height: 56px;
+    color: transparent;
+    position: relative;
+    overflow: hidden;
+    border: none;
+    border-radius: 30px;
+    background-color: inherit;
+    box-shadow: 1px 2px 4px #95a5a6;
+}
+
+.write_mail:hover{
+    box-shadow: inset 1px 1px 30px #ecf0f1, 1px 2px 8px #95a5a6;
+}
+
+.write_mail:before{
+    content: "";
+    top: 9px;
+    left: 8px;
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    background: url("images/Plus.png");
+    background-size: cover;
+}
+
+#mail_left_menu ul{
+    margin-top: 5px;
+    margin-bottom: 5px;
+    padding: 0;
+    list-style-type: none;
+}
+
+#mail_left_menu li{
+    width: 100%;
+    height: 32px;
+    display: block;
+}
+
+#mail_left_menu li a{
+    margin: 0 auto;
+    width: 32px;
+    height: 100%;
+    display: block;
+    color: transparent;
+    text-decoration: none;
+    position: relative;
+    overflow: hidden;
+    border-radius: 20px;
+}
+
+#mail_left_menu li a:hover{
+    background-color: #ecf0f1;
+}
+
+#mail_left_menu a.inbox:before,
+#mail_left_menu a.starred:before,
+#mail_left_menu a.timed:before,
+#mail_left_menu a.sent:before,
+#mail_left_menu a.draft:before,
+#mail_left_menu a.more:before{
+    content: "";
+    position: absolute;
+    top: 5px;
+    left: 6px;
+    width: 20px;
+    height: 20px;
+}
+
+#mail_left_menu a.inbox:before{
+    background: url(https://www.gstatic.com/images/icons/material/system/1x/inbox_gm_googlered600_20dp.png);
+    background-size: cover;
+}
+
+#mail_left_menu a.starred:before{
+    background: url(https://www.gstatic.com/images/icons/material/system/1x/grade_black_20dp.png);
+    background-size: cover;
+}
+
+#mail_left_menu a.timed:before{
+    background: url("https://www.gstatic.com/images/icons/material/system/1x/watch_later_black_20dp.png");
+    background-size: cover;
+}
+
+#mail_left_menu a.sent:before{
+    background: url("https://www.gstatic.com/images/icons/material/system/1x/send_black_20dp.png");
+    background-size: cover;
+}
+
+#mail_left_menu a.draft:before{
+    background: url("https://www.gstatic.com/images/icons/material/system/1x/insert_drive_file_black_20dp.png");
+    background-size: cover;
+}
+
+#mail_left_menu a.more:before{
+    background: url("https://www.gstatic.com/images/icons/material/system/1x/expand_more_black_20dp.png ");
+    background-size: cover;
+}
+
+#account_left{
+    width: 72px;
+}
+
+#user-frame{
+    margin: 0 auto;
+    width: 28px;
+    border-bottom: 1px solid #ecf0f1;
+}
+
+#account_left button{
+    margin: 5px auto;
+    display: block;
+    position: relative;
+    width: 28px;
+    height: 28px;
+    color: transparent;
+    overflow: hidden;
+    border: none;
+    border-radius: 20px;
+}
+
+#account_left button:before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 28px;
+    height: 28px;
+    background: url("https://lh5.googleusercontent.com/-XdUIqdMkCWA/AAAAAAAAAAI/AAAAAAAAAAA/4252rscbv5M/s28-c-k-no/photo.jpg");
+    background-size: cover;
+}
+
+#main-content{
+    top:64px;
+    left: 72px;
+    position: relative;
+    width: 1408px;
+    /*height: 432px;*/
+    /*border: 1px solid red;*/
+}
+
+#mail-options{
+    position: fixed;
+    display: block;
+    width: 1408px;
+    height: 48px;
+    /*border: 1px solid blue;*/
+}
+
+.left-side{
+    margin-left: 10px;
+    float: left;
+    display: inline-block;
+}
+
+.left-side button,
+.right-side button{
+    display: inline-block;
+    position: relative;
+    vertical-align: middle;
+    color: transparent;
+    margin-top: 4px;
+    border: none;
+    border-radius: 5px;
+    background-color: inherit;
+    height: 35px;
+}
+
+.left-side button:hover,
+.right-side button:hover{
+    background-color: #ecf0f1;
+}
+
+.left-side button:before,
+.right-side button:before{
+    content: "";
+    width: 20px;
+    height: 20px;
+    position: absolute;
+}
+
+.left-side button.choose{
+    width: 28px;
+}
+
+.left-side button.choose:before{
+    left: 4px;
+    top: 8px;
+    background: url("https://www.gstatic.com/images/icons/material/system/1x/check_box_outline_blank_black_20dp.png");
+    background-size: cover;
+}
+
+.left-side button.more {
+    width: 20px;
+}
+
+.left-side button.more:before{
+    left: 0;
+    top: 8px;
+    background: url("https://www.gstatic.com/images/icons/material/system/1x/arrow_drop_down_black_20dp.png");
+    background-size: cover;
+}
+
+.left-side button.refresh,
+.left-side button.other-actions{
+    width: 40px;
+    height: 40px;
+    border-radius: 30px;
+}
+
+.left-side button.refresh:before{
+    top: 9px;
+    left: 9px;
+    background: url("https://www.gstatic.com/images/icons/material/system/1x/refresh_black_20dp.png");
+    background-size: cover;
+}
+.left-side button.other-actions:before{
+    top: 9px;
+    left: 10px;
+    background: url("https://www.gstatic.com/images/icons/material/system/1x/more_vert_black_20dp.png");
+    background-size: cover;
+}
+
+.right-side{
+    float: right;
+    margin-right: 10px;
+    display: inline-block;
+}
+
+.right-side button.pages{
+    color: black;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.right-side button.arrow-left,
+.right-side button.arrow-right,
+.right-side button.settings{
+    width: 40px;
+    height: 40px;
+    border-radius: 30px;
+}
+
+.right-side button.arrow-left:before{
+    top: 9px;
+    left: 8px;
+    background: url("https://www.gstatic.com/images/icons/material/system/1x/chevron_left_black_20dp.png");
+    background-size: cover;
+}
+.right-side button.arrow-right:before{
+    top: 9px;
+    left: 9px;
+    background: url("https://www.gstatic.com/images/icons/material/system/1x/chevron_right_black_20dp.png");
+    background-size: cover;
+}
+
+.right-side button.settings:before{
+    top: 9px;
+    left: 9px;
+    background: url("https://www.gstatic.com/images/icons/material/system/1x/settings_black_20dp.png");
+    background-size: cover;
+}
+
+#mail-list{
+    position: fixed;
+    top: 112px;
+    width: 1408px;
+    height: 650px;
+    overflow: auto;
+}
+#mail-list a{
+
+    text-decoration: none;
+    display: block;
+    height: 40px;
+    width: 100%;
+    background-color: white;
+    overflow: hidden;
+    border-top: 1px solid #ecf0f1;;
+    border-bottom: 1px solid #ecf0f1;
+}
+#mail-list a:hover{
+    margin: 1px 0 1px 0;
+    box-shadow: 1px 5px 10px #7f8c8d;
+    border: 1px solid #ecf0f1;
+}
+
+#mail-list .left-content{
+    position: relative;
+    float: left;
+}
+
+#mail-list .right-content{
+    margin-right: 10px;
+    float: right;
+}
+#mail-list .right-content time{
+    position: relative;
+    bottom: 6px;
+    color: black;
+    font-size: 14px;
+}
+
+#mail-list .left-content button{
+    display: inline-block;
+    border: none;
+    color: transparent;
+    width: 39px;
+    height: 39px;
+    border-radius: 30px;
+    background-color: inherit;
+}
+#mail-list .left-content button:hover{
+    background-color: #ecf0f1;
+}
+
+#mail-list .left-content .choose-mail:before,
+#mail-list .left-content .star-mail:before{
+    content: "";
+    width: 20px;
+    height: 20px;
+    position: absolute;
+}
+
+#mail-list .left-content .choose-mail:before{
+    top:10px;
+    left: 10px;
+    background: url("https://www.gstatic.com/images/icons/material/system/1x/check_box_outline_blank_black_20dp.png");
+    background-size: cover;
+}
+#mail-list .left-content .star-mail:before{
+    top: 10px;
+    background: url("https://www.gstatic.com/images/icons/material/system/1x/star_border_black_20dp.png");
+    background-size: cover;
+}
+#mail-list .left-content h4{
+    color: black;
+    position: absolute;
+    left: 90px;
+    top: 11px;
+    font-size: 14px;
+    margin: 0;
+    padding: 0;
+    display: inline-block;
+}
+
+.mail-text{
+    top: 11px;
+    left: 250px;
+    position: relative;
+    font-size: 14px;
+    color: #7f8c8d;
+}
+.mail-text b{
+    color: black;
+}
+
+#mail-footer{
+    padding: 10px;
+    display: block;
+    position: relative;
+    margin-top: 0;
+    font-size: 12px;
+    font-weight: 600;
+    color: #7f8c8d;
+    height: 60px;
+    width: 100%;
+}
+#mail-footer p{
+    margin: 0;
+    padding: 0;
+}
+
+#mail-footer .left-content{
+    text-align: left;
+    display: inline-block;
+}
+#mail-footer .right-content{
+    text-align: right;
+    display: inline-block;
+}
+#mail-footer .centered{
+    margin-left: 40%;
+    text-align: center;
+    display: inline-block;
+}
+
+#right-contents{
+    position: fixed;
+    top: 64px;
+    left: calc(72px + 1408px);
+    width: 56px;
+    height: 696px;
+    border-left: 1px solid #ecf0f1;
+}
+#right-contents button{
+    display: block;
+    width: 40px;
+    height: 40px;
+    margin: 15px auto;
+    position: relative;
+    color: transparent;
+    vertical-align: middle;
+    border-radius: 30px;
+    border: none;
+    background-color: inherit;
+}
+#right-contents button:hover{
+    background-color: #ecf0f1;
+}
+
+#right-contents .calendar:before,
+#right-contents .keep:before,
+#right-contents .tasks:before,
+#right-contents .download_addition:before,
+#right-contents .hide_sidebar:before{
+    content: "";
+    width: 20px;
+    height: 20px;
+    position: absolute;
+}
+#right-contents .calendar:before{
+    top: 9px;
+    left:9px;
+    background: url("https://www.gstatic.com/companion/icon_assets/calendar_2x.png");
+    background-size: cover;
+}
+#right-contents .keep:before{
+    top: 9px;
+    left:9px;
+    background: url("https://www.gstatic.com/companion/icon_assets/keep_2x.png");
+    background-size: cover;
+}
+#right-contents .tasks:before{
+    top: 9px;
+    left:9px;
+    background: url("https://www.gstatic.com/companion/icon_assets/tasks2_2x.png");
+    background-size: cover;
+}
+#right-contents .download_addition:before{
+    top: 9px;
+    left:9px;
+    background: url("https://www.gstatic.com/images/icons/material/system/1x/add_grey600_24dp.png");
+    background-size: cover;
+}
+
+#right-contents .hide_sidebar{margin-top: 400px}
+#right-contents .hide_sidebar:before{
+    top: 9px;
+    left:9px;
+    background: url("https://www.gstatic.com/images/icons/material/system/1x/chevron_right_black_20dp.png");
+    background-size: cover;
+}

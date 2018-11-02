@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -16,4 +17,25 @@
     render("main.handlebars", "data.json", document.body )
 </script>
 </body>
+=======
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="styles/style.css">
+    <title>YouTube</title>
+</head>
+<body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.12/handlebars.js"></script>
+<script>
+    const render = async (templateURL, dataURL, container) => {
+        const source = await (await fetch(templateURL)).text();
+        const template = Handlebars.compile(source);
+        const data = await (await fetch(dataURL)).json();
+        container.innerHTML = template(data);
+    };
+    render("/main.handlebars", "/data.json", document.body )
+
+</script>
+</body>
+>>>>>>> parent of 64dd120... Merge branch 'master' of /home/zabulskyy/UCU/Web/web-cource-common with conflicts.
 </html>

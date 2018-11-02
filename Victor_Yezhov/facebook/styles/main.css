@@ -1,0 +1,146 @@
+/*HEADER START*/
+#logo{
+    background-image: url("../img/facebook_logo.PNG");
+    float: left;
+    margin-left: 25%;
+}
+.nav_links{
+    float: left;
+    margin-right: 10px;
+}
+.nav_links:last-of-type:after{
+    content: " ";
+}
+.nav_links:after{
+    content: "|";
+    color: white;
+    margin-left:5px;
+}
+.nav_links a{
+    color: white;
+    text-decoration: none;
+}
+#search_form{
+    padding-top: 10px;
+    float:left;
+    margin-right: 30px;
+}
+#search_form input{
+    width: 300px;
+}
+#search_form input, button{
+    float: left;
+}
+header{
+    background-color: #4267b2;
+    clear: left;
+}
+/*END HEADER*/
+/*MAIN START*/
+aside:first-child{
+
+}
+body{
+    background-color: #e9ebee;
+}
+main>aside:first-child{
+    float: left;
+    margin-left: 10%;
+}
+main>aside:first-child section p{
+    margin:0;
+}
+main>aside:first-child section p:hover{
+    background-color: #f5f6f7;
+}
+main>aside:first-child section p:hover a{
+    background-color: #f5f6f7;
+}
+main>aside:first-child section a{
+    color: black;
+    text-decoration: none;
+    background-color: #e9ebee;
+}
+
+main>aside:last-child{
+    float: left;
+
+    margin-right: 10%;
+}
+main>section{
+    float: left;
+    margin-right:10px;
+    margin-left: 10px;
+}
+.menu_divider{
+    margin-top: 20px;
+    color: #616770;
+}
+#main_section p{
+    float: left;
+    margin: 0;
+}
+#new_post_section{
+    border: solid #dddfe2 1px;
+    background-color: white;
+}
+#new_post_section p{
+    background-color: #f5f6f7;
+}
+#new_post_section form input{
+    height: 120px;
+    width: 411px;
+}
+.history_div, .invitations{
+    background-color: white;
+}
+.history_div p a, .invitations_div p a{
+    text-decoration: none;
+    color: #4267b2;
+}
+#histories_section, #invitations_section{
+    border: solid #dddfe2 1px;
+    background-color: white;
+    padding: 20px;
+    width: 300px;
+}
+
+#invitations_section{
+    margin-top: 40px;
+}
+
+.new_post_links{
+    text-decoration: none;
+    color: #4267b2;
+}
+.new_post_links:first-of-type{
+    margin-left: 40px;
+}
+.new_post_links:last-of-type{
+    margin-right: 40px;
+}
+.new_post_links:after{
+    content: " | ";
+    margin-left: 10px;
+    margin-right: 0;
+    color: #ccd0d5;
+}
+.new_post_links:last-of-type:after{
+    content: none;
+}
+.post{
+    margin: 80px 0 0 0;
+    background-color: white;
+    border: solid #dddfe2 1px;
+    width: available;
+}
+.post p{
+    margin: 0;
+    background-color: white;
+    width: 430px;
+}
+.post_text{
+    padding: 10px;
+}
+/*END MAIN*/
+

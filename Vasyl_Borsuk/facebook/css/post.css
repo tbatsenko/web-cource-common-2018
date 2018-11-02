@@ -1,0 +1,89 @@
+.post header {
+    display: flex;
+    flex-direction: row;
+    padding: 12px 12px 0 12px;
+}
+
+.post .user-photo {
+    height: 40px;
+    width: 40px;
+}
+
+.post header div {
+    display: flex;
+    flex-direction: column;
+    margin-left: 8px;
+    height: 100%;
+}
+
+.post section {
+    margin-top: 6px;
+}
+
+.post section p {
+    padding: 0 12px 0 12px;
+    margin: 0 0 12px 0;
+}
+
+.post section img {
+    width: 100%;
+}
+
+.post .link-text {
+    padding: 0 4px 0 4px;
+}
+
+.post .feed-form-top {
+    padding: 0 12px 0 12px;
+}
+
+.likes-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 12px 0 12px 0;
+}
+
+.reactions-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 4px 0 4px 0;
+    border-top: 1px solid #e5e5e5;
+}
+
+.reactions-container button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-grow: 1;
+    height: 32px;
+    background-color: transparent;
+    border-radius: 2px;
+    border: none;
+    color: #616770;
+    font-size: 13px;
+    font-weight: 600;
+}
+.reactions-container button:hover {
+    background-color: rgba(29, 33, 41, .04);
+}
+
+.feed-form .feed-form-bottom {
+    display: flex;
+    border-top: 1px solid #e5e5e5;
+}
+
+.likes-container .thumbsup-logo {
+    background-position: -17px -526px;
+}
+
+.reactions-container .like {
+    background-position: -389px -245px;
+}
+.reactions-container .comment {
+    background-position: -19px -198px;
+}
+.reactions-container .share {
+    background-position: 0 -293px;
+}
