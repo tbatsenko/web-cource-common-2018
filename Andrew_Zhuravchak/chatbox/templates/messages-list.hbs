@@ -1,12 +1,12 @@
 {{#messages}}
 
     <div class="message-group message-group--{{#if fromFriend}}friend{{ else }}me{{/if}}">
-        {{#if fromFriend}}
-            <img src="{{ userPic }}" class="message-group__user-pic">
+        {{#if date}}
+            <time datetime="{{ date }}" class="message-group__date">{{ date }}</time>
         {{/if}}
 
-        {{#if date}}
-            <div class="message-group__date">{{ date }}</div>
+        {{#if fromFriend}}
+            <img src="{{ userPic }}" class="message-group__user-pic">
         {{/if}}
 
         {{#text}}
