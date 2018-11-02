@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/youtube_style.css">
     <title>YouTube</title>
 </head>
 <body>
@@ -13,8 +13,7 @@
         const data = await (await fetch(dataURL)).json();
         container.innerHTML = template(data);
     };
-    render("/main.handlebars", "/data.json", document.body )
-
+    render("main.handlebars", "data.json", document.body )
 </script>
 </body>
 </html>
