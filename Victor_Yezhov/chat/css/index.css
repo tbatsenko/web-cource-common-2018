@@ -9,3 +9,11 @@
 @import "chats/search/search_text.css";
 @import "chats/contact/contact.css";
 @import "chats/contact/contact_photo.css";
+@import "chats/hambergeri-icon/hamburger_icon.css";
+@import "text_style.css";
+@import "main_chat_place/main_chat.css";
+@import "main_chat_place/main_chat_header.css";
+@import "online-circle.css";
+@import "main_chat_place/main_chat_chat-place.css";
+@import "main_chat_place/message-input.css";
+@import "main_container.css";
