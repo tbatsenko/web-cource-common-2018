@@ -1,0 +1,7 @@
+@import "variables";
+.aside{
+    min-width: $aside-width;
+    width: $aside-width;
+    background-color: #F5F5F5;
+    overflow-y: scroll;
+}
