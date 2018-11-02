@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/sidebar.css">
+    <link rel="stylesheet" href="styles/main-content.css">
+    <meta charset="UTF-8">
+    <title>Facebook</title>
+</head>
+<body>
+
+<main class="container">
+    <header class="header">
+        <ul id="top-bar-navigation">
+            <li id="fa_logo"></li>
+            <li id="fa_search">
+                <form><input id="inputText" placeholder="Search facebook"/></form>
+            </li>
+            <li>
+                <button id="fa_search_button" type="submit">Search</button>
+            </li>
+            <li>
+                <button class="bar-buttons-wide">Luka</button>
+            </li>
+            <li>
+                <button class="bar-buttons-wide">Home</button>
+            </li>
+            <li>
+                <button class="bar-buttons-wide">Create</button>
+            </li>
+            <li>
+                <button class="bar-buttons" id="friend-requests-button" type="button"></button>
+            </li>
+            <li>
+                <button class="bar-buttons" id="messenger-button" type="button"></button>
+            </li>
+            <li>
+                <button class="bar-buttons" id="notifications-button" type="button"></button>
+            </li>
+            <li>
+                <button class="bar-buttons" id="account-switcher-button" type="button"> |</button>
+            </li>
+            <li>
+                <button class="bar-buttons" id="FAQ-button" type="button"></button>
+            </li>
+            <li>
+                <button class="bar-buttons" id="dropdown-button" type="button"></button>
+            </li>
+        </ul>
+    </header>
+    <article class="main">
+        <form id="create-container">
+            <section id="create-container-top-bar">
+                <button class="create-container-top-bar-buttons">Create Post</button>
+                <button class="create-container-top-bar-buttons">
+                    <a href="#">Photo / video album</a>
+                </button>
+                <button class="create-container-top-bar-buttons">
+                    <a href="#">Live Video</a>
+                </button>
+            </section>
+            <form>
+                <img id="profile-image" src="images/ninja-icon.png" height="40" width="40"/>
+                <input id="create-post-form" type="text" placeholder="What's on your mind?">
+            </form>
+            <section id="create-container-bottom-bar">
+                <button class="create-container-bottom-bar-buttons">List</button>
+                <button class="create-container-bottom-bar-buttons">Photo / video</button>
+                <button class="create-container-bottom-bar-buttons">Add People</button>
+            </section>
+        </form>
+        <section id="feed">
+            <article class="post">
+                <section class="post-header">
+                    <img src="images/ninja-icon.png" height="40" width="40"/>
+                    <ul>
+                        <li><a href="#">User User</a></li>
+                        <li>time</li>
+                    </ul>
+
+                </section>
+            </article>
+        </section>
+    </article>
+
+    <aside class="aside aside-left">
+        <ul>
+            <li>
+                <button class="sidebar-buttons">News Feed</button>
+            </li>
+            <li>
+                <button class="sidebar-buttons">Messenger</button>
+            </li>
+            <li class="bar-headers"><b>Shortcuts</b></li>
+            <li>
+                <button class="sidebar-buttons">Page Lorem</button>
+            </li>
+            <li>
+                <button class="sidebar-buttons">Another Page</button>
+            </li>
+            <li class="bar-headers"><b>Interesting</b></li>
+            <li>
+                <button class="sidebar-buttons">Events</button>
+            </li>
+            <li>
+                <button class="sidebar-buttons">Fan-Clubs</button>
+            </li>
+            <li>
+                <button class="sidebar-buttons">Groups</button>
+            </li>
+        </ul>
+    </aside>
+    <aside class="aside aside-2">Aside 2</aside>
+    <footer class="footer">Footer</footer>
+</main>
+
+
+</body>
+
+<!--
+<script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.12/handlebars.js"></script>
+<script>
+  const render = async (templateURL, dataURL, container) => {
+    const source = await (await fetch(templateURL)).text();
+    const template = Handlebars.compile(source);
+    const data = await (await fetch(dataURL)).json();
+    container.innerHTML = template(data);
+  };
+  render("main.handlebars", "data.json", document.body )
+</script>
+-->
+
+</html>

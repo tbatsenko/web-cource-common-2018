@@ -1,0 +1,26 @@
+.aside .aside-left {
+    float: left;
+    vertical-align: top;
+    margin-left: 150px;
+    text-align: left;
+}
+
+.sidebar-buttons {
+    border: none;
+    background: 0;
+    font-size: 13px;
+    text-align: center;
+    line-height: 21px;
+}
+
+.sidebar-buttons:hover,
+.sidebar-buttons:focus {
+    background: #f7f7f7;
+}
+
+.bar-headers {
+    color: gray;
+    opacity: 30%;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
