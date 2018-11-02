@@ -17,3 +17,7 @@
 @import "main_chat_place/main_chat_chat-place.css";
 @import "main_chat_place/message-input.css";
 @import "main_container.css";
+@import "main_chat_place/messages/friend_message.css";
+@import "main_chat_place/messages/img_in_chat.css";
+@import "main_chat_place/messages/my_message.css";
+@import "chats/contact_list_footer.css";
