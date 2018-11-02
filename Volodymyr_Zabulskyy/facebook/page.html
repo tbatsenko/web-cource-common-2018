@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Facebook</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/nav-top.css">
+    <link rel="stylesheet" href="css/form.css">
+    <link rel="stylesheet" href="css/profile-page-header.css">
+    <link rel="stylesheet" href="css/profile-page-content.css">
+
+</head>
+
+<body>
+<header class="main-toolbar">
+    <div class="main-toolbar__container">
+        <section class="main-toolbar__toolbar-container">
+            <a class="main-toolbar__fb-logo" aria-label="fb-logo"></a>
+            <form class="main-tool-bar__form" action="">
+                <input class="main-tool-bar__search-input" type="text" name="search" id="search"
+                       placeholder="Adolf Befreier">
+                <button class="main-tool-bar__search-button" aria-label="search">
+                    <span class="main-tool-bar__search-button-ico"></span>
+                </button>
+            </form>
+        </section>
+        <nav class="main-tool-bar__navigation-list">
+            <a class="main-tool-bar__profile-section" href="">
+                <img src="img/person.png" class="main-tool-bar__profile-section-img" aria-label="you"/>
+                <span class="main-tool-bar__profile-section-txt">Adolf</span>
+            </a>
+            <span class="main-tool-bar__line-after"></span>
+            <a class="main-tool-bar__navigation-list-link" href="">Home</a>
+            <span class="main-tool-bar__line-after"></span>
+            <a class="main-tool-bar__navigation-list-link" href="">Create</a>
+            <span class="main-tool-bar__line-after"></span>
+            <button class="main-tool-bar__navigation-list-button_people">people</button>
+            <button class="main-tool-bar__navigation-list-button_messenger">messenger</button>
+            <button class="main-tool-bar__navigation-list-button_notifications">notifications</button>
+            <span class="main-tool-bar__line-after"></span>
+            <button class="main-tool-bar__navigation-list-button_question">question</button>
+            <button class="main-tool-bar__navigation-list-button_dropdown">dropdown</button>
+        </nav>
+    </div>
+</header>
+<main class="profile-page">
+    <header class="header-container">
+        <div class="profile-background">
+            <img class="profile-background__img" src="img/roman_map.jpeg" alt="">
+            <div class="profile-background__img-cover"></div>
+
+        </div>
+        <div class="profile-tools">
+                <a class="profile-tools__item_first" href="">Timeline</a>
+                <a class="profile-tools__item" href="">About</a>
+                <a class="profile-tools__item" href="">Friends</a>
+                <a class="profile-tools__item" href="">Photos</a>
+                <a class="profile-tools__item" href="">Archive</a>
+                <a class="profile-tools__item" href="">More</a>
+        </div>
+        <div class="profile-img-container">
+            <img class="profile-img" src="img/adolf_hipster.jpeg" alt="">
+        </div>
+        <h1 class="profile-name">Adolf Hipster</h1>
+    </header>
+    <article class="main-field-container">
+        <article class="page-info-container">
+            <section class="page-info-container__intro"></section>
+            <section class="page-info-container__photos">
+                <header class="page-info-container__photos__header">
+                    <div class="page-info-container__photos__header_ico"></div>
+                    <h3 class="page-info-container__photos__header_txt">Photos</h3>
+                    <a class="page-info-container__photos__header_add-photo" href="">Add Photo</a>
+                </header>
+                
+            </section>
+        </article>
+        <article class="posts-field-container">
+            <section class="posting-form__container">
+                <form class="posting-form" action="">
+                    <ul class="posting-form__options">
+                        <li class="posting-form__option">
+                            <div class="posting-form__option__ico_post"></div>
+                            <span class="posting-form__option__txt active">Compose post</span></li>
+                        <li class="posting-form__option_left-border">
+                            <div class="posting-form__option__ico_photo"></div>
+                            <span class="posting-form__option__txt">Photo/Video Album</span></li>
+                        <li class="posting-form__option_left-border ">
+                            <div class="posting-form__option__ico_video"></div>
+                            <span class="posting-form__option__txt">Live Video</span></li>
+                    </ul>
+                    <label class="posting-form__input__container">
+                        <img class="posting-form__input__profile-img" src="img/person.png" alt="profile">
+                        <input class="posting-form__input__input" type="text" placeholder="What's on ur mind?">
+                    </label>
+                    <div class="posting-form__content-options">
+                        <button class="posting-form__content-option">
+                            <svg class="posting-form__content-option_ico_photo"></svg>
+                            <span class="posting-form__content-option_txt">Photo/Video</span></button>
+                        <button class="posting-form__content-option">
+                            <svg class="posting-form__content-option_ico_tag"></svg>
+                            <span class="posting-form__content-option_txt">Tag friends</span></button>
+                        <button class="posting-form__content-option">
+                            <svg class="posting-form__content-option_ico_activity"></svg>
+                            <span class="posting-form__content-option_txt">Activity/Feeling</span></button>
+                        <button class="posting-form__content-option">
+                            <svg class="posting-form__content-option_ico_dots"></svg>
+                        </button>
+                    </div>
+                </form>
+            </section>
+            <section class="posts-area"></section>
+        </article>
+    </article>
+</main>
+
+</body>
+
+</html>
