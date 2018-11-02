@@ -1,14 +1,15 @@
 .header {
-  height: 43px;
+  height: 42px;
   background-color: #4267b2;
   display: flex;
   padding-right: 205px;
   justify-content: center;
+  border-bottom: 1px solid #29487d;
 
   &__nav {
     display: flex;
     justify-content: center;
-    padding: 8.5px 0;
+    padding: 8px 0 9px;
     width: 1012px;
     margin: 0 auto;
   }
@@ -17,7 +18,7 @@
     display: block;
     width: 26px;
     height: 26px;
-    margin-right: 5px;
+    margin-right: 4px;
     background-size: auto;
     background: url(../images/icons.png) no-repeat 0 -441px;
   }
@@ -61,12 +62,17 @@
       background: url(../images/icons.png) no-repeat;
       height: 100%;
       width: 27px;
-      padding: 0 3px 1px 3px;
+      padding: 0 4px 1px 3px;
       opacity: .6;
-      margin: 0 3px;
+      margin: 2px 3px 0 3px;
+
+      &:hover {
+        opacity: .9;
+      }
 
       &-friends {
         background-position: 0 -467px;
+        margin-left: 12px;
       }
 
       &-messages {
@@ -98,6 +104,9 @@
     height: 18px;
     width: 0;
     border-right: 1px solid #42677f;
-    margin: 0 5px;
+
+    &--padded {
+      margin: 0 6px;
+    }
   }
 }
