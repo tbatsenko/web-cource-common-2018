@@ -2,3 +2,8 @@
 @import "header/hashtag.css";
 @import "header/header.css";
 @import "main/main.css";
+@import "personal-info/about.css";
+@import "personal-info/preferences.css";
+@import "personal-info/personal-info.css";
+@import "personal-info/dot-grid/dot-grid.css";
+@import "personal-info/dot-grid/shape.css";
