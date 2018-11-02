@@ -1,0 +1,333 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+body{
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    overflow: hidden;
+}
+header{
+    width: 100%;
+}
+.left-part{
+    width: 10vw;
+    min-width: 250px;
+}
+#first-nav{
+    width: 100%;
+    height: 60px;
+}
+#first-nav-content{
+    width: 90vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+#second-nav-content{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;   
+}
+#second-nav{
+    width: 100%;
+    height: 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+nav{
+    display: flex;
+    flex-direction: row;
+}
+#main-container{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+}
+#left-bar{
+    display: flex;
+    flex-direction: column;
+}
+#main-content{
+    width: 90vw;
+}
+
+#logo{
+    flex-grow: 1;
+    min-width: 250px;
+    display: flex;
+    align-items: center;
+}
+.nav-left-part, .nav-right-part{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+#logo-img:hover{
+    cursor: pointer;
+}
+#menu-border{
+    width:48px;
+    height:48px;
+    border-radius: 24px;
+    margin-right: 5px;
+    margin-left: 20px;
+}
+#menu-icon{
+    width: 18px;
+    height: 12px;
+}
+#search-form{
+    display: flex;
+    flex-direction: row;
+}
+#search-btn{
+    background-color: #F5F5F5;
+    border: none;
+    border-radius: 3px 0 0 3px;
+    cursor: pointer;
+    padding-left: 10px;
+}
+#search-dd{
+    background-color: #F5F5F5;
+    border: none;
+    border-radius: 0 3px 3px 0;
+    cursor: pointer;
+    padding-right: 10px;
+}
+#search-input{
+    width: 40vw;
+    height: 45px;
+    padding-left: 10px;
+    color:#A3A4B1;
+    background-color: #F5F5F5;
+    border: none;
+}
+.search-icon-border{
+   width: 24px;
+   height: 24px;
+   border-radius: 12px; 
+   background-color: transparent;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+.search-icon{
+    width: 18px;
+    height: 18px;
+}
+.transp-btn{
+    background-color: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+    border: none;
+}
+.transp-btn:hover{
+    background-color: rgba(0, 0, 0, 0.08);
+    cursor: pointer;
+}
+.right-btn-border{
+    width:36px;
+    height:36px;
+    border-radius: 18px;
+    margin-right: 10px;
+}
+.right-btn-icon{
+    width: 24px;
+    height: 24px;
+}
+#name-border{
+    margin-right: 20px;
+}
+#name-icon{
+    width: 30px;
+    height: 30px;
+    border-radius: 15px;
+    color: white;
+    background-color: #5998FF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#write-btn{
+    color: #4D6265;
+    font-size: 12px;
+    font-weight: bold;
+    margin-top: 15px;
+    margin-left: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    width: 150px;
+    height: 50px;
+    border-radius: 24px;
+    border: none;
+    cursor: pointer;
+    padding-left: 10px;
+    padding-right: 30px;
+    box-shadow: 0 1px 2px 0 rgba(60,64,67,0.302),0 1px 3px 1px rgba(60,64,67,0.149);
+}
+#write-btn:hover{
+    box-shadow: 0 1px 3px 0 rgba(60,64,67,0.302),0 4px 8px 3px rgba(60,64,67,0.149);
+}
+#write-icon{
+    width: 32px;
+    height: 32px;
+}
+#left-bar-menu{
+    list-style: none;
+    padding-left: 0;
+    margin-top: 20px;
+}
+.left-bar-menu-item{
+    width: 95%;
+    height: 32px;
+    color: #424242;
+    background-color: white;
+    border-radius: 0 16px 16px 0;
+    display: flex;
+    justify-content: space-between;
+}
+.left-bar-menu-item:hover{
+    color:#CD1220;
+    background-color: rgba(253, 230, 228, 1);
+    cursor: pointer;
+    font-weight: 400;
+}
+.item-info{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.item-icon{
+    width: 20px;
+    height: 20px;
+    padding-left: 30px;
+    padding-right: 10px;
+}
+.item-text{
+    display: flex;
+    align-items: center;
+    padding-right: 20px;
+    font-weight: 100;
+}
+#select-btn{
+    margin-left: 10px;
+    width:24px;
+    height:36px;
+    border-radius: 4px;
+}
+#reload-btn{
+    margin-left: 20px;
+    width:36px;
+    height:36px;
+    border-radius: 18px;
+}
+.second-nav-btn{
+    width:36px;
+    height:36px;
+    border-radius: 18px;
+}
+
+.second-nav-btn-icon{
+    width:20px;
+    height:20px;
+}
+#message-count-btn{
+    font-size: 11px;
+    min-width: 100px;
+    height: 36px;
+    color: rgb(150, 150, 160);
+    border-radius: 4px;
+    text-shadow: 0 0 4px rgba(0,0,0,.1);
+}
+#settings-btn{
+    margin-right: 30px;
+}
+#email-sections{
+    height: 60px;
+    display: flex;
+    flex-direction: row;
+    border-bottom: rgba(32, 33, 36, 0.2) solid 1px;
+}
+.email-section{
+    flex-grow: 1;
+    max-width: 250px;
+    height: 100%;
+    border-radius: 0;
+    color: rgb(0, 0, 0, 0.55);
+    justify-content: flex-start;
+    padding-left: 20px;
+    font-weight: bold;
+}
+.email-section:hover{
+    color: rgb(0, 0, 0, 0.7);
+    border-bottom: rgb(217, 48, 37) solid 3px;
+    background-color: rgba(0, 0, 0, 0.02);
+}
+.section-icon{
+    padding-right: 15px;
+}
+.email-list-btn{
+    width:40px;
+    height:40px;
+    border-radius: 20px;
+}
+.email-list-btn-icon{
+    width:20px;
+    height:20px;
+}
+#email-box{
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    max-height: calc(100vh - 170px); /* navigation */
+    overflow:scroll;
+    overflow-x:hidden;
+}
+.email-list{
+    padding: 0;
+    height:40px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    list-style: none;
+    border-bottom: rgba(32, 33, 36, 0.2) solid 1px;
+    background-color: #FFFFFF;
+}
+.email-list:hover{
+    background-color: #F4F7F7;
+    cursor: pointer;
+    box-shadow: 0 1px 3px 0 rgba(60,64,67,0.302),0 4px 8px 3px rgba(60,64,67,0.149);
+}
+
+.email-list-heading{
+    width: 200px;
+    margin: auto 0;
+    font-weight: bold;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+.email-list-content{
+    max-width: calc(100vw - 700px); /* <250px icons, 200px heading, 250px aside ~ 700px */
+    margin: auto 0;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+#email-list-time-btn{
+    margin-left: 50px;
+    margin-right:10px;
+}
+.email-list-time{
+    font-weight: bold;
+    font-size: 12px;
+}
+#email-list-left-part{
+    display: flex;
+    flex-direction: row;
+}
