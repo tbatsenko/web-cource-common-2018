@@ -1,0 +1,72 @@
+.stories-section {
+  &__header {
+    display: flex;
+    justify-content: space-between;
+  }
+  &__title {
+    display: inline-block;
+    margin: 0;
+    color: #616770;
+    font-size: 13px;
+    font-weight: 600;
+    line-height: 13px;
+  }
+}
+
+.stories {
+  padding-bottom: 12px;
+  &__button {
+    display: inline-block;
+    color: #365899;
+    cursor: pointer;
+    background: none;
+    border: none;
+  }
+}
+
+.story-element {
+
+  &__icon {
+    float: left;
+    height: 52px;
+    width: 53px;
+    border-radius: 100%;
+    border: none;
+    color: #1d2129;
+    background-color: #e9ebee;
+    position: relative;
+    font-size: 13px;
+    display: inline-block;
+  }
+  &__icon:before {
+    position: absolute;
+    content: "";
+    width: 24px;
+    height: 24px;
+    background: url("https://facebook.com/rsrc.php/v3/yU/r/TVZ7WHvoGmB.png") no-repeat -4px -250px;
+    background-size: 72px;
+    left: 15px;
+    top: 14px;
+  }
+  &__header {
+    color: #365899;
+    display: inline-block;
+    font-weight: 600;
+    margin: 0;
+    font-size: 13px;
+    line-height: 16px;
+  }
+  &__sub {
+    display: inline-block;
+    color: #8d949e;
+    font-size: 13px;
+    margin-top: 3px;
+    margin-bottom: 0;
+  }
+  &__text {
+    display: inline-block;
+    width: 220px;
+    height: 54px;
+    margin: 0 0 0 8px;
+  }
+}
