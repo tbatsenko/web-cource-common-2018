@@ -1,0 +1,113 @@
+body{
+    font-family: OpenSans, sans-serif;
+}
+
+header {
+    width: 292px;
+    height: 32px;
+    background-color: #2979ff;
+    border-radius: 4px 4px 0 0 ;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header main{
+    display: flex;
+    align-items: center;
+}
+
+.name {
+    margin-left: 8px;
+    font-size: 12px;
+    color: #ffffff;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.green-dot {
+    margin-left: 12px;
+    height: 6px;
+    width: 6px;
+    background-color: #69f0ae;
+    border-radius: 50%;
+}
+
+.buttons-in-header{
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+}
+
+.buttons-in-header li button{
+    border: none;
+    background: none;
+    padding: 0;
+}
+
+.plus-button{
+    margin-top: 8px;
+    margin-right: 14px;
+}
+
+.camera-button{
+    margin-top: 6px;
+    margin-right: 15px;
+}
+
+.settings-button{
+    margin-top: 8px;
+}
+
+.close-button{
+    margin: 7px 7px 7px 9px;
+}
+
+article{
+    width: 292px;
+    height: 352px;
+}
+
+.messages {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.me {
+    float: right;
+    margin-left: 101px;
+    background-color: #2979ff;
+    font-size: 12px;
+    color: #ffffff;
+    padding: 5px 12px 6px;
+    border-radius: 100px 100px 0 100px;
+}
+
+.him {
+    float: left;
+    margin-right: 56px;
+    background-color: #f3f3f3;
+    padding: 5px 12px 6px;
+    border-radius: 100px;
+    font-size: 12px;
+}
+
+.him + .me{
+    margin-top: 16px;
+}
+
+.date{
+    font-weight: bold;
+    margin-top: 8px;
+    margin-bottom: 9px;
+    font-size: 10px;
+    color: #828282;
+    float: right;
+    margin-right: 107px;
+}
+
+.me + .me {
+    margin-top: 1px;
+    border-radius: 100px 0 100px 100px;
+}
