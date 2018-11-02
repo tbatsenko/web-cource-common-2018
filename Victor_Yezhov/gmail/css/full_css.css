@@ -3,10 +3,12 @@
 @import "header/logo.css";
 @import "header/search-form.css";
 @import "header/user-actions.css";
-@import "main_content/side-menu/side-menu.css";
-@import "main_content/main_container.css";
-@import "main_content/side-menu/side-menu_write-button.css";
-@import "main_content/side-menu/side-menu_navigation.css";
+@import "main/side-menu/side-menu.css";
+@import "main/main_container.css";
+@import "main/side-menu/side-menu_write-button.css";
+@import "main/side-menu/side-menu_navigation.css";
+@import "main/main_content/emails_functions_container.css";
+@import "main/main_content/letters-filter.css";
 body{
     margin: 0;
 }
