@@ -1,0 +1,199 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-family: Helvetica, Arial, sans-serif;
+}
+
+.header{
+    display: flex;
+    justify-content: space-evenly;
+    background: #4267b2;
+    padding: 5px 10em;
+    /*position: fixed;*/
+    /*justify-content: space-between;*/
+    align-items: center;
+    height: 2em;
+
+}
+
+.icons{
+    background: url("../icons/icons.png");
+    background-repeat: no-repeat;
+    height: 1.7em;
+    width: 1.7em;
+}
+
+.header-left {
+    float: left;
+
+}
+
+/*.icons.header__facebook-icon{*/
+/*background-position: 0 -442px;*/
+/*height: 1.7em;*/
+/*width: 1.7em;*/
+/*padding-left: 0.3em;*/
+/*color: transparent;*/
+/*cursor: pointer;*/
+/*}*/
+.header__facebook-icon{
+    float: left;
+    margin: 0.3em;
+    background-position: 0 -442px;
+    height: 1.7em;
+    width: 1.7em;
+    padding-left: 0.25em;
+    color: transparent;
+    cursor: pointer;
+}
+
+.search-form{
+    border: 1px solid #3b5998;
+    float: left;
+    display: flex;
+    height: 1.45em;
+    border-radius: 3px;
+}
+
+.search-form__input{
+    max-width: 100em;
+    padding-left: 0.3em;
+    height: 1.65em;
+    min-width: 5em;
+    width: 100%;
+    border: none;
+    border-radius: 0.1em 0 0 0.1em;
+}
+
+.search-form__button{
+    border-radius: 0 0.1em 0.1em 0;
+    border: none;
+    cursor: pointer;
+    text-align: center;
+
+    width: 4.5em;
+
+}
+
+.icons.img-header-search{
+    background-position: 0 -1445px;
+    /*background-size: 1.1em 1.1em;*/
+}
+
+.icons.search-form__button{
+    background-position: 19px -1440px;
+    background-size: 32px 1475px;
+    border-radius: 0 0.1em 0.1em 0;
+    border: none;
+    cursor: pointer;
+    text-align: center;
+    height: 1.65em;
+    background-color: #ebedf0;
+    clip-path:inset(20px 20px 20px 18px);
+}
+
+.navigation{
+    height: 2.1em;
+    float: left;
+}
+
+.navigation>ul>li>button{
+    line-height: 145%;
+    /*font-size: 85%;*/
+    font-weight: bold;
+    font-size: 80%;
+    background-color: transparent;
+    border: none;
+    /*color: #fff;*/
+}
+
+.header-right__profile-details{
+    display: flex;
+
+}
+
+.header-right__profile-picture{
+    height: 1.9em;
+    width: 1.9em;
+    border-radius: 50%;
+    padding-right: 0.2em;
+}
+
+.header-right__button-create{
+    color: #fff;
+}
+
+.header-right__button__transparent>button{
+    color: transparent;
+}
+
+header>nav>ul {
+    /*display: inline-block;*/
+    color: rgb(255, 255, 255);
+    flex: 0 0 auto;
+    list-style-type: none;
+    display: flex;
+    padding-left: 0.1em;
+    float: right;
+    margin: 0;
+}
+
+header>nav>ul>li{
+    display: flex;
+    align-items: center;
+    float: right;
+    padding-left: 1.5em;
+
+
+}
+
+header>nav>ul>li>a{
+    color: rgb(255, 255, 255);
+    line-height: 190%;
+    /*font-size: 85%;*/
+    font-weight: bold;
+    font-size: 80%;
+}
+
+a {
+    text-decoration: none;
+}
+
+.icons.header-right__button-friends{
+    background-position: 0 -892px;;
+    /*background-size: 1.1em 1.1em;*/
+
+
+    cursor: pointer;
+    text-align: center;
+}
+
+.icons.header-right__button-messages{
+    background-position: 0 -942px;;
+    /*background-size: 1.1em 1.1em;*/
+
+    cursor: pointer;
+    text-align: center;
+}
+
+.icons.header-right__button-notifications{
+    background-position: 0 -792px;
+    cursor: pointer;
+    text-align: center;
+}
+
+.icons.header-right__button-help{
+    cursor: pointer;
+    text-align: center;
+    background-position: 0 -992px;
+}
+
+.icons.header-right__button-other{
+    cursor: pointer;
+    text-align: center;
+    background-position: 0 -842px;
+}
+
+.header-right__button__transparent{
+    color: transparent;
+}
