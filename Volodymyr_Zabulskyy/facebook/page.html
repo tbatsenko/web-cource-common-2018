@@ -8,9 +8,15 @@
     <title>Facebook</title>
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/nav-top.css">
+    <link rel="stylesheet" href="css/nav-left.css">
+    <link rel="stylesheet" href="css/article.css">
+    <link rel="stylesheet" href="css/form.css">
+    <link rel="stylesheet" href="css/aside-right.css">
+    <link rel="stylesheet" href="css/nav-top.css">
     <link rel="stylesheet" href="css/form.css">
     <link rel="stylesheet" href="css/profile-page-header.css">
     <link rel="stylesheet" href="css/profile-page-content.css">
+    <link rel="stylesheet" href="css/profile-info.css">
 
 </head>
 
@@ -29,7 +35,7 @@
         </section>
         <nav class="main-tool-bar__navigation-list">
             <a class="main-tool-bar__profile-section" href="">
-                <img src="img/person.png" class="main-tool-bar__profile-section-img" aria-label="you"/>
+                <img src="img/adolf_hipster.jpeg" class="main-tool-bar__profile-section-img" aria-label="you"/>
                 <span class="main-tool-bar__profile-section-txt">Adolf</span>
             </a>
             <span class="main-tool-bar__line-after"></span>
@@ -47,19 +53,19 @@
     </div>
 </header>
 <main class="profile-page">
-    <header class="header-container">
+    <header class="profile-header">
         <div class="profile-background">
             <img class="profile-background__img" src="img/roman_map.jpeg" alt="">
             <div class="profile-background__img-cover"></div>
 
         </div>
         <div class="profile-tools">
-                <a class="profile-tools__item_first" href="">Timeline</a>
-                <a class="profile-tools__item" href="">About</a>
-                <a class="profile-tools__item" href="">Friends</a>
-                <a class="profile-tools__item" href="">Photos</a>
-                <a class="profile-tools__item" href="">Archive</a>
-                <a class="profile-tools__item" href="">More</a>
+            <a class="profile-tools__item_first" href="">Timeline</a>
+            <a class="profile-tools__item" href="">About</a>
+            <a class="profile-tools__item" href="">Friends</a>
+            <a class="profile-tools__item" href="">Photos</a>
+            <a class="profile-tools__item" href="">Archive</a>
+            <a class="profile-tools__item" href="">More</a>
         </div>
         <div class="profile-img-container">
             <img class="profile-img" src="img/adolf_hipster.jpeg" alt="">
@@ -67,15 +73,45 @@
         <h1 class="profile-name">Adolf Hipster</h1>
     </header>
     <article class="main-field-container">
-        <article class="page-info-container">
-            <section class="page-info-container__intro"></section>
-            <section class="page-info-container__photos">
-                <header class="page-info-container__photos__header">
-                    <div class="page-info-container__photos__header_ico"></div>
-                    <h3 class="page-info-container__photos__header_txt">Photos</h3>
-                    <a class="page-info-container__photos__header_add-photo" href="">Add Photo</a>
+        <article class="page-info__container">
+            <section class="page-info__intro"></section>
+            <section class="page-info__photos">
+                <header class="page-info__photos__header">
+                    <div class="page-info__photos__header_ico"></div>
+                    <h3 class="page-info__photos__header_txt">Photos</h3>
+                    <a class="page-info__photos__header_add-photo" href="">Add Photo</a>
                 </header>
-                
+                <div class="page-info__photos_container">
+                    <img class="page-info__photo" src="img/adolf_hipster_profile.jpeg" alt="">
+                    <img class="page-info__photo" src="img/joseph.jpeg" alt="">
+                    <img class="page-info__photo" src="img/adolf_hipster_profile.jpeg" alt="">
+                    <img class="page-info__photo" src="img/adolf_hipster.jpeg" alt="">
+                    <img class="page-info__photo" src="img/photo_hipster.jpeg" alt="">
+                    <img class="page-info__photo" src="img/winston.jpeg" alt="">
+                    <img class="page-info__photo" src="img/selfie.jpeg" alt="">
+                    <img class="page-info__photo" src="img/photo_hipster.jpeg" alt="">
+                    <img class="page-info__photo" src="img/joseph.jpeg" alt="">
+                </div>
+            </section>
+
+            <section class="page-info__friends">
+                <header class="page-info__friends__header">
+                    <div class="page-info__friends__header_ico"></div>
+                    <h3 class="page-info__friends__header_txt">Friends</h3>
+                    <span class="page-info__friends__indicator">1488</span>
+                    <a class="page-info__photos__header_find-friends" href="">Find friends</a>
+                </header>
+                <div class="page-info__friends_container">
+                    <img class="page-info__friend" src="img/adolf_hipster_profile.jpeg" alt="">
+                    <img class="page-info__friend" src="img/joseph.jpeg" alt="">
+                    <img class="page-info__friend" src="img/adolf_hipster_profile.jpeg" alt="">
+                    <img class="page-info__friend" src="img/adolf_hipster.jpeg" alt="">
+                    <img class="page-info__friend" src="img/photo_hipster.jpeg" alt="">
+                    <img class="page-info__friend" src="img/winston.jpeg" alt="">
+                    <img class="page-info__friend" src="img/selfie.jpeg" alt="">
+                    <img class="page-info__friend" src="img/photo_hipster.jpeg" alt="">
+                    <img class="page-info__friend" src="img/joseph.jpeg" alt="">
+                </div>
             </section>
         </article>
         <article class="posts-field-container">
@@ -84,7 +120,7 @@
                     <ul class="posting-form__options">
                         <li class="posting-form__option">
                             <div class="posting-form__option__ico_post"></div>
-                            <span class="posting-form__option__txt active">Compose post</span></li>
+                            <span class="posting-form__option__txt-active">Compose post</span></li>
                         <li class="posting-form__option_left-border">
                             <div class="posting-form__option__ico_photo"></div>
                             <span class="posting-form__option__txt">Photo/Video Album</span></li>
@@ -93,7 +129,7 @@
                             <span class="posting-form__option__txt">Live Video</span></li>
                     </ul>
                     <label class="posting-form__input__container">
-                        <img class="posting-form__input__profile-img" src="img/person.png" alt="profile">
+                        <img class="posting-form__input__profile-img" src="img/adolf_hipster.jpeg" alt="profile">
                         <input class="posting-form__input__input" type="text" placeholder="What's on ur mind?">
                     </label>
                     <div class="posting-form__content-options">
@@ -112,7 +148,155 @@
                     </div>
                 </form>
             </section>
-            <section class="posts-area"></section>
+            <section class="posts-area">
+                <article class="post-section__article">
+                    <section class="post-section__article_header_container">
+                        <img class="post-section__article_header__author-img" src="img/adolf_hipster.jpeg" alt="author">
+                        <header class="post-section__article_header__article-header">
+                            <div class="post-section__article_header__txt-container">
+                                <h4>
+                                    <a class="post-section__article_header__author-name" href="">Addy</a>
+                                </h4>
+                                <small class="post-section__article_header__annotation">
+                                    <time><a href="">Today at 10:16</a></time>
+                                    <svg class="post-section__article_header__ico_globe globe"></svg>
+                                </small>
+                            </div>
+                            <div class="post-section__article_header_dots"></div>
+                        </header>
+                    </section>
+                    <section class="post-section__article_content">
+                        <p>
+                            Hanging out with my buddies
+                        </p>
+                        <img class="post-section__article_content__img" src="img/eifel_tower.jpeg" alt="">
+                    </section>
+                    <form class="post-section__article_post-reaction">
+                        <section class="post-section__article_reaction_area__likes-container">
+                            <div class="post-section__article_reaction_area__thumbsup"></div>
+                            <div class="post-section__article_reaction_area__love" ></div>
+                            <small class=" post-section__article_reaction_area__who-reacted">
+                                <a href=""> Benito Mussolini, Joseph Stalin and 128 others</a>
+                            </small>
+                            <small class=" post-section__article_reaction_area__how-many-comments">
+                                2 Comments
+                            </small>
+                        </section>
+                        <section class="post-section__article_post-reaction__reaction-options">
+                            <ul class="post-section__article_post-reaction__reaction-options_list">
+                                <li class="post-section__article_post-reaction__reaction-options_list-item">
+                                    <button class="post-section__article_post-reaction__reaction-options_button">
+                                        <svg class="post-section__article_post-reaction__reaction-options_like"></svg>
+                                        Like
+                                    </button>
+                                </li>
+                                <li class="post-section__article_post-reaction__reaction-options_list-item">
+                                    <button class="post-section__article_post-reaction__reaction-options_button">
+                                        <svg class="post-section__article_post-reaction__reaction-options_comment"></svg>
+                                        Comment
+                                    </button>
+                                </li>
+                                <li class="post-section__article_post-reaction__reaction-options_list-item">
+                                    <button class="post-section__article_post-reaction__reaction-options_button">
+                                        <svg class="post-section__article_post-reaction__reaction-options_share"></svg>
+                                        Share
+                                    </button>
+                                </li>
+                            </ul>
+                        </section>
+                        <footer class="post-section__article_post-reaction__post-comment">
+                            <img class="post-section__article_post-reaction__post-comment_author-img" src="img/adolf_hipster.jpeg" alt="author">
+                            <input class="post-section__article_post-reaction__post-comment_input" type="text" name="" placeholder="write a comment">
+                            <section class="post-section__article_post-reaction__post-comment_comment-options">
+                                <div class="post-section__article_post-reaction__post-comment_comment-option_smile"></div>
+                                <div class="post-section__article_post-reaction__post-comment_comment-option_photo"></div>
+                                <div class="post-section__article_post-reaction__post-comment_comment-option_gif"></div>
+                                <div class="post-section__article_post-reaction__post-comment_comment-option_sticker"></div>
+                            </section>
+                        </footer>
+                    </form>
+                </article>
+                <article class="post-section__article">
+                    <section class="post-section__article_header_container">
+                        <img class="post-section__article_header__author-img" src="img/shrek.png" alt="author">
+                        <header class="post-section__article_header__article-header">
+                            <div class="post-section__article_header__txt-container">
+                                <h4>
+                                    <a class="post-section__article_header__author-name" href="">Shrek Chebureck</a>
+                                </h4>
+                                <small class="post-section__article_header__annotation">
+                                    <time><a href="">Today at 10:16</a></time>
+                                    <svg class="post-section__article_header__ico_globe globe"></svg>
+                                </small>
+                            </div>
+                            <div class="post-section__article_header_dots"></div>
+                        </header>
+                    </section>
+                    <section class="post-section__article_content">
+                        <p>
+                            I have a dream that one day this nation will rise up and live out the true meaning of its creed:
+                            "We hold these truths to be self-evident: that all men are created equal."
+                            <br>
+                            I have a dream that one day on the red hills of Georgia the sons of former slaves and the sons
+                            of former slave owners will be able to sit down together at the table of brotherhood.
+                            <br>
+                            I have a dream that one day even the state of Mississippi, a state sweltering with the heat of
+                            injustice, sweltering with the heat of oppression, will be transformed into an oasis of freedom
+                            and justice.
+                            <br>
+                            I have a dream that my four little children will one day live in a nation where they will not be
+                            judged by the color of their skin but by the content of their character.
+                            <br>
+                            I have a dream today.
+                        </p>
+                    </section>
+                    <form class="post-section__article_post-reaction">
+                        <section class="post-section__article_reaction_area__likes-container">
+                            <div class="post-section__article_reaction_area__thumbsup"></div>
+                            <div class="post-section__article_reaction_area__love" ></div>
+                            <small class=" post-section__article_reaction_area__who-reacted">
+                                <a href=""> Benito Mussolini, Joseph Stalin and 128 others</a>
+                            </small>
+                            <small class=" post-section__article_reaction_area__how-many-comments">
+                                2 Comments
+                            </small>
+                        </section>
+                        <section class="post-section__article_post-reaction__reaction-options">
+                            <ul class="post-section__article_post-reaction__reaction-options_list">
+                                <li class="post-section__article_post-reaction__reaction-options_list-item">
+                                    <button class="post-section__article_post-reaction__reaction-options_button">
+                                        <svg class="post-section__article_post-reaction__reaction-options_like"></svg>
+                                        Like
+                                    </button>
+                                </li>
+                                <li class="post-section__article_post-reaction__reaction-options_list-item">
+                                    <button class="post-section__article_post-reaction__reaction-options_button">
+                                        <svg class="post-section__article_post-reaction__reaction-options_comment"></svg>
+                                        Comment
+                                    </button>
+                                </li>
+                                <li class="post-section__article_post-reaction__reaction-options_list-item">
+                                    <button class="post-section__article_post-reaction__reaction-options_button">
+                                        <svg class="post-section__article_post-reaction__reaction-options_share"></svg>
+                                        Share
+                                    </button>
+                                </li>
+                            </ul>
+                        </section>
+                        <footer class="post-section__article_post-reaction__post-comment">
+                            <img class="post-section__article_post-reaction__post-comment_author-img" src="img/adolf_hipster.jpeg" alt="author">
+                            <input class="post-section__article_post-reaction__post-comment_input" type="text" name="" placeholder="write a comment">
+                            <section class="post-section__article_post-reaction__post-comment_comment-options">
+                                <div class="post-section__article_post-reaction__post-comment_comment-option_smile"></div>
+                                <div class="post-section__article_post-reaction__post-comment_comment-option_photo"></div>
+                                <div class="post-section__article_post-reaction__post-comment_comment-option_gif"></div>
+                                <div class="post-section__article_post-reaction__post-comment_comment-option_sticker"></div>
+                            </section>
+                        </footer>
+                    </form>
+                </article>
+
+            </section>
         </article>
     </article>
 </main>

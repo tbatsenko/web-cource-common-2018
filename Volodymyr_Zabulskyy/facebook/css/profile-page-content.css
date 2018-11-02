@@ -6,11 +6,6 @@
     width: 100%;
 }
 
-.page-info-container{
-    background: rebeccapurple;
-    width: 23em;
-}
-
 .posting-form__container{
     margin-bottom: 1em;
     background: #fff;
@@ -19,5 +14,5 @@
 }
 
 .posts-field-container{
-    width: 31em;
+    width: 33em;
 }
