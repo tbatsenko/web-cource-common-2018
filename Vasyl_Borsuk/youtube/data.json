@@ -244,6 +244,7 @@
                 ]
               }
             ]
+<<<<<<< HEAD
           },
           {
             "title": "Not recommended",
@@ -289,6 +290,8 @@
                 ]
               }
             ]
+=======
+>>>>>>> parent of 64dd120... Merge branch 'master' of /home/zabulskyy/UCU/Web/web-cource-common with conflicts.
           }
         ]
       }

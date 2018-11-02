@@ -1,0 +1,146 @@
+#top-menu {
+    position: fixed;
+    height: 42px;
+    width: 100%;
+    display: block;
+    background-color: #4267b2;
+}
+
+#top-menu-nav {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.side-bar {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 26px;
+}
+
+.search-form {
+    box-sizing: border-box;
+    height: 100%;
+    display: flex;
+    padding-left: 5px;
+    background-color: white;
+    border: 1px solid #3b5998;
+    border-radius: 3px;
+}
+
+.search-form * {
+    padding: 0 0 0 0;
+    border: none;
+}
+
+.search-form button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f5f6f7;
+    border-radius: 0 2px 2px 0;
+    width: 46px;
+}
+
+.search-form button:hover {
+    background: #ebedf0;
+}
+
+.search-form input {
+    background-color: white;
+    width: 400px;
+}
+
+.top-menu-nav-list {
+    display: flex;
+    margin: 0 0 0 0;
+    padding: 0 0 0 0;
+}
+
+.top-menu-nav-list button, .top-menu-nav-list a {
+    display: flex;
+    align-items: center;
+    background-color: transparent;
+}
+
+.top-menu-nav-list a {
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+}
+
+.top-menu-nav-list .user-photo {
+    margin-right: 5px;
+}
+
+.top-menu-nav-list .hover-blue {
+    padding: 0 12px 0 12px;
+}
+
+.top-menu-nav-list .hover-blue:hover {
+    background-color: #3b5496;
+    border-radius: 3px;
+}
+
+.top-menu-nav-list .top-menu-nav-sublist li {
+    margin: 0 2px 0 2px;
+}
+
+.top-menu-nav-sublist {
+    padding: 0;
+}
+
+#facebook-link {
+    margin-right: 5px;
+}
+
+#facebook-logo {
+    background-position: 0 -442px;
+}
+
+#search-logo {
+    background-image: url("https://facebook.com/rsrc.php/v3/yx/r/tjBuxcd0g0m.png");
+    background-position: 0 -1445px;
+}
+
+#people-logo {
+    background-position: 0 -892px;
+}
+
+#people-logo:active {
+    background-position: 0 -867px;
+}
+
+#messanger-logo {
+    background-position: 0 -942px;
+}
+
+#messanger-logo:active {
+    background-position: 0 -917px;
+}
+
+#bell-logo {
+    background-position: 0 -792px;
+}
+
+#bell-logo:active {
+    background-position: 0 -767px;
+}
+
+#help-logo {
+    background-position: 0 -992px;
+}
+
+#help-logo:active {
+    background-position: 0 -967px;
+}
+
+#menu-logo {
+    background-position: 0 -842px;
+}
+
+#menu-logo:active {
+    background-position: 0 -817px;
+}

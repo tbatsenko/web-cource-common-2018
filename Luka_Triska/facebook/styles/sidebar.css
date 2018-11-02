@@ -1,8 +1,15 @@
+<<<<<<< HEAD
 .aside .aside-left {
     float: left;
     vertical-align: top;
     margin-left: 150px;
     text-align: left;
+=======
+#left-side-menu {
+    float: left;
+    vertical-align: top;
+    margin-left: 150px;
+>>>>>>> parent of 64dd120... Merge branch 'master' of /home/zabulskyy/UCU/Web/web-cource-common with conflicts.
 }
 
 .sidebar-buttons {

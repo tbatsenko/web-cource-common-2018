@@ -48,5 +48,9 @@ img
     display: flex;
     justify-content: space-between;
     flex-flow: column;
+<<<<<<< HEAD
     width: 53em;
+=======
+    width: 815px;
+>>>>>>> parent of 64dd120... Merge branch 'master' of /home/zabulskyy/UCU/Web/web-cource-common with conflicts.
 }
