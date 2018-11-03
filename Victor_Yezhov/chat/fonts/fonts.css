@@ -1,0 +1,20 @@
+@font-face {
+    font-family: SFUIDisplay-Heavy; /* Имя шрифта */
+    src: url("SFUIDisplay-Heavy.otf"); /* Путь к файлу со шрифтом */
+}
+
+
+@font-face {
+    font-family: SFUIDisplay-Regular;/* Имя шрифта */
+    src: url("SFUIDisplay-Regular.otf"); /* Путь к файлу со шрифтом */
+}
+
+@font-face {
+    font-family: SFUIDisplay-Light; /* Имя шрифта */
+    src: url("SFUIDisplay-Light.otf"); /* Путь к файлу со шрифтом */
+}
+
+@font-face {
+    font-family: SFUIDisplay-Medium; /* Имя шрифта */
+    src: url("SFUIDisplay-Medium.otf"); /* Путь к файлу со шрифтом */
+}

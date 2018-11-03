@@ -1,2 +1,6 @@
 .idea/
 compile_scss.sh
+<<<<<<< HEAD
+start_watching.sh
+=======
+>>>>>>> parent of 64dd120... Merge branch 'master' of /home/zabulskyy/UCU/Web/web-cource-common with conflicts.

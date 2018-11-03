@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>facebook</title>
@@ -7,23 +8,50 @@
 </head>
 <body>
 
-    <header>
-        <a class="icons header-facebook-icon">Facebook</a>
-        <form role="search" action="/" class="header-form">
-            <input type="search"
-                   placeholder="Search " class="header-input">
-            <button class="icons header-search"></button>
-            <!-- Not showing searching icon-->
+<header class="header">
+    <div class="header-left">
+        <a class="icons header__facebook-icon">Facebook<div></div></a>
+        <form role="search" action="/" class="search-form">
+            <input type="search" placeholder="Пошук " class="search-form__input">
+            <button class="icons search-form__button"></button>
+
         </form>
-        <nav class="navigation">
+    </div>
+    <nav class="navigation">
+        <ul class="header-right">
+            <li><a href="#" class="header-right__profile-details"><img src="icons/person.jpg" class="header-right__profile-picture "> Ira </a></li>
+            <li><a href="#">Головна</a></li>
+            <li><button class="header-right__button header-right__button-create">Створити</button></li>
+            <li><button class="icons header-right__button header-right__button-friends header-right__button__transparent">друзі</button><button class="icons header-right__button header-right__button-messages header-right__button__transparent">повідомлення</button><button class="icons header-right__button header-right__button-notifications header-right__button__transparent  ">сповіщення</button></li>
+            <li><button class="icons header-right__button header-right__button-help header-right__button__transparent">допомога</button><button class="icons header-right__button header-right__button-other header-right__button__transparent">інше</button></li>
+        </ul>
+    </nav>
+
+</header>
+<main>
+    <aside>
+        <nav>
             <ul>
-                <li><a href="#" class="profile-details"><img src="icons/person.jpg" class="header-profile-picture " > Ira </a></li>
-                <li><a href="#">Головна</a></li>
-                <li><button class="navigation-create-button">Створити</button></li>
-                <li class="navigation-transparent-button"><button class="icons navigation-friends">друзі</button><button class="icons navigation-messages">пов</button><button class="icons navigation-notifications">нот</button></li>
-                <li class="navigation-transparent-button"><button class="icons navigation-help">hel</button><button class="icons navigation-other">oth</button></li>
+                <li><a href="#"><img src="icons/person.jpg"> Ira Zakharchenko <button>Редагувати профіль</button></a></li>
+                <li>
+                    <ul>
+                        <li><div></div> Новини <button></button></li>
+                        <li><div></div> Messenger <button></button></li>
+                    </ul>
+                </li>
+                <li>
+                    <h3>Швидкий доступ</h3>
+                    <ul>
+                        <li><div></div> Varta1 ... <span>20+</span> <button></button></li>
+                        <li><div></div> День відкритих дв... <button></button></li>
+                    </ul>
+
+                </li>
             </ul>
         </nav>
-    </header>
+    </aside>
+</main>
 
 </body>
+
+</html>
