@@ -15,7 +15,6 @@ ul {
     list-style: none;
 }
 
-<<<<<<< HEAD
 .header .navigation {
     display: flex;
     flex-flow: row wrap;
@@ -23,13 +22,6 @@ ul {
     justify-content: space-around;
     height: 42px;
     margin-top: 0;
-=======
-#top-bar-navigation {
-    display: flex;
-    height: 42px;
-    align-items: center;
-    padding: 0 10px;
->>>>>>> parent of 64dd120... Merge branch 'master' of /home/zabulskyy/UCU/Web/web-cource-common with conflicts.
     background: #3b5998;
     color: #fff;
     font-size: 0.9em;
