@@ -1,0 +1,18 @@
+//Post implementation
+
+@import "post_head";
+@import "post_bottom";
+@import "before_item";
+
+.post{
+  width: 486px;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  margin-top: 13px;
+  background: #fff;
+
+  &__pic{
+    display: block;
+    width: 487px;
+    height: 300px;
+  }
+}

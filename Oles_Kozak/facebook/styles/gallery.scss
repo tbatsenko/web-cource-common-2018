@@ -1,0 +1,15 @@
+//Gallery implementation
+
+.gallery {
+  margin: 10px 0 0;
+  display: flex;
+  flex-wrap: wrap;
+
+  &__img{
+    cursor: pointer;
+    margin: 2px;
+    object-fit: cover;
+    width: 85px;
+    height: 85px;
+  }
+}
