@@ -4,13 +4,15 @@ body{
     font-family: Helvetica, Arial, sans-serif;
 }
 
-header{
+.header{
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
     background: #4267b2;
-    padding-top: 8px;
+    padding: 5px 10em;
     /*position: fixed;*/
     /*justify-content: space-between;*/
+    align-items: center;
+    height: 2em;
 
 }
 
@@ -21,15 +23,31 @@ header{
     width: 1.7em;
 }
 
-.icons.header-facebook-icon{
+.header-left {
+    float: left;
+
+}
+
+/*.icons.header__facebook-icon{*/
+/*background-position: 0 -442px;*/
+/*height: 1.7em;*/
+/*width: 1.7em;*/
+/*padding-left: 0.3em;*/
+/*color: transparent;*/
+/*cursor: pointer;*/
+/*}*/
+.header__facebook-icon{
+    float: left;
+    margin: 0.3em;
     background-position: 0 -442px;
     height: 1.7em;
     width: 1.7em;
-    padding-left: 0.3em;
+    padding-left: 0.25em;
     color: transparent;
+    cursor: pointer;
 }
 
-.header-form{
+.search-form{
     border: 1px solid #3b5998;
     float: left;
     display: flex;
@@ -37,7 +55,7 @@ header{
     border-radius: 3px;
 }
 
-.header-input{
+.search-form__input{
     max-width: 100em;
     padding-left: 0.3em;
     height: 1.65em;
@@ -47,7 +65,7 @@ header{
     border-radius: 0.1em 0 0 0.1em;
 }
 
-.header-search{
+.search-form__button{
     border-radius: 0 0.1em 0.1em 0;
     border: none;
     cursor: pointer;
@@ -62,7 +80,7 @@ header{
     /*background-size: 1.1em 1.1em;*/
 }
 
-.icons.header-search{
+.icons.search-form__button{
     background-position: 19px -1440px;
     background-size: 32px 1475px;
     border-radius: 0 0.1em 0.1em 0;
@@ -89,23 +107,23 @@ header{
     /*color: #fff;*/
 }
 
-.profile-details{
+.header-right__profile-details{
     display: flex;
 
 }
 
-.header-profile-picture{
+.header-right__profile-picture{
     height: 1.9em;
     width: 1.9em;
     border-radius: 50%;
     padding-right: 0.2em;
 }
 
-.navigation-create-button{
+.header-right__button-create{
     color: #fff;
 }
 
-.navigation-transparent-button>button{
+.header-right__button__transparent>button{
     color: transparent;
 }
 
@@ -141,7 +159,7 @@ a {
     text-decoration: none;
 }
 
-.icons.navigation-friends{
+.icons.header-right__button-friends{
     background-position: 0 -892px;;
     /*background-size: 1.1em 1.1em;*/
 
@@ -150,7 +168,7 @@ a {
     text-align: center;
 }
 
-.icons.navigation-messages{
+.icons.header-right__button-messages{
     background-position: 0 -942px;;
     /*background-size: 1.1em 1.1em;*/
 
@@ -158,22 +176,24 @@ a {
     text-align: center;
 }
 
-.icons.navigation-notifications{
+.icons.header-right__button-notifications{
     background-position: 0 -792px;
     cursor: pointer;
     text-align: center;
 }
 
-.icons.navigation-help{
+.icons.header-right__button-help{
     cursor: pointer;
     text-align: center;
     background-position: 0 -992px;
 }
 
-.icons.navigation-other{
+.icons.header-right__button-other{
     cursor: pointer;
     text-align: center;
     background-position: 0 -842px;
 }
 
-.navigation-transparent-button{}
+.header-right__button__transparent{
+    color: transparent;
+}

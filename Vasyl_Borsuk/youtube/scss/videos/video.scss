@@ -1,0 +1,24 @@
+@import "../variables";
+
+.video {
+  display: flex;
+  flex-direction: column;
+  width: $video-width;
+  height: $video-height;
+  box-sizing: border-box;
+
+  &__figure {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin: 0;
+  }
+
+  &__info {
+    display: flex;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    flex-direction: column;
+  }
+}
