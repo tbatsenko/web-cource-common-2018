@@ -54,10 +54,6 @@ form {
     background-size: cover;
 }
 
-#top-bar-navigation li:not(:first-child):not(#fa_search) {
-    margin-left: 5px;
-}
-
 .bar-buttons {
     height: 24px;
     background-size: auto;
