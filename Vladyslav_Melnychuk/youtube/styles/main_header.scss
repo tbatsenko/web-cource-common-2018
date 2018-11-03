@@ -1,0 +1,38 @@
+.main-header {
+  display: flex;
+  align-items: center;
+  align-content: center;
+  width: 1487px;
+  height: 56px;
+  padding: 0 16px;
+  justify-content: space-between;
+
+  &__button {
+    width: 24px;
+    height: 24px;
+    padding: 8px;
+    border: none;
+    color: transparent;
+    // background: none;
+    overflow: hidden;
+    &--open-nav {
+      margin-right: 18px;
+    }
+  }
+
+  &__search-nav {
+    width: 970px;
+    height: 32px;
+    display: flex;
+    justify-content: center;
+  }
+
+  &__search {
+    padding: 2px 6px;
+    width: 562px;
+    height: 26px;
+  }
+
+}
+
+
