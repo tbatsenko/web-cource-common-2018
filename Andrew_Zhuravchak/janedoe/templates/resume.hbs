@@ -3,63 +3,48 @@
         <h2 class="resume__brief-subheader">User Persona</h2>
 
         <div class="resume__brief-bottom-group">
-            <h1 class="resume__brief-name">Jane Doe</h1>
+            <h1 class="resume__brief-name">{{ name }}</h1>
             <p class="resume__brief-occupation">
-                <strong>28,</strong>
-                Professional Model
+                <strong>{{ age }},</strong>
+                {{ occupation }}
             </p>
 
             <hr class="resume__brief-line">
 
             <div class="resume__brief-skills">
-                <div class="resume__brief-skill">Passionate</div>
-                <div class="resume__brief-skill">Independent</div>
-                <div class="resume__brief-skill">Punctual</div>
-                <div class="resume__brief-skill">Witty</div>
+                {{#skills}}
+                    <div class="resume__brief-skill">{{&.}}</div>
+                {{/skills}}
             </div>
         </div>
     </div>
 
     <div class="resume__info">
-        <blockquote class="resume__info-blockquote">Living a healthy and organized life is what I want value the most
-        </blockquote>
+        <blockquote class="resume__info-blockquote">{{ quote }}</blockquote>
 
         <section class="resume__info-block">
             <h3 class="resume__info-subhead">About</h3>
-
-            <p>Jane is a Professional Model who lives in New York. She has been modeling for about 10 years at different
-                companies like GAP, Levi’s, Banana Republic and Theory. It was when she was around 21 when she was
-                contacted by the agency. </p>
-            <p>She always tries to eat healthy by keeping a fixed diet with balance between vegetables, fruits and meat.
-                Although she doesn’t have any specific dietary restrictions, she tries to stay away from fat food
-                products, sugary drinks and salt. Jane exercises at the gym every morning as well.</p>
+            {{{ about }}}
         </section>
 
         <ul class="resume__info-block resume__info-block--list">
             <lh class="resume__info-subhead">Goals</lh>
 
-            <li class="resume__info-li resume__info-li--goal">
-                <span class="resume__info-li-text">Always stay up-to-date and follow on her dietary restrictions and schedule</span>
-            </li>
-            <li class="resume__info-li resume__info-li--goal">
-                <span class="resume__info-li-text">Know the exact ingredients of the food that she’s purchasing at the food market</span></li>
-            <li class="resume__info-li resume__info-li--goal">
-                <span class="resume__info-li-text">Store quick and easy food products in her refrigerator every weekend</span>
-            </li>
+            {{#goals}}
+                <li class="resume__info-li resume__info-li--goal">
+                    <span class="resume__info-li-text">{{&.}}</span>
+                </li>
+            {{/goals}}
         </ul>
 
         <ul class="resume__info-block resume__info-block--list">
             <lh class="resume__info-subhead">Frustration</lh>
 
-            <li class="resume__info-li">
-                <span class="resume__info-li-text">Not all restaruants and markets provide exact ingredients</span>
-            </li>
-            <li class="resume__info-li">
-                <span class="resume__info-li-text">She has to travel outside of New York many times a year </span>
-            </li>
-            <li class="resume__info-li">
-                <span class="resume__info-li-text">Sometimes, she’s too busy to consume food at the right time</span>
-            </li>
+            {{#frustrations}}
+                <li class="resume__info-li">
+                    <span class="resume__info-li-text">{{&.}}</span>
+                </li>
+            {{/frustrations}}
         </ul>
     </div>
 </section>
