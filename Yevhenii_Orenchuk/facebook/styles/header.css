@@ -16,11 +16,10 @@
   background-size: 29px 1475px;
   cursor: pointer;
   border: 0;
-  text-indent: -999px;
   background-color: transparent;
 }
 .search__facebook-icon {
-  background-position: 0px -442px;
+  background-position: 0 -442px;
   height: 24px;
   width: 24px;
 }
