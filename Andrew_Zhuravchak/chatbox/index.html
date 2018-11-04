@@ -11,60 +11,24 @@
 </head>
 <body class="pretty-body-for-presentation">
 
-<aside class="chat-box">
-    <header class="chat-box__header">
-        <h3 class="chat-box__header-title">Kristaps Elsins</h3>
+<script src="node_modules/handlebars/dist/handlebars.js"></script>
+<script>
+  const render = async (templateSrc, dataSrc, conteiner) => {
+    const templateStr = await (await fetch(templateSrc)).text()
+    const data = await (await fetch(dataSrc)).json()
+    const compiled = Handlebars.compile(templateStr)
+    conteiner.innerHTML = compiled(data)
+  }
 
-        <div class="chat-box__header-actions">
-            <button class="chat-box__header-action-button">
-                <img class="chat-box__header-action-icon" src="images/add.svg" alt="Add">
-            </button>
-            <button class="chat-box__header-action-button">
-                <img class="chat-box__header-action-icon" src="images/video.svg" alt="Video">
-            </button>
-            <button class="chat-box__header-action-button">
-                <img class="chat-box__header-action-icon" src="images/settings.svg" alt="Settings">
-            </button>
-            <button class="chat-box__header-action-button">
-                <img class="chat-box__header-action-icon" src="images/close.svg" alt="Close">
-            </button>
-        </div>
-    </header>
+  const renderPage = async () => {
+    await render('templates/chat-window.hbs', 'data/conversation.json', document.body)
+    await render('templates/messages-list.hbs', 'data/conversation.json', document.getElementById('chat-box-messages'))
+    await render('templates/chat-header.hbs', 'data/conversation.json', document.getElementById('chat-box-header'))
+    await render('templates/chat-input.hbs', 'data/conversation.json', document.getElementById('chat-box-input'))
+  }
 
-    <div class="chat-box__messages">
-        <div class="content">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad, animi autem commodi dignissimos doloremque est magni mollitia nam obcaecati perspiciatis placeat porro temporibus. Necessitatibus non quaerat quisquam rem repudiandae temporibus.
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad, animi autem commodi dignissimos doloremque est magni mollitia nam obcaecati perspiciatis placeat porro temporibus. Necessitatibus non quaerat quisquam rem repudiandae temporibus.
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad, animi autem commodi dignissimos doloremque est magni mollitia nam obcaecati perspiciatis placeat porro temporibus. Necessitatibus non quaerat quisquam rem repudiandae temporibus.
-        </div>
-    </div>
-
-    <footer class="chat-box__footer">
-        <form action="POST" class="chat-box__send-message-form">
-            <label class="chat-box__message-label" for="text" hidden="hidden">Type a message</label>
-            <textarea class="chat-box__message-input" type="text" id="text" name="text" rows="1"
-                      placeholder="Type a message..."></textarea>
-
-            <div class="chat-box__footer-actions">
-                <button class="chat-box__footer-action-button">
-                    <img src="images/picture.svg" alt="Take a picture" class="chat-box__footer-action-icon">
-                </button>
-                <button class="chat-box__footer-action-button">
-                    <img src="images/gif.svg" alt="GIF" class="chat-box__footer-action-icon">
-                </button>
-                <button class="chat-box__footer-action-button">
-                    <img src="images/smile.svg" alt="Smile" class="chat-box__footer-action-icon">
-                </button>
-                <button class="chat-box__footer-action-button">
-                    <img src="images/calendar.svg" alt="Calendar" class="chat-box__footer-action-icon">
-                </button>
-                <button class="chat-box__footer-action-button">
-                    <img src="images/camera.svg" alt="Camera" class="chat-box__footer-action-icon">
-                </button>
-            </div>
-        </form>
-    </footer>
-</aside>
+  renderPage()
+</script>
 
 </body>
 </html>

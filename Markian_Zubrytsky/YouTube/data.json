@@ -57,32 +57,32 @@
   ],
   "lp_videos": [
     {
-      "image": "<img src='images/lp_song1.jpg' class='video__image'>",
+      "image": "lp_song1.jpg",
       "title": "Breaking The Habit (Official Video) - Linkin Park",
       "info": "Some long text"
     },
     {
-      "image" : "<img src='images/lp_song2.jpg' class='video__image'>",
+      "image" : "lp_song2.jpg",
       "title": "The Faint (Official Video) - Linkin Park",
       "info": "Some long text"
     },
     {
-      "image" : "<img src='images/lp_song3.jpg' class='video__image'>",
+      "image" : "lp_song3.jpg",
       "title" : "In The End (Official Video) - Linkin Park",
       "info": "Some long text"
     },
     {
-      "image" : "<img src='images/lp_song4.jpg' class='video__image'>",
+      "image" : "lp_song4.jpg",
       "title" : "Numb (Official Video) - Linkin Park",
       "info" : "Some long text"
     },
     {
-      "image" : "<img src='images/lp_song5.jpg' class='video__image'>",
+      "image" : "lp_song5.jpg",
       "title" : "One More Light (Official Video) - Linkin Park",
       "info": "Some long text"
     },
     {
-      "image" : "<img src='images/lp_song6.jpg' class='video__image'>",
+      "image" : "lp_song6.jpg",
       "title" : "Crawling (Official Video) - Linkin Park",
       "info": "Some long text"
     }
@@ -90,32 +90,32 @@
 
   "fw_videos": [
     {
-      "image": "<img src='images/fw_video1.jpg' class='video__image'>",
+      "image": "fw_video1.jpg",
       "title": "Fabio Wibmer - Fabiolous Escape",
       "info": "Some long text"
     },
     {
-      "image" : "<img src='images/fw_video2.jpg' class='video__image'>",
+      "image" : "fw_video2.jpg",
       "title": "Fabio Wibmer - Fabiolous Escape 2",
       "info": "Some long text"
     },
     {
-      "image" : "<img src='images/fw_video3.jpg' class='video__image'>",
+      "image" : "fw_video3.jpg",
       "title" : "Riding a bike on a 200m high rail - Fabio Wibmer",
       "info": "Some long text"
     },
     {
-      "image" : "<img src='images/fw_video4.jpg' class='video__image'>",
+      "image" : "fw_video4.jpg",
       "title" : "Urban Freeride lives - Fabio Wibmer",
       "info" : "Some long text"
     },
     {
-      "image" : "<img src='images/fw_video5.jpg' class='video__image'>",
+      "image" : "fw_video5.jpg",
       "title" : "Fabio Wibmer - Osttirol Is My Playground",
       "info": "Some long text"
     },
     {
-      "image" : "<img src='images/fw_video6.jpg' class='video__image'>",
+      "image" : "fw_video6.jpg",
       "title" : "Fabio Wibmer - Hallstatt Wind Down",
       "info": "Some long text"
     }
@@ -123,32 +123,32 @@
 
   "mcm_videos" : [
     {
-      "image": "<img src='images/mcm_video1.jpg' class='video__image'>",
+      "image": "mcm_video1.jpg",
       "title": "Singapore Car Scene",
       "info": "Some long text"
     },
     {
-      "image" : "<img src='images/mcm_video2.jpg' class='video__image'>",
+      "image" : "mcm_video2.jpg",
       "title": "Lend Us A Ride: Australia [EPISODE 5]",
       "info": "Some long text"
     },
     {
-      "image" : "<img src='images/mcm_video3.jpg' class='video__image'>",
+      "image" : "mcm_video3.jpg",
       "title" : "Picking up our JDM FairladyZ from Japan (240Z) - FINALE",
       "info": "Some long text"
     },
     {
-      "image" : "<img src='images/mcm_video4.jpg' class='video__image'>",
+      "image" : "mcm_video4.jpg",
       "title" : "HONDA S2000 Build Part 1",
       "info" : "Some long text"
     },
     {
-      "image" : "<img src='images/mcm_video5.jpg' class='video__image'>",
+      "image" : "mcm_video5.jpg",
       "title" : "Mod Max V8 Nissan Silvia Car Review",
       "info": "Some long text"
     },
     {
-      "image" : "<img src='images/mcm_video6.jpg' class='video__image'>",
+      "image" : "mcm_video6.jpg",
       "title" : "MCM VS ROADKILL [SPECIAL]",
       "info": "Some long text"
     }

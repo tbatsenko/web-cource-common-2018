@@ -1,0 +1,86 @@
+<nav class="navigation">
+    {{#navigation}}
+        <div class="navigation__left">
+            <button class="button button_round button_type_svg" aria-label="Left menu">
+                <svg viewBox="0 0 24 24">
+                    <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"></path>
+                </svg>
+            </button>
+            <a href="#"><img class="navigation__logo" src="{{pathToLogo}}" alt="logo"></a>    
+        </div>
+        <div class="navigation__search-block">
+            <input type="text" class="navigation__search" placeholder="{{searchPlaceholder}}">
+                        <button class="navigation__search-button button button_type_svg" aria-label="Search">
+                <svg class="navigation__search-button-svg" viewBox="0 0 24 24">
+                    <path d="{{searchButton}}"></path>
+                </svg>
+            </button>
+        </div>
+        <div class="navigation__right">
+            {{#button}}
+            <button class="navigation__button button button_round button_type_svg">
+                <svg viewBox="0 0 24 24">
+                    <path d="{{.}}"></path>
+                </svg>
+            </button>
+            {{/button}}
+            <button class="navigation__button button button_round">
+                <img class="button__image" src="{{avatar}}" alt="avatar"/>
+            </button>
+        </div>
+        {{/navigation}}
+    </nav>
+    <main id="main-content">
+        {{#main}}
+        <aside class="aside">
+            {{#aside}}
+            {{#aside-block}}
+            <div class="aside-block">
+                {{#if header}}
+                <header class="aside-block__header">{{header}}</header>
+                {{/if}}
+                {{#elem}}
+                <div class="aside-block__button">
+                    {{#if svg}}
+                    <svg class="aside-block__icon button button_rnd button_type_svg" viewBox="0 0 24 24">
+                        <path d="{{svg}}"></path>
+                    </svg>
+                    {{else}}
+                    <button class="aside-block__icon button button_round">
+                        <img class="button__image" src="{{ico}}" alt="avatar"/>
+                    </button>
+                    {{/if}}
+                    <div class="aside-block__text">{{text}}</div>
+                    {{#if counter}}
+                    <div class="aside-block__counter">{{counter}}</div>
+                    {{/if}}
+                </div>
+                {{/elem}}
+            </div>
+            {{/aside-block}}
+        {{/aside}}        
+        </aside>
+        <div id="video-content">
+        {{#content}}
+            {{#video-block}}
+            <div class="video-block">
+                <header class="video-block__header">{{header}}</header>
+                <section class="video-block__videos">
+                    {{#elem}}
+                    <article class="video-block__item">
+                        <img src="{{icon}}" alt="" class="video-block__icon">
+                        <div class="video-block__text">
+                            <p class="video-block__title">{{title}}</p>
+                            <p class="video-block__who">{{who}}</p>
+                            <p class="video-block__views">{{views}}</p>
+                            <p class="video-block__time">{{time}}</p>
+                        </div>
+                    </article>
+                    {{/elem}}
+                </section>
+            </div>
+            {{/video-block}}
+        {{/content}}
+        </div>
+    {{/main}}
+    </main>

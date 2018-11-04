@@ -1,0 +1,34 @@
+.feed {
+  background: lightcyan;
+  width: 500px;
+  margin-left: 180px;
+  margin-right: 20px;
+}
+.navigation-bar,
+.feed,
+.right-menu {
+  margin-top: 55px;
+}
+.feed__post {
+  background-color: #f3f3f3;
+  margin-bottom: 10px;
+  height: 155px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.feed__item {
+  display: flex;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  background-color: #e5e5e5;
+}
+.right-menu {
+  width: 244px;
+}
+.right-menu__stories {
+  background-color: lightgrey;
+}
+.post__attachments {
+  background-color: #2979ff;
+}

@@ -15,11 +15,13 @@ ul {
     list-style: none;
 }
 
-#top-bar-navigation {
+.header .navigation {
     display: flex;
-    height: 42px;
+    flex-flow: row wrap;
     align-items: center;
-    padding: 0 10px;
+    justify-content: space-around;
+    height: 42px;
+    margin-top: 0;
     background: #3b5998;
     color: #fff;
     font-size: 0.9em;
@@ -50,10 +52,6 @@ form {
     display: inline-block;
     background: url("https://static.xx.fbcdn.net/rsrc.php/v3/yF/r/1c0gE0MbEo8.png");
     background-size: cover;
-}
-
-#top-bar-navigation li:not(:first-child):not(#fa_search) {
-    margin-left: 5px;
 }
 
 .bar-buttons {

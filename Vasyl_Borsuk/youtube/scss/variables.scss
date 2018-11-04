@@ -1,0 +1,11 @@
+$header_height: 56px;
+$main-height: calc(100% - #{$header_height});
+
+$left-side-width: 240px;
+$center-width: calc(100% - #{$left-side-width});
+
+$video-width: 210px;
+$video-height: 204px;
+
+$video-block-width: 1280px;
+$n-videos: 6;
