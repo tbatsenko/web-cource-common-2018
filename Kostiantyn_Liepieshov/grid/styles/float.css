@@ -3,21 +3,13 @@
     --basic-cell-width: calc(100% / 16 - 2 * var(--gutter-width));
 }
 
-html, body {
-    margin: 0;
-    padding: 0;
-}
-
 .container_16 {
     width: 840px;
     margin: auto;
     overflow: hidden;
-    background-color: #2980b9;
 }
 
 .grid {
-    min-height: 50px;
-    background-color: #2ecc71;
     margin: 5px calc(var(--gutter-width));
     float: left;
 }
@@ -39,7 +31,7 @@ html, body {
 .grid_15 {width: calc((var(--basic-cell-width) + 2*var(--gutter-width)) * 15 - 2 * var(--gutter-width));}
 .grid_16 {width: calc((var(--basic-cell-width) + 2*var(--gutter-width)) * 16 - 2 * var(--gutter-width));}
 
-@media (max-width: 670px) {
+@media (max-width: 840px) {
     .grid_sm_1 {width: calc((var(--basic-cell-width) + 2*var(--gutter-width)) * 1 - 2 * var(--gutter-width));}
     .grid_sm_2 {width: calc((var(--basic-cell-width) + 2*var(--gutter-width)) * 2 - 2 * var(--gutter-width));}
     .grid_sm_3 {width: calc((var(--basic-cell-width) + 2*var(--gutter-width)) * 3 - 2 * var(--gutter-width));}
