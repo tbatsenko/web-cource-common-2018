@@ -1,0 +1,209 @@
+:root {
+  --left_menu_width: 256px;
+}
+
+body, header, section, button, div, input {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  min-width: 780px;
+}
+
+button:hover{
+  cursor: pointer;
+}
+
+.header {
+
+  display: flex;
+  justify-content: flex-start;
+  height: 64px;
+  border-bottom: 1px solid #eceff1;
+  box-sizing: border-box;
+  padding: 8px 0;
+  //justify-content: space-between;
+
+  .logo_section {
+    display: flex;
+    //width: calc(var(--left_menu_width));
+    padding-left: 8px;
+    width: var(--left_menu_width);
+    align-items: center;
+    //margin-right: 8px;
+
+    .menu_hider {
+      margin-left: 4px;
+      //background: white;
+      background: url("https://cdn2.iconfinder.com/data/icons/clean-minimal-set/16/open-menu-01-512.png") no-repeat center;
+      background-size: 20px 16px;
+      border: 0;
+      height: 48px;
+      width: 48px;
+      border-radius: 100%;
+      &:hover {
+        background-color: #ededed;
+      }
+    }
+
+    .logo{
+      margin-left: 4px;
+      height: 40px;
+    }
+
+  }
+
+  .top_panel {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: calc(100% - var(--left_menu_width));
+    min-width: 500px;
+
+
+    &__search_bar{
+      background-color: #f5f5f5;
+      height: 48px;
+      width: 722px;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      padding: 5px 5px 5px 7px;
+      border-radius: 3px;
+
+      .lupa{
+        background-color: transparent;
+        //background-color: red;
+        border: 0;
+        height: 38px;
+        width: 38px;
+        background: url("../images/lupa.png") no-repeat center;
+        background-size: 20px 20px;
+        border-radius: 100%;
+
+        &:active{
+          background-color: #dadada;
+        }
+      }
+
+      .input{
+        //width: 100%;
+        border: 0;
+        background-color: transparent;
+        //background-color: blue;
+        padding-left: 8px;
+        padding-top: 2px;
+        height: 48px;
+        line-height: 19px;
+        color: gray;
+        font: normal 16px Roboto,sans-serif;
+        width: calc(100% - 38px * 3 - 4px);
+
+      }
+
+      .clear{
+        height: 38px;
+        width: 38px;
+        border: 0;
+        background-color: transparent;
+        //background-color: red;
+        border-radius: 100%;
+
+        &:hover{
+          cursor: default;
+        }
+      }
+
+      .extend{
+        background-color: transparent;
+        //background-color: blue;
+        border: 0;
+        height: 38px;
+        width: 38px;
+        background: url("../images/dropdown.png") no-repeat center;
+        background-size: 20px 20px;
+        border-radius: 100%;
+        justify-self: flex-end;
+
+        &:active{
+          background-color: #dadada;
+        }
+      }
+    }
+
+    &__buttons {
+
+      display: flex;
+      align-items: center;
+      margin-right: 12px;
+
+      .apps_button{
+        background: url("https://image.flaticon.com/icons/svg/56/56844.svg") no-repeat center;
+        background-size: 16px 16px;
+        margin-right: 8px;
+      }
+
+      .notification_button{
+        background: url("../images/bell.png") no-repeat center;
+        background-size: 24px 24px;
+        margin-right: 16px;
+      }
+
+      .apps_button, .notification_button{
+        width: 40px;
+        height: 40px;
+        border: 0;
+        border-radius: 100%;
+        background-color: transparent;
+
+        &:active{
+          background-color: #dadada;
+        }
+      }
+
+
+      .profile_button {
+        width: 134px;
+        height: 48px;
+        border: 1px solid #dadce0;
+        border-radius: 8px;
+        background: white;
+        display: flex;
+        align-items: center;
+        //justify-content: space-around;
+
+        .institution_pic{
+          height: 32px;
+          width: 78px;
+          margin-left: 7px;
+        }
+
+        .profile_pic{
+          height: 32px;
+          width: 32px;
+          border-radius: 100%;
+          margin-left: 8px;
+        }
+      }
+
+    }
+
+    @media (max-width: 1260px) {
+      /* This block only applies to viewports <= breakpoint wide... */
+      &__search_bar{
+        width: calc(100% - 286px);
+      }
+    }
+
+    @media (min-width: 1260px) {
+      /* This block only applies to viewports >= breakpoint wide... */
+      &__search_bar{
+        width: 722px;
+      }
+    }
+
+  }
+
+}
