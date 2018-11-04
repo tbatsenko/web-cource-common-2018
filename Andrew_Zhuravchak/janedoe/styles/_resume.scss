@@ -1,0 +1,15 @@
+.resume {
+  display: flex;
+  height: 100vh;
+
+  &__brief {
+    flex-grow: 1;
+    flex-basis: 0;
+  }
+
+  &__info {
+    flex-grow: 1;
+    flex-basis: 0;
+    background-color: #f6f6f6;
+  }
+}

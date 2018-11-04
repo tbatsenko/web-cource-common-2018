@@ -1,6 +1,7 @@
 .main-section {
   display: flex;
 
+
   &__wrapper {
     display: flex;
     padding-top: 12px;
@@ -17,6 +18,7 @@
   &__content {
     width: 500px;
     display: flex;
+    flex-direction: column;
   }
 
   &__additional {
