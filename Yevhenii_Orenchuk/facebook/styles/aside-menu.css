@@ -1,0 +1,9 @@
+.right-menu {
+  width: 244px;
+}
+.right-menu__stories {
+  background-color: lightgrey;
+}
+.right-menu__top-bar {
+  background-color: red;
+}
