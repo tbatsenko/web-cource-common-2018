@@ -1,0 +1,12 @@
+@import "stories-block";
+@import "languages";
+
+.right-panel{
+  display: inline-block;
+  height: 300px;
+  margin: 16px 0 0;
+  vertical-align: top;
+  width: 303px;
+  position: absolute;
+  right: 100px;
+}

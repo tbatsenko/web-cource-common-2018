@@ -1,0 +1,40 @@
+@import "before_item";
+@import "stories";
+
+.stories-block{
+  width: auto;
+  height: auto;
+  background-color: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  padding: 10px;
+
+  &__title{
+    position: relative;
+    display: flex;
+    width: auto;
+    height: 20px;
+  }
+  &__head-title{
+    margin: 0;
+    font-weight: 600;
+    font-size: 13px;
+    color: #616770;
+  }
+  &__head-link{
+    font-size: 13px;
+    color: #365899;
+    cursor: pointer;
+    margin-left: 5px;
+  }
+  &__head-link_m{
+    margin-left: auto;
+  }
+  &__head-link_before:before{
+    @extend %before-item;
+    width: 12px;
+    height: 12px;
+    background: url("https://static.xx.fbcdn.net/rsrc.php/v3/yI/r/R1cQXxxT8PY.png") -13px -346px;
+    margin-right: 5px;
+    bottom: 1px;
+  }
+}

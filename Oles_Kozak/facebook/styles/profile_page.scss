@@ -1,0 +1,70 @@
+@import "base";
+@import "gallery";
+@import "navigation";
+@import "header";
+@import "logo";
+@import "search";
+@import "profile_head";
+@import "user-post";
+@import "before_item";
+@import "friends";
+@import "user_info";
+@import "profile_feed";
+
+.profile-page {
+  margin: auto;
+  position: relative;
+  right: 100px;
+  height: auto;
+  width: 800px;
+  top: 40px;
+}
+
+.profile-info{
+  display: inline-block;
+  width: 270px;
+  height: auto;
+  margin: 7px 0 0;
+  vertical-align: top;
+}
+
+.intro{
+  background: #fff;
+  border: 1px solid rgba(0, 0, 0, .2);
+  width: 100%;
+  padding: 15px;
+}
+
+.photos {
+  background: #fff;
+  border: 1px solid rgba(0, 0, 0, .2);
+  width: 100%;
+  padding: 15px;
+  margin-top: 12px;
+}
+
+.profile-info__title3 {
+  margin: 0;
+  line-height: 20px;
+  font-size: 16px;
+  color: #1c1e21;
+}
+
+%profile-info__title3_before:before {
+  @extend %before-item;
+  width: 24px;
+  height: 24px;
+  margin-right: 8px;
+  position: relative;
+  bottom: 2px;
+}
+
+.profile-info__title3_intro-before:before {
+  @extend %profile-info__title3_before;
+  background: url("https://static.xx.fbcdn.net/rsrc.php/v3/ym/r/bfbnz6JNu80.png") no-repeat 0 -87px;
+}
+.profile-info__title3_photo-before:before {
+  @extend %profile-info__title3_before;
+  background: url("https://static.xx.fbcdn.net/rsrc.php/v3/yf/r/palWVhMO67o.png") -175px -245px;
+}
+

@@ -1,0 +1,20 @@
+.resume {
+  display: flex;
+  height: 100vh; }
+  .resume__brief {
+    flex-grow: 1;
+    flex-basis: 0; }
+  .resume__info {
+    flex-grow: 1;
+    flex-basis: 0;
+    background-color: #f6f6f6; }
+
+html {
+  height: 100%; }
+
+body {
+  min-height: 100%;
+  margin: 0;
+  padding: 0; }
+
+/*# sourceMappingURL=main.css.map */
