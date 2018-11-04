@@ -1,0 +1,21 @@
+.button--top-menu {
+  background-color: transparent;
+  outline: none;
+  border: none;
+  box-sizing: border-box;
+}
+
+.button {
+  cursor: pointer;
+}
+.button--top-menu {
+  display: flex;
+  height: 40px;
+  width: 40px;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  margin: 0px 2px 0 2px;
+}
+
+/*# sourceMappingURL=button.css.map */

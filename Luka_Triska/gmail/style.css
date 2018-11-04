@@ -1,0 +1,103 @@
+@font-face {
+    font-family: Product Sans;
+    src: url('fonts/Product Sans Regular.ttf');
+}
+
+body {
+    margin-left: 0;
+    margin-right: 0;
+    background-color: #fff;
+    font-family: "Segoe UI", serif;
+}
+
+#top-bar-navigation {
+    margin: 0;
+    width: available;
+    border-bottom: 1px solid lightgray;
+    height: 64px;
+    padding-top: 8px;
+    padding-left: 18px;
+    display: flex;
+}
+
+#main-menu > a > img {
+    margin-top: 18px;
+}
+
+#logo > img {
+    margin: 10px 0 0 10px;
+}
+
+#magnifier-icon {
+    margin: 8px 0 0 86px;
+}
+
+#magnifier-icon > button {
+    border: 0;
+    border-bottom-left-radius: 3px;
+    border-top-left-radius: 3px;
+    width: 46px;
+    height: 48px;
+    background-color: #f6f6f6;
+}
+
+#search-bar > form > input {
+    border: 0;
+    height: 46px;
+    width: 625px;
+    font-family: "Product Sans", sans-serif;
+    font-size: large;
+
+    margin: 8px 0 0 0;
+    background-color: #f6f6f6;
+    /*background-color: red;*/
+}
+
+#dropdown > button {
+    margin: 8px 0 0 0;
+    border: 0;
+    border-bottom-right-radius: 3px;
+    border-top-right-radius: 3px;
+    height: 48px;
+    width: 48px;
+    background-color: #f6f6f6;
+}
+
+#google-apps {
+    margin-left: 510px;
+}
+
+.top-bar-buttons {
+    border: 0;
+    background-color: #fff;
+
+}
+
+#google-apps > button > a > svg {
+    height: 40px;
+    width: 42px;
+    margin-top: 20px;
+
+}
+
+#notifications > button > a > svg {
+    margin-top: 20px;
+    height: 24px;
+    width: 24px;
+}
+
+#user-logo > button > a > img {
+    margin: 14px 0 0 10px;
+    height: 35px;
+    width: 35px;
+}
+
+nav {
+    margin-top: -15px;
+    width: 100%;
+    background: #fff;
+}
+
+ul {
+    list-style: none;
+}
