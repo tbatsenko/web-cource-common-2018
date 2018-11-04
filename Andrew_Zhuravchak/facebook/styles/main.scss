@@ -1,6 +1,9 @@
 @import "components/header";
 @import "components/search-form";
 @import "components/user-pic";
+@import "components/main-section";
+@import "components/left-nav";
+@import "components/icon";
 
 html {
   height: 100%;
@@ -12,4 +15,5 @@ body {
   padding: 0;
   background-color: #e9ebee;
   overflow: scroll;
+  font-family: Helvetica, Arial, sans-serif;
 }
