@@ -3,11 +3,12 @@
 }
 
 .container_16 {
-    width: calc(840px - 2 * var(--gutter-width));
+    width: 840px;
+    box-sizing: border-box;
     margin: auto;
     display: grid;
     grid-template-columns: repeat(16, 1fr);
-    grid-gap: 5px var(--gutter-width);
+    grid-gap: 10px calc(2 * var(--gutter-width));
     align-items: start;
     padding: 5px var(--gutter-width);
 }
