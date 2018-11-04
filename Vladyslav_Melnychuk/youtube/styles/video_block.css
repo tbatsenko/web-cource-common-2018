@@ -1,0 +1,29 @@
+.video-block {
+  width: 210px;
+  height: 203px;
+  margin: 0 4px 24px 0; }
+  .video-block__thumbnail {
+    width: 210px;
+    height: 117px; }
+  .video-block__video-title {
+    font-size: 1.4rem;
+    font-weight: 500;
+    line-height: 1.6rem;
+    margin: 8px 0; }
+  .video-block__video-title a {
+    font-size: 1.4rem;
+    font-weight: 500;
+    line-height: 1.6rem;
+    text-decoration: none;
+    color: inherit; }
+  .video-block__footer {
+    color: #11111199;
+    font-size: 1.3rem;
+    font-weight: 400;
+    line-height: 1.8rem; }
+  .video-block__channel-link {
+    display: block;
+    text-decoration: none;
+    color: inherit; }
+
+/*# sourceMappingURL=video_block.css.map */

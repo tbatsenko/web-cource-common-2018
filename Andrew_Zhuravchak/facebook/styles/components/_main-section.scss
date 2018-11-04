@@ -1,0 +1,34 @@
+.main-section {
+  display: flex;
+
+
+  &__wrapper {
+    display: flex;
+    padding-top: 12px;
+    justify-content: space-between;
+    width: 1012px;
+    margin: 0 auto;
+  }
+
+  &__nav {
+    width: 180px;
+    display: flex;
+  }
+
+  &__content {
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__additional {
+    width: 308px;
+    display: flex;
+  }
+
+  &__friends-list {
+    width: 205px;
+    height: 100%;
+    box-shadow: 1px 0 0 #f0f0f2 inset;
+  }
+}

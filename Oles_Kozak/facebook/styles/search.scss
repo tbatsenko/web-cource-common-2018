@@ -1,0 +1,47 @@
+//Search form implementation
+
+.search {
+  display: inline;
+  line-height: 40px;
+}
+
+.search-field {
+  width: 400px;
+  border-radius: 3px 0 0 3px;
+  font-size: 14px;
+  padding: 5px;
+  height: 24px;
+  border: none;
+  position: relative;
+  vertical-align: middle;
+  box-sizing: border-box;
+  bottom: 1px;
+}
+
+.search-button {
+  cursor: pointer;
+  background: rgb(245, 246, 247);
+  border: none;
+  height: 24px;
+  left: -5px;
+  width: 45px;
+  overflow: hidden;
+  color: transparent;
+  position: relative;
+  border-radius: 0 3px 3px 0;
+  bottom: 1px;
+}
+
+.search-button:before {
+  content: "";
+  height: 16px;
+  width: 15px;
+  position: absolute;
+  background: black;
+  left: 13px;
+  top: 5px;
+  background: url("https://static.xx.fbcdn.net/rsrc.php/v3/yF/r/1c0gE0MbEo8.png");
+  background-size: 24px;
+  background-position: 3px 26px;
+  border-radius: 0 3px 3px 0;
+}
