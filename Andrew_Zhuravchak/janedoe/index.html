@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Jane Doe</title>
+
+    <link rel="stylesheet" href="styles/main.css">
+</head>
+<body>
+
+<script src="node_modules/handlebars/dist/handlebars.js"></script>
+<script>
+  const render = async (templateSrc, dataSrc, conteiner) => {
+    const templateStr = await (await fetch(templateSrc)).text()
+    const data = await (await fetch(dataSrc)).json()
+    const compiled = Handlebars.compile(templateStr)
+    conteiner.innerHTML = compiled(data)
+  }
+
+  const renderPage = async () => {
+    await render('templates/resume.hbs', 'data/info.json', document.body)
+  }
+
+  renderPage()
+</script>
+
+</body>
+</html>
