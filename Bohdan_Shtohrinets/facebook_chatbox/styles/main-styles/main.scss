@@ -1,0 +1,25 @@
+$main-background: #e3f2fd;
+$main-font: "Opensans", Arial, serif;
+
+body{
+  background-color: $main-background;
+  font-family: $main-font;
+}
+
+ul{
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+*{box-sizing: border-box}
+
+.facebook-chat{
+  margin: 100px auto;
+  width: 292px;
+  height: 384px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.11);
+  overflow: hidden;
+}

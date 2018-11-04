@@ -1,0 +1,16 @@
+@import "../variables";
+
+.video-block {
+  display: flex;
+  width: $video-block-width;
+  margin: auto;
+  flex-direction: column;
+  border-bottom: 1px solid #e1e1e1;
+
+  &__row {
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}

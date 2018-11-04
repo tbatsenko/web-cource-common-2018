@@ -1,0 +1,70 @@
+.chat__history-timestamp {
+    width: auto;
+    text-align: center;
+
+}
+
+.chat__history-interlocutor-message {
+    position: relative;
+    overflow: hidden;
+    margin: 8px 0;
+}
+
+.chat__history-local-message {
+    position: relative;
+    overflow: hidden;
+    margin: 15px 0;
+}
+
+.chat__history-interlocutor-image {
+    position: absolute;
+    width: 28px;
+    left: 16px;
+    top: -1px;
+}
+
+.chat__history-interlocutor-text {
+    /*identical properties*/
+    max-width: 220px;
+    padding: 5px 12px 7px 12px;
+    border-radius: 14px;
+    margin-bottom: 1px;
+
+    /*different properties*/
+    background-color: #f3f3f3;
+    float: left;
+    clear: left;
+    margin-left: 52px;
+
+    &_first {
+        border-bottom-left-radius: 0;
+    }
+    &_last {
+        border-top-left-radius: 0;
+        padding-top: 4px;
+        padding-bottom: 8px;
+    }
+}
+
+
+.chat__history-local-text {
+    /*identical properties*/
+    max-width: 220px;
+    padding: 5px 14px 7px 12px;
+    border-radius: 14px;
+    margin-bottom: 1px;
+
+    /*different properties*/
+    background-color: #2979ff;
+    float: right;
+    clear: right;
+    margin-right: 16px;
+
+    &_first {
+        border-bottom-right-radius: 0;
+    }
+    &_last {
+        border-top-right-radius: 0;
+        padding: 5px 13px 7px 12px;
+    }
+}

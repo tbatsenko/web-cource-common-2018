@@ -1,0 +1,53 @@
+main{
+
+    margin-left: 20%;
+    margin-right: 20%;
+
+}
+
+a {
+    text-decoration: none;
+    color: #0090D2;;
+}
+
+.hdr{
+    background-color: #0063A6;
+    color: white;
+    width: 100%;
+    height: 10%;
+}
+
+.nv{
+    background-color: #0090D2;
+    color: white;
+    height: 40px;
+    margin-left: 20%;
+    margin-right: 20%;
+    margin-top: 4%;
+}
+
+.article_hdt {
+    font-size: 2em;
+    color: lightskyblue;
+}
+
+.artcl{
+    padding-left: 166px;
+    padding-right: 400px;
+    font-size: 1.18em;
+    }
+
+.nv_href{
+    color: white;
+    text-decoration: none;
+}
+
+.src{
+    margin-right: 20%;
+}
+
+.line{
+    margin-right: 90%;
+    transform: rotate(90deg);
+    width: 1000px;
+}

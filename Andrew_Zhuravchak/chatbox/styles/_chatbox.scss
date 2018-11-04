@@ -1,0 +1,158 @@
+// Variables
+@import "base";
+
+@import "messages";
+
+@mixin chatbox-scrollbar {
+  &::-webkit-scrollbar {
+    width: 6px;
+    background-color: transparent;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: $chat-box__bg-color__secondary;
+  }
+}
+
+.chat-box {
+  width: 292px;
+  height: 384px;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  border-radius: 4px 4px 0 0;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.11);
+  background-color: #ffffff;
+
+  &__header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 32px;
+    padding: 7px 10px;
+    box-sizing: border-box;
+    background: $chat-box__bg-color;
+    border-radius: 4px 4px 0 0;
+  }
+
+  &__header-title {
+    margin: 0;
+    font-size: $chat-box__font-size;
+    font-family: $chat-box__font-family;
+    color: $chat-box__font-color_active;
+    font-weight: bold;
+
+    &:before {
+      content: '';
+      display: inline-block;
+      width: 6px;
+      height: 6px;
+      margin-right: 7px;
+      margin-bottom: 1px;
+      border-radius: 50%;
+      background-color: #69f0ae;
+    }
+  }
+
+  &__header-actions {
+    display: flex;
+    align-items: center;
+    height: 18px;
+  }
+
+  &__header-action-button {
+    background: none;
+    border: 0;
+    padding: 0;
+    margin: 0 0 0 11px;
+
+    &:hover {
+      cursor: pointer;
+    }
+
+    &:focus {
+      outline: none;
+    }
+  }
+
+  &__header-action-icon {
+    height: inherit;
+    width: auto;
+    display: block;
+    object-fit: contain;
+  }
+
+  &__messages {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    overflow-y: scroll;
+    padding: 16px;
+
+    @include chatbox-scrollbar;
+  }
+
+
+  &__footer {
+    border-top: 1px solid #e5e5e5;
+    min-height: 60px;
+  }
+
+  &__message-input {
+    padding: 7px 16px;
+    border: none;
+    width: 100%;
+    box-sizing: border-box;
+    font-size: 12px;
+    resize: none;
+    //font-weight: 600;
+    font-family: $chat-box__font-family;
+    color: $chat-box__font-color__nonactive;
+
+    @include chatbox-scrollbar;
+
+    &:focus {
+      outline: none;
+    }
+
+    &::placeholder {
+      font-family: OpenSans-Semibold, sans-serif;
+      color: $chat-box__font-color__secondary;
+    }
+  }
+
+  &__footer-actions {
+    display: flex;
+    align-items: center;
+    height: 21px;
+    padding: 0 16px 7px 16px;
+  }
+
+  &__footer-action-button {
+    background: none;
+    border: 0;
+    padding: 0;
+    margin: 0 11px 0 0;
+
+    &:hover {
+      cursor: pointer;
+    }
+
+    &:focus {
+      outline: none;
+    }
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  &__footer-action-icon {
+    height: inherit;
+    width: auto;
+    display: block;
+    object-fit: contain;
+  }
+
+}

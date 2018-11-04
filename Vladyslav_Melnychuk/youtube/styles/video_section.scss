@@ -1,0 +1,21 @@
+.videos-section {
+  width: 1279px;
+  //height: 1877px;
+
+  &__title {
+    font-size: 1.6rem;
+    font-weight: 500;
+    line-height: 2rem;
+    width: 1070px;
+    height: 32px;
+    margin: 24px auto 20px auto;
+  }
+}
+
+.videos-wrapper {
+  margin: auto;
+  width: 1070px;
+  height: 245px;
+  display: flex;
+  justify-content: center;
+}
