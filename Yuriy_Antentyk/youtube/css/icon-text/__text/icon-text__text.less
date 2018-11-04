@@ -1,0 +1,17 @@
+@import "../../colors.less";
+@import "../../fonts.less";
+
+.icon-text__text{
+    font-family: @youtube-font;
+    font-size: @youtube-small;
+    color: @youtube-black;
+    text-decoration: none;
+}
+
+.icon-text:hover .icon-text__text, .icon-text_selected .icon-text__text{
+    color: @youtube-white;
+}
+
+.icon-text_selected .icon-text__text{
+    text-shadow: 1px 1px 2px @youtube-black; 
+}
