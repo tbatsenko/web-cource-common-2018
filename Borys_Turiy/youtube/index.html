@@ -18,7 +18,7 @@
     const data = await (await fetch(dataURL)).json();
     container.innerHTML = template(data);
   };
-  render("template.handlebars", "data.json", document.body)
+  render("template.hbs", "data.json", document.body)
 </script>
 </body>
 </html>
