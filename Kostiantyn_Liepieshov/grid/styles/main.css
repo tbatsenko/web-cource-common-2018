@@ -1,0 +1,12 @@
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+.main-zone {
+    background-color: #2980b9;
+}
+
+.main-zone > div {
+    background-color: #2ecc71;
+}
