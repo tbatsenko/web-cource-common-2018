@@ -1,8 +1,44 @@
 .icon {
   width: 20px;
   height: 20px;
-  background-image: url("../images/icons.png");
+  background-image: url("../images/icon-set.png");
   background-repeat: no-repeat;
   background-size: auto;
-  background-position: 0 -2214px;
+  margin-right: 5px;
+
+  &--dots {
+    background-position: 0 -2214px;
+  }
+
+  &--news {
+    background-position: 0 -1395px;
+  }
+
+  &--messenger {
+    background-position: 0 -240px;
+  }
+
+  &--friends {
+    background-position: 0 -1584px;
+  }
+
+  &--event {
+    background-position: 0 -618px;
+  }
+
+  &--group {
+    background-position: 0 -177px;
+  }
+
+  &--page {
+    background-position: 0 -303px;
+  }
+
+  &--memories {
+    background-position: 0 -1458px;
+  }
+
+  &--arrow {
+    background-position: -2px -132px;
+  }
 }
