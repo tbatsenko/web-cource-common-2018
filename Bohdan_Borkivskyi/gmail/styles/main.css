@@ -22,7 +22,7 @@ button:hover {
   .header .logo_section {
     display: flex;
     padding-left: 8px;
-    width: 256px;
+    width: var(--left_menu_width);
     align-items: center; }
     .header .logo_section .menu_hider {
       margin-left: 4px;
