@@ -9,11 +9,11 @@
     display: flex;
     flex-direction: column;
 
-    background-image: url("../images/user.jpeg");
-    object-fit: contain;
+    background: url("../images/user.jpeg") no-repeat;
+    background-size: cover;
+    object-fit: cover;
 
     padding: 50px 70px;
-
 
     &-bottom-group {
       margin-top: auto;
@@ -65,6 +65,53 @@
   &__info {
     flex-grow: 1;
     flex-basis: 0;
-    background-color: #f6f6f6;
+    background-color: #fff;
+
+    padding: 60px 80px;
+
+    &-blockquote {
+      text-align: center;
+      font-family: AvenirNext, serif;
+      font-size: 25px;
+      font-weight: 500;
+      font-style: italic;
+      margin: 0 auto;
+      max-width: 500px;
+      color: #545454;
+    }
+
+    &-block {
+      font-family: AvenirNext, serif;
+      font-size: 22px;
+      text-align: left;
+      color: #181818;
+      margin-bottom: 50px;
+
+      &--list {
+        padding: 0;
+      }
+    }
+
+    &-li {
+      margin-left: 25px;
+      margin-bottom: 20px;
+      color: #d9e8bd;
+
+      &--goal {
+        max-width: 420px;
+      }
+
+      &-text {
+        color: #181818;
+      }
+    }
+
+    &-subhead {
+      font-size: 25px;
+      font-weight: bold;
+      text-transform: uppercase;
+      margin-bottom: 30px;
+      display: block;
+    }
   }
 }

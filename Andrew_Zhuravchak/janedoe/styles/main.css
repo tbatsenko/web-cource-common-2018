@@ -7,8 +7,9 @@
     color: #fff;
     display: flex;
     flex-direction: column;
-    background-image: url("../images/user.jpeg");
-    object-fit: contain;
+    background: url("../images/user.jpeg") no-repeat;
+    background-size: cover;
+    object-fit: cover;
     padding: 50px 70px; }
     .resume__brief-bottom-group {
       margin-top: auto; }
@@ -45,7 +46,39 @@
   .resume__info {
     flex-grow: 1;
     flex-basis: 0;
-    background-color: #f6f6f6; }
+    background-color: #fff;
+    padding: 60px 80px; }
+    .resume__info-blockquote {
+      text-align: center;
+      font-family: AvenirNext, serif;
+      font-size: 25px;
+      font-weight: 500;
+      font-style: italic;
+      margin: 0 auto;
+      max-width: 500px;
+      color: #545454; }
+    .resume__info-block {
+      font-family: AvenirNext, serif;
+      font-size: 22px;
+      text-align: left;
+      color: #181818;
+      margin-bottom: 50px; }
+      .resume__info-block--list {
+        padding: 0; }
+    .resume__info-li {
+      margin-left: 25px;
+      margin-bottom: 20px;
+      color: #d9e8bd; }
+      .resume__info-li--goal {
+        max-width: 420px; }
+      .resume__info-li-text {
+        color: #181818; }
+    .resume__info-subhead {
+      font-size: 25px;
+      font-weight: bold;
+      text-transform: uppercase;
+      margin-bottom: 30px;
+      display: block; }
 
 html {
   height: 100%; }
