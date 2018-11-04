@@ -113,62 +113,13 @@
       "avatar": "#",
       "user-name": "Nastya Tyman",
       "date": "2 years ago",
-      "text": "Охеренный трек﻿",
+      "text": "О***нный трек﻿",
       "likes": 548,
       "dislikes": 0,
       "replies": [
         0,
         0
       ]
-    }
-  ],
-  "next-video": {
-    "link": "https://www.youtube.com/watch?v=nuJjc8GEp60",
-    "preview": "https://i.ytimg.com/vi/nuJjc8GEp60/hqdefault.jpg?sqp=-oaymwEZCNACELwBSFXyq4qpAwsIARUAAIhCGAFwAQ==&rs=AOn4CLCbQFaK61gilnKHqpobOL9aNdkVoA",
-    "title": "Гуф ft. Баста - Гуф Умер",
-    "channel": "ТО \"Gazgolder\"",
-    "verified": "yes",
-    "views": "6M"
-  },
-  "mix-videos": {
-    "link": "https://www.youtube.com/watch?v=cRm54SJxcao&list=RDcRm54SJxcao&start_radio=1",
-    "preview": "https://i.ytimg.com/vi/cRm54SJxcao/hqdefault.jpg?sqp=-oaymwEXCNACELwBSFryq4qpAwkIARUAAIhCGAE=&rs=AOn4CLAy6kbppzXOKL-wzvJWkvRbRmtGmg",
-    "title": "Mix - Баста / Гуф - ЧП",
-    "channel": "YouTube",
-    "verified": "no"
-  },
-  "recommended-videos": [
-    {
-      "link": "https://www.youtube.com/watch?v=rRs03Tov6cI",
-      "preview": "https://i.ytimg.com/vi/rRs03Tov6cI/hqdefault.jpg?sqp=-oaymwEZCNACELwBSFXyq4qpAwsIARUAAIhCGAFwAQ==&rs=AOn4CLB0_Xt4SVupO-k8Q-pdEAghJqehjw",
-      "title": "Игровой ноутбук, который я хочу себе купить",
-      "channel": "Wylsacom",
-      "verified": "yes",
-      "views": "382K"
-    },
-    {
-      "link": "https://www.youtube.com/watch?v=wmfmVkiv_V4",
-      "preview": "https://i.ytimg.com/vi/wmfmVkiv_V4/hqdefault.jpg?sqp=-oaymwEZCNACELwBSFXyq4qpAwsIARUAAIhCGAFwAQ==&rs=AOn4CLCDFmAQkY5605oyq3UFu9CvYGLtNg",
-      "title": "KillaGram – Будь мудаком",
-      "channel": "REAL FM",
-      "verified": "no",
-      "views": "48K"
-    },
-    {
-      "link": "https://www.youtube.com/watch?v=75JjflWKs98",
-      "preview": "https://i.ytimg.com/vi/75JjflWKs98/hqdefault.jpg?sqp=-oaymwEZCNACELwBSFXyq4qpAwsIARUAAIhCGAFwAQ==&rs=AOn4CLBXqz2v-zzWWoakF0pjjMsux4akMw",
-      "title": "Leningrad - Real St.P bullshit",
-      "channel": "Ленинград | Leningrad",
-      "verified": "artist",
-      "views": "60M"
-    },
-    {
-      "link": "https://www.youtube.com/watch?v=EdeDx9Z-2FE",
-      "preview": "https://i.ytimg.com/vi/EdeDx9Z-2FE/hqdefault.jpg?sqp=-oaymwEZCNACELwBSFXyq4qpAwsIARUAAIhCGAFwAQ==&rs=AOn4CLBGCwHOh4HP0g7v19iRR33Zc2EoCg",
-      "title": "Баста ft. Гуф - Только Сегодня",
-      "channel": "Ленинград | Leningrad",
-      "verified": "yes",
-      "views": "1.1M"
     }
   ]
 }
