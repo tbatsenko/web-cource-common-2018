@@ -5,6 +5,7 @@
   background-repeat: no-repeat;
   background-size: auto;
   margin-right: 5px;
+  display: block;
 
   &--dots {
     background-position: 0 -2214px;
@@ -40,5 +41,21 @@
 
   &--arrow {
     background-position: -2px -132px;
+  }
+
+  &--pen {
+    background-position: -51px -608px;
+  }
+
+  &--album {
+    background-position: 0 -608px;
+  }
+
+  &--video {
+    background-position: 0 -2629px;
+  }
+
+  &--tag-friend {
+    background-position: 0 -975px;
   }
 }
