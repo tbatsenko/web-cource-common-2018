@@ -15,11 +15,10 @@ ul {
     list-style: none;
 }
 
-.header .navigation {
+.header__navigation {
     display: flex;
     flex-flow: row wrap;
     align-items: center;
-    justify-content: space-around;
     height: 42px;
     margin-top: 0;
     background: #3b5998;
