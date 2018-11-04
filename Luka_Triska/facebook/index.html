@@ -4,86 +4,54 @@
     <link rel="stylesheet" href="styles/style.css">
     <link rel="stylesheet" href="styles/sidebar.css">
     <link rel="stylesheet" href="styles/main-content.css">
+    <link rel="stylesheet" href="styles/post.css">
     <meta charset="UTF-8">
     <title>Facebook</title>
 </head>
 <body>
 
+<header class="header">
+    <ul class="header__navigation">
+        <li id="fa_logo"></li>
+        <li id="fa_search">
+            <form><input id="inputText" placeholder="Search facebook"/></form>
+        </li>
+        <li>
+            <button id="fa_search_button" type="submit">Search</button>
+        </li>
+        <li>
+            <button class="bar-buttons-wide">Luka</button>
+        </li>
+        <li>
+            <button class="bar-buttons-wide">Home</button>
+        </li>
+        <li>
+            <button class="bar-buttons-wide">Create</button>
+        </li>
+        <li>
+            <button class="bar-buttons" id="friend-requests-button" type="button"></button>
+        </li>
+        <li>
+            <button class="bar-buttons" id="messenger-button" type="button"></button>
+        </li>
+        <li>
+            <button class="bar-buttons" id="notifications-button" type="button"></button>
+        </li>
+        <li>
+            <button class="bar-buttons" id="account-switcher-button" type="button"> |</button>
+        </li>
+        <li>
+            <button class="bar-buttons" id="FAQ-button" type="button"></button>
+        </li>
+        <li>
+            <button class="bar-buttons" id="dropdown-button" type="button"></button>
+        </li>
+    </ul>
+</header>
+
 <main class="container">
-    <header class="header">
-        <ul class="header__navigation">
-            <li id="fa_logo"></li>
-            <li id="fa_search">
-                <form><input id="inputText" placeholder="Search facebook"/></form>
-            </li>
-            <li>
-                <button id="fa_search_button" type="submit">Search</button>
-            </li>
-            <li>
-                <button class="bar-buttons-wide">Luka</button>
-            </li>
-            <li>
-                <button class="bar-buttons-wide">Home</button>
-            </li>
-            <li>
-                <button class="bar-buttons-wide">Create</button>
-            </li>
-            <li>
-                <button class="bar-buttons" id="friend-requests-button" type="button"></button>
-            </li>
-            <li>
-                <button class="bar-buttons" id="messenger-button" type="button"></button>
-            </li>
-            <li>
-                <button class="bar-buttons" id="notifications-button" type="button"></button>
-            </li>
-            <li>
-                <button class="bar-buttons" id="account-switcher-button" type="button"> |</button>
-            </li>
-            <li>
-                <button class="bar-buttons" id="FAQ-button" type="button"></button>
-            </li>
-            <li>
-                <button class="bar-buttons" id="dropdown-button" type="button"></button>
-            </li>
-        </ul>
-    </header>
-    <article class="main">
-        <form id="create-container">
-            <section id="create-container-top-bar">
-                <button class="create-container-top-bar-buttons">Create Post</button>
-                <button class="create-container-top-bar-buttons">
-                    <a href="#">Photo / video album</a>
-                </button>
-                <button class="create-container-top-bar-buttons">
-                    <a href="#">Live Video</a>
-                </button>
-            </section>
-            <form>
-                <img id="profile-image" src="images/ninja-icon.png" height="40" width="40"/>
-                <input id="create-post-form" type="text" placeholder="What's on your mind?">
-            </form>
-            <section id="create-container-bottom-bar">
-                <button class="create-container-bottom-bar-buttons">List</button>
-                <button class="create-container-bottom-bar-buttons">Photo / video</button>
-                <button class="create-container-bottom-bar-buttons">Add People</button>
-            </section>
-        </form>
-        <section id="feed">
-            <article class="post">
-                <section class="post-header">
-                    <img src="images/ninja-icon.png" height="40" width="40"/>
-                    <ul>
-                        <li><a href="#">User User</a></li>
-                        <li>time</li>
-                    </ul>
 
-                </section>
-            </article>
-        </section>
-    </article>
-
-    <aside class="aside aside-left">
+    <aside class="container__aside--left">
         <ul>
             <li>
                 <button class="sidebar-buttons">News Feed</button>
@@ -110,9 +78,84 @@
             </li>
         </ul>
     </aside>
-    <aside class="aside aside-left">Aside 2</aside>
-    <footer class="footer">Footer</footer>
+    <article class="container__main">
+        <form class="main__create-container">
+            <section class="create-container__top-bar">
+                <button class="create-container__top-bar--button">Create Post</button>
+                <button class="create-container__top-bar--button">
+                    <a href="#">Photo / video album</a>
+                </button>
+                <button class="create-container__top-bar--button">
+                    <a href="#">Live Video</a>
+                </button>
+            </section>
+            <form class="create-container__form">
+                <img src="images/ninja-icon.png" height="40" width="40"/>
+                <input class="create-container__form--input" type="text" placeholder="What's on your mind?">
+            </form>
+            <section class="create-container__bottom-bar">
+                <button class="create-container__bottom-bar-button">List</button>
+                <button class="create-container__bottom-bar-button">Photo / video</button>
+                <button class="create-container__bottom-bar-button">Add People</button>
+            </section>
+        </form>
+        <article class="main__feed">
+            <section class="feed__post">
+
+                <header class="post__header">
+                    <img src="http://2016.igem.org/wiki/images/e/e0/Uclascrolldown.png"
+                         class="header__dropdown-button"/>
+                    <a href=#><img class='header__profile-pic'
+                                   src="https://scontent-frx5-1.xx.fbcdn.net/v/t1.0-1/c19.0.50.50/p50x50/13315628_165207490549339_3729522755829451787_n.png?_nc_cat=110&_nc_ht=scontent-frx5-1.xx&oh=6d92715a090353f7bbad71f6d2c5ef2a&oe=5C720AF0"></a>
+                    <h1 class="header__author-name">
+                        <a href="#">Tesla</a>
+                    </h1>
+                    <p class="header__date">2 hr ago</p>
+                </header>
+
+                <p class="post__caption">Tesla drivers just passed 3 billion electric miles, saving the world 120M
+                    gallons
+                    of petrol</p>
+                <img class="post__image" src="https://www.tesla.com/sites/default/files/red-tesla-model-s.jpg"/>
+
+                <div class="post__action">
+                    <a class="post__action--button" href="#">
+                        <img class="button__logo" src="https://1.bp.blogspot.com/-qns_lZPjg0I/VWY2dO1HN-I/AAAAAAAACVA/akLTMY7RJSk/s1600/Thumbs-up-facebook-icon-small.png"
+                             width="18" height="18"/>
+                        <p>Like</p>
+                    </a>
+
+                    <a class="post__action--button" href="#">
+                        <img class="button__logo" src="https://s0.wp.com/wp-content/themes/vip/facebook-groups/img/message_icon.png"
+                             width="18" height="18"/>
+                        <p>Comment</p>
+                    </a>
+
+                    <a class="post__action--button" href="#">
+                        <img class="button__logo" src="http://download.seaicons.com/icons/icons8/windows-8/512/Arrows-Redo-icon.png"
+                             width="18" height="18"/>
+                        <p>Share</p>
+                    </a>
+
+                </div>
+
+
+                <section class="post-header">
+
+                    <img src="images/ninja-icon.png" height="40" width="40"/>
+                    <ul>
+                        <li><a href="#">User User</a></li>
+                        <li>time</li>
+                    </ul>
+                </section>
+            </section>
+        </article>
+    </article>
+    <aside class="container__aside--right">Aside Right</aside>
+
 </main>
+
+<footer class="footer">Footer</footer>
 
 </body>
 

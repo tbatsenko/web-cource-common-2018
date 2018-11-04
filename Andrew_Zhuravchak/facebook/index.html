@@ -21,8 +21,188 @@
                 <i class="search-form__button-icon"></i>
             </button>
         </form>
+
+        <div class="header__nav-right">
+            <button type="button" class="header__nav-button header__nav-button--link">
+                <img src="images/userpic.jpg" alt="User Picture" class="user-pic">
+                Andrew
+            </button>
+            <div class="header__nav-horiz-line"></div>
+            <button type="button" class="header__nav-button header__nav-button--link">Home</button>
+            <div class="header__nav-horiz-line header__nav-horiz-line--padded"></div>
+
+            <button class="header__nav-button header__nav-button--icon header__nav-button--icon-friends"></button>
+            <button class="header__nav-button header__nav-button--icon header__nav-button--icon-messages"></button>
+            <button class="header__nav-button header__nav-button--icon header__nav-button--icon-notifications"></button>
+
+            <div class="header__nav-horiz-line header__nav-horiz-line--padded"></div>
+
+            <button class="header__nav-button header__nav-button--icon header__nav-button--icon-help"></button>
+            <button class="header__nav-button header__nav-button--icon header__nav-button--icon-arrow"></button>
+
+        </div>
     </nav>
 </header>
+
+<div class="main-section">
+    <div class="main-section__wrapper">
+        <aside class="main-section__nav">
+            <nav class="left-nav">
+                <div class="left-nav__item">
+                    <a href="#" class="left-nav__item-link">
+                        <img src="images/userpic.jpg" alt="User Picture" class="user-pic">
+                        <span class="left-nav__item-text">Andrew Zhuravchak</span>
+                        <i class="icon icon--dots left-nav__item-dots"></i>
+                    </a>
+                </div>
+
+                <ul class="left-nav__group">
+                    <li class="left-nav__item left-nav__item--active">
+                        <a href="#" class="left-nav__item-link">
+                            <i class="icon icon--news"></i>
+                            <span class="left-nav__item-text">News Feed</span>
+                            <i class="icon icon--dots left-nav__item-dots"></i>
+                        </a>
+                    </li>
+                    <li class="left-nav__item">
+                        <a href="#" class="left-nav__item-link">
+                            <i class="icon icon--messenger"></i>
+                            <span class="left-nav__item-text">Messenger</span>
+                            <i class="icon icon--dots left-nav__item-dots"></i>
+                        </a>
+                    </li>
+                </ul>
+
+                <ul class="left-nav__group">
+                    <lh class="left-nav__group-title">Shortcuts</lh>
+                    <li class="left-nav__item">
+                        <a href="#" class="left-nav__item-link">
+                            <i class="icon icon--friends"></i>
+                            <span class="left-nav__item-text">Лекція про щось там</span>
+                            <i class="icon icon--dots left-nav__item-dots"></i>
+                        </a>
+                    </li>
+                    <li class="left-nav__item">
+                        <a href="#" class="left-nav__item-link">
+                            <i class="icon icon--event"></i>
+                            <span class="left-nav__item-text">Зустріч якась там</span>
+                            <i class="icon icon--dots left-nav__item-dots"></i>
+                        </a>
+                    </li>
+                    <li class="left-nav__item">
+                        <a href="#" class="left-nav__item-link">
+                            <i class="icon icon--group"></i>
+                            <span class="left-nav__item-text">Юхуууу</span>
+                            <i class="icon icon--dots left-nav__item-dots"></i>
+                        </a>
+                    </li>
+                    <li class="left-nav__item left-nav__item--show-more">
+                        <a href="#" class="left-nav__item-link">
+                            <i class="icon icon--arrow"></i>
+                            <span class="left-nav__item-text">See more...</span>
+                        </a>
+                    </li>
+                </ul>
+
+                <ul class="left-nav__group">
+                    <lh class="left-nav__group-title">Explore</lh>
+                    <li class="left-nav__item">
+                        <a href="#" class="left-nav__item-link">
+                            <i class="icon icon--event"></i>
+                            <span class="left-nav__item-text">Events</span>
+                            <i class="icon icon--dots left-nav__item-dots"></i>
+                        </a>
+                    </li>
+                    <li class="left-nav__item">
+                        <a href="#" class="left-nav__item-link">
+                            <i class="icon icon--page"></i>
+                            <span class="left-nav__item-text">Pages</span>
+                            <i class="icon icon--dots left-nav__item-dots"></i>
+                        </a>
+                    </li>
+                    <li class="left-nav__item">
+                        <a href="#" class="left-nav__item-link">
+                            <i class="icon icon--group"></i>
+                            <span class="left-nav__item-text">Groups</span>
+                            <i class="icon icon--dots left-nav__item-dots"></i>
+                        </a>
+                    </li>
+                    <li class="left-nav__item">
+                        <a href="#" class="left-nav__item-link">
+                            <i class="icon icon--memories"></i>
+                            <span class="left-nav__item-text">Memories</span>
+                            <i class="icon icon--dots left-nav__item-dots"></i>
+                        </a>
+                    </li>
+                    <li class="left-nav__item left-nav__item--show-more">
+                        <a href="#" class="left-nav__item-link">
+                            <i class="icon icon--arrow"></i>
+                            <span class="left-nav__item-text">See more...</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </aside>
+        <main class="main-section__content">
+
+            <form action="/" class="feed-form">
+                <header class="feed-form__header">
+                    <ul class="feed-form__header-list">
+                        <li class="feed-form__header-item feed-form__header-item--active">
+                            <button class="feed-form__header-button">
+                                <i class="icon icon--video"></i>
+                                Compose Post
+                            </button>
+                        </li>
+                        <li class="feed-form__header-item">
+                            <button class="feed-form__header-button">
+                                <i class="icon icon--video"></i>
+                                Photo/Video Album
+                            </button>
+                        </li>
+                        <li class="feed-form__header-item">
+                            <button class="feed-form__header-button">
+                                <i class="icon icon--video"></i>
+                                Live Video
+                            </button>
+                        </li>
+                    </ul>
+                </header>
+
+                <div class="feed-form__body">
+                    <img src="images/userpic-big.jpg" alt="Andrew Zhuravchak" class="user-pic feed-form__body-pic">
+                    <label class="feed-form__label" for="feed-input" hidden="hidden">New feed text</label>
+                    <input type="text" id="feed-input" class="feed-form__body-input" placeholder="What's on your mind, Andrew?">
+                </div>
+
+                <div class="feed-form__footer-buttons">
+                    <button class="feed-form__footer-btn">
+                        <i class="icon icon--tag-friend"></i>
+                        List
+                    </button>
+
+                    <button class="feed-form__footer-btn">
+                        <i class="icon icon--tag-friend"></i>
+                        Photo/Video
+                    </button>
+
+                    <button class="feed-form__footer-btn">
+                        <i class="icon icon--tag-friend"></i>
+                        Tag friends
+                    </button>
+
+                    <button class="feed-form__footer-btn">
+                        <i class="icon icon--dots"></i>
+                    </button>
+                </div>
+            </form>
+
+        </main>
+        <aside class="main-section__additional">Additional</aside>
+    </div>
+
+    <aside class="main-section__friends-list">Friends</aside>
+</div>
 
 </body>
 </html>

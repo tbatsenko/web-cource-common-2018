@@ -1,0 +1,50 @@
+<section class="resume">
+    <div class="resume__brief">
+        <h2 class="resume__brief-subheader">User Persona</h2>
+
+        <div class="resume__brief-bottom-group">
+            <h1 class="resume__brief-name">{{ name }}</h1>
+            <p class="resume__brief-occupation">
+                <strong>{{ age }},</strong>
+                {{ occupation }}
+            </p>
+
+            <hr class="resume__brief-line">
+
+            <div class="resume__brief-skills">
+                {{#skills}}
+                    <div class="resume__brief-skill">{{&.}}</div>
+                {{/skills}}
+            </div>
+        </div>
+    </div>
+
+    <div class="resume__info">
+        <blockquote class="resume__info-blockquote">{{ quote }}</blockquote>
+
+        <section class="resume__info-block">
+            <h3 class="resume__info-subhead">About</h3>
+            {{{ about }}}
+        </section>
+
+        <ul class="resume__info-block resume__info-block--list">
+            <lh class="resume__info-subhead">Goals</lh>
+
+            {{#goals}}
+                <li class="resume__info-li resume__info-li--goal">
+                    <span class="resume__info-li-text">{{&.}}</span>
+                </li>
+            {{/goals}}
+        </ul>
+
+        <ul class="resume__info-block resume__info-block--list">
+            <lh class="resume__info-subhead">Frustration</lh>
+
+            {{#frustrations}}
+                <li class="resume__info-li">
+                    <span class="resume__info-li-text">{{&.}}</span>
+                </li>
+            {{/frustrations}}
+        </ul>
+    </div>
+</section>
