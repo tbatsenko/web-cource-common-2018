@@ -3,7 +3,45 @@
   height: 100vh; }
   .resume__brief {
     flex-grow: 1;
-    flex-basis: 0; }
+    flex-basis: 0;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    background-image: url("../images/user.jpeg");
+    object-fit: contain;
+    padding: 50px 70px; }
+    .resume__brief-bottom-group {
+      margin-top: auto; }
+    .resume__brief-subheader {
+      font-family: Montserrat-Bold, serif;
+      font-size: 19px;
+      opacity: 0.7;
+      font-weight: bold;
+      text-transform: uppercase; }
+    .resume__brief-name {
+      font-weight: bold;
+      font-size: 97px;
+      margin: 0; }
+    .resume__brief-occupation {
+      font-size: 30px;
+      font-family: AvenirNext, serif;
+      margin: 0; }
+    .resume__brief-line {
+      opacity: 0.5;
+      color: #979797;
+      margin: 25px 0; }
+    .resume__brief-skills {
+      display: flex; }
+    .resume__brief-skill {
+      text-align: center;
+      font-family: AvenirNext, serif;
+      font-size: 18px;
+      font-weight: bold;
+      color: #232323;
+      padding: 8px 20px;
+      background-color: #fff;
+      text-transform: uppercase;
+      margin-right: 10px; }
   .resume__info {
     flex-grow: 1;
     flex-basis: 0;
@@ -15,6 +53,8 @@ html {
 body {
   min-height: 100%;
   margin: 0;
-  padding: 0; }
+  padding: 0;
+  font-family: AvenirNext-Regular, sans-serif;
+  font-size: 22px; }
 
 /*# sourceMappingURL=main.css.map */
