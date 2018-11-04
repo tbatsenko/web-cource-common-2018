@@ -1,0 +1,19 @@
+.left-aside{
+    /*background-color: #00e100;*/
+    float: left;
+    width: 12em;
+    margin-top: 2em;
+}
+
+.left-aside-navigation__person{
+    height: 1.9em;
+    width: 1.9em;
+    border-radius: 50%;
+    padding-right: 0.2em;
+}
+
+.left-aside-container{
+    list-style-type: none;
+    font-size: 0.9em;
+    padding-left: 0.1em;
+}
