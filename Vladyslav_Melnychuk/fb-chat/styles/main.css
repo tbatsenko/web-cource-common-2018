@@ -1,0 +1,19 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans");
+html, body {
+  margin: 0;
+  padding: 0;
+  font-family: OpenSans, sans-serif;
+  background: #e3f2fd; }
+
+body {
+  display: flex; }
+
+main {
+  border-radius: 4px 4px 0 0;
+  margin: 175px auto auto auto;
+  width: 292px;
+  height: 384px;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.11);
+  background-color: #ffffff; }
+
+/*# sourceMappingURL=main.css.map */
