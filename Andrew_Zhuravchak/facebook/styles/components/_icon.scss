@@ -1,0 +1,61 @@
+.icon {
+  width: 20px;
+  height: 20px;
+  background-image: url("../images/icon-set.png");
+  background-repeat: no-repeat;
+  background-size: auto;
+  margin-right: 5px;
+  display: block;
+
+  &--dots {
+    background-position: 0 -2214px;
+  }
+
+  &--news {
+    background-position: 0 -1395px;
+  }
+
+  &--messenger {
+    background-position: 0 -240px;
+  }
+
+  &--friends {
+    background-position: 0 -1584px;
+  }
+
+  &--event {
+    background-position: 0 -618px;
+  }
+
+  &--group {
+    background-position: 0 -177px;
+  }
+
+  &--page {
+    background-position: 0 -303px;
+  }
+
+  &--memories {
+    background-position: 0 -1458px;
+  }
+
+  &--arrow {
+    background-position: -2px -132px;
+  }
+
+  &--pen {
+    background-position: -51px -608px;
+  }
+
+  &--album {
+    background-position: 0 -608px;
+  }
+
+  &--video {
+    background-position: 0 -2629px;
+  }
+
+  &--tag-friend {
+    background-position: 0 -975px;
+  }
+}

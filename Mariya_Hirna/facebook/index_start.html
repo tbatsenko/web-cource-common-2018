@@ -14,12 +14,12 @@
     <form class="search-form">
         <input placeholder="Пошук" class="search-form__input">
         <button class="search-form__button">
-            <img src="" alt="" class="menu-icon menu-icon__search">
+            <img src="icons/header/lupa.png" alt="" class="menu-icon__search">
         </button>
     </form>
     <div class="menu-buttons">
         <div class="options-container">
-            <img src="" alt="" class="options-container__photo">
+            <img src="icons/header/avatar.png" alt="" class="options-container__photo">
             <a href="" class="options-container__text">Mary</a>
         </div>
         <div class="options-container">
@@ -34,17 +34,16 @@
             <img src="icons/header/notifications.png" alt="" class="menu-icon">
         </div>
         <div class="options-container options-container__other-icons">
-            <a href="" class="menu-icon menu-icon__help"></a>
-            <a href="" class="menu-icon menu-icon__more"></a>
+            <img src="icons/header/help.png" alt="" class="menu-icon">
+            <img src="icons/header/dropdown.png" alt="" class="menu-icon">
         </div>
     </div>
 </header>
-
 <main>
     <aside class="side-bar-nav">
         <div class="side-bar__section">
             <div class="side-bar__container">
-                <img src="icons/side_bar/avatar.png" alt="" class="side-bar__icon">
+                <img src="icons/side_bar/avatar.png" alt="" class="avatar side-bar__icon">
                 <p class="side-bar__text">Mary Hirna</p>
             </div>
         </div>
@@ -97,7 +96,7 @@
             </div>
             <form action="" class="create-post__form">
                 <div class="post-middle">
-                    <img src="icons/create_post/avatar.jpg" alt="" class="create-post__avatar">
+                    <img src="icons/create_post/avatar.jpg" alt="" class="avatar create-post__avatar">
                     <textarea placeholder="Що у Вас на думці, Mary?"></textarea>
                 </div>
                 <div class="post-bottom">
@@ -110,7 +109,7 @@
                         <p class="post-bottom__text">Світлини/Від...</p>
                     </div>
                     <div class="post-bottom__container">
-                        <img src="icons/create_post/list.png" alt="" class="post-bottom__icon">
+                        <img src="icons/create_post/tag_friend.png" alt="" class="post-bottom__icon">
                         <p class="post-bottom__text">Позначити д...</p>
                     </div>
                     <div class="post-bottom__container">
@@ -121,15 +120,17 @@
         </div>
         <article class="main-container post">
             <div class="post-header">
-                <p class="post__name">Andrey Ganzevich</p>
-                <img src="icons/post/post_1_avatar.jpg" class="post__avatar">
-                <p class="post__time">4 хв  · </p>
-                <img src="icons/post/friends.png" alt="" class="post__audience">
-                <img src="icons/post/dots.png" alt="" class="post__action">
+                <img src="icons/post/post_1_avatar.jpg" class="avatar post__avatar">
+                <div class="post-header__container">
+                    <p class="post__name">Andrey Ganzevich</p>
+                    <p class="post__time">4 хв  · </p>
+                    <img src="icons/post/friends.png" alt="" class="post-header__icon">
+                    <img src="icons/post/dots.png" alt="" class="post__action-icon">
+                </div>
             </div>
             <div class="post-content">
                 <p class="post__text">Одинокий маяк Тридрангар у берегов Исландии</p>
-                <img src="icons/post/post_1.jpg" alt="" width="500px" height="625px">
+                <img src="icons/post/post_1.jpg" alt="">
             </div>
             <nav class="post-react">
                 <div class="post-react__container">
@@ -149,37 +150,76 @@
     </section>
 
     <aside class="side-container">
-        <section class="stories">
-            <h5>Розповіді</h5>
+        <section class="main-container stories">
+            <div class="main-container__header">
+                <h5 class="main-container__title">Розповіді</h5>
+                <div class="main-container__nav-container">
+                    <img src="icons/stories/archive.png" alt="" class="nav-container__header-icon">
+                    <a href="#" class="nav-container__header-text">Aрхів</a>
+                    <p class="nav-container__header-text"> · </p>
+                    <a href="#" class="nav-container__header-text">Налаштування</a>
+                </div>
+            </div>
             <div class="stories__container stories__container_add">
-                <img src="icons/stories/add.png" alt="" class="stories__avatar">
+                <img src="icons/stories/add.png" alt="" class="avatar stories__avatar">
                 <div class="stories__text">
                     <p class="stories__name">Додати до розповіді</p>
                     <p class="stories__time">Поділіться світлиною, відео або напишіть щось</p>
                 </div>
             </div>
             <div class="stories__container">
-                <img src="icons/stories/avatar_1.jpg" alt="" class="stories__avatar">
+                <img src="icons/stories/avatar_1.jpg" alt="" class="avatar stories__avatar">
                 <div class="stories__text">
                     <p class="stories__name">Roman Bondarenko</p>
                     <p class="stories__time">3 години тому</p>
                 </div>
             </div>
             <div class="stories__container">
-                <img src="icons/stories/avatar_2.jpg" alt="" class="stories__avatar">
+                <img src="icons/stories/avatar_2.jpg" alt="" class="avatar stories__avatar">
                 <div class="stories__text">
                     <p class="stories__name">Ira Mamedova</p>
                     <p class="stories__time">38 minutes ago</p>
                 </div>
             </div>
             <div class="stories__container">
-                <img src="icons/stories/avatar_3.jpg" alt="" class="stories__avatar">
+                <img src="icons/stories/avatar_3.jpg" alt="" class="avatar stories__avatar">
                 <div class="stories__text">
                     <p class="stories__name">Marichka Zinchuk</p>
                     <p class="stories__time">28 minutes ago</p>
                 </div>
             </div>
         </section>
+        <section class="main-container invites">
+            <div class="invites__container">
+                <img src="icons/invites/events.png" alt="" class="invites__icon">
+                <p class="invites__text"><strong>8 запрошень на події</strong></p>
+            </div>
+            <div class="invites__container">
+                <img src="icons/invites/bday.png" alt="" class="invites__icon">
+                <p class="invites__text">Сьогодні день народження у <strong>Марти Бакуменко</strong></p>
+            </div>
+        </section>
+        <section class="main-container your-pages">
+            <div class="main-container__header">
+                <h5 class="main-container__title">Ваші сторінки (2)</h5>
+                <img src="icons/create_post/more" alt="">
+            </div>
+        </section>
+        <section class="main-container languages">
+            <p class="languages__text">
+                Українська · <a href="">English (US)</a> · <a href="">Français (France)</a> · <a href="">Русский</a> ·
+                <a href="">Español</a>
+            </p>
+            <button>
+                <img src="icons/other/plus.png" alt="">
+            </button>
+        </section>
+        <footer class="aside__footer">
+            <p class="footer_text"><a href="">Конфіденційність</a> · <a href="">Умови користування</a> · <a
+                    href="">Розміщення реклами</a> · <a href="">Типи реклами</a> · <a href="">Реп'яшки</a> · <a
+                    href="">Ще</a></p>
+            <p class="footer_text footer_license">Facebook © 2018</p>
+        </footer>
     </aside>
 </main>
 </body>
