@@ -1,0 +1,5 @@
+.idea
+node-modules
+styles/*/*.map
+styles/*.css
+styles/*.map

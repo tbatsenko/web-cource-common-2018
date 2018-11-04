@@ -1,0 +1,38 @@
+.container-for-cv-grid{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-template-rows: auto;
+    grid-template-areas:
+            "photo name name"
+            "photo about preferences"
+            "photo goals pain-points"
+            "photo known-habits favorite-brands";
+}
+
+.user-persona{
+    grid-area: name;
+}
+
+.profile-img{
+    grid-area: photo;
+}
+
+.article-goals{
+    grid-area: goals;
+}
+
+.article-known-habits{
+    grid-area: known-habits;
+}
+
+.article-preferences{
+    grid-area: preferences;
+}
+
+.article-pain-point{
+    grid-area: pain-points;
+}
+
+.article-favourite-brands{
+    grid-area: favorite-brands;
+}

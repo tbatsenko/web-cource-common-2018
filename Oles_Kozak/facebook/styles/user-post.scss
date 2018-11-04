@@ -1,0 +1,121 @@
+//Post implementation
+
+@import "before_item";
+
+%ps__option-button-text_before:before{
+  @extend %before-item;
+  bottom: 1px;
+  margin-right: 5px;
+  width: 20px;
+  height: 20px;
+  background: url("https://static.xx.fbcdn.net/rsrc.php/v3/yS/r/A_wTlD3H0Ah.png");
+}
+
+.user-post {
+  height: auto;
+  width: 486px;
+  background: #fff;
+  border: 1px solid rgba(0, 0, 0, .2);
+
+  &__options{
+    padding: 8px 8px 8px 0px;
+    display: flex;
+    font-size: 12px;
+    background: #f5f6f7;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+  }
+
+  &__option{
+    cursor: pointer;
+    font-weight: 600;
+    line-height: 15px;
+    padding: 0 10px;
+    color: #4b4f56;
+    position: relative;
+    top: 2px;
+  }
+
+  &__option:before{
+    @extend %before-item;
+    margin-right: 4px;
+    width: 17px;
+    height: 17px;
+    background: url("https://static.xx.fbcdn.net/rsrc.php/v3/yw/r/RcLlSjOkA5H.png") no-repeat;
+  }
+
+  &__option:not(:last-child):after{
+    @extend %before-item;
+    height: 20px;
+    margin-left: 10px;
+    bottom: 1px;
+    width: 1px;
+    background: rgba(0, 0, 0, 0.2);
+  }
+
+  &__option:nth-child(1):before{
+    background-position: -17px -349px;
+  }
+  &__option:nth-child(2):before{
+    background-position: -34px -349px;
+  }
+  &__option:nth-child(3):before{
+    background: url("https://static.xx.fbcdn.net/rsrc.php/v3/yS/r/A_wTlD3H0Ah.png") 0 -2717px;
+  }
+  &__option{
+    padding-left: 7px;
+  }
+  &__form-input-container{
+    display: inline-block;
+    padding: 10px;
+    height: auto;
+  }
+  &__form-input{
+    padding: 10px;
+    border: 0;
+    font-size: 14px;
+    color: #5f6274;
+    width: 400px;
+  }
+  &__form-options{
+    display: flex;
+    margin: 0 12px;
+    padding: 8px 0;
+    border-top: 1px solid #e9ebee;
+  }
+  &__form-option-button{
+    margin-right: 6px;
+    padding: .5em .75em .5em 1em;
+    vertical-align: middle;
+    background: #f5f6f7;
+    border-radius: 18px;
+    box-shadow: none;
+    border: none;
+    color: #4b4f56;
+    font-size: 12px;
+    font-weight: 600;
+    cursor: pointer;
+  }
+  &__option-button-text{
+    position: relative;
+    top: 2px;
+    display: inline-block;
+    margin-left: 1px;
+  }
+  &__option-button-text_before1:before{
+    @extend %ps__option-button-text_before;
+    background-position: 0 -1451px;
+  }
+  &__option-button-text_before2:before{
+    @extend %ps__option-button-text_before;
+    background-position: 0 -905px;
+  }
+  &__option-button-text_before3:before{
+    @extend %ps__option-button-text_before;
+    background-position: 0 -800px;
+  }
+  &__option-button-text_before4:before{
+    @extend %ps__option-button-text_before;
+    background-position: 0 -2207px;
+  }
+}

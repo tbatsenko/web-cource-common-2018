@@ -1,0 +1,10 @@
+.school-types {
+  box-sizing: border-box;
+  border-left: 1px gainsboro solid;
+  height: inherit;
+}
+.school-types ul {
+  padding-left: 2%;
+  list-style-type: none;
+}
+/*# sourceMappingURL=school-types.css.map */

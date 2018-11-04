@@ -1,0 +1,26 @@
+@import "blocks/button";
+@import "blocks/h";
+@import "blocks/img";
+@import "blocks/link";
+@import "blocks/search-form";
+
+@import "main/main";
+@import "main/top-menu";
+
+@import "videos/video-block";
+@import "videos/video";
+
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Roboto, Arial, sans-serif;
+}
+
+html, body {
+  height: 100%;
+}
+
+.material-icons {
+  color: #9b9b9b;
+}
