@@ -1,0 +1,32 @@
+@font-face {
+    font-family: 'Google Sans';
+    src: url(../fonts/GoogleSans.ttf);
+}
+
+.compose-button {
+    font-family: 'Google Sans', Arial, Helvetica, sans-serif;
+    margin: 16px 0 16px 8px;
+    height: 48px;
+    width: 145px;
+    border-radius: 24px;
+    background: transparent;
+    color: #3c4043;
+    letter-spacing: .25px; 
+    box-shadow: 0 1px 2px 0 rgba(60, 64, 67, 0.302), 0 1px 3px 1px rgba(60, 64, 67, 0.149);
+    border: 1px;
+    display: flex;
+    align-items: center;
+    
+    .compose-button__create {
+        background: url(../images/create.png);
+        height: 32px;
+        width: 32px;
+        background-size: 32px;
+        margin: 0 12px;  
+    }
+}
+
+.compose-button:hover  {
+    box-shadow: 0 1px 3px 0 rgba(60, 64, 67, 0.302), 0 4px 8px 3px rgba(60, 64, 67, 0.149);
+    background-color: #fafafb;
+}
