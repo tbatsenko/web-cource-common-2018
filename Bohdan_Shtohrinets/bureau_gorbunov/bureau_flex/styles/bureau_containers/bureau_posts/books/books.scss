@@ -1,0 +1,57 @@
+.books {
+  &__title {
+    margin-bottom: 10px;
+    font-size: 24px;
+    line-height: 27px;
+    font-weight: 700;
+  }
+  &__list {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  &__book {
+    margin-right: 10px;
+    flex-basis: 118px;
+    flex-grow: 1;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}
+
+.book {
+  &__content {
+    color: black;
+    font-size: 16px;
+
+    &_centered {
+      //text-align: center;
+    }
+  }
+  &__image {
+    max-height: 277px;
+  }
+  &__title {
+    margin-top: 5px;
+    font-weight: 700;
+    line-height: 18px;
+  }
+  &__topic {
+    margin-top: 3px;
+    color: #065580;
+    text-decoration: underline;
+    text-decoration-color: rgba(6, 85, 128, .1);
+  }
+  &__price {
+    &_pre-order {
+      color: rgb(252, 86, 32);
+    }
+    &_sell {
+      color: #00a40c;
+    }
+  }
+}

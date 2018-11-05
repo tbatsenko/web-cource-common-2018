@@ -1,0 +1,34 @@
+.advert {
+  &__image {
+    overflow: hidden;
+    flex-grow: 3;
+    color: transparent;
+    flex-basis: 740px;
+
+    &_content {
+      width: 100%;
+      height: auto;
+    }
+  }
+  &__description {
+    margin-top: 20px;
+    align-self: flex-start;
+    flex-grow: 1;
+    flex-basis: 90px;
+    font-size: 14px;
+    font-weight: 100;
+    line-height: 18px;
+    &_underlined {
+      color: #065580;
+      text-decoration: none;
+      font-weight: 600;
+      border-bottom: 2px solid rgba(6, 85, 128, .1);
+    }
+  }
+}
+
+@media (max-width: 960px) {
+  .advert__image_content {
+    width: 200%;
+  }
+}
