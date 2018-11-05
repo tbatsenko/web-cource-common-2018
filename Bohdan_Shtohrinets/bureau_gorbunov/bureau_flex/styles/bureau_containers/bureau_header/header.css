@@ -5,11 +5,9 @@
     background: url("/images/logo.png");
     background-size: cover;
 }
-
 .header__menu {
     margin-right: auto;
 }
-
 .header__user-button {
     align-self: flex-start;
     margin-left: auto;
