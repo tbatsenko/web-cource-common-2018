@@ -1,0 +1,30 @@
+.user-persona__tag {
+  margin-top: 19px; }
+.user-persona__header-content {
+  margin-right: 15px;
+  font-weight: bold;
+  font-family: Montserrat, sans-serif;
+  display: flex;
+  justify-content: space-between; }
+.user-persona__tag-list {
+  padding: 0;
+  margin-left: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+  color: #939393;
+  list-style-type: none;
+  font-weight: bold;
+  font-family: Montserrat, sans-serif;
+  font-size: 19px; }
+.user-persona__name {
+  margin-top: 39px;
+  font-size: 90px;
+  color: #181818;
+  margin-bottom: 0; }
+.user-persona__label {
+  margin-bottom: 0;
+  float: right;
+  color: #4c4c4c;
+  font-size: 19px; }
+
+/*# sourceMappingURL=header.css.map */
