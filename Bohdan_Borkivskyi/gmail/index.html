@@ -15,8 +15,9 @@
         const source = await (await fetch(templateURL)).text();
         const template = Handlebars.compile(source);
         const data = await (await fetch(dataURL)).json();
-        container.innerHTML = template(data);
+        container.innerHTML += template(data);
     };
+    render("header.hbs", "data.json", document.body)
     render("main.hbs", "data.json", document.body)
 </script>
 </body>
