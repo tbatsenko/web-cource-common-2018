@@ -9,7 +9,8 @@
     <link rel="stylesheet" href="styles/main.css">
 </head>
 <body>
-<header class="main-header">
+<header class="whole-header">
+    <section class="main-header">
         <h1 class="main-header__logo"><a href="http://html5doctor.com" rel="home">HTML5 Doctor<sub>Helping you implement HTML5 today</sub></a></h1>
 
         <nav class="main-header__right-navigation">
@@ -32,9 +33,10 @@
 
         <form class="main-header__search-form" method="get" action="#">
             <label class="main-header__search-form_visually-hidden" for="main-header__search-form_input">Search query</label>
-            <input id="main-header__search-form_input" name="search-query" type="text" value="" placeholder="John Show"/>
+            <input id="main-header__search-form_input" name="search-query" type="text" value="" placeholder=""/>
             <button id="main-header__search-form_button">Search</button>
         </form>
+    </section>
 </header>
 
 <main id="content" class="group" role="main">

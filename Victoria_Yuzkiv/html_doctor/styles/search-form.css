@@ -1,8 +1,7 @@
 .main-header__search-form {
     position: absolute;
-    right: -20px;
-    z-index: 400;
-    top: 7px;
+    right: 10px;
+    top: 180px;
 }
 
 .main-header__search-form div input[type='text'] {
