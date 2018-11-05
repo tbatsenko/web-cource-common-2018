@@ -65,7 +65,7 @@ body {
   margin-right: 10px;
 }
 .navigation__search {
-  width: 35vw;
+  width: 600px;
   height: 24px;
   border-radius: 2px 0 0 2px;
   border: 1px solid #ccc;
@@ -224,6 +224,7 @@ body {
   flex-direction: column;
   align-items: center;
   margin-left: 50px;
+  width: 100%;
 }
 
 /*# sourceMappingURL=main.css.map */
