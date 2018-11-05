@@ -1,0 +1,81 @@
+<header class="youtube-header">
+  <button class="open-menu-button" aria-label="Site menu">menu</button>
+  <h1 class="youtube-homepage-link"><a href="https://www.youtube.com/"><img class="youtube-homepage-link__logo"
+                                                                            src="/images/logo_main.png"/></a>
+  </h1>
+  <form class="site-search">
+    <input class="site-search__input-field" placeholder="Search" title="Search">
+    <button class="site-search__submit-button">Submit</button>
+  </form>
+
+  <div class="user-options-menu">
+    <button class="user-options-menu__button user-options-menu__button--up">Upload</button>
+    <button class="user-options-menu__button user-options-menu__button--app">Apps</button>
+    <button class="user-options-menu__button user-options-menu__button--mess">Messages</button>
+    <button class="user-options-menu__button user-options-menu__button--notifications">Notifications</button>
+    <button class="user-options-menu__button user-options-menu__button--profile">Profile</button>
+  </div>
+</header>
+
+<main class="youtube-video">
+  <article>
+    <iframe id="video" width="640" height="360" src="https://www.youtube.com/embed/cRm54SJxcao" frameborder="0"
+            allowfullscreen></iframe>
+    <h2>{{video.title}}</h2>
+    <small>
+      {{video.views}}
+    </small>
+    <span class="youtube-video__options">
+<button>Like {{video.likes}}</button>
+<button>Dislike {{video.dislikes}}</button>
+<button>Share</button>
+<button>save</button>
+<button>...</button>
+</span>
+  </article>
+
+
+  <footer>
+    <a href="{{video.channel.link}}"><img
+        src="{{video.channel.logo}}"/></a>
+    <label for="author">{{video.channel.title}} Verified:{{video.channel.verified}}
+      <!--TODO:Verified icon-->
+      Published on
+      <time datetime={{video.publish-date-formatted}}>{{video.publish-date}}</time>
+    </label>
+    <button>Subscribe {{video.channel.subscribers}}</button>
+</footer>
+<aside>
+  {{comments.length}}Comments
+  <button title="Sort by">Sort By</button>
+  {{#comments}}
+    <br>
+    {{user-name}}
+    <br>
+    {{date}}
+    <br>
+    {{text}}
+    <br>
+    {{likes}}, {{dislikes}}
+    <button>Reply</button>
+    <button>View {{replies.length}} replies</button>
+  {{/comments}}
+</aside>
+</main>
+
+<aside class="suggested">
+  Up next
+  <button>Autoplay</button>
+  <br/>
+  {{#suggested-videos}}
+    <a class="suggested-video" href="{{link}}">
+      <img class="next-video__preview" src="{{preview}}">
+      <h4>{{title}} </h4>
+      <small>{{channel}}, Verified:{{verified}}
+    {{#if views}}
+        {{views}} views
+    {{/if}}
+      </small>
+    </a>
+  {{/suggested-videos}}
+</aside>

@@ -1,0 +1,18 @@
+@import "../../colors.less";
+@import "../../fonts.less";
+
+.video__additional{
+    font-family: @youtube-font;
+    font-size: @youtube-small - 1px;
+    color: @youtube-dark-gray;
+}
+
+.video__additional::before{
+    content: "•";
+    margin-left: 5px;
+}
+
+.video__additional:first-child::before{
+    content: "";
+    margin-left: 0;
+}

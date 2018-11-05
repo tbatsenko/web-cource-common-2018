@@ -8,33 +8,57 @@
             {{/left_buttons}}
 
             {{#right_buttons}}
-                <button class="logo_btns">{{&.}}</button>
+                <button class="logo_btns"><img src='images/{{.}}'></button>
             {{/right_buttons}}
         {{/header}}
     </div>
 </header>
 <aside class="left-menu">
     {{#left-menu}}
-        <a class="nv_btns">{{&.}}</a>
+        <a class="left-menu__buttons">{{&.}}</a>
     {{/left-menu}}
 </aside>
-<!--<main>-->
+<main class="news">
+    <section class="news__new-post">
+        <div class="news__new-post__action">
+            {{#post-type}}
+                <button class="news__new-post__action__button">{{.}}</button>
+            {{/post-type}}
+        </div>
+        <p class="news__new-post__create-post"></p>
+        <div class="news__new-post__action">
+            {{#post-content}}
+                <button class="news__new-post__action__button"><img src="images/{{image}}">{{text}}</button>
+            {{/post-content}}
+        </div>
+    </section>
+    <article class="news__post">
+        {{#post}}
+            <h3 class="news__post__title"><img src="images/{{user-logo}}" class="user_icon">{{username}}</h3>
+            <p>{{text}}</p>
+            <img src="images/{{photo}}" class="news__post__photo">
+            <div class="news__post__actions">
+                {{#buttons}}
+                    <button class="news__post__actions__button">{{.}}</button>
+                {{/buttons}}
+            </div>
+            <input type="text" placeholder="Write comment..." class="news__new-post_comment">
+        {{/post}}
+    </article>
+</main>
 
-<!--<section id="posts">-->
-<!--<section id="news_hdr">-->
-<!--<button class="nv_btns"><img class="nv_btn_img" src="images/post.png"> Create post</button>-->
-<!--<button class="nv_btns"><img class="nv_btn_img" src="images/album.png"> Photo/Video albums</button>-->
-<!--<button class="nv_btns"><img class="nv_btn_img" src="images/video.png"> Live video</button>-->
-<!--</section>-->
-<!--<section id="new_post">-->
-<!--<p id ="post_crt">What's on your mind, Mark?</p>-->
-<!--<button class="nv_btns"><img class="nv_btn_img" src="images/list.png">List</button>-->
-<!--<button class="nv_btns"><img class="nv_btn_img" src="images/photo.png">Photos</button>-->
-<!--<button class="nv_btns"><img class="nv_btn_img" src="images/tag_friend.png">Tag friend</button>-->
-<!--</section>-->
-<!--<article>-->
-
-<!--</article>-->
-<!--</section>-->
-<!--<div><p>Stories</p></div>-->
-<!--</main>-->
+<aside class="right-menu">
+    <h4>Stories</h4>
+    <div class="right-menu__story">
+        <img src="images/add_icon.png" class="user_icon">
+        <h4>Add Story</h4>
+    </div>
+    <div class="right-menu__story">
+        <img src="images/young_male_icon.png" class="user_icon">
+        <h4>Young Male</h4>
+    </div>
+    <div class="right-menu__story">
+        <img src="images/female_logo.png" class="user_icon">
+        <h4>Female</h4>
+    </div>
+</aside>
