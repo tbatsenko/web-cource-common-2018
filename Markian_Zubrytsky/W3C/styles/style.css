@@ -1,0 +1,25 @@
+body {
+    margin-left: 4%;
+    padding: 0;
+}
+
+.logo {
+    margin-top: 3%;
+    margin-bottom: 3%;
+}
+
+.hdr {
+    color: #005A9C;
+    font-size: 140%;
+    font-family: sans-serif;
+}
+
+.pre1 {
+    background-color: #EEF;
+}
+
+.precap {
+    background-color: #06F;
+    color: white;
+    margin-right: 80%;
+}
