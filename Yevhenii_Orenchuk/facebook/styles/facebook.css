@@ -55,3 +55,12 @@
   width: 16px;
   display: inline-block;
 }
+.facebook-icons-comment {
+  background-image: url("https://static.xx.fbcdn.net/rsrc.php/v3/y6/r/KHtI7B4Hp4j.png");
+  background-repeat: no-repeat;
+  background-size: 64px 393px;
+  height: 16px;
+  width: 16px;
+  display: inline-block;
+  margin: 5px 10px;
+}
