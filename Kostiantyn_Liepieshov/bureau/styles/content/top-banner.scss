@@ -1,0 +1,20 @@
+.top-banner {
+  &__image {
+    width: 100%;
+  }
+  &__figure {
+    margin: 0;
+  }
+  &--is-link {
+    display: block;
+    color: var(--blue-color);
+    font-weight: 700;
+  }
+  &__caption {
+    font: 15px Bureausans, Arial, sans-serif;
+    font-feature-settings: normal;
+    font-weight: 400;
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+  }
+}
