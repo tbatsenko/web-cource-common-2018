@@ -1,0 +1,74 @@
+.posts {
+  &__section {
+    padding: 0;
+    margin: 0;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: stretch;
+  }
+  &__advert {
+    margin-bottom: 72px;
+  }
+
+  &__courses {
+    &_separate {
+      margin-bottom: 72px;
+    }
+  }
+
+  &__educational {
+    border-top: 1px solid rgba(0, 0, 0, .07);
+    margin-bottom: 72px;
+    &_reversed {
+      flex-direction: row-reverse;
+    }
+  }
+
+  &__hottest-books {
+    flex-wrap: nowrap;
+    margin-bottom: 62px;
+  }
+
+  &__materials {
+    margin-bottom: 72px;
+
+    &_reversed {
+      flex-direction: row-reverse;
+    }
+  }
+
+  &__books {
+    padding-top: 34px;
+    padding-bottom: 34px;
+    border-bottom: 1px solid rgba(0, 0, 0, .07);
+    border-top: 1px solid rgba(0, 0, 0, .07);
+    flex-direction: column;
+  }
+
+  &__full-page-advert {
+    margin-bottom: 72px;
+    background-image: url("/images/book-collection-bg.png");
+    &_transparent {
+      background-image: none;
+    }
+  }
+
+  &__cafe {
+    margin-bottom: 62px;
+  }
+
+  &__statistics {
+    align-items: flex-start;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    margin-bottom: 62px;
+  }
+}
+
+@media (max-width: 960px) {
+  .posts__educational_reversed {
+    flex-direction: column-reverse;
+  }
+}

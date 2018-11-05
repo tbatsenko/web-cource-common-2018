@@ -1,0 +1,30 @@
+.event-list {
+  padding: 15px 5px;
+  height: 55px; }
+  .event-list__watch-events {
+    color: #365899;
+    float: none;
+    font-weight: 600; }
+  .event-list__icon {
+    margin-right: 5px;
+    display: inline-block;
+    position: relative;
+    top: 2px;
+    width: 16px;
+    height: 16px;
+    background-color: #f5f6f7; }
+    .event-list__icon:before {
+      content: "";
+      height: 16px;
+      width: 16px;
+      position: absolute;
+      left: 0;
+      background: url("/images/icons/calendar.jpg");
+      background-size: 16px; }
+  .event-list__time {
+    color: #90949c;
+    font-size: 13px;
+    font-weight: 200;
+    margin-left: 5px; }
+
+/*# sourceMappingURL=event-list.css.map */

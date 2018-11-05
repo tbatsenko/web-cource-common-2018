@@ -1,12 +1,16 @@
-.form-container{
+.posting-area{
     margin-bottom: 1em;
+    background: #fff;
+    border-radius: 5px;
+    border: 1px solid #ddd;
 }
 
-.form-main{
+
+.posting-form{
     
 }
 
-.post-options-container{
+.posting-form__options{
     padding: 8px 8px 8px 0;
     display: flex;
     font-size: 12px;
@@ -17,9 +21,11 @@
 }
 
 
-.post-option{
+.posting-form__option, .posting-form__option_left-border{
     color: #365899;
     font-weight: 600;
+    display: flex;
+    align-items: center;
     line-height: 14px;
     padding: 0 10px;
 
@@ -29,11 +35,11 @@ span.active{
     color: #4b4f56;
 }
 
-.left-border{
+.posting-form__option_left-border{
     border-left: 1px solid #ccd0d5;
 }
 
-.form-options-ico{
+.posting-form__option__ico_post, .posting-form__option__ico_photo, .posting-form__option__ico_video{
     width: 16px;
     height: 16px;
     float: left;
@@ -41,36 +47,41 @@ span.active{
     background-repeat: no-repeat;
 }
 
-.form-options-ico.post{
+.posting-form__option__ico_post{
     background-position: -17px -349px;
 }
 
-.form-options-ico.photo{
+.posting-form__option__ico_photo{
     background-position: -34px -349px;
 }
 
-.form-options-ico.video{
+.posting-form__option__ico_video{
     background: url("https://static.xx.fbcdn.net/rsrc.php/v3/yS/r/A_wTlD3H0Ah.png");
     background-position: 0 -2717px;
 }
 
-.form-options-text{
+.posting-form__option__txt, .posting-form__option__txt-active{
     padding-left: 7px;
 }
 
-.form-img{
+.posting-form__option__txt-active{
+    color: #4b4f56;
+}
+
+.posting-form__input__profile-img{
+    object-fit: cover;
     height: 36px;
     width: 36px;
     border-radius: 18px;
     margin-right: 10px;
 }
 
-.form-input-container{
+.posting-form__input__container{
     display: flex;
     padding: 10px;
 }
 
-.form-input{
+.posting-form__input__input{
     height: 36px;
     border: 0;
     font-size: 14px;
@@ -82,14 +93,14 @@ span.active{
 }
 
 
-.form-options-container{
+.posting-form__content-options{
     display: flex;
     margin: 0 12px;
     padding: 8px 0;
     border-top: 1px solid #e9ebee;
 }
 
-.form-option-container{
+.posting-form__content-option{
     margin-right: 6px;
     padding: .5em .75em .5em 1em;
     vertical-align: middle;
@@ -102,7 +113,7 @@ span.active{
     align-items: center;
 }
 
-.form-option{
+.posting-form__content-option_txt{
     color: #4b4f56;
     font-size: 12px;
     font-weight: 600;
@@ -112,25 +123,25 @@ span.active{
     padding-left: 10px;
 }
 
-.form-option-ico{
+.posting-form__content-option_ico_dots, .posting-form__content-option_ico_photo, .posting-form__content-option_ico_tag, .posting-form__content-option_ico_activity{
     width: 20px;
     height: 20px;
     background: url("https://static.xx.fbcdn.net/rsrc.php/v3/yS/r/A_wTlD3H0Ah.png");
 
 }
 
-.form-option-ico.photo{
+.posting-form__content-option_ico_photo{
     background-position: 0 -1451px;
 }
 
-.form-option-ico.tag{
+.posting-form__content-option_ico_tag{
     background-position: 0 -905px;
 }
 
-.form-option-ico.activity{
+.posting-form__content-option_ico_activity{
     background-position: 0 -800px;
 }
 
-.form-option-ico.dots{
+.posting-form__content-option_ico_dots{
     background-position: 0 -2207px;
 }

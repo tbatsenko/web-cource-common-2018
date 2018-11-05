@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Youtube</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet/less" href="css/common.less">
+
+    <link rel="stylesheet/less" href="css/disable-indentation/disable-indentation.less">
+
+    <link rel="stylesheet/less" href="css/icon-button/icon-button.less">
+    <link rel="stylesheet/less" href="css/icon-button/_type/icon-button_type_face.less">
+    <link rel="stylesheet/less" href="css/icon-button/_type/icon-button_type_guide.less">
+    <link rel="stylesheet/less" href="css/icon-button/_type/icon-button_type_notifications.less">
+    <link rel="stylesheet/less" href="css/icon-button/_type/icon-button_type_upload.less">
+
+    <link rel="stylesheet/less" href="css/icons-nav/icons-nav.less">
+    <link rel="stylesheet/less" href="css/icons-nav/__face/icons-nav__face.less">
+    <link rel="stylesheet/less" href="css/icons-nav/__notifications/icons-nav__notifications.less">
+    <link rel="stylesheet/less" href="css/icons-nav/__upload/icons-nav__upload.less">
+
+    <link rel="stylesheet/less" href="css/logo/logo.less">
+    <link rel="stylesheet/less" href="css/logo/_nationality/logo_nationality_ua.less">
+
+    <link rel="stylesheet/less" href="css/icon-text/icon-text.less">
+    <link rel="stylesheet/less" href="css/icon-text/__icon/icon-text__icon.less">
+    <link rel="stylesheet/less" href="css/icon-text/__icon/_type/icon-text__icon_type_home.less">
+    <link rel="stylesheet/less" href="css/icon-text/__icon/_type/icon-text__icon_type_my-channel.less">
+    <link rel="stylesheet/less" href="css/icon-text/__icon/_type/icon-text__icon_type_trending.less">
+    <link rel="stylesheet/less" href="css/icon-text/__icon/_type/icon-text__icon_type_subscriptions.less">
+    <link rel="stylesheet/less" href="css/icon-text/__icon/_type/icon-text__icon_type_cynthia-lin-music.less">
+    <link rel="stylesheet/less" href="css/icon-text/__icon/_type/icon-text__icon_type_google-developers.less">
+    <link rel="stylesheet/less" href="css/icon-text/_selected/icon-text_selected.less">
+    <link rel="stylesheet/less" href="css/icon-text/__text/icon-text__text.less">
+    <link rel="stylesheet/less" href="css/icon-text/__number/icon-text__number.less">
+
+    <link rel="stylesheet/less" href="css/search-form/search-form.less">
+    <link rel="stylesheet/less" href="css/search-form/__text/search-form__text.less">
+    <link rel="stylesheet/less" href="css/search-form/__submit/search-form__submit.less">
+
+    <link rel="stylesheet/less" href="css/header/header.less">
+    <link rel="stylesheet/less" href="css/header/__guide/header__guide.less">
+    <link rel="stylesheet/less" href="css/header/__icons-nav/header__icons-nav.less">
+    <link rel="stylesheet/less" href="css/header/__logo/header__logo.less">
+    <link rel="stylesheet/less" href="css/header/__search-form/header__search-form.less">
+
+    <link rel="stylesheet/less" href="css/list/list.less">
+    <link rel="stylesheet/less" href="css/list/__item/list__item.less">
+    <link rel="stylesheet/less" href="css/list/_order/list_order_column.less">
+    <link rel="stylesheet/less" href="css/list/_order/list_order_row.less">
+    <link rel="stylesheet/less" href="css/list/_undotted/list_undotted.less">
+    <link rel="stylesheet/less" href="css/list/_align/list_align_center.less">
+
+    <link rel="stylesheet/less" href="css/aside-nav/aside-nav.less">
+    <link rel="stylesheet/less" href="css/aside-nav/__header/aside-nav__header.less">
+    <link rel="stylesheet/less" href="css/aside-nav/__header/_clickable/aside-nav__header_clickable.less">
+    <link rel="stylesheet/less" href="css/aside-nav/__section/aside-nav__section.less">
+    <link rel="stylesheet/less" href="css/aside-nav/__item/aside-nav__item.less">
+
+    <link rel="stylesheet/less" href="css/video-nav/video-nav.less">
+    <link rel="stylesheet/less" href="css/video-nav/__item/video-nav__item.less">
+    <link rel="stylesheet/less" href="css/video-nav/__item/_selected/video-nav__item_selected.less">
+    <link rel="stylesheet/less" href="css/video-nav/__item/_no-indent/video-nav__item_no-indent.less">
+
+    <link rel="stylesheet/less" href="css/video/video.less">
+    <link rel="stylesheet/less" href="css/video/__cover-image/video__cover-image.less">
+    <link rel="stylesheet/less" href="css/video/__duration/video__duration.less">
+    <link rel="stylesheet/less" href="css/video/__title/video__title.less">
+    <link rel="stylesheet/less" href="css/video/__channel-name/video__channel-name.less">
+    <link rel="stylesheet/less" href="css/video/__channel-name/_verified/video__channel-name_verified.less">
+    <link rel="stylesheet/less" href="css/video/__additional/video__additional.less">
+
+    <link rel="stylesheet/less" href="css/video-section/video-section.less">
+    <link rel="stylesheet/less" href="css/video-section/__header/video-section__header.less">
+    <link rel="stylesheet/less" href="css/video-section/__item/video-section__item.less">
+
+    <link rel="stylesheet/less" href="css/content/content.less">
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/less.js/3.7.1/less.min.js" ></script>
+</head>
+<body class="disable-indentation">
+    <header class="header">
+        <button class="header__guide icon-button icon-button_type_guide">Guide</button>
+        <h1 class="disable-indentation">
+            <a href="https://www.youtube.com" class="header__logo logo logo_nationality_ua">Youtube</a>
+        </h1>
+        <form class="header__search-form search-form">
+            <input type="text" placeholder="Search" class="search-form__text">
+            <button type="submit" class="search-form__submit">Submit</button>
+        </form>
+        <nav class="header__icons-nav icons-nav">
+            <ul class="list list_undotted list_row">
+                <li class="list__item">
+                    <button class="icons-nav__upload icon-button icon-button_type_upload">Upload</button>
+                </li>
+                <li class="list__item">
+                    <button class="icons-nav__notifications icon-button icon-button_type_notifications">Notifications</button>
+                </li>
+                <li class="list__item">
+                    <button class="icons-nav__face icon-button icon-button_type_face">Yuriy Antentyk</button>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <aside class="aside-nav">
+        <ul class="aside-nav__section list list_order_column">
+            <li class="list__item icon-text icon-text_selected aside-nav__item">
+                <a class="icon-text__icon icon-text__icon_type_home icon-text__text" href="https://www.youtube.com/">Home</a>
+            </li>
+            <li class="list__item icon-text aside-nav__item">
+                <a class="icon-text__icon icon-text__icon_type_my-channel icon-text__text" href="https://www.youtube.com/">My channel</a>
+            </li>
+            <li class="list__item icon-text aside-nav__item">
+                <a class="icon-text__icon icon-text__icon_type_trending icon-text__text" href="https://www.youtube.com/">Trending</a>
+            </li>
+            <li class="list__item icon-text aside-nav__item">
+                <a class="icon-text__icon icon-text__icon_type_subscriptions icon-text__text" href="https://www.youtube.com/">Subscriptions</a>
+            </li>
+        </ul>
+
+        <h3 class="disable-indentation">
+            <a class="aside-nav__header aside-nav__header_clickable" href="https://www.youtube.com">Library</a>
+        </h3>
+        <ul class="aside-nav__section list list_order_column">
+            <li class="list__item icon-text aside-nav__item">
+                <a class="icon-text__icon icon-text__icon_type_home icon-text__text" href="https://www.youtube.com">History</a>
+            </li>
+            <li class="list__item icon-text aside-nav__item">
+                <a class="icon-text__icon icon-text__icon_type_home icon-text__text" href="https://www.youtube.com">History</a>
+            </li>
+            <li class="list__item icon-text aside-nav__item">
+                <a class="icon-text__icon icon-text__icon_type_home icon-text__text" href="https://www.youtube.com">History</a>
+            </li>
+        </ul>
+
+        <h3 class="disable-indentation aside-nav__header">Subscriptions</h3>
+        <ul class="aside-nav__section list list_order_column">
+            <li class="list__item icon-text aside-nav__item">
+                <a class="icon-text__icon icon-text__icon_type_cynthia-lin-music icon-text__text" href="https://www.youtube.com">
+                    Cynthia lin music
+                    <span class="icon-text__number">23</span>
+                </a>
+            </li>
+            <li class="list__item icon-text aside-nav__item">
+                <a class="icon-text__icon icon-text__icon_type_google-developers icon-text__text" href="https://www.youtube.com">
+                    Google developers
+                    <span class="icon-text__number">1</span>
+                </a>
+            </li>
+        </ul>
+    </aside>
+    <nav class="video-nav">
+        <ul class="list list_order_row list_align_center">
+            <li class="list__item">
+                <h3 class="disable-indentation">
+                    <a class="video-nav__item video-nav__item_selected video-nav__item_no-indent" href="https://www.youtube.com">Home</a>
+                </h3>
+            </li>
+            <li class="list__item">
+                <h3 class="disable-indentation">
+                    <a class="video-nav__item" href="https://www.youtube.com">Trending</a>
+                </h3>
+            </li>
+            <li class="list__item">
+                <h3 class="disable-indentation">
+                    <a class="video-nav__item" href="https://www.youtube.com">Subscriptions</a>
+                </h3>
+            </li>
+        </ul>
+    </nav>
+
+    <div class="content">
+        <main id="template-target">
+            
+        </main>
+        <footer>
+            
+        </footer>
+    </div>
+
+
+
+    <script id="template" type="text/x-handlebars-template">
+        {{#each videoSections}}
+        <section class="video-section">
+            <h3 class="video-section__header">{{header}}</h3>
+            {{#each videos}}
+            <article class="video video-section__item">
+                <a href="https://www.youtube.com">
+                    <img alt="video cover-image" src="{{coverImage}}" class="video__cover-image">
+                </a>
+                <span class="video__duration">{{duration}}</span>
+                <h5 class="disable-indentation">
+                    <a href="https://www.youtube.com" class="video__title">{{name}}</a>
+                </h5>
+                <address>
+                    <a href="https://www.youtube.com" class="video__channel-name{{#if isVerified}} video__channel-name_verified{{/if}}">
+                        {{channelName}}
+                    </a>
+                </address>
+                <ul class="list list_order_row">
+                    <li class="list__item video__additional">
+                        {{views}} views
+                    </li>
+                    <li class="list__item video__additional">
+                        {{uploadDate}}
+                    </li>
+                </ul>
+            </article>
+            {{/each}}
+        </section>
+        {{/each}}
+    </script>
+
+    <script src="http://builds.handlebarsjs.com.s3.amazonaws.com/handlebars.min-latest.js"></script>
+    <script src="js/fill-videos.js"></script>
+</body>
+</html>

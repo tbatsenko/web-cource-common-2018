@@ -1,0 +1,85 @@
+<header class="header">
+    <button>Menu</button>
+    <a><img src="images/logo.png" id="logo"></a>
+    <input type="search" id="search" placeholder="Search">
+    <a href="#">search</a>
+    <div id="right-buttons">
+        {{#header}}
+            {{#button}}
+                <button class="header__links">{{.}}</button>
+            {{/button}}
+        {{/header}}
+    </div>
+</header>
+
+<aside class="side-menu">
+    {{#navigation}}
+        <h4 class="side-menu__title">{{title}}</h4>
+        {{#items}}
+            <a href="#" class="side-menu__link">{{.}}</a>
+        {{/items}}
+    {{/navigation}}
+</aside>
+
+<main>
+    <h3 class="recommended">Linkin Park</h3>
+    <section class="videos">
+        {{#lp_videos}}
+                <div class="video">
+                    {{#image}}
+                        <img src='images/{{.}}' class='video__image'>
+                    {{/image}}
+                    {{#title}}
+                    <h5 class="video__title">
+                        {{.}}
+                    </h5>
+                    {{/title}}
+                    {{#info}}
+                        <p class="video__info">
+                            {{.}}
+                        </p>
+                    {{/info}}
+                </div>
+        {{/lp_videos}}
+    </section>
+    <h3 class="recommended">Fabio Wibmer</h3>
+    <section class="videos">
+        {{#fw_videos}}
+            <div class="video">
+                {{#image}}
+                    <img src='images/{{.}}' class='video__image'>
+                {{/image}}
+                {{#title}}
+                    <h5 class="video__title">
+                        {{.}}
+                    </h5>
+                {{/title}}
+                {{#info}}
+                    <p class="video__info">
+                        {{.}}
+                    </p>
+                {{/info}}
+            </div>
+        {{/fw_videos}}
+    </section>
+    <h3 class="recommended">Mighty Car Mods</h3>
+    <section class="videos">
+        {{#mcm_videos}}
+            <div class="video">
+                {{#image}}
+                    <img src='images/{{.}}' class='video__image'>
+                {{/image}}
+                {{#title}}
+                    <h5 class="video__title">
+                        {{.}}
+                    </h5>
+                {{/title}}
+                {{#info}}
+                    <p class="video__info">
+                        {{.}}
+                    </p>
+                {{/info}}
+            </div>
+        {{/mcm_videos}}
+    </section>
+</main>

@@ -3,220 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="styles/main.css">
+    <link rel="stylesheet" type="text/css" href="styles/main-header/main-header.css">
+    <link rel="stylesheet" type="text/css" href="styles/facebook-content/facebook-content.css">
+    <link rel="stylesheet" type="text/css" href="styles/facebook-content/page-navigation/page-navigation.css">
+    <link rel="stylesheet" type="text/css" href="styles/facebook-content/feed/feed.css">
+    <link rel="stylesheet" type="text/css" href="styles/facebook-content/feed/make-post/make-post.css">
+    <link rel="stylesheet" type="text/css" href="styles/facebook-content/feed/friend-post/friend-post.css">
+    <link rel="stylesheet" type="text/css" href="styles/facebook-content/more-events/more_events.css">
+    <link rel="stylesheet" type="text/css" href="styles/facebook-content/more-events/stories/stories.css">
+    <link rel="stylesheet" type="text/css" href="styles/facebook-content/more-events/event-list/event-list.css">
+    <link rel="stylesheet" type="text/css" href="styles/facebook-content/more-events/friend-requests/friend-requests.css">
+    <link rel="stylesheet" type="text/css" href="styles/facebook-content/more-events/suggested/suggested.css">
+    <link rel="stylesheet" type="text/css" href="styles/facebook-content/more-events/lang-bar/lang-bar.css">
+    <link rel="stylesheet" type="text/css" href="styles/facebook-content/more-events/other-settings/other-settings.css">
     <title>Facebook</title>
 </head>
 <body>
-<header class="main-header">
-    <nav class="main-navigation">
-        <a id="logo" href="#">Facebook</a><!--
-         --><form action="/" class="search"><!--
-            --><input id="search-field" type="text" placeholder="Search mail" name="search"/><!--
-            --><button id="search-button" type="submit">Search</button><!--
-        --></form><!--
-        --><ul>
-        <li><a href="#">User</a></li>
-        <li><a href="#" class="menu_signs"> Home</a></li>
-        <li><button> Create</button></li>
-        <li>
-            <button class="friends">Friends</button>
-            <button class="messages">Messages</button>
-            <button class="notifications">Notifications</button>
-        </li>
-        <li>
-            <button class="quick-help">Quick help</button>
-            <button class="submenu">Open submenu</button>
-        </li>
-    </ul>
-    </nav>
-</header>
-
-<main id="container">
-    <nav id="side_menu">
-        <ul class="sidebar">
-            <li class="link">
-                <a href="#">User name</a>
-            </li>
-            <li class="link active">
-                <a href="#"> News Feed</a>
-            </li>
-            <li class="title">
-                <a href="#"> Messenger</a>
-            </li>
-            <li>
-                <h5>Shortcuts</h5>
-            </li>
-            <li class="title">
-                <a href="#"> Group Name</a>
-            </li>
-            <li>
-                <h5 class="section_name">Explore</h5>
-            </li>
-            <li class="link">
-                <a href="#">Events</a>
-            </li>
-            <li class="link">
-                <a href="#"> Groups</a>
-            </li>
-            <li class="link">
-                <a href="#"> Pages</a>
-            </li>
-            <li class="link">
-                <a href="#"> Friend List</a>
-            </li>
-            <li class="drop_link">
-                <a href="#">See More</a>
-            </li>
-        </ul>
-    </nav>
-    <section id="feed">
-        <form id="make_post">
-            <header>
-                <button name="makePost">Make Post</button>
-                <button name="addMedia">Photo/Video Album</button>
-                <button name="liveVideo">Live Video</button>
-            </header>
-            <textarea placeholder="What`s on your mind user?">
-            </textarea>
-            <footer>
-                <button>Photo/Video</button>
-                <button>Tag Friends</button>
-                <button>Felling/Activity</button>
-            </footer>
-        </form>
-        <section id="friend_post">
-            <article>
-                <address>
-                    <a href="#">User</a>
-                    <p style="margin: 0"><time datetime="2018-10-30">1hr.</time></p>
-                </address>
-                <h5> An incredible day with friends!!!</h5>
-                <p>
-                    <img alt="happy friends" src="images/post1.jpeg" style="width: 100%"/>
-                </p>
-
-                <footer>
-                    <form class="feelings">
-                        <button>Like</button>
-                        <button>Comment</button>
-                        <button>Share</button>
-                    </form>
-                </footer>
-            </article>
-            <article>
-                <address>
-                    <a href="#">User</a>
-                    <p style="margin: 0"><time datetime="2018-10-30">1hr.</time></p>
-                </address>
-                <h5> An incredible day with friends!!!</h5>
-                <p>
-                    <img alt="happy friends" src="images/post1.jpeg" style="width: 100%"/>
-                </p>
-
-                <footer>
-                    <form class="feelings">
-                        <button>Like</button>
-                        <button>Comment</button>
-                        <button>Share</button>
-                    </form>
-                </footer>
-            </article>
-        </section>
-    </section>
-
-    <aside id="events">
-        <section id="story">
-            <header class="event_title">
-                <h3><a href="#">Stories</a></h3>
-                <form action="">
-                    <a href="">Archive</a>
-                    <button>Settings</button>
-                </form>
-            </header>
-            <a class="add_story">
-                <button class="plus"></button>
-                <button class="text">Add to Your Story</button>
-                <p>Share a photo, video or write something</p>
-            </a>
-        </section>
-        <section id="event_list">
-            <ul class="event_title">
-                <li>
-                    <button>
-                        <i></i>Event invite 1...<time>on October 12</time>
-                    </button>
-                </li>
-            </ul>
-        </section>
-        <section id="friend_request">
-            <h5>Friend request</h5>
-            <a href="#">See all</a>
-            <div class="requests">
-                <a class="user-image">User image</a>
-                <a class="user-name">User 1</a>
-                <p>5 mutual friends</p>
-                <button>Confirm friend</button>
-            </div>
-        </section>
-        <section id="suggested_page">
-            <h5>Suggested page</h5>
-            <a href="#">See all</a>
-            <article>
-                <header>35 people likes this</header>
-                <main>
-                    <a href="#" class="page_image">Page avatar</a>
-                    <button>UCU HashCode Hub</button>
-                    <p>Organization</p>
-                    <a href="#" class="event_poster">Event image</a>
-                </main>
-                <footer>
-                    <button class="like">Like Page</button>
-                </footer>
-            </article>
-        </section>
-        <section id="lang-bar">
-            <ul>
-                <li>
-                    <button class="active">English(US)</button>
-                </li>
-                <li>
-                    <button>Українська</button>
-                </li>
-                <li>
-                    <button>Русский</button>
-                </li>
-                <li>
-                    <button>Espanol</button>
-                </li>
-                <li>
-                    <button>Portugues</button>
-                </li>
-            </ul>
-        </section>
-
-        <footer id="other-settings">
-            <ul>
-                <li>
-                    <a href="#">Privacy</a>
-                </li>
-                <li>
-                    <a href="#">Terms</a>
-                </li>
-                <li>
-                    <a href="#">Advertising</a>
-                </li>
-                <li>
-                    <a href="#">Ad Choice</a>
-                </li>
-                <li>
-                    <a href="#">Cookies</a>
-                </li>
-                <li>
-                    <a href="#">More</a>
-                </li>
-            </ul>
-        </footer>
-    </aside>
-</main>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.12/handlebars.js"></script>
+<script>
+    const render = async (templateURL, dataURL, container) => {
+        const source = await (await fetch(templateURL)).text();
+        const template = Handlebars.compile(source);
+        const data = await (await fetch(dataURL)).json();
+        container.innerHTML = template(data);
+    };
+    render("/main.handlebars", "/data.json", document.body )
+</script>
 </body>
 </html>

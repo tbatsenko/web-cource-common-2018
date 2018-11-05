@@ -1,0 +1,516 @@
+<header class="bureau__container bureau__header">
+    {{#header}}
+        <a class="header__logo">{{logo}}</a>
+        <nav class="header__menu">
+            {{#menu}}
+                <a class="menu__item" href="#">{{.}}</a>
+            {{/menu}}
+        </nav>
+        <button class="header__user-button">{{user}}</button>
+    {{/header}}
+</header>
+
+<main class="bureau__container bureau__posts">
+    <article class="posts__section posts__advert">
+        {{#posts.[0]}}
+            <a class="advert__image" href="#">
+                <img class="advert__image_content" src="/images/kids.png" alt="Shop-fans">
+            </a>
+            <a class="advert__description" href="#">
+                <u class="advert__description_underlined">{{description.[0]}}</u> {{description.[1]}}
+            </a>
+        {{/posts.[0]}}
+    </article>
+
+    <div class="posts__section posts__courses">
+        {{#posts.[1]}}
+            <article class="courses__post courses__latest">
+                <a href="#" class="courses__latest-container">
+                    {{#latest}}
+                        <div class="latest__countdown">
+                            <div class="countdown__number">{{countdown-number}}</div>
+                            {{#secondary-text}}
+                                <p class="countdown__secondary-text">{{.}}</p>
+                            {{/secondary-text}}
+                        </div>
+                        <div class="latest__announcement">
+                            <h4 class="announcement__title">{{announcement-title}}</h4>
+                            <p class="announcement__link">{{link.[0]}}<u
+                                    class="announcement__link_underlined">{{link.[1]}}</u></p>
+                        </div>
+                    {{/latest}}
+                </a>
+            </article>
+            <article class="courses__post courses__other">
+                {{#other}}
+                    <h4 class="other__title">{{title}}</h4>
+                    <ul class="other__course-list">
+                        {{#courses}}
+                            <li class="course-list__item">
+                                <a href="#" class="item__content">{{.}}</a>
+                            </li>
+                        {{/courses}}
+                    </ul>
+                {{/other}}
+            </article>
+        {{/posts.[1]}}
+    </div>
+
+    <div class="posts__section posts__educational">
+        {{#posts.[2]}}
+            <article class="educational__post">
+                <a class="educational__content" href="#">
+                    <h4 class="educational__title">{{titles.[0]}}</h4>
+                    <img class="day-icon__image" src="/images/icon_of_day.jpg">
+                    <p class="day-icon__description">{{descriptions.[0]}}</p>
+                    <address class="educational__author educational__author_no-separate">{{authors.[0]}}</address>
+                </a>
+            </article>
+            <article class="educational__post">
+                <a class="educational__content" href="#">
+                    <h4 class="educational__title">{{titles.[1]}}</h4>
+                    <p class="article__description">{{descriptions.[1]}}</p>
+                    <address class="educational__author">{{authors.[1]}}</address>
+                </a>
+            </article>
+            <article class="educational__post educational__post_important">
+                <a class="educational__content" href="#">
+                    <h4 class="educational__title educational__title_important">{{titles.[2]}}</h4>
+                    <p class="article__description educational__description_important">{{descriptions.[2]}}</p>
+                    <address class="educational__author">{{authors.[2]}}</address>
+                </a>
+            </article>
+        {{/posts.[2]}}
+    </div>
+
+    <article class="posts__section posts__hottest-books">
+        <a class="hottest-books__book hottest-books__book_advices">
+            <img src="/images/advice.png" class="hottest-books__book-image" alt="Советы">
+        </a>
+        <a class="hottest-books__book hottest-books__book_manifest">
+            <img src="/images/manifest.jpg" class="hottest-books__book-image"
+                 alt="Манифест издательства Бюро горбунова">
+        </a>
+    </article>
+
+    <article class="posts__section posts__materials">
+        {{#posts.[3]}}
+            <a class="materials__fonts" href="#">
+                <svg class="fonts__background" width="100%" height="100%" viewBox="0 0 197.434 388.365">
+                    <path class="a"
+                          d="M98.8,99.8C55.3,56.4,11.8,10.5,2.5.7L0.7,2.2V386l2.1,1.7c9.7-10.3,52.4-55.3,95.3-98.1,49.2-49.1,98.8-95.3,98.8-95.3s-49-45.6-98.1-94.5"
+                          transform="translate(-0.2 -0.016)">
+                    </path>
+                </svg>
+                <a class="fonts__link" href="#">
+                    <div class="fonts__icon">
+                        <svg viewBox="0 0 64 64" class="icon__svg">
+                            <g>
+                                <path class="icon__svg-letter"
+                                      d="M0,14.2h25.6v7H8.3v8.3h8.4c8.5,0,12.3,4.4,12.3,11.2C29,48,23.3,53,15,53H0V14.2z M8.3,36.3v9.7h5.9   c4.5,0,6.6-1.5,6.6-5.4c0-3.1-1.9-4.4-5.6-4.4H8.3z"></path>
+                                <path class="icon__svg-letter"
+                                      d="M48.8,53.6c-10.2,0-13.8-6-13.8-17.4c0-11.5,4.3-18.9,16.6-23.2l7.6-2.7l2.6,6.4c-3.5,1.4-8.1,2.9-12.2,4.6   c-3.1,1.3-4.7,3-5.5,4.2l-1.3,1.7l0.4,0.2c1.6-1.7,4.6-3.4,8.3-3.4C60.2,24.1,64,29,64,37C64,47,59.3,53.6,48.8,53.6z M49.1,47.1   c4.7,0,7-3.4,7-9.7c0-5.2-2.2-6.9-6.3-6.9c-2.7,0-5.3,1.1-6.8,2.8C43,34.5,43,35.6,43,36.7C43,43.8,44.8,47.1,49.1,47.1z"></path>
+                            </g>
+                        </svg>
+                    </div>
+                    <h4 class="fonts__title">{{title}}</h4>
+                    <p class="fonts__amount">{{fonts-amount}}</p>
+                </a>
+            </a>
+            <a class="materials__image" href="#">
+                <img class="materials__image_content" src="/images/burosign.jpg" alt="Бюросайн">
+            </a>
+            <a class="materials__description" href="#">
+                <u class="advert__description_underlined">{{description.[0]}}</u>
+                {{description.[1]}}
+            </a>
+        {{/posts.[3]}}
+    </article>
+    <div class="posts__section posts__books">
+        {{#posts.[4]}}
+            <h4 class="books__title">{{title}}</h4>
+            <ul class="books__list">
+                {{#hottest.[0]}}
+                    <li class="books__book books__book_hottest">
+                        <a href="#" class="book__content">
+                            <img class="book__image" src="/images/bookshelf.png" alt="">
+                            <h4 class="book__title">{{books-title}}</h4>
+                            <p class="book__topic">{{book-topic}}</p>
+                            <p class="book__price">{{price}}</p>
+                        </a>
+                    </li>
+                {{/hottest.[0]}}
+                {{#books}}
+                    <li class="books__book">
+                        <a href="#" class="book__content">
+                            <img class="book__image" src="{{books-illustration}}" alt="">
+                            <h4 class="book__title">{{books-title}}</h4>
+                            <p class="book__topic">{{book-topic}}</p>
+                            <p class="book__price">{{price}}</p>
+                        </a>
+                    </li>
+                {{/books}}
+                {{#pre-order}}
+                    <li class="books__book">
+                        <a href="#" class="book__content">
+                            <img class="book__image" src="{{books-illustration}}" alt="">
+                            <h4 class="book__title">{{books-title}}</h4>
+                            <p class="book__topic">{{book-topic}}</p>
+                            <p class="book__price book__price_pre-order">{{price}}</p>
+                        </a>
+                    </li>
+                {{/pre-order}}
+                {{#hottest.[1]}}
+                    <li class="books__book books__book_hottest">
+                        <a href="#" class="book__content book__content_centered">
+                            <img class="book__image" src="/images/present-book.jpg" alt="">
+                            <h4 class="book__title">{{books-title}}</h4>
+                            <p class="book__topic">{{book-topic}}</p>
+                            <p class="book__price book__price_sell">{{price}}</p>
+                        </a>
+                    </li>
+                {{/hottest.[1]}}
+            </ul>
+        {{/posts.[4]}}
+    </div>
+
+    <div class="posts__section posts__courses posts__courses_separate">
+        {{#posts.[5]}}
+            <article class="courses__soon">
+                <a href="#" class="soon__content">
+                    <h4 class="soon__title">{{titles.[0]}}</h4>
+                    <button class="soon__sign-up soon__sign-up_blue">{{sign-in}}</button>
+                    <div class="soon__info">
+                        <time class="soon__course-time" datetime="27-11-2018">{{dates.[0]}}</time>
+                        <address class="soon__author">{{authors.[0]}}</address>
+                    </div>
+                </a>
+            </article>
+            <article class="courses__soon">
+                <a href="#" class="soon__content">
+                    <h4 class="soon__title">{{titles.[1]}}</h4>
+                    <button class="soon__sign-up soon__sign-up_black">{{sign-in}}</button>
+                    <div class="soon__info">
+                        <time class="soon__course-time" datetime="27-11-2018">{{dates.[1]}}</time>
+                        <address class="soon__author">{{authors.[1]}}</address>
+                    </div>
+                </a>
+            </article>
+        {{/posts.[5]}}
+    </div>
+
+    <a class="posts__section posts__full-page-advert">
+        <img class="full-page-advert__image" src="/images/book-collection.png">
+    </a>
+
+    <article class="posts__section posts__hottest-books">
+        <a class="hottest-books__book hottest-books__book_tomato" href="#">
+            <img src="/images/tomato_book.png" class="hottest-books__book-image" alt="Tvigle">
+        </a>
+        <a class="hottest-books__book hottest-books__book_chess" href="#">
+            <img src="/images/chess_book.png" class="hottest-books__book-image"
+                 alt="Путишествие в шахматное королевство">
+        </a>
+    </article>
+
+    <div class="posts__section posts__cafe">
+        {{#posts.[6]}}
+            <a class="cafe__image" href="#">
+                <img class="cafe__image_content"
+                     src="https://bureau.ru/coworkafe/i/webcam_frame.jpg?v=0.7156392229205644" alt="Коворка">
+            </a>
+            <a class="cafe__about" href="#">
+                <h4 class="cafe__logo">{{cafe-name}}</h4>
+                <div class="cafe__schedule">
+                    <time class="cafe__time">
+                        {{time.[0]}}
+                        <br>
+                        {{time.[1]}}
+                    </time>
+                    <address class="cafe__link">{{link}}</address>
+                </div>
+                <div class="cafe__product">
+                    {{product.[0]}}<br>{{product.[1]}}
+                    <p class="product__price">{{price}}</p>
+                    <div class="product__illustration">{{illustration}}</div>
+                </div>
+            </a>
+            <div class="cafe__event">
+                {{#event}}
+                    <h4 class="event__title">{{title}}</h4>
+                    <p class="event__topic">{{topic}}</p>
+                    <div class="event__info">
+                        <time class="event__time">{{time}}</time>
+                        <p class="event__author">{{author}}</p>
+                        <p class="event__places">{{places}}</p>
+                    </div>
+                {{/event}}
+            </div>
+        {{/posts.[6]}}
+    </div>
+
+    <article class="posts__section posts__statistics">
+        <a class="statistics__client" href="#">
+            <img class="statistics__client_image" src="/images/wedding-stat.png" alt="Примерка">
+        </a>
+        <a class="statistics__social-media" href="#">
+            <img class="statistics__social-media_image" src="/images/social-media-stat.png" alt="Соцсети">
+        </a>
+    </article>
+
+    <article class="posts__section posts__materials posts__materials_reversed">
+        {{#posts.[7]}}
+            <a class="materials__fonts" href="#">
+                <svg class="fonts__background fonts__background_greyed" width="100%" height="100%"
+                     viewBox="0 0 197.434 388.365">
+                    <path class="a"
+                          d="M98.8,99.8C55.3,56.4,11.8,10.5,2.5.7L0.7,2.2V386l2.1,1.7c9.7-10.3,52.4-55.3,95.3-98.1,49.2-49.1,98.8-95.3,98.8-95.3s-49-45.6-98.1-94.5"
+                          transform="translate(-0.2 -0.016)">
+                    </path>
+                </svg>
+                <a class="fonts__link fonts__link_books" href="#">
+                    <div class="fonts__icon">
+                        <svg viewBox="0 0 12.7 9.5" class="icon__svg icon__svg_books">
+                            <g>
+                                <path class="icon__svg-letter icon__svg-letter_books"
+                                      d="M4,8.8c-1.5,0-3.6,0.5-4,0.6V0.8C0,0.8,1.9,0,3.8,0c1,0,2,0.3,2.6,0.5C6.9,0.3,7.9,0,8.9,0c1.9,0,3.8,0.8,3.8,0.8v8.6    c-0.3-0.1-2.5-0.6-4-0.6c-1.1,0-1.9,0.3-2.4,0.6C5.9,9.1,5.1,8.8,4,8.8z M5.9,8.2V1.4C5.4,1.2,4.7,1,3.8,1C2.7,1,1.6,1.3,1,1.6v6.6    C1.8,8,3.1,7.8,3.9,7.8C4.7,7.8,5.3,7.9,5.9,8.2z M11.7,8.2V1.6C11.1,1.3,10,1,8.9,1C8,1,7.3,1.2,6.8,1.4v6.7    c0.6-0.3,1.2-0.4,2-0.4C9.6,7.8,10.9,8,11.7,8.2z"></path>
+                            </g>
+                        </svg>
+                    </div>
+                    <h4 class="fonts__title">{{title}}</h4>
+                    <p class="fonts__amount">{{works}}</p>
+                </a>
+            </a>
+            <a class="materials__image" href="#">
+                <img class="materials__image_content" src="/images/magazine.png" alt="Журнал">
+            </a>
+            <a class="materials__description" href="#">
+                <u class="advert__description_underlined">{{description.[0]}}</u>
+                {{description.[1]}}
+            </a>
+        {{/posts.[7]}}
+    </article>
+
+    <article class="posts__section posts__materials">
+        {{#posts.[8]}}
+            <div class="materials__fonts materials__fonts_bureau-sans">
+                <a href="#" class="fonts__general">
+                    {{#general}}
+                        <h4 class="general__title">{{title}}</h4>
+                        <p class="general__example">{{example}}</p>
+                        <p class="general__name">{{name}}</p>
+                        <p class="general__description">{{description}}</p>
+                        <p class="general__price">{{price}}</p>
+                    {{/general}}
+                </a>
+                <div class="fonts__other">
+                    {{#other.[0]}}
+                        <a class="fonts__other_content" href="#">
+                            <h4 class="other__title">{{title}}</h4>
+                            <p class="other__price">{{price}}</p>
+                        </a>
+                    {{/other.[0]}}
+                </div>
+                <div class="font__other">
+                    {{#other.[1]}}
+                        <a class="fonts__other_content" href="#">
+                            <h4 class="other__title other__title_checked">{{title}}</h4>
+                            <p class="other__price">{{price}}</p>
+                        </a>
+                    {{/other.[1]}}
+                </div>
+            </div>
+            <a class="materials__image" href="#"><img class="materials__image_content" src="/images/burosans.png"
+                                                      alt="Бюросанс"></a>
+            <a class="materials__description" href="#">
+                <u class="advert__description_underlined">{{description.[0]}}</u>
+                {{description.[1]}}
+            </a>
+        {{/posts.[8]}}
+    </article>
+
+    <div class="posts__section posts__educational posts__educational_reversed">
+        {{#posts.[9]}}
+            <article class="educational__post educational__post_reversed">
+                <a class="educational__content" href="#">
+                    <h4 class="educational__title">{{titles.[0]}}</h4>
+                    <div class="educational__illustration">
+                        <img class="illustration__bg" src="/images/nuts.jpg">
+                        <div class="illustration__text-inside">{{illustration}}</div>
+                    </div>
+                    <address class="educational__author">{{authors.[0]}}</address>
+                </a>
+            </article>
+            <article class="educational__post educational__post_reversed">
+                <a class="educational__content" href="#">
+                    <h4 class="educational__title">{{titles.[1]}}</h4>
+                    <p class="article__description">{{descriptions.[0]}}</p>
+                    <address class="educational__author">{{authors.[1]}}</address>
+                </a>
+            </article>
+            <article class="educational__post educational__post_important">
+                <a class="educational__content" href="#">
+                    <h4 class="educational__title educational__title_important">{{titles.[2]}}</h4>
+                    <p class="article__description educational__description_important">{{descriptions.[1]}}</p>
+                    <address class="educational__author">{{authors.[2]}}</address>
+                </a>
+            </article>
+        {{/posts.[9]}}
+    </div>
+
+    <a class="posts__section posts__full-page-advert posts__full-page-advert_transparent">
+        <img class="full-page-advert__image" src="/images/cars.png" alt="Cars design">
+    </a>
+
+    <article class="posts__section posts__hottest-books">
+        <a class="hottest-books__book hottest-books__book_tomato" href="#">
+            <img src="/images/speaking_men.png" class="hottest-books__book-image" alt="Общение">
+        </a>
+        <a class="hottest-books__book hottest-books__book_chess" href="#">
+            <img src="/images/style-books.png" class="hottest-books__book-image" alt="Информационный стиль">
+        </a>
+    </article>
+
+    <div class="posts__section posts__educational">
+        {{#posts.[10]}}
+            <article class="educational__post">
+                <a class="educational__content" href="#">
+                    <h4 class="educational__title educational__title_bureau-sphere">{{titles.[0]}}</h4>
+                    <img class="day-icon__image" src="/images/bureausphere.jpg" alt="Бюросфера">
+                    <address class="educational__author educational__author_has-description">{{authors.[0]}}</address>
+                    <p class="educational__author_description">{{descriptions.[0]}}</p>
+                </a>
+            </article>
+            <article class="educational__post">
+                <a class="educational__content" href="#">
+                    <h4 class="educational__title">{{titles.[1]}}</h4>
+                    <p class="article__description">{{descriptions.[1]}}</p>
+                    <address class="educational__author">{{authors.[1]}}</address>
+                </a>
+            </article>
+            <article class="educational__post educational__post_important">
+                <a class="educational__content" href="#">
+                    <h4 class="educational__title">{{titles.[2]}}</h4>
+                    <p class="article__description educational__description_important">{{descriptions.[2]}}</p>
+                    <address class="educational__author">{{authors.[2]}}</address>
+                </a>
+            </article>
+        {{/posts.[10]}}
+    </div>
+
+    <a class="posts__section posts__full-page-advert posts__full-page-advert_transparent">
+        <img class="full-page-advert__image" src="/images/prize-books.png">
+    </a>
+
+    <article class="posts__section posts__materials posts__materials_reversed">
+        {{#posts.[11]}}
+            <a class="materials__fonts" href="#">
+                <svg class="fonts__background fonts__background_transparent" width="100%" height="100%"
+                     viewBox="0 0 197.434 388.365">
+                    <path class="a"
+                          d="M98.8,99.8C55.3,56.4,11.8,10.5,2.5.7L0.7,2.2V386l2.1,1.7c9.7-10.3,52.4-55.3,95.3-98.1,49.2-49.1,98.8-95.3,98.8-95.3s-49-45.6-98.1-94.5"
+                          transform="translate(-0.2 -0.016)">
+                    </path>
+                </svg>
+                <a class="fonts__link fonts__link_school" href="#">
+                    <div class="fonts__icon fonts__icon_school">
+                        <svg viewBox="0 0 64 64" class="icon__svg icon__svg_school">
+                            <g>
+                                <path class="icon__svg-letter icon__svg-letter_school"
+                                      d="M47.5,58C41.6,58,37,54.8,37,45.9v-2.5h-9.8v2.5c0,8.9-4.7,12.1-10.5,12.1C9.5,58,5.6,53.6,5.6,47.5  c0-7.2,5.3-10.5,13.3-10.5h1.7V26.6h-1.7c-8,0-13.3-3.3-13.3-10.5c0-6.2,3.9-10.5,11.1-10.5c5.9,0,10.5,3.2,10.5,12.1v2.5H37v-2.5  c0-8.9,4.7-12.1,10.5-12.1c7.2,0,11.1,4.4,11.1,10.5c0,7.2-5.3,10.5-13.3,10.5h-1.7v10.3h1.7c8,0,13.3,3.3,13.3,10.5  C58.6,53.6,54.7,58,47.5,58z M22,20.1v-0.5l-1.4-0.1c0-5.2-1.3-7.4-4.4-7.4c-2.3,0-4.1,1.6-4.1,4c0,2.5,1.8,4,6.1,4H22z M16.2,51.4  c3.1,0,4.4-2.2,4.4-7.4v-2h-0.4l-0.2,1.3h-1.8c-4.3,0-6.1,1.5-6.1,4C12.1,49.9,13.8,51.4,16.2,51.4z M37,36.9V26.6h-9.8v10.3H37z   M48,51.4c2.3,0,4.1-1.6,4.1-4c0-2.5-1.8-4-6.1-4h-3.8v0.5l1.4,0.1C43.6,49.2,44.9,51.4,48,51.4z M43.6,21.6h0.5l0.4-1.6h1.6  c4.4,0,6-1.6,6-4.5c0-2-1.6-3.5-4.1-3.5c-3.1,0-4.4,2.2-4.4,7.4V21.6z"></path>
+                            </g>
+                        </svg>
+                    </div>
+                    <h4 class="fonts__title fonts__title_school">{{title}}</h4>
+                    <p class="fonts__amount fonts__amount_school">{{works}}</p>
+                </a>
+            </a>
+            <a class="materials__image" href="#">
+                <img class="materials__image_content" src="/images/bureau_school.png" alt="Журнал">
+            </a>
+            <a class="materials__description" href="#">
+                <u class="advert__description_underlined">{{description.[0]}}</u>
+                {{description.[1]}}
+            </a>
+        {{/posts.[11]}}
+    </article>
+</main>
+
+<footer class="bureau__container bureau__footer">
+    {{#footer}}
+        <div class="footer__container footer__contacts">
+            {{#contacts}}
+                <div class="container__section">
+                    {{name.[0]}}
+                    <br>
+                    {{name.[1]}}
+                </div>
+                <div class="container__section">
+                    <a href="#" class="footer__key-link">{{mail}}</a>
+                    <br>
+                    <a href="#">{{phone}}</a>
+                </div>
+            {{/contacts}}
+        </div>
+        <div class="footer__container footer__address">
+            {{#address}}
+                <a href="#" class="container__section footer__key-link">{{client}}</a>
+                <address class="container__section">
+                    {{street.[0]}}
+                    <br>
+                    {{street.[1]}}
+                </address>
+            {{/address}}
+        </div>
+        <div class="footer__container footer__more-options">
+            <div class="more-options__content">
+                <nav class="more-options__section more-options__social-media">
+                    <a class="social-media__link" href="#">
+                        <svg viewBox="0 0 30 30" class="link__svg">
+                            <path class="svg__bg"
+                                  d="M27.93,30A2,2,0,0,0,30,28.07s0,0,0-.07V2.07A2,2,0,0,0,28.07,0h-26A2,2,0,0,0,0,1.93S0,2,0,2V27.93A2,2,0,0,0,1.93,30h26Z"></path>
+                            <path class="svg__front"
+                                  d="M4.37,10.68h2c1.41,0,3.18.41,3.18,2.2S7.86,15.45,6.2,15.45H5.73c0,1.08.06,2,.11,2.8H4.47V13.11C4.46,12.16,4.43,11.32,4.37,10.68Zm1.36,3.8h.59c1.18,0,1.86-.59,1.86-1.57,0-1.16-1-1.26-2.1-1.26H5.75c0,.57,0,1.22,0,1.79ZM18.07,11.2l-.49,1.08a4.11,4.11,0,0,0-2.09-.59,2.64,2.64,0,0,0-2.73,2.8,2.56,2.56,0,0,0,2.54,2.73,3.65,3.65,0,0,0,2.34-.71l.46,1a5,5,0,0,1-2.91.92,3.69,3.69,0,0,1-3.7-4,3.83,3.83,0,0,1,3.94-4A4.67,4.67,0,0,1,18.07,11.2Zm8.54,0-.49,1.08A4.11,4.11,0,0,0,24,11.69a2.64,2.64,0,0,0-2.73,2.8,2.56,2.56,0,0,0,2.54,2.73,3.65,3.65,0,0,0,2.34-.71l.46,1a5,5,0,0,1-2.91.92,3.69,3.69,0,0,1-3.7-4,3.83,3.83,0,0,1,3.94-4A4.67,4.67,0,0,1,26.61,11.2Z"></path>
+                        </svg>
+                    </a>
+                    <a class="social-media__link" href="#">
+                        <svg viewBox="0 0 30 30" class="link__svg">
+                            <path class="svg__bg"
+                                  d="M27.93,30A2,2,0,0,0,30,28s0-.06,0-.09V2.07A2,2,0,0,0,28,0H2.07A2,2,0,0,0,0,2S0,2,0,2.07V27.93A2,2,0,0,0,2,30H27.93Z"></path>
+                            <path class="svg__front"
+                                  d="M12.41,30V19H8.69V14.79h3.78V11.64C12.47,8,14.74,6,18.05,6a33,33,0,0,1,3.36.16V10H19.09c-1.81,0-2.17.83-2.17,2.07v2.74h4.34L20.69,19H16.91V30Z"></path>
+                        </svg>
+                    </a>
+                    <a class="social-media__link" href="#">
+                        <svg viewBox="0 0 30 30" class="link__svg">
+                            <path class="svg__bg"
+                                  d="M27.93,0H2.07A2,2,0,0,0,0,2S0,2,0,2.07V27.93A2,2,0,0,0,2,30H27.93A2,2,0,0,0,30,28s0-.06,0-.09V2.07A2,2,0,0,0,28,0Z"></path>
+                            <path class="svg__front"
+                                  d="M23.64,9.78v.57A12.83,12.83,0,0,1,10.9,23.28h-.2a12,12,0,0,1-6.88-2.12,7.64,7.64,0,0,0,1.09.05,9.33,9.33,0,0,0,5.64-2,4.55,4.55,0,0,1-4.24-3.15A4.64,4.64,0,0,0,8.38,16a4.54,4.54,0,0,1-3.67-4.45v-.05a4.15,4.15,0,0,0,2.07.57,4.58,4.58,0,0,1-1.4-6.05,12.79,12.79,0,0,0,9.36,4.76,4.52,4.52,0,0,1,7.71-4.14,9.31,9.31,0,0,0,2.9-1.09,4.7,4.7,0,0,1-2,2.53,9.19,9.19,0,0,0,2.59-.72A9.08,9.08,0,0,1,23.64,9.78Z"></path>
+                        </svg>
+                    </a>
+                    <a class="social-media__link" href="#">
+                        <svg viewBox="0 0 30 30" class="link__svg">
+                            <path class="svg__bg"
+                                  d="M27.9,0H2.1C1,0,0,0.8,0,1.9C0,2,0,2,0,2s0,0,0,0.1V28c0,1,0.8,2,1.9,2c0,0,0,0,0.1,0h25.9c1.1,0,2-0.8,2.1-1.9c0,0,0,0,0-0.1v-0.1V2.1C30,1,29.2,0,28.1,0C28,0,28,0,27.9,0L27.9,0z"></path>
+                            <path class="svg__front"
+                                  d="M23.5,5.3L4.2,13.3c-0.4,0.2-0.6,0.6-0.4,1c0.1,0.2,0.3,0.4,0.5,0.4l4.3,1.1l2.1,6.5c0.1,0.4,0.6,0.6,1,0.5c0.1,0,0.3-0.1,0.3-0.2l2.7-3.1l4.9,3.9c0.3,0.3,0.8,0.2,1.1-0.1c0.1-0.1,0.1-0.2,0.2-0.3l3.7-16.8c0.1-0.4-0.2-0.8-0.6-0.9C23.8,5.2,23.7,5.2,23.5,5.3z M20,9.5l-8.2,7.2c-0.2,0.2-0.3,0.4-0.3,0.6l-0.3,3.3c0,0.1-0.1,0.1-0.1,0.1c-0.1,0-0.1,0-0.1-0.1l-1.3-4.7c-0.1-0.2,0-0.4,0.2-0.5l10.1-6.1C20,9.2,20.1,9.4,20,9.5L20,9.5z"></path>
+                        </svg>
+                    </a>
+                    <a class="social-media__link" href="#">
+                        <svg viewBox="0 0 30 30" class="link__svg">
+                            <path class="svg__bg"
+                                  d="M27.9,30c1.1,0,2-0.8,2.1-1.9c0,0,0,0,0-0.1v-0.1V2.1C30,1,29.2,0,28.1,0c0,0,0,0-0.1,0H2.1C1,0,0,0.8,0,1.9C0,2,0,2,0,2s0,0,0,0.1v25.8c0,1.1,0.8,2,1.9,2.1c0,0,0,0,0.1,0H27.9z"></path>
+                            <path class="svg__front"
+                                  d="M24.9,9.5c-0.2-0.9-0.9-1.7-1.8-1.9C19.9,6.8,15,6.9,15,6.9v0c0,0-5-0.1-8.2,0.7C5.9,7.8,5.2,8.6,5,9.5c-0.5,1.7-0.5,5.1-0.5,5.1c0,0.7,0.1,3.5,0.5,4.9c0.2,0.9,0.9,1.7,1.8,1.9c3.2,0.8,8.2,0.7,8.2,0.7v0c0,0,4.9,0.1,8.1-0.7c0.9-0.2,1.6-1,1.8-1.9c0.4-1.4,0.5-4.2,0.5-4.9C25.4,14.6,25.4,11.2,24.9,9.5z M13,17.7v-6.3l5.4,3.2L13,17.7z"></path>
+                        </svg>
+                    </a>
+                </nav>
+                <form class="more-options__section more-options__language-choose" action="">
+                    <button class="language-choose__option language-choose__option_chosen">{{language.[0]}}</button>
+                    <button class="language-choose__option">{{language.[1]}}</button>
+                </form>
+            </div>
+        </div>
+    {{/footer}}
+</footer>

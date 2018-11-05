@@ -18,44 +18,39 @@ a {
 }
 
 main {
-    padding-top: 60px;
-    display: flex;
-    display: flex;
-    width: 1050px;
-    justify-content: space-between;
     margin: auto;
 }
 
-main > div {
-    display: flex;
-    width: 65em;
-    margin: auto;
-    justify-content: space-between;
+
+button{
+    padding: 0;
+    border: 0;
+    background-color: transparent;
+    color: transparent;
 }
 
-header.header-in-menu{
-    color: #616770;;
-    font-weight: 600;
-    font-size: 13px;
-    line-height: 22px;
-}
-
-img.rnd {
-    border-radius: 999px;
-}
-
-img.small {
-    width: 20px;
-    height: 20px;
-}
-
-img{
+img
+{
     color: transparent !important;
 }
 
 
-.panel {
-    background: #fff;
-    border-radius: 5px;
-    border: 1px solid #ddd;
+.default-page{
+    display: flex;
+    justify-content: space-between;
+    flex-flow: row;
+    width: 1050px;
+    padding-top: 64px;
+}
+
+.profile-page{
+    padding-top: 42px;
+    display: flex;
+    justify-content: space-between;
+    flex-flow: column;
+<<<<<<< HEAD
+    width: 53em;
+=======
+    width: 815px;
+>>>>>>> parent of 64dd120... Merge branch 'master' of /home/zabulskyy/UCU/Web/web-cource-common with conflicts.
 }

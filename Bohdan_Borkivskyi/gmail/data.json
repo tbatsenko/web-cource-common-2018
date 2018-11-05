@@ -1,0 +1,179 @@
+{
+  "side_menu": {
+    "buttons": [
+      {
+        "src": "https://www.gstatic.com/images/icons/material/system/1x/inbox_gm_googlered600_20dp.png",
+        "text": "Вхідні",
+        "number": "992"
+      },
+      {
+        "src": "https://www.gstatic.com/images/icons/material/system/1x/grade_black_20dp.png",
+        "text": "Із зірочкою"
+      },
+      {
+        "src": "https://www.gstatic.com/images/icons/material/system/1x/watch_later_black_20dp.png",
+        "text": "Відкладені"
+      },
+      {
+        "src": "https://www.gstatic.com/images/icons/material/system/1x/send_black_20dp.png",
+        "text": "Надіслані"
+      },
+      {
+        "src": "https://www.gstatic.com/images/icons/material/system/1x/insert_drive_file_black_20dp.png",
+        "text": "Чернетки"
+      }
+    ]
+  },
+  "emails": [
+    {
+      "title": "Не відповідайте на ",
+      "text": "letter 1",
+      "date": "june"
+    },
+    {
+      "title": "Український католицький",
+      "text": "letter2",
+      "date": " may"
+    },
+    {
+      "title": "3",
+      "text": "letter 3",
+      "date": "april"
+    },
+    {
+      "title": "4",
+      "text": "letter 4",
+      "date": "feb"
+    },
+    {
+      "title": "5",
+      "text": "letter 5",
+      "date": "jan"
+    },
+    {
+      "title": "6",
+      "text": "letter 6",
+      "date": "dec"
+    },
+    {
+      "title": "1",
+      "text": "letter 1",
+      "date": "june"
+    },
+    {
+      "title": "2",
+      "text": "letter2",
+      "date": " may"
+    },
+    {
+      "title": "3",
+      "text": "letter 3",
+      "date": "april"
+    },
+    {
+      "title": "4",
+      "text": "letter 4",
+      "date": "feb"
+    },
+    {
+      "title": "5",
+      "text": "letter 5",
+      "date": "jan"
+    },
+    {
+      "title": "6",
+      "text": "letter 6",
+      "date": "dec"
+    },
+    {
+      "title": "1",
+      "text": "letter 1",
+      "date": "june"
+    },
+    {
+      "title": "2",
+      "text": "letter2",
+      "date": " may"
+    },
+    {
+      "title": "3",
+      "text": "letter 3",
+      "date": "april"
+    },
+    {
+      "title": "4",
+      "text": "letter 4",
+      "date": "feb"
+    },
+    {
+      "title": "5",
+      "text": "letter 5",
+      "date": "jan"
+    },
+    {
+      "title": "6",
+      "text": "letter 6",
+      "date": "dec"
+    },
+    {
+      "title": "1",
+      "text": "letter 1",
+      "date": "june"
+    },
+    {
+      "title": "2",
+      "text": "letter2",
+      "date": " may"
+    },
+    {
+      "title": "3",
+      "text": "letter 3",
+      "date": "april"
+    },
+    {
+      "title": "4",
+      "text": "letter 4",
+      "date": "feb"
+    },
+    {
+      "title": "5",
+      "text": "letter 5",
+      "date": "jan"
+    },
+    {
+      "title": "6",
+      "text": "letter 6",
+      "date": "sdec"
+    },
+    {
+      "title": "1",
+      "text": "letter 1",
+      "date": "june"
+    },
+    {
+      "title": "2",
+      "text": "letter2",
+      "date": " may"
+    },
+    {
+      "title": "3",
+      "text": "letter 3",
+      "date": "april"
+    },
+    {
+      "title": "4",
+      "text": "letter 4",
+      "date": "feb"
+    },
+    {
+      "title": "5",
+      "text": "letter 5",
+      "date": "jan"
+    },
+    {
+      "title": "6",
+      "text": "letter 6",
+      "date": "dec"
+    }
+  ]
+}

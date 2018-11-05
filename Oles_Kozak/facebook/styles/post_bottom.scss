@@ -1,0 +1,26 @@
+//Post bottom implementation
+
+@import "post-buttons";
+
+.post-bottom{
+  width: auto;
+  padding: 10px;
+  height: 70px;
+
+  &__text{
+    color: #616770;
+    font-size: 13px;
+    margin-left: 5px;
+    line-height: 20px;
+    cursor: pointer;
+  }
+  &__likes{
+    margin: 0;
+    display: flex;
+  }
+  &__comment{
+    display: block;
+    margin-left: auto;
+    cursor: pointer;
+  }
+}

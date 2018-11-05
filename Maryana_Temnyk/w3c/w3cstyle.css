@@ -1,0 +1,9 @@
+body{ font-family: sans-serif}
+h1, h2, h3 {
+    color: #005A9C;
+    background: white;
+    font-weight: normal;
+}
+h2 { margin: 3em 0 1em 0; }
+h3 { margin: 2.5em 0 1em 0; }
+h4 { margin: 2.5em 0 0.75em 0; }

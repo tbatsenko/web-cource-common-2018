@@ -1,0 +1,35 @@
+
+
+body{
+    font-family: "Mongolian Baiti";
+    margin: 0;
+    padding: 0;
+}
+
+img{
+    max-width: 100%;
+}
+.main_profile{
+    padding: 20px;
+    margin: 20px;
+    background: aliceblue;
+    width: 470px;
+    float: left;
+}
+
+.detailed_profile{
+    width: 960px;
+    margin: 20px 20px 20px 50px;
+
+}
+
+.user-picture{
+    margin: auto;
+    display: block;
+;
+}
+.column{
+    width: 440px;
+    float: left;
+
+}

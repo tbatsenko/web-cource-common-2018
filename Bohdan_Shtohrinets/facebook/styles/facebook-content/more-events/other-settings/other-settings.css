@@ -1,0 +1,16 @@
+.other-settings {
+  position: relative;
+  margin-top: 0;
+  background-color: inherit;
+  border: none; }
+  .other-settings__option {
+    float: left;
+    margin-left: 10px; }
+  .other-settings__option-link {
+    color: #90949c;
+    font-size: 13px;
+    font-weight: 400; }
+    .other-settings__option-link:hover {
+      text-decoration: underline; }
+
+/*# sourceMappingURL=other-settings.css.map */
