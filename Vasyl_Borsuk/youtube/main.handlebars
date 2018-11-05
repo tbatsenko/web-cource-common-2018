@@ -1,0 +1,80 @@
+<header class="header">
+    {{#header}}
+        <div class="header__left">
+            {{#left_side}}
+                <button class="button button--top-menu"><i class="material-icons">{{menu}}</i></button>
+                <a href="#" class="link--top-menu"><img src={{logo}}></a>
+            {{/left_side}}
+        </div>
+
+        <div class="header__center">
+            {{#center}}
+                <form class="search-form">
+                    <input type="text" placeholder="Search" class="search-form__text-input">
+                    <button class="button search-form__button"><i class="material-icons">{{search}}</i></button>
+                </form>
+            {{/center}}
+
+            <div class="header__buttons">
+                {{#right_side}}
+                    {{#button}}
+                        <button class="button button--top-menu"><i class="material-icons">{{.}}</i></button>
+                    {{/button}}
+                    <button class="button button--top-menu"><img class="img--user img--user-top" src={{user}}></button>
+                {{/right_side}}
+            </div>
+        </div>
+    {{/header}}
+</header>
+
+<main class="main">
+    {{#main}}
+        <aside class="main__left">
+            {{#left-nav}}
+                <div class="main__left-block">
+                    {{#if header}}
+                        <a href="#" class="link link--left-menu link--left-menu-h">{{header}}</a>
+                    {{/if}}
+                    {{#buttons}}
+                        <a href="#" class="link link--left-menu link--left-menu-item">
+                            {{#if logo}}
+                                <i class="material-icons">{{logo}}</i>
+                            {{else}}
+                                <img class="img--user img--user-main-left" src={{user}}>
+                            {{/if}}
+                            {{text}}
+                        </a>
+                    {{/buttons}}
+                </div>
+            {{/left-nav}}
+        </aside>
+
+        <section class="main__center">
+            {{#center}}
+                {{#video-blocks}}
+                    <section class="video-block">
+                        <h3 class="h--video-block-title">{{title}}</h3>
+                        {{#video-rows}}
+                            <div class="video-block__row">
+                                {{#videos}}
+                                    <article class="video">
+                                        <figure class="video__figure">
+                                            <a href="#" class="link link--full-width">
+                                                <img class="img--video" src={{image}}>
+                                                <figcaption class="h--video-title">{{title}}</figcaption>
+                                            </a>
+                                        </figure>
+                                        <footer class="video__info">
+                                            <a href="#" class="link link--video-author">{{author}}</a>
+                                            <a href="#" class="link link--video-views">{{views}}</a>
+                                        </footer>
+                                    </article>
+                                {{/videos}}
+                            </div>
+                        {{/video-rows}}
+                    </section>
+                {{/video-blocks}}
+            {{/center}}
+        </section>
+    {{/main}}
+</main>

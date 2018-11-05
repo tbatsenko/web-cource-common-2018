@@ -1,0 +1,61 @@
+body{
+    margin: 0 25px 0 70px;
+    font-family: sans-serif;
+    background: url(//www.w3.org/StyleSheets/TR/logo-ED) no-repeat fixed;
+}
+
+h1, h2, h3{
+    color: #005A9C;
+}
+
+h2{
+    font: 140% sans-serif;
+}
+
+h1 {
+    font: 170% sans-serif;
+    margin-top: 0;
+}
+.w3c_img{
+    margin: 48px 0 54px 0;
+}
+
+.bolder{
+    font-weight: bold;
+    margin-bottom: 0;
+    margin-top: 0;
+}
+
+.a_marg{
+    margin: 0 0 0 40px
+}
+
+a:hover{background: khaki}
+
+.curs{
+    font-style: italic;
+}
+
+hr{
+    display: block;
+    unicode-bidi: isolate;
+    margin-block-start: 0.5em;
+    margin-block-end: 0.5em;
+    margin-inline-start: auto;
+    margin-inline-end: auto;
+    overflow: hidden;
+    border-style: inset;
+    border-width: 1px;
+}
+
+li{
+    list-style-type: none;
+}
+
+.highlight_elem{
+    color:red;
+}
+
+code{
+    font: 80% monospace;
+}

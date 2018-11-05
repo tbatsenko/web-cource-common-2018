@@ -1,0 +1,30 @@
+.header{
+    background-color: #4267b2;
+    line-height: 42px;
+}
+.header__wrapper{
+    width: 1000px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.header__left-placeholder{
+    display: inline-block;
+}
+.header__right-placeholder a{
+    display: inline-block;
+    height: 100%;
+    font-weight: bold;
+    color: #fff;
+    text-decoration: inherit;
+}
+.header__right-placeholder a:after{
+    content: "";
+    height: 18px;
+    width: 1px;
+    display: inline-block;
+    background: rgba(0, 0, 0, .3);
+    margin: 0 5px 0;
+    align-items: center;
+}

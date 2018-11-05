@@ -1,0 +1,23 @@
+.statistics__client {
+    margin-right: 20px;
+    align-self: flex-start;
+    color: transparent;
+    flex-grow: 1;
+    flex-basis: 40%;
+}
+
+.statistics__client_image {
+    width: 100%;
+}
+.statistics__social-media {
+    align-self: flex-start;
+    color: transparent;
+    flex-grow: 1;
+    flex-basis: 40%;
+}
+
+.statistics__social-media_image {
+    width: 100%;
+}
+
+/*# sourceMappingURL=statistics.css.map */

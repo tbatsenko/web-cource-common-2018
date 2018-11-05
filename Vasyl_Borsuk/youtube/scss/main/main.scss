@@ -1,0 +1,47 @@
+@import "aligns";
+@import "../variables";
+
+.main {
+  display: flex;
+  flex-direction: row;
+  height: $main-height;
+
+  &__left {
+    @extend %left-side;
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    background-color: #f5f5f5;
+
+    overflow: hidden;
+    &::-webkit-scrollbar {
+      width: 8px;
+    }
+    &::-webkit-scrollbar-track {
+      background: transparent;
+    }
+    &::-webkit-scrollbar-thumb {
+      height: 60px;
+      background: #cecece;
+    }
+    &:hover {
+      overflow: auto;
+    }
+
+    &-block {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      padding: 8px 0 8px 0;
+      border-bottom: 1px solid #e1e1e1;
+      flex-shrink: 0;
+    }
+  }
+
+  &__center {
+    @extend %center;
+    height: 100%;
+    background-color: #fafafa;
+    overflow-y: scroll;
+  }
+}
