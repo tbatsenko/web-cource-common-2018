@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CSS-Grid</title>
+    <link rel="stylesheet" href="styles/grid/grid.css">
+    <link rel="stylesheet" href="styles/main.css">
+</head>
+<body>
+<header class="header">
+    <a class="header__logo" href="">
+    </a>
+    <nav class="header__nav nav">
+        <a class="nav__link" href="">Новости</a>
+        <a class="nav__link" href="">Проекты</a>
+        <a class="nav__link" href="">Курсы</a>
+        <a class="nav__link" href="">Книги</a>
+        <a class="nav__link" href="">Школа</a>
+        <span class="nav__group">
+                <a class="nav__link" href="">Советы</a>
+                <sub>
+                    <a class="nav__link nav__link--lower" href="">Подборки></a>
+                </sub>
+            </span>
+        <a class="nav__link" href="">Коворкафе</a>
+        <a class="nav__link" href="">О компании</a>
+    </nav>
+    <a class="header__account-menu account-menu" href="">
+        <img class="account-menu__user-image" src="" alt="">
+    </a>
+</header>
+<main class="main-content">
+    <article class="container top-banner">
+        <div class="grid grid_13">
+            <figure>
+                <img class="top-banner__image" src="images/children.png" alt="children"/>
+                <figcaption class="top-banner__caption">
+                    <a href="">Рекламная компания Картера</a>
+                    для Шопфана
+                </figcaption>
+            </figure>
+        </div>
+    </article>
+    <article class="daily-news">
+        <section class="grid_11">
+            <div class="b-days-left" aria-label="calendar-box">
+                <h1 class="b-days-left__days">14</h1>
+                <p class="b-days-left__text">дней до конца</p>
+            </div>
+            <h1 class="daily-news__title daily-news__title--big">Идёт запись</h1>
+            <p class="daily-news__description"><span class="daily-news__description--bold">Подготовительные курсы в школу:</span>
+                <a class="daily-news__link" href="">учебная программа</a>
+            </p>
+        </section>
+        <section class="grid_5">
+            <h1 class="daily-news__title">Весной набор в школу</h1>
+            <a class="daily-news__link" href="">Дизайнеров</a>
+            <a class="daily-news__link" href="">Редакторов</a>
+            <a class="daily-news__link" href="">Руководителей</a>
+        </section>
+        <section class="grid_4 daily-news__daily-icon-section">
+            <a class="daily-news__link" href="">Иконка дня</a>
+            <figure>
+                <img class="daily-news__daily-icon" src="images/icon-of-the-day.jpeg" alt="icon-of-the-day">
+                <figcaption class="daily-news__daily-icon-description">Кувалда</figcaption>
+            </figure>
+            <a href="" class="daily-new__link">Телеграм Сергея Чикина</a>
+        </section>
+        <section class="grid_4">
+            <h1 class="daily-news__title">Техноведро</h1>
+            <p class="daily-news__description">«Сеточ­ность» на сайте бюро</p>
+            <a href="" class="daily-news__link">Рассказ Юрия Мазур­ского</a>
+        </section>
+        <section class="grid_8">
+            <h1 class="daily-news__title">Интерфейс</h1>
+            <p class="daily-news__description">Я вступил с ребятами в дискуссию по поводу способа написания  «копирайта» на сайтах.</p>
+            <a href="" class="daily-news__link">Совет А. Г.</a>
+        </section>
+    </article>
+</main>
+<footer class="footer">
+    <div class="container_16">
+        <section class="grid-4">
+            <p class="footer__text">
+                Дизайн Бюро<br>
+                Артёма Горбунова
+            </p>
+        </section>
+        <section class="grid-12 ">
+            <a href="" class="footer__text footer__text--is-link">Стать клиентом</a>
+        </section>
+    </div>
+    <div class="container_16">
+        <section class="grid-4">
+            <a href="mailto:mail@artgorbunov.ru" class="footer__text footer__text--is-link">
+                mail@artgorbunov.ru
+            </a><br/>
+            <a href="tel:+74956468489">+7 495 646‑84‑89</a>
+        </section>
+        <section class="grid-6">
+            <address>Большая Новодмитровская улица, 36, строение 2<br/>
+                Москва, Россия, 127015
+            </address>
+        </section>
+        <section class="grid-6">
+            <section class="external-resources">
+                <a class="external-resources__item"></a>
+                <a class="external-resources__item"></a>
+                <a class="external-resources__item"></a>
+                <a class="external-resources__item"></a>
+                <a class="external-resources__item"></a>
+            </section>
+            <section class="language-selector">
+                <a href="" class="language-selector__item language-selector__item--is-active" aria-label="russian">РУ</a>
+                <a href="" class="language-selector__item" aria-label="englishe">EN</a>
+            </section>
+        </section>
+    </div>
+</footer>
+</body>
+</html>
