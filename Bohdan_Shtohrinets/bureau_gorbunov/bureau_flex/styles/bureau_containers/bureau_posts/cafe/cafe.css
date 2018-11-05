@@ -6,21 +6,19 @@
 .cafe__image_content {
     width: 100%;
 }
-
 .cafe__about {
-    color: black;
     margin-left: 18px;
     flex-basis: 422px;
     flex-grow: 2;
 }
-
 .cafe__event {
+    font-size: 24px;
+    line-height: 27px;
     margin-left: 20px;
     flex-basis: 202px;
     flex-grow: 1;
     z-index: 1;
 }
-
 .cafe__logo {
     margin-bottom: 20px;
     display: block;
@@ -38,7 +36,6 @@
     background-size: contain;
     padding-bottom: 29%;
 }
-
 .cafe__schedule {
     max-width: 310px;
     margin-right: 18px;
@@ -50,14 +47,12 @@
     flex-direction: column;
     align-self: flex-start;
 }
-
 .cafe__link {
     color: #065580;
     text-decoration: underline;
     text-decoration-color: rgba(6, 85, 128, 0.1);
     font-style: normal;
 }
-
 .cafe__product {
     max-width: 240px;
     font-size: 16px;
@@ -77,7 +72,6 @@
     font-size: 60px;
     line-height: 1;
 }
-
 .product__illustration {
     color: transparent;
     position: absolute;
@@ -90,16 +84,8 @@
 }
 
 .event__title {
-    font-size: 24px;
-    line-height: 27px;
     font-weight: 700;
 }
-
-.event__topic {
-    font-size: 24px;
-    line-height: 27px;
-}
-
 .event__info {
     margin-top: 7px;
     font-size: 16px;

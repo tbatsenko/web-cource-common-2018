@@ -1,0 +1,18 @@
+.header-line {
+  width: 1020px;
+  height: 50px;
+  background-color: #0090D2;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 30px; }
+  .header-line__navigation {
+    color: white;
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0 0 0 20px; }
+  .header-line__navigation li {
+    font-size: 14px;
+    padding: 15px 10px 13px; }
+
+/*# sourceMappingURL=header-line.css.map */

@@ -1,0 +1,25 @@
+.logo_section {
+  display: flex;
+  padding-left: 8px;
+  width: var(--left_menu_width);
+  align-items: center;
+
+  .menu_hider {
+    margin-left: 4px;
+    background: url("https://cdn2.iconfinder.com/data/icons/clean-minimal-set/16/open-menu-01-512.png") no-repeat center;
+    background-size: 20px 16px;
+    border: 0;
+    height: 48px;
+    width: 48px;
+    border-radius: 100%;
+    &:hover {
+      background-color: #ededed;
+    }
+  }
+
+  .logo{
+    margin-left: 4px;
+    height: 40px;
+  }
+
+}
