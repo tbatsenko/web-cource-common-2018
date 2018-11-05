@@ -1,0 +1,117 @@
+.footer__container {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+}
+
+.footer__contacts {
+    justify-content: space-between;
+    flex-grow: 1;
+}
+.footer__address {
+    justify-content: space-between;
+    flex-grow: 2;
+}
+.footer__more-options {
+    flex-grow: 1;
+    flex-direction: row;
+    align-self: flex-end;
+    justify-content: flex-end;
+}
+.footer__key-link {
+    color: #e20002;
+    text-decoration: underline;
+    text-decoration-color: rgba(226, 0, 2, 0.1);
+}
+
+.footer__key-link:hover {
+    text-decoration-color: #e20002;
+}
+
+.container__section {
+    flex-grow: 1;
+    font-size: 16px;
+    font-weight: 100;
+}
+
+.container__section:first-child {
+    margin-bottom: 1.125em;
+}
+
+.more-options__content {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+}
+
+.more-options__section {
+    padding-top: 0;
+    display: flex;
+    padding-left: 12px;
+    padding-right: 12px;
+}
+
+.more-options__social-media {
+    margin-left: -4, 5px;
+    margin-right: -4, 5px;
+}
+.more-options__language-choose {
+    margin-left: -8px;
+    margin-right: -8px;
+}
+
+.social-media__link {
+    color: transparent;
+    display: block;
+    width: 31px;
+    height: 31px;
+    padding: 0 4.5px;
+}
+
+.language-choose__option {
+    text-transform: uppercase;
+    font-size: 30px;
+    line-height: 20px;
+    display: block;
+    height: 31px;
+    width: 31px;
+    padding-bottom: 10px;
+    margin-left: 8px;
+    margin-right: 8px;
+    border-bottom: none;
+    color: #e20016;
+}
+
+.language-choose__option_chosen {
+    border-bottom: 3px solid #000;
+    color: black;
+}
+
+.link__svg {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    display: block;
+}
+
+.svg__bg {
+    fill: #000000;
+}
+.svg__front {
+    fill: #ffffff;
+}
+
+@media (max-width: 960px) {
+    .footer__container {
+        flex-basis: 100%;
+        padding-bottom: 20px;
+    }
+
+    .footer__contacts {
+        padding-top: 20px;
+        border-top: 1px solid rgba(0, 0, 0, 0.07);
+    }
+}
+
+/*# sourceMappingURL=footer.css.map */
