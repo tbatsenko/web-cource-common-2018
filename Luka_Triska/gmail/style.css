@@ -4,100 +4,68 @@
 }
 
 body {
-    margin-left: 0;
-    margin-right: 0;
+    margin: 0;
     background-color: #fff;
     font-family: "Segoe UI", serif;
 }
 
-#top-bar-navigation {
-    margin: 0;
-    width: available;
+ul {
+    list-style: none;
+}
+
+.header {
+    position: fixed;
+}
+
+.header__navigation {
+    display: flex;
+    align-items: center;
     border-bottom: 1px solid lightgray;
     height: 64px;
-    padding-top: 8px;
-    padding-left: 18px;
-    display: flex;
 }
 
-#main-menu > a > img {
-    margin-top: 18px;
+.navigation__main-menu {
+    height: 24px;
+    width: 24px;
+    margin-left: 30px;
 }
 
-#logo > img {
-    margin: 10px 0 0 10px;
+.navigation__logo {
+    height: 40px;
+    width: 109px;
+    margin-left: 13px;
 }
 
-#magnifier-icon {
-    margin: 8px 0 0 86px;
-}
-
-#magnifier-icon > button {
+.navigation__magnifier-icon {
     border: 0;
     border-bottom-left-radius: 3px;
     border-top-left-radius: 3px;
+    margin-left: 30px;
     width: 46px;
-    height: 48px;
+    height: 56px;
     background-color: #f6f6f6;
 }
 
-#search-bar > form > input {
+.navigation__search-bar {
+    height: 56px;
+}
+
+.search-bar--input {
     border: 0;
-    height: 46px;
+    height: 56px;
     width: 625px;
     font-family: "Product Sans", sans-serif;
     font-size: large;
-
-    margin: 8px 0 0 0;
+    padding: 0;
     background-color: #f6f6f6;
-    /*background-color: red;*/
 }
 
-#dropdown > button {
-    margin: 8px 0 0 0;
+.dropdown__button {
+    padding: 0;
     border: 0;
     border-bottom-right-radius: 3px;
     border-top-right-radius: 3px;
-    height: 48px;
+    height: 56px;
     width: 48px;
     background-color: #f6f6f6;
-}
-
-#google-apps {
-    margin-left: 510px;
-}
-
-.top-bar-buttons {
-    border: 0;
-    background-color: #fff;
-
-}
-
-#google-apps > button > a > svg {
-    height: 40px;
-    width: 42px;
-    margin-top: 20px;
-
-}
-
-#notifications > button > a > svg {
-    margin-top: 20px;
-    height: 24px;
-    width: 24px;
-}
-
-#user-logo > button > a > img {
-    margin: 14px 0 0 10px;
-    height: 35px;
-    width: 35px;
-}
-
-nav {
-    margin-top: -15px;
-    width: 100%;
-    background: #fff;
-}
-
-ul {
-    list-style: none;
 }
