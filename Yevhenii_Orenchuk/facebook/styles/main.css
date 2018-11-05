@@ -69,7 +69,7 @@
   height: 40px;
   margin-left: 10px;
 }
-.gif-icon {
+.button__gif-icon {
   background-position: 0 -1073px;
   margin-right: 5px;
 }
@@ -244,13 +244,40 @@
   border-radius: 2px;
 }
 .make-comment {
-  background-color: #69f0ae;
+  border-top: 1px solid #e9ebee;
   padding: 8px 12px;
 }
 .make-comment__profile-picture {
   width: 32px;
   height: 32px;
 }
+.comment__input {
+  margin-left: 10px;
+  border-radius: 16px;
+  overflow: hidden;
+  border: 1px solid #dddfe2;
+  background-color: #f2f3f5;
+  width: 100%;
+  justify-content: space-between;
+}
 .comment__input-text {
-  background-color: grey;
+  border: none;
+  width: 100%;
+  font-size: 13px;
+  margin: 5px 5px 5px 10px;
+  background-color: transparent;
+}
+.comment__emoji-icon {
+  background-position: -34px -222px;
+}
+.comment__photo-icon {
+  background-position: -17px -188px;
+}
+.comment__gif-icon {
+  background-position: -34px -239px;
+  opacity: .7;
+}
+.comment__sticker-icon {
+  background-position: -34px -273px;
+  opacity: .7;
 }
