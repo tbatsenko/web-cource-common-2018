@@ -87,24 +87,28 @@
         {
           "books-title": "Максим Ильяхов",
           "book-topic": "Информационный  стиль",
-          "price": "Предзаказ"
+          "price": "Предзаказ",
+          "books-illustration": "/images/information-style.png"
         },
         {
           "books-title": "Николай Товеровский",
           "book-topic": "Управление проектами",
-          "price": "Предзаказ"
+          "price": "Предзаказ",
+          "books-illustration": "/images/project-management.png"
         }
       ],
       "books": [
         {
           "books-title": "Артём Горбунов",
           "book-topic": "Типографика и вёрстка",
-          "price": "400, затем 50 ₽/мес"
+          "price": "400, затем 50 ₽/мес",
+          "books-illustration": "/images/typography.png"
         },
         {
           "books-title": "Илья Бирман",
           "book-topic": "Пользовательский  интерфейс",
-          "price": "400, затем 50 ₽/мес"
+          "price": "400, затем 50 ₽/мес",
+          "books-illustration": "/images/interface.png"
         }
       ]
     },
