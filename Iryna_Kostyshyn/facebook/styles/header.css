@@ -1,65 +1,12 @@
-body{
-    margin: 0;
-    padding: 0;
-    font-family: Helvetica, Arial, sans-serif;
-    background-color: #ecf0f1;
-
-
-
-}
-.container{
-    display: flex;
-    align-content: center;
-}
-
 .main-header{
     background: #4267b2;
-    /*overflow: hidden;*/
     width: 100%;
     height: 40px;
-   /* position: fixed;*/
-
-}
-
-.main-header nav li{
-    font-size: 12px;
-    height: 40px;
-
-    position: relative;
-
-}
-
-.main-header nav li a{
-    color: rgb(225, 225, 225);
-    text-decoration: inherit;
-}
-
-.main-navigation{
-    width: 1020px;
+    display: flex;
     margin: auto;
-
-
 }
 
-.main-header .nav{
-    display: inline;
-}
-
-.main-header .nav li {
-    display: inherit;
-}
-
-
-
-
-.search{
-    line-height: 40px;
-    display: inline;
-
-
-}
-
-#search {
+.header-search__input {
     width: 400px;
     border-radius: 3px 0 0 3px ;
     height: 24px;
@@ -71,7 +18,13 @@ body{
     margin-right: 0;
 }
 
-#search-button{
+
+.header-search {
+    line-height: 40px;
+    display: inline;
+}
+
+.header-search__button{
     margin-left: 0;
     border: none;
     height: 24px;
@@ -86,7 +39,7 @@ body{
 }
 
 
-#search-button:before{
+.header-search__button:before{
     content: "";
     height: 16px;
     width: 16px;
@@ -98,44 +51,23 @@ body{
     border-radius: 0 0 3px 3px;
 }
 
-.header-nav{
-    margin-left: 0;
-    border: none;
-    height: 24px;
-    background: transparent;
-    position: relative;
-    right: 4px;
-    vertical-align: middle;
-    margin-right: 5px;
-    width: 24px;
-    overflow: hidden;
-    color: white;
-    border-radius: 0 3px 3px 0;
-}
-
-.header-nav li{
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, ".SFNSText-Regular", sans-serif;
+.main-header-navigation{
     font-size: 12px;
-    line-height: 40px;
-    font-weight: 700;
-}
-
-.header-nav li:after{
-    content: "";
-    height: 20px;
-    width: 1px;
-    display: inline-block;
-    background: white;
+    height: 40px;
+    display: flex;
     position: relative;
-    bottom: -6px;
-    margin-left: 10px;
-    margin-right: 3px;
-    opacity: 0.45;
 }
 
-.header-nav:hover{
-    background: rgba(0, 0, 0, .1);
+
+.main-header-navigation__button{
+    color: rgb(225, 225, 225);
+    text-decoration: inherit;
+    height: 23px;
+    background: transparent;
+    vertical-align: middle;
+    border: none;
 }
+
 
 #username-button{
     margin-left: 0;
@@ -168,128 +100,41 @@ body{
 
 #friend-req-button{
     color: transparent;
-    background: #4267b2;
-}
-
-
-#friend-req-button:before{
-    background: url("https://static.xx.fbcdn.net/rsrc.php/v3/yF/r/1c0gE0MbEo8.png") 3px 501px;
+    background: url("https://static.xx.fbcdn.net/rsrc.php/v3/yF/r/1c0gE0MbEo8.png") 3px 486px;
     background-size: 24px;
-    left: 0;
+    width: 24px;
     top: 4px;
 
 }
 
+
 #message-button{
     color: transparent;
-    background: #4267b2;
+    background: url("https://static.xx.fbcdn.net/rsrc.php/v3/yF/r/1c0gE0MbEo8.png") 3px 444px;
+    background-size: 24px;
+    width: 24px;
 }
 
-#message-button:before{
-    background: url("https://static.xx.fbcdn.net/rsrc.php/v3/yF/r/1c0gE0MbEo8.png") 3px 441px;
-    background-size: 24px;
-    left: 0;
-    top: 2px;
-}
 
 #notification-button{
     color: transparent;
-    background: #4267b2;
-}
-
-#notification-button:before{
-    background: url("https://static.xx.fbcdn.net/rsrc.php/v3/yF/r/1c0gE0MbEo8.png") 3px 565px;
+    background: url("https://static.xx.fbcdn.net/rsrc.php/v3/yF/r/1c0gE0MbEo8.png") 3px 568px;
     background-size: 24px;
-    left: 0;
-    top: 2px;
+    width: 24px;
 }
 
-#side-navigation{
-    margin-top: 50px;
-    margin-right: 10px;
-    vertical-align: top;
-    width: 180px;
-    height: 268px;
-    display: inline-block;
+#quick-help-button{
+    color: transparent;
+    background: url("https://static.xx.fbcdn.net/rsrc.php/v3/yF/r/1c0gE0MbEo8.png") 3px 423px;
+    background-size: 24px;
+    width: 24px;
 }
 
-ul.sidebar{
-    margin: 0;
-    padding: 0;
-    list-style-type: none;
-}
-ul.sidebar li{
-    padding: 2px;
-    border-radius: 2px;
-    background-color: rgba(255, 255, 255, 0);
-}
-
-ul.sidebar li.active{
-    background-color: rgba(255, 255, 255, 0.5);
-    border: 1px solid #bdc3c7;
-    font-weight: bold;
-}
-
-ul.sidebar li.link:hover{
-    background-color: rgba(255, 255, 255, 0.5);
-    border: 1px solid #bdc3c7;
-    font-weight: bold;
-}
-
-ul.sidebar li a{
-    text-decoration: none;
-    color: black;
-    font-size: 13px;
-}
-
-ul.sidebar li h5{
-    color: #7f8c8d;
-    margin: 10px 0 0 0;
-    font-size: 13px;
-}
-
-#main-feed{
-    margin-top: 50px;
-    margin-right: 5px;
-    vertical-align: top;
-    display: inline-block;
-    width: 500px;
-    height: auto;
+#submenu{
+    color: transparent;
+    background: url("https://static.xx.fbcdn.net/rsrc.php/v3/yF/r/1c0gE0MbEo8.png") 3px 547px;
+    background-size: 24px;
+    width: 24px;
 }
 
 
-#story{
-    padding: 15px;
-    background-color: white;
-    border-radius: 5px;
-    border: 1px solid #bdc3c7;
-    margin-bottom: 10px;
-}
-
-#event{
-    padding: 15px;
-    background-color: white;
-    border-radius: 5px;
-    border: 1px solid #bdc3c7;
-    margin-bottom: 10px;
-}
-
-#pages{
-    padding: 15px;
-    background-color: white;
-    border-radius: 5px;
-    border: 1px solid #bdc3c7;
-    margin-bottom: 10px;
-}
-
-#lang{
-    padding: 15px;
-    background-color: white;
-    border-radius: 5px;
-    border: 1px solid #bdc3c7;
-    margin-bottom: 10px;
-}
-#right-side-block{
-    width: 308px;
-
-}
