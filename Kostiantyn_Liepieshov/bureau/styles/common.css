@@ -4,8 +4,8 @@
   display: flex;
 }
 .header__nav {
-  flex: auto;
-  margin-left: 15px;
+  margin-left: 11px;
+  margin-top: -4px;
 }
 .header__account-menu {
   flex: 1;
@@ -63,22 +63,44 @@
 .top-banner__figure {
   margin: 0;
 }
-.top-banner--is-link {
-  display: block;
-  color: var(--blue-color);
-  font-weight: 700;
-}
 .top-banner__caption {
   font: 15px Bureausans, Arial, sans-serif;
   font-feature-settings: normal;
   font-weight: 400;
   text-decoration: none;
   color: black;
+  line-height: 20px;
+}
+.top-banner__caption--is-link {
+  padding-bottom: 5px;
+  color: var(--blue-color);
+  font-weight: 700;
+  text-decoration: none;
+  background: linear-gradient(180deg, var(--link-underline) 0, var(--link-underline)) repeat-x 0 90%;
+  background-size: 1px 1px;
+}
+.top-banner__caption--is-link:after {
+  content: "\a";
+  white-space: pre;
+}
+.top-banner__caption--is-link:hover {
+  color: var(--key-color);
+  background: linear-gradient(180deg, var(--key-color) 0, var(--key-color)) repeat-x 0 90%;
+  background-size: 1px 1px;
+}
+.top-banner__wrapper {
+  width: 100%;
+  display: block;
+}
+
+.main-content {
+  margin-top: 50px;
 }
 
 :root {
   --key-color: rgb(226, 0, 22);
   --blue-color: rgb(6, 85, 128);
+  --link-underline: rgba(6, 85, 128, .1);
 }
 
 html, body {
