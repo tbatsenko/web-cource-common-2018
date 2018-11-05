@@ -1,0 +1,21 @@
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+.main-zone {
+    margin: auto;
+    width: 840px;
+    background-color: #2980b9;
+}
+
+.content {
+    margin: 1px;
+    background-color: yellow;
+}
+
+@media (max-width: 840px) {
+    .main-zone {
+        width: auto;
+    }
+}

@@ -1,0 +1,55 @@
+.image {
+  width: 400px;
+  height: 930px;
+  margin-top: 25px;
+  margin-left: 25px;
+  position: relative;
+  background-image: linear-gradient(to bottom, rgba(255, 253, 248, 0.68) 0%, rgba(151, 111, 17, 0.68) 100%), url(../img/profile_photo.jpg);
+}
+
+.quote:before{
+  content: "''";
+}
+
+.quote:after{
+  content: "''";
+}
+
+.quote {
+  font-family: AvenirNext-MediumItalic, sans-serif;
+  text-shadow: 0 1px 4px rgba(72, 72, 72, 0.5);
+  font-style: italic;
+  width: 300px;
+  position: absolute;
+  top: 600px;
+  margin-left: 72px;
+  z-index: 1;
+  color: white;
+  font-size: 25px;
+  text-align: center;
+}
+
+.all-user-info {
+  text-shadow: 0 1px 4px rgba(72, 72, 72, 0.5);
+  position: absolute;
+  top: 750px;
+  margin-left: 50px;
+  color: white;
+  font-size: 22px;
+}
+
+.user-info {
+  display: flex;
+  justify-content: space-between;
+  width: 300px;
+  margin-left: 22px;
+}
+
+.key-word {
+  font-family: AvenirNext, sans-serif;
+  font-weight: bold;
+}
+
+.value-word {
+  font-family: AvenirNext, sans-serif;
+}

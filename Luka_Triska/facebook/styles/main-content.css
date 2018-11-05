@@ -1,0 +1,160 @@
+
+.container {
+    display: flex;
+    flex-flow: row wrap;
+    flex-direction: row;
+    font-weight: bold;
+    text-align: center;
+}
+
+/*So that all items are 100% width*/
+.container > * {
+    flex: 1 100%;
+}
+
+
+/*The following two properties make the page resize its contents
+depending on the screen you're viewing it from*/
+@media all and (min-width: 600px) {
+    .aside {
+        flex: 1 auto;
+    }
+}
+
+@media all and (min-width: 800px) {
+    .container__main {
+        flex: 2 0;
+        /*-webkit-flex: none;*/
+        /*flex: none;*/
+    }
+
+    .container__aside--left {
+        order: 1;
+    }
+
+    .container__main {
+        order: 2;
+    }
+
+    .container__aside--right {
+        order: 3;
+    }
+
+    .footer {
+        order: 4;
+    }
+}
+
+
+
+/*Grid attempt*/
+/*
+
+.header {
+    grid-area: header;
+}
+
+.footer {
+    grid-area: footer;
+}
+
+
+.container {
+    !*display: flex;*!
+    !*display: grid;*!
+    !*grid-gap: 10px;*!
+    !*grid-template-columns: 200px 200px 200px;*!
+    !*grid-template-areas:*!
+            !*"header  header  header"*!
+            !*"sidebar content content"*!
+            !*"footer  footer  footer";*!
+    !*background-color: #fff;*!
+    !*color: #444;*!
+}
+
+.container__aside--left {
+    !*grid-area: sidebar;*!
+}
+
+.container__main {
+    !*text-align: left;*!
+    !*grid-area: content;*!
+    !*position: relative;*!
+}*/
+
+.main__create-container {
+    width: auto;
+    height: 110px;
+    background: #fff;
+    border-left: 0;
+    border-right: 1px solid #d3d3d3;
+    /*background-color: coral;*/
+}
+
+.create-container__top-bar {
+    border: 1px solid #d3d3d3;
+    background-color: #ecf0f1;
+    padding: 0 24px 0 0;
+    height: 33px;
+}
+
+.create-container__top-bar--button {
+    border: 0;
+    /*background-color: 0;*/
+    font-size: 14px;
+    margin: 8px 8px 0 70px;
+    font-weight: bold;
+}
+
+.create-container__bottom-bar {
+    border-top: 0;
+    border: 1px solid #d3d3d3;
+    background-color: #fff;
+    /*padding: 0 24px 0 0;*/
+    height: 33px;
+}
+
+.create-container__bottom-bar-button {
+    margin: 4px 8px 0 100px;
+    height: 25px;
+    border: 0;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: bold;
+    background-color: #ecf0f1;
+}
+
+.create-container__form--input {
+    border: 0;
+    /*width: 603px;*/
+    height: 71px;
+    font-size: medium;
+}
+
+.main__feed {
+    margin-top: 12px;
+    background-color: lightblue;
+    height: 700px;
+    padding: 12px 12px 0 12px;
+}
+
+/*.post-header {*/
+/*width: 400px;*/
+/*display: inline-block;*/
+/*}*/
+
+.user-name {
+    /*width: 60px;*/
+    height: 40px;
+    vertical-align: center;
+}
+
+h4 {
+    margin: 0;
+}
+
+/*
+#profile-image {
+    !*padding-top: 11px;*!
+    vertical-align: center;
+}*/

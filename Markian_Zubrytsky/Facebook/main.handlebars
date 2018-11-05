@@ -1,0 +1,64 @@
+<header class="hdr">
+    <img class="logo" src="images/facebook-emblem.jpg">
+    <input class="glob_src" type="search" placeholder="Search">
+    <div id="right-buttons">
+        {{#header}}
+            {{#left_buttons}}
+                <button class="hdr_btn">{{.}}</button>
+            {{/left_buttons}}
+
+            {{#right_buttons}}
+                <button class="logo_btns"><img src='images/{{.}}'></button>
+            {{/right_buttons}}
+        {{/header}}
+    </div>
+</header>
+<aside class="left-menu">
+    {{#left-menu}}
+        <a class="left-menu__buttons">{{&.}}</a>
+    {{/left-menu}}
+</aside>
+<main class="news">
+    <section class="news__new-post">
+        <div class="news__new-post__action">
+            {{#post-type}}
+                <button class="news__new-post__action__button">{{.}}</button>
+            {{/post-type}}
+        </div>
+        <p class="news__new-post__create-post"></p>
+        <div class="news__new-post__action">
+            {{#post-content}}
+                <button class="news__new-post__action__button"><img src="images/{{image}}">{{text}}</button>
+            {{/post-content}}
+        </div>
+    </section>
+    <article class="news__post">
+        {{#post}}
+            <h3 class="news__post__title"><img src="images/{{user-logo}}" class="user_icon">{{username}}</h3>
+            <p>{{text}}</p>
+            <img src="images/{{photo}}" class="news__post__photo">
+            <div class="news__post__actions">
+                {{#buttons}}
+                    <button class="news__post__actions__button">{{.}}</button>
+                {{/buttons}}
+            </div>
+            <input type="text" placeholder="Write comment..." class="news__new-post_comment">
+        {{/post}}
+    </article>
+</main>
+
+<aside class="right-menu">
+    <h4>Stories</h4>
+    <div class="right-menu__story">
+        <img src="images/add_icon.png" class="user_icon">
+        <h4>Add Story</h4>
+    </div>
+    <div class="right-menu__story">
+        <img src="images/young_male_icon.png" class="user_icon">
+        <h4>Young Male</h4>
+    </div>
+    <div class="right-menu__story">
+        <img src="images/female_logo.png" class="user_icon">
+        <h4>Female</h4>
+    </div>
+</aside>

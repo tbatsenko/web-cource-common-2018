@@ -1,0 +1,37 @@
+.input-box {
+  margin-top: 30px;
+  border-top: solid 1px #e5e5e5;;
+
+  &__textarea {
+    display: block;
+    resize: none;
+    width: 258px;
+    //height: 61px;
+    border: none;
+    padding: 9px 2px 2px 2px;
+    margin: 0 16px 0 16px;
+  }
+}
+
+.message-nav {
+  flex-shrink: 0;
+  margin-left: 16px;
+
+  &__button {
+    margin-right: 10px;
+    overflow: hidden;
+    color: transparent;
+    background: none;
+    height: 16px;
+    border: none;
+    position: relative;
+
+    &--square {
+      width: 16px;
+    }
+
+    &--wide {
+      width: 21px;
+    }
+  }
+}

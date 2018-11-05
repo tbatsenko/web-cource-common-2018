@@ -69,7 +69,7 @@ button:focus {
 }
 
 .visually-hidden {
-    display: none;
+    display: none; //TODO: visually hidden should have another styles. See https://a11yproject.com/posts/how-to-hide-content/
 }
 
 .vsplit-list li {

@@ -1,0 +1,123 @@
+body{
+    margin: 0;
+    padding: 0;
+    background: gainsboro ;
+    font-family: "PT Serif", Serif
+}
+
+.additional{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+.additional li{
+    display: inline;
+
+}
+.additional li a{
+    color: white;
+    text-decoration: none;
+
+}
+.additional li:after{
+    content: " | ";
+
+}
+.additional a{
+
+}
+
+.main-header{
+    position: relative;
+    overflow: hidden;
+    background: #0063ab;
+    color: white;
+}
+
+.main-resources{
+    padding: 0.5rem;
+    background: #0090d2;
+    overflow: hidden;
+
+
+}
+
+.search-form{
+    float: right;
+}
+
+.main-resources ul{
+    float: left;
+
+}
+.main-resources li{
+    display: inline;
+
+}
+.main-resources li a{
+    font-family: "Helvetica Neue", Arial, sans-serif;
+    font-size: 14px;
+    text-decoration: none;
+    float: left;
+    color: white;
+    margin: 0 10px;
+}
+
+.content{
+    width: 1000px;
+    margin: auto;
+
+}
+
+.visualy-hidden{
+
+}
+
+main{
+    overflow: hidden;
+    padding: 0.5rem;
+    background: white;
+    width: 1000px;
+    margin: auto;
+
+}
+
+h1{
+    font-family:  'Quicksand','Helvetica Neue',Arial, sans-serif;
+    font-weight: bold;
+    letter-spacing: 2px;
+    word-spacing: 2px;
+}
+
+#article-header:focus{
+    color: #0063A6;
+}
+
+#article-header{
+    position: relative;
+    text-decoration: none;
+    color: #0090d2;
+    font-size: 23px;
+}
+
+main section article::before {
+    content: "Featured Article";
+    position: absolute;
+    top: 18px;
+    left: 20px;
+    border: none;
+    color: #888;
+    font: bold 12px/16px 'Helvetica Neue',Arial,sans-serif;
+    line-height: 16px;
+    letter-spacing: 1px;
+    margin: 0 0 5px;
+    padding: 0;}
+
+.comments{
+    float: right;
+    text-decoration: none;
+}
+
+.main-article{
+    float: left;
+}

@@ -1,0 +1,13 @@
+@import "photo-section/main-photo.css";
+@import "header/hashtag.css";
+@import "header/header.css";
+@import "main/main.css";
+@import "personal-info/about.css";
+@import "personal-info/preferences.css";
+@import "personal-info/personal-info.css";
+@import "personal-info/dot-grid/dot-grid.css";
+@import "personal-info/dot-grid/shape.css";
+@import "personal-info/goals.css";
+@import "personal-info/pain-points.css";
+@import "personal-info/cv_section_header.css";
+@import "personal-info/favorite-brands.css";

@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+@import 'header';
+
+body {
+    background-color: #e3f2fd;
+    display: flex;
+    justify-content: center;
+    font-family: 'Open Sans', Arial, Helvetica, sans-serif;
+    font-size: 12px;
+}
+
+button {
+    border: 0;
+    padding: 0;
+    background: transparent;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+.chat {
+    width: 292px;
+    height: 384px;
+    border-radius: 8px;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.11);
+    background-color: #ffffff;
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+}
+
+.chat__messages {
+    flex-grow: 2;
+
+    .message--other {
+        margin-left: 16px;
+        margin-top: 18px;
+        display: flex;
+        flex-direction: row;
+       
+        .message__avatar--other {
+            width: 28px;
+            height: 28px;
+            border-radius: 50%;
+            background-color: red;
+        }
+
+        .message__box--other {
+            margin-left: 8px;
+            height: 28px;
+            border-radius: 100px;
+            background-color: #f3f3f3;
+            display: flex;
+            align-items: center;
+            padding: 0 12px;
+
+            .message__text--other {
+                color: #353535;
+            }
+        }
+    }
+    
+    .chat__messages__time {
+        text-align: center;
+        margin-top: 16px;
+        color: #828282;
+        font-size: 10px;
+        font-weight: bold;
+        letter-spacing: 0.3px;
+    }
+    
+}
+
+.chat__input {
+    height: 62px;
+    border-top: 3px solid #e5e5e5;
+
+    .input__form {
+        margin: 7px 0 10px 16px;
+
+        .input__message {
+            border: 0;
+            outline: 0;
+            color: #353535;
+        }
+
+        .input__message::placeholder {
+            color: #cdcdcd;
+        }
+    } 
+
+    .input__control {
+        height: 18px;
+        display: flex;
+        align-items: center;
+    }
+
+    .input__button:first-of-type {
+        margin-left: 16px;
+    }
+
+    .input__button {
+        width: 16px;
+        height: 16px;
+        margin-right: 10px;
+    }
+
+    .input__button--pic {
+        background-image: url(../images/picture.svg);
+    }
+
+    .input__button--gif {
+        width: 21px;
+        background-image: url(../images/gif.svg);
+    }
+
+    .input__button--smile {
+        background-image: url(../images/smile.svg);
+    }
+
+    .input__button--calendar {
+        height: 18px;
+        background-image: url(../images/calendar.svg);
+    }
+
+    .input__button--camera {
+        height: 17px;
+        width: 21px;
+        background-image: url(../images/camera.svg);
+    }
+}

@@ -1,0 +1,66 @@
+.posts__section {
+    padding: 0;
+    margin: 0;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: stretch;
+}
+.posts__advert {
+    margin-bottom: 72px;
+}
+.posts__courses_separate {
+    margin-bottom: 72px;
+}
+.posts__educational {
+    border-top: 1px solid rgba(0, 0, 0, 0.07);
+    margin-bottom: 72px;
+}
+
+.posts__educational_reversed {
+    flex-direction: row-reverse;
+}
+.posts__hottest-books {
+    flex-wrap: nowrap;
+    margin-bottom: 62px;
+}
+.posts__materials {
+    margin-bottom: 72px;
+}
+
+.posts__materials_reversed {
+    flex-direction: row-reverse;
+}
+.posts__books {
+    padding-top: 34px;
+    padding-bottom: 34px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.07);
+    border-top: 1px solid rgba(0, 0, 0, 0.07);
+    flex-direction: column;
+}
+.posts__full-page-advert {
+    margin-bottom: 72px;
+    background-image: url("/images/book-collection-bg.png");
+}
+
+.posts__full-page-advert_transparent {
+    background-image: none;
+}
+.posts__cafe {
+    margin-bottom: 62px;
+}
+.posts__statistics {
+    align-items: flex-start;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    margin-bottom: 62px;
+}
+
+@media (max-width: 960px) {
+    .posts__educational_reversed {
+        flex-direction: column-reverse;
+    }
+}
+
+/*# sourceMappingURL=posts.css.map */

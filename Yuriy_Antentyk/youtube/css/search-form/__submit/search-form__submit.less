@@ -1,0 +1,36 @@
+@import "../search-form.less";
+@import "../../colors.less";
+@import "../../hidden-text/hidden-text.less";
+
+.search-form__submit{
+    display: block;
+    position: relative;
+    .hidden-text();
+    width: 65px;
+    background-color: @youtube-light-gray;
+    cursor: pointer;
+    height: inherit;
+    box-sizing: inherit;
+    border: @search-form-border;
+    border-left: none;
+    border-top-right-radius: @search-form-border-raduis;
+    border-bottom-right-radius: @search-form-border-raduis;
+}
+
+.search-form__submit::after{
+    display: block;
+    position: absolute;
+    top: 5px;
+    left: 20px;
+    content: "";
+    text-indent: 0;
+    width: 20px;
+    height: 20px;
+    background-image: url("../../../img/sprite.png");
+    background-position: -24px -64px;
+    opacity: 0.6;
+}
+
+.search-form__submit:hover::after{
+    opacity: 1;
+}

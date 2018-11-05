@@ -1,0 +1,70 @@
+//Navigation implementation
+@import "before_item";
+@import "pr_photo";
+
+.navigation {
+  width: 1200px;
+  margin: auto;
+  height: 42px;
+
+  &__buttons {
+    display: inline;
+    margin-left: 100px;
+  }
+
+  &__button_after:after {
+    @extend %before-item;
+    height: 20px;
+    width: 1px;
+    background: rgba(0, 0, 0, .3);
+    margin-left: 10px;
+    margin-right: 7px;
+    opacity: 0.45;
+    bottom: 2px;
+  }
+
+  &__button {
+    display: inline-block;
+    height: 100%;
+    font-size: 12px;
+    line-height: 40px;
+    font-weight: 700;
+    color: rgb(255, 255, 255);
+  }
+
+  &__link {
+    color: inherit;
+    text-decoration: inherit;
+  }
+
+  &__button-icon {
+    cursor: pointer;
+    width: 24px;
+    height: 24px;
+    display: inline-block;
+    color: transparent;
+    vertical-align: middle;
+    margin: 0 3px 0 3px;
+    bottom: 2px;
+    position: relative;
+    background: url("https://static.xx.fbcdn.net/rsrc.php/v3/yx/r/tjBuxcd0g0m.png") no-repeat;
+  }
+
+  &__button-icon_friend {
+    background-position: 0 -892px;
+  }
+  &__button-icon_message {
+    background-position: 0 -942px;
+  }
+  &__button-icon_notification {
+    background-position: 0 -792px;
+  }
+  &__button-icon_faq {
+    background-position: 0 -992px;
+  }
+  &__button-icon_sub-menu {
+    border: none;
+    cursor: pointer;
+    background-position: 0 -842px;
+  }
+}

@@ -1,0 +1,86 @@
+.logo-btn {
+    width: 109px;
+    height: 40px;
+    background: url("https://ssl.gstatic.com/ui/v1/icons/mail/rfr/logo_gmail_lockup_light_1x.png");
+    background-size: cover;
+    margin-right: 40px;
+}
+
+.header-main {
+    padding: 10px 15px;
+    border-bottom: 1px solid lightgray; 
+    order: 1;
+    flex: 1 100%;
+}
+
+.hamburger-btn {
+    height: 24px;
+    width: 24px;
+    background: url("../img/hamburger.png");
+    background-size: cover;
+
+}
+
+.header-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header-item {
+    margin: 0 15px;
+}
+
+.search-btn {
+    background: url("../img/search.png");
+    background-size: cover;
+    height: 18px;
+    width: 18px;
+}
+
+.header-form-input {
+    border: 0;
+    background: transparent;
+    padding-left: 13px;
+}
+
+.search-form {
+    background: rgba(0, 0, 0, 0.04);
+    padding: 14px 12px;
+    border: 0;
+    border-radius: 7px;
+    display: flex;
+    align-items: center;
+    min-width: 350px;
+}
+
+.header-left, .header-right {
+    display: flex;
+    align-items: center;
+}
+
+.menu-btn {
+    height: 24px;
+    width: 24px;
+    background: url("../img/square-menu.png");
+    background-size: cover;
+}
+
+.ring-btn {
+    height: 24px;
+    width: 24px;
+    background: url("../img/bell.png");
+    background-size: cover;
+    opacity: .6;
+}
+
+.profile-btn {
+    height: 24px;
+    width: 24px;
+    background: url("../img/person.png");
+    background-size: cover;
+}
+
+.profile-btn, .ring-btn, .menu-btn {
+    margin: 0 10px;
+}

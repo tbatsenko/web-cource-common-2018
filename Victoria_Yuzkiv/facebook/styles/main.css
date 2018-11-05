@@ -1,0 +1,16 @@
+@import "header.css";
+@import "left-nav.css";
+@import "create-post.css";
+
+.container {
+    overflow: hidden;
+    margin: auto;
+    width: 1020px;
+    display: flex;
+    flex-direction: row;
+    padding-top: 15px;
+}
+
+.feed_container {
+    width: 500px;
+}
