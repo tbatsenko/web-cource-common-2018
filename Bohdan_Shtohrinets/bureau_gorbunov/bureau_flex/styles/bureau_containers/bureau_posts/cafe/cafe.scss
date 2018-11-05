@@ -8,12 +8,13 @@
     }
   }
   &__about {
-    color: black;
     margin-left: 18px;
     flex-basis: 422px;
     flex-grow: 2;
   }
   &__event {
+    font-size: 24px;
+    line-height: 27px;
     margin-left: 20px;
     flex-basis: 202px;
     flex-grow: 1;
@@ -92,14 +93,7 @@
 
 .event {
   &__title {
-    font-size: 24px;
-    line-height: 27px;
     font-weight: 700;
-  }
-
-  &__topic {
-    font-size: 24px;
-    line-height: 27px;
   }
 
   &__info {
@@ -124,7 +118,6 @@
     margin-left: 0;
     flex-basis: 100%
   }
-
   .cafe__product {
     display: none;
   }
