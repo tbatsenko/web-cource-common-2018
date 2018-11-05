@@ -1,0 +1,27 @@
+@import "../base-classes/no-shrink";
+
+%transparent-button {
+  background-color: transparent;
+  border: none;
+}
+
+.button {
+  @extend %no-shrink;
+  cursor: pointer;
+  outline: none;
+  box-sizing: border-box;
+
+  &--header {
+    @extend %transparent-button;
+    display: flex;
+    height: 40px;
+    width: 40px;
+    padding: 0;
+    align-items: center;
+    justify-content: center;
+
+    &-left {
+      margin-right: 4px;
+    }
+  }
+}

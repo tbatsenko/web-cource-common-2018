@@ -1,0 +1,17 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.status-bar {
+    position: fixed;
+    top: 30%;
+    left: 40%;
+    width: 292px;
+    height: 32px;
+    background-color: #2979ff;
+    display: flex;
+    flex-flow: row nowrap;
+}
+
+/*# sourceMappingURL=chat-box.css.map */
