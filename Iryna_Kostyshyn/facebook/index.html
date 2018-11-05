@@ -5,34 +5,37 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Facebook</title>
-    <link rel="stylesheet" href="style.css">
+
+    <link rel="stylesheet" href="styles/logo.css">
+    <link rel="stylesheet" href="styles/header.css">
+    <link rel="stylesheet" href="styles/post.css">
+    <link rel="stylesheet" href="styles/news_feed.css">
+    <link rel="stylesheet" href="styles/side_bar_navigation.css">
+    <link rel="stylesheet" href="styles/main.css">
 </head>
 <body>
     <header class="main-header">
-        <nav class="main-navigation">
-            <a id="logo" href="#" name="Facebook"></a>
-            <form class="search" action="/" method="get">
-                <label for="search" class="visualy-hidden"> </label>
-                <input id="search" type="text" name="q" required><!--
-                --><button id="search-button">Search</button>
-            </form>
-            <ul class="nav">
-                <li><button class="header-nav" id="username-button">Ira</button></li>
-                <li><button class="header-nav" id="main-button">Головна</button></li>
-                <li><button class="header-nav" id="create-button">Створити</button></li>
-                <li>
-                    <button class="header-nav" id="friend-req-button">Створити</button>
-                    <button class="header-nav" id="message-button">Повідомлення</button>
-                    <button class="header-nav" id="notification-button">Notification</button>
-                </li>
-                <li>
-                    <button class="header-nav" id="quick-help-button">Quick help</button>
-                    <button class="header-nav" id="submenu">Open submenu</button>
-                </li>
-            </ul>
+        <a class="main-header__logo" href="#" name="Facebook"></a>
+        <form class="header-search" action="/" method="get">
+            <input class="header-search__input" type="text" name="q" required><!--
+                --><button class="header-search__button">Search</button>
+        </form>
+        <nav class="main-header-navigation">
+
+                <button class="main-header-navigation__button" id="username-button">Ira</button>
+                <button class="main-header-navigation__button" id="main-button">Головна</button>
+                <button class="main-header-navigation__button" id="create-button">Створити</button>
+                <button class="main-header-navigation__button" id="friend-req-button">Створити</button>
+                <button class="main-header-navigation__button" id="message-button">Повідомлення</button>
+                <button class="main-header-navigation__button" id="notification-button">Notification</button>
+
+                <button class="main-header-navigation__button" id="quick-help-button">Quick help</button>
+                <button class="main-header-navigation__button" id="submenu">Open submenu</button>
+
         </nav>
     </header>
-    <nav id="side-navigation">
+    <div class="container">
+    <nav class="side-navigation">
         <ul class="sidebar">
             <li class="link">
                 <a href="#">Ira Kostyshyn</a>
@@ -69,19 +72,19 @@
             </li>
         </ul>
     </nav>
-    <section id="main-feed">
-        <form id="make_post">
-            <header>
-                <button name="makePost">Make Post</button>
-                <button name="addMedia">Photo/Video Album</button>
-                <button name="liveVideo">Live Video</button>
+    <section class="main-feed">
+        <form class="make_post">
+            <header class="make_post__header">
+                <button class="make-post__header-button">Make Post</button>
+                <button class="make-post__header-button">Photo/Video Album</button>
+                <button class="make-post__header-button">Live Video</button>
             </header>
-            <textarea placeholder="Що у вас на думці, Ira?">
+            <textarea class="make_post__input" placeholder="Що у вас на думці, Ira?">
             </textarea>
-            <footer>
-                <button>Photo/Video</button>
-                <button>Tag Friends</button>
-                <button>Felling/Activity</button>
+            <footer class="make_post__footer">
+                <button class="make-post__footer-button">Photo/Video</button>
+                <button class="make-post__footer-button">Tag Friends</button>
+                <button class="make-post__footer-button">Felling/Activity</button>
             </footer>
         </form>
     <section id="post">
@@ -99,7 +102,10 @@
             </div>
         </article>
     </section>
-    <section><h5>Розповіді</h5>
+    </section>
+        <section id="right-side-block">
+    <section id="story">
+        <h5>Розповіді</h5>
     <a href="page/1.html">Архів</a> · <a href="page/2.html">Налаштування</a>
         <img src="" alt="profile photo"><p>Поділіться світлиною, відео або напишіть щось</p>
         <img src="" alt="profile photo"><p>Дмитро Наконечний</p>
@@ -107,8 +113,8 @@
         <img src="" alt="profile photo"><p>Віра Тухлій</p>
         <small>9 годин тому</small>
     </section>
-    <section><p>4 запрошення на події</p></section>
-    <section><h5>Ваша Сторінка</h5>
+    <section id="event"><p>4 запрошення на події</p></section>
+    <section id="pages"><h5>Ваша Сторінка</h5>
         <img src="" alt="page photo"> Факультет прикладних наук
     <a href="" >Повідомлення</a>
     <a href="" >Сповіщення</a>
@@ -119,6 +125,15 @@
     <h3>3787</h3>
         <p><small>16 нових вподобань цього тижня</small></p>
     <hr>
-</section>
+    </section>
+            <section id="lang">
+                Українська · Русский · English (US) · Español · Português (Brasil)
+                    <button></button>
+            </section>
+            <footer>Конфіденційність · Умови користування · Розміщення реклами · Типи реклами · Реп'яшки ·
+                Ще
+                Facebook © 2018</footer>
+    </section>
+    </div>
 </body>
 </html>
