@@ -1,0 +1,133 @@
+.button, .header__google-buttons, .header__left, .header {
+  flex-shrink: 0;
+}
+
+.header {
+  display: flex;
+  height: 64px;
+  flex-direction: row;
+  border-bottom: 1px solid #f4f4f4;
+}
+.header__left {
+  display: flex;
+  width: 256px;
+  height: 100%;
+  margin-left: 14px;
+  flex-direction: row;
+  align-items: center;
+}
+.header__center {
+  display: flex;
+  width: calc(100% - 256px);
+  height: 100%;
+  margin-right: 14px;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+.header__google-buttons {
+  display: flex;
+  flex-direction: row;
+}
+
+.main__left {
+  width: 256px;
+}
+.main__center {
+  width: calc(100% - 256px);
+}
+
+.search-form {
+  display: flex;
+  height: 48px;
+  max-width: 720px;
+  flex-grow: 1;
+  flex-direction: row;
+  align-items: center;
+  background-color: #f4f4f4;
+  border-radius: 4px;
+}
+.search-form__text-input {
+  display: flex;
+  height: 40px;
+  flex-grow: 1;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  border: none;
+  background-color: transparent;
+  font: 400 13px Arial;
+}
+
+.button, .header, .header__left, .header__google-buttons {
+  flex-shrink: 0;
+}
+
+.button--header {
+  background-color: transparent;
+  border: none;
+}
+
+.button {
+  cursor: pointer;
+  outline: none;
+  box-sizing: border-box;
+}
+.button--header {
+  display: flex;
+  height: 40px;
+  width: 40px;
+  padding: 0;
+  align-items: center;
+  justify-content: center;
+}
+.button--header-left {
+  margin-right: 4px;
+}
+
+.img--google-user {
+  box-sizing: border-box;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.img--google-user {
+  width: 32px;
+  height: 32px;
+}
+
+@font-face {
+  font-family: "Material Icons";
+  font-style: normal;
+  font-weight: 400;
+  src: url(https://fonts.gstatic.com/s/materialicons/v41/flUhRq6tzZclQEJ-Vdg-IuiaDsNc.woff2) format("woff2");
+}
+.material-icons {
+  font-family: "Material Icons";
+  font-weight: normal;
+  font-style: normal;
+  line-height: 1;
+  letter-spacing: normal;
+  text-transform: none;
+  display: inline-block;
+  white-space: nowrap;
+  word-wrap: normal;
+  direction: ltr;
+  -webkit-font-feature-settings: "liga";
+  -webkit-font-smoothing: antialiased;
+  color: #696969;
+}
+.material-icons--header {
+  font-size: 24px;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+}
+
+body, html {
+  height: 100%;
+}
+
+/*# sourceMappingURL=main.css.map */

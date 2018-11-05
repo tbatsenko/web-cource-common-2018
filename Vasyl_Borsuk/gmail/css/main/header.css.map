@@ -1,0 +1,1 @@
+{"version":3,"sourceRoot":"","sources":["../../scss/base-classes/no-shrink.scss","../../scss/main/header.scss","../../scss/main/variables.scss"],"names":[],"mappings":"AAAA;EACE;;;ACGF;EAEE;EACA,QCPc;EDQd;EACA;;AAEA;EAEE;EACA,OCZc;EDad;EACA,aCXU;EDYV;EACA;;AAGF;EACE;EACA,OCpBW;EDqBX;EACA,cCpBU;EDqBV;EACA;EACA;;AAGF;EAEE;EACA","file":"header.css"}

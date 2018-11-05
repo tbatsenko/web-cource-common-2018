@@ -1,0 +1,11 @@
+@import "variables";
+
+.main {
+  &__left {
+    width: $left-side-width;
+  }
+
+  &__center {
+    width: $center-width;
+  }
+}
