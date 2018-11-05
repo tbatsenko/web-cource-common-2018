@@ -1,16 +1,21 @@
-.header{
-    display: flex;
-    justify-content: space-evenly;
+.header-blue {
+    width: 100%;
     background: #4267b2;
-    padding: 5px 10em;
-    /*position: fixed;*/
-    /*justify-content: space-between;*/
+    padding: 0.4em 10em;
+    height: 1.8em;
+    position: fixed;
+    top:0;
+}
+
+.header-container{
+    display: flex;
+    width: 62em;
+    justify-content: space-between;
     align-items: center;
     height: 2em;
     position: fixed;
-    top: 0;
+    margin: auto;
 }
-
 .header-left {
     display: flex;
 
@@ -22,7 +27,6 @@
     background-position: 0 -442px;
     height: 1.7em;
     width: 1.7em;
-    /*padding-left: 0.25em;*/
     color: transparent;
     cursor: pointer;
     padding: 0;
@@ -40,7 +44,7 @@
 .search-form__input{
     max-width: 100em;
     padding-left: 0.3em;
-    height: 1.65em;
+    height: 1.6em;
     min-width: 5em;
     width: 100%;
     border: none;
@@ -55,7 +59,7 @@
 
     width: 4.5em;
 
-    height: 1.65em;
+    height: 1.6em;
     background-color: #ebedf0;
 
 }
