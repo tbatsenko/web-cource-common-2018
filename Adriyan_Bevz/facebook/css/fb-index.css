@@ -1,0 +1,100 @@
+html, body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background: #E9EBEE;
+    font-family: 'Open Sans', sans-serif;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+    /*vertical-align: top;*/
+}
+
+/*#192A45*/
+
+.header {
+    display: flex;
+    height: 42px;
+    background: #4069AD;
+    vertical-align: center;
+    text-align: center;
+}
+
+.header__item {
+    display: inline-flex;
+    height: 42px;
+    overflow: hidden;
+    align-items: center;
+}
+
+.header__item--icon-and-search {
+
+}
+
+.header__item--fb-icon {
+    width: 31px;
+}
+
+.header__fb-icon {
+    float: left;
+    width: 24px;
+    height: 24px;
+    background: #4069AD url("fb-icon-128.png") no-repeat;
+    background-size: contain;
+    overflow: hidden;
+}
+
+.header__item--search {
+
+    /*display: inline;*/
+    /*float: left;*/
+    /*width: 500px;*/
+    /*height: 24px;*/
+    /*margin: 9px 9px 9px 3px;*/
+    /*border-radius: 3px;*/
+    /*background: #FFFFFF;*/
+    /*overflow: hidden;*/
+}
+
+.header__search-form {
+
+}
+
+.header-search-bar {
+    -webkit-appearance: none;
+    width: calc(100% - 46px);
+    height: 100%;
+    float: left;
+    padding: 0 5px;
+    border: none;
+    background: transparent;
+    font-size: 18px;
+    line-height: 24px;
+}
+
+.header-search-bar:focus {
+    outline: none;
+}
+
+.header-search-icon {
+    -webkit-appearance: none;
+    float: right;
+    width: 46px;
+    height: 100%;
+    background: #F5F6F7 url("https://png.icons8.com/search") no-repeat center;
+    background-size: contain;
+    border: none;
+}
+
+.header-search-icon:focus {
+    outline: none;
+}
+
+.header-search-icon:hover {
+    background-color: #E5E6E7;
+}

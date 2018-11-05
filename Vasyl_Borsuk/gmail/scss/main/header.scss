@@ -14,16 +14,17 @@
     display: flex;
     width: $left-side-width;
     height: 100%;
-    margin-left: $side-margin;
+    padding-left: $side-margin;
     flex-direction: row;
     align-items: center;
+    box-sizing: border-box;
   }
 
   &__center {
     display: flex;
     width: $center-width;
     height: 100%;
-    margin-right: $side-margin;
+    padding-right: $side-margin;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
