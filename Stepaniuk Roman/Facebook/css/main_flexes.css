@@ -1,0 +1,38 @@
+.page_content{
+    display: flex;
+    justify-content: space-between;
+    flex: none;
+    overflow: hidden;
+}
+.page_center_content{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex: none;
+    flex-basis: 880px;
+    margin: 0 calc(50% - 440px - 90px);
+    overflow: hidden;
+}
+
+.top_panel_icons{
+    width:24px;
+    height:24px;
+}
+
+.prof_page_content{
+    display: flex;
+    justify-content: space-between;
+    background: #e9ebee;
+    overflow: hidden;
+}
+
+.right_bar{
+    width:266px;
+    display: flex;
+    justify-content: flex-end;
+    flex-shrink: 0;
+}
+
+.add_short_bio{
+    font-size: 82%;
+}
