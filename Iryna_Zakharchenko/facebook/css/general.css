@@ -22,5 +22,6 @@ a {
 .main{
     align-items: center;
     justify-content: space-between;;
-    padding: 1em 10em;
+    width: 62em;
+    margin: auto;
 }

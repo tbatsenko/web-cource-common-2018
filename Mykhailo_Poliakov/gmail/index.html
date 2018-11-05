@@ -5,8 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Inbox</title>
-    <link rel="stylesheet" href="styles/style.css">
+   
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.12/handlebars.min.js"></script>
+    <link rel="stylesheet" href="styles/style.css">
 </head>
 <body>
     <header class="header">
@@ -44,7 +46,6 @@
             <script class="email__template" type="text/x-handlebars-template">
                 {{#each emails}}
                 <article class="email">
-                    
                     <label class="custom-checkbox">
                         <input type="checkbox" class="custom-checkbox__input" />
                         <span class="custom-checkbox__style"></span>
@@ -57,8 +58,7 @@
                     <h1 class="email__from">{{from}}</h1>
                     <h2 class="email__text">
                         <span class="email__theme">{{theme}}</span> 
-                        - Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                        Excepturi quo harum molestias autem?
+                        - Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam at sem nunc. Vivamus augue nulla, porta a velit vitae, imperdiet cursus nibh. Sed pulvinar a velit a rhoncus. Maecenas id sagittis justo. Vivamus ac metus quis libero ullamcorper faucibus. Morbi vitae pharetra purus. Sed ac mauris rhoncus, lacinia quam quis, interdum leo. Vivamus iaculis tristique metus eget pellentesque. In rhoncus posuere finibus. Suspendisse vitae ipsum purus. Morbi metus arcu, venenatis eu finibus a, viverra ac enim. Aliquam ut odio sed ex auctor luctus ac eu arcu. Quisque aliquam malesuada erat, at egestas justo fermentum vel.
                     </h2>
                     
                     <time class="email__date">{{date}}</time>

@@ -1,3 +1,11 @@
+:root {
+  --border-style: 1px solid rgba(0, 0, 0, .07);
+  --key-link: rgb(226, 0, 22);
+  --text-decoration: rgba(6, 85, 128, .1);
+  --link: rgb(6, 85, 128);
+  --link-underline: 1px solid rgba(6, 85, 128, .1);
+}
+
 .courses {
   &__post {
     padding-bottom: 36px;
@@ -6,7 +14,7 @@
     padding-top: 20px;
     flex-grow: 2;
     flex-basis: 625px;
-    border-right: 1px solid rgba(0, 0, 0, .07);
+    border-right: var(--border-style);
   }
 
   &__other {
@@ -18,7 +26,7 @@
   &__soon {
     flex-grow: 1;
     flex-basis: 40%;
-    border-right: 1px solid rgba(0, 0, 0, .07);
+    border-right: var(--border-style);
 
     &:last-child {
       padding-left: 10px;
@@ -33,7 +41,7 @@
     text-align: center;
     border-radius: 10px;
     padding: 9px 18px 13px;
-    border: 1px solid rgb(226, 0, 22);
+    border: 1px solid var(--key-link);
   }
 
   &__announcement {
@@ -45,37 +53,36 @@
 
 .countdown {
   &__number {
-    color: rgb(226, 0, 22);
+    color: var(--key-link);
     font-size: 70px;
     font-weight: 400;
     line-height: 68px;
   }
 
   &__secondary-text {
-    color: rgb(226, 0, 22);
+    color: var(--key-link);
   }
 }
 
 .announcement {
   &__title {
-    color: rgb(226, 0, 22);
+    color: var(--key-link);
     font-size: 70px;
   }
   &__link {
     font-size: 20px;
     line-height: 27px;
-    color: black;
     font-weight: 600;
 
     &_underlined {
       text-decoration: none;
       color: rgb(6, 85, 128);
       font-weight: 100;
-      border-bottom: 1px solid rgba(6, 85, 128, .1);
+      border-bottom: var(--link-underline);
 
       &:hover {
-        color: rgb(226, 0, 22);
-        border-bottom-color: rgb(226, 0, 22);
+        color: var(--key-link);
+        border-bottom-color: var(--key-link);
       }
     }
   }
@@ -137,24 +144,24 @@
   &__author {
     color: #065580;
     text-decoration: underline;
-    text-decoration-color: rgba(6, 85, 128, .1);
+    text-decoration-color: var(--text-decoration);
     font-style: normal;
     font-size: 16px;
     line-height: 18px;
 
     &:hover {
-      color: rgb(226, 0, 22);
+      color: var(--key-link);
     }
   }
 }
 
 .item {
   &__content {
-    color: rgb(6, 85, 128);
+    color: var(--link);
     font-size: 16px;
     font-weight: 100;
     line-height: 18px;
-    border-bottom: 1px solid rgba(6, 85, 128, .1);
+    border-bottom: var(--link-underline);
   }
 }
 
@@ -170,7 +177,7 @@
   .courses__soon {
     flex-basis: 100%;
     border-right: none;
-    border-bottom: 1px solid rgba(6, 85, 128, .1);
+    border-bottom: var(--link-underline);
     padding-bottom: 20px;
 
     &:last-child {
