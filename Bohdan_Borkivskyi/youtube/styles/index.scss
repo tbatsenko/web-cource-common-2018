@@ -1,0 +1,25 @@
+@import "general";
+@import "header";
+@import "logo_section";
+@import "search_bar";
+@import "top_panel_buttons";
+@import "side_menu";
+@import "main";
+
+:root {
+  --left_menu_width: 240px;
+  --header-height: 56px;
+}
+
+html{
+  min-height: 450px;
+}
+
+body, html {
+  height: 100%;
+}
+
+.emails_window{
+  height: 50px;
+  width: 50px;
+}

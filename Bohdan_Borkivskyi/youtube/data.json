@@ -1,0 +1,80 @@
+{
+  "side_menu": {
+    "buttons": [
+      {
+        "src": "https://www.gstatic.com/images/icons/material/system/1x/inbox_gm_googlered600_20dp.png",
+        "text": "Home"
+      },
+      {
+        "src": "https://www.gstatic.com/images/icons/material/system/1x/grade_black_20dp.png",
+        "text": "Trending"
+      },
+      {
+        "src": "https://www.gstatic.com/images/icons/material/system/1x/watch_later_black_20dp.png",
+        "text": "Subscriptions"
+      }
+    ]
+  },
+  "videos": [
+    {
+      "src": "https://i.ytimg.com/vi/xlAl5DhIi0w/hqdefault.jpg",
+      "title": "Каждую Пятницу Он УМИРАЕТ - Стояновка | "
+    },
+    {
+      "src": "https://i.ytimg.com/vi/xlAl5DhIi0w/hqdefault.jpg",
+      "title": "Каждую Пятницу Он УМИРАЕТ - Стояновка | "
+    },
+    {
+      "src": "https://i.ytimg.com/vi/xlAl5DhIi0w/hqdefault.jpg",
+      "title": "Каждую Пятницу Он УМИРАЕТ - Стояновка | "
+    },
+    {
+      "src": "https://i.ytimg.com/vi/xlAl5DhIi0w/hqdefault.jpg",
+      "title": "Каждую Пятницу Он УМИРАЕТ - Стояновка | "
+    },
+    {
+      "src": "https://i.ytimg.com/vi/xlAl5DhIi0w/hqdefault.jpg",
+      "title": "Каждую Пятницу Он УМИРАЕТ - Стояновка | "
+    },
+    {
+      "src": "https://i.ytimg.com/vi/xlAl5DhIi0w/hqdefault.jpg",
+      "title": "Каждую Пятницу Он УМИРАЕТ - Стояновка | "
+    },
+    {
+      "src": "https://i.ytimg.com/vi/xlAl5DhIi0w/hqdefault.jpg",
+      "title": "Каждую Пятницу Он УМИРАЕТ - Стояновка | "
+    },
+    {
+      "src": "https://i.ytimg.com/vi/xlAl5DhIi0w/hqdefault.jpg",
+      "title": "Каждую Пятницу Он УМИРАЕТ - Стояновка | "
+    },
+    {
+      "src": "https://i.ytimg.com/vi/xlAl5DhIi0w/hqdefault.jpg",
+      "title": "Каждую Пятницу Он УМИРАЕТ - Стояновка | "
+    },
+    {
+      "src": "https://i.ytimg.com/vi/xlAl5DhIi0w/hqdefault.jpg",
+      "title": "Каждую Пятницу Он УМИРАЕТ - Стояновка | "
+    },
+    {
+      "src": "https://i.ytimg.com/vi/xlAl5DhIi0w/hqdefault.jpg",
+      "title": "Каждую Пятницу Он УМИРАЕТ - Стояновка | "
+    },
+    {
+      "src": "https://i.ytimg.com/vi/xlAl5DhIi0w/hqdefault.jpg",
+      "title": "Каждую Пятницу Он УМИРАЕТ - Стояновка | "
+    },
+    {
+      "src": "https://i.ytimg.com/vi/xlAl5DhIi0w/hqdefault.jpg",
+      "title": "Каждую Пятницу Он УМИРАЕТ - Стояновка | "
+    },
+    {
+      "src": "https://i.ytimg.com/vi/xlAl5DhIi0w/hqdefault.jpg",
+      "title": "Каждую Пятницу Он УМИРАЕТ - Стояновка | "
+    },
+    {
+      "src": "https://i.ytimg.com/vi/xlAl5DhIi0w/hqdefault.jpg",
+      "title": "Каждую Пятницу Он УМИРАЕТ - Стояновка | "
+    }
+  ]
+}
