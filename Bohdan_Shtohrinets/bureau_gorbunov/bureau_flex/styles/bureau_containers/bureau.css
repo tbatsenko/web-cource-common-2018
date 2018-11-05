@@ -1,0 +1,24 @@
+.bureau__header {
+    padding: 7px 6% 7px 6%;
+    max-width: 1519px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.bureau__posts {
+    padding: 7px 6% 7px 6%;
+    max-width: 1519px;
+    margin: 0 auto;
+}
+
+.bureau__footer {
+    padding: 7px 6% 7px 6%;
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 1519px;
+    margin: 0 auto;
+}
+
+/*# sourceMappingURL=bureau.css.map */

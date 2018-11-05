@@ -1,0 +1,49 @@
+.header__logo {
+    width: 140px;
+    height: 32px;
+    color: transparent;
+    background: url("/images/logo.png");
+    background-size: cover;
+}
+
+.header__menu {
+    margin-right: auto;
+}
+
+.header__user-button {
+    align-self: flex-start;
+    margin-left: auto;
+    color: transparent;
+    width: 30px;
+    height: 30px;
+    background: url("/images/user.png");
+    background-size: cover;
+}
+
+.header__user-button:hover {
+    background-color: #e20016;
+    border-radius: 20px;
+}
+
+.menu__item {
+    color: black;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.menu__item:hover {
+    color: #e20016;
+}
+
+@media (max-width: 960px) {
+    .header__menu {
+        flex-basis: 100%;
+    }
+
+    .header__user-button {
+        margin-left: 0;
+        margin-right: auto;
+    }
+}
+
+/*# sourceMappingURL=header.css.map */

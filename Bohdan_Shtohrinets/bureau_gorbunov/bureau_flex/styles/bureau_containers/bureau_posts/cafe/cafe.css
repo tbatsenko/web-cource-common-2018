@@ -1,0 +1,132 @@
+.cafe__image {
+    flex-basis: 202px;
+    flex-grow: 1;
+}
+
+.cafe__image_content {
+    width: 100%;
+}
+
+.cafe__about {
+    color: black;
+    margin-left: 18px;
+    flex-basis: 422px;
+    flex-grow: 2;
+}
+
+.cafe__event {
+    margin-left: 20px;
+    flex-basis: 202px;
+    flex-grow: 1;
+    z-index: 1;
+}
+
+.cafe__logo {
+    margin-bottom: 20px;
+    display: block;
+    width: 100%;
+    color: transparent;
+}
+
+.cafe__logo:after {
+    margin-top: -6%;
+    margin-bottom: -10%;
+    content: "";
+    display: block;
+    width: 100%;
+    background: url("https://bureau.ru/assets/images/spacers/coworkafe/logo.png");
+    background-size: contain;
+    padding-bottom: 29%;
+}
+
+.cafe__schedule {
+    max-width: 310px;
+    margin-right: 18px;
+    font-size: 16px;
+    line-height: 18px;
+    font-weight: 100;
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    align-self: flex-start;
+}
+
+.cafe__link {
+    color: #065580;
+    text-decoration: underline;
+    text-decoration-color: rgba(6, 85, 128, 0.1);
+    font-style: normal;
+}
+
+.cafe__product {
+    max-width: 240px;
+    font-size: 16px;
+    line-height: 18px;
+    font-weight: 100;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    position: relative;
+    left: 200px;
+    padding-right: 28%;
+    min-width: 50%;
+}
+
+.product__price {
+    margin-top: 2px;
+    font-size: 60px;
+    line-height: 1;
+}
+
+.product__illustration {
+    color: transparent;
+    position: absolute;
+    top: -170px;
+    left: 170px;
+    width: 200px;
+    height: 295px;
+    background: url("https://bureau.ru/assets/images/spacers/coworkafe/caffe.png");
+    background-size: contain;
+}
+
+.event__title {
+    font-size: 24px;
+    line-height: 27px;
+    font-weight: 700;
+}
+
+.event__topic {
+    font-size: 24px;
+    line-height: 27px;
+}
+
+.event__info {
+    margin-top: 7px;
+    font-size: 16px;
+    line-height: 18px;
+    font-weight: 100;
+}
+
+@media (max-width: 960px) {
+    .cafe__image {
+        flex-basis: 100%;
+    }
+
+    .cafe__about {
+        margin-top: 20px;
+        flex-basis: 100%;
+        margin-left: 0;
+    }
+
+    .cafe__event {
+        margin-top: 20px;
+        margin-left: 0;
+        flex-basis: 100%;
+    }
+
+    .cafe__product {
+        display: none;
+    }
+}
+
+/*# sourceMappingURL=cafe.css.map */

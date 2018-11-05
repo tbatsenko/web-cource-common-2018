@@ -1,0 +1,24 @@
+.hottest-books {
+  &__book-image {
+    width: 100%;
+  }
+  &__book {
+    align-self: flex-start;
+    color: transparent;
+    flex-grow: 1;
+    flex-basis: 40%;
+    &_advices {
+      margin-right: 10px;
+    }
+    &_manifest {
+      margin-left: 10px;
+    }
+    &_tomato {
+      margin-right: 5px;
+    }
+    &_chess {
+      margin-left: 5px;
+    }
+
+  }
+}

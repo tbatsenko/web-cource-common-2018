@@ -1,0 +1,146 @@
+.footer {
+  &__contacts {
+    justify-content: space-between;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+  }
+  &__address {
+    justify-content: space-between;
+    flex-grow: 2;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+  }
+  &__more-options {
+    flex-grow: 1;
+    display: flex;
+    align-self: flex-end;
+    justify-content: flex-end;
+  }
+
+  &__key-link {
+    color: rgb(226, 0, 2);
+    text-decoration: underline;
+    text-decoration-color: rgba(226, 0, 2, 0.1);
+
+    &:hover {
+      text-decoration-color: rgb(226, 0, 2);
+    }
+  }
+}
+
+.contacts {
+  &__section {
+    flex-grow: 1;
+    font-size: 16px;
+    font-weight: 100;
+    &:first-child {
+      margin-bottom: 1.125em;
+    }
+  }
+}
+
+.address {
+  &__section {
+    flex-grow: 1;
+    font-size: 16px;
+    font-weight: 100;
+    &:first-child {
+      margin-bottom: 1.125em;
+    }
+  }
+}
+
+.more-options {
+  &__content {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+  }
+
+  &__social-media {
+    padding-top: 0;
+    float: left;
+    padding-left: 12px;
+    padding-right: 12px;
+    margin-left: -4, 5px;
+    margin-right: -4, 5px;
+  }
+  &__language-choose {
+    padding-top: 0;
+    float: left;
+    padding-left: 12px;
+    padding-right: 12px;
+    margin-left: -8px;
+    margin-right: -8px;
+  }
+}
+
+.social-media {
+  &__link {
+    color: transparent;
+    float: left;
+    width: 31px;
+    height: 31px;
+    padding: 0 4.5px;
+  }
+}
+
+.language-choose {
+  &__option {
+    text-transform: uppercase;
+    font-size: 30px;
+    line-height: 20px;
+    float: left;
+    height: 31px;
+    width: 31px;
+    padding-bottom: 10px;
+    margin-left: 8px;
+    margin-right: 8px;
+    border-bottom: none;
+    color: rgb(226, 0, 22);
+
+    &_chosen {
+      border-bottom: 3px solid #000;
+      color: black;
+    }
+  }
+}
+
+.link {
+  &__svg {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    display: block;
+  }
+}
+
+.svg {
+  &__bg {
+    fill: #000000;
+  }
+  &__front {
+    fill: #ffffff;
+  }
+}
+
+@media (max-width: 960px) {
+  .footer__address {
+    flex-basis: 100%;
+    padding-bottom: 20px;
+  }
+  .footer__contacts {
+    padding-top: 20px;
+    border-top: 1px solid rgba(0, 0, 0, 0.07);
+    flex-basis: 100%;
+    padding-bottom: 20px;
+  }
+  .footer__more-options {
+    flex-basis: 100%;
+    padding-bottom: 20px;
+  }
+}
