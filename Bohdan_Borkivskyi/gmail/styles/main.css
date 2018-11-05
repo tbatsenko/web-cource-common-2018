@@ -43,7 +43,7 @@ button:hover {
     align-items: center;
     width: calc(100% - var(--left_menu_width));
     min-width: 500px; }
-    .header .top_panel__search_bar {
+    .header .top_panel .search_bar {
       background-color: #f5f5f5;
       height: 48px;
       width: 722px;
@@ -52,7 +52,7 @@ button:hover {
       align-items: center;
       padding: 5px 5px 5px 7px;
       border-radius: 3px; }
-      .header .top_panel__search_bar .lupa {
+      .header .top_panel .search_bar__lupa {
         background-color: transparent;
         border: 0;
         height: 38px;
@@ -60,9 +60,9 @@ button:hover {
         background: url("../images/lupa.png") no-repeat center;
         background-size: 20px 20px;
         border-radius: 100%; }
-        .header .top_panel__search_bar .lupa:active {
+        .header .top_panel .search_bar__lupa:active {
           background-color: #dadada; }
-      .header .top_panel__search_bar .input {
+      .header .top_panel .search_bar__input {
         border: 0;
         background-color: transparent;
         padding-left: 8px;
@@ -72,15 +72,15 @@ button:hover {
         color: gray;
         font: normal 16px Roboto,sans-serif;
         width: calc(100% - 38px * 3 - 4px); }
-      .header .top_panel__search_bar .clear {
+      .header .top_panel .search_bar__clear {
         height: 38px;
         width: 38px;
         border: 0;
         background-color: transparent;
         border-radius: 100%; }
-        .header .top_panel__search_bar .clear:hover {
+        .header .top_panel .search_bar__clear:hover {
           cursor: default; }
-      .header .top_panel__search_bar .extend {
+      .header .top_panel .search_bar__extend {
         background-color: transparent;
         border: 0;
         height: 38px;
@@ -89,29 +89,29 @@ button:hover {
         background-size: 20px 20px;
         border-radius: 100%;
         justify-self: flex-end; }
-        .header .top_panel__search_bar .extend:active {
+        .header .top_panel .search_bar__extend:active {
           background-color: #dadada; }
-    .header .top_panel__buttons {
+    .header .top_panel .buttons {
       display: flex;
       align-items: center;
       margin-right: 12px; }
-      .header .top_panel__buttons .apps_button {
+      .header .top_panel .buttons__apps_button {
         background: url("https://image.flaticon.com/icons/svg/56/56844.svg") no-repeat center;
         background-size: 16px 16px;
         margin-right: 8px; }
-      .header .top_panel__buttons .notification_button {
+      .header .top_panel .buttons__notification_button {
         background: url("../images/bell.png") no-repeat center;
         background-size: 24px 24px;
         margin-right: 16px; }
-      .header .top_panel__buttons .apps_button, .header .top_panel__buttons .notification_button {
+      .header .top_panel .buttons__apps_button, .header .top_panel .buttons__notification_button {
         width: 40px;
         height: 40px;
         border: 0;
         border-radius: 100%;
         background-color: transparent; }
-        .header .top_panel__buttons .apps_button:active, .header .top_panel__buttons .notification_button:active {
+        .header .top_panel .buttons__apps_button:active, .header .top_panel .buttons__notification_button:active {
           background-color: #dadada; }
-      .header .top_panel__buttons .profile_button {
+      .header .top_panel .buttons__profile_button {
         width: 134px;
         height: 48px;
         border: 1px solid #dadce0;
@@ -119,11 +119,11 @@ button:hover {
         background: white;
         display: flex;
         align-items: center; }
-        .header .top_panel__buttons .profile_button .institution_pic {
+        .header .top_panel .buttons__profile_button .institution_pic {
           height: 32px;
           width: 78px;
           margin-left: 7px; }
-        .header .top_panel__buttons .profile_button .profile_pic {
+        .header .top_panel .buttons__profile_button .profile_pic {
           height: 32px;
           width: 32px;
           border-radius: 100%;
