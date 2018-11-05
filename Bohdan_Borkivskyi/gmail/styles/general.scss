@@ -1,0 +1,16 @@
+body, header, section, button, div, input {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-width: 780px;
+}
+
+button {
+  background: transparent;
+  &:hover {
+    cursor: pointer;
+  }
+}
