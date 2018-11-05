@@ -234,8 +234,3 @@ button:hover {
 .custom-checkbox__input:checked + .custom-checkbox__style--star::after {
   content: 'star';
   color: #f3b200; }
-<<<<<<< Updated upstream
-=======
-
-/*# sourceMappingURL=style.css.map */
->>>>>>> Stashed changes
