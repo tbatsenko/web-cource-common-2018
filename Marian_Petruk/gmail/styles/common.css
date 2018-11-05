@@ -1,0 +1,64 @@
+.header {
+  height: 64px;
+  padding: 8px;
+  background: red;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: flex-start;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.logo_part {
+  width: 248px;
+  height: 48px;
+  box-sizing: border-box;
+  padding-right: 32px;
+  display: flex;
+}
+.logo_part__menu-button {
+  width: 24px;
+  height: 24px;
+  padding: 12px;
+  margin: 0 4px;
+  border: 0;
+  background: #1E88E5;
+}
+.logo_part__menu-icon {
+  width: 24px;
+  height: 24px;
+}
+
+:root {
+  --gmail-aside-width: 64px;
+}
+
+.google-mail-aside {
+  width: var(--gmail-aside-width);
+  height: 575px;
+  background: green;
+}
+
+.gmail-body {
+  height: 575px;
+  width: calc(100% - var(--gmail-aside-width));
+  background: blue;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: #ffffff;
+}
+
+.google-mail-main {
+  display: flex;
+}
+
+button {
+  background: transparent;
+}
+button:hover {
+  cursor: pointer;
+}
+
+/*# sourceMappingURL=common.css.map */

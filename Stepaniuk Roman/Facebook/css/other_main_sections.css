@@ -1,0 +1,38 @@
+.main_part_right_column{
+    display: flex;
+    width: 516px;
+    flex-direction: column;
+}
+
+.intro_box{
+    display: flex;
+    width: 323px;
+    height: 278px;
+    flex-direction: column;
+    align-items: center;
+    background: white;
+    margin: 5px 5px 5px 0px;
+}
+
+.mains{
+    display: flex;
+    flex-direction: column;
+}
+
+.planet_america_icon{
+    width: 24px;
+    height: 24px;
+    margin:8px;
+}
+
+.self_align_left{
+    display: flex;
+    align-self: flex-start;
+    align-items: center;
+}
+
+.dialog_window_icon{
+    width: 24px;
+    height: 24px;
+    margin: 0 0 3px 0;
+}

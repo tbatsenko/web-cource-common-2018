@@ -1,0 +1,9 @@
+:root {
+  --gmail-aside-width: 64px;
+}
+
+.google-mail-aside {
+  width: var(--gmail-aside-width);
+  height: 575px;
+  background: green;
+}

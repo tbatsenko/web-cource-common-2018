@@ -1,0 +1,40 @@
+.header {
+  height: 64px;
+  padding: 8px;
+  background: red;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: flex-start;
+  border-bottom: 1px solid rgba(0, 0, 0, .2); //#ccc;
+
+}
+
+.logo_part {
+  width: 248px;
+  height: 48px;
+  box-sizing: border-box;
+  padding-right: 32px;
+  display: flex;
+
+  &__menu-button {
+    width: 24px;
+    height: 24px;
+    padding: 12px;
+    margin: 0 4px;
+    //border-radius: 50%;
+    //display: inline-block;
+    //overflow: hidden;
+    //vertical-align: middle;
+    border: 0;
+    background: #1E88E5;
+    //color: white;
+
+  }
+
+  &__menu-icon {
+    //color: black;
+    width: 24px;
+    height: 24px;
+  }
+
+}
