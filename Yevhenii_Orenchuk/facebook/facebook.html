@@ -136,7 +136,7 @@
                 <img class="feed-post__profile-picture" src="https://scontent-frx5-1.xx.fbcdn.net/v/t1.0-1/p160x160/10157258_838129292950019_1580448429464448229_n.jpg?_nc_cat=110&_nc_ht=scontent-frx5-1.xx&oh=23017d8ed4fd36601b425eadf0e0916a&oe=5C7AB129">
                 <input class="feed-post__input-text" type="text" placeholder="What's on your mind, Zhenia?">
             </div>
-            <div class="post__attachments centered">
+            <section class="post__attachments centered">
                 <button class="bottom-menu__button feed__button-decorator centered">
                     <i class="button__gif-icon facebook-icons"></i>
                     <span class="button__gif_text">Gif</span>
@@ -152,7 +152,7 @@
                 <button class="bottom-menu__button feed__button-decorator centered">
                     <i class="button__more-icon facebook-icons"></i>
                 </button>
-            </div>
+            </section>
         </form>
         <article class="feed__item feed__post">
             <div class="item__top-bar centered">
@@ -168,7 +168,7 @@
                         </span>
                     </h4>
                     <h6 class="post-header__description centered">
-                        <a class="timestamp link-decoration" href="">
+                        <a class="timestamp feed__link-decoration" href="">
                             <span class="timestamp-text">November 2 at 11:02 PM</span>
                         </a>
                         <span class="point-separator">·</span>
@@ -224,12 +224,31 @@
         </article>
     </main>
     <aside class="right-menu">
-        <div class="right-menu__stories">
-            <div class="right-menu__top-bar">
-                <a href="">
-                    <span>Stories</span>
+        <div class="right-menu__stories feed__item">
+            <header class="right-menu__top-bar centered">
+                <a class="feed__link-decoration" href="">
+                    <h4 class="stories__header">Stories</h4>
                 </a>
-            </div>
+                <div class="story__header--tool-bar centered">
+                    <a class="feed__link-decoration centered" href="">
+                        <i class="stories__archive-icon facebook-icons-stories"></i>
+                        <span>Archive</span>
+                    </a>
+                    <span class="point-separator">·</span>
+                    <a class="feed__link-decoration" href="">
+                        <span>Settings</span>
+                    </a>
+                </div>
+            </header>
+            <main class="story__main-body">
+                <div class="add-story-icon-box">
+                    <i class="add-story-icon facebook-icons-stories"></i>
+                </div>
+                <a class="story__main-text feed__link-decoration" href="">
+                    <span class="story__owner-name">Add to Your Story</span>
+                    <span class="timestamp">Share a photo, video or share something</span>
+                </a>
+            </main>
         </div>
     </aside>
 </body>

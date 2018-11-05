@@ -1,0 +1,146 @@
+#top-menu{
+    background-color: #4267b2;
+    height: 43px;
+}
+#fb_logo{
+    display: inline-block;
+    line-height: 40px;
+    height: 24px;
+    width: 24px;
+    margin-right: 5px;
+
+    color: transparent;
+    background: url("https://static.xx.fbcdn.net/rsrc.php/v3/yF/r/1c0gE0MbEo8.png");
+    background-size: cover;
+}
+.main-navigation{
+    width: 1005px;
+    margin-left: 70px;
+    height: 100%;
+    align-items: center;
+    white-space: nowrap;
+}
+
+.top-menu__left-block{
+    display: inline-block;
+    width: 480px;
+    height: 100%;
+}
+
+.top-menu__main-search{
+    display: inline;
+    vertical-align: middle;
+    line-height: 43px;
+    height: 100%;
+}
+
+#search{
+    padding: 0;
+    border:none;
+    border-radius: 2px 0 0 2px;
+    height: 25px;
+    width: 400px;
+}
+
+#search-button{
+    background: #f5f6f7;
+    box-sizing: border-box;
+    border:none;
+    border-radius: 0 3px 3px 0;
+    height: 25px;
+    width: 45px;
+    position: relative;
+}
+#search-button:hover{
+    background: #F0F0F0;
+}
+#search-button-img{
+    display: inline-block;
+    height: 16px;
+    width: 15px;
+    background: url("https://static.xx.fbcdn.net/rsrc.php/v3/yx/r/tjBuxcd0g0m.png") 0 -1443px;
+    background-size: auto;
+    color: transparent;
+}
+.top-menu__right-block{
+    margin-left: 155px;
+    display: inline-block;
+    height: 100%;
+    width: 360px;
+}
+.change-bg-on-pointer{
+    padding: 3px 6px 3px 6px;
+    height: 27px;
+}
+.change-bg-on-pointer:first-child{
+    padding: 3px 6px 4px 1px;
+}
+.change-bg-on-pointer:hover{
+    background: rgba(0, 0, 0, .1);/*#3A66A7;*/
+    border-radius: 2px;
+}
+.top-menu__right-block--item-text{
+    font-family: Helvetica, sans serif;
+    font-size: 13px;
+    color: #fff;
+    font-weight: bold;
+}
+/*#home{*/
+/*padding: 3px 7px 3px 14px;*/
+/*}*/
+#profile-picture{
+    vertical-align: middle;
+}
+.top-menu__right-block--icons{
+    padding: 3px;
+    margin: 0 5px;
+    height: 100%;
+    line-height: inherit;
+    width: 37px;
+}
+#friends-button{
+    display: inline;
+    background-image: url(https://static.xx.fbcdn.net/rsrc.php/v3/yf/r/dxigF_3tzG8.png);
+    background-position: 0 -892px;
+    color: transparent;
+    width:24px;
+    height: 24px;
+    vertical-align: middle;
+}
+#messages-button{
+    display: inline;
+    background-image: url(https://static.xx.fbcdn.net/rsrc.php/v3/yf/r/dxigF_3tzG8.png);
+    background-position: 0 -942px;
+    color: transparent;
+    width:24px;
+    height: 24px;
+    vertical-align: middle;
+}
+#notifications-button{
+    display: inline;
+    background-image: url(https://static.xx.fbcdn.net/rsrc.php/v3/yf/r/dxigF_3tzG8.png);
+    background-position: 0 -792px;
+    color: transparent;
+    width:24px;
+    height: 24px;
+    vertical-align: middle;
+}
+#help-button{
+    margin-left: 5px;
+    display: inline;
+    background-image: url(https://static.xx.fbcdn.net/rsrc.php/v3/yf/r/dxigF_3tzG8.png);
+    background-position: 0 -993px;
+    color: transparent;
+    width:24px;
+    height: 24px;
+    vertical-align: middle;
+}
+#options-button{
+    display: inline;
+    background-image: url(https://static.xx.fbcdn.net/rsrc.php/v3/yf/r/dxigF_3tzG8.png);
+    background-position: 0 -842px;
+    color: transparent;
+    width:24px;
+    height: 24px;
+    vertical-align: middle;
+}
