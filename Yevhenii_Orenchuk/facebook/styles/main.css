@@ -128,24 +128,12 @@
   margin: 2px;
   font-weight: normal;
 }
-.timestamp {
-  color: #616770;
-  font-size: 12px;
-}
-.timestamp:hover {
-  text-decoration: underline;
-}
 .profile-link {
   color: #365899;
   font-weight: bold;
 }
 .profile-link:hover {
   text-decoration: underline;
-}
-.point-separator {
-  font-weight: bold;
-  color: #616770;
-  padding: 3px;
 }
 .public-icon {
   background-position: -382px -270px;

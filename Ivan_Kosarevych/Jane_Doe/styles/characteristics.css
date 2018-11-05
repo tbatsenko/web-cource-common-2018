@@ -1,0 +1,40 @@
+.characteristics{
+    overflow: hidden;
+}
+.characteristics__title{
+    line-height: 1.5em;
+    display: inline;
+    font-weight: bold;
+    float:left;
+    clear: left;
+    color: #181818;
+}
+.characteristics__value{
+    line-height: 1.5em;
+    display: inline;
+    color: #181818;
+    float: right;
+    clear: right;
+}
+.characteristics__title--left{
+    float: left;
+    clear: left;
+}
+.characteristics__title--right{
+    float: right;
+    clear: right;
+    text-align: left;
+}
+.characteristics__value--center{
+    width: calc(100% - 10px);
+    position: absolute;
+    float:none;
+    display: inline;
+    text-align: center;
+}
+.characteristics_metrics{
+    display: block;
+    height: 2em;
+    overflow: hidden;
+    position: relative;
+}

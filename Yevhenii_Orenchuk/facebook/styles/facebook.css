@@ -14,6 +14,13 @@
 .link-decoration {
   text-decoration: none;
 }
+.feed__link-decoration {
+  text-decoration: none;
+  color: #365899;
+}
+.feed__link-decoration:hover {
+  text-decoration: underline;
+}
 .list-item-decoration {
   list-style-type: none;
   padding: 5px;
@@ -63,4 +70,21 @@
   width: 16px;
   display: inline-block;
   margin: 5px 10px;
+}
+.facebook-icons-stories {
+  background-image: url("https://static.xx.fbcdn.net/rsrc.php/v3/yb/r/9zsneNtHdGr.png");
+  background-repeat: no-repeat;
+  background-size: 53px 334px;
+  height: 12px;
+  width: 12px;
+  display: inline-block;
+}
+.point-separator {
+  font-weight: bold;
+  color: #616770;
+  padding: 3px;
+}
+.timestamp {
+  color: #616770;
+  font-size: 12px;
 }

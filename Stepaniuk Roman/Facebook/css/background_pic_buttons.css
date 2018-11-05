@@ -1,0 +1,40 @@
+.first_row_above_bg_btns{
+    border: 1px;
+    border-radius: 1px 0 0 1px;
+    background: #f5f6f7;
+    margin-right: 15px;
+    font-weight: bold;
+    font-size:  12px;
+    height: 25px;
+}
+
+.second_row_above_bg_btns{
+    border: none;;
+    background-color: inherit;
+    cursor: pointer;
+    color: #2851a3;
+    padding: 0 10px 0 10px;
+    font-size: 60%;
+    font-weight: bold;
+    display: flex;
+    align-items: flex-end;
+}
+
+.darker_friends_number{
+    font-size: 70%;
+    color: #b5babf;
+    margin: 0 0 2px 4px;
+    font-weight: normal;
+}
+
+.main_part{
+    display: flex;
+    justify-content: space-between;
+    width:90%;
+}
+
+.main_part_left_column{
+    display: flex;
+    width: 323px;
+    flex-direction: column;
+}

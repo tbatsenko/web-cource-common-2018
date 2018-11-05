@@ -3,6 +3,7 @@
 @import "search-form.css";
 @import "typography.css";
 @import "glossary.css";
+@import "header.css";
 
 body{
     margin: 0;
@@ -13,72 +14,19 @@ body{
 
 }
 
-header[role='banner']{
+.whole-header {
     background: #0063A6;
     height: 215px;
     width: 100%;
 }
 
-header .content{
+.main-header{
     width: 1020px;
     margin: auto;
     position: relative;
 }
 
-.additional{
-    position: absolute;
-    top: 10px;
-    right: 0;
-    font-size: 14px;
-}
-.additional li{
-    display: inline;
 
-}
-.additional li a{
-    color: white;
-    text-decoration: none;
-
-}
-.additional li:after{
-    content: " | ";
-
-}
-.additional a{
-    padding: 0 4px;
-}
-
-
-.main-resources{
-    left: 0px;
-    padding: 0 20px;
-    position: relative;
-    background: #0090d2;
-    overflow: hidden;
-    top: 14px;
-    width: 980px;
-}
-
-
-.main-resources ul{
-    float: left;
-    font-family: 'Helvetica Neue',Arial,sans-serif;
-    letter-spacing: 1px;
-    margin-left: -50px;
-}
-
-.main-resources li{
-    display: inline;
-}
-
-.main-resources li a{
-    font-family: "Helvetica Neue", Arial, sans-serif;
-    font-size: 14px;
-    text-decoration: none;
-    float: left;
-    color: white;
-    margin: 0 10px;
-}
 
 
 
@@ -88,8 +36,7 @@ header .content{
 
 #content[role='main']{
     background: #FFF;
-    border-top: 45px solid #0090D2;
-    margin: -45px auto 0;
+    margin: 0 auto 0;
     padding: 24px 0 0 0;
     width: 1020px;
     overflow: hidden;
