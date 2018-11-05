@@ -1,0 +1,39 @@
+.post-field {
+    background-color: #fff;
+    border-radius: 3px;
+    border: 1px solid #dddfe2;
+}
+
+.post-field__header {
+    background-color: #f5f6f7;
+    border-bottom: 1px solid #dddfe2;
+    border-radius: 2px 2px 0 0;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.post-field__header_item {
+
+}
+
+.post-field__make-post {
+
+}
+
+.post-field__make-post_userphoto {
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+}
+
+.post-field__make-post_input {
+
+}
+
+.post-field__options {
+
+}
+
+.post-field__options_option {
+
+}
