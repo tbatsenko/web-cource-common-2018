@@ -173,7 +173,7 @@ body {
   cursor: pointer;
   width: 210px;
   height: 225px;
-  margin-left: 5px;
+  margin-left: 10px;
   margin-bottom: 10px;
 }
 .video-block__text {
@@ -194,7 +194,7 @@ body {
   height: 120px;
 }
 .video-block__title {
-  height: 36px;
+  height: 45px;
   font-weight: bold;
   overflow: hidden;
   text-overflow: ellipsis;
