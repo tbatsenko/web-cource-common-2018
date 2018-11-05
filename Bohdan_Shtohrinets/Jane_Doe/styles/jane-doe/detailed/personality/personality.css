@@ -1,0 +1,13 @@
+.personality__rating {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    padding-bottom: 5px;
+}
+
+.personality__rating:last-child {
+    margin-bottom: 0;
+}
+
+/*# sourceMappingURL=personality.css.map */
