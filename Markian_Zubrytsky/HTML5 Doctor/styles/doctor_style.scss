@@ -36,18 +36,18 @@ body {
   }
 }
 
-.main {
+main {
   position: absolute;
   top: 22%;
   left: 20%;
-  background-color: transparent;
   width: 80%;
+  background-color: #00e100;
 }
 
 .article {
   position: absolute;
   top: 0;
-  left: 0;
+  left: 10%;
   background-color: white;
-  width: 80%;
+  width: 45%;
 }

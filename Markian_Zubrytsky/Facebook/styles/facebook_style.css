@@ -85,9 +85,14 @@ body {
         height: 10%;
         margin: 2% 2%;
         border: none;
-        background-color: white; }
+          border-radius: 12px;
+      }
     .news__new-post__create-post {
-      height: 10%; }
+        line-height: 4em;
+        width: 80%;
+        border: none;
+        margin-right: 5%;
+    }
   .news__post {
     display: flex;
     flex-flow: column nowrap;
@@ -106,12 +111,26 @@ body {
         height: 10%;
         width: 30%;
         border: none;
-        background-color: transparent; }
-  .news__comment {
-    background-color: white;
-    border: none; }
-  .news__title {
-    vertical-align: center; }
+          background-color: white;
+      }
+
+.news__post__comment {
+    line-height: 4em;
+    width: 80%;
+    border: none;
+    margin: 1% 5%;
+}
+
+.news__post__content {
+    margin: 10px;
+}
+
+.news__post__title {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    align-items: center;
+}
 
 .right-menu {
   display: flex;
