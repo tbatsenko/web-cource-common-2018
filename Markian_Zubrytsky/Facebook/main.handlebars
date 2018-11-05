@@ -25,7 +25,11 @@
                 <button class="news__new-post__action__button">{{.}}</button>
             {{/post-type}}
         </div>
-        <p class="news__new-post__create-post"></p>
+        <div class="news__new-post__action">
+            <img src="images/young_male_icon.png" class="user_icon">
+            <input class="news__new-post__create-post" type="text" placeholder="What's on your mind, Mark?">
+        </div>
+
         <div class="news__new-post__action">
             {{#post-content}}
                 <button class="news__new-post__action__button"><img src="images/{{image}}">{{text}}</button>
@@ -34,15 +38,18 @@
     </section>
     <article class="news__post">
         {{#post}}
-            <h3 class="news__post__title"><img src="images/{{user-logo}}" class="user_icon">{{username}}</h3>
-            <p>{{text}}</p>
+            <div class="news__post__title">
+                <img src="images/{{user-logo}}" class="user_icon">
+                <h3>{{username}}</h3>
+            </div>
+            <p class="news__post__content">{{text}}</p>
             <img src="images/{{photo}}" class="news__post__photo">
             <div class="news__post__actions">
                 {{#buttons}}
                     <button class="news__post__actions__button">{{.}}</button>
                 {{/buttons}}
             </div>
-            <input type="text" placeholder="Write comment..." class="news__new-post_comment">
+            <input type="text" placeholder="Write comment..." class="news__post__comment">
         {{/post}}
     </article>
 </main>

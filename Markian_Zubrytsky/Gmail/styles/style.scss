@@ -12,6 +12,8 @@ body {
   left: 0;
   z-index: 1;
   width: 100%;
+  border-bottom: 1px solid #eceff1;
+  margin-bottom: 5px;
 }
 
 #logo_btn {
@@ -42,17 +44,28 @@ body {
   margin-left: 3%;
 }
 
+#compose_button {
+  border-radius: 14px;
+  background-color: white;
+  align-self: flex-start;
+  height: 46px;
+  width: 148px;
+  margin: 10px 5px;
+}
+
 .left-menu {
   float: left;
   width: 240px;
   clear: both;
-  display: block;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: flex-start;
   position: fixed;
   left: 0;
   top: 65px;
 
   &__link {
-    margin-left: 48px;
+    margin-left: 30px;
     min-height: 40px;
     font-family: Roboto, Arial, sans-serif;
     font-size: 14px;
@@ -85,8 +98,9 @@ body {
     flex-flow: row nowrap;
     justify-content: flex-start;
     align-items: center;
-    border: 1px solid black;
-    height: 30px;
+    border-top: 1px solid #eceff1;
+    border-bottom: 1px solid #eceff1;
+    height: 40px;
 
     &__button {
       background-color: transparent;
@@ -97,14 +111,15 @@ body {
 
     &__title {
       padding-left: 10px;
+      margin-right: 20px;
     }
 
     &__description {
-
     }
 
     &__time {
-
+      margin-left: auto;
+      margin-right: 10px;
     }
   }
 }
