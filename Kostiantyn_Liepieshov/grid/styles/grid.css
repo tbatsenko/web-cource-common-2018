@@ -1,16 +1,16 @@
 :root {
-    --gutter-width: 5px;
+    --basic-cell-width: calc(100% / 16);
 }
 
 .container_16 {
-    width: 840px;
-    box-sizing: border-box;
-    margin: auto;
+    width: 100%;
     display: grid;
-    grid-template-columns: repeat(16, 1fr);
-    grid-gap: 10px calc(2 * var(--gutter-width));
+    grid-template-columns: repeat(16, var(--basic-cell-width));
     align-items: start;
-    padding: 5px var(--gutter-width);
+}
+
+.grid {
+    box-sizing: border-box;
 }
 
 .grid_1 {grid-area: span 1/span 1;}
@@ -48,7 +48,5 @@
     .grid_sm_15 {grid-area: span 1/span 15;}
     .grid_sm_16 {grid-area: span 1/span 16;}
     .container_16 {
-        width: auto;
-        margin: 0 5px;
     }
 }
