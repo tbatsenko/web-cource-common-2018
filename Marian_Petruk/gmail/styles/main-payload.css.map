@@ -1,0 +1,10 @@
+{
+  "version": 3,
+  "sourceRoot": "",
+  "sources": [
+    "main-payload.scss"
+  ],
+  "names": [],
+  "mappings": "AAAA;EACE;EACA;EACA",
+  "file": "main-payload.css"
+}
