@@ -25,12 +25,7 @@
 
 .book {
   &__content {
-    color: black;
     font-size: 16px;
-
-    &_centered {
-      //text-align: center;
-    }
   }
   &__image {
     max-height: 277px;

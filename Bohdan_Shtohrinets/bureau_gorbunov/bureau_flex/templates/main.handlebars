@@ -1,4 +1,4 @@
-<header class="bureau__header">
+<header class="bureau__container bureau__header">
     {{#header}}
         <a class="header__logo">{{logo}}</a>
         <nav class="header__menu">
@@ -10,17 +10,18 @@
     {{/header}}
 </header>
 
-<main class="bureau__posts">
+<main class="bureau__container bureau__posts">
     <article class="posts__section posts__advert">
         {{#posts.[0]}}
-            <a class="advert__image">
+            <a class="advert__image" href="#">
                 <img class="advert__image_content" src="/images/kids.png" alt="Shop-fans">
             </a>
-            <a class="advert__description">
+            <a class="advert__description" href="#">
                 <u class="advert__description_underlined">{{description.[0]}}</u> {{description.[1]}}
             </a>
         {{/posts.[0]}}
     </article>
+
     <div class="posts__section posts__courses">
         {{#posts.[1]}}
             <article class="courses__post courses__latest">
@@ -54,6 +55,7 @@
             </article>
         {{/posts.[1]}}
     </div>
+
     <div class="posts__section posts__educational">
         {{#posts.[2]}}
             <article class="educational__post">
@@ -80,6 +82,7 @@
             </article>
         {{/posts.[2]}}
     </div>
+
     <article class="posts__section posts__hottest-books">
         <a class="hottest-books__book hottest-books__book_advices">
             <img src="/images/advice.png" class="hottest-books__book-image" alt="Советы">
@@ -89,6 +92,7 @@
                  alt="Манифест издательства Бюро горбунова">
         </a>
     </article>
+
     <article class="posts__section posts__materials">
         {{#posts.[3]}}
             <a class="materials__fonts" href="#">
@@ -139,7 +143,7 @@
                 {{#books}}
                     <li class="books__book">
                         <a href="#" class="book__content">
-                            <img class="book__image" src="/images/typography.png" alt="">
+                            <img class="book__image" src="{{books-illustration}}" alt="">
                             <h4 class="book__title">{{books-title}}</h4>
                             <p class="book__topic">{{book-topic}}</p>
                             <p class="book__price">{{price}}</p>
@@ -149,7 +153,7 @@
                 {{#pre-order}}
                     <li class="books__book">
                         <a href="#" class="book__content">
-                            <img class="book__image" src="/images/information-style.png" alt="">
+                            <img class="book__image" src="{{books-illustration}}" alt="">
                             <h4 class="book__title">{{books-title}}</h4>
                             <p class="book__topic">{{book-topic}}</p>
                             <p class="book__price book__price_pre-order">{{price}}</p>
@@ -169,6 +173,7 @@
             </ul>
         {{/posts.[4]}}
     </div>
+
     <div class="posts__section posts__courses posts__courses_separate">
         {{#posts.[5]}}
             <article class="courses__soon">
@@ -245,10 +250,10 @@
     </div>
 
     <article class="posts__section posts__statistics">
-        <a class="statistics__client">
+        <a class="statistics__client" href="#">
             <img class="statistics__client_image" src="/images/wedding-stat.png" alt="Примерка">
         </a>
-        <a class="statistics__social-media">
+        <a class="statistics__social-media" href="#">
             <img class="statistics__social-media_image" src="/images/social-media-stat.png" alt="Соцсети">
         </a>
     </article>
@@ -431,35 +436,35 @@
     </article>
 </main>
 
-<footer class="bureau__footer">
+<footer class="bureau__container bureau__footer">
     {{#footer}}
-        <div class="footer__contacts">
+        <div class="footer__container footer__contacts">
             {{#contacts}}
-                <div class="contacts__section">
+                <div class="container__section">
                     {{name.[0]}}
                     <br>
                     {{name.[1]}}
                 </div>
-                <div class="contacts__section">
+                <div class="container__section">
                     <a href="#" class="footer__key-link">{{mail}}</a>
                     <br>
                     <a href="#">{{phone}}</a>
                 </div>
             {{/contacts}}
         </div>
-        <div class="footer__address">
+        <div class="footer__container footer__address">
             {{#address}}
-                <a href="#" class="address__section footer__key-link">{{client}}</a>
-                <address class="address__section">
+                <a href="#" class="container__section footer__key-link">{{client}}</a>
+                <address class="container__section">
                     {{street.[0]}}
                     <br>
                     {{street.[1]}}
                 </address>
             {{/address}}
         </div>
-        <div class="footer__more-options">
+        <div class="footer__container footer__more-options">
             <div class="more-options__content">
-                <nav class="more-options__social-media">
+                <nav class="more-options__section more-options__social-media">
                     <a class="social-media__link" href="#">
                         <svg viewBox="0 0 30 30" class="link__svg">
                             <path class="svg__bg"
@@ -501,7 +506,7 @@
                         </svg>
                     </a>
                 </nav>
-                <form class="more-options__language-choose" action="">
+                <form class="more-options__section more-options__language-choose" action="">
                     <button class="language-choose__option language-choose__option_chosen">{{language.[0]}}</button>
                     <button class="language-choose__option">{{language.[1]}}</button>
                 </form>
