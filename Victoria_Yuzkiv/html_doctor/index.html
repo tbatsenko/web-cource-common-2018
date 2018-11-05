@@ -9,11 +9,11 @@
     <link rel="stylesheet" href="styles/main.css">
 </head>
 <body>
-<header role="banner">
-    <div class="content">
-        <h1 class="logo"><a href="http://html5doctor.com" rel="home">HTML5 Doctor<sub>Helping you implement HTML5 today</sub></a></h1>
+<header class="whole-header">
+    <section class="main-header">
+        <h1 class="main-header__logo"><a href="http://html5doctor.com" rel="home">HTML5 Doctor<sub>Helping you implement HTML5 today</sub></a></h1>
 
-        <nav class="additional">
+        <nav class="main-header__right-navigation">
             <ul>
                 <li><a href=""> About</a></li>
                 <li><a href=""> RSS</a></li>
@@ -22,7 +22,7 @@
             </ul>
         </nav>
 
-        <nav class="main-resources">
+        <nav class="main-header__main-navigation">
             <ul>
                 <li><a href=""> Home</a></li>
                 <li><a href=""> Article Archive</a></li>
@@ -31,13 +31,12 @@
             </ul>
         </nav>
 
-        <form class="search-form" method="get" action="#">
-            <label class="visually-hidden" for="search-input">Search query</label>
-            <input id="search-input" name="search-query" type="text" value="" placeholder="John Show"/>
-            <button id="search-button">Search</button>
+        <form class="main-header__search-form" method="get" action="#">
+            <label class="main-header__search-form_visually-hidden" for="main-header__search-form_input">Search query</label>
+            <input id="main-header__search-form_input" name="search-query" type="text" value="" placeholder=""/>
+            <button id="main-header__search-form_button">Search</button>
         </form>
-
-    </div>
+    </section>
 </header>
 
 <main id="content" class="group" role="main">
@@ -64,12 +63,10 @@
             </article>
         </div>
 
-        <!--TODO: Remove class secondary. Use recent-comments instead-->
         <aside class="secondary ">
             <h3>Recent Comments</h3>
             <ul>
-                <!--TODO: rename recentcomments to recent-comments-->
-                <li class="recentcomments">Steven Vachon on The details and summary elements</li>
+                 <li class="recentcomments">Steven Vachon on The details and summary elements</li>
                 <li class="recentcomments">Mark Excell on The Footer Element Update</li>
                 <li class="recentcomments">Patanjali on Computer says NO to HTML5 document outline</li>
                 <li class="recentcomments">Patanjali on The figure & figcaption elements</li>
@@ -82,7 +79,6 @@
                 <a href="#">HTML5 Element Index</a>
             </h1>
 
-            <!--TODO: remove class glossary-first. Use column instead-->
             <div class="glossary-first">
                 <h2>Head</h2>
                 <ul class="group">

@@ -1,8 +1,19 @@
+.main {
+  display: flex;
+  flex-direction: row;
+  height: calc(100% - 64px);
+}
 .main__left {
+  display: flex;
   width: 256px;
+  height: 100%;
+  box-sizing: border-box;
 }
 .main__center {
+  display: flex;
   width: calc(100% - 256px);
+  height: 100%;
+  box-sizing: border-box;
 }
 
 /*# sourceMappingURL=main.css.map */
