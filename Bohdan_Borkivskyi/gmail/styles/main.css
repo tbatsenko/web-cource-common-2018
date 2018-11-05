@@ -1,6 +1,3 @@
-:root {
-  --left_menu_width: 256px; }
-
 body, header, section, button, div, input {
   margin: 0;
   padding: 0;
@@ -9,8 +6,10 @@ body, header, section, button, div, input {
 body {
   min-width: 780px; }
 
-button:hover {
-  cursor: pointer; }
+button {
+  background: transparent; }
+  button:hover {
+    cursor: pointer; }
 
 .header {
   display: flex;
@@ -19,115 +18,12 @@ button:hover {
   border-bottom: 1px solid #eceff1;
   box-sizing: border-box;
   padding: 8px 0; }
-  .header .logo_section {
-    display: flex;
-    padding-left: 8px;
-    width: var(--left_menu_width);
-    align-items: center; }
-    .header .logo_section .menu_hider {
-      margin-left: 4px;
-      background: url("https://cdn2.iconfinder.com/data/icons/clean-minimal-set/16/open-menu-01-512.png") no-repeat center;
-      background-size: 20px 16px;
-      border: 0;
-      height: 48px;
-      width: 48px;
-      border-radius: 100%; }
-      .header .logo_section .menu_hider:hover {
-        background-color: #ededed; }
-    .header .logo_section .logo {
-      margin-left: 4px;
-      height: 40px; }
   .header .top_panel {
     display: flex;
     justify-content: space-between;
     align-items: center;
     width: calc(100% - var(--left_menu_width));
     min-width: 500px; }
-    .header .top_panel .search_bar {
-      background-color: #f5f5f5;
-      height: 48px;
-      width: 722px;
-      display: flex;
-      justify-content: flex-start;
-      align-items: center;
-      padding: 5px 5px 5px 7px;
-      border-radius: 3px; }
-      .header .top_panel .search_bar__lupa {
-        background-color: transparent;
-        border: 0;
-        height: 38px;
-        width: 38px;
-        background: url("../images/lupa.png") no-repeat center;
-        background-size: 20px 20px;
-        border-radius: 100%; }
-        .header .top_panel .search_bar__lupa:active {
-          background-color: #dadada; }
-      .header .top_panel .search_bar__input {
-        border: 0;
-        background-color: transparent;
-        padding-left: 8px;
-        padding-top: 2px;
-        height: 48px;
-        line-height: 19px;
-        color: gray;
-        font: normal 16px Roboto,sans-serif;
-        width: calc(100% - 38px * 3 - 4px); }
-      .header .top_panel .search_bar__clear {
-        height: 38px;
-        width: 38px;
-        border: 0;
-        background-color: transparent;
-        border-radius: 100%; }
-        .header .top_panel .search_bar__clear:hover {
-          cursor: default; }
-      .header .top_panel .search_bar__extend {
-        background-color: transparent;
-        border: 0;
-        height: 38px;
-        width: 38px;
-        background: url("../images/dropdown.png") no-repeat center;
-        background-size: 20px 20px;
-        border-radius: 100%;
-        justify-self: flex-end; }
-        .header .top_panel .search_bar__extend:active {
-          background-color: #dadada; }
-    .header .top_panel .buttons {
-      display: flex;
-      align-items: center;
-      margin-right: 12px; }
-      .header .top_panel .buttons__apps_button {
-        background: url("https://image.flaticon.com/icons/svg/56/56844.svg") no-repeat center;
-        background-size: 16px 16px;
-        margin-right: 8px; }
-      .header .top_panel .buttons__notification_button {
-        background: url("../images/bell.png") no-repeat center;
-        background-size: 24px 24px;
-        margin-right: 16px; }
-      .header .top_panel .buttons__apps_button, .header .top_panel .buttons__notification_button {
-        width: 40px;
-        height: 40px;
-        border: 0;
-        border-radius: 100%;
-        background-color: transparent; }
-        .header .top_panel .buttons__apps_button:active, .header .top_panel .buttons__notification_button:active {
-          background-color: #dadada; }
-      .header .top_panel .buttons__profile_button {
-        width: 134px;
-        height: 48px;
-        border: 1px solid #dadce0;
-        border-radius: 8px;
-        background: white;
-        display: flex;
-        align-items: center; }
-        .header .top_panel .buttons__profile_button .institution_pic {
-          height: 32px;
-          width: 78px;
-          margin-left: 7px; }
-        .header .top_panel .buttons__profile_button .profile_pic {
-          height: 32px;
-          width: 32px;
-          border-radius: 100%;
-          margin-left: 8px; }
     @media (max-width: 1260px) {
       .header .top_panel {
         /* This block only applies to viewports <= breakpoint wide... */ }
@@ -138,5 +34,92 @@ button:hover {
         /* This block only applies to viewports >= breakpoint wide... */ }
         .header .top_panel__search_bar {
           width: 722px; } }
+
+.logo_section {
+  display: flex;
+  padding-left: 8px;
+  width: var(--left_menu_width);
+  align-items: center; }
+  .logo_section .menu_hider {
+    margin-left: 4px;
+    background: url("https://cdn2.iconfinder.com/data/icons/clean-minimal-set/16/open-menu-01-512.png") no-repeat center;
+    background-size: 20px 16px;
+    border: 0;
+    height: 48px;
+    width: 48px;
+    border-radius: 100%; }
+    .logo_section .menu_hider:hover {
+      background-color: #ededed; }
+  .logo_section .logo {
+    margin-left: 4px;
+    height: 40px; }
+
+.search_bar {
+  background-color: #f5f5f5;
+  height: 48px;
+  width: 722px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 5px 5px 5px 7px;
+  border-radius: 3px; }
+  .search_bar__lupa, .search_bar__clear, .search_bar__extend {
+    border: 0;
+    height: 38px;
+    width: 38px;
+    background-size: 20px 20px;
+    border-radius: 100%; }
+    .search_bar__lupa:active, .search_bar__clear:active, .search_bar__extend:active {
+      background-color: #dadada; }
+  .search_bar__lupa {
+    background: url("../images/lupa.png") no-repeat center; }
+  .search_bar__input {
+    border: 0;
+    background-color: transparent;
+    padding-left: 8px;
+    padding-top: 2px;
+    color: gray;
+    font: normal 16px Roboto, sans-serif;
+    width: calc(100% - 38px * 3 - 4px); }
+  .search_bar__extend {
+    background: url("../images/dropdown.png") no-repeat center; }
+
+.buttons {
+  display: flex;
+  align-items: center;
+  margin-right: 12px; }
+  .buttons__apps_button {
+    background: url("https://image.flaticon.com/icons/svg/56/56844.svg") no-repeat center;
+    background-size: 16px 16px;
+    margin-right: 8px; }
+  .buttons__notification_button {
+    background: url("../images/bell.png") no-repeat center;
+    background-size: 24px 24px;
+    margin-right: 16px; }
+  .buttons__apps_button, .buttons__notification_button {
+    width: 40px;
+    height: 40px;
+    border: 0;
+    border-radius: 100%; }
+    .buttons__apps_button:active, .buttons__notification_button:active {
+      background-color: #dadada; }
+  .buttons__profile_button {
+    width: 134px;
+    height: 48px;
+    border: 1px solid #dadce0;
+    border-radius: 8px;
+    display: flex;
+    align-items: center; }
+    .buttons__profile_button .institution_pic, .buttons__profile_button .profile_pic {
+      height: 32px;
+      width: 78px;
+      margin-left: 7px; }
+    .buttons__profile_button .profile_pic {
+      width: 32px;
+      border-radius: 100%;
+      margin-left: 8px; }
+
+:root {
+  --left_menu_width: 256px; }
 
 /*# sourceMappingURL=main.css.map */
