@@ -1,0 +1,37 @@
+.header_btn{
+    display: flex;
+    border: none;
+    background-color: inherit;
+    cursor: pointer;
+    color: white;
+    padding: 4px 10px;
+    font-size: 70%;
+    align-items: center;
+    font-weight: bold;
+}
+
+.header_btn1{
+    align-self: center;
+    overflow: hidden;
+}
+.header_prof_pic{
+    height: 24px;
+    width: 24px;
+    margin-right: 5px;
+}
+
+.header_btn:hover{
+    background-color: rgba(0, 0, 0, .1);
+}
+
+.search_icon{
+    height:16px;
+    width:24px;
+    overflow: hidden;
+    margin-left: 10px;
+}
+
+.search_icon img{
+    width: 24px;
+    margin: -1109.1093px 0 0 0;
+}
