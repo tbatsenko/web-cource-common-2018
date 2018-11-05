@@ -1,0 +1,20 @@
+@font-face {
+    font-family: AvenirNext-Bold; /* Имя шрифта */
+    src: url("AvenirNext-Bold.ttf"); /* Путь к файлу со шрифтом */
+}
+
+
+@font-face {
+    font-family: AvenirNext-Regular;/* Имя шрифта */
+    src: url("AvenirNext-Regular.ttf"); /* Путь к файлу со шрифтом */
+}
+
+@font-face {
+    font-family: AvenirNext-Italic; /* Имя шрифта */
+    src: url("AvenirNext-Italic.ttf"); /* Путь к файлу со шрифтом */
+}
+
+@font-face {
+    font-family: AvenirNext-BoldItalic; /* Имя шрифта */
+    src: url("AvenirNext-BoldItalic.ttf"); /* Путь к файлу со шрифтом */
+}

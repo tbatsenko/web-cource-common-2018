@@ -1,0 +1,47 @@
+@import "before_item";
+
+%button-before{
+  @extend %before-item;
+  height: 18px;
+  width: 18px;
+  margin-right: 5px;
+  bottom: 2px;
+}
+
+.post-buttons{
+  display: flex;
+  justify-items: stretch;
+  align-items: stretch;
+  height: 35px;
+
+  &__button{
+    cursor: pointer;
+    height: 100%;
+    border: none;
+    width: 300px;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    background: none;
+  }
+  &__button:hover{
+    background: #f5f6f7;
+  }
+  &__text{
+    font-size: 14px;
+    color: #616770;
+    font-weight: 600;
+  }
+  &__text_before1:before{
+    @extend %button-before;
+    background: url("https://static.xx.fbcdn.net/rsrc.php/v3/yf/r/palWVhMO67o.png") -389px -245px;
+  }
+  &__text_before2:before{
+    @extend %button-before;
+    background: url("https://static.xx.fbcdn.net/rsrc.php/v3/yl/r/xxqRJkcZ0ly.png") -19px -198px;
+  }
+  &__text_before3:before{
+    @extend %button-before;
+    background: url("https://static.xx.fbcdn.net/rsrc.php/v3/yl/r/xxqRJkcZ0ly.png") 0 -293px;
+  }
+}

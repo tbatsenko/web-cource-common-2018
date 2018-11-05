@@ -1,0 +1,80 @@
+@import "base";
+
+.message-group {
+  margin-bottom: 8px;
+  position: relative;
+
+  &--friend {
+    .message-group__text {
+      margin-left: 35px;
+      background-color: $chat-box__bg-color__secondary;
+      float: left;
+
+      &:first-of-type:not(:last-of-type) {
+        border-radius: 14px 14px 14px 0;
+      }
+
+      &:last-of-type:not(:first-of-type) {
+        border-radius: 0 14px 14px 14px;
+      }
+    }
+
+    // bad fix but i do not know how to do better ((
+    .message-group__date + .message-group__user-pic {
+      top: 19px;
+    }
+  }
+
+  &--me {
+    .message-group__text {
+      background-color: $chat-box__bg-color;
+      color: $chat-box__font-color_active;
+      float: right;
+
+      &:first-of-type:not(:last-of-type) {
+        border-radius: 14px 14px 0 14px;
+      }
+
+      &:last-of-type:not(:first-of-type) {
+        border-radius: 14px 0 14px 14px;
+      }
+    }
+  }
+
+  &__user-pic {
+    width: 28px;
+    height: 28px;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  &__text {
+    text-align: left;
+    margin-bottom: 2px;
+    padding: 6px 15px;
+    max-width: 175px;
+    line-height: 20px;
+    min-height: 28px;
+    box-sizing: border-box;
+    vertical-align: middle;
+    font-family: $chat-box__font-family;
+    font-size: 12px;
+    color: $chat-box__font-color__nonactive;
+    border-radius: 14px;
+    clear: both;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &__date {
+    font-size: 10px;
+    font-weight: bold;
+    color: #828282;
+    text-align: center;
+    margin-bottom: 7px;
+    display: block;
+  }
+}

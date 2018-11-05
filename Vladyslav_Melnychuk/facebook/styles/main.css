@@ -1,0 +1,209 @@
+html body {
+  margin: 0;
+  padding: 0;
+  font-family: Helvetica, Arial, sans-serif;
+  background-color: #e9ebee;
+}
+
+.header {
+  box-sizing: border-box;
+  /*position: fixed;*/
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  height: 42px;
+  border-bottom: 1px solid #29487d;
+  background-color: #4267b2;
+}
+
+.logo-img {
+  display: inline-block;
+  background: url("https://static.xx.fbcdn.net/rsrc.php/v3/yF/r/1c0gE0MbEo8.png");
+  background-size: cover;
+  width: 24px;
+  height: 24px;
+  padding: 0;
+  margin: 0 5px 0 -1px;
+  vertical-align: middle;
+  /*vertical-align: top;*/
+}
+
+.search-nav {
+  width: 1012px;
+  height: inherit;
+  margin: auto;
+  line-height: 40px;
+}
+
+.search-nav input {
+  width: 393px;
+  height: 24px;
+  display: inline-block;
+  vertical-align: middle;
+  border-radius: 2px 0 0 2px;
+  border: none;
+  padding: 0 0 0 5px;
+  background: #f5f6f7;
+}
+
+.search-button {
+  box-sizing: border-box;
+  display: inline-block;
+  background-size: cover;
+  /*width: 14px;*/
+  height: 24px;
+  padding: 0 23px;
+  border-radius: 0 2px 2px 0;
+  border: none;
+  color: transparent;
+  vertical-align: middle;
+}
+
+.search-ico {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  padding: 0 16px;
+  background: url("https://static.xx.fbcdn.net/rsrc.php/v3/yF/r/1c0gE0MbEo8.png") 0 22px;
+  background-size: 16px 16px;
+}
+
+.main-nav {
+  display: inline-block;
+  float: right;
+  height: inherit;
+  line-height: 40px;
+  color: #FFFFFF;
+  font-weight: 700;
+  font-size: 12px;
+}
+
+.main-nav li:hover {
+  background: rgba(0, 0, 0, .1);
+  border-radius: 3px;
+}
+
+.main-nav button {
+  padding: 0;
+  margin: 0;
+  background: none;
+  border: none;
+  color: inherit;
+  font-weight: inherit;
+  font-size: inherit;
+}
+
+.nav-list {
+  padding: 0;
+  display: inline-block;
+  line-height: 40px;
+  vertical-align: top;
+  margin: 0 auto;
+  text-align: center;
+
+}
+
+.nav-list li {
+  display: inherit;
+}
+
+.main-nav-out li {
+  top: 7px;
+  position: relative;
+  display: inline-block;
+  width: 33px;
+  height: 27px;
+  padding: 0 12px 1px 12px;
+  margin: auto 0;
+}
+
+.local-nav {
+  display: inline-block;
+}
+
+.local-nav li {
+  width: 36px;
+  height: 32px;
+  margin: 0;
+  padding: 0;
+}
+
+.local-nav button {
+  width: 24px;
+  height: 24px;
+  padding: 4px;
+  color: transparent;
+  border-radius: 0 2px 2px 0;
+  opacity: .5;
+}
+
+.menu-item a, .menu-item button {
+  position: relative;
+  bottom: 6px;
+}
+
+.ico:before {
+  content: "";
+  height: 21px;
+  width: 22px;
+  position: absolute;
+  top: 10px;
+}
+
+.friends:before {
+  background: url("https://static.xx.fbcdn.net/rsrc.php/v3/yF/r/1c0gE0MbEo8.png") 0 -262px no-repeat;
+  background-size: 24px;
+}
+
+.msg:before {
+  background: url("https://static.xx.fbcdn.net/rsrc.php/v3/yF/r/1c0gE0MbEo8.png") 0 -34px no-repeat;
+  background-size: 24px;
+}
+
+.notification:before {
+  background: url("https://static.xx.fbcdn.net/rsrc.php/v3/yF/r/1c0gE0MbEo8.png") 0 -79px no-repeat;
+  background-size: 25px;
+}
+
+main {
+  margin: auto auto auto auto;
+  width: 1012px;
+  height: 3000px;
+  padding-top: 12px;
+  display: block;
+}
+
+.post-section-box {
+  border: 1px solid #dddfe2;
+  border-radius: 3px;
+  width: 500px;
+  vertical-align: top;
+  display: inline-block;
+}
+
+.content-nav__ul li {
+
+}
+
+.content-creation {
+  display: inline-block;
+  /*padding-top: 12px;*/
+  width: 308px;
+  height: 813px;
+}
+
+.content-creation-box {
+  width: 284px;
+  padding: 12px;
+  background: #FFFFFF;
+}
+
+.events {
+  height: 16px;
+  padding: 12px;
+  margin-top: 12px;
+}
+
+.friend-requests {
+  margin-top: 12px;
+}

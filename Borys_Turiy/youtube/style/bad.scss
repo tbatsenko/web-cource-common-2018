@@ -1,0 +1,91 @@
+body {
+  background-color: #fffffa;
+}
+
+.youtube-homepage-link__logo {
+  display: block;
+  width: 80px;
+  height: 24px;
+}
+
+.youtube-header {
+  background: #FFFFFF;
+  position: fixed;
+  width: 100%;
+}
+
+.site-search {
+  margin-left: 30%;
+}
+
+.open-menu-button {
+  float: left;
+}
+
+.youtube-homepage-link {
+  float: left;
+}
+
+.site-search {
+  float: left;
+  clear: right;
+}
+
+.user-options-menu {
+  float: right;
+  padding-right: 6%;
+}
+
+.youtube-video {
+  float: left;
+  margin-top: 6%;
+  padding-top: 24px;
+  padding-left: 24px;
+  margin-left: 24px;
+}
+
+.suggested {
+  float: right;
+  margin-top: 6%;
+  padding-top: 24px;
+  padding-right: 24px;
+  background: #fafafa;
+}
+
+.suggested-video {
+  display: block;
+  margin-bottom: 8px;
+}
+
+.next-video__preview {
+  display: block;
+  height: 94px;
+  float: left;
+}
+
+.user-options-menu__button--up {
+  background: url("/images/menu_button.png");
+
+}
+.user-options-menu__button--app{
+  background: url("/images/apps_button.png");
+}
+.user-options-menu__button--mess{
+  background: url("/images/message_button.jpg");
+}
+.user-options-menu__button--notifications{
+  background: url("/images/notifications_button.png");
+}
+.user-options-menu__button--profile{
+  background: url("/images/profile_photo.jpg");
+}
+
+.user-options-menu__button {
+  height: 100px;
+  width: 100px;
+  margin: 8px;
+  border: 1px solid black;
+  padding:8px;
+  background: center;
+  background-size: cover;
+}

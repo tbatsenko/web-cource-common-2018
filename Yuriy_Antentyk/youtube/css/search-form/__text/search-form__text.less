@@ -1,0 +1,21 @@
+@import "../search-form.less";
+@import "../../colors.less";
+@import "../../fonts.less";
+
+.search-form__text{
+    display: block;
+    height: inherit;
+    box-sizing: inherit;
+    border: @search-form-border;
+    border-top-left-radius: @search-form-border-raduis;
+    border-bottom-left-radius: @search-form-border-raduis;
+    padding-left: 10px;
+    font-size: 1.1rem;
+    font-family: @youtube-font;
+    color: @youtube-black;
+    width: 580px;
+}
+
+.search-form__text::placeholder{
+    color: @youtube-dark-gray;
+}

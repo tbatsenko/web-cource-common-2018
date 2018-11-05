@@ -1,0 +1,45 @@
+@import "base";
+@import "navigation";
+@import "header";
+@import "logo";
+@import "search";
+@import "user-post";
+@import "before_item";
+@import "friends";
+@import "profile_feed";
+@import "user_nav";
+@import "post";
+@import "reaction";
+@import "right_panel";
+
+.main-page {
+  margin: auto;
+  position: relative;
+  right: 50px;
+  height: auto;
+  width: 1100px;
+  top: 40px;
+}
+
+.profile-feed{
+  &_main-page{
+    margin-top: 15px;
+    left: 195px;
+  }
+}
+
+.user-post{
+  &__option-button-text_before-main:before{
+    @extend %ps__option-button-text_before;
+    background: url("https://static.xx.fbcdn.net/rsrc.php/v3/yf/r/35hEpt4eqy1.png") 0 -1080px no-repeat;
+  }
+}
+
+.left-navigation{
+  position: fixed;
+  margin-top: 15px;
+  width: 180px;
+  height: auto;
+  display: inline-block;
+}
+

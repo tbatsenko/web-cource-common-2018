@@ -1,74 +1,88 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Myroslava Romaniuk</title>
-    <link rel="stylesheet" type="text/css" href="facebook.css">
-</head>
 
+<head>
+  <meta charset="UTF-8">
+  <title>Facebook - Myroslava Romaniuk</title>
+  <link rel="stylesheet" type="text/css" href="style/header.css">
+  <link rel="stylesheet" type="text/css" href="style/logo.css">
+  <link rel="stylesheet" type="text/css" href="style/navigation.css">
+  <link rel="stylesheet" type="text/css" href="style/search.css">
+  <link rel="stylesheet" type="text/css" href="style/profile.css">
+  <link rel="stylesheet" type="text/css" href="style/common.css">
+  <link rel="stylesheet" type="text/css" href="style/user.css">
+  <link rel="stylesheet" type="text/css" href="style/friends.css">
+  <link rel="stylesheet" type="text/css" href="style/intro.css">
+  <link rel="stylesheet" type="text/css" href="style/main.css">
+</head>
 <body>
-    <header class="header">
-      <nav class="menu">
-      <a href="#"><img src="facebook_l.png"></a>
-      <form class="search">
-          <input type="text" name="search" placeholder="Myroslava Romaniuk">
-          <input type="image" src="search.png"/>
-      </form>
-        <ul>
-          <li><a href="https://www.facebook.com/myroslavarm">Myroslava</a></li>
-          <li><a href="https://www.facebook.com/">accueil</a></li>
-          <li><a href="#">créer</a></li>
-          <li class="navigation">
-            <a href="#">invitations</a>
-            <a href="#">messages</a>
-            <a href="#">notications</a>
-          </li>
-        </ul>
-      </nav>
-    </header>
-    <main>
-        <section class="user">
-          <img class="profile" alt="votre photo de profil,
-          L’image contient peut-être : 1 personne, sourit,
-          ciel et plein air" src="profile.jpg">
-          <h3>
-            <a href="https://www.facebook.com/myroslavarm"><span class="name">Myroslava Romaniuk</span></a>
-          </h3>
-          <nav>
-            <ul class="profile_navigation">
-              <li><a href="https://www.facebook.com/myroslavarm?lst=100015726882731%3A100015726882731%3A1540742750">
-                journal</a></li>
-              <li><a href="https://www.facebook.com/myroslavarm/about?lst=100015726882731%3A100015726882731%3A1540742750">
-                à propos</a></li>
-              <li><a href="https://www.facebook.com/myroslavarm/friends?lst=100015726882731%3A100015726882731%3A1540742750&source_ref=pb_friends_tl">
-                amis</a></li>
-              <li><a href="https://www.facebook.com/myroslavarm/photos?lst=100015726882731%3A100015726882731%3A1540742750&source_ref=pb_friends_tl">
-                photos</a></li>
-              <li><a href="https://www.facebook.com/myroslavarm/archive?lst=100015726882731%3A100015726882731%3A1540742750&source_ref=pb_friends_tl">
-                archive</a></li>
-              <li><a href="#">plus</a></li>
-            </ul>
-          </nav>
+  <header class="header">
+    <span class="header__wrapper">
+      <span class="header__left-placeholder">
+        <a class="logo" href="https://www.facebook.com/"><img class="logo__image" src="facebook_logo.png" /></a>
+
+        <form class="search">
+          <input class="search__query" type="text" name="search" placeholder="Myroslava Romaniuk">
+          <button class="search__submit" aria-label="search"></button>
+        </form>
+      </span>
+
+      <span class="header__right-placeholder">
+        <a class="profile" href="https://www.facebook.com/myroslavarm">
+          <img class="profile__avatar" src="profile.jpg" /> Myroslava</a>
+        <nav class="navigation">
+          <a class="navigation__item" href="https://www.facebook.com/">accueil</a>
+          <a class="navigation__item" href="#">créer</a>
+          <a href="#"><img class="navigation__item navigation__item--icon_people" src="people.png" alt="invitations" /></a>
+          <a href="#"><img class="navigation__item navigation__item--icon_messages" src="messages.png" alt="messages" /></a>
+          <a href="#"><img class="navigation__item navigation__item--icon_bell" src="notifications.png" alt="notications" /></a>
+        </nav>
+      </span>
+    </span>
+  </header>
+  <main>
+    <section class="user">
+        <section class="user__profile">
+          <img class="user__photo" alt="votre photo de profil,
+            L’image contient peut-être : 1 personne, sourit,
+            ciel et plein air"
+            src="profile.jpg">
+          <a href="https://www.facebook.com/myroslavarm">
+            <span class="user__name">Myroslava Romaniuk</span></a>
         </section>
-        <section class="intro">
-            <h4>intro</h4>
-            <a href="#">ajouter une bio</a>
-            <ul>
-              <a href=#><li>Auparavant Software Engineering Intern à Inria</li></a>
-              <a href=#><li>Auparavant Google Summer of Code Student à Pharo-Project</li></a>
-              <a href=#><li>Étudie Computer science à Факультет прикладних наук УКУ / APPS UCU</li></a>
-              <a href=#><li>Habite à Lviv</li></a>
-              <a href=#><li>Suivie par 89 personnes</li></a>
-            </ul>
-        </section>
-        <section class="friends">
-            <h4>amis · 479</h4>
-            <figure>
-                <img class="friends" alt="Yaroslav Prytula" src="friend1.jpg">
-                <img class="friends" alt="Oles Dobosevych" src="friend2.jpg">
-                <img class="friends" alt="Oleksii Molchanovskyi" src="friend3.jpg">
-            </figure>
-        </section>
-    </main>
+      <span class="user__navigation-wrapper">
+        <a href="#"></a><a href="#"></a><a href="#"></a>
+        <a href="https://www.facebook.com/myroslavarm?lst=100015726882731%3A100015726882731%3A1540742750">
+          journal</a>
+        <a href="https://www.facebook.com/myroslavarm/about?lst=100015726882731%3A100015726882731%3A1540742750">
+          à propos</a>
+        <a href="https://www.facebook.com/myroslavarm/friends?lst=100015726882731%3A100015726882731%3A1540742750&source_ref=pb_friends_tl">
+          amis</a>
+        <a href="https://www.facebook.com/myroslavarm/photos?lst=100015726882731%3A100015726882731%3A1540742750&source_ref=pb_friends_tl">
+          photos</a>
+        <a href="https://www.facebook.com/myroslavarm/archive?lst=100015726882731%3A100015726882731%3A1540742750&source_ref=pb_friends_tl">
+          archive</a>
+        <a href="#">plus</a>
+      </span>
+    </section>
+    <section class="intro">
+      <h4>intro</h4>
+      <ul>
+        <li><a href=#>Auparavant Software Engineering Intern à Inria</a></li>
+        <li><a href=#>Auparavant Google Summer of Code Student à Pharo-Project</a></li>
+        <li><a href=#>Étudie Computer science à Факультет прикладних наук УКУ / APPS UCU</a></li>
+        <li><a href=#>Habite à Lviv</a></li>
+        <li><a href=#>Suivie par 89 personnes</a></li>
+      </ul>
+    </section>
+    <section class="friends">
+      <h4>amis · 479</h4>
+      <figure>
+        <img class="friends__pictures" alt="Yaroslav Prytula" src="friend1.jpg">
+        <img class="friends__pictures" alt="Oles Dobosevych" src="friend2.jpg">
+        <img class="friends__pictures" alt="Oleksii Molchanovskyi" src="friend3.jpg">
+      </figure>
+    </section>
+  </main>
 </body>
 </html>

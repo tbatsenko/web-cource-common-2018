@@ -1,0 +1,18 @@
+{
+  "name": "Jane Doe",
+  "occupation": "Professional Model",
+  "age": "28",
+  "skills": ["Passionate", "Independent", "Punctual", "Witty"],
+  "quote": "Living a healthy and organized life is what I want value the most",
+  "about": "  <p>Jane is a Professional Model who lives in New York. She has been modeling for about 10 years at different companies like GAP, Levi’s, Banana Republic and Theory. It was when she was around 21 when she was contacted by the agency. </p> <p>She always tries to eat healthy by keeping a fixed diet with balance between vegetables, fruits and meat. Although she doesn’t have any specific dietary restrictions, she tries to stay away from fat food products, sugary drinks and salt. Jane exercises at the gym every morning as well.</p>",
+  "goals": [
+    "Always stay up-to-date and follow on her dietary restrictions and schedule",
+    "Know the exact ingredients of the food that she’s purchasing at the food market",
+    "Store quick and easy food products in her refrigerator every weekend"
+  ],
+  "frustrations": [
+    "Not all restaruants and markets provide exact ingredients",
+    "She has to travel outside of New York many times a year",
+    "Sometimes, she’s too busy to consume food at the right time"
+  ]
+}

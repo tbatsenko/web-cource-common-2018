@@ -1,0 +1,83 @@
+.message {
+
+  display: flex;
+  align-items: flex-start;
+
+  &__user-ico {
+    display: inline-block;
+    background: url("https://res.cloudinary.com/dtpb9pmmm/image/upload/c_thumb,h_28,q_94,r_360,w_28,g_face/a_0/v1539595308/edc67035ae48b8164b2ea8035b0ba4a0.png");
+    width: 28px;
+    height: 28px;
+    margin-left: 16px;
+  }
+
+  &--last {
+    margin-bottom: 16px;
+  }
+
+  &--top {
+    margin-top: 18px;
+  }
+
+  &--outbox {
+    display: flex;
+    justify-content: flex-end;
+    align-content: flex-end;
+  }
+
+  &__text-wrapper {
+    display: inline-block;
+    clear: right;
+    //margin-top: 18px;
+    max-width: 70%;
+
+    &--mult-out p:first-child{
+      border-bottom-right-radius: 0;
+    }
+
+    &--mult-out p:last-child {
+      border-top-right-radius: 0;
+    }
+
+    &--mult-in p:first-child {
+      border-bottom-left-radius: 0;
+    }
+
+    &--mult-in p:last-child {
+      border-top-left-radius: 0;
+    }
+
+  }
+
+  &__text {
+    margin: 0 0 1px 0;
+    padding: 5px 12px 6px 12px;
+    display: inline-block;
+    font-size: 12px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: left;
+    border-radius: 100px;
+
+    //max-width: 60%;
+
+    &--inbox {
+      color: #353535;
+      margin-left: 8px;
+      background-color: #f3f3f3;
+    }
+
+    &--outbox {
+      float: right;
+      color: #FFFFFF;
+      background: #2979ff;
+      margin-right: 16px;
+    }
+  }
+
+  //&--i
+
+}

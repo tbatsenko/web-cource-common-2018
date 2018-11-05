@@ -1,5 +1,13 @@
+.container__aside--left {
+    float: left;
+    vertical-align: top;
+    margin-left: 150px;
+    text-align: left;
+}
+
 #left-side-menu {
     float: left;
+    vertical-align: top;
     margin-left: 150px;
 }
 

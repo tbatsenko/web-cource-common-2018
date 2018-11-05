@@ -1,0 +1,50 @@
+.user{
+    display: inline-table;
+    height: 350px;
+    width: 850px;
+}
+.user__navigation-wrapper{
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 40px;
+    background-color: #fff;
+    border: 1px solid rgba(0, 0, 0, .2);
+    border-top: none;
+}
+.user__navigation-wrapper a{
+    vertical-align: middle;
+    margin-right: 5px;
+    padding: 0 10px 0;
+    border-left: 1px solid rgba(0, 0, 0, .1);
+    color: rgb(0, 0, 238);
+    text-decoration: inherit;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 3;
+}
+.user__profile{
+    height: 300px;
+    background: url("../cover.jpg") no-repeat;
+    border: 1px solid rgba(0, 0, 0, .2);
+    border-left: 1px;
+    background-size: auto auto;
+}
+.user__photo{
+    height: 160px;
+    width: 160px;
+    object-fit: contain;
+    border-radius: 100%;
+    border: 4px solid #fff;
+    margin-top: 155px;
+    margin-left: 20px;
+}
+.user__name{
+    color: rgb(255, 255, 255);
+    font-size: 24px;
+    font-weight: 500;
+    margin-left: 15px;
+    margin-top: 250px;
+    position: absolute;  
+}

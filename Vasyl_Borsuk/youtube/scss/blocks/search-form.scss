@@ -1,0 +1,38 @@
+.search-form {
+  display: flex;
+  flex-direction: row;
+  border: 1px solid #ccc;
+  border-radius: 2px;
+  width: 540px;
+  height: 30px;
+  margin: auto;
+
+  $button-width: 65px;
+
+  &__text-input {
+    display: flex;
+    height: 100%;
+    width: calc(100% - #{$button-width});
+    margin: 0;
+    padding: 0 6px 0 6px;
+    box-sizing: border-box;
+    border: none;
+  }
+
+  &__button {
+    display: flex;
+    height: 100%;
+    width: $button-width;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f8f8;
+    border: none;
+    border-left: 1px solid #ccc;
+
+    &:hover {
+      background-color: #f3f3f3;
+    }
+  }
+}
