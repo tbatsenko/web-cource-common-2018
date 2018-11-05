@@ -1,4 +1,4 @@
-.container-for-cv-grid{
+.container-for-cv-grid {
   padding: 0;
   margin: 0;
   font-size: 10px;
@@ -6,7 +6,7 @@
   grid-column-gap: 50px;
 }
 
-.article_titles{
+.article_titles {
   text-transform: uppercase;
   font-family: AvenirNext-Bold, sans-serif;
   font-size: 23px;
@@ -21,8 +21,9 @@
   background-image: linear-gradient(to bottom, rgba(255, 253, 248, 0.68) 0%, rgba(151, 111, 17, 0.68) 100%), url(../img/profile_photo.jpg);
 }
 
-.quote{
+.quote {
   font-family: AvenirNext-MediumItalic, sans-serif;
+  text-shadow: 0 1px 4px rgba(72, 72, 72, 0.5);
   font-style: italic;
   width: 300px;
   position: absolute;
@@ -34,7 +35,8 @@
   text-align: center;
 }
 
-.all-user-info{
+.all-user-info {
+  text-shadow: 0 1px 4px rgba(72, 72, 72, 0.5);
   position: absolute;
   top: 750px;
   margin-left: 50px;
@@ -42,7 +44,7 @@
   font-size: 22px;
 }
 
-.user-info{
+.user-info {
   display: flex;
   justify-content: space-between;
   width: 300px;
@@ -58,17 +60,17 @@
   font-family: AvenirNext, sans-serif;
 }
 
-article p{
+article p {
   font-family: Montserrat, serif;
   font-size: 20px;
 }
 
 article ul {
   padding: 0;
-  margin-left:20px;
+  margin-left: 20px;
 }
 
-article ul li{
+article ul li {
   color: #c7ac6d;
   list-style-type: disc;
   font-family: AvenirNext-Regular, serif;
@@ -87,9 +89,8 @@ article ul li p {
   margin-left: 30px;
 }
 
-
-.user-persona{
-  &__tag{
+.user-persona {
+  &__tag {
     margin-top: 19px;
   }
 
@@ -102,7 +103,7 @@ article ul li p {
 
   }
 
-  &__tag-list{
+  &__tag-list {
     padding: 0;
     margin-left: 0;
     margin-top: 0;
@@ -114,14 +115,14 @@ article ul li p {
     font-size: 19px;
   }
 
-  &__name{
+  &__name {
     margin-top: 39px;
-    font-size:90px;
+    font-size: 90px;
     color: #181818;
     margin-bottom: 0;
   }
 
-  &__label{
+  &__label {
     margin-bottom: 0;
     float: right;
     color: #4c4c4c;
@@ -130,8 +131,7 @@ article ul li p {
 
 }
 
-
-.article-preferences h3{
+.article-preferences h3 {
   margin-bottom: 0;
 }
 
@@ -153,6 +153,7 @@ article ul li p {
     justify-content: space-between;
   }
 }
-.dots-table{
+
+.dots-table {
   padding-right: 20px;
 }
