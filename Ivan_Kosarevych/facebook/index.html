@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport">
+    <title>Facebook</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/top-menu.css">
+    <link rel="stylesheet" href="styles/left-bar.css">
+    <link rel="stylesheet" href="styles/feed.css">
+    <link rel="stylesheet" href="styles/create-post.css">
+</head>
+<body>
+<header id="top-menu" class="top-menu">
+    <div class="main-navigation middle-align">
+        <section class="top-menu__left-block">
+            <a href="https://www.facebook.com/" id="fb_logo" class="middle-align"><span class="hidden">Facebook</span></a><!--
+        --><form action="" class=top-menu__main-search><!--
+            --><input type="text" id="search" placeholder="Search"><!--
+            --><button id="search-button" class="middle-align" type="submit"><span id="search-button-img"></span></button>
+            </form>
+        </section>
+        <nav class="top-menu__right-block">
+                    <a id="name" class="change-bg-on-pointer not-as-link vertical-after"
+                       href="https://www.facebook.com/profile.php?id=100009815356701">
+                        <img id="profile-picture" class="round-profile-picture"
+                             src="https://scontent.flwo1-1.fna.fbcdn.net/v/t1.0-1/p24x24/40510012_719582795045559_686510132393148416_n.jpg?_nc_cat=102&oh=22f68097a08215e4e0a5325390ea5f03&oe=5C199F9C"
+                             alt="">
+                        <span class="top-menu__right-block--item-text">Ivan</span>
+                    </a>
+                    <a id="home" class="not-as-link change-bg-on-pointer vertical-after"
+                       href="https://www.facebook.com/?ref=tn_tnmn"><span
+                            class="top-menu__right-block--item-text">Home</span></a>
+                    <button id="create" class="astext vertical-after change-bg-on-pointer"><span
+                            class="top-menu__right-block--item-text">Create</span>
+                    </button>
+            <button id="friends-button" class="not-as-button top-menu__right-block--icons"><span class="hidden">Friends</span></button>
+            <button id="messages-button" class="not-as-button top-menu__right-block--icons"><span class="hidden">Messages</span></button>
+            <button id="notifications-button" class="not-as-button top-menu__right-block--icons"><span class="hidden">Notifications</span></button>
+            <button id="help-button" class="not-as-button top-menu__right-block--icons"><span class="hidden">Help</span></button>
+            <button id="options-button" class="not-as-button top-menu__right-block--icons"><span class="hidden">Options</span></button>
+        </nav>
+    </div>
+</header>
+<main>
+    <nav class="left-bar">
+        <a id="left-bar-user" class="not-as-link left-bar-element"
+           href="https://www.facebook.com/profile.php?id=100009815356701&ref=bookmarks">
+            <figure id="left-bar-user-ava" class="clear-figure round-profile-picture"></figure>
+            <span class="left-bar-text">Ivan Kosarevych</span>
+        </a>
+        <ul id="left-bar-msg-news" class="not-as-list">
+            <li class="left-bar-element">
+                <a class="not-as-link" href="https://www.facebook.com/?sk=nf">
+                    <figure id="left-bar-news" class="left-bar__common-icons clear-figure"></figure>
+                    <span class="left-bar-text">News Feed</span></a>
+            </li>
+            <li class="left-bar-element">
+                <a class="not-as-link" href="https://www.facebook.com/messages/t/">
+                    <figure id="left-bar-messages" class="left-bar__common-icons clear-figure"></figure>
+                    <span class="left-bar-text">Messenger</span>
+                </a>
+            </li>
+        </ul>
+        <div>
+            <h5 class="left-bar__headers">Shortcuts</h5>
+            <ul id="left-bar-shortcuts" class="not-as-list">
+                <li id="left-bar-shortcuts-zbirka" class="left-bar-element">
+                    <a class="not-as-link" href="https://www.facebook.com/groups/285260648277508/?ref=bookmarks">
+                        <figure id="zbirka" class="left-bar__common-icons clear-figure"></figure>
+                        <span class="left-bar-text">Збірка на УКУ</span>
+                    </a>
+                </li>
+                <li class="left-bar-element">
+                    <a class="not-as-link" href="https://www.facebook.com/events/254826185257551/?ref=46">
+                        <figure id="aiconf" class="date-icons clear-figure"></figure>
+                        <span class="left-bar-text">AI Ukraine 2018</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div>
+            <h5 class="left-bar__headers">Explore</h5>
+            <ul id="" class="not-as-list">
+                <li class="left-bar-element">
+                    <a class="not-as-link" href="https://www.facebook.com/events?ref=46&action_history=null">
+                        <figure id="left-bar-events" class="date-icons clear-figure"></figure>
+                        <span class="left-bar-text">Events</span>
+                    </a>
+                </li>
+                <li class="left-bar-element">
+                    <a class="not-as-link" href="https://www.facebook.com/groups/?ref=bookmarks">
+                        <figure id="left-bar-groups" class="left-bar__common-icons clear-figure"></figure>
+                        <span class="left-bar-text">Groups</span>
+                    </a>
+                </li>
+                <li class="left-bar-element">
+                    <a class="not-as-link" href="https://www.facebook.com/pages/?category=liked&ref=bookmarks">
+                        <figure id="left-bar-pages" class="left-bar__common-icons clear-figure"></figure>
+                        <span class="left-bar-text">Pages</span>
+                    </a>
+                </li>
+                <li class="left-bar-element">
+                    <a class="not-as-link" href="https://www.facebook.com/bookmarks/lists/">
+                        <figure id="left-bar-friends" class="left-bar__common-icons clear-figure"></figure>
+                        <span class="left-bar-text">Friend lists</span>
+                    </a>
+                </li>
+                <li class="left-bar-element">
+                    <a class="not-as-link" href="https://www.facebook.com/fundraisers/">
+                        <figure id="left-bar-fundraisers" class="left-bar__common-icons clear-figure"></figure>
+                        <span class="left-bar-text">Fundraisers</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <div id="central-feed">
+        <form id="feed-create-post" class="main-feed-element">
+            <ul class="not-as-list list-display-inline feed__create-post--top-panel">
+                <li>
+                    <button class="not-as-button">
+                        <span id="compose-post-icon" class="feed__create-post--top-icons"></span>
+                        <span class="feed__create-post--text">Compose Post</span>
+                    </button>
+                </li>
+                <li>
+                    <button class="not-as-button">
+                        <span id="media-album-icon" class="feed__create-post--top-icons"></span>
+                        <span class="feed__create-post--text">Photo/Video Album</span>
+                    </button>
+                </li>
+                <li>
+                     <button class="not-as-button">
+                         <span id="live-video-icon" class="feed__create-post--top-icons"></span>
+                         <span class="feed__create-post--text">Live Video</span>
+                     </button>
+                </li>
+            </ul>
+            <section id="compose-post-area">
+                <a class="not-as-link" href="https://www.facebook.com/profile.php?id=100009815356701&fref=comp">
+                    <img class="round-profile-picture" src="https://scontent.flwo1-1.fna.fbcdn.net/v/t1.0-1/p40x40/40510012_719582795045559_686510132393148416_n.jpg?_nc_cat=102&_nc_ht=scontent.flwo1-1.fna&oh=b90ace27c7ac985c3fc2d608c58e7a5d&oe=5C7B4B85" alt="">
+                </a>
+                <textarea name="create-post" id="post-create-text-area" placeholder="What's on your mind, Ivan?" ></textarea>
+            </section>
+            <ul class="not-as-list list-display-inline">
+                <li>
+                    <span id="add-media-icon"></span>
+                    <button name="add-media-to-post" class="not-as-button"><span class="feed__create-post--text">Photo/Video</span></button>
+                </li>
+                <li>
+                    <span id="tag-friends-icon"></span>
+                    <button name="tag-friends-at-post" class="not-as-button"><span class="feed__create-post--text">Tag Friends</span></button>
+                </li>
+                <li>
+                    <span id="add-feeling-icon"></span>
+                    <button name="add-feeling-to-post" class="not-as-button"><span class="feed__create-post--text">Feeling/Activity</span></button>
+                </li>
+                <li>
+                    <button name="do-other-to-post" class="not-as-button"><span class="feed__create-post--text">Temp</span></button>
+                </li>
+            </ul>
+        </form>
+        <ul class="main-block__posts main-feed-element not-as-list">
+            <li>
+                <article class="feed-post">
+                    <header class="post-text">
+                        <a href="https://www.facebook.com/Sir-Tim-Berners-Lee-174851762937116/?ref=br_rs"><img id="feed-post-ava" src="https://res.cloudinary.com/djr1v3glw/image/upload/c_scale,w_40/v1540404401/sir-tim-berners-lee.jpg" alt=""></a>
+                        <address class="post-info">
+                            <a class="not-as-link" href="https://www.facebook.com/Sir-Tim-Berners-Lee-174851762937116/?ref=br_rs"><span class="feed-post__username-text">Sir Tim Berners-Lee</span></a>
+                            <p class="post-time"><time datetime="2018-10-24">1 min</time></p>
+                        </address>
+                    </header>
+                    <section class="post-content">
+                        <p class="post-text">The original idea of the web was that it should be a collaborative space where you can communicate through sharing information.</p>
+                        <img class="post-image"  src="https://res.cloudinary.com/djr1v3glw/image/upload/c_scale,w_500/v1540409858/world-wide-web.png" alt="WWW">
+                    </section>
+                    <footer>
+                        <form class="post-actions">
+                            <button class="not-as-button">Like</button>
+                            <button class="not-as-button">Comment</button>
+                            <button class="not-as-button">Share</button>
+                        </form>
+                    </footer>
+                </article>
+            </li>
+        </ul>
+    </div>
+
+</main>
+</body>
+</html>

@@ -106,9 +106,9 @@ header {
 
 
 
-/*.like img,*/
-/*.comment img,*/
-/*.share img {*/
+/*.like images,*/
+/*.comment images,*/
+/*.share images {*/
     /*!*display: inline-block;*!*/
     /*!*width: 18px;*!*/
     /*vertical-align: text-bottom;*/

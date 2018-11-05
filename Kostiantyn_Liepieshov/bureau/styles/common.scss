@@ -1,0 +1,20 @@
+@import "header/header";
+@import "content/top-banner";
+@import "main-content";
+
+:root {
+  --key-color: rgb(226, 0, 22);
+  --blue-color: rgb(6, 85, 128);
+  --link-underline: rgba(6, 85, 128, .1);
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  font-family: Bureausans, Arial, sans-serif;
+}
+
+.main-content, .header {
+  padding-left: 100px;
+  padding-right: 100px;
+}
