@@ -18,3 +18,10 @@ body{
 a {
     text-decoration: none;
 }
+
+.main{
+    align-items: center;
+    justify-content: space-between;;
+    width: 62em;
+    margin: auto;
+}

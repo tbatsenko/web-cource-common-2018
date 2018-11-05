@@ -1,0 +1,124 @@
+.cafe {
+  &__image {
+    flex-basis: 202px;
+    flex-grow: 1;
+
+    &_content {
+      width: 100%;
+    }
+  }
+  &__about {
+    margin-left: 18px;
+    flex-basis: 422px;
+    flex-grow: 2;
+  }
+  &__event {
+    font-size: 24px;
+    line-height: 27px;
+    margin-left: 20px;
+    flex-basis: 202px;
+    flex-grow: 1;
+    z-index: 1;
+  }
+
+  &__logo {
+    margin-bottom: 20px;
+    display: block;
+    width: 100%;
+    color: transparent;
+
+    &:after {
+      margin-top: -6%;
+      margin-bottom: -10%;
+      content: "";
+      display: block;
+      width: 100%;
+      background: url("https://bureau.ru/assets/images/spacers/coworkafe/logo.png");
+      background-size: contain;
+      padding-bottom: 29%;
+    }
+  }
+
+  &__schedule {
+    max-width: 310px;
+    margin-right: 18px;
+    font-size: 16px;
+    line-height: 18px;
+    font-weight: 100;
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    align-self: flex-start;
+  }
+
+  &__link {
+    color: #065580;
+    text-decoration: underline;
+    text-decoration-color: rgba(6, 85, 128, .1);
+    font-style: normal;
+  }
+
+  &__product {
+    max-width: 240px;
+    font-size: 16px;
+    line-height: 18px;
+    font-weight: 100;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    position: relative;
+    left: 200px;
+    padding-right: 28%;
+    min-width: 50%;
+  }
+}
+
+.product {
+  &__price {
+    margin-top: 2px;
+    font-size: 60px;
+    line-height: 1;
+  }
+  &__illustration {
+    color: transparent;
+    position: absolute;
+    top: -170px;
+    left: 170px;
+    width: 200px;
+    height: 295px;
+    background: url("https://bureau.ru/assets/images/spacers/coworkafe/caffe.png");
+    background-size: contain;
+  }
+}
+
+.event {
+  &__title {
+    font-weight: 700;
+  }
+
+  &__info {
+    margin-top: 7px;
+    font-size: 16px;
+    line-height: 18px;
+    font-weight: 100;
+  }
+}
+
+@media (max-width: 960px) {
+  .cafe__image {
+    flex-basis: 100%
+  }
+  .cafe__about {
+    margin-top: 20px;
+    flex-basis: 100%;
+    margin-left: 0;
+  }
+  .cafe__event {
+    margin-top: 20px;
+    margin-left: 0;
+    flex-basis: 100%
+  }
+  .cafe__product {
+    display: none;
+  }
+}

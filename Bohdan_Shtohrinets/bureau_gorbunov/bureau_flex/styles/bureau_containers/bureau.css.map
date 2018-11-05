@@ -1,0 +1,9 @@
+{
+  "version": 3,
+  "mappings": "AACE,kBAAY;EACV,OAAO,EAAE,aAAa;EACtB,SAAS,EAAE,MAAM;EACjB,MAAM,EAAE,MAAM;AAEhB,eAAS;EACP,OAAO,EAAE,IAAI;EACb,SAAS,EAAE,IAAI;EACf,eAAe,EAAE,aAAa;AAEhC,eAAS;EACP,OAAO,EAAE,IAAI;EACb,SAAS,EAAE,IAAI",
+  "sources": [
+    "bureau.scss"
+  ],
+  "names": [],
+  "file": "bureau.css"
+}

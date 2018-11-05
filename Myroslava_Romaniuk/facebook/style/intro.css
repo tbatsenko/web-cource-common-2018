@@ -1,4 +1,8 @@
-.intro{
-    margin-left: 80px;
-    position: relative;
+.intro a{
+    text-decoration: inherit;
+}
+.intro li{
+    list-style-position: outside;
+    list-style-type: none;
+    margin-bottom: 5px;
 }

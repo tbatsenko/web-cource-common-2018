@@ -1,0 +1,25 @@
+img {
+    max-width: 100%;
+}
+
+a {
+    color: black;
+}
+
+q,
+blockquote {
+    text-align: center;
+    font-style: italic;
+    color: #7b7b7b;
+}
+
+q,
+blockquote:before {
+    content: '"';
+}
+
+q,
+blockquote:after {
+    content: '"';
+}
+

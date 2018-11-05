@@ -1,0 +1,95 @@
+.header {
+  padding-top: 7px;
+  height: 46px;
+  display: flex;
+}
+.header__nav {
+  flex: auto;
+  margin-left: 15px;
+}
+.header__account-menu {
+  flex: 1;
+}
+
+.nav {
+  align-content: flex-start;
+}
+.nav__group {
+  margin-right: -18px;
+  display: inline-flex;
+  flex-direction: column;
+  height: 39px;
+}
+.nav__group .nav__link {
+  padding-right: 0;
+}
+.nav__link {
+  font: 15px Bureausans, Arial, sans-serif;
+  font-feature-settings: normal;
+  font-feature-settings: "kern" 1;
+  font-weight: 400;
+  text-decoration: none;
+  padding-right: 18px;
+  color: black;
+}
+.nav__link:hover {
+  color: var(--key-color);
+}
+.nav__link--in-group {
+  flex: 1;
+}
+.nav__link--lower {
+  color: var(--key-color);
+  margin-top: 5px;
+  flex: 1;
+}
+
+.account-menu {
+  text-align: right;
+}
+.account-menu__user-image {
+  margin-left: auto;
+  align-self: center;
+  width: 30px;
+  height: 30px;
+}
+.account-menu__user-image:hover {
+  fill: var(--key-color);
+}
+
+.top-banner__image {
+  width: 100%;
+}
+.top-banner__figure {
+  margin: 0;
+}
+.top-banner--is-link {
+  display: block;
+  color: var(--blue-color);
+  font-weight: 700;
+}
+.top-banner__caption {
+  font: 15px Bureausans, Arial, sans-serif;
+  font-feature-settings: normal;
+  font-weight: 400;
+  text-decoration: none;
+  color: black;
+}
+
+:root {
+  --key-color: rgb(226, 0, 22);
+  --blue-color: rgb(6, 85, 128);
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  font-family: Bureausans, Arial, sans-serif;
+}
+
+.main-content, .header {
+  padding-left: 100px;
+  padding-right: 100px;
+}
+
+/*# sourceMappingURL=common.css.map */

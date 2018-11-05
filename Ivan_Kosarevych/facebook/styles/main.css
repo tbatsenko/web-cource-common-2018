@@ -1,0 +1,59 @@
+html{
+    height: 100%;
+}
+body{
+    height: 100%;
+    margin: 0;
+    padding:0;
+    font-family: Helvetica, sans serif;
+}
+main{
+    margin: 0;
+    background-color: #E9EBEE;
+    height: 100%;
+}
+
+.hidden{
+    display: none
+}
+.astext{
+    background:none;
+    border:none;
+    margin:0;
+    padding:0;
+    cursor: pointer;
+}
+.not-as-list{
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+.not-as-button{
+    background: none;
+    border: none;
+}
+.list-display-inline li{
+    display: inline-block;
+}
+.clear-figure {
+    margin: 0;
+    padding: 0;
+}
+.not-as-link{
+    text-decoration:none;
+}
+
+.round-profile-picture{
+    border-radius: 50%;
+    border: none;
+}
+
+.middle-align{
+    vertical-align: middle;
+    align-items: center;
+}
+
+.vertical-after:after{
+    content:"|";
+    color: rgba(0, 0, 0, .1);
+}

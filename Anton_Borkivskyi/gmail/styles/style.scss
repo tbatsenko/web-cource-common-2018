@@ -1,0 +1,87 @@
+:root{
+  --menu-width: 248px;
+  --header-h: 48px;
+}
+
+*{
+  padding: 0;
+  margin: 0;
+}
+
+button{
+  background: transparent;
+  border: 0px;
+}
+
+
+header{
+  height: var(--header-h);
+  padding: 8px;
+  background: silver;
+  display: flex;
+  flex-direction: row;
+
+  .left-part{
+    width: var(--menu-width);
+    display: flex;
+    align-items: center;
+
+    .left-part__menu{
+
+      background: url("../images/menu.png") center no-repeat;
+      background-size: 20px 20px;
+      height: 50px;
+      width: 50px;
+    }
+
+  }
+
+  .right-part{
+    width: 100%;
+    background: blue;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    .right-part__buttons {
+      .right-part__buttons__tasks {
+
+        background: url("../images/tasks.svg") center no-repeat;
+        background-size: 15px 15px;
+        height: 50px;
+        width: 50px;
+      }
+
+      .right-part__buttons__bell {
+
+        background: url("../images/bell.png") center no-repeat;
+        background-size: 20px 20px;
+        height: 50px;
+        width: 50px;
+      }
+
+      .profile_picture{
+        width: 20px;
+        height: 20px;
+      }
+
+    }
+  }
+}
+
+main {
+
+  background: yellow;
+  aside {
+    width: var(--menu-width);
+    background: #9B59B6;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    .menu_button {
+      background: aqua;
+    }
+  }
+}

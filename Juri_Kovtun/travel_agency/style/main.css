@@ -1,0 +1,36 @@
+html {
+    background-color: #444;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #bbb;
+}
+
+p {
+    margin: 0;
+}
+
+.header {
+    width: 100%;
+    height: 700px;
+    background-image: linear-gradient(to right, rgba(60, 10, 10, .5), rgba(60, 10, 10, .5)), url("../assets/cuba/cuba-header02.jpg") ;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+.header__frame {
+    position: absolute;
+}
+.summary {
+    padding: 0 16%;
+}
+
+.about {
+    padding: 0 16%;
+}
+
