@@ -1,0 +1,23 @@
+.search-form {
+  display: flex;
+  height: 48px;
+  max-width: 720px;
+  flex-grow: 1;
+  flex-direction: row;
+  align-items: center;
+  background-color: #f4f4f4;
+  border-radius: 4px;
+}
+.search-form__text-input {
+  display: flex;
+  height: 40px;
+  flex-grow: 1;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  border: none;
+  background-color: transparent;
+  font: 400 13px Arial;
+}
+
+/*# sourceMappingURL=search-form.css.map */

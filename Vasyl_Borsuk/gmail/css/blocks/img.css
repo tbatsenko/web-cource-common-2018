@@ -1,0 +1,12 @@
+.img--google-user {
+  box-sizing: border-box;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.img--google-user {
+  width: 32px;
+  height: 32px;
+}
+
+/*# sourceMappingURL=img.css.map */
