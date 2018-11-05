@@ -12,17 +12,7 @@
         content: "\A";
         white-space: pre;
       }
-      &:hover {
-        color: var(--key-color);
-        background: linear-gradient(180deg, var(--key-color) 0, var(--key-color)) repeat-x 0 90%;
-        background-size: 1px 1px;
-      }
-      padding-bottom: 5px;
-      color: var(--blue-color);
       font-weight: 700;
-      text-decoration: none;
-      background: linear-gradient(180deg, var(--link-underline) 0, var(--link-underline)) repeat-x 0 90%;
-      background-size: 1px 1px;
     }
     font: 15px Bureausans, Arial, sans-serif;
     font-feature-settings: normal;
