@@ -1,4 +1,4 @@
-.logo {
+.main-header__logo {
     display: block;
     height: 125px;
     margin: 0;
@@ -8,7 +8,7 @@
     color: transparent;
 }
 
-.logo sub {
+.main-header__logo sub {
     color: #FFF;
     font-family: 'Quicksand', 'Helvetica Neue', Arial, sans-serif;
     font-size: 1rem;
@@ -21,6 +21,6 @@
     letter-spacing: 0.09em;
 }
 
-.logo a {
+.main-header__logo a {
     color: inherit;
 }
