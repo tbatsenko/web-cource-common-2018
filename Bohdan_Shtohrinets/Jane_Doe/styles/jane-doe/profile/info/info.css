@@ -1,0 +1,36 @@
+.info__section {
+    margin-top: 14px;
+    justify-content: space-between;
+    display: flex;
+    flex-direction: row;
+}
+
+.info__section:first-child {
+    margin-top: 0;
+}
+
+.info__title {
+    align-self: flex-start;
+    font-size: 22px;
+    font-weight: bold;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: left;
+    color: #181818;
+}
+
+.info__description {
+    align-self: flex-end;
+    font-size: 22px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: left;
+    color: #181818;
+}
+
+/*# sourceMappingURL=info.css.map */
