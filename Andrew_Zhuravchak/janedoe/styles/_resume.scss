@@ -1,0 +1,117 @@
+.resume {
+  display: flex;
+  height: 100vh;
+
+  &__brief {
+    flex-grow: 1;
+    flex-basis: 0;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+
+    background: url("../images/user.jpeg") no-repeat;
+    background-size: cover;
+    object-fit: cover;
+
+    padding: 50px 70px;
+
+    &-bottom-group {
+      margin-top: auto;
+    }
+
+    &-subheader {
+      font-family: Montserrat-Bold, serif;
+      font-size: 19px;
+      opacity: 0.7;
+      font-weight: bold;
+      text-transform: uppercase;
+    }
+
+    &-name {
+      font-weight: bold;
+      font-size: 97px;
+      margin: 0;
+    }
+
+    &-occupation {
+      font-size: 30px;
+      font-family: AvenirNext, serif;
+      margin: 0;
+    }
+
+    &-line {
+      opacity: 0.5;
+      color: #979797;
+      margin: 25px 0;
+    }
+
+    &-skills {
+      display: flex;
+    }
+
+    &-skill {
+      text-align: center;
+      font-family: AvenirNext, serif;
+      font-size: 18px;
+      font-weight: bold;
+      color: #232323;
+      padding: 8px 20px;
+      background-color: #fff;
+      text-transform: uppercase;
+      margin-right: 10px;
+    }
+  }
+
+  &__info {
+    flex-grow: 1;
+    flex-basis: 0;
+    background-color: #fff;
+
+    padding: 60px 80px;
+
+    &-blockquote {
+      text-align: center;
+      font-family: AvenirNext, serif;
+      font-size: 25px;
+      font-weight: 500;
+      font-style: italic;
+      margin: 0 auto;
+      max-width: 500px;
+      color: #545454;
+    }
+
+    &-block {
+      font-family: AvenirNext, serif;
+      font-size: 22px;
+      text-align: left;
+      color: #181818;
+      margin-bottom: 50px;
+
+      &--list {
+        padding: 0;
+      }
+    }
+
+    &-li {
+      margin-left: 25px;
+      margin-bottom: 20px;
+      color: #d9e8bd;
+
+      &--goal {
+        max-width: 420px;
+      }
+
+      &-text {
+        color: #181818;
+      }
+    }
+
+    &-subhead {
+      font-size: 25px;
+      font-weight: bold;
+      text-transform: uppercase;
+      margin-bottom: 30px;
+      display: block;
+    }
+  }
+}

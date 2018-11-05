@@ -1,0 +1,43 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+
+.additional-resouces {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+.additional-resouces a{
+    color: white;
+}
+
+.additional-resouces li:after{
+    content: "|";
+
+}
+.main-header{
+    background: #0063a6;
+    overflow: hidden;
+    color: white;
+}
+
+.main-resources {
+    padding: 0.5px;
+    background: #0063a6;
+}
+.main-resources li{
+    display: inline;
+}
+
+.main-resources li a{
+
+}
+.main-resources ul {
+    float: left;
+}
+.content {
+    width: 960px;
+    margin: auto;
+}

@@ -6,165 +6,67 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Inbox</title>
     <link rel="stylesheet" href="styles/style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.12/handlebars.min.js"></script>
 </head>
 <body>
-    <header>
-        <nav>
-            <ul class="main-menu" role="navigation">
-                <li>
-                    <button class="main-menu__icon" title="Main menu" style="background-image: url(images/menu.svg);"></button>
-                </li>
-                <li>
-                    <img class="main-menu__logo" title="Gmail" src="images/logo.png" alt="Gmail">
-                </li>
-                <li class="main-menu__search">
-                    <form> 
-                        <button class="main-menu__icon" title="Search" style="background-image: url(images/search.svg);"></button>
-                        <input type="text" placeholder="Search email" />
-                        <button class="main-menu__icon" title="More options" style="background-image: url(images/arrow_down.svg);"></button>
-                    </form>
-                </li>
-                <li>
-                    <button class="main-menu__icon main-menu__icon--right" title="Google Apps" style="background-image: url(images/apps.svg);"></button>
-                </li>
-                <li>
-                    <button class="main-menu__icon main-menu__icon--right" title="Notifications" style="background-image: url(images/bell.svg);"></button>
-                </li>
-                <li>
-                    <button class="main-menu__icon main-menu__icon--right  main-menu__account" title="Google Account" style="background-image: url(images/avatar.jpg);"></button>
-                </li>
-            </ul>
+    <header class="header">
+        <nav class="main-menu">
+            <button class="main-menu__button main-menu__button--menu" aria-label="Main menu" title="Main menu">menu</button>
+            <a class="main-menu__logo" aria-label="Gmail" title="Gmail" href="#"></a>  
+            <form class="search"> 
+                <button class="search__button" aria-label="Search" title="Search">search</button>
+                <input class="search__input" type="text" placeholder="Search mail" />
+                <button class="search__button" aria-label="More options" title="More options">arrow_drop_down</button>
+            </form>
+            <button class="main-menu__button main-menu__button--apps" aria-label="Google Apps" title="Google Apps">apps</button>
+            <button class="main-menu__button" aria-label="Notifications" title="Notifications">notifications_none</button>
+            <button class="main-menu__profile" aria-label="Google Account" title="Google Account"></button>
         </nav>
     </header>
   
     <section class="sidebar">
-            <button class="sidebar__compose"><i class="sidebar__compose--plus"></i>Compose</button>
-            <nav>
-                <ul class="sidebar__menu" role="navigation">
-                    <li>
-                        <button class="sidebar__button"><i class="sidebar__icon" style="background-image: url(images/inbox.svg);"></i>Inbox</button>
-                    </li>
-                    <li>
-                        <button class="sidebar__button"><i class="sidebar__icon" style="background-image: url(images/star.svg);"></i>Starred</button>
-                    </li>
-                    <li>
-                        <button class="sidebar__button"><i class="sidebar__icon" style="background-image: url(images/sent.svg);"></i>Sent</button>
-                    </li>
-                </ul>
-            </nav>
-    </section>
-    <section class="main">
-        <nav>
-            <ul class="main__control" role="navigation"></ul>
+        <button class="compose-button"><span class="compose-button__create"></span>Compose</button>
+        <nav class="sidebar-menu">
+            <script class="sidebar-menu__template" type="text/x-handlebars-template">
+                {{#each buttons}}
+                <button class="sidebar__button">
+                    <span class="sidebar__icon">{{icon}}</span>{{text}}
+                </button>
+                {{/each}}
+            </script>
         </nav>
-        <section class="main__emails">
-            <article class="main__email">
-                <button class="email__icon" style="background-image: url(images/crop_square.svg);"></button>
-                <button class="email__icon" style="background-image: url(images/star_border.svg);"></button>
-                <h1 class="email__from">Google</h1>
-                <h2 class="email__text"><span class="email__theme">Email Theme</span> - Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi quo harum molestias autem? Debitis eos voluptatibus error hic culpa assumenda delectus! Repudiandae laboriosam illo est quidem adipisci ex facilis odit.</h2>
-                <aside class="email__date">27 Oct</aside>
-            </article>
-            <article class="main__email">
-                <button class="email__icon" style="background-image: url(images/crop_square.svg);"></button>
-                <button class="email__icon" style="background-image: url(images/star_border.svg);"></button>
-                <h1 class="email__from">Facebook</h1>
-                <h2 class="email__text"><span class="email__theme">Email Theme Long</span> - Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi quo harum molestias autem? Debitis eos voluptatibus error hic culpa assumenda delectus! Repudiandae laboriosam illo est quidem adipisci ex facilis odit.</h2>
-                <aside class="email__date">26 Oct</aside>
-            </article>
-            <article class="main__email">
-                <button class="email__icon" style="background-image: url(images/crop_square.svg);"></button>
-                <button class="email__icon" style="background-image: url(images/star_border.svg);"></button>
-                <h1 class="email__from">Instagram</h1>
-                <h2 class="email__text"><span class="email__theme">Email Theme Long Long</span> - Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi quo harum molestias autem? Debitis eos voluptatibus error hic culpa assumenda delectus! Repudiandae laboriosam illo est quidem adipisci ex facilis odit.</h2>
-                <aside class="email__date">20 Oct</aside>
-            </article>
-            <article class="main__email">
-                <button class="email__icon" style="background-image: url(images/crop_square.svg);"></button>
-                <button class="email__icon" style="background-image: url(images/star_border.svg);"></button>
-                <h1 class="email__from">Google</h1>
-                <h2 class="email__text"><span class="email__theme">Email Theme</span> - Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi quo harum molestias autem? Debitis eos voluptatibus error hic culpa assumenda delectus! Repudiandae laboriosam illo est quidem adipisci ex facilis odit.</h2>
-                <aside class="email__date">19 Oct</aside>
-            </article>
-            <article class="main__email">
-                <button class="email__icon" style="background-image: url(images/crop_square.svg);"></button>
-                <button class="email__icon" style="background-image: url(images/star_border.svg);"></button>
-                <h1 class="email__from">Facebook</h1>
-                <h2 class="email__text"><span class="email__theme">Email Theme Long</span> - Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi quo harum molestias autem? Debitis eos voluptatibus error hic culpa assumenda delectus! Repudiandae laboriosam illo est quidem adipisci ex facilis odit.</h2>
-                <aside class="email__date">18 Oct</aside>
-            </article>
-            <article class="main__email">
-                <button class="email__icon" style="background-image: url(images/crop_square.svg);"></button>
-                <button class="email__icon" style="background-image: url(images/star_border.svg);"></button>
-                <h1 class="email__from">Instagram</h1>
-                <h2 class="email__text"><span class="email__theme">Email Theme Long Long</span> - Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi quo harum molestias autem? Debitis eos voluptatibus error hic culpa assumenda delectus! Repudiandae laboriosam illo est quidem adipisci ex facilis odit.</h2>
-                <aside class="email__date">17 Oct</aside>
-            </article>
-            <article class="main__email">
-                <button class="email__icon" style="background-image: url(images/crop_square.svg);"></button>
-                <button class="email__icon" style="background-image: url(images/star_border.svg);"></button>
-                <h1 class="email__from">Google</h1>
-                <h2 class="email__text"><span class="email__theme">Email Theme</span> - Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi quo harum molestias autem? Debitis eos voluptatibus error hic culpa assumenda delectus! Repudiandae laboriosam illo est quidem adipisci ex facilis odit.</h2>
-                <aside class="email__date">6 Oct</aside>
-            </article>
-            <article class="main__email">
-                <button class="email__icon" style="background-image: url(images/crop_square.svg);"></button>
-                <button class="email__icon" style="background-image: url(images/star_border.svg);"></button>
-                <h1 class="email__from">Facebook</h1>
-                <h2 class="email__text"><span class="email__theme">Email Theme Long</span> - Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi quo harum molestias autem? Debitis eos voluptatibus error hic culpa assumenda delectus! Repudiandae laboriosam illo est quidem adipisci ex facilis odit.</h2>
-                <aside class="email__date">5 Oct</aside>
-            </article>
-            <article class="main__email">
-                <button class="email__icon" style="background-image: url(images/crop_square.svg);"></button>
-                <button class="email__icon" style="background-image: url(images/star_border.svg);"></button>
-                <h1 class="email__from">Instagram</h1>
-                <h2 class="email__text"><span class="email__theme">Email Theme Long Long</span> - Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi quo harum molestias autem? Debitis eos voluptatibus error hic culpa assumenda delectus! Repudiandae laboriosam illo est quidem adipisci ex facilis odit.</h2>
-                <aside class="email__date"> 4 Oct</aside>
-            </article>
-            <article class="main__email">
-                <button class="email__icon" style="background-image: url(images/crop_square.svg);"></button>
-                <button class="email__icon" style="background-image: url(images/star_border.svg);"></button>
-                <h1 class="email__from">Google</h1>
-                <h2 class="email__text"><span class="email__theme">Email Theme</span> - Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi quo harum molestias autem? Debitis eos voluptatibus error hic culpa assumenda delectus! Repudiandae laboriosam illo est quidem adipisci ex facilis odit.</h2>
-                <aside class="email__date">3 Oct</aside>
-            </article>
-            <article class="main__email">
-                <button class="email__icon" style="background-image: url(images/crop_square.svg);"></button>
-                <button class="email__icon" style="background-image: url(images/star_border.svg);"></button>
-                <h1 class="email__from">Facebook</h1>
-                <h2 class="email__text"><span class="email__theme">Email Theme Long</span> - Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi quo harum molestias autem? Debitis eos voluptatibus error hic culpa assumenda delectus! Repudiandae laboriosam illo est quidem adipisci ex facilis odit.</h2>
-                <aside class="email__date">2 Oct</aside>
-            </article>
-            <article class="main__email">
-                <button class="email__icon" style="background-image: url(images/crop_square.svg);"></button>
-                <button class="email__icon" style="background-image: url(images/star_border.svg);"></button>
-                <h1 class="email__from">Instagram</h1>
-                <h2 class="email__text"><span class="email__theme">Email Theme Long Long</span> - Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi quo harum molestias autem? Debitis eos voluptatibus error hic culpa assumenda delectus! Repudiandae laboriosam illo est quidem adipisci ex facilis odit.</h2>
-                <aside class="email__date">1 Oct</aside>
-            </article>
-            <article class="main__email">
-                <button class="email__icon" style="background-image: url(images/crop_square.svg);"></button>
-                <button class="email__icon" style="background-image: url(images/star_border.svg);"></button>
-                <h1 class="email__from">Google</h1>
-                <h2 class="email__text"><span class="email__theme">Email Theme</span> - Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi quo harum molestias autem? Debitis eos voluptatibus error hic culpa assumenda delectus! Repudiandae laboriosam illo est quidem adipisci ex facilis odit.</h2>
-                <aside class="email__date">3 Sep</aside>
-            </article>
-            <article class="main__email">
-                <button class="email__icon" style="background-image: url(images/crop_square.svg);"></button>
-                <button class="email__icon" style="background-image: url(images/star_border.svg);"></button>
-                <h1 class="email__from">Facebook</h1>
-                <h2 class="email__text"><span class="email__theme">Email Theme Long</span> - Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi quo harum molestias autem? Debitis eos voluptatibus error hic culpa assumenda delectus! Repudiandae laboriosam illo est quidem adipisci ex facilis odit.</h2>
-                <aside class="email__date">2 Sep</aside>
-            </article>
-            <article class="main__email">
-                <button class="email__icon" style="background-image: url(images/crop_square.svg);"></button>
-                <button class="email__icon" style="background-image: url(images/star_border.svg);"></button>
-                <h1 class="email__from">Instagram</h1>
-                <h2 class="email__text"><span class="email__theme">Email Theme Long Long</span> - Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi quo harum molestias autem? Debitis eos voluptatibus error hic culpa assumenda delectus! Repudiandae laboriosam illo est quidem adipisci ex facilis odit.</h2>
-                <aside class="email__date">1 Sep</aside>
-            </article>
-        </section>
     </section>
 
+    <main class="main">
+        <nav class="control-menu"></nav>
+
+        <section class="email-container">
+            <script class="email__template" type="text/x-handlebars-template">
+                {{#each emails}}
+                <article class="email">
+                    <label class="custom-checkbox">
+                        <input type="checkbox" class="custom-checkbox__input" />
+                        <span class="custom-checkbox__style"></span>
+                    </label>
+                    <label class="custom-checkbox">
+                        <input type="checkbox" class="custom-checkbox__input" />
+                        <span class="custom-checkbox__style custom-checkbox__style--star"></span>
+                    </label>
+                
+                    <h1 class="email__from">{{from}}</h1>
+                    <h2 class="email__text">
+                        <span class="email__theme">{{theme}}</span> 
+                        - Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam at sem nunc. Vivamus augue nulla, porta a velit vitae, imperdiet cursus nibh. Sed pulvinar a velit a rhoncus. Maecenas id sagittis justo. Vivamus ac metus quis libero ullamcorper faucibus. Morbi vitae pharetra purus. Sed ac mauris rhoncus, lacinia quam quis, interdum leo. Vivamus iaculis tristique metus eget pellentesque. In rhoncus posuere finibus. Suspendisse vitae ipsum purus. Morbi metus arcu, venenatis eu finibus a, viverra ac enim. Aliquam ut odio sed ex auctor luctus ac eu arcu. Quisque aliquam malesuada erat, at egestas justo fermentum vel.
+                    </h2>
+                    
+                    <time class="email__date">{{date}}</time>
+                </article>
+                {{/each}}
+            </script>
+        </section>
+    </main>
+    
+    <script src="templates/sidebar.js"></script>
+    <script src="templates/email.js"></script>
 </body>
 </html>

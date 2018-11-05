@@ -1,0 +1,54 @@
+.img:before {
+  content: "";
+  height: 16px;
+  width: 16px;
+  position: absolute;
+  background: url("../images/picture.png");
+  background-size: 16px;
+  top: 0;
+  left: 0;
+}
+
+.gif:before {
+  content: "";
+  height: 16px;
+  width: 21px;
+  position: absolute;
+  background: url("../images/gif.svg") no-repeat;
+  background-size: 21px 16px;
+  top: 0;
+  left: 0;
+}
+
+.stickers:before {
+  content: "";
+  height: 16px;
+  width: 16px;
+  position: absolute;
+  background: url("../images/smile.svg") no-repeat;
+  background-size: 16px;
+  top: 0;
+  left: 0;
+}
+
+.calendar:before {
+  content: "";
+  height: 16px;
+  width: 16px;
+  position: absolute;
+  background: url("../images/calendar.svg") no-repeat;
+  background-size: 14px;
+  top: 0;
+  left: 0;
+}
+
+.camera:before {
+  content: "";
+  height: 16px;
+  width: 21px;
+  position: absolute;
+  background: url("../images/camera.svg") no-repeat;
+  background-size: 21px 16px;
+  top: 0;
+  left: 0;
+}

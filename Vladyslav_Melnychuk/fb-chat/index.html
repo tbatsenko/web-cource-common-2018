@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chat</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/header.css">
+    <link rel="stylesheet" href="styles/header-navigation.css">
+    <link rel="stylesheet" href="styles/message.css">
+    <link rel="stylesheet" href="styles/time.css">
+    <link rel="stylesheet" href="styles/input_box.css">
+    <link rel="stylesheet" href="styles/icons.css">
+</head>
+<body>
+<main>
+    <header class="header">
+        <h1 class="header__sender-name"><span class="header__is-active"></span>Kristaps Elsins</h1>
+        <nav class="header-nav">
+            <button class="header-nav__button header-nav__button--add">Add</button>
+            <button class="header-nav__button header-nav__button--video-call">Video Call</button>
+            <button class="header-nav__button header-nav__button--settings">Settings</button>
+            <button class="header-nav__button header-nav__button--close">Close</button>
+        </nav>
+    </header>
+    <section class="messages">
+        <article class="message message--inbox message--top">
+            <a class="message__user-ico" href="#"></a>
+            <!--https://res.cloudinary.com/dtpb9pmmm/image/upload/c_thumb,h_28,q_94,r_360,w_28,g_face/a_0/v1539595308/edc67035ae48b8164b2ea8035b0ba4a0.png-->
+            <div class="message__text-wrapper">
+                <p class="message__text message__text--inbox">Yo, Can you update views?</p>
+            </div>
+        </article>
+        <section class="time-section">
+            <time class="time time--centered">FRI 11:30AM</time>
+        </section>
+        <article class="message message--inbox message--last">
+            <a class="message__user-ico" href="#"></a>
+            <div class="message__text-wrapper">
+                <p class="message__text message__text--inbox">I can’t see updated views yet</p>
+            </div>
+        </article>
+        <article class="message message--outbox message--last">
+            <div class="message__text-wrapper message__text-wrapper--mult-out">
+                <p class="message__text message__text--outbox">Hi, as I noted in Email last week - I am on vacation.</p>
+                <p class="message__text message__text--outbox">I will be back next week</p>
+            </div>
+        </article>
+        <article class="message message--inbox">
+            <a class="message__user-ico" href="#"></a>
+            <div class="message__text-wrapper message__text-wrapper--mult-in">
+                <p class="message__text message__text--inbox">Ahh sorry, missed that!</p>
+                <p class="message__text message__text--inbox">Let’s talk next week</p>
+            </div>
+        </article>
+    </section>
+    <section class="input-box">
+        <textarea class="input-box__textarea" placeholder="Type a message..."></textarea>
+        <nav class="message-nav">
+            <button class="message-nav__button message-nav__button--square img">Image</button>
+            <button class="message-nav__button message-nav__button--wide gif">GIF</button>
+            <button class="message-nav__button message-nav__button--square stickers">Stickers</button>
+            <button class="message-nav__button message-nav__button--square calendar">Calendar</button>
+            <button class="message-nav__button message-nav__button--wide camera">Camera</button>
+        </nav>
+    </section>
+</main>
+</body>
+</html>

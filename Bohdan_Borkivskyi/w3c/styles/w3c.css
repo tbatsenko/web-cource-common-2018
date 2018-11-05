@@ -1,0 +1,42 @@
+body{
+    /*font-family: "Segoe Print";*/
+    /*background-color: black;*/
+    margin: auto;
+    width: 60%;
+}
+
+h1, h2, h3, h4{
+    font-family: 'PT Sans Caption', sans-serif;
+}
+
+#logo{
+    background: no-repeat url("https://upload.wikimedia.org/wikipedia/commons/thumb/e/ed/W3C%C2%AE_Icon.svg/1280px-W3C%C2%AE_Icon.svg.png");
+    background-size: contain;
+    color: transparent;
+    height: 100px;
+}
+
+p:first-child{
+
+}
+
+p:first-letter{
+    padding-left: 2rem;
+}
+
+a{
+    color: #3498db;
+}
+
+a[href*="#"]{
+    text-decoration: none;
+    border-bottom: 1px dashed;
+}
+
+a:visited{
+    color:#9b59b6;
+}
+
+.first:first-letter{
+    padding-left: 0;
+}
