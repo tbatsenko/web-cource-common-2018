@@ -1,9 +1,11 @@
 @import "header/header";
 @import "content/top-banner";
+@import "main-content";
 
 :root {
   --key-color: rgb(226, 0, 22);
   --blue-color: rgb(6, 85, 128);
+  --link-underline: rgba(6, 85, 128, .1);
 }
 
 html, body {
