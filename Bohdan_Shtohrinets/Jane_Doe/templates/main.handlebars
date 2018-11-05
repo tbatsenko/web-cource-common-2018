@@ -1,0 +1,99 @@
+<div class="jane-doe">
+    <aside class="jane-doe__container jane-doe__profile">
+        {{#profile}}
+            <a class="profile__image">{{profile-image}}</a>
+            <p class="profile__motto">{{motto}}</p>
+            <div class="profile__info">
+                {{#info}}
+                    <div class="info__section">
+                        <strong class="info__title">{{title}}</strong>
+                        <span class="info__description">{{description}}</span>
+                    </div>
+                {{/info}}
+            </div>
+            <form class="profile__feelings">
+                {{#feelings}}
+                    <button class="feelings__tag">{{.}}</button>
+                {{/feelings}}
+            </form>
+            <div class="profile__brands">
+                {{#brands}}
+                    <h4 class="brands__title">{{title}}</h4>
+                    <nav class="brands__list">
+                        <a href="#" class="brands__item brands__item_fb">{{social-media.[0]}}</a>
+                        <a href="#" class="brands__item brands__item_lin">{{social-media.[1]}}</a>
+                        <a href="#" class="brands__item brands__item_sp">{{social-media.[3]}}</a>
+                        <a href="#" class="brands__item brands__item_cola">{{social-media.[4]}}</a>
+                    </nav>
+                {{/brands}}
+            </div>
+        {{/profile}}
+    </aside>
+    <main class="jane-doe__container jane-doe__detailed">
+        {{#detailed}}
+            <section class="detailed__section detailed__section_persona">
+                {{#persona}}
+                    <h4 class="persona__title">{{title}}</h4>
+                    <p class="persona__name">{{name}}</p>
+                {{/persona}}
+            </section>
+            <section class="detailed__section">
+                {{#about}}
+                    <h4 class="detailed__title">{{title}}</h4>
+                    <p class="detailed__description">{{description}}</p>
+                {{/about}}
+            </section>
+            <section class="detailed__section detailed__section_double">
+                <div class="detailed__section_half">
+                    {{#goals}}
+                        <h4 class="detailed__title">{{title}}</h4>
+                        <ul class="detailed__list">
+                            {{#description}}
+                                <li class="list__point detailed__description">{{.}}</li>
+                            {{/description}}
+                        </ul>
+                    {{/goals}}
+                </div>
+                <div class="detailed__section_half">
+                    {{#needs}}
+                        <h4 class="detailed__title">{{title}}</h4>
+                        <ul class="detailed__list">
+                            {{#description}}
+                                <li class="list__point detailed__description">{{.}}</li>
+                            {{/description}}
+                        </ul>
+                    {{/needs}}
+                </div>
+            </section>
+            <section class="detailed__section detailed__section_double">
+                <div class="detailed__section_half">
+                    {{#pain-points}}
+                        <h4 class="detailed__title">{{title}}</h4>
+                        <ul class="detailed__list">
+                            {{#description}}
+                                <li class="list__point detailed__description">{{.}}</li>
+                            {{/description}}
+                        </ul>
+                    {{/pain-points}}
+                </div>
+                <div class="detailed__section_half detailed__personality">
+                    {{#personality}}
+                        <h4 class="detailed__title">{{title}}</h4>
+                        <div class="personality__rating">
+                            {{#rating}}
+                                <div class="rating__criteria">
+                                    {{#text}}
+                                        <span class="rating__text">{{.}}</span>
+                                    {{/text}}
+                                </div>
+                                <form class="rating__slider">
+                                    <input type="range" min="1" max="100" value="50" class="slider" title="rating">
+                                </form>
+                            {{/rating}}
+                        </div>
+                    {{/personality}}
+                </div>
+            </section>
+        {{/detailed}}
+    </main>
+</div>

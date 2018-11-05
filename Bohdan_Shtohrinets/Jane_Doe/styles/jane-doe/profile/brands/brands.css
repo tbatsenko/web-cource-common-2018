@@ -1,0 +1,67 @@
+.brands__item_fb:before, .brands__item_lin:before, .brands__item_sp:before {
+    content: "";
+    display: block;
+    width: 45px;
+    height: 45px;
+}
+
+.brands__title {
+    font-size: 22px;
+    font-weight: bold;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: left;
+    color: #181818;
+}
+
+.brands__list {
+    margin-top: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+.brands__item {
+    flex-grow: 1;
+    margin-right: 25px;
+    color: transparent;
+    width: 45px;
+    height: 45px;
+    display: block;
+}
+
+.brands__item:last-child {
+    margin-right: 0;
+}
+
+.brands__item_fb:before {
+    background: url("/images/facebook-logo.png");
+    background-size: cover;
+}
+
+.brands__item_lin:before {
+    background: url("/images/linkedin.png");
+    background-size: cover;
+}
+
+.brands__item_sp:before {
+    background: url("/images/spotify-logo.png");
+    background-size: cover;
+}
+
+.brands__item_cola {
+    width: 135.4px;
+}
+
+.brands__item_cola:before {
+    content: "";
+    display: block;
+    width: 105.4px;
+    height: 45px;
+    background: url("/images/coca-cola-logo.png");
+    background-size: cover;
+}
+
+/*# sourceMappingURL=brands.css.map */

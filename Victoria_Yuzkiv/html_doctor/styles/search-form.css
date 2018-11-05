@@ -1,11 +1,10 @@
-.search-form {
+.main-header__search-form {
     position: absolute;
-    right: -20px;
-    z-index: 400;
-    top: 7px;
+    right: 10px;
+    top: 180px;
 }
 
-.search-form div input[type='text'] {
+.main-header__search-form div input[type='text'] {
     background: #eee;
     border: 1px solid rgba(0, 0, 0, 0.3);
     padding: 8px 75px 8px 8px;
@@ -13,7 +12,7 @@
     border-radius: 3px;
 }
 
-.search-form div input[type='submit'] {
+.main-header__search-form div input[type='submit'] {
     cursor: pointer;
     float: right;
     /*TODO: do not use !important*/
