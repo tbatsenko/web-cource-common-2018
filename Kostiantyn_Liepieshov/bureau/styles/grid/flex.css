@@ -1,0 +1,53 @@
+:root {
+    --gutter-width: 5px;
+    --basic-cell-width: calc(100% / 16);
+}
+
+.container_16 {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+}
+
+.grid {
+    box-sizing: border-box;
+}
+
+.grid_1 {width: calc(var(--basic-cell-width) * 1);}
+.grid_2 {width: calc(var(--basic-cell-width) * 2);}
+.grid_3 {width: calc(var(--basic-cell-width) * 3);}
+.grid_4 {width: calc(var(--basic-cell-width) * 4);}
+.grid_5 {width: calc(var(--basic-cell-width) * 5);}
+.grid_6 {width: calc(var(--basic-cell-width) * 6);}
+.grid_7 {width: calc(var(--basic-cell-width) * 7);}
+.grid_8 {width: calc(var(--basic-cell-width) * 8);}
+.grid_9 {width: calc(var(--basic-cell-width) * 9);}
+.grid_10 {width: calc(var(--basic-cell-width) * 10);}
+.grid_11 {width: calc(var(--basic-cell-width) * 11);}
+.grid_12 {width: calc(var(--basic-cell-width) * 12);}
+.grid_13 {width: calc(var(--basic-cell-width) * 13);}
+.grid_14 {width: calc(var(--basic-cell-width) * 14);}
+.grid_15 {width: calc(var(--basic-cell-width) * 15);}
+.grid_16 {width: calc(var(--basic-cell-width) * 16);}
+
+@media (max-width: 840px) {
+    .grid_sm_1 {width: calc(var(--basic-cell-width) * 1);}
+    .grid_sm_2 {width: calc(var(--basic-cell-width) * 2);}
+    .grid_sm_3 {width: calc(var(--basic-cell-width) * 3);}
+    .grid_sm_4 {width: calc(var(--basic-cell-width) * 4);}
+    .grid_sm_5 {width: calc(var(--basic-cell-width) * 5);}
+    .grid_sm_6 {width: calc(var(--basic-cell-width) * 6);}
+    .grid_sm_7 {width: calc(var(--basic-cell-width) * 7);}
+    .grid_sm_8 {width: calc(var(--basic-cell-width) * 8);}
+    .grid_sm_9 {width: calc(var(--basic-cell-width) * 9);}
+    .grid_sm_10 {width: calc(var(--basic-cell-width) * 10);}
+    .grid_sm_11 {width: calc(var(--basic-cell-width) * 11);}
+    .grid_sm_12 {width: calc(var(--basic-cell-width) * 12);}
+    .grid_sm_13 {width: calc(var(--basic-cell-width) * 13);}
+    .grid_sm_14 {width: calc(var(--basic-cell-width) * 14);}
+    .grid_sm_15 {width: calc(var(--basic-cell-width) * 15);}
+    .grid_sm_16 {width: calc(var(--basic-cell-width) * 16);}
+    .container_16 {
+    }
+}

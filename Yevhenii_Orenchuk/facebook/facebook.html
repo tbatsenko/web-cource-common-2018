@@ -9,14 +9,13 @@
     <link rel="stylesheet" type="text/css" href="styles/header.css">
     <link rel="stylesheet" type="text/css" href="styles/left-navigation.css">
     <link rel="stylesheet" type="text/css" href="styles/main.css">
+    <link rel="stylesheet" type="text/css" href="styles/aside-menu.css">
     <title>Facebook</title>
 </head>
 <body class="body">
     <header class="header">
         <div class="search centered">
-            <a class="search__facebook-icon header__facebook-icons" href="">
-                <span>Facebook</span>
-            </a>
+            <a class="search__facebook-icon header__facebook-icons" href=""></a>
             <form class="search-form">
                 <input class="search-form__input" type="text" placeholder="Search">
                 <button class="search-form__button" type="submit">
@@ -37,13 +36,13 @@
                 </a>
             </section>
             <section class="navigation-menu__section-3">
-                <button class="button__requests header__facebook-icons">Friends requests</button>
-                <button class="button__messages header__facebook-icons">Messages</button>
-                <button class="button__notifications header__facebook-icons">Notifications</button>
+                <button class="button__requests header__facebook-icons"></button>
+                <button class="button__messages header__facebook-icons"></button>
+                <button class="button__notifications header__facebook-icons"></button>
             </section>
             <section class="navigation-menu__section-4">
-                <button class="button__help header__facebook-icons">Help</button>
-                <button class="button__menu header__facebook-icons">menu</button>
+                <button class="button__help header__facebook-icons"></button>
+                <button class="button__menu header__facebook-icons"></button>
             </section>
         </div>
     </header>
@@ -62,13 +61,13 @@
             <ul class="list-decoration">
                 <li class="list-item-decoration">
                     <a class="link-decoration centered" href="">
-                        <i class="navigation-bar__news-feed-icon navigation-bar__facebook-icons"></i>
+                        <i class="navigation-bar__news-feed-icon facebook-icons"></i>
                         <span class="navigation-bar-font">News Feed</span>
                     </a>
                 </li>
                 <li class="list-item-decoration">
                     <a class="link-decoration centered" href="">
-                        <i class="navigation-bar__messenger-icon navigation-bar__facebook-icons"></i>
+                        <i class="navigation-bar__messenger-icon facebook-icons"></i>
                         <span class="navigation-bar-font">Messenger</span>
                     </a>
                 </li>
@@ -79,7 +78,7 @@
             <ul class="list-decoration">
                 <li class="list-item-decoration">
                     <a class="link-decoration centered" href="">
-                        <i class="navigation-bar__community-name navigation-bar__facebook-icons"></i>
+                        <i class="navigation-bar__community-name facebook-icons"></i>
                         <span class="navigation-bar-font">Community name</span>
                     </a>
                 </li>
@@ -90,31 +89,31 @@
             <ul class="list-decoration">
                 <li class="list-item-decoration">
                     <a class="link-decoration centered" href="">
-                        <i class="navigation-bar__events navigation-bar__facebook-icons"></i>
+                        <i class="navigation-bar__events facebook-icons"></i>
                         <span class="navigation-bar-font">Events</span>
                     </a>
                 </li>
                 <li class="list-item-decoration">
                     <a class="link-decoration centered" href="">
-                        <i class="navigation-bar__groups navigation-bar__facebook-icons"></i>
+                        <i class="navigation-bar__groups facebook-icons"></i>
                         <span class="navigation-bar-font">Groups</span>
                     </a>
                 </li>
                 <li class="list-item-decoration">
                     <a class="link-decoration centered" href="">
-                        <i class="navigation-bar__pages navigation-bar__facebook-icons"></i>
+                        <i class="navigation-bar__pages facebook-icons"></i>
                         <span class="navigation-bar-font">Pages</span>
                     </a>
                 </li>
                 <li class="list-item-decoration">
                     <a class="link-decoration centered" href="">
-                        <i class="navigation-bar__fundraisers navigation-bar__facebook-icons"></i>
+                        <i class="navigation-bar__fundraisers facebook-icons"></i>
                         <span class="navigation-bar-font">Fundraisers</span>
                     </a>
                 </li>
                 <li class="list-item-decoration">
                     <a class="link-decoration centered" href="">
-                        <i class="navigation-bar__friend-list navigation-bar__facebook-icons"></i>
+                        <i class="navigation-bar__friend-list facebook-icons"></i>
                         <span class="navigation-bar-font">Friend list</span>
                     </a>
                 </li>
@@ -122,37 +121,115 @@
         </section>
     </nav>
     <main class="feed">
-        <form class="feed__post">
-            <div>
-                <button>Make post</button>
-                <button>Photo/Video album</button>
-                <button>Live Video</button>
+        <form class="feed__item feed__make-post">
+            <div class="post__top-menu centered">
+                <button class="feed__button-decorator centered">
+                    <i class="make-post__icon feed__facebook-icons"></i>
+                    <span class="font2">Make post</span>
+                </button>
+                <button class="upload-photo_video__button feed__button-decorator centered">
+                    <i class="upload-photo_video-icon feed__facebook-icons"></i>
+                    <span>Photo/Video album</span>
+                </button>
             </div>
-            <div>
-                <a href="">photo</a>
-                <input type="text" placeholder="What's on your mind, Zhenia?">
+            <div class="feed-post__text centered">
+                <img class="feed-post__profile-picture" src="https://scontent-frx5-1.xx.fbcdn.net/v/t1.0-1/p160x160/10157258_838129292950019_1580448429464448229_n.jpg?_nc_cat=110&_nc_ht=scontent-frx5-1.xx&oh=23017d8ed4fd36601b425eadf0e0916a&oe=5C7AB129">
+                <input class="feed-post__input-text" type="text" placeholder="What's on your mind, Zhenia?">
             </div>
-            <div class="post__attachments">
-                <button>Gif</button>
-                <button>Photo/Video</button>
-                <button>Tag friends</button>
-                <button>More</button>
+            <div class="post__attachments centered">
+                <button class="bottom-menu__button feed__button-decorator centered">
+                    <i class="button__gif-icon facebook-icons"></i>
+                    <span class="button__gif_text">Gif</span>
+                </button>
+                <button class="bottom-menu__button feed__button-decorator centered">
+                    <i class="attachments-icon facebook-icons"></i>
+                    <span>Photo/Video</span>
+                </button>
+                <button class="bottom-menu__button feed__button-decorator centered">
+                    <i class="button__tag-friend-icon facebook-icons"></i>
+                    <span class="button__tag_text">Tag friends</span>
+                </button>
+                <button class="bottom-menu__button feed__button-decorator centered">
+                    <i class="button__more-icon facebook-icons"></i>
+                </button>
             </div>
         </form>
-        <article class="feed__item">
-            <div>
-                <a href="">
-                    <img src="">
-                    <span>Username</span>
+        <article class="feed__item feed__post">
+            <div class="item__top-bar centered">
+                <a class="profile-link link-decoration" href="">
+                    <img class="profile-picture" src="https://scontent.flwo1-1.fna.fbcdn.net/v/t1.0-1/p200x200/44814311_2207804046209331_2919048220346679296_n.jpg?_nc_cat=103&_nc_ht=scontent.flwo1-1.fna&oh=0c177f92bc7b5ec0365fbeebf99cf6da&oe=5C3F404E">
+                    <!--<div class="online-indicator"></div>-->
                 </a>
+                <div class="top-bar__post-info">
+                    <h4 class="post-header">
+                        <a class="profile-link link-decoration" href="">Краса Рятує. Львів</a>
+                        <span class="post-header__text">is feeling festive in
+                            <a class="location-link link-decoration" href="">Lviv, Ukraine</a>.
+                        </span>
+                    </h4>
+                    <h6 class="post-header__description centered">
+                        <a class="timestamp link-decoration" href="">
+                            <span class="timestamp-text">November 2 at 11:02 PM</span>
+                        </a>
+                        <span class="point-separator">·</span>
+                        <i class="public-icon facebook-icons-2" data-tooltip="Public"></i>
+                    </h6>
+                </div>
+                <button class="post__button-more feed__button-decorator facebook-icons-2"></button>
+            </div>
+            <span class="item__main-text">
+                <p class="paragraph">Сьогодні свій день народження святкує Diana Zvarych, наша чарівна проектна менеджерка! ♥️</p>
+                <p class="paragraph">Бажаємо Діані здоров'я, професійного зростання та відданих друзів, а також натхнення та сил під час організації Андріївські вечорниці! ✨</p>
+            </span>
+            <img class="post-photo" src="https://scontent.flwo1-1.fna.fbcdn.net/v/t1.0-9/45308945_2215174265472309_6570251380974419968_n.jpg?_nc_cat=108&_nc_ht=scontent.flwo1-1.fna&oh=fab98874122bede4eeddf41e39ef6d06&oe=5C42F2D8" alt="">
+            <div class="status-panel">
+                <div class="centered">
+                    <i class="likes-icon facebook-icons-emoji"></i>
+                    <i class="loves-icon facebook-icons-emoji"></i>
+                    <span class="span-decorator status-text">Angy Sueid, Anna Dzubyak and 8 others</span>
+                </div>
+                <div class="status-numbers centered">
+                    <span class="span-decorator likes-number">1</span>
+                    <span class="span-decorator">Comment</span>
+                    <span class="span-decorator">1</span>
+                    <span class="span-decorator">Share</span>
+                </div>
+            </div>
+            <div class="status-panel-buttons centered">
+                <button class="like-button panel-button-decorator feed__button-decorator centered">
+                    <i class="like-button-icon facebook-icons-2"></i>
+                    <span class="span-decorator">Like</span>
+                </button>
+                <button class="comment-button panel-button-decorator feed__button-decorator centered">
+                    <i class="comment-button-icon facebook-icons-emoji"></i>
+                    <span class="span-decorator">Comment</span>
+                </button>
+                <button class="share-button panel-button-decorator feed__button-decorator centered">
+                    <i class="share-button-icon facebook-icons-emoji"></i>
+                    <span class="span-decorator">Share</span>
+                </button>
+            </div>
+            <div class="make-comment centered">
+                <img class="make-comment__profile-picture profile-picture" src="https://scontent-frx5-1.xx.fbcdn.net/v/t1.0-1/p130x130/10157258_838129292950019_1580448429464448229_n.jpg?_nc_cat=110&_nc_ht=scontent-frx5-1.xx&oh=747cc41a3bc7317c2b672ace2817bee9&oe=5C806FD9">
+                <div class="comment__input centered">
+                    <input class="comment__input-text" type="text" placeholder="Write a comment...">
+                    <div class="comment__attachments centered">
+                        <button class="comment__emoji-icon facebook-icons-comment feed__button-decorator"></button>
+                        <button class="comment__photo-icon facebook-icons-comment feed__button-decorator"></button>
+                        <button class="comment__gif-icon facebook-icons-comment feed__button-decorator"></button>
+                        <button class="comment__sticker-icon facebook-icons-comment feed__button-decorator"></button>
+                    </div>
+                </div>
             </div>
         </article>
     </main>
     <aside class="right-menu">
         <div class="right-menu__stories">
-            <a href="">
-                <span>Stories</span>
-            </a>
+            <div class="right-menu__top-bar">
+                <a href="">
+                    <span>Stories</span>
+                </a>
+            </div>
         </div>
     </aside>
 </body>

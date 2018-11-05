@@ -1,7 +1,7 @@
 @import "base";
 
 .message-group {
-  margin-bottom: 7px;
+  margin-bottom: 8px;
   position: relative;
 
   &--friend {
@@ -52,7 +52,7 @@
   &__text {
     text-align: left;
     margin-bottom: 2px;
-    padding: 4px 12px;
+    padding: 6px 15px;
     max-width: 175px;
     line-height: 20px;
     min-height: 28px;

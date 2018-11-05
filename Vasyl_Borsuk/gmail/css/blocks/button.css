@@ -1,0 +1,27 @@
+.button {
+  flex-shrink: 0;
+}
+
+.button--header {
+  background-color: transparent;
+  border: none;
+}
+
+.button {
+  cursor: pointer;
+  outline: none;
+  box-sizing: border-box;
+}
+.button--header {
+  display: flex;
+  height: 40px;
+  width: 40px;
+  padding: 0;
+  align-items: center;
+  justify-content: center;
+}
+.button--header-left {
+  margin-right: 4px;
+}
+
+/*# sourceMappingURL=button.css.map */
