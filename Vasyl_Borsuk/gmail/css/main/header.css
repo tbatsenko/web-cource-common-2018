@@ -1,0 +1,33 @@
+.header__google-buttons, .header__left, .header {
+  flex-shrink: 0;
+}
+
+.header {
+  display: flex;
+  height: 64px;
+  flex-direction: row;
+  border-bottom: 1px solid #f4f4f4;
+}
+.header__left {
+  display: flex;
+  width: 256px;
+  height: 100%;
+  margin-left: 14px;
+  flex-direction: row;
+  align-items: center;
+}
+.header__center {
+  display: flex;
+  width: calc(100% - 256px);
+  height: 100%;
+  margin-right: 14px;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+.header__google-buttons {
+  display: flex;
+  flex-direction: row;
+}
+
+/*# sourceMappingURL=header.css.map */

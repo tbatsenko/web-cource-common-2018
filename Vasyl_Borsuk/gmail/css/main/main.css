@@ -1,0 +1,8 @@
+.main__left {
+  width: 256px;
+}
+.main__center {
+  width: calc(100% - 256px);
+}
+
+/*# sourceMappingURL=main.css.map */
