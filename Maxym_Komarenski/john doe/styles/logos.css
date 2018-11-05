@@ -2,7 +2,7 @@
     display: grid;
     grid-template-columns: auto auto auto;
     grid-template-rows: auto;
-    grid-row-gap: 15px;
+    grid-row-gap: 25px;
     grid-template-areas:
             "riot blizzard ."
             "ea disney steam"
@@ -30,6 +30,7 @@
     grid-area: disney;
     width: 130px;
     height: auto;
+    margin-top: 12px;
 }
 
 .steam-logo{
