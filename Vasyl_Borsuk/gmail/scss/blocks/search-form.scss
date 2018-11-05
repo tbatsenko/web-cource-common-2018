@@ -1,0 +1,25 @@
+@import "../colors";
+
+.search-form {
+  display: flex;
+  height: 48px;
+  max-width: 720px;
+  flex-grow: 1;
+  flex-direction: row;
+  align-items: center;
+  background-color: $light-grey;
+  border-radius: 4px;
+
+  &__text-input {
+    display: flex;
+    height: 40px;
+    flex-grow: 1;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border: none;
+    background-color: transparent;
+    font: 400 13px Arial;
+  }
+
+}
