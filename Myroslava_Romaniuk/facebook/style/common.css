@@ -9,8 +9,6 @@ body {
 }
 main {
     margin: auto;
-    position: relative;
-    padding: 0 0 10px 0;
-    width: 800px;
-    background:#fdfeff;
+    width: 850px;
+    background:#e9ebee;
 }
