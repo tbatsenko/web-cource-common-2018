@@ -1,0 +1,37 @@
+@import "variables";
+@import "../colors";
+@import "../base-classes/no-shrink";
+
+.header {
+  @extend %no-shrink;
+  display: flex;
+  height: $header_height;
+  flex-direction: row;
+  border-bottom: 1px solid $light-grey;
+
+  &__left {
+    @extend %no-shrink;
+    display: flex;
+    width: $left-side-width;
+    height: 100%;
+    margin-left: $side-margin;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  &__center {
+    display: flex;
+    width: $center-width;
+    height: 100%;
+    margin-right: $side-margin;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__google-buttons {
+    @extend %no-shrink;
+    display: flex;
+    flex-direction: row;
+  }
+}
