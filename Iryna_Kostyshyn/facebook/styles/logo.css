@@ -1,0 +1,11 @@
+.main-header__logo{
+    line-height: 40px;
+    height: 24px;
+    width: 24px;
+    background-size: 29px 1475px;
+    background: url("https://static.xx.fbcdn.net/rsrc.php/v3/yx/r/tjBuxcd0g0m.png");
+    display: inline-block;
+    overflow: hidden;
+    vertical-align: middle;
+    margin: 0 5px 0 0 ;
+}
