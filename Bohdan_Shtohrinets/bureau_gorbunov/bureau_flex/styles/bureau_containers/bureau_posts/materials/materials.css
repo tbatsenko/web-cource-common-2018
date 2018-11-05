@@ -8,11 +8,8 @@
 
 .materials__image_content {
     width: 100%;
-    height: auto;
 }
-
 .materials__description {
-    color: black;
     margin-left: 10px;
     margin-top: 20px;
     align-self: flex-start;
@@ -29,7 +26,6 @@
     font-weight: 600;
     border-bottom: 2px solid rgba(6, 85, 128, 0.1);
 }
-
 .materials__fonts {
     overflow: hidden;
     display: block;
@@ -65,7 +61,6 @@
     stroke: rgba(0, 0, 0, 0.2);
     stroke-width: .5px;
 }
-
 .fonts__general {
     color: inherit;
     font-size: 16px;
@@ -73,7 +68,6 @@
     font-weight: 100;
     margin-bottom: 21px;
 }
-
 .fonts__other {
     margin-bottom: 21px;
 }
@@ -82,7 +76,6 @@
     text-align: left;
     color: inherit;
 }
-
 .fonts__link {
     right: 150px;
     top: 180px;
@@ -96,7 +89,6 @@
 .fonts__link_school {
     left: 150px;
 }
-
 .fonts__icon {
     width: 40px;
     height: 40px;
@@ -107,7 +99,6 @@
 .fonts__icon_school {
     background: #e20016;
 }
-
 .fonts__title {
     margin-top: 5px;
     font-size: 20px;
@@ -119,7 +110,6 @@
 .fonts__title_school {
     color: #e20016;
 }
-
 .fonts__amount {
     margin-top: 5px;
     color: #fff;
@@ -150,7 +140,6 @@
 .icon__svg_school {
     left: 10px;
 }
-
 .icon__svg-letter {
     fill: #df3d4a;
 }
@@ -167,21 +156,17 @@
     font-size: 24px;
     line-height: 27px;
 }
-
 .general__example {
     font-size: 136px;
     line-height: 1;
 }
-
 .general__name {
     font-size: 35px;
     line-height: 36px;
 }
-
 .general__description {
     margin-top: 5px;
 }
-
 .general__price {
     text-decoration: underline;
     text-decoration-color: #cccccc;
@@ -213,7 +198,6 @@
     background: url("/images/check.svg.png");
     background-size: cover;
 }
-
 .other__price {
     color: #065580;
     text-decoration: underline;
@@ -237,7 +221,6 @@
         margin-left: 0;
     }
 }
-
 @media (max-width: 960px) {
     .materials__description {
         margin-left: 0;
