@@ -244,13 +244,24 @@
   border-radius: 2px;
 }
 .make-comment {
-  background-color: #69f0ae;
+  border-top: 1px solid #e9ebee;
   padding: 8px 12px;
 }
 .make-comment__profile-picture {
   width: 32px;
   height: 32px;
 }
+.comment__input {
+  margin-left: 10px;
+  border-radius: 16px;
+  overflow: hidden;
+  border: 1px solid #dddfe2;
+  background-color: #f2f3f5;
+  width: 100%;
+}
 .comment__input-text {
-  background-color: grey;
+  border: none;
+  font-size: 13px;
+  margin: 5px 5px 5px 10px;
+  background-color: transparent;
 }
