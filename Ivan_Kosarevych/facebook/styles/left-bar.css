@@ -1,0 +1,74 @@
+.left-bar__headers{margin: 0;
+    font-size: 13px;
+    color: #616770;
+}
+.left-bar{
+    display: inline-block;
+    margin-left: 70px;
+    padding-top: 15px;
+    width: 200px;
+    height: 20px;
+}
+.left-bar-element{
+    display: block;
+    padding: 5px;
+    height: 20px;
+    width: 180px;
+}
+.left-bar figure{
+    display: inline-block;
+    height: 20px;
+    width: 20px;
+    vertical-align: middle;
+}
+.left-bar span{
+    display: inline;
+    font-family: Helvetica Arial sans serif;
+    font-size: 13px;
+    color: #1d2129;
+}
+#left-bar-user-ava{
+    background-image: url("https://scontent-waw1-1.xx.fbcdn.net/v/t1.0-1/p24x24/40510012_719582795045559_686510132393148416_n.jpg?_nc_cat=102&oh=f4ad0c61b79c722f8dc94ae9e90388ba&oe=5C412C9C");
+    height: 22px;
+    width: 22px;
+}
+.left-bar__common-icons{
+    margin: 0;
+    display: inline-block;
+    background: url("https://static.xx.fbcdn.net/rsrc.php/v3/yy/r/QT4Bvq9zQeh.png") no-repeat;
+    background-size: auto;
+}
+.date-icons{
+    margin: 0;
+    display: inline-block;
+    background-image: url("https://static.xx.fbcdn.net/rsrc.php/v3/y4/r/D0wJihYZCrT.png");
+    background-size: auto;
+}
+#zbirka{
+    background-position: 0 -1131px;
+}
+#aiconf{
+    background-position: 0 -21px;
+}
+
+#left-bar-events{
+    background-position: 0 0;
+}
+#left-bar-groups{
+    background-position: 0 -144px;
+}
+#left-bar-pages{
+    background-position: 0 -270px;
+}
+#left-bar-friends{
+    background-position: 0 -900px;
+}
+#left-bar-fundraisers{
+    background-position: 0 -963px;
+}
+#left-bar-news{
+    background-position: 0 -1341px;
+}
+#left-bar-messages{
+    background-position: 0 -207px;
+}
