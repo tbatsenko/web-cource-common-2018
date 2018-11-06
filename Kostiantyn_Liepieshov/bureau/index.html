@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="styles/common.css">
 </head>
 <body>
-<header class="header">
+<header class="header header--padding">
     <a class="header__logo" href="" aria-label="БЮРО Горбунова">
         <svg xmlns="http://www.w3.org/2000/svg" width="140px" height="30px" viewBox="0 0 139.811 30">
             <path d="M106.067.044c-9.4,0-15.718,6.444-15.718,15.109,0,8.8,6.183,14.848,14.586,14.848,9.971,0,15.5-7.4,15.5-15.806A14.117,14.117,0,0,0,106.067.044Zm-.784,27.3c-7.141,0-11.93-4.833-11.93-12.192,0-7.663,4.964-12.5,11.843-12.5,7.968,0,12.235,5.356,12.235,11.93C117.431,22.6,112.337,27.344,105.283,27.344ZM7.358,12.54a24.844,24.844,0,0,0-4.485.366V3.169c3.926-.113,8.816-.147,12.54.1V.653H0c.087,2,.174,4.615.218,7.576V29.39H6.1c7.359,0,10.842-3.483,10.842-9.057C16.938,15.065,13.149,12.54,7.358,12.54ZM5.7,26.952H3c-.075-2.325-.122-5.043-.122-7.925v-3.75a23.37,23.37,0,0,1,3.962-.343c4.441,0,7.315,1.611,7.315,5.486C14.151,24.775,11.19,26.952,5.7,26.952ZM75.675.653H69.1c.087,2,.174,4.615.218,7.576V29.39h2.874c-.131-2.743-.218-6.4-.218-10.363V17.676a18.777,18.777,0,0,0,2.264.133c7.75,0,11.887-3.832,11.887-9.4S81.248.653,75.675.653Zm-.74,14.673a21.854,21.854,0,0,1-2.961-.222V2.961h2.917c6.1,0,8.316,2.308,8.316,5.7C83.208,13.411,79.419,15.327,74.935,15.327ZM48.679.044c-8.893,0-15.021,5.762-15.662,13.716H25.472V.653H22.6c.087,2,.174,4.615.218,7.576V29.39h2.874c-.131-2.743-.218-6.4-.218-10.363V16.11h7.515C33.419,24.384,39.453,30,47.547,30c9.971,0,15.5-7.4,15.5-15.806A14.117,14.117,0,0,0,48.679.044Zm-.784,27.3c-7.141,0-11.93-4.833-11.93-12.192,0-7.663,4.964-12.5,11.843-12.5,7.968,0,12.235,5.356,12.235,11.93C60.044,22.6,54.949,27.344,47.9,27.344Zm91.916-12.322-7.446,7.4c-3.353,3.353-4.79,4.877-7.228,7.576l-2.308-1.916c2.525-2.308,3.962-3.7,7.446-7.184l5.912-5.878-5.912-5.878c-3.483-3.483-4.964-4.92-7.489-7.228L125.094,0c2.438,2.7,3.919,4.267,7.271,7.62Z"></path>
@@ -45,7 +45,7 @@
         </svg>
     </a>
 </header>
-<main class="main-content">
+<main class="main-content main-content--padding">
     <article class="top-banner main-content__item">
         <figure class="top-banner__figure container_16">
             <div class="grid grid_13">
@@ -54,26 +54,27 @@
                 </a>
             </div>
             <figcaption class="top-banner__caption grid grid_3">
-                <a href="" class="top-banner__caption--is-link top-banner__caption--custom-underline">Рекламная компания Картерса</a>
+                <a href="" class="top-banner__caption--is-link top-banner__caption--custom-underline">Рекламная компания
+                    Картерса</a>
                 для Шопфана
             </figcaption>
         </figure>
     </article>
     <article class="daily-news main-content__item">
-        <div class="container_16">
-            <section class="grid grid_11 daily-news__section daily-news__section--special-padding daily-news__section--row-first container_16">
-                <div class="b-days-left grid_2" aria-label="calendar-box">
+        <div class="container_16 daily-news__first-row">
+            <section class="grid grid_11 daily-news__section daily-news__section--special-padding container_16">
+                <div class="b-days-left grid grid_2" aria-label="calendar-box">
                     <h1 class="b-days-left__days">14</h1>
                     <p class="b-days-left__text">дней<br/>до конца</p>
                 </div>
-                <div class="grid_14">
+                <div class="grid grid_14">
                     <h1 class="daily-news__title daily-news__title--big">Идёт запись</h1>
                     <p class="daily-news__description"><span class="daily-news__description--bold">Подготовительные курсы в школу:</span>
                         <a class="daily-news__link daily-news__link--custom-underline" href="">учебная программа</a>
                     </p>
                 </div>
             </section>
-            <section class="grid grid_5 daily-news__section daily-news__section--last daily-news__section--row-first">
+            <section class="grid grid_5 daily-news__section daily-news__section--last">
                 <h1 class="daily-news__title">Весной набор в школу</h1>
                 <a class="daily-news__link daily-news__link--custom-underline" href="">Дизайнеров</a><br>
                 <a class="daily-news__link daily-news__link--custom-underline" href="">Редакторов</a><br>
@@ -98,47 +99,61 @@
             </section>
             <section class="grid grid_8 daily-news__section daily-news__section--last">
                 <h1 class="daily-news__title">Интерфейс</h1>
-                <p class="daily-news__description">Я вступил с ребятами в дискуссию по поводу способа написания «копирайта»
+                <p class="daily-news__description">Я вступил с ребятами в дискуссию по поводу способа написания
+                    «копирайта»
                     на сайтах.</p>
                 <a href="" class="daily-news__link daily-news__link--custom-underline">Совет А. Г.</a>
             </section>
         </div>
     </article>
 </main>
-<footer class="footer">
-    <div class="container_16">
-        <section class="grid-4">
+<footer class="footer footer--padding">
+    <div class="container_16 footer__first-row">
+        <section class="grid grid_4">
             <p class="footer__text">
                 Дизайн Бюро<br>
                 Артёма Горбунова
             </p>
         </section>
-        <section class="grid-12 ">
-            <a href="" class="footer__text footer__text--is-link">Стать клиентом</a>
+        <section class="grid grid_12">
+            <a href="" class="footer__link footer__link--custom-underline footer__link--custom-underline-red">Стать
+                клиентом</a>
         </section>
     </div>
     <div class="container_16">
-        <section class="grid-4">
-            <a href="mailto:mail@artgorbunov.ru" class="footer__text footer__text--is-link">
+        <section class="grid grid_4">
+            <a href="mailto:mail@artgorbunov.ru"
+               class="footer__link footer__link--custom-underline footer__link--custom-underline-red">
                 mail@artgorbunov.ru
             </a><br/>
-            <a href="tel:+74956468489">+7 495 646‑84‑89</a>
+            <a class="footer__link" href="tel:+74956468489">+7 495 646‑84‑89</a>
         </section>
-        <section class="grid-6">
+        <section class="grid grid_6">
             <address>Большая Новодмитровская улица, 36, строение 2<br/>
                 Москва, Россия, 127015
             </address>
         </section>
-        <section class="grid-6">
+        <section class="grid grid_6">
             <section class="external-resources">
-                <a class="external-resources__item"></a>
-                <a class="external-resources__item"></a>
-                <a class="external-resources__item"></a>
-                <a class="external-resources__item"></a>
-                <a class="external-resources__item"></a>
+                <a href="" class="external-resources__item">
+                    <svg class="external-resources__img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30"><path class="bg" d="M27.9,30c1.1,0,2-0.8,2.1-1.9c0,0,0,0,0-0.1v-0.1V2.1C30,1,29.2,0,28.1,0c0,0,0,0-0.1,0H2.1C1,0,0,0.8,0,1.9C0,2,0,2,0,2s0,0,0,0.1v25.8c0,1.1,0.8,2,1.9,2.1c0,0,0,0,0.1,0H27.9z"></path><path class="front" d="M24.9,9.5c-0.2-0.9-0.9-1.7-1.8-1.9C19.9,6.8,15,6.9,15,6.9v0c0,0-5-0.1-8.2,0.7C5.9,7.8,5.2,8.6,5,9.5c-0.5,1.7-0.5,5.1-0.5,5.1c0,0.7,0.1,3.5,0.5,4.9c0.2,0.9,0.9,1.7,1.8,1.9c3.2,0.8,8.2,0.7,8.2,0.7v0c0,0,4.9,0.1,8.1-0.7c0.9-0.2,1.6-1,1.8-1.9c0.4-1.4,0.5-4.2,0.5-4.9C25.4,14.6,25.4,11.2,24.9,9.5z M13,17.7v-6.3l5.4,3.2L13,17.7z"></path></svg>
+                </a>
+                <a href="" class="external-resources__item">
+                    <svg class="external-resources__img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30"><path class="bg" d="M27.9,30c1.1,0,2-0.8,2.1-1.9c0,0,0,0,0-0.1v-0.1V2.1C30,1,29.2,0,28.1,0c0,0,0,0-0.1,0H2.1C1,0,0,0.8,0,1.9C0,2,0,2,0,2s0,0,0,0.1v25.8c0,1.1,0.8,2,1.9,2.1c0,0,0,0,0.1,0H27.9z"></path><path class="front" d="M24.9,9.5c-0.2-0.9-0.9-1.7-1.8-1.9C19.9,6.8,15,6.9,15,6.9v0c0,0-5-0.1-8.2,0.7C5.9,7.8,5.2,8.6,5,9.5c-0.5,1.7-0.5,5.1-0.5,5.1c0,0.7,0.1,3.5,0.5,4.9c0.2,0.9,0.9,1.7,1.8,1.9c3.2,0.8,8.2,0.7,8.2,0.7v0c0,0,4.9,0.1,8.1-0.7c0.9-0.2,1.6-1,1.8-1.9c0.4-1.4,0.5-4.2,0.5-4.9C25.4,14.6,25.4,11.2,24.9,9.5z M13,17.7v-6.3l5.4,3.2L13,17.7z"></path></svg>
+                </a>
+                <a href="" class="external-resources__item">
+                    <svg class="external-resources__img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30"><path class="bg" d="M27.9,30c1.1,0,2-0.8,2.1-1.9c0,0,0,0,0-0.1v-0.1V2.1C30,1,29.2,0,28.1,0c0,0,0,0-0.1,0H2.1C1,0,0,0.8,0,1.9C0,2,0,2,0,2s0,0,0,0.1v25.8c0,1.1,0.8,2,1.9,2.1c0,0,0,0,0.1,0H27.9z"></path><path class="front" d="M24.9,9.5c-0.2-0.9-0.9-1.7-1.8-1.9C19.9,6.8,15,6.9,15,6.9v0c0,0-5-0.1-8.2,0.7C5.9,7.8,5.2,8.6,5,9.5c-0.5,1.7-0.5,5.1-0.5,5.1c0,0.7,0.1,3.5,0.5,4.9c0.2,0.9,0.9,1.7,1.8,1.9c3.2,0.8,8.2,0.7,8.2,0.7v0c0,0,4.9,0.1,8.1-0.7c0.9-0.2,1.6-1,1.8-1.9c0.4-1.4,0.5-4.2,0.5-4.9C25.4,14.6,25.4,11.2,24.9,9.5z M13,17.7v-6.3l5.4,3.2L13,17.7z"></path></svg>
+                </a>
+                <a href="" class="external-resources__item">
+                    <svg class="external-resources__img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30"><path class="bg" d="M27.9,30c1.1,0,2-0.8,2.1-1.9c0,0,0,0,0-0.1v-0.1V2.1C30,1,29.2,0,28.1,0c0,0,0,0-0.1,0H2.1C1,0,0,0.8,0,1.9C0,2,0,2,0,2s0,0,0,0.1v25.8c0,1.1,0.8,2,1.9,2.1c0,0,0,0,0.1,0H27.9z"></path><path class="front" d="M24.9,9.5c-0.2-0.9-0.9-1.7-1.8-1.9C19.9,6.8,15,6.9,15,6.9v0c0,0-5-0.1-8.2,0.7C5.9,7.8,5.2,8.6,5,9.5c-0.5,1.7-0.5,5.1-0.5,5.1c0,0.7,0.1,3.5,0.5,4.9c0.2,0.9,0.9,1.7,1.8,1.9c3.2,0.8,8.2,0.7,8.2,0.7v0c0,0,4.9,0.1,8.1-0.7c0.9-0.2,1.6-1,1.8-1.9c0.4-1.4,0.5-4.2,0.5-4.9C25.4,14.6,25.4,11.2,24.9,9.5z M13,17.7v-6.3l5.4,3.2L13,17.7z"></path></svg>
+                </a>
+                <a href="" class="external-resources__item">
+                    <svg class="external-resources__img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30"><path class="bg" d="M27.9,30c1.1,0,2-0.8,2.1-1.9c0,0,0,0,0-0.1v-0.1V2.1C30,1,29.2,0,28.1,0c0,0,0,0-0.1,0H2.1C1,0,0,0.8,0,1.9C0,2,0,2,0,2s0,0,0,0.1v25.8c0,1.1,0.8,2,1.9,2.1c0,0,0,0,0.1,0H27.9z"></path><path class="front" d="M24.9,9.5c-0.2-0.9-0.9-1.7-1.8-1.9C19.9,6.8,15,6.9,15,6.9v0c0,0-5-0.1-8.2,0.7C5.9,7.8,5.2,8.6,5,9.5c-0.5,1.7-0.5,5.1-0.5,5.1c0,0.7,0.1,3.5,0.5,4.9c0.2,0.9,0.9,1.7,1.8,1.9c3.2,0.8,8.2,0.7,8.2,0.7v0c0,0,4.9,0.1,8.1-0.7c0.9-0.2,1.6-1,1.8-1.9c0.4-1.4,0.5-4.2,0.5-4.9C25.4,14.6,25.4,11.2,24.9,9.5z M13,17.7v-6.3l5.4,3.2L13,17.7z"></path></svg>
+                </a>
             </section>
             <section class="language-selector">
-                <a href="" class="language-selector__item language-selector__item--is-active"
+                <a href=""
+                   class="language-selector__item language-selector__item--custom-underline language-selector__item--custom-underline-black language-selector__item--is-active"
                    aria-label="russian">РУ</a>
                 <a href="" class="language-selector__item" aria-label="englishe">EN</a>
             </section>

@@ -90,6 +90,9 @@
   margin-top: 50px;
 }
 
+.daily-news__first-row {
+  border-bottom: 1px solid var(--border-color);
+}
 .daily-news__figure {
   margin: 0;
 }
@@ -110,21 +113,19 @@
   margin: 5px 0;
   font-size: 24px;
 }
+.daily-news__link {
+  line-height: 26px;
+}
 .daily-news__section {
-  border-color: var(--border-color);
-  border-style: solid;
-  border-width: 0 1px 0 0;
+  border-right: 1px solid var(--border-color);
   padding: 10px;
-  height: 100%;
+  min-height: 100%;
 }
 .daily-news__section--special-padding {
   padding: 0 31px 31px 0;
 }
 .daily-news__section--last {
-  border-right: 0;
-}
-.daily-news__section--row-first {
-  border-bottom-width: 1px;
+  border-right: none;
 }
 
 .b-days-left {
@@ -144,11 +145,52 @@
   font-size: 16px;
 }
 
+.footer {
+  line-height: 20px;
+  width: calc(100% - 200px);
+  padding-bottom: 50px;
+}
+.footer__text {
+  margin: 0;
+}
+.footer__link {
+  color: #000;
+  text-decoration: none;
+}
+.footer__first-row {
+  padding-bottom: 25px;
+}
+
+.language-selector {
+  display: flex;
+  font-size: 25px;
+}
+.language-selector__item {
+  margin-top: -0.4em;
+  color: var(--key-color);
+  text-decoration: none;
+}
+.language-selector__item--active {
+  color: #000;
+}
+
+.external-resources {
+  display: flex;
+}
+.external-resources__item {
+  margin-left: 5px;
+  max-height: 100%;
+}
+.external-resources__img {
+  width: 100%;
+}
+
 :root {
   --key-color: rgb(226, 0, 22);
   --blue-color: rgb(6, 85, 128);
   --link-underline: rgba(6, 85, 128, .1);
   --border-color: rgba(0, 0, 0, .07);
+  --key-link-underline: rgba(226, 0, 22, .1);
 }
 
 html, body {
@@ -170,13 +212,12 @@ html, body {
   font-variant-position: normal;
 }
 
-.main-content, .header {
-  padding-left: 100px;
-  padding-right: 100px;
+.main-content--padding, .header--padding, .footer--padding {
+  margin-left: 100px;
+  margin-right: 100px;
 }
 
-.daily-news__link--custom-underline, .top-banner__caption--custom-underline {
-  line-height: 26px;
+.daily-news__link--custom-underline, .top-banner__caption--custom-underline, .footer__link--custom-underline, .language-selector__item--custom-underline {
   background-image: linear-gradient(180deg, var(--link-underline) 0, var(--link-underline));
   background-repeat: repeat-x;
   background-position: 0 90%;
@@ -185,10 +226,20 @@ html, body {
   padding-bottom: 5px;
   color: var(--blue-color);
 }
-.daily-news__link--custom-underline:hover, .top-banner__caption--custom-underline:hover {
+.daily-news__link--custom-underline:hover, .top-banner__caption--custom-underline:hover, .footer__link--custom-underline:hover, .language-selector__item--custom-underline:hover {
   color: var(--key-color);
   background: linear-gradient(180deg, var(--key-color) 0, var(--key-color)) repeat-x 0 90%;
   background-size: 1px 1px;
+}
+.daily-news__link--custom-underline-red, .top-banner__caption--custom-underline-red, .footer__link--custom-underline-red, .language-selector__item--custom-underline-red {
+  background: linear-gradient(180deg, var(--key-link-underline) 0, var(--key-link-underline)) repeat-x 0 90%;
+  background-size: 1px 1px;
+  color: var(--key-color);
+}
+.daily-news__link--custom-underline-black, .top-banner__caption--custom-underline-black, .footer__link--custom-underline-black, .language-selector__item--custom-underline-black {
+  background: linear-gradient(180deg, #000 0, #000) repeat-x 0 90%;
+  background-size: 1px 1px;
+  color: #000;
 }
 
 /*# sourceMappingURL=common.css.map */
