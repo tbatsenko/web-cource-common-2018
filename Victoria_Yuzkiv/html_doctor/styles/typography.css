@@ -27,3 +27,12 @@ h3{
     line-height: 1.2;
     font-family: 'Quicksand', 'Helvetica Neue', Arial, sans-serif;
 }
+
+article{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font: inherit;
+    vertical-align: baseline;
+}
