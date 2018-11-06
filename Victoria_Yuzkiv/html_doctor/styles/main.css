@@ -4,7 +4,8 @@
 @import "typography.css";
 @import "glossary.css";
 @import "header.css";
-@import "article-section.css";
+@import "post-section.css";
+@import "comments-section.css";
 
 body {
     margin: 0;
@@ -12,7 +13,6 @@ body {
     background: #F0F0F0;
     font-family: Georgia, serif;
     color: #444;
-
 }
 
 .whole-header {
@@ -34,36 +34,4 @@ body {
     padding: 24px 0 0 0;
     width: 1020px;
     overflow: hidden;
-}
-
-.entry {
-    float: right;
-    width: 500px;
-}
-
-.entry > p:first-of-type {
-    font-size: 1.18em;
-    line-height: 1.55;
-}
-
-.mod {
-    font-size: 14px;
-    clear: left;
-    margin: 0 0 40px 0;
-}
-
-.mod h3 {
-    color: #888;
-    margin: 0 0 5px;
-    padding: 10px 0;
-    text-transform: uppercase;
-}
-
-.mod ul li {
-    border-bottom: 1px solid #DDD;
-    display: block;
-    line-height: 1.4;
-    padding: 8px 10px 8px 0;
-    overflow: hidden;
-    text-overflow: ellipsis;
 }
