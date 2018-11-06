@@ -16,7 +16,7 @@ body{
 
 .whole-header {
     background: #0063A6;
-    height: 215px;
+    height: 200px;
     width: 100%;
 }
 
@@ -25,9 +25,6 @@ body{
     margin: auto;
     position: relative;
 }
-
-
-
 
 
 #content{
