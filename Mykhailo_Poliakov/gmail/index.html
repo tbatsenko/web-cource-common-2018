@@ -26,52 +26,24 @@
   
     <section class="sidebar">
         <button class="compose-button"><span class="compose-button__icon"></span>Compose</button>
-        <nav class="sidebar__menu">
-            <script class="sidebar__template" type="text/x-handlebars-template">
-                <a href="#" class="sidebar__link sidebar__link--active">
-                    <span class="sidebar__icon sidebar__icon--active">inbox</span>Inbox
-                </a>
-                {{#each links}}
-                <a href="#" class="sidebar__link">
-                    <span class="sidebar__icon">{{icon}}</span>{{text}}
-                </a>
-                {{/each}}
-            </script>
-        </nav>
+        <nav class="sidebar__menu"></nav>
     </section>
 
     <main class="main">
         <nav class="main__control"></nav>
-        <section class="main__email-container">
-            <script class="email__template" type="text/x-handlebars-template">
-                {{#each emails}}
-                <article class="email">
-                    <label class="checkbox">
-                        <input type="checkbox" class="checkbox__input" />
-                        <span class="checkbox__style"></span>
-                    </label>
-                    <label class="checkbox checkbox--star">
-                        <input type="checkbox" class="checkbox__input" />
-                        <span class="checkbox__style"></span>
-                    </label>    
-                    <h1 class="email__from">{{from}}</h1>
-                    <h1 class="email__theme">{{theme}} </h1>
-                    <p class="email__text">  
-                        - Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-                        Vivamus augue nulla, porta a velit vitae, imperdiet cursus nibh. 
-                        Sed pulvinar a velit a rhoncus. Maecenas id sagittis justo. 
-                        Vivamus ac metus quis libero ullamcorper faucibus. 
-                        Sed ac mauris rhoncus, lacinia quam quis, interdum leo. 
-                        Vivamus iaculis tristique metus eget pellentesque. 
-                    </p>
-                    <time class="email__date">{{date}}</time>
-                </article>
-                {{/each}}
-            </script>
-        </section>
+        <section class="main__emails"></section>
     </main>
-    
-    <script src="templates/sidebar.js"></script>
-    <script src="templates/email.js"></script>
+
+    <script>
+        const render = async (templateURL, dataURL, className) => {
+            const source = await (await fetch("templates/" + templateURL)).text();
+            const template = Handlebars.compile(source);
+            const data = await (await fetch("templates/" + dataURL)).json();
+            document.querySelector(className).insertAdjacentHTML('beforeEnd', template(data));
+        };
+
+        render("email.handlebars", "email.json", ".main__emails")
+        render("sidebar.handlebars", "sidebar.json", ".sidebar__menu")
+    </script>
 </body>
 </html>
