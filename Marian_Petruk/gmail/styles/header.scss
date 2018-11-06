@@ -1,7 +1,7 @@
 .header {
   height: 64px;
   padding: 8px;
-  background: red;
+  background: #e74c3c;
   box-sizing: border-box;
   display: flex;
   justify-content: flex-start;
@@ -21,20 +21,34 @@
     height: 24px;
     padding: 12px;
     margin: 0 4px;
-    //border-radius: 50%;
+    border-radius: 50%;
     //display: inline-block;
     //overflow: hidden;
     //vertical-align: middle;
     border: 0;
-    background: #1E88E5;
+    //background: #1E88E5;
+    box-sizing: content-box;
     //color: white;
-
+  }
+  &__menu-button:hover {
+    background: rgba(0, 0, 0, 0.071);
   }
 
   &__menu-icon {
     //color: black;
     width: 24px;
     height: 24px;
+  }
+
+  &__logo {
+    //position: relative;
+    //top:2px;
+
+  }
+  &__logo-icon {
+    width: 109px;
+    height: 40px;
+    margin: 4px 0px 0px -1px;
   }
 
 }
