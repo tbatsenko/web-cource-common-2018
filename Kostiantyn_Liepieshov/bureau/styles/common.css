@@ -160,13 +160,17 @@
 .footer__first-row {
   padding-bottom: 25px;
 }
+.footer__section--last {
+  display: flex;
+}
 
 .language-selector {
   display: flex;
   font-size: 25px;
+  width: 100px;
+  justify-content: space-around;
 }
 .language-selector__item {
-  margin-top: -0.4em;
   color: var(--key-color);
   text-decoration: none;
 }
@@ -175,14 +179,17 @@
 }
 
 .external-resources {
+  flex: auto;
   display: flex;
+  max-height: 100%;
+  justify-content: flex-end;
 }
 .external-resources__item {
   margin-left: 5px;
-  max-height: 100%;
 }
 .external-resources__img {
-  width: 100%;
+  display: block;
+  max-height: 2.5em;
 }
 
 :root {
