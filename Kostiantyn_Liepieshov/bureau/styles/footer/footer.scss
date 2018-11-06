@@ -17,6 +17,9 @@
       display: flex;
     }
   }
+  &__external-resources {
+    margin-right: 15px;
+  }
 }
 
 .language-selector {
@@ -36,14 +39,26 @@
 .external-resources {
   flex: auto;
   display: flex;
-  max-height: 100%;
   justify-content: flex-end;
 
   &__item {
     margin-left: 5px;
   }
+}
+
+.social-media-link {
+  &__name {
+    color: transparent;
+    position: absolute;
+  }
   &__img {
     display: block;
     max-height: 2.5em;
+  }
+  &__front {
+    fill: rgb(255, 255, 255);
+  }
+  &__back {
+    fill: rgb(0, 0, 0);
   }
 }
