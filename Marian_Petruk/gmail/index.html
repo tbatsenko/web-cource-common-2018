@@ -21,11 +21,14 @@
         container.innerHTML = template(data);
     };
 
-    // render("templates/main.handlebars", "data/converstation.json", document.body);
+    // render("templates/main.handlebars", "data/converstation.json", document.body.handlebars);
 
     const renderPage = async () => {
         await render("templates/main.handlebars", "data/common.json", document.body);
         await render("templates/header.handlebars", "data/common.json", document.getElementById('gmail-header'));
+        await render("templates/aside.handlebars", "data/common.json", document.getElementById('gmail-aside'));
+        await render("templates/body.handlebars", "data/common.json", document.getElementById('gmail-body'));
+
     };
 
     renderPage();
