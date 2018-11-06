@@ -1,0 +1,41 @@
+.footer {
+  line-height: 20px;
+  width: calc(100% - 200px);
+  padding-bottom: 50px;
+  &__text {
+    margin: 0;
+  }
+  &__link {
+    color: #000;
+    text-decoration: none;
+  }
+  &__first-row {
+    padding-bottom: 25px;
+  }
+}
+
+.language-selector {
+  display: flex;
+  font-size: 25px;
+  &__item {
+    margin-top: -0.4em;
+    color: var(--key-color);
+    text-decoration: none;
+    &--active {
+      color: #000;
+    }
+  }
+}
+
+.external-resources {
+  display: flex;
+
+  &__item {
+    margin-left: 5px;
+    //width: 27px;
+    max-height: 100%;
+  }
+  &__img {
+    width: 100%;
+  }
+}

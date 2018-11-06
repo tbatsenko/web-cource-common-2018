@@ -2,12 +2,14 @@
 @import "content/top-banner";
 @import "main-content";
 @import "daily-news/daily-news";
+@import "footer/footer";
 
 :root {
   --key-color: rgb(226, 0, 22);
   --blue-color: rgb(6, 85, 128);
   --link-underline: rgba(6, 85, 128, .1);
   --border-color: rgba(0, 0, 0, .07);
+  --key-link-underline: rgba(226, 0, 22, .1);
 }
 
 html, body {
@@ -29,18 +31,12 @@ html, body {
   font-variant-position: normal;
 }
 
-.main-content, .header {
-  padding-left: 100px;
-  padding-right: 100px;
+.main-content--padding, .header--padding, .footer--padding {
+  margin-left: 100px;
+  margin-right: 100px;
 }
 
-.daily-news__link--custom-underline, .top-banner__caption--custom-underline {
-  &:hover {
-    color: var(--key-color);
-    background: linear-gradient(180deg, var(--key-color) 0, var(--key-color)) repeat-x 0 90%;
-    background-size: 1px 1px;
-  }
-  line-height: 26px;
+.daily-news__link--custom-underline, .top-banner__caption--custom-underline, .footer__link--custom-underline, .language-selector__item--custom-underline {
   background-image: linear-gradient(180deg, var(--link-underline) 0, var(--link-underline));
   background-repeat: repeat-x;
   background-position: 0 90%;
@@ -48,4 +44,19 @@ html, body {
   text-decoration: none;
   padding-bottom: 5px;
   color: var(--blue-color);
+  &:hover {
+    color: var(--key-color);
+    background: linear-gradient(180deg, var(--key-color) 0, var(--key-color)) repeat-x 0 90%;
+    background-size: 1px 1px;
+  }
+  &-red {
+    background: linear-gradient(180deg, var(--key-link-underline) 0, var(--key-link-underline)) repeat-x 0 90%;
+    background-size: 1px 1px;
+    color: var(--key-color);
+  }
+  &-black {
+    background: linear-gradient(180deg, #000 0, #000) repeat-x 0 90%;
+    background-size: 1px 1px;
+    color: #000;
+  }
 }
