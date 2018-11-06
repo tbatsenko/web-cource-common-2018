@@ -1,6 +1,6 @@
 .main-feed{
     width: 500px;
-    margin-top: 50px;
+    margin-top: 10px;
     margin-right: 5px;
     vertical-align: top;
     display: flex;
@@ -32,6 +32,12 @@
     padding: 5px;
     color: rgb(54, 88, 153);
     background-color: inherit;
+}
+
+.make_post__main{
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
 }
 
 .make_post__input{
@@ -68,3 +74,6 @@
     background-color: #ecf0f1;
 }
 
+.make-post__footer-button--more{
+    width: 44px;
+}

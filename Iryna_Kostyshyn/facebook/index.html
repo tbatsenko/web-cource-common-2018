@@ -16,6 +16,7 @@
 </head>
 <body>
     <header class="main-header">
+        <div class="main-header__content">
         <a class="main-header__logo" href="#" name="Facebook"></a>
         <form class="header-search" action="/" method="get">
             <input class="header-search__input" type="text" name="q" required><!--
@@ -34,6 +35,7 @@
                 <button class="main-header-navigation__button main-header-navigation__button--submenu">Open submenu</button>
 
         </nav>
+        </div>
     </header>
     <div class="container">
     <nav class="side-navigation">
@@ -80,12 +82,16 @@
                 <button class="make-post__header-button">Photo/Video Album</button>
                 <button class="make-post__header-button">Live Video</button>
             </header>
-            <textarea class="make_post__input" placeholder="Що у вас на думці, Ira?">
-            </textarea>
+            <main class="make_post__main">
+                <img class="main-feed__user-avatar" src="https://avatars1.githubusercontent.com/u/25458097?s=400&v=4" alt="profile photo">
+                <input class="make_post__input" placeholder="Що у вас на думці, Ira?">
+
+            </main>
             <footer class="make_post__footer">
                 <button class="make-post__footer-button">Photo/Video</button>
                 <button class="make-post__footer-button">Tag Friends</button>
                 <button class="make-post__footer-button">Felling/Activity</button>
+                <button class="make-post__footer-button make-post__footer-button--more">...</button>
             </footer>
         </form>
 
@@ -122,30 +128,31 @@
             <a class="right-side-block__story-navigation"href="#">Налаштування</a>
         </header>
         <div class="story">
-        <img class="main-feed__user-avatar" src="https://avatars1.githubusercontent.com/u/25458097?s=400&v=4" alt="profile photo">
-        <p>Поділіться світлиною, відео або напишіть щось</p>
+        <img class="right-side-block__user-avatar" src="https://avatars1.githubusercontent.com/u/25458097?s=400&v=4" alt="profile photo">
+        <p class="right-side-block__help-text">Поділіться світлиною, відео або напишіть щось</p>
         </div>
         <div class="story">
-        <img class="main-feed__user-avatar" src="https://avatars1.githubusercontent.com/u/25458097?s=400&v=4" alt="profile photo">
-        <p>Дмитро Наконечний</p>
-        <small>23 години тому</small>
+        <img class="right-side-block__user-avatar" src="https://avatars1.githubusercontent.com/u/25458097?s=400&v=4" alt="profile photo">
+        <p class="right-side-block__user-name">Дмитро Наконечний</p>
+        <p class="right-side-block__help-text">23 години тому</p>
         </div>
         <div class="story">
-        <img class="main-feed__user-avatar" src="https://avatars1.githubusercontent.com/u/25458097?s=400&v=4" alt="profile photo"><p>Віра Тухлій</p>
-        <small>9 годин тому</small>
+        <img class="right-side-block__user-avatar" src="https://avatars1.githubusercontent.com/u/25458097?s=400&v=4" alt="profile photo">
+            <p class="right-side-block__user-name">Віра Тухлій</p>
+        <p class="right-side-block__help-text">9 годин тому</p>
         </div>
     </section>
-    <section class="right-side-block__event"><p>4 запрошення на події</p></section>
-    <section class="right-side-block__pages"><h5>Ваша Сторінка</h5>
-        <img src="" alt="page photo"> Факультет прикладних наук
-    <a href="" >Повідомлення</a>
-    <a href="" >Сповіщення</a>
-    <hr>
-        <a href=""> Опублікувати</a> <a href="" >Світлина</a> <a href=""> Наживо</a> <a href="" >Запросити друзів</a>
-    <hr>
-    <button>Вподобання</button> <button>Перегляди</button> <button>Дописи</button>
-    <h3>3787</h3>
-        <p><small>16 нових вподобань цього тижня</small></p>
+    <section class="right-side-block__event">
+        <a href="#">4 запрошення на події</a>
+    </section>
+    <section class="right-side-block__pages">
+        <header class="right-side-block__pages-head">
+            <a class="right-side-block__story-name" href="#"> Ваша Сторінка</a>
+            <a class="right-side-block__story-navigation" href="#">Переглянути всі</a>
+        </header>
+
+        <img class="right-side-block__pages-to-like-photo" src="https://scontent.fiev12-1.fna.fbcdn.net/v/t1.0-0/s417x417/22814519_1473528489433960_7986790218313159823_n.jpg?_nc_cat=105&_nc_ht=scontent.fiev12-1.fna&oh=580663f16409e489c0559c2272751b08&oe=5C77FE8B" alt="page photo">
+        <button class="like-button">Вподобати цю сторінку</button>
     <hr>
     </section>
             <section class="right-side-block__language-selection">
