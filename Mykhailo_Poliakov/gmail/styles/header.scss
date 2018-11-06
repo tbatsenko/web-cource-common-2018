@@ -4,54 +4,56 @@
     border-bottom: 1px solid #eceff1;
     box-sizing: border-box;
     display: flex;
-}
 
-.main-menu {
-    flex-grow: 1;
-    display: flex;
-    align-items: center;
-
-    .main-menu__icon {
-        font-family: 'Material Icons';
-        font-size: 24px;
-        background: transparent;
-        margin-right: 16px;
-        margin-left: 24px;
-        color: #6d6d6d;
+    &__menu {
+        flex-grow: 1;
+        display: flex;
+        align-items: center;
     }
 
-    .main-menu__button {
+    &__icon {
         @extend %icon;
-    }
-
-    .main-menu__button:hover {
-        color: #000000;
-    }
-
-    .main-menu__button--menu {
         margin-right: 16px;
         margin-left: 24px;
     }
 
-    .main-menu__logo {
+    &__button {
+        @extend %icon;
+        border: 0;
+        padding: 0;
+        outline: 0;
+        &:hover {
+            color: #000000;
+            cursor: pointer;
+        }
+    
+    }
+
+   
+    &__button--menu {
+        margin-right: 16px;
+        margin-left: 24px;
+    }
+
+    &__logo {
         background: url(../images/logo.png);
         background-size: 109px 40px;
         height: 40px;
         width: 109px;
     }
 
-    .main-menu__button--apps {
+    &__button--apps {
         margin-right: 24px;
         margin-left: auto;
     }
 
-    .main-menu__profile {
+    &__profile {
         background: url(../images/photo.jpg);
         background-size: 32px;
         height: 32px;
         width: 32px;
         border-radius: 50%;
         margin: 0 20px;
+        border: 0;
     }
 }
-

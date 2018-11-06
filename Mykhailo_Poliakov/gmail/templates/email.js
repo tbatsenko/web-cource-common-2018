@@ -22,4 +22,4 @@ var context = {
     ]
 };
 
-document.querySelector(".email-container").insertAdjacentHTML('beforeend', template(context));
+document.querySelector(".main__email-container").insertAdjacentHTML('beforeend', template(context));
