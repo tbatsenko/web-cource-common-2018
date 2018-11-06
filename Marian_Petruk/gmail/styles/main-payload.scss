@@ -1,5 +1,31 @@
 .gmail-body {
   height: 575px;
   width: calc(100% - var(--gmail-aside-width));
-  background: blue;
+  background: #2980b9;
+}
+
+.header-gmail-emails {
+  height: 48px;
+  width: 100%;
+  background: #ecf0f1;
+}
+
+.gmail-emails-main {
+  width: 100%;
+  height: calc(100% - 48px);
+  background: #f39c12;
+}
+
+.gmail-emails {
+  width: 100%;
+  height: auto;
+  background: #8e44ad;
+}
+
+.gmail-footer {
+  height: 40px;
+  width: 100%;
+  margin-top: 16px;
+  margin-bottom: 16px;
+  background: #2c3e50;
 }
