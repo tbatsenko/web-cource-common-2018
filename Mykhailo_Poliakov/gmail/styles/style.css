@@ -153,7 +153,7 @@ body {
   .main__control {
     height: 48px;
     border-bottom: 1px solid #eceff1; }
-  .main__email-container {
+  .main__emails {
     background: #f4f7f7;
     overflow-y: scroll;
     height: calc(100vh - 112px); }

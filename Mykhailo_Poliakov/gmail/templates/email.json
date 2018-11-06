@@ -1,8 +1,4 @@
-
-var code = document.querySelector('.email__template').innerHTML;
-var template = Handlebars.compile(code);
-
-var context = {
+{
     "emails": [
         {"from": "Google", "theme": "Theme", "date": "Oct 30"},
         {"from": "Facebook", "theme": "Theme Long", "date": "Oct 29"},
@@ -20,6 +16,4 @@ var context = {
         {"from": "Facebook", "theme": "Theme Long", "date": "Jul 24"},
         {"from": "Instagram", "theme": "Theme Long Long", "date": "Jul 23"}
     ]
-};
-
-document.querySelector(".main__email-container").insertAdjacentHTML('beforeend', template(context));
+}
