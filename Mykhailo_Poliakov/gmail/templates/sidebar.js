@@ -1,9 +1,8 @@
-var code = document.querySelector('.sidebar-menu__template').innerHTML;
+var code = document.querySelector('.sidebar__template').innerHTML;
 var template = Handlebars.compile(code);
 
 var context = {
-    "buttons": [
-        {"icon": "inbox", "text": "Inbox"},
+    "links": [
         {"icon": "star", "text": "Starred"},
         {"icon": "watch_later", "text": "Snoozed"},
         {"icon": "send", "text": "Sent"},
@@ -13,4 +12,4 @@ var context = {
     ]
 };
 
-document.querySelector(".sidebar-menu").insertAdjacentHTML('beforeend', template(context));
+document.querySelector(".sidebar__menu").insertAdjacentHTML('beforeend', template(context));

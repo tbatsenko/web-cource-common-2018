@@ -1,9 +1,12 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto');
 @import url('https://fonts.googleapis.com/icon?family=Material+Icons');
+
+@import 'common';
 @import 'body';
 @import 'header';
 @import 'search';
-@import 'compose';
+@import 'compose-button';
 @import 'sidebar';
 @import 'main';
+@import 'email';
 @import 'checkbox';
