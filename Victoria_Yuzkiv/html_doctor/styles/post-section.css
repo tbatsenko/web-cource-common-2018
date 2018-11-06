@@ -19,32 +19,34 @@
     color: #888;
     font: bold 12px/16px 'Helvetica Neue', Arial, sans-serif;
     letter-spacing: 1px;
-    line-height: 16px;
 }
 
-.article__post header {
-    margin: -30px 0 20px;
+.article__post__head {
+    margin: -45px 0 20px;
     padding: 0 0 10px 166px;
-
 }
 
-.article__post h1 {
+.article__post__head-main {
     line-height: 1.3;
     margin-bottom: auto;
 }
 
-.article__post header small {
+.article__post__head-additional {
     color: #888;
     font-style: italic;
     font-size: 14px;
 }
 
-.article p {
+.article__post__text {
     width: 500px;
     margin-left: 165px;
 }
 
-.article__comments{
+.article__post__read-more {
+    margin-left: 165px;
+}
+
+.article__comments {
     padding: 0 20px 0 0;
     width: 270px;
 }

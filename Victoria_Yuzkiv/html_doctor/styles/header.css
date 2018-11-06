@@ -12,12 +12,10 @@
 .main-header__right-navigation li a {
     color: white;
     text-decoration: none;
-
 }
 
 .main-header__right-navigation li:after {
     content: " | ";
-
 }
 
 .main-header__main-navigation {
