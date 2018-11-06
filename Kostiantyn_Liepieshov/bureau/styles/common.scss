@@ -41,6 +41,13 @@ html, body {
     margin-left: 20px;
     margin-right: 20px;
   }
+  .nav {
+    overflow-x: scroll;
+    flex-wrap: nowrap;
+  }
+  .footer__section--last {
+    margin: 20px;
+  }
 }
 
 .daily-news__link--custom-underline, .top-banner__caption--custom-underline, .footer__link--custom-underline, .language-selector__item--custom-underline {
