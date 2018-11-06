@@ -46,7 +46,7 @@
     </a>
 </header>
 <main class="main-content">
-    <article class="top-banner">
+    <article class="top-banner main-content__item">
         <figure class="top-banner__figure container_16">
             <div class="grid grid_13">
                 <a href="" aria-label="children-project">
@@ -54,47 +54,55 @@
                 </a>
             </div>
             <figcaption class="top-banner__caption grid grid_3">
-                <a href="" class="top-banner__caption--is-link">Рекламная компания Картера</a>
+                <a href="" class="top-banner__caption--is-link top-banner__caption--custom-underline">Рекламная компания Картерса</a>
                 для Шопфана
             </figcaption>
         </figure>
     </article>
-    <article class="daily-news">
-        <section class="grid_11">
-            <div class="b-days-left" aria-label="calendar-box">
-                <h1 class="b-days-left__days">14</h1>
-                <p class="b-days-left__text">дней до конца</p>
-            </div>
-            <h1 class="daily-news__title daily-news__title--big">Идёт запись</h1>
-            <p class="daily-news__description"><span class="daily-news__description--bold">Подготовительные курсы в школу:</span>
-                <a class="daily-news__link" href="">учебная программа</a>
-            </p>
-        </section>
-        <section class="grid_5">
-            <h1 class="daily-news__title">Весной набор в школу</h1>
-            <a class="daily-news__link" href="">Дизайнеров</a>
-            <a class="daily-news__link" href="">Редакторов</a>
-            <a class="daily-news__link" href="">Руководителей</a>
-        </section>
-        <section class="grid_4 daily-news__daily-icon-section">
-            <a class="daily-news__link" href="">Иконка дня</a>
-            <figure>
-                <img class="daily-news__daily-icon" src="images/icon-of-the-day.jpeg" alt="icon-of-the-day">
-                <figcaption class="daily-news__daily-icon-description">Кувалда</figcaption>
-            </figure>
-            <a href="" class="daily-new__link">Телеграм Сергея Чикина</a>
-        </section>
-        <section class="grid_4">
-            <h1 class="daily-news__title">Техноведро</h1>
-            <p class="daily-news__description">«Сеточ­ность» на сайте бюро</p>
-            <a href="" class="daily-news__link">Рассказ Юрия Мазур­ского</a>
-        </section>
-        <section class="grid_8">
-            <h1 class="daily-news__title">Интерфейс</h1>
-            <p class="daily-news__description">Я вступил с ребятами в дискуссию по поводу способа написания «копирайта»
-                на сайтах.</p>
-            <a href="" class="daily-news__link">Совет А. Г.</a>
-        </section>
+    <article class="daily-news main-content__item">
+        <div class="container_16">
+            <section class="grid grid_11 daily-news__section daily-news__section--special-padding daily-news__section--row-first container_16">
+                <div class="b-days-left grid_2" aria-label="calendar-box">
+                    <h1 class="b-days-left__days">14</h1>
+                    <p class="b-days-left__text">дней<br/>до конца</p>
+                </div>
+                <div class="grid_14">
+                    <h1 class="daily-news__title daily-news__title--big">Идёт запись</h1>
+                    <p class="daily-news__description"><span class="daily-news__description--bold">Подготовительные курсы в школу:</span>
+                        <a class="daily-news__link daily-news__link--custom-underline" href="">учебная программа</a>
+                    </p>
+                </div>
+            </section>
+            <section class="grid grid_5 daily-news__section daily-news__section--last daily-news__section--row-first">
+                <h1 class="daily-news__title">Весной набор в школу</h1>
+                <a class="daily-news__link daily-news__link--custom-underline" href="">Дизайнеров</a><br>
+                <a class="daily-news__link daily-news__link--custom-underline" href="">Редакторов</a><br>
+                <a class="daily-news__link daily-news__link--custom-underline" href="">Руководителей</a>
+            </section>
+        </div>
+        <div class="container_16">
+            <section class="grid grid_4 daily-news__section daily-news__daily-icon-section">
+                <h1 class="daily-news__title">
+                    Иконка дня
+                </h1>
+                <figure class="daily-news__figure">
+                    <img class="daily-news__daily-icon" src="images/icon-of-the-day.jpeg" alt="icon-of-the-day">
+                    <figcaption class="daily-news__daily-icon-description">Кувалда</figcaption>
+                </figure>
+                <a href="" class="daily-new__link daily-news__link--custom-underline">Телеграм Сергея Чикина</a>
+            </section>
+            <section class="grid grid_4 daily-news__section">
+                <h1 class="daily-news__title">Техноведро</h1>
+                <p class="daily-news__description">«Сеточ­ность» на сайте бюро</p>
+                <a href="" class="daily-news__link daily-news__link--custom-underline">Рассказ Юрия Мазур­ского</a>
+            </section>
+            <section class="grid grid_8 daily-news__section daily-news__section--last">
+                <h1 class="daily-news__title">Интерфейс</h1>
+                <p class="daily-news__description">Я вступил с ребятами в дискуссию по поводу способа написания «копирайта»
+                    на сайтах.</p>
+                <a href="" class="daily-news__link daily-news__link--custom-underline">Совет А. Г.</a>
+            </section>
+        </div>
     </article>
 </main>
 <footer class="footer">

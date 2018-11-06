@@ -1,7 +1,7 @@
 .header {
   height: 64px;
   padding: 8px;
-  background: red;
+  background: #e74c3c;
   box-sizing: border-box;
   display: flex;
   justify-content: flex-start;
@@ -20,12 +20,21 @@
   height: 24px;
   padding: 12px;
   margin: 0 4px;
+  border-radius: 50%;
   border: 0;
-  background: #1E88E5;
+  box-sizing: content-box;
+}
+.logo_part__menu-button:hover {
+  background: rgba(0, 0, 0, 0.071);
 }
 .logo_part__menu-icon {
   width: 24px;
   height: 24px;
+}
+.logo_part__logo-icon {
+  width: 109px;
+  height: 40px;
+  margin: 4px 0px 0px -1px;
 }
 
 :root {
@@ -35,13 +44,53 @@
 .google-mail-aside {
   width: var(--gmail-aside-width);
   height: 575px;
-  background: green;
+  background: #27ae60;
+}
+.google-mail-aside__write-button {
+  width: 72px;
+  height: 80px;
+  border-radius: 28px;
+  font-size: 0;
+  padding: 0;
+}
+.google-mail-aside__write-button-logo {
+  width: 32px;
+  height: 32px;
+}
+.google-mail-aside__navigation {
+  height: 24px;
 }
 
 .gmail-body {
   height: 575px;
   width: calc(100% - var(--gmail-aside-width));
-  background: blue;
+  background: #2980b9;
+}
+
+.header-gmail-emails {
+  height: 48px;
+  width: 100%;
+  background: #ecf0f1;
+}
+
+.gmail-emails-main {
+  width: 100%;
+  height: calc(100% - 48px);
+  background: #f39c12;
+}
+
+.gmail-emails {
+  width: 100%;
+  height: auto;
+  background: #8e44ad;
+}
+
+.gmail-footer {
+  height: 40px;
+  width: 100%;
+  margin-top: 16px;
+  margin-bottom: 16px;
+  background: #2c3e50;
 }
 
 body {
