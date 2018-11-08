@@ -1,0 +1,139 @@
+{
+    "aside-buttons": [
+        {
+            "image": "https://www.gstatic.com/images/icons/material/system/1x/inbox_black_20dp.png",
+            "text": "Income",
+            "counter": "10"
+        },
+        {
+            "image": "https://www.gstatic.com/images/icons/material/system/1x/grade_black_20dp.png",
+            "text": "Stared"
+        },
+
+        {
+            "image": "https://www.gstatic.com/images/icons/material/system/1x/watch_later_black_20dp.png",
+            "text": "Postponed"
+        },
+        {
+            "image": "https://www.gstatic.com/images/icons/material/system/1x/label_important_black_20dp.png",
+            "text": "Important"
+        },
+        {
+            "image": "https://www.gstatic.com/images/icons/material/system/1x/send_black_20dp.png",
+            "text": "Sended"
+        },
+        {
+            "image": "https://www.gstatic.com/images/icons/material/system/1x/insert_drive_file_black_20dp.png",
+            "text": "Notes",
+            "counter": "2"
+        }
+    ],
+    "email-sections": [
+        {
+            "image": "https://www.gstatic.com/images/icons/material/system/1x/inbox_black_20dp.png",
+            "text": "Main"
+        },
+        {
+            "image": "https://www.gstatic.com/images/icons/material/system/1x/people_black_20dp.png",
+            "text": "Social"
+        },
+        {
+            "image": "https://www.gstatic.com/images/icons/material/system/1x/local_offer_black_20dp.png",
+            "text": "Advertisments"
+        }
+    ],
+
+    "emails": [
+        {
+            "heading": "Lorem ipsum dolores arturo vivaldi",
+            "text": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Praesentium rem dolorem exercitationem incidunt delectus asperiores ex facere voluptatibus, explicabo beatae dicta eius, magnam minima ipsa minus hic aperiam? Illo, dolore.",
+            "time": "22:36"
+        },
+        {
+            "heading": "Lorem ipsum dolores arturo vivaldi",
+            "text": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Praesentium rem dolorem exercitationem incidunt delectus asperiores ex facere voluptatibus, explicabo beatae dicta eius, magnam minima ipsa minus hic aperiam? Illo, dolore.",
+            "time": "22:36"
+        },
+        {
+            "heading": "Lorem ipsum dolores arturo vivaldi",
+            "text": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Praesentium rem dolorem exercitationem incidunt delectus asperiores ex facere voluptatibus, explicabo beatae dicta eius, magnam minima ipsa minus hic aperiam? Illo, dolore.",
+            "time": "22:36"
+        },
+        {
+            "heading": "Lorem ipsum dolores arturo vivaldi",
+            "text": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Praesentium rem dolorem exercitationem incidunt delectus asperiores ex facere voluptatibus, explicabo beatae dicta eius, magnam minima ipsa minus hic aperiam? Illo, dolore.",
+            "time": "22:36"
+        },
+        {
+            "heading": "Lorem ipsum dolores arturo vivaldi",
+            "text": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Praesentium rem dolorem exercitationem incidunt delectus asperiores ex facere voluptatibus, explicabo beatae dicta eius, magnam minima ipsa minus hic aperiam? Illo, dolore.",
+            "time": "22:36"
+        },
+        {
+            "heading": "Lorem ipsum dolores arturo vivaldi",
+            "text": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Praesentium rem dolorem exercitationem incidunt delectus asperiores ex facere voluptatibus, explicabo beatae dicta eius, magnam minima ipsa minus hic aperiam? Illo, dolore.",
+            "time": "22:36"
+        },
+        {
+            "heading": "Lorem ipsum dolores arturo vivaldi",
+            "text": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Praesentium rem dolorem exercitationem incidunt delectus asperiores ex facere voluptatibus, explicabo beatae dicta eius, magnam minima ipsa minus hic aperiam? Illo, dolore.",
+            "time": "22:36"
+        },
+        {
+            "heading": "Lorem ipsum dolores arturo vivaldi",
+            "text": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Praesentium rem dolorem exercitationem incidunt delectus asperiores ex facere voluptatibus, explicabo beatae dicta eius, magnam minima ipsa minus hic aperiam? Illo, dolore.",
+            "time": "22:36"
+        },
+        {
+            "heading": "Lorem ipsum dolores arturo vivaldi",
+            "text": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Praesentium rem dolorem exercitationem incidunt delectus asperiores ex facere voluptatibus, explicabo beatae dicta eius, magnam minima ipsa minus hic aperiam? Illo, dolore.",
+            "time": "22:36"
+        },
+        {
+            "heading": "Lorem ipsum dolores arturo vivaldi",
+            "text": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Praesentium rem dolorem exercitationem incidunt delectus asperiores ex facere voluptatibus, explicabo beatae dicta eius, magnam minima ipsa minus hic aperiam? Illo, dolore.",
+            "time": "22:36"
+        },
+
+        {
+            "heading": "Lorem ipsum dolores arturo vivaldi",
+            "text": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Praesentium rem dolorem exercitationem incidunt delectus asperiores ex facere voluptatibus, explicabo beatae dicta eius, magnam minima ipsa minus hic aperiam? Illo, dolore.",
+            "time": "22:36"
+        },
+        {
+            "heading": "Lorem ipsum dolores arturo vivaldi",
+            "text": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Praesentium rem dolorem exercitationem incidunt delectus asperiores ex facere voluptatibus, explicabo beatae dicta eius, magnam minima ipsa minus hic aperiam? Illo, dolore.",
+            "time": "22:36"
+        },
+        {
+            "heading": "Lorem ipsum dolores arturo vivaldi",
+            "text": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Praesentium rem dolorem exercitationem incidunt delectus asperiores ex facere voluptatibus, explicabo beatae dicta eius, magnam minima ipsa minus hic aperiam? Illo, dolore.",
+            "time": "22:36"
+        },
+        {
+            "heading": "Lorem ipsum dolores arturo vivaldi",
+            "text": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Praesentium rem dolorem exercitationem incidunt delectus asperiores ex facere voluptatibus, explicabo beatae dicta eius, magnam minima ipsa minus hic aperiam? Illo, dolore.",
+            "time": "22:36"
+        },
+        {
+            "heading": "Lorem ipsum dolores arturo vivaldi",
+            "text": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Praesentium rem dolorem exercitationem incidunt delectus asperiores ex facere voluptatibus, explicabo beatae dicta eius, magnam minima ipsa minus hic aperiam? Illo, dolore.",
+            "time": "22:36"
+        },
+        {
+            "heading": "Lorem ipsum dolores arturo vivaldi",
+            "text": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Praesentium rem dolorem exercitationem incidunt delectus asperiores ex facere voluptatibus, explicabo beatae dicta eius, magnam minima ipsa minus hic aperiam? Illo, dolore.",
+            "time": "22:36"
+        },
+        {
+            "heading": "Lorem ipsum dolores arturo vivaldi",
+            "text": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Praesentium rem dolorem exercitationem incidunt delectus asperiores ex facere voluptatibus, explicabo beatae dicta eius, magnam minima ipsa minus hic aperiam? Illo, dolore.",
+            "time": "22:36"
+        },
+        {
+            "heading": "Lorem ipsum dolores arturo vivaldi",
+            "text": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Praesentium rem dolorem exercitationem incidunt delectus asperiores ex facere voluptatibus, explicabo beatae dicta eius, magnam minima ipsa minus hic aperiam? Illo, dolore.",
+            "time": "22:36"
+        }
+    ]
+}
