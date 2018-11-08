@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <link rel="stylesheet" href="styles/colors.css">
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/fonts.css">
+    <link rel="stylesheet" href="styles/disabled-indentation/disabled_indentation.css">
+    <link rel="stylesheet" href="styles/hidden-text/hidden-text.css">
+
+    <link rel="stylesheet" href="styles/header/header.css">
+    <link rel="stylesheet" href="styles/header/__logo/header__logo.css">
+    <link rel="stylesheet" href="styles/header/__search-form/header__search-form.css">
+    <link rel="stylesheet" href="styles/header/__icons-nav/header__icons-nav.css">
+
+    <link rel="stylesheet" href="styles/logo/logo.css">
+
+    <link rel="stylesheet" href="styles/search-form/search-form.css">
+    <link rel="stylesheet" href="styles/search-form/search-form__text/search-form__text.css">
+
+    <link rel="stylesheet" href="styles/icon-button/icon-button.css">
+    <link rel="stylesheet" href="styles/icon-button/_type/icon-button_type_activity.css">
+    <link rel="stylesheet" href="styles/icon-button/_type/icon-button_type_search.css">
+    <link rel="stylesheet" href="styles/icon-button/_type/icon-button_type_profile.css">
+
+    <link rel="stylesheet" href="styles/icons-nav/icons-nav.css">
+    <link rel="stylesheet" href="styles/icons-nav/__search/icons-nav__search.css">
+    <link rel="stylesheet" href="styles/icons-nav/__activity/icons-nav__activity.css">
+    <link rel="stylesheet" href="styles/icons-nav/__profile/icons-nav__profile.css">
+
+    <link rel="stylesheet" href="styles/list/_undotted/list_undotted.css">
+    <link rel="stylesheet" href="styles/list/list.css">
+    <link rel="stylesheet" href="styles/list/__item/list__item.css">
+
+    <link rel="stylesheet" href="styles/main/content/content.css">
+    <link rel="stylesheet" href="styles/main/content/article/article.css">
+
+    <title>Instagram</title>
+</head>
+<body class="disabled-indentation">
+    <header class="header">
+        <h1 class="disabled-indentation">
+            <a href="#" class="header__logo logo-icon logo-text">Instagram</a>
+        </h1>
+        <form class="header_search-form search-form">
+            <input type="text" placeholder="Search" class="search-form__text">
+        </form>
+        <nav class="header__icons-nav icons-nav">
+            <ul class="list list_undotted list_row">
+                <li class="list__item">
+                    <button class="icons-nav__search icon-button icon-button_type_search">Search</button>
+                </li>
+                <li class="list__item">
+                    <button class="icons-nav__activity icon-button icon-button_type_activity">Activity</button>
+                </li>
+                <li class="list__item">
+                    <button class="icons-nav__profile icon-button icon-button_type_profile">Profile</button>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <main class="main">
+        <section class="content">
+            <article class="article">
+                <header class="article__header">
+                    <p class="name"><span class="photo"></span>max_voloskiy</p>
+                </header>
+                <section class="article__content">
+                    <img src="https://res.cloudinary.com/maxvoloskiy/image/upload/h_500,w_500/v1541650457/don_t_let_idiots.jpg">
+                </section>
+                <section class="article__activity">
+                    <ul class="list list_undotted list_row">
+                        <li class="list_item"><button class="article__activity--likes icon-button icon-button_type_activity">Like</button></li>
+                        <li class="list_item"><button class="article__activity--comment icon-button icon-button_type_comment">Comment</button></li>
+                        <li class="list_item"><button class="article__activity--share icon-button icon-button_type_share">Share</button></li>
+                        <li class="list_item"><button class="article__activity--save icon-button icon-button_type_save">Save</button></li>
+                    </ul>
+                </section>
+                <section class="article__likes">
+                    <p><span class="num_likes"></span> likes </p>
+                </section>
+                <section class="article__comments">
+                    <ul class="list list_undotted list_column">
+                        <li class="list_item">
+                            <p class="comment"><span class="name"></span></p>
+                        </li>
+                        <li class="list_item"><p class="comment"><span class="name"></span></p></li>
+                        <li class="list_item"><p class="comment"><span class="name"></span></p></li>
+                    </ul>
+                </section>
+                <time class="article__time"></time>
+                <form class="article__form">
+                    <input type="text" placeholder="Add comment" class="article__form--comment">
+                    <button class="article__form--button"></button>
+                </form>
+            </article>
+        </section>
+        <aside>
+            <header></header>
+            <section></section>
+            <section></section>
+            <footer></footer>
+        </aside>
+    </main>
+</body>
+</html>
