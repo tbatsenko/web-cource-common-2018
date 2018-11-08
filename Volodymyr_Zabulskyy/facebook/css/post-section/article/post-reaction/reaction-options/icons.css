@@ -1,0 +1,18 @@
+.post-section__article__post-reaction__reaction-options_share, .post-section__article__post-reaction__reaction-options_comment, .post-section__article__post-reaction__reaction-options_like {
+    margin-right: 3px;
+    height: 18px;
+    width: 18px;
+    background: url("https://static.xx.fbcdn.net/rsrc.php/v3/yl/r/xxqRJkcZ0ly.png");
+}
+
+.post-section__article__post-reaction__reaction-options_share {
+    background-position: 0 -293px;
+}
+
+.post-section__article__post-reaction__reaction-options_comment {
+    background-position: -19px -198px;
+}
+
+.post-section__article__post-reaction__reaction-options_like {
+    background: url("https://static.xx.fbcdn.net/rsrc.php/v3/yf/r/palWVhMO67o.png") -389px -245px;
+}

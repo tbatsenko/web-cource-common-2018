@@ -1,0 +1,23 @@
+.profile-tools {
+    display: flex;
+    background: white;
+    padding: 0 100px;
+    justify-content: end;
+}
+
+.profile-tools__item, .profile-tools__item_first {
+    padding: 10px 15px;
+    border-right: 1px solid #e9eaed;
+
+    color: #365899;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.profile-tools__item_first {
+    border-left: 1px solid #e9eaed;
+}
+
+.profile-tools__item:hover {
+    background: #eee;
+}
