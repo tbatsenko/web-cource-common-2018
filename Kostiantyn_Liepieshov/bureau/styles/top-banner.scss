@@ -1,3 +1,5 @@
+@import "__mixins";
+
 .top-banner {
   &__image {
     width: 100%;
@@ -7,6 +9,9 @@
   }
 
   &__caption {
+    &--custom-underline {
+      @include text-underline();
+    }
     &--is-link {
       &:after {
         content: "\A";
