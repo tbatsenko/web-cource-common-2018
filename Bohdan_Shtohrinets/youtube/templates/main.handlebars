@@ -1,0 +1,181 @@
+<div class="youtube">
+    <header class="youtube__header">
+        {{#header}}
+            {{#side-menu-button}}
+                <button class="header__side-menu-btn" title="{{title}}">
+                    <svg class="side-menu-btn__svg" viewBox="0 0 24 24">
+                        <path d="{{svg-path}}"></path>
+                    </svg>
+                </button>
+            {{/side-menu-button}}
+            <a class="youtube__logo" href="#">
+                {{#logo}}
+                    <svg class="logo__image" viewBox="0 0 200 60">
+                        <g class="logo__youtube-button">
+                            {{#youtube-btn}}
+                                <path class="youtube-button__bg" d="{{svg-path-bg}}">
+                                </path>
+                                <polygon class="youtube-button__play" points="{{svg-path-play}}"></polygon>
+                            {{/youtube-btn}}
+                        </g>
+                        <g class="logo__youtube-sign">
+                            {{#youtube-sign}}
+                                {{#letters}}
+                                    <path class="youtube-sign__letter" d="{{.}}"></path>
+                                {{/letters}}
+                            {{/youtube-sign}}
+                        </g>
+                    </svg>
+                {{/logo}}
+            </a>
+            <form action="/" class="header__search">
+                <input class="search__input-field" type="text" placeholder="Search" name="search"/>
+                <button class="search__button" type="submit">Search</button>
+            </form>
+            <form class="header__more-actions">
+                <button class="more-actions__option more-actions__create_video" name="Create video or post">
+                    <svg class="more-actions__svg" viewBox="0 0 24 24">
+                        <path class="svg__path"
+                              d="M17 10.5V7c0-.55-.45-1-1-1H4c-.55 0-1 .45-1 1v10c0 .55.45 1 1 1h12c.55 0 1-.45 1-1v-3.5l4 4v-11l-4 4zM14 13h-3v3H9v-3H6v-2h3V8h2v3h3v2z"></path>
+                    </svg>
+                </button>
+                <button class="more-actions__option more-actions__youtube-apps" name="Youtube Apps">
+                    <svg class="more-actions__svg" viewBox="0 0 24 24">
+                        <path class="svg__path"
+                              d="M4 8h4V4H4v4zm6 12h4v-4h-4v4zm-6 0h4v-4H4v4zm0-6h4v-4H4v4zm6 0h4v-4h-4v4zm6-10v4h4V4h-4zm-6 4h4V4h-4v4zm6 6h4v-4h-4v4zm0 6h4v-4h-4v4z"></path>
+                    </svg>
+                </button>
+                <button class="more-actions__option more-actions__message" name="Messages">
+                    <svg class="more-actions__svg" viewBox="0 0 24 24">
+                        <path class="svg__path"
+                              d="M12.04 4C17 4 21 7.7 21 12.3c0 4.57-4 8.28-8.96 8.28-1.76 0-3.4-.47-4.8-1.28-.15-.1-.35-.1-.52-.04-1.58.68-2.8.88-3.45.93-.2 0-.34-.26-.22-.4.6-.9 1.08-1.8 1.43-2.5.1-.2.1-.46-.04-.65C3.58 15.4 3.1 13.9 3.1 12.3c0-4.6 4-8.3 8.94-8.3zm1.6 9.56v1.58c0 .17.22.25.34.13l3.43-3.34c.1-.07.1-.2 0-.27L14 8.32c-.12-.12-.33-.04-.33.13V10c0 .1-.07.18-.17.2-3.38.52-5.04 2.73-5.74 5.1-.06.2.2.34.32.2 1.3-1.42 3.05-2.1 5.4-2.13.1 0 .2.1.2.2z"></path>
+                    </svg>
+                </button>
+                <button class="more-actions__option more-actions__notification" name="Notifications">
+                    <svg class="more-actions__svg" viewBox="0 0 24 24">
+                        <path class="svg__path"
+                              d="M12 22c1.1 0 2-.9 2-2h-4c0 1.1.9 2 2 2zm6-6v-5c0-3.07-1.64-5.64-4.5-6.32V4c0-.83-.67-1.5-1.5-1.5s-1.5.67-1.5 1.5v.68C7.63 5.36 6 7.92 6 11v5l-2 2v1h16v-1l-2-2z"></path>
+                    </svg>
+                </button>
+                <button class="more-actions__option more-actions__option_user">User button</button>
+            </form>
+        {{/header}}
+    </header>
+    <aside class="youtube__side-menu">
+        {{#side-menu}}
+            <nav class="side-menu__navigation">
+                {{#main-nav}}
+                    <div class="navigation__option navigation__option{{modify}}">
+                        <svg class="navigation__svg">
+                            <path class="navigation__icon-path navigation__icon-path{{modify}}" d="{{svg-path}}"></path>
+                        </svg>
+                        <a class="navigation__link navigation__link{{modify}}" href="#">{{link-name}}</a>
+                    </div>
+                {{/main-nav}}
+            </nav>
+            <nav class="side-menu__navigation">
+                {{#library}}
+                    <h4 class="navigation__title">{{nav-title}}</h4>
+                    {{#options}}
+                        <div class="navigation__option">
+                            <svg class="navigation__svg">
+                                <path class="navigation__icon-path" d="{{svg-path}}"></path>
+                            </svg>
+                            <a class="navigation__link" href="#">{{link-name}}</a>
+                        </div>
+                    {{/options}}
+                {{/library}}
+            </nav>
+            <nav class="side-menu__navigation">
+                {{#subscriptions}}
+                    <h4 class="navigation__title">{{nav-title}}</h4>
+                    {{#options}}
+                        <div class="navigation__option">
+                            <img class="navigation__channel-logo" src="{{img-path}}" alt="Web-dev">
+                            <a class="navigation__link" href="#">{{channel-name}}</a>
+                        </div>
+                    {{/options}}
+                {{/subscriptions}}
+            </nav>
+            <div class="side-menu__navigation">
+                {{#more-on-youtube}}
+                    <h4 class="navigation__title">{{nav-title}}</h4>
+                    {{#options}}
+                        <div class="navigation__option">
+                            <svg class="navigation__svg">
+                                {{#if svg-path}}
+                                    <path class="navigation__icon-path" d="{{svg-path.[0]}}"></path>
+                                {{else}}
+                                    <path class="navigation__icon-path" d="{{svg-paths.[0]}}"></path>
+                                    <circle class="navigation__icon-path" cx="12" cy="12" r="3"></circle>
+                                {{/if}}
+                            </svg>
+                            <a class="navigation__link" href="#">{{link-name}}</a>
+                        </div>
+                    {{/options}}
+                {{/more-on-youtube}}
+            </div>
+            <nav class="side-menu__navigation">
+                {{#settings}}
+                    {{#options}}
+                        <div class="navigation__option">
+                            <svg class="navigation__svg">
+                                {{#if svg-path}}
+                                    <path class="navigation__icon-path" d="{{svg-path.[0]}}"></path>
+                                {{else}}
+                                    <path class="navigation__icon-path navigation__icon-path_no-fill"
+                                          d="{{svg-paths.[0]}}"></path>
+                                    <path class="navigation__icon-path" d="{{svg-paths.[1]}}"></path>
+                                {{/if}}
+                            </svg>
+                            <a class="navigation__link" href="#">{{link-name}}</a>
+                        </div>
+                    {{/options}}
+                {{/settings}}
+            </nav>
+            <footer class="side-menu__footer">
+                {{#footer}}
+                    {{#navigation}}
+                        <nav class="footer__navigation">
+                            {{#options}}
+                                <a href="#" class="footer__link">{{.}}</a>
+                            {{/options}}
+                        </nav>
+                    {{/navigation}}
+                    <small class="footer__copyright">{{copyright}}</small>
+                {{/footer}}
+            </footer>
+        {{/side-menu}}
+    </aside>
+    <main class="youtube__video-content">
+        {{#video-content}}
+            <section class="video-content__section">
+                {{#recommended}}
+                    <h4 class="section__title">{{title}}</h4>
+                    <div class="video-content__videos">
+                        {{#videos}}
+                            <a class="videos__video-link" href="#">
+                                <video class="videos__source" poster="{{poster}}">
+                                    <source src="{{video-src}}">
+                                </video>
+                                <h4 class="videos__title">{{title}}</h4>
+                                <div class="videos__details">
+                                    <span class="videos__author">
+                                        {{author}}
+                                        <svg class="videos__svg videos__svg_{{svg-disabled}}" viewBox="0 0 24 24">
+                                            <path class="svg__path svg__path{{svg-disabled}}"
+                                                  d="M12,2C6.48,2,2,6.48,2,12s4.48,10,10,10s10-4.48,10-10 S17.52,2,12,2z M9.92,17.93l-4.95-4.95l2.05-2.05l2.9,2.9l7.35-7.35l2.05,2.05L9.92,17.93z"></path>
+                                        </svg>
+                                    </span>
+                                    <p class="videos__views">{{views}}</p>
+                                    <time class="videos__date" datetime="">{{date}}</time>
+                                </div>
+                            </a>
+                        {{/videos}}
+                    </div>
+                    <button class="section__show-more-videos">{{show-more-btn}}</button>
+                {{/recommended}}
+            </section>
+        {{/video-content}}
+    </main>
+</div>
