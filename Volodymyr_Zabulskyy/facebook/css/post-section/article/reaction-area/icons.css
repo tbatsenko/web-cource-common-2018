@@ -1,0 +1,20 @@
+
+.post-section__article__reaction-area__love, .post-section__article__reaction-area__thumbsup{
+    float: left;
+    background: url("https://static.xx.fbcdn.net/rsrc.php/v3/yl/r/xxqRJkcZ0ly.png");
+    height: 16px;
+    width: 16px;
+    margin-right: 2px;
+}
+
+.post-section__article__reaction-area__who-reacted{
+    float: left;
+}
+
+.post-section__article__reaction-area__thumbsup {
+    background-position: -17px -526px;
+}
+
+.post-section__article__reaction-area__love {
+    background-position: 0 -509px;
+}

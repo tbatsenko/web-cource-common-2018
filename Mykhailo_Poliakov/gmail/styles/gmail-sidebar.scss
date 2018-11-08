@@ -1,0 +1,42 @@
+.gmail-sidebar {
+    min-width: 256px;
+    align-self:flex-start;
+    &__link {
+        height: 32px;
+        margin-right: 16px;
+        background: transparent; 
+        display: flex;
+        align-items: center;
+        border-radius: 0 16px 16px 0;
+        line-height: 20px;
+        text-decoration: none;
+        color: #202124;
+        
+        &:hover {
+            background: #f0f2f4;
+        }
+    }
+
+    &__icon {
+        @extend %icon;
+        font-size: 20px;
+        margin-left: 26px;
+        margin-right: 18px;
+        color: #747474;
+    }
+
+    &__link--active {
+        background: #fce8e6; 
+        font-weight: 1000;
+        font-size: 14px;
+        letter-spacing: .3px;
+        color: #d73429;
+  
+       
+    }  
+
+    &__icon--active {
+        color: #d73429;
+    }
+
+}

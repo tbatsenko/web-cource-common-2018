@@ -1,0 +1,23 @@
+.more-posts__post-list {
+    float: left;
+    width: 685px;
+    margin: 0 18px 0 0;
+    padding: 0 18px 0 0;
+    position: relative;
+    border-right: 4px solid #F0F0F0;
+}
+
+.more-posts__button {
+    clear: both;
+    margin: 4px 20px 1.5em;
+    text-align: center;
+}
+
+.more-posts__sponsors {
+    float: left;
+    padding: 0 20px 0 0;
+    width: 270px;
+    border: none;
+}
+
+/*# sourceMappingURL=more-posts.css.map */

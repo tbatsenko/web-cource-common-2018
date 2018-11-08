@@ -2,7 +2,7 @@
     margin: 100px auto;
     padding: 40px;
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     flex-direction: row;
     background-color: #ffffff;
     max-width: 1600px;

@@ -15,14 +15,12 @@
     text-align: left;
     color: #181818;
 }
-
 .brands__list {
     margin-top: 30px;
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
 }
-
 .brands__item {
     flex-grow: 1;
     margin-right: 25px;

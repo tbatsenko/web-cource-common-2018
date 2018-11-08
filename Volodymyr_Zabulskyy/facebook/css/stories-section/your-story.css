@@ -1,0 +1,19 @@
+.stories-panel__your-story_img {
+    width: 24px;
+    height: 24px;
+    background: url("https://static.xx.fbcdn.net/rsrc.php/v3/yd/r/8M2_U-8yMz7.png") 0 -180px;
+
+}
+
+.stories-panel__your-story_img-container {
+    margin-right: .5em;
+    border-radius: 50%;
+    border: 1px solid #dadde1;
+    background: #f5f6f7;
+    min-height: 52px;
+    min-width: 52px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    padding: 2px;
+}
