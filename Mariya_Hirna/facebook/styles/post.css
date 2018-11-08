@@ -1,0 +1,168 @@
+.post-header{
+    display: flex;
+    flex-direction: row;
+}
+
+.post-header__container{
+    display: flex;
+    flex-direction: column;
+}
+
+.post__avatar{
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+}
+
+.post-header__icon{
+    width: 12px;
+    height: 12px;
+}
+
+.post__action-icon{
+    width: 20px;
+    height: 20px;
+}
+
+.post-content{
+    display: flex;
+    flex-direction: column;
+}
+
+.post__text{
+    font-size: 14px;
+}
+
+.post__name{
+    color: #365899;
+    font-size: 14px;
+    font-weight: 600;
+    margin: unset;
+
+}
+
+.post__small-text{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 17px;
+}
+
+.post__time{
+    font-size: 12px;
+    color: #616770;
+    margin: unset;
+}
+
+.post-react{
+    display: flex;
+    flex-direction: row;
+}
+
+.post-react__container{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 5px;
+    height: 32px;
+    width: 139px;
+    justify-content: center;
+}
+
+.react-container__icon{
+    width: 18px;
+    height: 18px;
+    margin-right: 6px;
+}
+
+.react-container__text{
+    font-size: 13px;
+    font-weight: 600;
+    color: #616770;
+}
+
+
+.create-post{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 153px;
+    padding: 0px;
+}
+
+.create-post__form{
+    display: flex;
+    flex-direction: column;
+}
+
+.create-post__top{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: #f5f6f7;
+    border-bottom: #90949c solid 1px;
+}
+
+.create-post__avatar{
+    height: 40px;
+    width: 40px;
+    margin: 12px 0px 0px 12px;
+}
+
+.create-post__textarea{
+    margin: 12px;
+    width: 436px;
+    border-width: 0px;
+    font-size: 14px;
+}
+
+.post-bottom{
+    display: flex;
+    flex-direction: row;
+}
+
+.post-middle{
+    display: flex;
+    flex-direction: row;
+}
+
+.post-top__container{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0px 10px 0px 10px;
+    height: 33px;
+}
+
+.post-top__text{
+    font-size: 12px;
+}
+
+.post-top__icon{
+    width: 16px;
+    height: 16px;
+}
+
+.post-bottom__container{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 32px;
+    background: #f5f6f7;
+    border-radius: 18px;
+    margin: 6px;
+}
+
+.post-bottom__icon{
+    width: 20px;
+    height: 20px;
+    padding: 7px;
+}
+
+.post-bottom__text{
+    font-size: 12px;
+    color: #4b4f56;
+    font-weight: 600;
+    margin: 0;
+    padding-right: 15px;
+}

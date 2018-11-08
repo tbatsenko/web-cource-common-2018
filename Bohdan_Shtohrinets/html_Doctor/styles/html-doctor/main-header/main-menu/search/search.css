@@ -1,0 +1,24 @@
+.search__input-field {
+    width: 100%;
+    height: 100%;
+    border: none;
+    border-radius: 3px;
+    position: absolute;
+    padding-left: 10px;
+    background-color: #eeeeee;
+}
+
+.search__button {
+    padding: 2px 5px;
+    display: block;
+    position: absolute;
+    top: 4px;
+    right: 5px;
+    border-radius: 3px;
+    font-size: 14px;
+    color: white;
+    border: 1px solid #7f8c8d;
+    background: linear-gradient(#52a8e8 20%, #2e76cf 100%);
+}
+
+/*# sourceMappingURL=search.css.map */
