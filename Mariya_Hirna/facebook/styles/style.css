@@ -111,10 +111,13 @@ a, strong{
     height: 12px;
 }
 
+
 .create-post{
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
     height: 153px;
+    padding: 0px;
 }
 
 .create-post__form{
@@ -128,6 +131,18 @@ a, strong{
     background-color: #f5f6f7;
 }
 
+.create-post__avatar{
+    height: 40px;
+    width: 40px;
+    margin-left: 12px;
+}
+
+.create-post_textarea{
+    margin: 12px;
+    width: 436px;
+    border-width: 0px;
+}
+
 .post-bottom{
     display: flex;
     flex-direction: row;
@@ -136,6 +151,7 @@ a, strong{
 .post-middle{
     display: flex;
     flex-direction: row;
+    height: 71px;
 }
 
 .post-top__container{
