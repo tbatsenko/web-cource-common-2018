@@ -1,0 +1,15 @@
+.hidden-text {
+  text-indent: -9999em;
+  white-space: nowrap;
+  overflow: hidden;
+}
+.icon-button {
+  text-indent: -9999em;
+  white-space: nowrap;
+  overflow: hidden;
+  border: none;
+  background: transparent url("../../img/sprite.png") no-repeat;
+  cursor: pointer;
+  display: block;
+}
+/*# sourceMappingURL=icon-button.css.map */
