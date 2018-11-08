@@ -1,0 +1,49 @@
+.message {
+    margin-left: 16px;
+    margin-top: 1px;
+    display: flex;
+    flex-direction: row;
+
+    &__avatar {
+        width: 28px;
+        height: 28px;
+        border-radius: 50%;
+        background: #f08080;
+    }
+
+    &__avatar--hide {
+        visibility: hidden;
+    }
+
+    &__box {
+        margin-left: 8px;
+        height: 28px;
+        border-radius: 100px;
+        display: flex;
+        align-items: center;
+        padding: 0 12px;
+    }
+
+    $base: &; 
+
+    &--other-user {
+        #{$base}__box {
+            background: #f3f3f3;
+        }
+        #{$base}__text {
+            color: #353535;
+        }
+    }
+
+    &--current-user {
+        margin-right: 16px;
+        margin-left: auto;
+        #{$base}__box {
+            background: #2979ff;
+        }
+        #{$base}__text {
+            color: #ffffff;
+        }
+    }
+}
+
