@@ -6,11 +6,20 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Facebook</title>
-    <link rel="stylesheet" href="style_start.css">
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/footer.css">
+    <link rel="stylesheet" href="styles/header.css">
+    <link rel="stylesheet" href="styles/invites.css">
+    <link rel="stylesheet" href="styles/languages.css">
+    <link rel="stylesheet" href="styles/main_container.css">
+    <link rel="stylesheet" href="styles/post.css">
+    <link rel="stylesheet" href="styles/side-containers.css">
+    <link rel="stylesheet" href="styles/side_bar.css">
+    <link rel="stylesheet" href="styles/stories.css">
 </head>
 <body>
 <header class="top-nav">
-    <img src="" alt="" class="menu-icon menu-icon__logo">
+    <img src="" alt="" class="menu-icon__logo">
     <form class="search-form">
         <input placeholder="Пошук" class="search-form__input">
         <button class="search-form__button">
@@ -77,7 +86,6 @@
 
         </div>
     </aside>
-
     <section class="main-section">
         <div class="main-container create-post">
             <div class="create-post__top">
@@ -97,24 +105,24 @@
             <form action="" class="create-post__form">
                 <div class="post-middle">
                     <img src="icons/create_post/avatar.jpg" alt="" class="avatar create-post__avatar">
-                    <textarea placeholder="Що у Вас на думці, Mary?"></textarea>
+                    <textarea placeholder="Що у Вас на думці, Mary?" class="create-post__textarea"></textarea>
                 </div>
                 <div class="post-bottom">
-                    <div class="post-bottom__container">
+                    <a class="post-bottom__container">
                         <img src="icons/create_post/list.png" alt="" class="post-bottom__icon">
                         <p class="post-bottom__text">Список</p>
-                    </div>
-                    <div class="post-bottom__container">
+                    </a>
+                    <a class="post-bottom__container">
                         <img src="icons/create_post/photo.png" alt="" class="post-bottom__icon">
                         <p class="post-bottom__text">Світлини/Від...</p>
-                    </div>
-                    <div class="post-bottom__container">
+                    </a>
+                    <a class="post-bottom__container">
                         <img src="icons/create_post/tag_friend.png" alt="" class="post-bottom__icon">
                         <p class="post-bottom__text">Позначити д...</p>
-                    </div>
-                    <div class="post-bottom__container">
+                    </a>
+                    <a class="post-bottom__container">
                         <img src="icons/create_post/more.png" alt="" class="post-bottom__icon">
-                    </div>
+                    </a>
                 </div>
             </form>
         </div>
@@ -123,9 +131,10 @@
                 <img src="icons/post/post_1_avatar.jpg" class="avatar post__avatar">
                 <div class="post-header__container">
                     <p class="post__name">Andrey Ganzevich</p>
-                    <p class="post__time">4 хв  · </p>
-                    <img src="icons/post/friends.png" alt="" class="post-header__icon">
-                    <img src="icons/post/dots.png" alt="" class="post__action-icon">
+                    <div class="post__small-text">
+                        <p class="post__time">4 хв  · </p>
+                        <img src="icons/post/friends.png" alt="" class="post-header__icon">
+                    </div>
                 </div>
             </div>
             <div class="post-content">
@@ -148,20 +157,19 @@
             </nav>
         </article>
     </section>
-
-    <aside class="side-container">
+    <aside class="side-containers">
         <section class="main-container stories">
             <div class="main-container__header">
                 <h5 class="main-container__title">Розповіді</h5>
                 <div class="main-container__nav-container">
-                    <img src="icons/stories/archive.png" alt="" class="nav-container__header-icon">
-                    <a href="#" class="nav-container__header-text">Aрхів</a>
-                    <p class="nav-container__header-text"> · </p>
-                    <a href="#" class="nav-container__header-text">Налаштування</a>
+                    <img src="icons/stories/archive.png" alt="" class="stories-nav-container__header-icon">
+                    <a href="#" class="stories-nav-container__header-text">Aрхів</a>
+                    <p class="stories-nav-container__header-text"> · </p>
+                    <a href="#" class="stories-nav-container__header-text">Налаштування</a>
                 </div>
             </div>
             <div class="stories__container stories__container_add">
-                <img src="icons/stories/add.png" alt="" class="avatar stories__avatar">
+                <img src="icons/stories/plus.png" alt="" class="stories__icon">
                 <div class="stories__text">
                     <p class="stories__name">Додати до розповіді</p>
                     <p class="stories__time">Поділіться світлиною, відео або напишіть щось</p>
@@ -210,7 +218,7 @@
                 Українська · <a href="">English (US)</a> · <a href="">Français (France)</a> · <a href="">Русский</a> ·
                 <a href="">Español</a>
             </p>
-            <button>
+            <button class="languages__button">
                 <img src="icons/other/plus.png" alt="">
             </button>
         </section>

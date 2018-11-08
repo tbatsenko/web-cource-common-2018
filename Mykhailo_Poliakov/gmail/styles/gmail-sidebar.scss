@@ -1,10 +1,9 @@
-.sidebar {
-    width: 256px;
-    float: left;
-
+.gmail-sidebar {
+    min-width: 256px;
+    align-self:flex-start;
     &__link {
         height: 32px;
-        width: 240px;
+        margin-right: 16px;
         background: transparent; 
         display: flex;
         align-items: center;

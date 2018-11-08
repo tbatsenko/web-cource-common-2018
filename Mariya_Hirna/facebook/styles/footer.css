@@ -1,0 +1,24 @@
+.languages{
+    display: flex;
+    flex-direction: row;
+}
+
+.languages__text{
+    font-size: 13px;
+}
+
+.aside__footer{
+    display: flex;
+    flex-direction: column;
+}
+
+.footer_text{
+    font-size: 13px;
+    color: #90949c;
+}
+
+
+.footer_license{
+    font-size: 13px;
+    color: #616770;
+}

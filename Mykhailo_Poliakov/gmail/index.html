@@ -9,41 +9,48 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.12/handlebars.min.js"></script>
 </head>
 <body>
-    <header class="header">
-        <nav class="header__menu">
-            <button class="header__button header__button--menu" aria-label="Main menu" title="Main menu">menu</button>
-            <a class="header__logo" aria-label="Gmail" title="Gmail" href="#"></a>  
-            <form class="search"> 
-                <button class="search__button" aria-label="Search" title="Search">search</button>
-                <input class="search__input" type="text" placeholder="Search mail" />
-                <button class="search__button" aria-label="More options" title="More options">arrow_drop_down</button>
-            </form>
-            <button class="header__button header__button--apps" aria-label="Google Apps" title="Google Apps">apps</button>
-            <button class="header__button" aria-label="Notifications" title="Notifications">notifications_none</button>
-            <button class="header__profile" aria-label="Google Account" title="Google Account"></button>
-        </nav>
-    </header>
-  
-    <section class="sidebar">
-        <button class="compose-button"><span class="compose-button__icon"></span>Compose</button>
-        <nav class="sidebar__menu"></nav>
-    </section>
-
-    <main class="main">
-        <nav class="main__control"></nav>
-        <section class="main__emails"></section>
-    </main>
-
+    <div class="gmail-layout">
+        <header class="gmail-header">
+            <nav class="gmail-header__menu">
+                <button class="gmail-header__button gmail-header__button--menu" aria-label="Main menu" title="Main menu">menu</button>
+                <a class="gmail-header__logo" aria-label="Gmail" title="Gmail" href="#"></a>  
+                <form class="search"> 
+                    <button class="search__button" aria-label="Search" title="Search">search</button>
+                    <input class="search__input" type="text" placeholder="Search mail" />
+                    <button class="search__button" aria-label="More options" title="More options">arrow_drop_down</button>
+                </form>
+                <button class="gmail-header__button gmail-header__button--apps" aria-label="Google Apps" title="Google Apps">apps</button>
+                <button class="gmail-header__button" aria-label="Notifications" title="Notifications">notifications_none</button>
+                <button class="gmail-header__profile" aria-label="Google Account" title="Google Account"></button>
+            </nav>
+        </header>
+        
+        <div class="gmail-layout__content">
+            <section class="gmail-sidebar">
+                <button class="compose-button">
+                    <span class="compose-button__icon"></span>
+                    Compose
+                </button>
+                <nav class="gmail-sidebar__menu"></nav>
+            </section>
+    
+            <main class="gmail-main">
+                <nav class="gmail-main__control"></nav>
+                <section class="gmail-main__emails"></section>
+            </main>
+        </div>
+    </div>
+    
     <script>
         const render = async (templateURL, dataURL, className) => {
             const source = await (await fetch("templates/" + templateURL)).text();
             const template = Handlebars.compile(source);
-            const data = await (await fetch("templates/" + dataURL)).json();
+            const data = await (await fetch("data/" + dataURL)).json();
             document.querySelector(className).insertAdjacentHTML('beforeEnd', template(data));
         };
 
-        render("email.handlebars", "email.json", ".main__emails")
-        render("sidebar.handlebars", "sidebar.json", ".sidebar__menu")
+        render("email.handlebars", "email.json", ".gmail-main__emails")
+        render("sidebar.handlebars", "sidebar.json", ".gmail-sidebar__menu")
     </script>
 </body>
 </html>
