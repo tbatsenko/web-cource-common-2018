@@ -1,0 +1,194 @@
+{
+    "navigation": {
+        "pathToLogo": "images/logo.png",
+        "searchButton": "M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z",
+        "searchPlaceholder": "Пошук",
+        "button": [
+            "M17 10.5V7c0-.55-.45-1-1-1H4c-.55 0-1 .45-1 1v10c0 .55.45 1 1 1h12c.55 0 1-.45 1-1v-3.5l4 4v-11l-4 4zM14 13h-3v3H9v-3H6v-2h3V8h2v3h3v2z",
+            "M4 8h4V4H4v4zm6 12h4v-4h-4v4zm-6 0h4v-4H4v4zm0-6h4v-4H4v4zm6 0h4v-4h-4v4zm6-10v4h4V4h-4zm-6 4h4V4h-4v4zm6 6h4v-4h-4v4zm0 6h4v-4h-4v4z",
+            "M12.04 4C17 4 21 7.7 21 12.3c0 4.57-4 8.28-8.96 8.28-1.76 0-3.4-.47-4.8-1.28-.15-.1-.35-.1-.52-.04-1.58.68-2.8.88-3.45.93-.2 0-.34-.26-.22-.4.6-.9 1.08-1.8 1.43-2.5.1-.2.1-.46-.04-.65C3.58 15.4 3.1 13.9 3.1 12.3c0-4.6 4-8.3 8.94-8.3zm1.6 9.56v1.58c0 .17.22.25.34.13l3.43-3.34c.1-.07.1-.2 0-.27L14 8.32c-.12-.12-.33-.04-.33.13V10c0 .1-.07.18-.17.2-3.38.52-5.04 2.73-5.74 5.1-.06.2.2.34.32.2 1.3-1.42 3.05-2.1 5.4-2.13.1 0 .2.1.2.2z",
+            "M12 22c1.1 0 2-.9 2-2h-4c0 1.1.9 2 2 2zm6-6v-5c0-3.07-1.64-5.64-4.5-6.32V4c0-.83-.67-1.5-1.5-1.5s-1.5.67-1.5 1.5v.68C7.63 5.36 6 7.92 6 11v5l-2 2v1h16v-1l-2-2z"
+        ],
+        "avatar": "https://yt3.ggpht.com/-8YgY2aljMuw/AAAAAAAAAAI/AAAAAAAAAAA/8W7laQvNW64/s88-c-k-no-mo-rj-c0xffffff/photo.jpg"
+    },
+    "main": {
+        "aside": {
+            "aside-block": [
+                {
+                    "elem": [
+                        {
+                            "svg": "M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8",
+                            "text": "Головна"
+                        },
+                        {
+                            "svg": "M17.53 11.2c-.23-.3-.5-.56-.76-.82-.65-.6-1.4-1.03-2.03-1.66-1.46-1.46-1.78-3.87-.85-5.72-.9.23-1.75.75-2.45 1.32C8.9 6.4 7.9 10.07 9.1 13.22c.04.1.08.2.08.33 0 .22-.15.42-.35.5-.22.1-.46.04-.64-.12-.06-.05-.1-.1-.15-.17-1.1-1.43-1.28-3.48-.53-5.12C5.87 10 5 12.3 5.12 14.47c.04.5.1 1 .27 1.5.14.6.4 1.2.72 1.73 1.04 1.73 2.87 2.97 4.84 3.22 2.1.27 4.35-.12 5.96-1.6 1.8-1.66 2.45-4.3 1.5-6.6l-.13-.26c-.2-.45-.47-.87-.78-1.25zm-3.1 6.3c-.28.24-.73.5-1.08.6-1.1.38-2.2-.16-2.88-.82 1.2-.28 1.9-1.16 2.1-2.05.17-.8-.14-1.46-.27-2.23-.12-.74-.1-1.37.2-2.06.15.38.35.76.58 1.06.76 1 1.95 1.44 2.2 2.8.04.14.06.28.06.43.03.82-.32 1.72-.92 2.26z",
+                            "text": "Популярне"
+                        },
+                        {
+                            "svg": "M18.7 8.7H5.3V7h13.4v1.7zm-1.7-5H7v1.6h10V3.7zm3.3 8.3v6.7c0 1-.7 1.6-1.6 1.6H5.3c-1 0-1.6-.7-1.6-1.6V12c0-1 .7-1.7 1.6-1.7h13.4c1 0 1.6.8 1.6 1.7zm-5 3.3l-5-2.7V18l5-2.7z",
+                            "text": "Підписки"
+                        }
+                    ]
+                },
+                {
+                    "header": "Бібліотека",
+                    "elem": [
+                        {
+                            "svg": "M11.9 3.75c-4.55 0-8.23 3.7-8.23 8.25H.92l3.57 3.57.04.13 3.7-3.7H5.5c0-3.54 2.87-6.42 6.42-6.42 3.54 0 6.4 2.88 6.4 6.42s-2.86 6.42-6.4 6.42c-1.78 0-3.38-.73-4.54-1.9l-1.3 1.3c1.5 1.5 3.55 2.43 5.83 2.43 4.58 0 8.28-3.7 8.28-8.25 0-4.56-3.7-8.25-8.26-8.25zM11 8.33v4.6l3.92 2.3.66-1.1-3.2-1.9v-3.9H11z",
+                            "text": "Історія"
+                        },
+                        {
+                            "svg": "M12 3.67c-4.58 0-8.33 3.75-8.33 8.33s3.75 8.33 8.33 8.33 8.33-3.75 8.33-8.33S16.58 3.67 12 3.67zm3.5 11.83l-4.33-2.67v-5h1.25v4.34l3.75 2.25-.67 1.08z",
+                            "text": "Переглянути пізніше"
+                        },
+                        {
+                            "svg": "M18.7 8.7H5.3V7h13.4v1.7zm-1.7-5H7v1.6h10V3.7zm3.3 8.3v6.7c0 1-.7 1.6-1.6 1.6H5.3c-1 0-1.6-.7-1.6-1.6V12c0-1 .7-1.7 1.6-1.7h13.4c1 0 1.6.8 1.6 1.7zm-5 3.3l-5-2.7V18l5-2.7z",
+                            "text": "Підписки"
+                        },
+                        {
+                            "svg": "M16.94 6.9l-1.4 1.46C16.44 9.3 17 10.58 17 12s-.58 2.7-1.48 3.64l1.4 1.45C18.22 15.74 19 13.94 19 12s-.8-3.8-2.06-5.1zM23 12c0-3.12-1.23-5.95-3.23-8l-1.4 1.45C19.97 7.13 21 9.45 21 12s-1 4.9-2.64 6.55l1.4 1.45c2-2.04 3.24-4.87 3.24-8zM7.06 17.1l1.4-1.46C7.56 14.7 7 13.42 7 12s.6-2.7 1.5-3.64L7.08 6.9C5.78 8.2 5 10 5 12s.8 3.8 2.06 5.1zM1 12c0 3.12 1.23 5.95 3.23 8l1.4-1.45C4.03 16.87 3 14.55 3 12s1-4.9 2.64-6.55L4.24 4C2.24 6.04 1 8.87 1 12zm9-3.32v6.63l5-3.3-5-3.3z",
+                            "text": "Мікс - Скрябін"
+                        },
+                        {
+                            "svg": "M3.67 8.67h14V11h-14V8.67zm0-4.67h14v2.33h-14V4zm0 9.33H13v2.34H3.67v-2.34zm11.66 0v7l5.84-3.5-5.84-3.5z",
+                            "text": "Вибране"
+                        }     
+                    ]
+                },
+                {
+                    "header": "Підписки",
+                    "elem": [
+                        {
+                            "ico": "https://yt3.ggpht.com/a-/AN66SAx5vAyKH3l8FB31RcnGvaEv2HIFZifqQkV9zA=s88-mo-c-c0xffffffff-rj-k-no",
+                            "text": "Kolento",
+                            "counter": "6"
+                        },
+                        {
+                            "ico": "https://yt3.ggpht.com/a-/AN66SAz_b2m7bjsBr_d_wPaUzys9pwNtbjJ8wfzTkQ=s88-mo-c-c0xffffffff-rj-k-no",
+                            "text": "Телебачення Торогнто",
+                            "counter": "6"
+
+                        },
+                        {
+                            "ico": "https://yt3.ggpht.com/a-/AN66SAwcnXDswdHdIgSPVVXDUMmmlYo7W2MLNRlTZA=s88-mo-c-c0xffffffff-rj-k-no",
+                            "text": "HackerRank",
+                            "counter": "1"
+                        }
+                    ]
+                }
+            ]
+        },
+        "content": {
+            "video-block": [
+                {
+                    "header": "Рекомендовано",
+                    "elem": [
+                        {
+                            "icon": "https://i.ytimg.com/vi/xHR4x8uftEQ/hqdefault.jpg?sqp=-oaymwEiCNIBEHZIWvKriqkDFQgBFQAAAAAYASUAAMhCPQCAokN4AQ==&rs=AOn4CLBGKDPHuhzyWYFRX1Dlz-4AAF0l-Q",
+                            "title": "Прохождение Red Dead Redemption 2 — Часть 1: Дикий,Дикий Запад!",
+                            "who": "Дмитрий Бэйл",
+                            "views": "164 тис. переглядів",
+                            "time": "1 тиждень тому"
+                        },
+                        {
+                            "icon": "https://i.ytimg.com/vi/xHR4x8uftEQ/hqdefault.jpg?sqp=-oaymwEiCNIBEHZIWvKriqkDFQgBFQAAAAAYASUAAMhCPQCAokN4AQ==&rs=AOn4CLBGKDPHuhzyWYFRX1Dlz-4AAF0l-Q",
+                            "title": "Прохождение Red Dead Redemption 2 — Часть 1: Дикий,Дикий Запад!",
+                            "who": "Дмитрий Бэйл",
+                            "views": "164 тис. переглядів",
+                            "time": "1 тиждень тому"
+                        },
+                        {
+                            "icon": "https://i.ytimg.com/vi/xHR4x8uftEQ/hqdefault.jpg?sqp=-oaymwEiCNIBEHZIWvKriqkDFQgBFQAAAAAYASUAAMhCPQCAokN4AQ==&rs=AOn4CLBGKDPHuhzyWYFRX1Dlz-4AAF0l-Q",
+                            "title": "Прохождение Red Dead Redemption 2 — Часть 1: Дикий,Дикий Запад!",
+                            "who": "Дмитрий Бэйл",
+                            "views": "164 тис. переглядів",
+                            "time": "1 тиждень тому"
+                        },
+                        {
+                            "icon": "https://i.ytimg.com/vi/xHR4x8uftEQ/hqdefault.jpg?sqp=-oaymwEiCNIBEHZIWvKriqkDFQgBFQAAAAAYASUAAMhCPQCAokN4AQ==&rs=AOn4CLBGKDPHuhzyWYFRX1Dlz-4AAF0l-Q",
+                            "title": "Прохождение Red Dead Redemption 2 — Часть 1: Дикий,Дикий Запад!",
+                            "who": "Дмитрий Бэйл",
+                            "views": "164 тис. переглядів",
+                            "time": "1 тиждень тому"
+                        },
+                        {
+                            "icon": "https://i.ytimg.com/vi/xHR4x8uftEQ/hqdefault.jpg?sqp=-oaymwEiCNIBEHZIWvKriqkDFQgBFQAAAAAYASUAAMhCPQCAokN4AQ==&rs=AOn4CLBGKDPHuhzyWYFRX1Dlz-4AAF0l-Q",
+                            "title": "Прохождение Red Dead Redemption 2 — Часть 1: Дикий,Дикий Запад!",
+                            "who": "Дмитрий Бэйл",
+                            "views": "164 тис. переглядів",
+                            "time": "1 тиждень тому"
+                        },
+                        {
+                            "icon": "https://i.ytimg.com/vi/xHR4x8uftEQ/hqdefault.jpg?sqp=-oaymwEiCNIBEHZIWvKriqkDFQgBFQAAAAAYASUAAMhCPQCAokN4AQ==&rs=AOn4CLBGKDPHuhzyWYFRX1Dlz-4AAF0l-Q",
+                            "title": "Прохождение Red Dead Redemption 2 — Часть 1: Дикий,Дикий Запад!",
+                            "who": "Дмитрий Бэйл",
+                            "views": "164 тис. переглядів",
+                            "time": "1 тиждень тому"
+                        },
+                        {
+                            "icon": "https://i.ytimg.com/vi/xHR4x8uftEQ/hqdefault.jpg?sqp=-oaymwEiCNIBEHZIWvKriqkDFQgBFQAAAAAYASUAAMhCPQCAokN4AQ==&rs=AOn4CLBGKDPHuhzyWYFRX1Dlz-4AAF0l-Q",
+                            "title": "Прохождение Red Dead Redemption 2 — Часть 1: Дикий,Дикий Запад!",
+                            "who": "Дмитрий Бэйл",
+                            "views": "164 тис. переглядів",
+                            "time": "1 тиждень тому"
+                        },
+                        {
+                            "icon": "https://i.ytimg.com/vi/xHR4x8uftEQ/hqdefault.jpg?sqp=-oaymwEiCNIBEHZIWvKriqkDFQgBFQAAAAAYASUAAMhCPQCAokN4AQ==&rs=AOn4CLBGKDPHuhzyWYFRX1Dlz-4AAF0l-Q",
+                            "title": "Прохождение Red Dead Redemption 2 — Часть 1: Дикий,Дикий Запад!",
+                            "who": "Дмитрий Бэйл",
+                            "views": "164 тис. переглядів",
+                            "time": "1 тиждень тому"
+                        },
+                        {
+                            "icon": "https://i.ytimg.com/vi/xHR4x8uftEQ/hqdefault.jpg?sqp=-oaymwEiCNIBEHZIWvKriqkDFQgBFQAAAAAYASUAAMhCPQCAokN4AQ==&rs=AOn4CLBGKDPHuhzyWYFRX1Dlz-4AAF0l-Q",
+                            "title": "Прохождение Red Dead Redemption 2 — Часть 1: Дикий,Дикий Запад!",
+                            "who": "Дмитрий Бэйл",
+                            "views": "164 тис. переглядів",
+                            "time": "1 тиждень тому"
+                        },
+                        {
+                            "icon": "https://i.ytimg.com/vi/xHR4x8uftEQ/hqdefault.jpg?sqp=-oaymwEiCNIBEHZIWvKriqkDFQgBFQAAAAAYASUAAMhCPQCAokN4AQ==&rs=AOn4CLBGKDPHuhzyWYFRX1Dlz-4AAF0l-Q",
+                            "title": "Прохождение Red Dead Redemption 2 — Часть 1: Дикий,Дикий Запад!",
+                            "who": "Дмитрий Бэйл",
+                            "views": "164 тис. переглядів",
+                            "time": "1 тиждень тому"
+                        }
+                    ]
+                },
+                {
+                    "header": "Продовжити перегляд",
+                    "elem": [
+                        {
+                            "icon": "https://i.ytimg.com/vi/xHR4x8uftEQ/hqdefault.jpg?sqp=-oaymwEiCNIBEHZIWvKriqkDFQgBFQAAAAAYASUAAMhCPQCAokN4AQ==&rs=AOn4CLBGKDPHuhzyWYFRX1Dlz-4AAF0l-Q",
+                            "title": "Прохождение Red Dead Redemption 2 — Часть 1: Дикий,Дикий Запад!",
+                            "who": "Дмитрий Бэйл",
+                            "views": "164 тис. переглядів",
+                            "time": "1 тиждень тому"
+                        },
+                        {
+                            "icon": "https://i.ytimg.com/vi/xHR4x8uftEQ/hqdefault.jpg?sqp=-oaymwEiCNIBEHZIWvKriqkDFQgBFQAAAAAYASUAAMhCPQCAokN4AQ==&rs=AOn4CLBGKDPHuhzyWYFRX1Dlz-4AAF0l-Q",
+                            "title": "Прохождение Red Dead Redemption 2 — Часть 1: Дикий,Дикий Запад!",
+                            "who": "Дмитрий Бэйл",
+                            "views": "164 тис. переглядів",
+                            "time": "1 тиждень тому"
+                        },
+                        {
+                            "icon": "https://i.ytimg.com/vi/xHR4x8uftEQ/hqdefault.jpg?sqp=-oaymwEiCNIBEHZIWvKriqkDFQgBFQAAAAAYASUAAMhCPQCAokN4AQ==&rs=AOn4CLBGKDPHuhzyWYFRX1Dlz-4AAF0l-Q",
+                            "title": "Прохождение Red Dead Redemption 2 — Часть 1: Дикий,Дикий Запад!",
+                            "who": "Дмитрий Бэйл",
+                            "views": "164 тис. переглядів",
+                            "time": "1 тиждень тому"
+                        },
+                        {
+                            "icon": "https://i.ytimg.com/vi/xHR4x8uftEQ/hqdefault.jpg?sqp=-oaymwEiCNIBEHZIWvKriqkDFQgBFQAAAAAYASUAAMhCPQCAokN4AQ==&rs=AOn4CLBGKDPHuhzyWYFRX1Dlz-4AAF0l-Q",
+                            "title": "Прохождение Red Dead Redemption 2 — Часть 1: Дикий,Дикий Запад!",
+                            "who": "Дмитрий Бэйл",
+                            "views": "164 тис. переглядів",
+                            "time": "1 тиждень тому"
+                        }
+                    ]
+                }
+            ]
+        }
+    }
+}

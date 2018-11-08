@@ -46,6 +46,7 @@
 
 .left-aside-navigation__element{
     align-items: center;
+    margin-bottom: 0.3em;
 }
 
 .left-aside-navigation__redactor-btn{
@@ -66,7 +67,7 @@
     background: url("../icons/icons-aside.png");
     background-position: 0 -2144px;
     background-repeat: no-repeat;
-    /*height: 1em;*/
+    margin-right: 2em;
 }
 
 .left-aside-navigation__news-img{
@@ -93,8 +94,19 @@
     background: url("../icons/icons-aside.png");
     background-position: 0 -2144px;
     background-repeat: no-repeat;
-    /*height: 1em;*/
+    margin-right: 2em;
 }
 
 
+.left-aside-navigation__news{
+    color: black;
+    display: flex;
+    align-items: center;
+    width: 15em;
+}
 
+
+.left-aside-navigation__element-header{
+    color: #616770;
+    font-size: small;
+}
