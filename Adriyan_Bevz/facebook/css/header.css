@@ -1,0 +1,150 @@
+.header {
+    display: flex;
+    height: 42px;
+    padding: 0 7px;
+    background: #4069AD;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.header__item {
+    display: flex;
+    height: 42px;
+    align-items: center;
+}
+
+.header__item--padding-right {
+    padding-right: 7px;
+}
+
+.header__item--padding-left {
+    padding-left: 7px;
+}
+
+.header__item--grow {
+    flex-grow: 0.7;
+}
+
+.header__icon {
+    display: flex;
+    width: 24px;
+    height: 24px;
+    background-size: auto;
+}
+
+.header__text-item {
+    display: flex;
+    height: 28px;
+    align-items: center;
+    justify-content: space-around;
+    padding: 0 10px;
+    color: #FFFFFF;
+    text-decoration: none;
+    font-size: 12px;
+    line-height: 28px;
+}
+
+.header__text-item:hover {
+    background: rgba(0, 0, 0, .1);
+}
+
+.header__link-icon {
+    opacity: .6;
+}
+
+.header__link-icon:hover {
+    opacity: 1;
+}
+
+.header__separator {
+    height: 18px;
+    width: 1px;
+    background: rgba(0, 0, 0, .1);
+}
+
+.fb-icon {
+    background: url("https://static.xx.fbcdn.net/rsrc.php/v3/yh/r/xs_zpaJOZfw.png") no-repeat 0 -442px;
+}
+
+.friends-icon {
+    background: url("https://static.xx.fbcdn.net/rsrc.php/v3/yh/r/xs_zpaJOZfw.png") no-repeat 0 -892px;
+}
+
+.messenger-icon {
+    background: url("https://static.xx.fbcdn.net/rsrc.php/v3/yh/r/xs_zpaJOZfw.png") no-repeat 0 -942px;
+}
+
+.notifications-icon {
+    background: url("https://static.xx.fbcdn.net/rsrc.php/v3/yh/r/xs_zpaJOZfw.png") no-repeat 0 -792px;
+}
+
+.help-icon {
+    background: url("https://static.xx.fbcdn.net/rsrc.php/v3/yh/r/xs_zpaJOZfw.png") no-repeat 0 -992px;
+}
+
+.search {
+    display: flex;
+    width: 100%;
+    border-radius: 2px;
+    overflow: hidden;
+}
+
+.search__input {
+    -webkit-appearance: none;
+    border: none;
+    width: calc(100% - 46px);
+    height: 24px;
+    padding: 0 3px;
+    font-size: 14px;
+    line-height: 24px;
+}
+
+.search__input:focus {
+    outline: none;
+}
+
+.search__input:focus ~ .search__button {
+    background-color: blue;
+}
+
+.search__button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    -webkit-appearance: none;
+    width: 46px;
+    background: #f5f6f7;
+    border: none;
+}
+
+.search__button-icon {
+    width: 16px;
+    height: 16px;
+    background: transparent url("https://static.xx.fbcdn.net/rsrc.php/v3/yh/r/xs_zpaJOZfw.png") no-repeat 0 -1330px;
+    background-size: auto;
+}
+
+.avatar {
+    border-radius: 50%;
+    border: 1px solid rgba(0, 0, 0, .1);
+}
+
+.avatar--adriyan {
+    background: url("../images/avatar.jpg") no-repeat center;
+    background-size: cover;
+}
+
+.avatar--little {
+    width: 20px;
+    height: 20px;
+}
+
+.avatar--small {
+    width: 24px;
+    height: 24px;
+}
+
+.avatar--medium {
+    width: 40px;
+    height: 40px;
+}
