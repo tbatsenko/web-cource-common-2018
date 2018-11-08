@@ -1,0 +1,61 @@
+.navigation {
+  &__title {
+    font-size: 14px;
+    text-transform: uppercase;
+    margin-left: 20px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    color: hsla(0%, 0%, 6.7%, .6);
+  }
+  &__option {
+    padding-left: 20px;
+    justify-content: flex-start;
+    height: 40px;
+    display: flex;
+
+    &_active {
+      background: rgba(0, 0, 0, 0.10);
+    }
+
+    &:hover {
+      background: hsla(0%, 0%, 0%, 0.04);
+    }
+  }
+
+  &__link {
+    margin-left: 20px;
+    color: #000000;
+    font-size: 14px;
+    font-weight: 400;
+    align-self: center;
+
+    &_active {
+      font-weight: 700;
+    }
+  }
+
+  &__svg {
+    align-self: center;
+    display: block;
+    width: 24px;
+    height: 24px;
+  }
+
+  &__channel-logo {
+    display: block;
+    width: 24px;
+    height: 24px;
+    align-self: center;
+    border-radius: 50%;
+  }
+
+  &__icon-path {
+    fill: hsl(0, 0%, 53.3%);
+    &_active {
+      fill: #ff0000;
+    }
+    &_no-fill {
+      fill: none;
+    }
+  }
+}
