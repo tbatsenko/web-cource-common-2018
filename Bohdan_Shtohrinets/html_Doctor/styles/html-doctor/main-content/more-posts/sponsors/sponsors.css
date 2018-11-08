@@ -1,0 +1,51 @@
+.sponsors__title {
+    color: #888;
+    margin: 0 0 5px;
+    padding: 10px 0;
+    text-transform: uppercase;
+    font-size: 17px;
+}
+
+.sponsors__poster-list {
+    display: block;
+}
+
+.sponsors__poster {
+    float: left;
+    width: 115px;
+    height: 115px;
+    margin-bottom: 10px;
+    margin-right: 10px;
+    overflow: hidden;
+    color: transparent;
+    border: 1px solid blue;
+}
+
+.sponsors__poster_buy-sell-ads {
+    background: url("https://s3.buysellads.com/creatives/9b9afa8cd788253af84ef8f9cc63504d-1520974568.jpeg");
+    background-size: cover;
+}
+
+.sponsors__poster_word-press {
+    background: url("//s3.buysellads.com/1598/289250-1442087157.png");
+    background-size: cover;
+}
+
+.sponsors__poster_opt-in {
+    background: url("//s3.buysellads.com/1249814/263230-1427137069.jpg");
+    background-size: cover;
+}
+
+.sponsors__add-poster {
+    color: #666;
+    font-weight: bold;
+    margin-right: 0;
+    border: 1px solid #ccc;
+    background: #e7e7e7;
+    font-size: 12px;
+    width: 117px;
+    height: 117px;
+    display: block;
+}
+
+/*# sourceMappingURL=sponsors.css.map */
