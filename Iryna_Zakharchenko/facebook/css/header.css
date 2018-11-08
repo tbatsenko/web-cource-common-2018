@@ -1,7 +1,7 @@
 .header-blue {
     width: 100%;
     background: #4267b2;
-    padding: 0.4em 11em;
+    padding: 0.4em 0;
     height: 1.8em;
     position: fixed;
     top:0;
@@ -13,7 +13,7 @@
     justify-content: space-between;
     align-items: center;
     height: 2em;
-    position: fixed;
+    /*position: fixed;*/
     margin: auto;
 }
 .header-left {
