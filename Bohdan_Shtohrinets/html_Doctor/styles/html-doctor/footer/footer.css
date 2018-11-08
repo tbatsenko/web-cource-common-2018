@@ -1,0 +1,30 @@
+.footer__content {
+    position: relative;
+    width: 1020px;
+    margin: 40px auto;
+}
+
+.footer__logo {
+    float: left;
+    width: 150px;
+    margin: 10px 0 0 10px;
+}
+
+.footer__copyright {
+    float: left;
+    width: 740px;
+    margin: 0 20px;
+}
+
+.footer__html5-logo {
+    float: right;
+    width: 64px;
+    margin: 10px 0 0 10px;
+}
+
+.copyright__section {
+    font-size: 13px;
+    padding: 0 0 10px 0;
+}
+
+/*# sourceMappingURL=footer.css.map */

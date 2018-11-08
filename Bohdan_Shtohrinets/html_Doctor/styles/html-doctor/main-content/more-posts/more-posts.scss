@@ -1,0 +1,21 @@
+.more-posts {
+  &__post-list {
+    float: left;
+    width: 685px;
+    margin: 0 18px 0 0;
+    padding: 0 18px 0 0;
+    position: relative;
+    border-right: 4px solid #F0F0F0;
+  }
+  &__button {
+    clear: both;
+    margin: 4px 20px 1.5em;
+    text-align: center;
+  }
+  &__sponsors {
+    float: left;
+    padding: 0 20px 0 0;
+    width: 270px;
+    border: none;
+  }
+}

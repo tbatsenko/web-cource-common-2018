@@ -1,0 +1,40 @@
+.html-indexes__title {
+    margin: 20px 0 20px 20px;
+}
+
+.html-indexes__glossary {
+    margin-bottom: 50px;
+    text-align: left;
+    display: block;
+    float: left;
+    vertical-align: top;
+    margin-right: 19px;
+    padding: 0;
+    width: 90px;
+}
+
+.html-indexes__glossary_first {
+    margin-left: 20px;
+}
+
+.html-indexes__glossary_last {
+    margin-right: 0;
+    margin-left: 0;
+}
+
+.glossary__title {
+    color: #888888;
+    font-size: 12px;
+}
+
+.glossary__tag-list_separate {
+    margin-bottom: 20px;
+}
+
+.glossary__tag {
+    display: block;
+    padding: 10px 0;
+    font-size: 13px;
+}
+
+/*# sourceMappingURL=html-indexes.css.map */
