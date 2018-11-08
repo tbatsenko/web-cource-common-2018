@@ -1,0 +1,12 @@
+.navigation{
+    display: flex;
+    flex-direction: row;
+    &__section{
+        padding: 10px;
+        height: 100%;
+        &:hover{
+            cursor: pointer;
+            color: red;
+        }
+    }
+}

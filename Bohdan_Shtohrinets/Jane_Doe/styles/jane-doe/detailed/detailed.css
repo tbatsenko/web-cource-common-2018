@@ -18,7 +18,6 @@
 .detailed__section_half:last-child {
     margin-right: 0;
 }
-
 .detailed__title {
     text-transform: uppercase;
     font-family: Montserrat, serif;
@@ -32,7 +31,6 @@
     color: #181818;
     margin-bottom: 20px;
 }
-
 .detailed__description {
     font-family: Montserrat, serif;
     font-size: 22px;
@@ -44,7 +42,6 @@
     text-align: left;
     color: #181818;
 }
-
 .detailed__list {
     padding-left: 3px;
     list-style: none;

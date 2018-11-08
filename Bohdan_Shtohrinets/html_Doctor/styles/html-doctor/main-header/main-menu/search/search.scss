@@ -1,0 +1,23 @@
+.search {
+  &__input-field {
+    width: 100%;
+    height: 100%;
+    border: none;
+    border-radius: 3px;
+    position: absolute;
+    padding-left: 10px;
+    background-color: rgb(238, 238, 238);
+  }
+  &__button {
+    padding: 2px 5px;
+    display: block;
+    position: absolute;
+    top: 4px;
+    right: 5px;
+    border-radius: 3px;
+    font-size: 14px;
+    color: white;
+    border: 1px solid #7f8c8d;
+    background: linear-gradient(rgb(82, 168, 232) 20%, rgb(46, 118, 207) 100%);
+  }
+}

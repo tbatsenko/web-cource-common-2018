@@ -1,0 +1,25 @@
+.logo__title {
+    top: 20px;
+    position: absolute;
+    height: 96px;
+    width: 320px;
+    display: block;
+    color: transparent;
+    background: url("http://html5doctor.com/wp-content/themes/html5doctor2/images/logo.png");
+    background-size: cover;
+}
+
+.logo__motto {
+    display: block;
+    font-family: 'Quicksand', 'Helvetica Neue', Arial, sans-serif;
+    position: absolute;
+    top: 90px;
+    left: 195px;
+    font-style: italic;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1;
+    color: white;
+}
+
+/*# sourceMappingURL=logo.css.map */

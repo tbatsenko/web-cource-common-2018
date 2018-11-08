@@ -1,0 +1,25 @@
+.stories-panel__story-container {
+    display: flex;
+    margin-bottom: .5em;
+}
+
+.stories-panel__text-container {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+}
+
+.stories-panel__story-header {
+    margin: 0;
+    font-size: 13px;
+    font-weight: 600;
+    color: #365899;
+}
+
+.stories-panel__story-description {
+    color: #8d949e;
+    font-weight: normal;
+    cursor: pointer;
+    font-size: 13px;
+}
+
