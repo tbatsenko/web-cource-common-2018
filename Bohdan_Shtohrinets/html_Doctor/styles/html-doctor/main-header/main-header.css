@@ -1,0 +1,25 @@
+.top-banner__main-header {
+    margin: 0 auto;
+    height: 172px;
+    width: 1020px;
+    background-color: #0063A6;
+}
+
+.main-header__top-nav-bar {
+    margin-top: 5px;
+    float: right;
+    width: 320px;
+}
+
+.main-header__main-menu {
+    background-color: #0090D2;
+    overflow: hidden;
+    clear: both;
+    top: 16px;
+    position: relative;
+    display: block;
+    width: 1020px;
+    box-shadow: 1px -5px 15px darkslategrey;
+}
+
+/*# sourceMappingURL=main-header.css.map */
