@@ -1,1 +1,37 @@
-{}
+{
+  "text":"gmail",
+  "left_menu_head":[
+    {"icon":"images/snooze.png", "text":"Home"},
+    {"icon":"images/snooze.png", "text":"Trending"},
+    {"icon":"images/snooze.png", "text":"Subscriptions"}
+  ],
+  "left_menu_library":[
+    {"icon":"images/snooze.png", "text":"History"},
+    {"icon":"images/snooze.png", "text":"Watch later"},
+    {"icon":"images/snooze.png", "text":"Liked videos"}
+  ],
+  "videos":[
+    {"img":"images/ucu.jpg","title":"УКУ ОЧОЛИВ СПИСОК УНІВЕРСИТЕТІВ УКРА..."},
+    {"img":"images/ucu.jpg","title":"УКУ ОЧОЛИВ СПИСОК УНІВЕРСИТЕТІВ УКРА..."},
+    {"img":"images/ucu.jpg","title":"УКУ ОЧОЛИВ СПИСОК УНІВЕРСИТЕТІВ УКРА..."},
+    {"img":"images/ucu.jpg","title":"УКУ ОЧОЛИВ СПИСОК УНІВЕРСИТЕТІВ УКРА..."},
+    {"img":"images/ucu.jpg","title":"УКУ ОЧОЛИВ СПИСОК УНІВЕРСИТЕТІВ УКРА..."},
+    {"img":"images/ucu.jpg","title":"УКУ ОЧОЛИВ СПИСОК УНІВЕРСИТЕТІВ УКРА..."},
+    {"img":"images/ucu.jpg","title":"УКУ ОЧОЛИВ СПИСОК УНІВЕРСИТЕТІВ УКРА..."},
+    {"img":"images/ucu.jpg","title":"УКУ ОЧОЛИВ СПИСОК УНІВЕРСИТЕТІВ УКРА..."},
+    {"img":"images/ucu.jpg","title":"УКУ ОЧОЛИВ СПИСОК УНІВЕРСИТЕТІВ УКРА..."},
+    {"img":"images/ucu.jpg","title":"УКУ ОЧОЛИВ СПИСОК УНІВЕРСИТЕТІВ УКРА..."},
+    {"img":"images/ucu.jpg","title":"УКУ ОЧОЛИВ СПИСОК УНІВЕРСИТЕТІВ УКРА..."},
+    {"img":"images/ucu.jpg","title":"УКУ ОЧОЛИВ СПИСОК УНІВЕРСИТЕТІВ УКРА..."},
+    {"img":"images/ucu.jpg","title":"УКУ ОЧОЛИВ СПИСОК УНІВЕРСИТЕТІВ УКРА..."},
+    {"img":"images/ucu.jpg","title":"УКУ ОЧОЛИВ СПИСОК УНІВЕРСИТЕТІВ УКРА..."},
+    {"img":"images/ucu.jpg","title":"УКУ ОЧОЛИВ СПИСОК УНІВЕРСИТЕТІВ УКРА..."},
+    {"img":"images/ucu.jpg","title":"УКУ ОЧОЛИВ СПИСОК УНІВЕРСИТЕТІВ УКРА..."},
+    {"img":"images/ucu.jpg","title":"УКУ ОЧОЛИВ СПИСОК УНІВЕРСИТЕТІВ УКРА..."},
+    {"img":"images/ucu.jpg","title":"УКУ ОЧОЛИВ СПИСОК УНІВЕРСИТЕТІВ УКРА..."},
+    {"img":"images/ucu.jpg","title":"УКУ ОЧОЛИВ СПИСОК УНІВЕРСИТЕТІВ УКРА..."},
+    {"img":"images/ucu.jpg","title":"УКУ ОЧОЛИВ СПИСОК УНІВЕРСИТЕТІВ УКРА..."}
+
+  ],
+  "right_menu":["images/calendar.png", "images/keep.png", "images/tasks_left.png"]
+}

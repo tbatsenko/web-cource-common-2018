@@ -1,0 +1,10 @@
+{"nav_buttons":{
+  "text_buttons":["Anton", "Home", "Create"],
+  "img_buttons":[
+    "images/friends.png",
+    "images/messages.png",
+    "images/notifications.png",
+    "images/help.png",
+    "images/dropdown.png"]
+  }
+}

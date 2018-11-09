@@ -1,0 +1,17 @@
+<header class="header">
+    <nav class="navigation">
+        <section class="search">
+            <button>logo</button>
+            <input placeholder="Search">
+            <button>lupa</button>
+        </section>
+        <section class="buttons">
+            {{#nav_buttons/text_buttons}}
+                <button>{{.}}</button>
+            {{/nav_buttons/text_buttons}}
+            {{#nav_buttons/img_buttons}}
+                <button class="img_button"><img src="{{.}}"></button>
+            {{/nav_buttons/img_buttons}}
+        </section>
+    </nav>
+</header>
