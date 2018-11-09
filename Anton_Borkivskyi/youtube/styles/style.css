@@ -14,6 +14,7 @@ header {
   height: var(--header-h);
   padding: 8px;
   display: flex;
+  flex-direction: row;
   border-bottom: 1px silver solid; }
   header .left-part {
     width: var(--menu-width);
@@ -30,24 +31,21 @@ header {
     flex-direction: row;
     justify-content: space-between;
     align-items: center; }
-    header .right-part__search {
+    header .right-part .right-part__search {
       background: #F5F5F5;
       width: 70%;
       display: flex;
       align-items: center; }
-      header .right-part__search .lupa {
+      header .right-part .right-part__search .lupa {
         background: url("../images/lupa.png") center no-repeat;
         background-size: 15px 15px;
         height: 30px;
         width: 30px; }
-      header .right-part__search .search {
+      header .right-part .right-part__search .search {
         height: 100%;
-        width: 90%;
         background: #F5F5F5;
         border: 0; }
-        header .right-part__search .search:focus {
-          outline: none; }
-      header .right-part__search .dropdown {
+      header .right-part .right-part__search .dropdown {
         background: url("../images/dropdown.svg") center no-repeat;
         background-size: 15px 15px;
         height: 30px;
@@ -73,37 +71,33 @@ header {
 .main {
   display: flex;
   flex-direction: row; }
-  .main .letters {
-    overflow-y: scroll; }
-    .main .letters .letter {
+  .main .left_menu {
+    width: var(--menu-width);
+    background: #f5f5f5;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; }
+    .main .left_menu .menu_button {
       display: flex;
-      flex-direction: row;
       align-items: center;
-      border-bottom: 1px silver solid;
-      border-left: 1px white solid;
-      height: 40px; }
-      .main .letters .letter .letter__square {
-        background: url("../images/square.png") center no-repeat;
-        background-size: 20px 20px;
-        height: 30px;
-        width: 30px; }
-      .main .letters .letter .letter__star {
-        background: url("../images/star.png") center no-repeat;
-        background-size: 20px 20px;
-        height: 30px;
-        width: 30px; }
-      .main .letters .letter .letter__sender {
-        width: 200px; }
-      .main .letters .letter .letter__content {
-        flex: 1;
-        white-space: nowrap;
-        overflow: hidden;
-        text-overflow: ellipsis; }
-      .main .letters .letter .letter__date {
-        justify-self: flex-end; }
-    .main .letters .letter:hover {
-      border: 1px gray solid;
-      border-top: 0;
-      box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1); }
+      height: 32px;
+      width: 100%; }
+    .main .left_menu .menu_button:hover {
+      background: #dcdcdc; }
+    .main .left_menu .menu_icon {
+      width: 20px;
+      height: 20px;
+      margin-right: 20px; }
+  .main .videos {
+    display: flex;
+    justify-content: space-between;
+    flex-flow: wrap; }
+    .main .videos .video {
+      height: 190px;
+      width: 210px;
+      margin: 5px; }
+      .main .videos .video .video__img {
+        width: 100%;
+        height: 118px; }
 
 /*# sourceMappingURL=style.css.map */
