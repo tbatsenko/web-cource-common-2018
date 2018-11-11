@@ -3,17 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <title>Inbox</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="styles/style.css">
 </head>
 <body>
-    <header>
-        <button>Hide nav</button>
-        <a href="#">Main page</a>
-        <input type="search">
-        <button>Google apps</button>
-        <button>Notifications</button>
-        <button>Account</button>
+    <header class="header">
+        <section class="header__main">
+            <button class="header__main__button__menu" aria-label="Main menu" title="Main menu">
+                <!--Circle should probably be made in css-->
+                <svg class="header__main__button__menu__svg" viewBox="0 0 48 48">
+                    <circle class="header__main__button__menu__svg__circle" cx="24" cy="24" r="24" ></circle>
+                </svg>
+                menu
+            </button>
+            <a class="header__main__button__home" aria-label="Gmail" title="Gmail"  href="#"></a>
+        </section>
+        <form class="header__search">
+            <button class="header__search__button" aria-label="Search" title="Search">search</button>
+            <input class="header__search__field" type="search" placeholder="Search mail">
+            <button class="header__search__button" aria-label="More options" title="More options">arrow_drop_down</button>
+        </form>
+        <section class="header__secondary">
+            <button class="header__secondary__button" aria-label="Google Apps" title="Google Apps">apps</button>
+            <button class="header__secondary__button" aria-label="Notifications" title="Notifications">notifications_none</button>
+            <button class="header__secondary__button__profile" aria-label="Google Account" title="Google Account"></button>
+        </section>
     </header>
-    <nav>
+    <nav class="nav">
         <button>Compose</button>
         <section>
             <button>Inbox</button>
@@ -28,7 +44,7 @@
         </section>
         <button>Username</button>
     </nav>
-    <main>
+    <main class="main">
         <header>
             <section>
                 <button>Pick all</button>
@@ -69,16 +85,16 @@
             <button>Addon1</button>
             <button>Addon2</button>
         </aside>
-
+        <footer>
+            <p>1.42 GB (9%) of 15 GB used</p>
+            <a href="#">Terms</a>
+            <a href="#">Privacy</a>
+            <a href="#">Program Policies</a>
+            <p>Last account activity: 16 minutes ago</p>
+            <a>Manage</a>
+            <a>Details</a>
+        </footer>
     </main>
-    <footer>
-        <p>1.42 GB (9%) of 15 GB used</p>
-        <a href="#">Terms</a>
-        <a href="#">Privacy</a>
-        <a href="#">Program Policies</a>
-        <p>Last account activity: 16 minutes ago</p>
-        <a>Manage</a>
-        <a>Details</a>
-    </footer>
+
 </body>
 </html>

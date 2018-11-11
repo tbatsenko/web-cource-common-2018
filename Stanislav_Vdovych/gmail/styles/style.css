@@ -1,0 +1,121 @@
+body{
+  margin: 0;
+}
+.nav{
+  float: left;
+  background: #00e100;
+  width: 256px;
+}
+.main{
+  overflow: hidden;
+}
+.header{
+  padding: 8px;
+  height: 64px;
+  box-sizing: border-box;
+  display: flex;
+  border-bottom: 1px solid darkgray;
+  position: relative;
+}
+.header__main{
+  display: flex;
+  padding-right: 32px;
+  min-width: 216px;
+}
+.header__main__button__home{
+  background: url("../images/logo_gmail.png");
+  background-size: 109px 40px;
+  width: 109px;
+  height: 40px;
+  margin-top: 4px;
+}
+.header__main__button__menu{
+  width: 48px;
+  height: 48px;
+  background: 0;
+  border: 0;
+  padding: 0;
+  margin-left: 4px;
+  margin-right: 4px;
+  position: relative;
+}
+.header__main__button__menu__svg{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 48px;
+  height: 48px;
+  background: 0;
+}
+.header__main__button__menu__svg__circle{
+  fill: transparent;
+}
+.header__main__button__menu__svg__circle:hover{
+  fill: rgba(0,0,0,0.071);
+  overflow: visible;
+}
+.header__main__button__menu, .header__search__button, .header__secondary__button{
+  font-family: 'Material Icons';
+  font-size: 24px;
+  background: transparent;
+  color: #6d6d6d;
+}
+.header__search{
+  max-width: 720px;
+  width: 100%;
+  height: 46px;
+  border: 1px solid rgba(0,0,0,0);
+  background: rgba(0,0,0,0.04);
+  display: flex;
+}
+.header__search:focus-within{
+  max-width: 720px;
+  width: 100%;
+  height: 46px;
+  border: 1px solid rgba(0,0,0,0.12);
+  box-shadow: 0 1px 1px rgba(0,0,0,0.24);
+  background: rgba(255,255,255,1);
+  display: flex;
+}
+.header__search__button{
+  padding-left: 2px;
+  padding-right: 2px;
+  width: 50px;
+  height: 46px;
+  border: 0;
+  text-align: center;
+}
+.header__search__button:focus{
+  padding-left: 2px;
+  padding-right: 2px;
+  width: 50px;
+  height: 46px;
+  border: 0;
+  text-align: center;
+  outline: none;
+}
+.header__search__field{
+  padding-top: 11px;
+  padding-bottom: 11px;
+  background: transparent;
+  border: 0;
+  flex-grow: 1;
+}
+.header__search__field:focus{
+  padding-top: 11px;
+  padding-bottom: 11px;
+  background: transparent;
+  border: 0;
+  flex-grow: 1;
+  outline: none;
+}
+.header__secondary{
+  margin-left: auto;
+  width: 242px;
+  float: right;
+}
+.header__secondary__button{
+}
+.header__secondary__button__profile{
+
+}
