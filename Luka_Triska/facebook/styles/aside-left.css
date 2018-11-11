@@ -1,0 +1,23 @@
+.container__aside-left {
+  display: flex;
+  flex-flow: column; }
+  .container__aside-left--sidebar-button {
+    width: 180px;
+    height: 30px;
+    text-align: left; }
+  .container__aside-left--sidebar-button:hover, .container__aside-left--sidebar-button:focus {
+    cursor: pointer;
+    background: #f7f7f7; }
+  .container__aside-left--bar-header {
+    font-size: 13px;
+    padding-top: 4px;
+    color: #616770;
+    opacity: 30%;
+    margin-top: 5px;
+    margin-bottom: 5px; }
+
+.aside-left__news-button {
+  border: 1px solid #D0D1D5;
+  background: #f7f7f7; }
+
+/*# sourceMappingURL=aside-left.css.map */
