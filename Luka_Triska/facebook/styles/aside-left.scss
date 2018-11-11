@@ -2,16 +2,44 @@
   display: flex;
   flex-flow: column;
 
-  &--sidebar-button {
-    width: 180px;
-    height: 30px;
-    text-align: left;
+  &__profile {
+    margin-bottom: 10px;
+    &--pic {
+      background: url("https://res.cloudinary.com/schwajka/image/upload/c_scale,w_20/v1541718636/facebook_images/ninja-icon.png");
+    }
   }
 
-  &--sidebar-button:hover,
-  &--sidebar-button:focus {
+  &__news {
+    border: 1px solid #D0D1D5;
+    background: #f7f7f7;
+
+    &--logo {
+      background: url("https://static.xx.fbcdn.net/rsrc.php/v3/ym/r/7LrkhdMlJ4d.png") no-repeat 0 -1059px;
+    }
+
+  }
+
+  &--link {
+    display: flex;
+    align-items: center;
+    width: 180px;
+    height: 30px;
+    color: #000;
+
+    &--image {
+      height: 20px;
+      width: 20px;
+      margin: 0 6px 0 4px;
+    }
+
+
+  }
+
+  &--link:hover,
+  &--link:focus {
     cursor: pointer;
     background: #f7f7f7;
+    border: 1px solid #D0D1D5;
   }
 
   &--bar-header {
@@ -19,12 +47,27 @@
     padding-top: 4px;
     color: #616770;
     opacity: 30%;
-    margin-top: 5px;
-    margin-bottom: 5px;
+    margin: 5px 0 5px 4px;
   }
-}
 
-.aside-left__news-button {
-  border: 1px solid #D0D1D5;
-  background: #f7f7f7;
+  &--messenger {
+    background: url("https://static.xx.fbcdn.net/rsrc.php/v3/ym/r/7LrkhdMlJ4d.png") no-repeat 0 -240px;
+  }
+
+  &--8-ball-pool {
+    border-radius: 50%;
+  }
+
+  &--events {
+    background: url("https://static.xx.fbcdn.net/rsrc.php/v3/ys/r/pGo4GQSbtwv.png");
+  }
+
+  &--groups {
+    background: url("https://static.xx.fbcdn.net/rsrc.php/v3/ym/r/7LrkhdMlJ4d.png") 0 -177px;
+  }
+
+  &--fan-clubs {
+    background: url("https://static.xx.fbcdn.net/rsrc.php/v3/ym/r/7LrkhdMlJ4d.png") 0 -303px;
+  }
+
 }
