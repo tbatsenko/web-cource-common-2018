@@ -1,0 +1,57 @@
+.input {
+    min-height: 62px;
+    border-top: 3px solid #e5e5e5;
+
+    &__form {
+        margin: 7px 0 10px 16px;
+    } 
+
+    &__message {
+        border: 0;
+        outline: 0;
+        color: #353535;
+    }
+
+    &__message::placeholder {
+        color: #cdcdcd;
+    }
+    &__control {
+        height: 18px;
+        display: flex;
+        align-items: center;
+    }
+
+    &__button:first-of-type {
+        margin-left: 16px;
+    }
+
+    &__button {
+        width: 16px;
+        height: 16px;
+        margin-right: 10px;
+    }
+
+    &__button--pic {
+        background-image: url(../images/picture.svg);
+    }
+
+    &__button--gif {
+        width: 21px;
+        background-image: url(../images/gif.svg);
+    }
+
+    &__button--smile {
+        background-image: url(../images/smile.svg);
+    }
+
+    &__button--calendar {
+        height: 18px;
+        background-image: url(../images/calendar.svg);
+    }
+
+    &__button--camera {
+        height: 17px;
+        width: 21px;
+        background-image: url(../images/camera.svg);
+    }
+}

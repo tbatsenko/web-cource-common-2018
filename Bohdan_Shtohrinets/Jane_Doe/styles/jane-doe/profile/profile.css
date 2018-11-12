@@ -17,7 +17,6 @@
     background: url("/images/profile-image.png");
     background-size: cover;
 }
-
 .profile__motto {
     margin-top: 64px;
     display: flex;
@@ -31,7 +30,6 @@
     align-self: center;
     color: #7b7b7b;
 }
-
 .profile__info {
     margin-top: 64px;
     justify-content: center;
@@ -39,13 +37,11 @@
     flex-direction: column;
     flex-wrap: wrap;
 }
-
 .profile__feelings {
     margin-top: 60px;
     display: flex;
     flex-wrap: wrap;
 }
-
 .profile__brands {
     margin-top: 60px;
     display: flex;

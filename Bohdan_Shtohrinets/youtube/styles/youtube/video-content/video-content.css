@@ -1,0 +1,84 @@
+.video-content__section {
+    margin-top: 20px;
+    justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    border-bottom: 1px solid #eeeeee;
+}
+
+.video-content__videos {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.section__title {
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.section__show-more-videos {
+    text-transform: uppercase;
+    border: none;
+    background: none;
+    display: block;
+    width: 121px;
+    letter-spacing: .007px;
+    font-size: 11px;
+    color: rgba(17, 17, 17, 0.6);
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.videos__video-link {
+    display: flex;
+    flex-direction: column;
+    margin-right: 5px;
+    margin-bottom: 20px;
+    width: 210px;
+}
+
+.videos__source {
+    width: 210px;
+    height: 117px;
+    margin-bottom: 10px;
+}
+
+.videos__title {
+    color: black;
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.videos__details {
+    font-size: 13px;
+    color: rgba(17, 17, 17, 0.6);
+}
+
+.videos_author {
+    display: block;
+}
+
+.videos__svg {
+    position: relative;
+    top: 3px;
+    width: 13px;
+    height: 13px;
+}
+
+.videos__svg_disabled {
+    display: none;
+}
+
+.svg__path {
+    fill: #888888;
+}
+
+.svg__path_disabled {
+    display: none;
+}
+
+/*# sourceMappingURL=video-content.css.map */

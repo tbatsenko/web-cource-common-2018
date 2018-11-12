@@ -1,0 +1,20 @@
+img {
+    max-width: 100%;
+}
+
+a {
+    color: black;
+}
+
+blockquote {
+    font-style: italic;
+    color: #7b7b7b;
+}
+
+blockquote:before {
+    content: '"';
+}
+
+blockquote:after {
+    content: '"';
+}

@@ -1,0 +1,23 @@
+
+
+.post-section__article__post-reaction__post-comment_comment-option_smile, .post-section__article__post-reaction__post-comment_comment-option_photo, .post-section__article__post-reaction__post-comment_comment-option_gif, .post-section__article__post-reaction__post-comment_comment-option_sticker {
+    height: 16px;
+    width: 16px;
+    background: url("https://static.xx.fbcdn.net/rsrc.php/v3/y3/r/ZpN7MehwMck.png");
+}
+
+.post-section__article__post-reaction__post-comment_comment-option_smile {
+    background-position: 0 -168px;
+}
+
+.post-section__article__post-reaction__post-comment_comment-option_photo {
+    background-position: -46px -57px;
+}
+
+.post-section__article__post-reaction__post-comment_comment-option_gif {
+    background-position: -34px -168px;
+}
+
+.post-section__article__post-reaction__post-comment_comment-option_sticker {
+    background-position: -34px -219px;
+}

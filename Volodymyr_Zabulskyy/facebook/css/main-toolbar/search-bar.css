@@ -1,0 +1,26 @@
+
+.main-tool-bar__search-bar__button {
+    width: 3em;
+    border: solid .3em transparent;
+    border-radius: 0 2px 2px 0;
+    background: #ebedf0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.main-tool-bar__search-bar__button-ico {
+    background: url("https://static.xx.fbcdn.net/rsrc.php/v3/yh/r/xs_zpaJOZfw.png") 0 -1331px;
+    width: 14px;
+    height: 14px;
+}
+
+.main-tool-bar__form {
+    display: flex;
+}
+
+.main-tool-bar__search-bar__input {
+    width: 25em;
+    border: solid .3em transparent;
+    border-radius: 2px 0 0 2px;
+}

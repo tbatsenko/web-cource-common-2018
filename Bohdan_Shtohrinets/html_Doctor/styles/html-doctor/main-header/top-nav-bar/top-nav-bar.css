@@ -1,0 +1,74 @@
+.top-nav-bar__link {
+    color: white;
+    font-size: 14px;
+}
+
+.top-nav-bar__link:hover {
+    text-decoration: underline;
+}
+
+.top-nav-bar__link_with-button:before {
+    width: 10px;
+    height: 10px;
+    top: 4px;
+    left: 102px;
+    content: "";
+    position: absolute;
+    background: url("http://html5doctor.com/wp-content/themes/html5doctor2/images/expanded-header.jpg");
+    background-size: 10px;
+}
+
+.top-nav-bar__option {
+    background: inherit;
+    float: left;
+    position: relative;
+    text-decoration: none;
+    transition-duration: 0.5s;
+}
+
+.top-nav-bar__option:hover > .top-nav-bar__drop-down {
+    visibility: visible;
+    opacity: 1;
+    display: block;
+}
+
+.top-nav-bar__option:after {
+    content: "";
+    height: 16px;
+    width: 1px;
+    display: inline-block;
+    background: white;
+    position: relative;
+    bottom: -4px;
+    margin-left: 5px;
+    margin-right: 5px;
+    opacity: 0.8;
+}
+
+.top-nav-bar__option:last-child:after {
+    display: none;
+}
+
+.top-nav-bar__drop-down {
+    visibility: hidden;
+    opacity: 0;
+    min-width: 5rem;
+    position: absolute;
+    transition: all 0.5s ease;
+    left: 0;
+    display: none;
+}
+
+.top-nav-bar__drop-down:hover {
+    visibility: visible;
+    opacity: 1;
+    display: block;
+}
+
+.drop-down__option {
+    clear: both;
+    width: 100%;
+    margin-top: 5px;
+}
+
+/*# sourceMappingURL=top-nav-bar.css.map */
