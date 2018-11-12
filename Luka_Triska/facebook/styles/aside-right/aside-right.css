@@ -1,0 +1,24 @@
+.aside-right {
+  display: flex;
+  flex-flow: column;
+  border: 1px solid #d3d3d3;
+  border-radius: 3px;
+  background: #fff;
+  width: 284px;
+  padding: 12px; }
+  .aside-right__header {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    padding-bottom: 12px; }
+    .aside-right__header-right--link {
+      display: flex; }
+      .aside-right__header-right--link-icon {
+        margin: 0 5px 0 5px;
+        height: 12px;
+        width: 12px;
+        background-size: auto;
+        background: url("https://static.xx.fbcdn.net/rsrc.php/v3/y3/r/gkGTiCyWKAb.png") no-repeat 0 -329px; }
+
+/*# sourceMappingURL=aside-right.css.map */

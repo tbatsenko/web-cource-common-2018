@@ -11,14 +11,23 @@
 
   &__image {
     width: 100%;
-    margin-bottom: 11px;
     border: 1px solid rgba(0, 0, 0, .1);
   }
 
   &__like-info {
-    height: 20px;
-    margin: 10px 12px 0 12px;
-    padding-bottom: 10px;
+    display: flex;
+    align-items: center;
+    height: 44px;
+    width: auto;
+    border-top: 1px solid #d3d3d3;
+    margin: 0 5px 0 5px;
+
+    &--pic {
+      height: 20px;
+      width: 20px;
+      background: url("https://static.xx.fbcdn.net/rsrc.php/v3/yG/r/S-tmaD99SDv.png") no-repeat 0 -710px;
+    }
+
   }
 
   &__action {
