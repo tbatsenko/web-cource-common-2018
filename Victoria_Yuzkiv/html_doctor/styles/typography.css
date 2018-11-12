@@ -18,12 +18,21 @@ a {
     color: #0090D2;
 }
 
-p{
+p {
     margin: 4px 0 1.5em;
 }
 
-h3{
+h3 {
     font-size: 1.25em;
     line-height: 1.2;
     font-family: 'Quicksand', 'Helvetica Neue', Arial, sans-serif;
+}
+
+article {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font: inherit;
+    vertical-align: baseline;
 }

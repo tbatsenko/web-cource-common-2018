@@ -1,0 +1,22 @@
+.main-tool-bar__profile-section-txt, .main-tool-bar__profile-section {
+    display: flex;
+    align-items: center;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 12px;
+    height: 24px;
+    border: 0;
+    padding: 1px 10px;
+    background: transparent;
+    border-radius: 3px;
+}
+
+.main-tool-bar__profile-section-img {
+    object-fit: cover;
+    height: 24px;
+    width: 24px;
+    background-size: 24px 24px;
+    border-radius: 24px;
+    margin-right: .7em;
+}

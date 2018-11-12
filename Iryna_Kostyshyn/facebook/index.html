@@ -5,34 +5,40 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Facebook</title>
-    <link rel="stylesheet" href="style.css">
+
+    <link rel="stylesheet" href="styles/logo.css">
+    <link rel="stylesheet" href="styles/header.css">
+    <link rel="stylesheet" href="styles/post.css">
+    <link rel="stylesheet" href="styles/news_feed.css">
+    <link rel="stylesheet" href="styles/side_bar_navigation.css">
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/right-side-navigation.css">
 </head>
 <body>
     <header class="main-header">
-        <nav class="main-navigation">
-            <a id="logo" href="#" name="Facebook"></a>
-            <form class="search" action="/" method="get">
-                <label for="search" class="visualy-hidden"> </label>
-                <input id="search" type="text" name="q" required><!--
-                --><button id="search-button">Search</button>
-            </form>
-            <ul class="nav">
-                <li><button class="header-nav" id="username-button">Ira</button></li>
-                <li><button class="header-nav" id="main-button">Головна</button></li>
-                <li><button class="header-nav" id="create-button">Створити</button></li>
-                <li>
-                    <button class="header-nav" id="friend-req-button">Створити</button>
-                    <button class="header-nav" id="message-button">Повідомлення</button>
-                    <button class="header-nav" id="notification-button">Notification</button>
-                </li>
-                <li>
-                    <button class="header-nav" id="quick-help-button">Quick help</button>
-                    <button class="header-nav" id="submenu">Open submenu</button>
-                </li>
-            </ul>
+        <div class="main-header__content">
+        <a class="main-header__logo" href="#" name="Facebook"></a>
+        <form class="header-search" action="/" method="get">
+            <input class="header-search__input" type="text" name="q" required><!--
+                --><button class="header-search__button">Search</button>
+        </form>
+        <nav class="main-header-navigation">
+
+                <button class="main-header-navigation__button main-header-navigation__button--username">Ira</button>
+                <button class="main-header-navigation__button main-header-navigation__button--main">Головна</button>
+                <button class="main-header-navigation__button main-header-navigation__button--create">Створити</button>
+                <button class="main-header-navigation__button main-header-navigation__button--friend-req-">Створити</button>
+                <button class="main-header-navigation__button main-header-navigation__button--message">Повідомлення</button>
+                <button class="main-header-navigation__button main-header-navigation__button--notification">Notification</button>
+
+                <button class="main-header-navigation__button main-header-navigation__button--quick-help">Quick help</button>
+                <button class="main-header-navigation__button main-header-navigation__button--submenu">Open submenu</button>
+
         </nav>
+        </div>
     </header>
-    <nav id="side-navigation">
+    <div class="container">
+    <nav class="side-navigation">
         <ul class="sidebar">
             <li class="link">
                 <a href="#">Ira Kostyshyn</a>
@@ -69,56 +75,94 @@
             </li>
         </ul>
     </nav>
-    <section id="main-feed">
-        <form id="make_post">
-            <header>
-                <button name="makePost">Make Post</button>
-                <button name="addMedia">Photo/Video Album</button>
-                <button name="liveVideo">Live Video</button>
+    <section class="main-feed">
+        <form class="make_post">
+            <header class="make_post__header">
+                <button class="make-post__header-button">Make Post</button>
+                <button class="make-post__header-button">Photo/Video Album</button>
+                <button class="make-post__header-button">Live Video</button>
             </header>
-            <textarea placeholder="Що у вас на думці, Ira?">
-            </textarea>
-            <footer>
-                <button>Photo/Video</button>
-                <button>Tag Friends</button>
-                <button>Felling/Activity</button>
+            <main class="make_post__main">
+                <img class="main-feed__user-avatar" src="https://avatars1.githubusercontent.com/u/25458097?s=400&v=4" alt="profile photo">
+                <input class="make_post__input" placeholder="Що у вас на думці, Ira?">
+
+            </main>
+            <footer class="make_post__footer">
+                <button class="make-post__footer-button">Photo/Video</button>
+                <button class="make-post__footer-button">Tag Friends</button>
+                <button class="make-post__footer-button">Felling/Activity</button>
+                <button class="make-post__footer-button make-post__footer-button--more">...</button>
             </footer>
         </form>
-    <section id="post">
-        <article>
-            <h5><strong>Yaroslav Prytula</strong> поширив подію.</h5>
-        вчора о  о 17:42 <img src="">
-            <p>Ми розширили список учасників зустрічі-дискусії. До зустрічі завтра о 18.00 в Український католицький університет UCuniversity</p>
-            <img src="" alt="event photo">
-            <div><small>Відбувається зараз</small>
-                <h5>Зустріч-дискусія: Математична освіта в Україні</h5>
-                <small>Victoria, Yaroslav і ще 25 друзів</small>
-                <button>Цікавить</button>
-                <img src="" alt="profiles photo"><p><small>Степан Фединяк, Natalia Klymovska та 32 інші особи</small></p>
-                <button>Подобається</button> <button>Коментувати</button> <button>Поширити</button>
-            </div>
+
+        <article class="main-feed__post">
+            <header class="main-feed__post-header">
+                <img class="main-feed__user-avatar" src="https://avatars0.githubusercontent.com/u/4161345?s=400&v=4">
+                <a class="main-feed__user-name" href="#">Students Problem </a>
+                <a class="main-feed__post-time" href="#">17:42</a>
+
+            </header>
+            <p class="main-feed__post-capture">This is my biggest fear</p>
+            <img class="main-feed__post-photo" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQPFpYHC1woEftYu5xX3vjbYKtZAwQGxpxg5xrIpuQWqBIJsIqeWw" alt="post photo">
+            <footer class="main-feed__post-footer">
+                <div class="main-feed__post-summary">
+                <img class="main-feed__like-img" src="https://i0.wp.com/www.vectorico.com/wp-content/uploads/2018/02/Facebook-Like.png?resize=300%2C300" alt="like">
+                    <a class="main-feed__post-amount-likes" href="#">13 </a>
+                    <a class="main-feed__post-amount-shares" href="#">1 поширення </a>
+                </div>
+                <div class="main-feed__post-footer-buttons">
+                <button class="main-feed__footer-button">Подобається</button>
+                <button class="main-feed__footer-button">Коментувати</button>
+                <button class="main-feed__footer-button">Поширити</button>
+                </div>
+            </footer>
         </article>
+
     </section>
-    <section><h5>Розповіді</h5>
-    <a href="page/1.html">Архів</a> · <a href="page/2.html">Налаштування</a>
-        <img src="" alt="profile photo"><p>Поділіться світлиною, відео або напишіть щось</p>
-        <img src="" alt="profile photo"><p>Дмитро Наконечний</p>
-        <small>23 години тому</small>
-        <img src="" alt="profile photo"><p>Віра Тухлій</p>
-        <small>9 годин тому</small>
+        <section class="right-side-block">
+    <section class="right-side-block__story">
+        <header class="right-side-block__story-header">
+            <a class="right-side-block__story-name" href="#">Розповіді</a>
+            <a class="right-side-block__story-navigation" href="#">Архів</a>
+            ·
+            <a class="right-side-block__story-navigation"href="#">Налаштування</a>
+        </header>
+        <div class="story">
+        <img class="right-side-block__user-avatar" src="https://avatars1.githubusercontent.com/u/25458097?s=400&v=4" alt="profile photo">
+        <p class="right-side-block__help-text">Поділіться світлиною, відео або напишіть щось</p>
+        </div>
+        <div class="story">
+        <img class="right-side-block__user-avatar" src="https://avatars1.githubusercontent.com/u/25458097?s=400&v=4" alt="profile photo">
+        <p class="right-side-block__user-name">Дмитро Наконечний</p>
+        <p class="right-side-block__help-text">23 години тому</p>
+        </div>
+        <div class="story">
+        <img class="right-side-block__user-avatar" src="https://avatars1.githubusercontent.com/u/25458097?s=400&v=4" alt="profile photo">
+            <p class="right-side-block__user-name">Віра Тухлій</p>
+        <p class="right-side-block__help-text">9 годин тому</p>
+        </div>
     </section>
-    <section><p>4 запрошення на події</p></section>
-    <section><h5>Ваша Сторінка</h5>
-        <img src="" alt="page photo"> Факультет прикладних наук
-    <a href="" >Повідомлення</a>
-    <a href="" >Сповіщення</a>
+    <section class="right-side-block__event">
+        <a href="#">4 запрошення на події</a>
+    </section>
+    <section class="right-side-block__pages">
+        <header class="right-side-block__pages-head">
+            <a class="right-side-block__story-name" href="#"> Ваша Сторінка</a>
+            <a class="right-side-block__story-navigation" href="#">Переглянути всі</a>
+        </header>
+
+        <img class="right-side-block__pages-to-like-photo" src="https://scontent.fiev12-1.fna.fbcdn.net/v/t1.0-0/s417x417/22814519_1473528489433960_7986790218313159823_n.jpg?_nc_cat=105&_nc_ht=scontent.fiev12-1.fna&oh=580663f16409e489c0559c2272751b08&oe=5C77FE8B" alt="page photo">
+        <button class="like-button">Вподобати цю сторінку</button>
     <hr>
-        <a href=""> Опублікувати</a> <a href="" >Світлина</a> <a href=""> Наживо</a> <a href="" >Запросити друзів</a>
-    <hr>
-    <button>Вподобання</button> <button>Перегляди</button> <button>Дописи</button>
-    <h3>3787</h3>
-        <p><small>16 нових вподобань цього тижня</small></p>
-    <hr>
-</section>
+    </section>
+            <section class="right-side-block__language-selection">
+                Українська · Русский · English (US) · Español · Português (Brasil)
+                    <button class="right-side-block__language-add">+</button>
+            </section>
+            <footer class="right-side-block__footer">Конфіденційність · Умови користування · Розміщення реклами · Типи реклами · Реп'яшки ·
+                Ще
+                Facebook © 2018</footer>
+    </section>
+    </div>
 </body>
 </html>

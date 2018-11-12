@@ -1,0 +1,25 @@
+.main-tool-bar__navigation-list {
+    display: flex;
+    flex-flow: row;
+    list-style: none;
+    margin: 0;
+}
+
+
+.main-tool-bar__navigation-list-link{
+    display: flex;
+    align-items: center;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 12px;
+    height: 24px;
+    border: 0;
+    padding: 1px 10px;
+    background: transparent;
+    border-radius: 3px;
+}
+
+.main-tool-bar__navigation-list-link:hover, .main-tool-bar__profile-section-txt:hover {
+    background: #3156a1;
+}

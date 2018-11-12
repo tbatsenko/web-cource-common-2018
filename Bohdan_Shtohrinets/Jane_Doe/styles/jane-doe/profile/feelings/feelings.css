@@ -1,0 +1,22 @@
+.feelings__tag {
+    font-size: 18px;
+    font-weight: bold;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: left;
+    color: #ffffff;
+    background-color: #7b7b7b;
+    border: none;
+    padding: 10px 20px;
+    margin-bottom: 10px;
+    margin-right: 10px;
+    max-height: 41px;
+}
+
+.feelings__tag:last-child {
+    margin-right: 0;
+}
+
+/*# sourceMappingURL=feelings.css.map */

@@ -1,0 +1,17 @@
+.label {
+  cursor: inherit;
+}
+.label--compose {
+  font-family: "Google Sans", Roboto, RobotoDraft, Helvetica, Arial, sans-serif;
+  line-height: 32px;
+  font-weight: 500;
+  font-size: 14px;
+  margin-left: 8px;
+}
+.label--left-nav {
+  margin-left: 18px;
+  font-family: Roboto, RobotoDraft, Helvetica, Arial, sans-serif;
+  font-size: 0.875rem;
+}
+
+/*# sourceMappingURL=label.css.map */

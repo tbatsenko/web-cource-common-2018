@@ -10,49 +10,70 @@
 </head>
 <body>
 
-<header class="header">
-    <div class="header-left">
-        <a class="icons header__facebook-icon">Facebook</a>
-        <form role="search" action="/" class="search-form">
-            <input type="search" placeholder="Пошук " class="search-form__input">
-            <button class="search-form__button"><svg class="icons search-form__search-icon"></svg></button>
+<header class="header-blue">
+    <div class="header-container">
+        <div class="header-left">
+            <a class="icons header__facebook-icon">Facebook</a>
+            <form role="search" action="/" class="search-form">
+                <input type="search" placeholder="Пошук " class="search-form__input">
+                <button class="search-form__button"><svg class="icons search-form__search-icon"></svg></button>
 
-        </form>
+            </form>
+        </div>
+        <nav class="header-navigation">
+            <ul class="header-right">
+                <li class="header-right__element"><a href="#" class="header-right__profile-details"><img src="icons/person.jpg" class="header-right__profile-picture "> Ira </a></li>
+                <li class="header-right__element"><a href="#">Головна</a></li>
+                <li class="header-right__element"><button class="header-right__button header-right__button-create">Створити</button></li>
+                <li class="header-right__element"><button class="icons header-right__button header-right__button-friends header-right__button__transparent-w2-h2">друзі</button><button class="icons header-right__button header-right__button-messages header-right__button__transparent-w2-h2">повідомлення</button><button class="icons header-right__button header-right__button-notifications header-right__button__transparent-w2-h2  ">сповіщення</button></li>
+                <li class="header-right__element"><button class="icons header-right__button header-right__button-help header-right__button__transparent-w2-h2">допомога</button><button class="icons header-right__button header-right__button-other header-right__button__transparent-w2-h2">інше</button></li>
+            </ul>
+        </nav>
     </div>
-    <nav class="header-navigation">
-        <ul class="header-right">
-            <li class="header-right__element"><a href="#" class="header-right__profile-details"><img src="icons/person.jpg" class="header-right__profile-picture "> Ira </a></li>
-            <li class="header-right__element"><a href="#">Головна</a></li>
-            <li class="header-right__element"><button class="header-right__button header-right__button-create">Створити</button></li>
-            <li class="header-right__element"><button class="icons header-right__button header-right__button-friends header-right__button__transparent-w2-h2">друзі</button><button class="icons header-right__button header-right__button-messages header-right__button__transparent-w2-h2">повідомлення</button><button class="icons header-right__button header-right__button-notifications header-right__button__transparent-w2-h2  ">сповіщення</button></li>
-            <li class="header-right__element"><button class="icons header-right__button header-right__button-help header-right__button__transparent-w2-h2">допомога</button><button class="icons header-right__button header-right__button-other header-right__button__transparent-w2-h2">інше</button></li>
-        </ul>
-    </nav>
-
 </header>
-<main class="main">
+<main class="main-layout">
 
     <aside class="left-aside">
         <nav class="left-aside-navigation">
             <ul class="left-aside-container">
-                <li class="left-aside-navigation__element"><a href="#"><img src="icons/person.jpg" class="left-aside-navigation__person"> Ira Zakharchenko <button>Редагувати профіль</button></a></li>
                 <li class="left-aside-navigation__element">
-                    <ul>
-                        <li><svg></svg> Новини <button></button></li>
-                        <li><svg></svg> Messenger <button></button></li>
-                    </ul>
+
+
+                    <a href="#" class="left-aside-navigation__personal-data">
+                        <img src="icons/person.jpg" class="left-aside-personal-data__person-img"> Ira Zakharchenko
+                    </a>
+
+                </li>
+                <li class="left-aside-navigation__element left-aside-navigation__element__margin-top">
+                    <a href="#" class="left-aside-navigation__news">
+                        <svg class="left-aside-navigation__news-img"></svg> Новини
+                    </a>
                 </li>
                 <li class="left-aside-navigation__element">
-                    <h3>Швидкий доступ</h3><button>Редагувати</button>
-                    <ul>
-                        <li><svg></svg> Varta1 ... <span>20+</span> <button></button></li>
-                        <li><svg></svg> День відкритих дв... <button></button></li>
-                    </ul>
+                    <a  href="#" class="left-aside-navigation__news">
+                        <svg class="left-aside-navigation__news-img"></svg> Messenger
+                    </a>
+                </li>
+                <li class="left-aside-navigation__element">
+                    <h3 class="left-aside-navigation__element-header">Швидкий доступ</h3>
+                </li>
+
+                <li class="left-aside-navigation__element">
+                    <a href="#" class="left-aside-navigation__news">
+                    <svg class="left-aside-navigation__news-img"></svg> Varta1 ...
+                    </a></li>
+                <li class="left-aside-navigation__element">
+                    <a href="#" class="left-aside-navigation__news">
+                    <svg class="left-aside-navigation__news-img"></svg> День відкритих дв...
+                    </a>
+                </li>
+                <li class="left-aside-navigation__element">
+
                     <button> Більше...</button>
 
                 </li>
                 <li class="left-aside-navigation__element">
-                    <h3>Цікаве</h3>
+                    <h3 class="left-aside-navigation__element-header">Цікаве</h3>
                     <ul>
                         <li><svg></svg>Події<span>3</span></li>
                         <li><svg></svg>Фан-клуби</li>

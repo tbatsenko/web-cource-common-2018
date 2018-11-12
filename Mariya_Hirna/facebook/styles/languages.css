@@ -1,0 +1,4 @@
+.main-container.languages{
+    display: flex;
+    flex-direction: row;
+}
