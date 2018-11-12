@@ -1,0 +1,160 @@
+%centered {
+  display: flex;
+  align-items: center;
+}
+%facebook-icons_header {
+  background-image: url("https://static.xx.fbcdn.net/rsrc.php/v3/yF/r/1c0gE0MbEo8.png");
+  background-repeat: no-repeat;
+  background-size: 29px 1475px;
+  background-color: transparent;
+  height: 24px;
+  width: 24px;
+  border: none;
+  display: inline-block;
+}
+
+.header {
+  top: 0;
+  margin: 0;
+  background-color: #4267b2;
+  border-bottom: 1px solid #29487d;
+  width: 100%;
+  height: 43px;
+  display: flex;
+  position: fixed;
+  justify-content: space-evenly;
+  align-items: center;
+
+  &__facebook-logo {
+    @extend %centered;
+    .facebook-logo__icon {
+      @extend %facebook-icons_header;
+      background-position: 0 -442px;
+    }
+  }
+
+  .search {
+    @extend %centered;
+    height: 24px;
+
+    .search-form {
+      height: 24px;
+      margin-left: 5px;
+      background-color: white;
+      display: flex;
+      border-radius: 3px;
+      overflow: hidden;
+      border: 1px solid #3b5998;
+
+      .search-form__input {
+        padding: 0 0 0 10px;
+        width: 400px;
+        border: none;
+        height: 24px;
+        font-size: 14px;
+      }
+      .search-form__button {
+        width: 46px;
+        height: 24px;
+        padding: 0;
+        border: none;
+        background-color: #f5f6f7;
+        cursor: pointer;
+
+        .search-form__button:hover {
+          background-color: rgb(235, 237, 240);
+        }
+        .search-form__button:active {
+          background-color: #4080ff;
+        }
+        .search-form__button-icon {
+          @extend %facebook-icons_header;
+          height: 14px;
+          width: 14px;
+          background-position: 0 -1445px;
+        }
+      }
+    }
+  }
+  .navigation-menu {
+    @extend %centered;
+
+    &__section {
+      height: 25px;
+      padding-left: 10px;
+      @extend %centered;
+    }
+    .navigation__link {
+      @extend %centered;
+      text-decoration: none;
+
+      &:hover {
+        background-color: pink;
+      }
+    }
+    .navigation__text {
+      font-size: 12px;
+      font-weight: bold;
+      color: white;
+      padding: 5px 10px;
+    }
+    .navigation__profile-picture {
+      border-radius: 50%;
+      overflow: hidden;
+      width: 24px;
+      height: 24px;
+    }
+
+    %navigation-menu__button {
+      opacity: .6;
+      padding: 0;
+      margin-right: 10px;
+    }
+
+    .button__requests {
+      @extend %facebook-icons_header;
+      @extend %navigation-menu__button;
+      background-position: 0 -467px;
+
+      &:active {
+        background-position: 0 -492px;
+        opacity: 1;
+      }
+    }
+    .button__messages {
+      @extend %facebook-icons_header;
+      @extend %navigation-menu__button;
+      background-position: 0 -717px;
+
+      &:active {
+        background-position: 0 -742px;
+        opacity: 1;
+      }
+    }
+    .button__notifications {
+      @extend %facebook-icons_header;
+      @extend %navigation-menu__button;
+      background-position: 0 -617px;
+
+      &:active {
+        background-position: 0 -642px;
+        opacity: 1;
+      }
+    }
+    .button__help {
+      @extend %facebook-icons_header;
+      @extend %navigation-menu__button;
+      background-position: 0 -1153px;
+      height: 20px;
+      width: 20px;
+    }
+    .button__menu {
+      @extend %facebook-icons_header;
+      @extend %navigation-menu__button;
+      background-position: 0 -1326px;
+      height: 16px;
+      width: 16px;
+      margin-right: 0;
+    }
+  }
+}
