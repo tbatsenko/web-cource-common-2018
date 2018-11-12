@@ -1,19 +1,16 @@
 .header {
   height: 64px;
   padding: 8px;
-  background: #e74c3c;
   box-sizing: border-box;
   display: flex;
-  justify-content: flex-start;
+  justify-content: space-between;
   border-bottom: 1px solid rgba(0, 0, 0, 0.2);
 }
 
 .logo_part {
-  width: 248px;
-  height: 48px;
-  box-sizing: border-box;
   padding-right: 32px;
   display: flex;
+  box-sizing: content-box;
 }
 .logo_part__menu-button {
   width: 24px;
@@ -35,6 +32,102 @@
   width: 109px;
   height: 40px;
   margin: 4px 0px 0px -1px;
+}
+
+.search-part {
+  background: rgba(0, 0, 0, 0.04);
+  width: 722px;
+  height: 48px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  border-radius: 4px;
+}
+.search-part__search-button, .search-part__options-button, .search-part__clear-button {
+  width: 46px;
+  height: 46px;
+  padding-left: 2px;
+  padding-right: 2px;
+  border-radius: 50%;
+  border: 0;
+  box-sizing: content-box;
+  vertical-align: middle;
+}
+.search-part__search-button:focus, .search-part__options-button:focus {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+.search-part__search_icon, .search-part__options-icon {
+  width: 24px;
+  height: 24px;
+  padding: 7px;
+  margin: 4px;
+  color: black;
+  opacity: 0.54;
+}
+.search-part__input-text {
+  width: 100%;
+  height: 24px;
+  background: transparent;
+  border: none;
+  color: gray;
+  font: normal 16px Roboto, sans-serif;
+  padding: 11px 16px 11px 10px;
+}
+.search-part__options-button {
+  padding-left: 4px;
+  padding-right: 4px;
+}
+
+.buttons-part {
+  display: flex;
+  height: 48px;
+  justify-content: flex-end;
+  align-items: center;
+  box-sizing: border-box;
+  padding-left: 32px;
+}
+.buttons-part__google-apps-button, .buttons-part__notification-button {
+  width: 46px;
+  height: 46px;
+  padding-left: 2px;
+  padding-right: 2px;
+  border-radius: 50%;
+  border: 0;
+  box-sizing: content-box;
+  vertical-align: middle;
+}
+.buttons-part__google-apps-button:focus, .buttons-part__notification-button:focus {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+.buttons-part__google-apps-icon, .buttons-part__notification-icon {
+  width: 24px;
+  height: 24px;
+  padding: 7px;
+  margin: 4px;
+  color: black;
+  opacity: 0.54;
+}
+.buttons-part__google-profile-button {
+  width: 132px;
+  border: 1px solid #dadce0;
+  box-sizing: border-box;
+  height: 46px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+}
+.buttons-part__google-profile-button:hover {
+  border: 1px solid #d2e3fc;
+  background-color: rgba(248, 250, 255, 0.88);
+}
+.buttons-part__ucu-logo {
+  width: 78px;
+  line-height: 32px;
+}
+.buttons-part__user-avatar {
+  width: 32px;
+  height: 32px;
+  padding: 3px 3px 3px 4px;
 }
 
 :root {
@@ -108,6 +201,10 @@ button {
 }
 button:hover {
   cursor: pointer;
+}
+
+:root {
+  --window-header-height: 32px;
 }
 
 /*# sourceMappingURL=common.css.map */
