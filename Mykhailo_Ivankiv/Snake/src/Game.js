@@ -12,7 +12,6 @@ const getRandomInt = (min, max) => {
 }
 
 const restrictAtRange = ([A, B]) => X => (X < A ? B : X > B ? A : X)
-
 const restrictAtField = restrictAtRange([0, FIELD_SIZE - 1])
 
 const addObjectToField = (field, coordinates, object = 1) => {
@@ -30,43 +29,23 @@ const renderCell = cellNumber =>
 
 const renderField = (field, container) => {
   container.innerHTML = `
-        <div class="Game">
-        
-        ${field
-          .map(
-            row =>
-              `<div class="Game__row">${row.map(renderCell).join('')}</div>`
-          )
-          .join('')}
-        </div>
+    <div class="Game">
+      ${field
+        .map(
+          row => `<div class="Game__row">${row.map(renderCell).join('')}</div>`
+        )
+        .join('')}
+      </div>
     `
 }
 
-const KEY_DOWN = 40
-const KEY_LEFT = 37
-const KEY_RIGHT = 39
-const KEY_UP = 38
-
 const getNextSnakeHead = (snake, direction) => {
-  if (direction === 'BOTTOM') {
-    const [x, y] = snake[snake.length - 1]
-    return [x, restrictAtField(y + 1)]
-  }
-
-  if (direction === 'TOP') {
-    const [x, y] = snake[snake.length - 1]
-    return [x, restrictAtField(y - 1)]
-  }
-
-  if (direction === 'LEFT') {
-    const [x, y] = snake[snake.length - 1]
-    return [restrictAtField(x - 1), y]
-  }
-
-  if (direction === 'RIGHT') {
-    const [x, y] = snake[snake.length - 1]
-    return [restrictAtField(x + 1), y]
-  }
+  let [x, y] = snake[snake.length - 1]
+  if (direction === 'BOTTOM') y++
+  if (direction === 'TOP') y--
+  if (direction === 'LEFT') x--
+  if (direction === 'RIGHT') x++
+  return [restrictAtField(x), restrictAtField(y)]
 }
 
 let direction = 'BOTTOM'
@@ -89,8 +68,6 @@ const checkIfSnakeAteApple = (snakeHead, apples) => {
 
 setInterval(() => {
   const snakeHead = getNextSnakeHead(snake, direction)
-  const fieldWithSnake = addObjectToField(field, snake)
-
   if (checkIfSnakeAteApple(snakeHead, apples)) {
     apples = apples.filter(
       ([x, y]) => !(snakeHead[0] === x && snakeHead[1] === y)
@@ -99,30 +76,24 @@ setInterval(() => {
     snake.shift()
   }
 
-  const fieldWithSnakeAndApple = addObjectToField(fieldWithSnake, apples, 2)
-
   snake.push(snakeHead)
+
+  const fieldWithSnake = addObjectToField(field, snake)
+  const fieldWithSnakeAndApple = addObjectToField(fieldWithSnake, apples, 2)
 
   renderField(fieldWithSnakeAndApple, document.body)
 }, 100)
 
+const KEY_DOWN = 40
+const KEY_LEFT = 37
+const KEY_RIGHT = 39
+const KEY_UP = 38
 document.addEventListener('keypress', e => {
-  switch (e.keyCode) {
-    case KEY_DOWN: {
-      direction = 'BOTTOM'
-      return
-    }
-    case KEY_LEFT: {
-      direction = 'LEFT'
-      return
-    }
-    case KEY_RIGHT: {
-      direction = 'RIGHT'
-      return
-    }
-    case KEY_UP: {
-      direction = 'TOP'
-      return
-    }
-  }
+  //prettier-ignore
+  direction =
+  e.keyCode === KEY_DOWN ? 'BOTTOM'
+: e.keyCode === KEY_LEFT ? 'LEFT'
+: e.keyCode === KEY_RIGHT ? 'RIGHT'
+: e.keyCode === KEY_UP ? 'TOP'
+: direction
 })
