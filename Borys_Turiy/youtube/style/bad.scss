@@ -44,11 +44,12 @@ body {
 .youtube-header__open_menu {
   float: left;
   border:0;
-  padding: 0;
-  height: 24px;
-  width: 24px;
+  padding: 8px;
   margin:8px;
-  background-size: cover;
+  width:40px;
+  height:40px;
+  background: no-repeat center;
+  background-size: 24px 24px;
   background-image: url(/images/menu_button.png);
 }
 
@@ -62,7 +63,6 @@ body {
 
 .user-options-menu {
   float: right;
-  padding-right: 6%;
 }
 
 .youtube-main {
@@ -74,6 +74,7 @@ body {
 }
 
 .youtube-suggested {
+  width:402px;
   float: left;
   margin-top: 48px;
   padding-top: 24px;
@@ -81,29 +82,32 @@ body {
 }
 
 .suggested-video {
+  text-decoration: none;
   display: block;
 
   height:94px;
   padding-bottom:8px;
   margin-bottom:16px;
 }
-.next-video{
+.suggested-video--next{
   border-bottom: 1px solid rgba(0,0,0,0.2);
 }
 
 .suggested-video__preview {
-  display: block;
   height: 94px;
   float: left;
+  margin-right: 8px;
 }
 
 .user-options-menu__button {
   border:0;
-  padding: 0;
-  height: 24px;
-  width: 24px;
+  padding: 8px;
+  height: 40px;
+  width: 40px;
   margin:8px;
-  background-size: cover;
+  background: no-repeat center;
+  background-size: 24px 24px;
+
 
 }
 
@@ -121,6 +125,10 @@ body {
   background-image: url("/images/notifications_button.png");
 }
 .user-options-menu__button--profile{
+  display: inline-block;
+  box-shadow: 0 3px 20px rgba(0,0,0,.25);
+  border-radius: 50%;
+  background-size: cover;
   background-image: url("/images/profile_photo.jpg");
 }
 .youtube-video__title{
@@ -132,12 +140,39 @@ body {
 .youtube-video__viewer{
   margin-right:0;
 }
-.youtube-comments{
+.youtube-channel{
   width:640px
 }
 .youtube-suggested__autoplay-button{
   float: right;
 }
+.suggested-video__title{
+  color:rgb(17,17,17);
+  font-size: 14px;
+  margin-top:0;
+  margin-bottom: 4px;
+}
+.suggested-video__author{
+  font-size:13px;
+  color: rgba(17, 17, 17, 0.6);
+}
+.suggested-video--next{
+  margin-top:12px;
+}
+.youtube-info__subscribe-button{
+  float:right;
+}
+
 .youtube-video__options{
   float:right;
+}
+.youtube-info{
+  max-width: 615px;
+}
+.youtube-info__owner-link{
+  width:64px;
+  float: left;
+}
+.youtube-info__channel_link{
+  float:left;
 }
