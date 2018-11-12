@@ -1,9 +1,8 @@
-.navigation__link {
+%centered {
   display: flex;
   align-items: center;
 }
-
-.navigation__friend-list-icon, .navigation__fundraisers-icon, .navigation__pages-icon, .navigation__groups-icon, .navigation__events-icon, .navigation__community-name-icon, .navigation__messenger-icon, .navigation__news-feed-icon {
+%facebook-icons_left-navigation {
   background: url("https://static.xx.fbcdn.net/rsrc.php/v3/y_/r/iBA4AtCbkJ5.png") no-repeat;
   background-size: 32px 2835px;
   height: 20px;
@@ -11,29 +10,26 @@
   display: inline-block;
   margin-right: 10px;
 }
-
 .left-navigation {
   font-size: 13px;
 }
-
 .left-navigation__list {
   margin-top: 0;
   margin-bottom: 10px;
   padding: 0;
 }
-
 .list__item {
   list-style-type: none;
   padding: 5px;
-}
-.list__item:hover {
-  background-color: #69f0ae;
-}
 
+  &:hover {
+    background-color: #69f0ae;
+  }
+}
 .navigation__link {
   text-decoration: none;
+  @extend %centered
 }
-
 .navigation__profile-picture {
   border-radius: 50%;
   overflow: hidden;
@@ -41,47 +37,43 @@
   height: 20px;
   margin-right: 10px;
 }
-
 .navigation__text {
   color: black;
 }
-
 .section-header {
   color: #616770;
   font-size: 13px;
   margin: 10px 0 5px 5px;
 }
-
 .navigation__news-feed-icon {
+  @extend %facebook-icons_left-navigation;
   background-position: 0 -1388px;
 }
-
 .navigation__messenger-icon {
+  @extend %facebook-icons_left-navigation;
   background-position: 0 -170px;
 }
-
 .navigation__community-name-icon {
+  @extend %facebook-icons_left-navigation;
   background-position: 0 -1556px;
 }
-
 .navigation__events-icon {
+  @extend %facebook-icons_left-navigation;
   background-position: 0 -421px;
 }
-
 .navigation__groups-icon {
+  @extend %facebook-icons_left-navigation;
   background-position: 0 -107px;
 }
-
 .navigation__pages-icon {
+  @extend %facebook-icons_left-navigation;
   background-position: 0 -233px;
 }
-
 .navigation__fundraisers-icon {
+  @extend %facebook-icons_left-navigation;
   background-position: 0 -1010px;
 }
-
 .navigation__friend-list-icon {
+  @extend %facebook-icons_left-navigation;
   background-position: 0px -947px;
 }
-
-/*# sourceMappingURL=left-navigation.css.map */
