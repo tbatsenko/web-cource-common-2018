@@ -1,0 +1,16 @@
+.column__title {
+    font-size: 1.1em;
+    font-weight: bold;
+    line-height: 1.5em;
+    color: #202020;
+    float: left;
+    clear: left;
+    text-transform: uppercase;
+}
+
+.column__value {
+    color: #181818;
+    line-height: 1.5em;
+    float: right;
+    clear: right;
+}

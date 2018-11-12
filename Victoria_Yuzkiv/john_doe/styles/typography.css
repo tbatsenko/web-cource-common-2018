@@ -10,3 +10,37 @@ h1 {
     color: #ffffff;
     font-weight: bold;
 }
+
+h3 {
+    font-size: 1.1em;
+    color: #181818;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+q,
+blockquote {
+    text-align: center;
+    font-style: italic;
+    color: #ffffff;
+    text-shadow: 0 1px 4px rgba(72, 72, 72, 0.5);
+    margin: 0;
+}
+
+q,
+blockquote:before {
+    content: '"';
+}
+
+q,
+blockquote:after {
+    content: '"';
+}
+
+ul li {
+    color: #ac6b5c;
+}
+
+ul li span {
+    color: black;
+}
