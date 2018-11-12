@@ -1,0 +1,23 @@
+ {{#each emails}}
+    <article class="email">
+        <label class="checkbox">
+            <input type="checkbox" class="checkbox__input" />
+            <span class="checkbox__style"></span>
+        </label>
+        <label class="checkbox checkbox--star">
+            <input type="checkbox" class="checkbox__input" />
+            <span class="checkbox__style"></span>
+        </label>    
+        <h1 class="email__from">{{from}}</h1>
+        <h1 class="email__theme">{{theme}} </h1>
+        <p class="email__text">  
+            - Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+            Vivamus augue nulla, porta a velit vitae, imperdiet cursus nibh. 
+            Sed pulvinar a velit a rhoncus. Maecenas id sagittis justo. 
+            Vivamus ac metus quis libero ullamcorper faucibus. 
+            Sed ac mauris rhoncus, lacinia quam quis, interdum leo. 
+            Vivamus iaculis tristique metus eget pellentesque. 
+        </p>
+        <time class="email__date">{{date}}</time>
+    </article>
+{{/each}}

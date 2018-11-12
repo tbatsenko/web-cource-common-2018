@@ -1,0 +1,25 @@
+.header {
+  display: flex;
+  justify-content: flex-start;
+  height: 64px;
+  border-bottom: 1px solid #eceff1;
+  box-sizing: border-box;
+  padding: 8px 0; }
+  .header .top_panel {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: calc(100% - var(--left_menu_width));
+    min-width: 500px; }
+    @media (max-width: 1260px) {
+      .header .top_panel {
+        /* This block only applies to viewports <= breakpoint wide... */ }
+        .header .top_panel__search_bar {
+          width: calc(100% - 286px); } }
+    @media (min-width: 1260px) {
+      .header .top_panel {
+        /* This block only applies to viewports >= breakpoint wide... */ }
+        .header .top_panel__search_bar {
+          width: 722px; } }
+
+/*# sourceMappingURL=header.css.map */

@@ -1,35 +1,41 @@
-.custom-checkbox {
+.checkbox {
     width: 20px;
     height: 20px;
     margin-right: 10px;
+
+    &__input {
+        display: none;
+    }
+    
+    &__input + &__style::after {
+       @extend %icon;
+       content: 'check_box_outline_blank';
+       font-size: 20px;
+       color: #cccfcf;
+    }
+    
+    &__input:hover + &__style::after {
+        color: #020202;
+        cursor: pointer;
+    }
+    
+    &__input:checked + &__style::after {
+        content: 'check_box';
+        color: #020202;
+    }
+
+    $base: &;
+
+    &--star 
+    {
+        #{$base}__input + #{$base}__style::after {
+            content: 'star_border';
+        }
+    
+        #{$base}__input:checked + #{$base}__style::after {
+            content: 'star';
+            color: #f3b200;
+        }
+    } 
 }
 
-.custom-checkbox__input {
-    display: none;
-}
-
-.custom-checkbox__input + .custom-checkbox__style::after {
-   @extend %icon;
-   content: 'check_box_outline_blank';
-   font-size: 20px;
-   color: #cccfcf;
-}
-
-.custom-checkbox__input:hover + .custom-checkbox__style::after {
-    color: #020202;
-    cursor: pointer;
-}
-
-.custom-checkbox__input:checked + .custom-checkbox__style::after {
-    content: 'check_box';
-    color: #020202;
-}
-
-.custom-checkbox__input + .custom-checkbox__style--star::after {
-    content: 'star_border';
-}
-
-.custom-checkbox__input:checked + .custom-checkbox__style--star::after {
-    content: 'star';
-    color: #f3b200;
-}

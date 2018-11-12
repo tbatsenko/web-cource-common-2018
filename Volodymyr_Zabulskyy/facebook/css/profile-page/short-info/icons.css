@@ -1,0 +1,15 @@
+
+.page-info__photos__header_ico, .page-info__friends__header_ico {
+    width: 24px;
+    float: left;
+    height: 24px;
+    margin-right: 10px;
+}
+
+.page-info__photos__header_ico {
+    background: url("https://static.xx.fbcdn.net/rsrc.php/v3/yV/r/oDx6U6Uuxkj.png");
+}
+
+.page-info__friends__header_ico {
+    background: url("https://static.xx.fbcdn.net/rsrc.php/v3/yr/r/cmq7JWrSWe6.png");
+}

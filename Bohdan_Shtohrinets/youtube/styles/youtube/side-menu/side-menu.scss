@@ -1,0 +1,41 @@
+.side-menu {
+  &__navigation {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    border-bottom: 1px solid hsl(0%, 0%, 93.3%);
+  }
+  &__footer {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 10px;
+    padding-top: 10px;
+  }
+}
+
+.footer {
+  &__navigation {
+    padding: 12px 20px 0;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    width: 220px;
+  }
+
+  &__link {
+    color: hsla(0, 0%, 6.7%, .6);
+    font-size: 13px;
+    line-height: 16px;
+    font-weight: 600;
+    margin-right: 10px;
+  }
+
+  &__copyright {
+    display: block;
+    color: hsla(0, 0%, 6.7%, .6);
+    font-size: 13px;
+    font-weight: 600;
+    padding: 24px 20px;
+  }
+}

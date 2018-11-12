@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Jane Doe</title>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="styles/main.css">
+    <link rel="stylesheet" type="text/css" href="styles/jane-doe/jane-doe.css">
+    <link rel="stylesheet" type="text/css" href="styles/jane-doe/profile/profile.css">
+    <link rel="stylesheet" type="text/css" href="styles/jane-doe/profile/info/info.css">
+    <link rel="stylesheet" type="text/css" href="styles/jane-doe/profile/feelings/feelings.css">
+    <link rel="stylesheet" type="text/css" href="styles/jane-doe/profile/brands/brands.css">
+    <link rel="stylesheet" type="text/css" href="styles/jane-doe/detailed/detailed.css">
+    <link rel="stylesheet" type="text/css" href="styles/jane-doe/detailed/persona/persona.css">
+    <link rel="stylesheet" type="text/css" href="styles/jane-doe/detailed/personality/personality.css">
+    <link rel="stylesheet" type="text/css" href="styles/jane-doe/detailed/personality/rating/rating.css">
+    <link rel="stylesheet" type="text/css" href="styles/jane-doe/detailed/personality/slider/slider.css">
+</head>
+<body>
+<script src="node_modules/handlebars/dist/handlebars.js"></script>
+<script>
+    const render = async (templateSrc, dataSrc, container) => {
+        const templateStr = await (await fetch(templateSrc)).text();
+        const data = await (await fetch(dataSrc)).json();
+        const compiled = Handlebars.compile(templateStr);
+
+        document.body.innerHTML = compiled(data);
+    };
+
+    render("templates/main.handlebars", "data/data.json", document.body);
+</script>
+</body>
+</html>

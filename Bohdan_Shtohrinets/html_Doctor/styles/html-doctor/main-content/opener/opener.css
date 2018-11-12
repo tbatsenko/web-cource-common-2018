@@ -1,0 +1,66 @@
+.opener__featured-article {
+    margin-top: 14px;
+    margin-left: 20px;
+    float: left;
+    width: 166px;
+    text-align: left;
+}
+
+.opener__post {
+    float: left;
+    width: 500px;
+    margin: 0 18px 0 0;
+    padding: 0 20px 0 0;
+    border-right: 4px solid #F0F0F0;
+}
+
+.opener__recent-comments {
+    float: left;
+    width: 280px;
+    margin-bottom: 90px;
+}
+
+.featured-article__title {
+    margin: 0;
+    padding: 0;
+    font: bold 12px 'Helvetica Neue', Arial, sans-serif;
+    color: #888;
+    letter-spacing: 1px;
+}
+
+.post__header {
+    margin: 0 0 20px;
+}
+
+.post__info {
+    color: #888;
+}
+
+.post__content {
+    font-size: 18px;
+    line-height: 1.55;
+}
+
+.post__read-more {
+    font-size: 16px;
+}
+
+.recent-comments__title {
+    margin: 0 0 5px;
+    padding: 10px 0;
+    color: #888;
+    text-transform: uppercase;
+    font-size: 17px;
+    line-height: 1.2;
+}
+
+.recent-comments__comment {
+    display: block;
+    border-bottom: 1px solid #DDD;
+    padding: 8px 10px 8px 0;
+    overflow: hidden;
+    line-height: 1.4;
+    font-size: 14px;
+}
+
+/*# sourceMappingURL=opener.css.map */

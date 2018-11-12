@@ -1,13 +1,8 @@
-.posting-area{
+.posting-form__container{
     margin-bottom: 1em;
     background: #fff;
     border-radius: 5px;
     border: 1px solid #ddd;
-}
-
-
-.posting-form{
-    
 }
 
 .posting-form__options{
