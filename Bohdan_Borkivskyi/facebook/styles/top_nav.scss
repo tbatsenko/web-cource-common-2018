@@ -1,0 +1,72 @@
+@import "searchbar";
+
+.top_nav {
+  //background-color: gold;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-left: 0;
+  padding-left: 0;
+
+  .logo {
+    width: 24px;
+    height: 24px;
+    background: url("../images/icons/fb_logo_white.png") no-repeat center;
+    background-size: 24px 24px;
+  }
+
+  .top_menu {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+
+    .text_link, .text_button{
+      height: 28px;
+      display: flex;
+      align-items: center;
+      color: white;
+      font-family: Helvetica, Arial, sans-serif;
+      font-size: 12px;
+      font-weight: bold;
+      line-height: 28px;
+      white-space: nowrap;
+      padding: 0 12px;
+      &:hover{
+        background-color: #3b5ca0;
+      }
+    }
+
+    .text_link {
+      text-decoration: none;
+      &__image {
+        height: 24px;
+        width: 24px;
+        border-radius: 100%;
+      }
+    }
+
+    .text_button{
+      //padding: 0;
+      margin: 0;
+      background-color: transparent;
+      border: 0;
+    }
+
+    .icon_button{
+      padding: 0;
+      margin: 0 6px;
+      height: 24px;
+      width: 24px;
+      display: flex;
+      align-items: center;
+      background-color: transparent;
+      border: 0;
+      &__image{
+        height: 100%;
+        width: auto;
+      }
+    }
+  }
+}

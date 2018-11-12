@@ -11,7 +11,16 @@
         const data = await (await fetch(dataURL)).json();
         container.innerHTML = template(data);
       };
-      render("main.handlebars", "data.json", document.body )
+
+      const renderPage = async () => {
+        await render('templates/main.handlebars', 'data/data.json', document.body)
+        await render('templates/header.handlebars', 'data/header.json', document.getElementById('header'))
+        await render('templates/left-menu.handlebars', 'data/left-menu.json', document.getElementById('left-menu'))
+        await render('templates/create_new_post.handlebars', 'data/create_new_post.json', document.getElementById('create_new_post'))
+        await render('templates/post.handlebars', 'data/post.json', document.getElementById('posts'))
+        await render('templates/right-menu.handlebars', 'data/right-menu.json', document.getElementById('right-menu'))
+      }
+      renderPage()
     </script>
     </body>
 </html>

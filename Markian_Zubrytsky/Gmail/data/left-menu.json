@@ -1,0 +1,28 @@
+{
+  "menu_navigation": [
+    {
+      "button": "inbox_gm.png",
+      "text": "Inbox"
+    },
+    {
+      "button": "star_black.png",
+      "text": "Starred"
+    },
+    {
+      "button": "watch_later_black.png",
+      "text": "Snoozed"
+    },
+    {
+      "button": "send.png",
+      "text": "Sent"
+    },
+    {
+      "button": "drafts.png",
+      "text": "Drafts"
+    },
+    {
+      "button": "expand_more.png",
+      "text": "More"
+    }
+  ]
+}

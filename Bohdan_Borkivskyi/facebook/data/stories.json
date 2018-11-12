@@ -1,0 +1,15 @@
+{
+  "stories": [
+    {
+      "has_img": false,
+      "author": "Add to Your Story",
+      "text": "Share a photo, video or write something"
+    },
+    {
+      "has_img": true,
+      "img_url": "images/profiles/galileo.jpg ",
+      "author": "Galileo Galilei",
+      "text": "4 hours ago"
+    }
+  ]
+}
