@@ -1,0 +1,54 @@
+<header>
+    <section class="left-part">
+        <button class="left-part__menu"></button>
+        <button><img src="https://ssl.gstatic.com/ui/v1/icons/mail/rfr/logo_gmail_lockup_default_1x.png"></button>
+    </section>
+
+    <section class="right-part">
+        <section class="right-part__search">
+            <button class="lupa"></button>
+            <input class="search" placeholder="Search mail">
+            <button class="dropdown"></button>
+        </section>
+        <section class="right-part__buttons">
+            <button class="right-part__buttons__tasks"></button>
+            <button class="right-part__buttons__bell"></button>
+            <button><img src="images/me.jpg" class="profile_picture"><img></button>
+        </section>
+    </section>
+</header>
+
+
+<main class="main">
+    <aside class="left_menu">
+        {{#left_menu_head}}
+
+            <button class="menu_button"><img src="{{icon}}" class="menu_icon">{{text}}</button>
+
+        {{/left_menu_head}}
+        <h4>LIBRARY</h4>
+        {{#left_menu_library}}
+
+            <button class="menu_button"><img src="{{icon}}" class="menu_icon">{{text}}</button>
+
+        {{/left_menu_library}}
+        <h4>MORE FROM YOUTUBE</h4>
+        {{#left_menu_library}}
+
+            <button class="menu_button"><img src="{{icon}}" class="menu_icon">{{text}}</button>
+
+        {{/left_menu_library}}
+    </aside>
+
+    <section class="videos">
+        {{#videos}}
+            <a>
+                <div class="video">
+                <img class="video__img" src="{{img}}">
+                <h3>{{title}}</h3>
+                </div>
+            </a>
+        {{/videos}}
+    </section>
+
+</main>
