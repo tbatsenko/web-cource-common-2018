@@ -2,23 +2,16 @@
   display: flex;
   position: fixed;
   width: 100%;
-  align-items: center;
   height: 42px;
-  margin-top: 0;
-  background: #3b5998;
-  color: #fff;
-  font-size: 0.9em; }
+  background: #3b5998; }
   .header__left-navigation {
     display: flex;
     align-items: center;
-    width: auto;
     margin-left: 65px; }
     .header__left-navigation__logo {
       margin-right: 4px;
-      line-height: 40px;
       height: 24px;
       width: 24px;
-      display: inline-block;
       background: url("https://static.xx.fbcdn.net/rsrc.php/v3/yF/r/1c0gE0MbEo8.png");
       background-size: cover; }
     .header__left-navigation__search-form__input, .header__left-navigation__search-form {
