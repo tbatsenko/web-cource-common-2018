@@ -1,0 +1,25 @@
+.detailed-info__left-layout{
+    width: 440px;
+    height: 989px;
+}
+
+.about__text {
+    width: 440px;
+    height: 210px;
+    font-family: AvenirNext, sans-serif;
+    font-size: 22px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: left;
+    color: #181818;
+}
+
+li{font-size:22px;color: #181818;}
+
+.detailed-info__right-layout{
+    width: 440px;
+    height: 989px;
+}

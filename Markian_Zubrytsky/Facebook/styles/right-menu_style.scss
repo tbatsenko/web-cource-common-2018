@@ -1,0 +1,25 @@
+.right-menu {
+  display: flex;
+  flex-flow: column nowrap;
+  position: fixed;
+  top: 40px;
+  left: 55%;
+  width: 15%;
+  margin: 12px;
+  background-color: white;
+  font-family: inherit;
+
+  &__story {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    align-items: center;
+
+    &__user {
+      color: #365899;
+      font-weight: 600;
+      font-size: 13px;
+      line-height: 16px;
+    }
+  }
+}

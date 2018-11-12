@@ -1,0 +1,154 @@
+:root {
+  --menu-width: 248px;
+  --header-h: 48px;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+button {
+  background: transparent;
+  border: 0px;
+}
+
+header {
+  height: var(--header-h);
+  padding: 8px;
+  //background: silver;
+  display: flex;
+  flex-direction: row;
+  border-bottom: 1px silver solid;
+
+  .left-part {
+    width: var(--menu-width);
+    display: flex;
+    align-items: center;
+
+    .left-part__menu {
+
+      background: url("../images/menu.png") center no-repeat;
+      background-size: 20px 20px;
+      height: 50px;
+      width: 50px;
+    }
+
+  }
+
+  .right-part {
+    width: 100%;
+    //background: blue;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    .right-part__search {
+      background: #F5F5F5;
+      width: 70%;
+      display: flex;
+      align-items: center;
+      .lupa {
+        background: url("../images/lupa.png") center no-repeat;
+        background-size: 15px 15px;
+        height: 30px;
+        width: 30px
+      }
+
+      .search {
+        height: 100%;
+        background: #F5F5F5;
+        border: 0;
+      }
+
+      .dropdown {
+        background: url("../images/dropdown.svg") center no-repeat;
+        background-size: 15px 15px;
+        height: 30px;
+        width: 30px;
+        margin-left: auto;
+      }
+    }
+
+    .right-part__buttons {
+      display: flex;
+
+      .right-part__buttons__tasks {
+
+        background: url("../images/tasks.svg") center no-repeat;
+        background-size: 15px 15px;
+        height: 50px;
+        width: 50px;
+      }
+
+      .right-part__buttons__bell {
+
+        background: url("../images/bell.png") center no-repeat;
+        background-size: 20px 20px;
+        height: 50px;
+        width: 50px;
+      }
+
+      .profile_picture {
+        width: 40px;
+        height: 40px;
+        border-radius: 100%;
+      }
+
+    }
+  }
+}
+
+.main {
+
+  display: flex;
+  flex-direction: row;
+  .left_menu {
+    width: var(--menu-width);
+    background: #f5f5f5;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    .menu_button {
+      //background: aqua;
+      display: flex;
+      align-items: center;
+      height: 32px;
+      width: 100%;
+    }
+
+    .menu_button:hover {
+      background: #dcdcdc;
+    }
+
+    .menu_icon {
+      width: 20px;
+      height: 20px;
+      margin-right: 20px;
+    }
+  }
+
+  .videos {
+    display: flex;
+    justify-content: space-between;
+    flex-flow: wrap;
+
+    .video {
+      height: 190px;
+      width: 210px;
+      margin: 5px;
+
+      .video__img{
+        width: 100%;
+        height: 118px;
+      }
+
+
+    }
+
+  }
+
+}
+
