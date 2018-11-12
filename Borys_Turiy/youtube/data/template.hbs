@@ -1,27 +1,28 @@
 <header class="youtube-header">
-  <button class="open-menu-button" aria-label="Site menu">menu</button>
-  <h1 class="youtube-homepage-link"><a href="https://www.youtube.com/"><img class="youtube-homepage-link__logo"
-                                                                            src="/images/logo_main.png"/></a>
-  </h1>
+  <button class="youtube-header__open_menu" aria-label="Site menu"></button>
+  <a class="youtube-header__homepage-link" href="https://www.youtube.com/"><img class="youtube-homepage-link__logo"
+                                                                                    src="/images/logo_main.png"/></a>
+
   <form class="site-search">
     <input class="site-search__input-field" placeholder="Search" title="Search">
     <button class="site-search__submit-button">Submit</button>
   </form>
 
   <div class="user-options-menu">
-    <button class="user-options-menu__button user-options-menu__button--up">Upload</button>
-    <button class="user-options-menu__button user-options-menu__button--app">Apps</button>
-    <button class="user-options-menu__button user-options-menu__button--mess">Messages</button>
-    <button class="user-options-menu__button user-options-menu__button--notifications">Notifications</button>
-    <button class="user-options-menu__button user-options-menu__button--profile">Profile</button>
+    <button class="user-options-menu__button user-options-menu__button--up" aria-label="Upload"></button>
+    <button class="user-options-menu__button user-options-menu__button--app" aria-label="Apps"></button>
+    <button class="user-options-menu__button user-options-menu__button--mess" aria-label="Messages"></button>
+    <button class="user-options-menu__button user-options-menu__button--notifications" aria-label="Notifications"></button>
+    <button class="user-options-menu__button user-options-menu__button--profile" aria-label="Profile"></button>
   </div>
 </header>
 
-<main class="youtube-video">
-  <article>
+<main class="youtube-main">
+  <article class="youtube-video">
     <iframe id="video" width="640" height="360" src="https://www.youtube.com/embed/cRm54SJxcao" frameborder="0"
             allowfullscreen></iframe>
-    <h2>{{video.title}}</h2>
+
+    <h2 class="youtube-video__title">{{video.title}}</h2>
     <small>
       {{video.views}}
     </small>
@@ -34,8 +35,8 @@
 </span>
   </article>
 
-
-  <footer>
+  <hr/>
+  <footer class="youtube-comments">
     <a href="{{video.channel.link}}"><img
         src="{{video.channel.logo}}"/></a>
     <label for="author">{{video.channel.title}} Verified:{{video.channel.verified}}
@@ -45,6 +46,7 @@
     </label>
     <button>Subscribe {{video.channel.subscribers}}</button>
 </footer>
+  <hr/>
 <aside>
   {{comments.length}}Comments
   <button title="Sort by">Sort By</button>
@@ -63,15 +65,15 @@
 </aside>
 </main>
 
-<aside class="suggested">
+<aside class="youtube-suggested">
   Up next
-  <button>Autoplay</button>
+  <button class="youtube-suggested__autoplay-button">Autoplay</button>
   <br/>
   {{#suggested-videos}}
-    <a class="suggested-video" href="{{link}}">
-      <img class="next-video__preview" src="{{preview}}">
+    <a class="suggested-video suggested-video--{{type}}" href="{{link}}">
+      <img class="suggested-video__preview" src="{{preview}}">
       <h4>{{title}} </h4>
-      <small>{{channel}}, Verified:{{verified}}
+      <small>{{channel}}
     {{#if views}}
         {{views}} views
     {{/if}}

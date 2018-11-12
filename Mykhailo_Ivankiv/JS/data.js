@@ -1,0 +1,1 @@
+const data = ["A", "B"];
