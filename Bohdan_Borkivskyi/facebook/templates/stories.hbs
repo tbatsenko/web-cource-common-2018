@@ -1,0 +1,24 @@
+<section class="stories">
+    <header class="stories__header">
+        <h4 class="stories__header-heading">Stories</h4>
+        <span class="stories__header-text">Archieve</span>
+        <span class="stories__header-text">Settings</span>
+    </header>
+    <section class="stories__main">
+        {{#stories}}
+            <section class="story">
+                <button class="story__img">
+                    {{#if has_img}}
+                        <img src="{{img_url}}" class="story__img-image">
+                    {{else}}
+                        +
+                    {{/if}}
+                </button>
+                <section class="story__info">
+                    <h4 class="story__info-author">{{author}}</h4>
+                    <p class="story__info-text">{{text}}</p>
+                </section>
+            </section>
+        {{/stories}}
+    </section>
+</section>
