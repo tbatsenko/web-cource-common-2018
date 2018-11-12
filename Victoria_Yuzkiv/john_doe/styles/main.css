@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css?family=Montserrat:400,400i,700");
 @import "typography.css";
+@import "characteristics.css";
 
 html,
 body {
@@ -25,15 +26,22 @@ body {
 
 .main-profile__bottom-content {
     margin-bottom: 60px;
+    padding-left: 40px;
+    padding-right: 40px;
 }
 
 .detailed-profile {
     width: 1000px;
-    margin: 20px 20px 20px 40px;
+    height: 1200px;
+}
+
+.detailed-profile__main-info {
+    background-color: #f4f4f6;
+    overflow: hidden;
 }
 
 .column {
     width: 420px;
     float: left;
-    margin: 0 20px 0 0;
+    padding: 20px 10px 20px 60px;
 }
