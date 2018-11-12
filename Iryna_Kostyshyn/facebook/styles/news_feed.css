@@ -1,16 +1,23 @@
 .main-feed{
     width: 500px;
-    margin-top: 50px;
+    margin-top: 10px;
     margin-right: 5px;
     vertical-align: top;
-    display: inline-block;
+    display: flex;
+    flex-direction: column;
     height: auto;
 }
+
+
 
 .make_post{
     background-color: white;
     border-radius: 5px;
     border: 1px solid #bdc3c7;
+}
+
+.make_post:after {
+    height: 13px;
 }
 
 .make_post__header{
@@ -25,6 +32,12 @@
     padding: 5px;
     color: rgb(54, 88, 153);
     background-color: inherit;
+}
+
+.make_post__main{
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
 }
 
 .make_post__input{
@@ -48,7 +61,7 @@
     border: none;
     background-color: rgb(245, 246, 247);
     border-radius: 20px;
-    color: rgb(29, 33, 41);
+    color: #4b4f56;
     font-size: 12px;
     font-weight: 700;
     line-height: 16px;
@@ -61,3 +74,6 @@
     background-color: #ecf0f1;
 }
 
+.make-post__footer-button--more{
+    width: 44px;
+}

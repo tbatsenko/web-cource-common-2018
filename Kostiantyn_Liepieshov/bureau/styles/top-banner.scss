@@ -1,0 +1,33 @@
+@import "__mixins";
+
+.top-banner {
+  &__image {
+    width: 100%;
+  }
+  &__figure {
+    margin: 0;
+  }
+
+  &__caption {
+    &--custom-underline {
+      @include text-underline();
+    }
+    &--is-link {
+      &:after {
+        content: "\A";
+        white-space: pre;
+      }
+      font-weight: 700;
+    }
+    font: 15px Bureausans, Arial, sans-serif;
+    font-feature-settings: normal;
+    font-weight: 400;
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    line-height: 20px;
+  }
+  &__wrapper {
+    width: 100%;
+    display: block;
+  }
+}

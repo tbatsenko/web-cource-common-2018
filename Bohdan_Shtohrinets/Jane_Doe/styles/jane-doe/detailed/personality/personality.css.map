@@ -1,0 +1,9 @@
+{
+  "version": 3,
+  "mappings": "AACE,oBAAS;EACP,OAAO,EAAE,IAAI;EACb,cAAc,EAAE,MAAM;EACtB,eAAe,EAAE,aAAa;EAC9B,aAAa,EAAE,IAAI;EACnB,cAAc,EAAE,GAAG;EAEnB,+BAAY;IACV,aAAa,EAAE,CAAC",
+  "sources": [
+    "personality.scss"
+  ],
+  "names": [],
+  "file": "personality.css"
+}

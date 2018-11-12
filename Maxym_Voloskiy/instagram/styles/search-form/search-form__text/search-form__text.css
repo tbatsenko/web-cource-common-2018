@@ -1,0 +1,22 @@
+.search-form {
+  display: flex;
+  align-items: center;
+  height: 22px;
+  box-sizing: border-box;
+}
+.search-form__text {
+  display: block;
+  height: inherit;
+  box-sizing: inherit;
+  border: 1px solid rgba(0, 0, 0, 0.0975);
+  border-radius: 4px;
+  padding-left: 10px;
+  font-size: 16px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  color: #d3d3d3;
+  width: 160px;
+}
+.search-form__text::placeholder {
+  color: rgba(0, 0, 0, 0.0975);
+}
+/*# sourceMappingURL=search-form__text.css.map */

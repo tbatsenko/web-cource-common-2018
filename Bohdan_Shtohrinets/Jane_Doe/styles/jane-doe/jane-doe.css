@@ -1,0 +1,27 @@
+.jane-doe {
+    margin: 100px auto;
+    padding: 40px;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    background-color: #ffffff;
+    max-width: 1600px;
+    border: 1px solid #7b7b7b;
+}
+
+.jane-doe__container {
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+}
+
+.jane-doe__profile {
+    background-color: #f7f7f7;
+    flex: 1 1 350px;
+}
+
+.jane-doe__detailed {
+    flex: 4 4 550px;
+}
+
+/*# sourceMappingURL=jane-doe.css.map */

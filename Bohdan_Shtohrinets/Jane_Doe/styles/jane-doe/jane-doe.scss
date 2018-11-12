@@ -1,0 +1,25 @@
+.jane-doe {
+  margin: 100px auto;
+  padding: 40px;
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  background-color: #ffffff;
+  max-width: 1600px;
+  border: 1px solid #7b7b7b;
+
+  &__container {
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__profile {
+    background-color: #f7f7f7;
+    flex: 1 1 350px;
+  }
+
+  &__detailed {
+    flex: 4 4 550px;
+  }
+}
