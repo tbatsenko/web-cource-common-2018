@@ -1,0 +1,15 @@
+<div class="news__new-post__action">
+    {{#post-type}}
+        <button class="news__new-post__action__button">{{.}}</button>
+    {{/post-type}}
+</div>
+<div class="news__new-post__action">
+    <img src="images/new-post_image.jpg" class="user_icon">
+    <input class="news__new-post__create-post" type="text" placeholder="What's on your mind, Mark?">
+</div>
+
+<div class="news__new-post__action">
+    {{#post-content}}
+        <button class="news__new-post__action__button"><img src="images/{{image}}">{{text}}</button>
+    {{/post-content}}
+</div>
