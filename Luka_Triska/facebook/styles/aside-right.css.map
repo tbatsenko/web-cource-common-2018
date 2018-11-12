@@ -1,7 +1,0 @@
-{
-"version": 3,
-"mappings": "AAAA,wBAAyB;EACvB,UAAU,EAAE,IAAI;EAChB,KAAK,EAAE,KAAK",
-"sources": ["aside-right.scss"],
-"names": [],
-"file": "aside-right.css"
-}

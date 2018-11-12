@@ -1,6 +1,6 @@
 {
   "text":"gmail",
-  "left_menu":[
+  "letter_types":[
     {"icon":"images/inbox_red.png", "text":"Inbox"},
     {"icon":"images/black_star.png", "text":"Starred"},
     {"icon":"images/snooze.png", "text":"Snoozed"},
@@ -30,5 +30,5 @@
     {"sender":"Web for profs","name":"U've completed all tasks","content":"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", "date":"1 Jan"},
     {"sender":"0000","name":"5678","content":"ffffffffffffffffffffffffff", "date":"5 Mar"}
   ],
-  "right_menu":["images/calendar.png", "images/keep.png", "images/tasks_left.png"]
+  "tools":["images/calendar.png", "images/keep.png", "images/tasks_left.png"]
 }
