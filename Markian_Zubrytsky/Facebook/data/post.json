@@ -1,0 +1,15 @@
+{
+  "post": [
+    {
+      "user-logo": "trek_logo.png",
+      "username": "Trek Factory Racing",
+      "text": "Brandon Semenuk's new Rampage bike",
+      "photo": "redbull_new_bike.jpg",
+      "buttons": [
+        "Like",
+        "Comment",
+        "Repost"
+      ]
+    }
+  ]
+}

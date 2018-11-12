@@ -1,0 +1,38 @@
+.main-header {
+  background-color: #4267b2;
+  height: 42px;
+  width: 100%;
+  position: fixed;
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  top: 0;
+  left: 0;
+  z-index: 1;
+
+  &__logo {
+    width: 35px;
+    height: 55%;
+    align-self: center;
+    margin-left: 15%;
+  }
+
+  &__search {
+    width: 20%;
+    border: none;
+    height: 50%;
+  }
+
+  &__left-buttons {
+    border: none;
+    background-color: #4267b2;
+    vertical-align: 50%;
+    color: white;
+  }
+
+  &__right-buttons {
+    background-color: transparent;
+    border: none;
+    vertical-align: center;
+  }
+}
