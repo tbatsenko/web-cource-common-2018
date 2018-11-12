@@ -1,0 +1,23 @@
+.article__comments {
+    font-size: 14px;
+    clear: left;
+    margin: 0 0 40px 0;
+}
+
+.article__comments__header {
+    color: #888;
+    margin: 0 0 5px;
+    padding: 10px 0;
+    text-transform: uppercase;
+}
+
+.article__comments__items {
+    padding-left: 0;
+}
+
+.article__comments__item{
+    border-bottom: 1px solid #DDD;
+    line-height: 1.4;
+    padding: 8px 10px 8px 0;
+    overflow: hidden;
+}

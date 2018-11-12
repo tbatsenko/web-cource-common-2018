@@ -1,0 +1,39 @@
+.html-indexes {
+  &__title {
+    margin: 20px 0 20px 20px;
+  }
+  &__glossary {
+    margin-bottom: 50px;
+    text-align: left;
+    display: block;
+    float: left;
+    vertical-align: top;
+    margin-right: 19px;
+    padding: 0;
+    width: 90px;
+    &_first {
+      margin-left: 20px;
+    }
+    &_last {
+      margin-right: 0;
+      margin-left: 0;
+    }
+  }
+}
+
+.glossary {
+  &__title {
+    color: rgb(136, 136, 136);
+    font-size: 12px;
+  }
+  &__tag-list {
+    &_separate {
+      margin-bottom: 20px;
+    }
+  }
+  &__tag {
+    display: block;
+    padding: 10px 0;
+    font-size: 13px;
+  }
+}

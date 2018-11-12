@@ -1,0 +1,150 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+button {
+  background: transparent;
+  border: 0;
+}
+
+body {
+  background-color: #f5f6f7;
+}
+
+.header {
+  background-color: #4267b2;
+  height: 42px;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  .navigation {
+    width: 70%;
+    height: 100%;
+    padding-left: 15%;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .search {
+      display: flex;
+      align-items: center;
+
+    }
+
+    .buttons {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      & > * {
+        padding-right: 40px;
+      }
+
+      .text_button {
+        color: white;
+      }
+
+      .img_button {
+        width: 30px;
+        height: 30px;
+      }
+    }
+  }
+}
+
+.options {
+  width: 15%;
+  position: fixed;
+  top: 42px;
+  left: 15%;
+
+  margin-top: 10px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  &__button {
+    display: flex;
+    align-items: center;
+    height: 30px;
+    width: 100%;
+    &:hover {
+      background: white;
+    }
+  }
+
+}
+
+.main {
+  margin: 10px;
+  position: absolute;
+  width: 35%;
+  top: 42px;
+  left: 30%;
+  z-index: -2;
+
+  display: flex;
+  flex-direction: column;
+
+  .post {
+    background-color: white;
+    border: 1px solid #dddfe2;
+    border-radius: 2px;
+    margin-bottom: 10px;
+
+    &__head {
+      display: flex;
+      align-items: center;
+    }
+
+    &__logo {
+      width: 40px;
+      height: 40px;
+      border-radius: 100%;
+      padding: 10px;
+    }
+
+    &__text {
+      padding: 10px;
+    }
+
+    &__image {
+      width: 100%;
+    }
+  }
+
+}
+
+.stories {
+  background: white;
+  border: 1px #dddfe2 solid;
+  border-radius: 4px;
+  margin-top: 10px;
+  margin-left: 20px;
+  position: fixed;
+  width: 20%;
+  top: 42px;
+  left: 65%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  .story {
+    display: flex;
+    align-items: center;
+
+    &__logo {
+      width: 40px;
+      height: 40px;
+      border-radius: 100%;
+      padding: 10px;
+    }
+  }
+
+}

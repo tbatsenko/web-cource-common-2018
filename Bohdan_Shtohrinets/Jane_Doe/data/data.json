@@ -1,0 +1,110 @@
+{
+  "profile": [
+    {
+      "profile-image": "Jane Doe",
+      "motto": "“I design with all my heart, thinking about the users”",
+      "info": [
+        {
+          "title": "Age",
+          "description": "21"
+        },
+        {
+          "title": "Job title",
+          "description": "Ux Designer"
+        },
+        {
+          "title": "Status",
+          "description": "Single"
+        },
+        {
+          "title": "Location",
+          "description": "Atalanta, GA"
+        }
+      ],
+      "feelings": [
+        "Passionate",
+        "Empathetic",
+        "Curious",
+        "Adventurous"
+      ],
+      "brands": {
+        "title": "Favourite brands",
+        "social-media": [
+          "Facebook",
+          "Linked-in",
+          "Spotify",
+          "Coca-cola"
+        ]
+      }
+    }
+  ],
+  "detailed": [
+    {
+      "persona": {
+        "title": "User persona",
+        "name": "Jane Doe"
+      },
+      "about": {
+        "title": "About",
+        "description": "Jane is a UX Designer that works for a Fortune 500 company in Atlanta, GA. Ever since she was a child, she loved to make stuff on her own and show them to her parents, friends and classmates. Over the course of her childhood and throughout her school, she won numerous design prizes at various well known competitions across the United States and Canada. Due to her passion for design, she decided to pursue a Master’s degree in Human ComputerInteraction and learn more about User Experience (UX) and how she can become a better designer."
+      },
+      "goals": {
+        "title": "Goals",
+        "description": [
+          "Become a designer who communicates well of her ideas at any place",
+          "Easily explain her design ideas to other designers, researchers and engineers"
+        ]
+      },
+      "needs": {
+        "title": "Needs",
+        "description": [
+          "Looking for a design tool that helps to cut down unnecessary time and effort",
+          "Receive feedback on her progress whenever needed before presentation"
+        ]
+      },
+      "pain-points": {
+        "title": "Pain Points",
+        "description": [
+          "There are too many tools that forces her to spend time learning them",
+          "Cannot rely on other people’s opinion because they are highly subjective",
+          "Certain situations require different tools to communicate her thoughts"
+        ]
+      },
+      "personality": {
+        "title": "Personality",
+        "rating": [
+          {
+            "text": [
+              "Introvert",
+              "Extrovert"
+            ]
+          },
+          {
+            "text": [
+              "Analytical",
+              "Creative"
+            ]
+          },
+          {
+            "text": [
+              "Busy",
+              "Time rich"
+            ]
+          },
+          {
+            "text": [
+              "Messy",
+              "Organized"
+            ]
+          },
+          {
+            "text": [
+              "Independent",
+              "Team player"
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

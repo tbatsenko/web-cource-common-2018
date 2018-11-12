@@ -1,0 +1,8 @@
+.page-layout__main-tool-bar {
+    padding: 7px 0;
+    background-color: #4267b2;
+    position: fixed;
+    width: 100%;
+    z-index: 1;
+}
+

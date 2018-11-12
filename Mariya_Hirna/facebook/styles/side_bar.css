@@ -1,0 +1,24 @@
+.side-bar-nav{
+    padding-top: 12px;
+    margin: 10px 0 10px 0;
+    width: 180px;
+    height: 269px;
+}
+
+.side-bar__container{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 28px;
+    width: 184px;
+}
+
+.side-bar__icon{
+    width: 20px;
+    height: 20px;
+    padding: 4px;
+}
+
+.side-bar__text{
+    font-size: 13px;
+}

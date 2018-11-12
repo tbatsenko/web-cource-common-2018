@@ -1,12 +1,12 @@
-.chat__header {
-    height: 32px;
+.header {
+    min-height: 32px;
     background-color: #2979ff;
     border-radius: 4px 4px 0 0;
     display: flex;
     flex-direction: row;
     align-items: center;
 
-    .header__online {
+    &__online {
         width: 6px;
         height: 6px;
         background-color: #69f0ae;
@@ -14,36 +14,36 @@
         margin-left: 12px;
     }
 
-    .header__name {
+    &__name {
         font-size: 12px;
         font-weight: bold;
         color: #ffffff;
         margin-left: 12px;
     }
     
-    .header__button {
+    &__button {
         width: 12px;
         height: 12px;
         margin-right: 10px;
     }
 
-    .header__button--plus {
+    &__button--plus {
         background-image: url(../images/plus.svg);
         margin-left: auto;
     }
 
-    .header__button--video {
+    &__button--video {
         height: 8px;
         background-image: url(../images/video.svg);
         
     }
 
-    .header__button--cog {
+    &__button--cog {
         background-image: url(../images/cog.svg);
         margin-right: 10px;
     }
     
-    .header__button--close {
+    &__button--close {
         width: 18px;
         height: 18px;
         background-image: url(../images/close.svg);

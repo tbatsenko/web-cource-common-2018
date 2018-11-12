@@ -1,0 +1,24 @@
+.persona__title {
+    font-family: Montserrat, serif;
+    font-size: 19px;
+    font-weight: bold;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: left;
+    color: #4c4c4c;
+}
+.persona__name {
+    font-family: Montserrat, serif;
+    font-size: 97px;
+    font-weight: bold;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: left;
+    color: #181818;
+}
+
+/*# sourceMappingURL=persona.css.map */

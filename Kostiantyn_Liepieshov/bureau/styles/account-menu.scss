@@ -1,0 +1,13 @@
+.account-menu {
+  text-align: right;
+
+  &__user-image {
+    margin-left: auto;
+    align-self: center;
+    width: 30px;
+    height: 30px;
+    &:hover {
+      fill: var(--key-color);
+    }
+  }
+}
