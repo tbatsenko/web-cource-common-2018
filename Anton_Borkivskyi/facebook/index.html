@@ -15,7 +15,16 @@
     const data = await (await fetch(dataURL)).json()
     container.innerHTML = template(data)
   }
-  render('main.handlebars', 'data.json', document.body)
+
+  const renderPage = async  () => {
+    await render("templates/main.handlebars", "data/data.json", document.body);
+    await render("templates/header.handlebars", "data/header.json", document.getElementById("header"));
+    await render("templates/options.handlebars", "data/options.json", document.getElementById("options"));
+    await render("templates/post.handlebars", "data/post.json", document.getElementById("main"));
+    await render("templates/stories.handlebars", "data/stories.json", document.getElementById("stories"));
+  }
+
+  renderPage();
 </script>
 
 </body>
