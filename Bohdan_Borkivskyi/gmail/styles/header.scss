@@ -2,7 +2,7 @@
 
   display: flex;
   justify-content: flex-start;
-  height: 64px;
+  height: var(--header-height);
   border-bottom: 1px solid #eceff1;
   box-sizing: border-box;
   padding: 8px 0;

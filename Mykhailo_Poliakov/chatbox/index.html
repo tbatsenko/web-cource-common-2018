@@ -9,35 +9,77 @@
 </head>
 <body>
     <div class="chat">
-        <header class="chat__header">
+        <header class="header">
             <img class="header__online">
             <h1 class="header__name">Mykhailo Poliakov</h1>
-            <button class="header__button header__button--plus" title="Add"></button>
-            <button class="header__button header__button--video" title="Video"></button>
+            <button class="header__button header__button--plus" aria-label="Add" title="Add"></button>
+            <button class="header__button header__button--video" aria-label="Video" title="Video"></button>
             <button class="header__button header__button--cog" title="Settings"></button>
             <button class="header__button header__button--close" title="Close"></button>
         </header>
 
-        <section class="chat__messages">
-            <article class="message--other">
-                <img class="message__avatar--other">
-                <div class="message__box--other">
-                    <p class="message__text--other">Yo, Can you update views?</p>
-                </div>
-            </article>
-
-            <aside class="chat__messages__time">FRI 11:30AM</aside>
-
-            <article class="message--other">
-                <img class="message__avatar--other">
-                <div class="message__box--other">
-                    <p class="message__text--other">I can't see update views yet</p>
-                </div>
-            </article>
-
+        <section class="messages">
+            <div class="messages__block">
+                <article class="message message--other-user">
+                    <img class="message__avatar">
+                    <div class="message__box">
+                        <p class="message__text">Hello!</p>
+                    </div>
+                </article>
+                <article class="message message--other-user">
+                    <img class="message__avatar message__avatar--hide">
+                    <div class="message__box">
+                        <p class="message__text">Can you update views?</p>
+                    </div>
+                </article>
+            </div>
+            <time class="messages__time">FRI 11:30AM</time>
+            <div class="messages__block">
+                <article class="message message--other-user">
+                    <img class="message__avatar">
+                    <div class="message__box">
+                        <p class="message__text">I can't see update views yet</p>
+                    </div>
+                </article>
+            </div>
+            <div class="messages__block">
+                <article class="message message--current-user message">
+                    <div class="message__box">
+                        <p class="message__text">Hi, I'm on vacation</p>
+                    </div>
+                </article>
+                <article class="message message--current-user">
+                    <div class="message__box">
+                        <p class="message__text">I'll be back next week</p>
+                    </div>
+                </article>
+            </div>
+            <time class="messages__time">SAT 11:30AM</time>
+            <div class="messages__block">
+                <article class="message message--other-user">
+                    <img class="message__avatar">
+                    <div class="message__box">
+                        <p class="message__text">Ahh sorry, missed that!</p>
+                    </div>
+                </article>
+                <article class="message message--other-user">
+                    <img class="message__avatar message__avatar--hide">
+                    <div class="message__box">
+                        <p class="message__text">Let’s talk next week</p>
+                    </div>
+                </article>
+            </div>
+            <div class="messages__block">
+                <article class="message message--current-user message">
+                    <div class="message__box">
+                        <p class="message__text">Ok, see you!</p>
+                    </div>
+                </article>
+            </div>
+            <div class="messages__block"></div>
         </section>
 
-        <section class="chat__input">
+        <section class="input">
             <form class="input__form">
                 <input class="input__message" type="text" placeholder="Type a massage...">
             </form>
@@ -49,7 +91,6 @@
                 <button class="input__button input__button--camera" title="Camera"></button>
             </div>
         </section>
-
     </div>
 </body>
 </html>

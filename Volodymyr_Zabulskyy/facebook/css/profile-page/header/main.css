@@ -1,0 +1,9 @@
+.profile-name {
+    margin: 0;
+    position: absolute;
+    top: 280px;
+    left: 222px;
+    color: white;
+    font-size: 24px;
+    font-weight: 500;
+}

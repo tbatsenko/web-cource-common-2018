@@ -1,0 +1,149 @@
+html, body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+    vertical-align: top;
+}
+
+header {
+    width: 100%;
+    height: 110px;
+    background-color: #eeeeee;
+}
+
+.logo-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 20%;
+    height: 110px;
+    padding-top: 15px;
+    padding-left: 20px;
+    background-color: #005c97;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    z-index: 999;
+}
+
+.logo-placeholder {
+    width: 100%;
+    height: 100%;
+    color: white;
+    text-decoration: none;
+    font-size: 60px;
+    line-height: 60px;
+}
+
+.header-body {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 80%;
+    height: 110px;
+    padding-left: 30px;
+    vertical-align: bottom;
+    display: -webkit-box;
+    -webkit-box-align: end;
+}
+
+.header-nav {
+    -webkit-box-flex:1.0;
+}
+
+.header-nav a {
+    display: inline-block;
+    padding: 10px 15px;
+    text-transform: uppercase;
+}
+
+.header-nav .right-border {
+    border-right: 1px solid white;
+}
+
+.header-nav .left-border {
+    border-left: 1px solid lightgray;
+}
+
+.header-search {
+    -webkit-box-flex:1.0;
+    width: 20%;
+    min-width: 100px;
+    padding: 10px;
+}
+
+.header-search-bar {
+    -webkit-appearance:none;
+    width: 100%;
+    height: 30px;
+    border-radius: 7px;
+    background: white url("https://png.icons8.com/search") no-repeat right 3px top 3px;
+    background-size: 20px;
+    overflow: hidden;
+}
+
+.main-body {
+    width: 100%;
+    height: auto;
+    overflow: auto;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.left-menu {
+    float: left;
+    width: 20%;
+    height: auto;
+    min-height: calc(100% - 110px);
+    padding: 25px 0 10px;
+    background-color: #eeeeee;
+    overflow: visible;
+}
+
+.left-nav-sections li {
+    width: 103%;
+    margin: 20px 0;
+    padding: 10px;
+    background-color: #e7e6e6;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    text-transform: uppercase;
+}
+
+.left-nav-sections nav a {
+    display: block;
+    margin: 0 20px;
+    padding: 7px 5px;
+    color: black;
+    text-decoration: none;
+    transition: background-color 0.1s linear;
+}
+
+.left-nav-sections nav a:hover {
+    background-color: #fafafa;
+}
+
+.left-nav-sections nav hr {
+    margin: 0 20px;
+}
+
+.main-body-content {
+    float: right;
+    width: 80%;
+    height: auto;
+    min-height: calc(100% - 110px);
+    padding-top: 45px;
+    padding-left: 40px;
+}
+
+footer {
+    width: 100%;
+    height: 100px;
+    padding-top: 50px;
+    padding-bottom: 10px;
+    text-align: center;
+}

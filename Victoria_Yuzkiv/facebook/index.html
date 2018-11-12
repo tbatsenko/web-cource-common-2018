@@ -23,8 +23,6 @@
         <ul>
             <li>Victoria</li>
             <li><a href="#" class="menu_signs">Home</a></li>
-            <li><a href="#" class="menu_signs">Create</a></li>
-
             <li>
                 <button class="friends">Friends</button>
                 <button class="messages">Messages</button>
@@ -37,44 +35,120 @@
         </ul>
     </nav>
 </header>
-<main id="container">
-    <nav id="left-menu">
-        <ul class="sidebar">
-            <li class="link">
-                <a href="#">User name</a>
+<main class="container">
+    <nav class="left-menu">
+        <ul class="left-menu__list">
+            <li class="left-menu__user">
+                <img class="left-menu__user_picture" src="img/user_picture.jpg" alt="user">
+                <a class="left-menu__item_description" href="#">Victoria Yuzkiv</a>
             </li>
-            <li class="link active">
-                <a href="#"> News Feed</a>
+            <li class="left-menu__item">
+                <div></div>
+                <a class="left-menu__item_description" href="#"> News Feed</a>
             </li>
-            <li class="title">
-                <a href="#"> Messenger</a>
+            <li class="left-menu__item">
+                <div></div>
+                <a class="left-menu__item_description" href="#"> Messenger</a>
             </li>
-            <li>
-                <h5>Shortcuts</h5>
+        </ul>
+        <h5 class="left-menu__items_header">Shortcuts</h5>
+        <ul class="left-menu__list">
+            <li class="left-menu__item">
+                <div></div>
+                <a class="left-menu__item_description" href="#"> iHUB Lviv</a>
             </li>
-            <li class="title">
-                <a href="#"> Group Name</a>
+            <li class="left-menu__item">
+                <div></div>
+                <a class="left-menu__item_description" href="#"> Google Tech Talk ...</a>
             </li>
-            <li>
-                <h5 class="section_name">Explore</h5>
+            <li class="left-menu__item_more">
+                <div></div>
+                <a class="left-menu__item_more_text" href="#"> See more...</a>
             </li>
-            <li class="link">
-                <a href="#">Events</a>
+        </ul>
+        <h5 class="left-menu__items_header">Explore</h5>
+        <ul class="left-menu__list">
+            <li class="left-menu__item">
+                <div></div>
+                <a class="left-menu__item_description" href="#">Events</a>
             </li>
-            <li class="link">
-                <a href="#"> Groups</a>
+            <li class="left-menu__item">
+                <div></div>
+                <a class="left-menu__item_description" href="#">Pages</a>
             </li>
-            <li class="link">
-                <a href="#"> Pages</a>
+            <li class="left-menu__item">
+                <div></div>
+                <a class="left-menu__item_description" href="#">Groups</a>
             </li>
-            <li class="link">
-                <a href="#"> Friend List</a>
+            <li class="left-menu__item">
+                <div></div>
+                <a class="left-menu__item_description" href="#">Fundraisers</a>
             </li>
-            <li class="drop_link">
-                <a href="#">See More</a>
+            <li class="left-menu__item">
+                <div></div>
+                <a class="left-menu__item_description" href="#">Friends lists</a>
+            </li>
+            <li class="left-menu__item_more">
+                <div></div>
+                <a class="left-menu__item_more_text" href="#">See more...</a>
             </li>
         </ul>
     </nav>
+
+    <section class="feed-container">
+        <form class="post-field">
+            <header class="post-field__header">
+                <span class="post-field__header_item">Compose post</span>
+                <span class="post-field__header_item">Photo/Video Album</span>
+                <span class="post-field__header_item">Live video</span>
+            </header>
+            <div class="post-field__make-post">
+                <img class="post-field__make-post_userphoto" src="img/user_picture.jpg" alt="user">
+                <input class="post-field__make-post_input" type="text" placeholder="What's on your mind, Victoria?">
+            </div>
+            <div class="post-field__options">
+                <button class="post-field__options_option">Photo/Video</button>
+                <button class="post-field__options_option">Tag Friends</button>
+                <button class="post-field__options_option">Feeling activity</button>
+            </div>
+
+        </form>
+        <section class="friend-post">
+            <header class="friend-post__head">
+                <img class="friend-post__head__user-photo" src="" alt="user">
+                <h4>
+                    <a class="friend-post__head__user-name" href="#">Yaroslav Prytula</a>
+                    <span class="friend-post__head__user-action">is feeling motivated</span>
+                </h4>
+                <time class="friend-post__head__time">30 October at 17:16</time>
+            </header>
+            <section class="friend-post__content">
+                <span class="friend-post__content__text">НеБо</span>
+                <img class="friend-post__content__image" src="img/post_photo.jpg" alt="article">
+            </section>
+        </section>
+    </section>
+
+    <section class="right-menu">
+        <section class="stories">
+            <header class="stories__header">
+                <span class="stories__header_head">Stories</span>
+                <a class="stories__header_link" href="#">Archive</a>
+                <a class="stories__header_link" href="#">Settings</a>
+            </header>
+            <ul class="stories__list">
+                <li class="stories__list_element">
+                    <div class="stories__list_image"></div>
+                    <section class="stories__list_info">
+                        <h4 class="">Add to your story</h4>
+                        <small class="">Share a photo, video or write something</small>
+                    </section>
+                </li>
+
+            </ul>
+        </section>
+    </section>
+
 </main>
 </body>
 </html>

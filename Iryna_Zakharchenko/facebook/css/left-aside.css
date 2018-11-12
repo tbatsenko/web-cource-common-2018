@@ -15,21 +15,98 @@
 .left-aside-container{
     list-style-type: none;
     font-size: 0.9em;
-    padding-left: 0.1em;
+    /*padding-left: 0.1em;*/
+    margin: 0;
+    padding: 0;
 }
 
-.left-aside-personal-data{
+.left-aside-navigation__personal-data{
     color: black;
+    display: flex;
+    align-items: center;
+    width: 15em;
 }
 
-.left-aside-navigation__redactor-btn{
+.left-aside-navigation__redactor-btn:hover{
+    background: url("../icons/icons-aside.png");
+    background-position: 0 -2144px;
+    background-repeat: no-repeat;
+    height: 1em;
 
 }
 
 .left-aside-navigation__btn__transparent-no-border{
     color: transparent;
     border: none;
+    background: transparent;
 }
 .left-aside-navigation__more{
+
+}
+
+.left-aside-navigation__element{
+    align-items: center;
+    margin-bottom: 0.3em;
+}
+
+.left-aside-navigation__redactor-btn{
+    height: 1.5em;
+    width: 2.5em;
+}
+
+.left-aside-navigation__menu-element{
+    display: flex;
+    align-items: center;
+}
+.left-aside-navigation__personal-data::after{
+    content: "";
+    width: 1.5em;
+    height: 1em;
+    display: block;
+    margin-left:auto;
+    background: url("../icons/icons-aside.png");
     background-position: 0 -2144px;
+    background-repeat: no-repeat;
+    margin-right: 2em;
+}
+
+.left-aside-navigation__news-img{
+    background: url("../icons/icons-aside.png");
+    background-position:0 -1388px;;
+    background-repeat: no-repeat;
+    width: 1.5em;
+    height: 1.4em;
+    align-items: center;
+    margin-right: 0.3em;
+    margin-left: 0.25em;
+}
+
+.left-aside-navigation__element__margin-top{
+    margin-top: 0.5em;
+}
+
+.left-aside-navigation__news::after{
+    content: "";
+    width: 1.5em;
+    height: 1em;
+    display: block;
+    margin-left:auto;
+    background: url("../icons/icons-aside.png");
+    background-position: 0 -2144px;
+    background-repeat: no-repeat;
+    margin-right: 2em;
+}
+
+
+.left-aside-navigation__news{
+    color: black;
+    display: flex;
+    align-items: center;
+    width: 15em;
+}
+
+
+.left-aside-navigation__element-header{
+    color: #616770;
+    font-size: small;
 }

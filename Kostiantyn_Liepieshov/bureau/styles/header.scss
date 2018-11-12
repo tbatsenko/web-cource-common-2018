@@ -1,0 +1,12 @@
+.header {
+  padding-top: 7px;
+  height: 46px;
+  display: flex;
+  &__nav {
+    margin-left: 11px;
+    margin-top: -4px;
+  }
+  &__account-menu {
+    flex: 1;
+  }
+}

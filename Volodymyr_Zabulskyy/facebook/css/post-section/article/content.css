@@ -1,0 +1,15 @@
+.post-section__article__content__txt {
+    margin: 6px 0;
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 1.38;
+    padding: 0 20px;
+    width: 36em;
+}
+
+.post-section__article__content__img {
+    object-fit: cover;
+    height: auto;
+    max-height: 600px;
+    width: 36em;
+}

@@ -1,0 +1,42 @@
+.nav-pages__item_indicator {
+    font-size: 11px;
+    color: #90949c;
+    float: right;
+}
+
+.nav-pages__item_text {
+    text-decoration: none;
+    color: black;
+    margin-left: 8px;
+    font-size: 13px;
+    float: left;
+}
+
+.nav-pages__item_header {
+    padding: 3px 7px;
+    margin: 10px 0 0 0;
+    color: #616770;;
+    font-weight: 600;
+    font-size: 13px;
+    line-height: 22px;
+}
+
+.nav-pages__item {
+    transition: all .2s ease;
+    border: 1px solid transparent;
+    cursor: pointer;
+    padding: 3px 3px;
+    height: 20px;
+    line-height: 20px;
+}
+
+.nav-pages__item:hover {
+    border: 1px solid #ddd;
+    background: #fefefe;
+}
+
+.nav-pages__item_active {
+    border: 1px solid #ddd;
+    background: #fefefe;
+    font-weight: bold;
+}

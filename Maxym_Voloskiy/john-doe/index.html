@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <link rel="stylesheet" href="styles/common.css">
+    <link rel="stylesheet" href="styles/typography.css">
+    <link rel="stylesheet" href="styles/characters.css">
+    <link rel="stylesheet" href="styles/characteristics.css">
+    <link rel="stylesheet" href="styles/brands.css">
+    <link rel="stylesheet" href="styles/colunm.css">
+    <link rel="stylesheet" href="styles/about.css">
+
+    <title>John Doe</title>
+</head>
+<body>
+    <aside class="main-profile">
+        <img class="user-picture" src="https://res.cloudinary.com/maxvoloskiy/image/upload/h_300,w_300,c_fill,g_face,r_350/v1541441502/boy.png" alt="John Doe">
+        <blockquote>
+            I design with all my heart,<br> thinking about the users
+        </blockquote>
+
+        <dl class="characteristics">
+            <dt class="characteristics__title">Age</dt><dd class="characteristics__value">21</dd>
+            <dt class="characteristics__title">Job title</dt><dd class="characteristics__value">UX Designer</dd>
+            <dt class="characteristics__title">Status</dt><dd class="characteristics__value">Single</dd>
+            <dt class="characteristics__title">location</dt><dd class="characteristics__value">Atlanta GA</dd>
+        </dl>
+
+        <ul class="characters">
+            <li class="characters--up">Passionate</li>
+            <li class="">Empathetic</li>
+            <li class="characters--down">Curious</li>
+            <li class="">Adventurous</li>
+        </ul>
+
+        <h3 class="brands--header">Favorite brands</h3>
+        <ul class="brands">
+            <li class="brands-fb"><img src="assets/fb-logo.png" alt="facebook"></li>
+            <li class="brands-li"><img src="assets/li-logo.png" alt="linkedIn"></li>
+            <li class="brands-spf"><img src="assets/spf-logo.png" alt="spotify"></li>
+            <li class="brands-cola"><img src="assets/coca-cola-logo.png" alt="coca-cola"></li>
+        </ul>
+    </aside>
+
+    <article class="detailed-profile">
+        <h1>
+            <sub>User persona</sub>
+            John Doe
+        </h1>
+
+        <section class="about">
+            <h3>About</h3>
+            <p> John is a UX Designer that works for a Fortune 500 company in Atlanta, GA. Ever since he was a child, he loved to make stuff on his own and show them to his parents, friends and classmates. Over the course of his childhood and throughout his school, he won numerous design prizes at various well known competitions across the United States and Canada. Due to his passion for design, he decided to pursue a Master’s degree in Human Computer Interaction and learn more about User Experience (UX) and how he can become a better designer. </p>
+        </section>
+
+        <section class="column">
+            <h3>Goals</h3>
+            <ul>
+                <li><span>Become a designer who communicates well of his ideas at any place</span></li>
+                <li><span>Easily explain his design ideas to other designers, researchers and engineers</span></li>
+            </ul>
+        </section>
+
+        <section class="column">
+            <h3>Needs</h3>
+            <ul>
+                <li><span>Looking for a design tool that helps to cut down unnecessary time and effort</span></li>
+                <li><span>Receive feedback on his progress whenever needed before presentation</span></li>
+            </ul>
+        </section>
+
+        <section class="column">
+            <h3>Pain Points</h3>
+            <ul>
+                <li><span>There are too many tools that forces his to spend time learning them</span></li>
+                <li><span>Cannot rely on other people’s opinion because they are highly subjective</span></li>
+                <li><span>Certain situations require different tools to communicate her thoughts</span></li>
+            </ul>
+        </section>
+
+        <section class="column">
+            <h3>Personality</h3>
+            <div class="characteristics characteristics--ranges">
+                <label class="characteristics__metric" >
+                    <span class="characteristics__title characteristics__title--right">Introvert</span>
+                    <input disabled="" class="characteristics__value characteristics__value--center" type="range" value="55" max="100" min="0"/>
+                    <span class="characteristics__title characteristics__title--left">Extrovert</span>
+                </label>
+
+                <label class="characteristics__metric">
+                    <span class="characteristics__title characteristics__title--right">Analytical</span>
+                    <input disabled="" class="characteristics__value characteristics__value--center" type="range" value="70" max="100" min="0"/>
+                    <span class="characteristics__title characteristics__title--left">Creative</span>
+                </label>
+
+                <label class="characteristics__metric">
+                    <span class="characteristics__title characteristics__title--right">Busy</span>
+                    <input disabled="" class="characteristics__value characteristics__value--center" type="range" value="35" max="100" min="0"/>
+                    <span class="characteristics__title characteristics__title--left">Time rich</span>
+                </label>
+
+                <label class="characteristics__metric">
+                    <span class="characteristics__title characteristics__title--right">Messy</span>
+                    <input disabled="" class="characteristics__value characteristics__value--center" type="range" value="50" max="100" min="0"/>
+                    <span class="characteristics__title characteristics__title--left">Organized</span>
+                </label>
+
+                <label class="characteristics__metric">
+                    <span class="characteristics__title characteristics__title--right">Independent</span>
+                    <input disabled="" class="characteristics__value characteristics__value--center" type="range" value="66" max="100" min="0"/>
+                    <span class="characteristics__title characteristics__title--left">Team player</span>
+                </label>
+            </div>
+
+        </section>
+
+    </article>
+</body>
+</html>

@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles/w3c.css">
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans+Caption" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1><a><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ed/W3C%C2%AE_Icon.svg/1280px-W3C%C2%AE_Icon.svg.png" width="200"></a></h1>
+        <h2>HTML5 Reference</h2>
+        <h3>The Syntax, Vocabulary and APIs of HTML5</h3>
+        <h3>W3C Editor’s Draft 9 August 2010</h3>
+
+        <dl>
+            <dt><b>This version:</b></dt>
+            <dd><a>http://www.w3.org/TR/2010/ED-html5-author-20100809</a></dd>
+            <dt><b>Latest version:</b></dt>
+            <dd><a>http://www.w3.org/TR/</a></dd>
+            <dt><b>Previous version:</b></dt>
+            <dd>No previous versions.</dd>
+            <dt><b>Editors:</b></dt>
+            <dd>Lachlan Hunt (Opera Software ASA) lachlan.hunt@lachy.id.au</dd>
+        </dl>
+
+        [<a href="">Copyright licence pending</a>]
+    </header>
+    <hr>
+    <section>
+        <h2>Abstract</h2>
+        <article><p class="first">This document explains the syntax, vocabulary and the available APIs for HTML5 documents, focussing on simplicity and practical applications for beginners while also providing in depth information for more advanced web developers.This document is complimentary to the HTML5 Guide.</p></article>
+    </section>
+    <section>
+        <h2>Status of this document</h2>
+        <article>
+            <p class="first">This section describes the status of this document at the time of its publication. Other documents may supersede this document. A list of current W3C publications and the latest revision of this technical report can be found in the W3C technical reports index at http://www.w3.org/TR/.</p>
+
+            <p>This document is an Editors Draft of the “HTML5 Reference” produced by the HTML Working Group, part of the HTML Activity. The working group is working on HTML5 (see the HTML5 Editor’s draft). The appropriate forum for comments on this document is public-html-comments@w3.org (public archive) or public-html@w3.org (public archive).</p>
+
+            <p>Publication as a Working Group Note does not imply endorsement by the W3C Membership. This is a draft document and may be updated, replaced or obsoleted by other documents at any time. It is inappropriate to cite this document as other than work in progress.</p>
+
+            <p>This document was produced by a group operating under the 5 February 2004 W3C Patent Policy. W3C maintains a public list of any patent disclosures made in connection with the deliverables of the group; that page also includes instructions for disclosing a patent. An individual who has actual knowledge of a patent which the individual believes contains Essential Claim(s) must disclose the information in accordance with section 6 of the W3C Patent Policy.</p>
+        </article>
+    </section>
+    <section>
+        <h2>Table of contents</h2>
+        <nav>
+            <ol>
+                <li><a href="#Introduction">Introduction</a></li>
+                <li><a href="#Basic templates">Basic Templates</a></li>
+                <li><a href="#The HTML and XHTML Syntax">The HTML and XHTML Syntax</a></li>
+                <ol type="1">
+                        <li>Syntactic Overview</li>
+                        <li>The Syntax</li>
+                        <ol>
+                            <li>DOCTYPE Declaration</li>
+                            <ol>
+                                <li>Obsolete But Permitted DOCTYPEs</li>
+                                <li>HTML and XHTML Comparison</li>
+                                <li>Historical Notes</li>
+                            </ol>
+                            <li>Elements</li>
+                            <ol>
+                                <li>Tags</li>
+                                <li>Void Elements</li>
+                                <li>Raw Text Elements</li>
+                                <li>RCDATA Elements</li>
+                                <li>Foreign Elements</li>
+                                <li>Normal Elements</li>
+                                <li>Element Type Comparision</li>
+                                <li>HTML and XHTML Comparison</li>
+                            </ol>
+                            <li>Attributes</li>
+                            <ol>
+                                <li>Empty Attribute Syntax</li>
+                                <li>Unquoted Attribute Value Syntax</li>
+                                <li>Double-Quoted Attribute Value Syntax</li>
+                                <li>Single-Quoted Attribute Value Syntax</li>
+                                <li>HTML and XHTML Comparison</li>
+                            </ol>
+                            <li>Comments</li>
+                            <li>Text</li>
+                            <li>CDATA Sections</li>
+                            <li>Character References</li>
+                        </ol>
+                        <li>Understanding MIME Types</li>
+                        <li>Character Encoding</li>
+                        <li>Choosing HTML or XHTML</li>
+                        <li>Polyglot Documents</li>
+                    </ol>
+                <li>The HTML Vocabulary and APIs</li>
+                <ol>
+                    <li>Categories</li>
+                    <li>Global Attributes</li>
+                    <li>The Elements</li>
+                    <li>Microdata</li>
+                </ol>
+                <li>Index of Elements</li>
+                <ol>
+                    <li>Conforming Elements</li>
+                    <li>Obsolete Elements</li>
+                    <li>Comparison of HTML 4.01 and HTML5 Elements</li>
+                </ol>
+                <li>How to Read This Guide</li>
+                <ol>
+                    <li>Conventions</li>
+                    <ol>
+                        <li>Notes, Tips and Warnings</li>
+                        <li>Example Markup</li>
+                        <ol>
+                            <li>Attributes</li>
+                            <li>Void Elements</li>
+                            <li>Namespaces</li>
+                        </ol>
+                    </ol>
+                </ol>
+            </ol>
+        </nav>
+    </section>
+
+    <section id="Introduction">
+        <h2>Introduction</h2>
+        <article>
+            <p class="first">This document serves as a reference for the HTML syntax, vocabulary and its associated DOM APIs and is intended for web site and application developers, publishers, tutorial writers and teachers and their students. That is, people who write documents using HTML, or who teach others to do so.</p>
+
+            <p>This guide is structured into three major sections. The first provides a set of basic templates for authors to get started with.</p>
+
+            <p>The second section provides an in depth look at the syntax of HTML and XHTML documents. This will investigate both the similarities and differences between the two alternatives and provides guidance on choosing which to use for your own projects, depending on your needs. Additionally, this will also provide details about creating polyglot documents — that is, documents that conform to both HTML and XHTML simultaneiously — including issues related to ensuring stylesheets and scripts work correctly under both conditions.</p>
+
+            <p>The third and final section provides a reference for the HTML vocabulary. Each element is described, providing details about its its meaning, allowed attributes, content models and DOM APIs. Each is accompanied by clear examples illustrating how the element is designed to be used for a range of different use cases.</p>
+        </article>
+    </section>
+    <section id="Basic templates">
+        <h2>Basic templates</h2>
+        <article>
+            <p class="first">The following basic templates are designed to be used as starting points for the documents you create. Several alternatives are provided, allowing individuals to choose the template that is most appropriate for their needs.</p>
+
+
+        </article>
+
+
+
+    </section>
+
+</body>
+</html>

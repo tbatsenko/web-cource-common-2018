@@ -1,0 +1,14 @@
+.main {
+  display: flex;
+  width: 100%;
+  height: calc(100% - var(--header-height)); }
+  .main .videos_window {
+    height: 100%;
+    width: calc(100% - var(--left_menu_width));
+    overflow-y: scroll; }
+
+.window {
+  margin: 20px;
+  background-color: green; }
+
+/*# sourceMappingURL=main.css.map */

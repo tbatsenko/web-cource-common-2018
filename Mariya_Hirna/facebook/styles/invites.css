@@ -1,0 +1,14 @@
+.invites__container{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.invites__icon{
+    width: 16px;
+    height: 16px;
+}
+
+.invites__text{
+    font-size: 13px;
+}
