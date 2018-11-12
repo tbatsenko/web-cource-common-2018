@@ -1,0 +1,15 @@
+<nav class="navigation">
+    <section class="search">
+        <button><img src="images/logo.png" width="30px" height="30px"></button>
+        <input placeholder="Search">
+        <button><img src="images/lupa.png" width="30px" height="30px"></button>
+    </section>
+    <section class="buttons">
+        {{#nav_buttons/text_buttons}}
+            <button class="text_button">{{.}}</button>
+        {{/nav_buttons/text_buttons}}
+        {{#nav_buttons/img_buttons}}
+            <button class="img_button"><img src="{{.}}"></button>
+        {{/nav_buttons/img_buttons}}
+    </section>
+</nav>

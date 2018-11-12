@@ -1,0 +1,8 @@
+{"options":[
+  {"img":"images/saved.png","label":"Saved"},
+  {"img":"images/pages.png","label":"Pages"},
+  {"img":"images/groups.png","label":"Groups"},
+  {"img":"images/events.png","label":"Events"},
+  {"img":"images/fundraisers.png","label":"Fundraisers"},
+  {"img":"images/tag_friend.png","label":"Friend lists"}
+]}

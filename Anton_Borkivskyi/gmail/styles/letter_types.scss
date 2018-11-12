@@ -1,0 +1,45 @@
+.letter_types {
+  width: var(--menu-width);
+  //background: #9B59B6;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-left: 16px;
+
+  .compose_icon {
+    width: 20px;
+    height: 20px;
+  }
+
+  .compose_button {
+    width: 80%;
+    height: 50px;
+    border: 1px silver solid;
+    border-radius: 25px;
+    margin: 16px 8px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+
+  .letter_types__button {
+    //background: aqua;
+    display: flex;
+    align-items: center;
+    height: 32px;
+    border-top-right-radius: 16px;
+    border-bottom-right-radius: 16px;
+    width: 90%;
+  }
+
+  .letter_types__button:hover {
+    background: #F5F5F5;
+  }
+
+  .letter_types__icon {
+    width: 20px;
+    height: 20px;
+    margin-right: 20px;
+  }
+}
