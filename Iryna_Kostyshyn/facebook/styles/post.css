@@ -1,0 +1,102 @@
+.main-feed__post {
+    padding: 15px;
+    background-color: white;
+    border-radius: 5px;
+    border: 1px solid #bdc3c7;
+    margin-bottom: 10px;
+    padding: 0;
+    /*display: flex;*/
+}
+
+.main-feed__post:after {
+    height: 13px;
+}
+
+.main-feed__post-header{
+    margin: 10px;
+}
+
+.main-feed__user-avatar{
+    width: 40px;
+    height: 40px;
+    border: none;
+    border-radius: 50%;
+}
+
+.main-feed__user-name{
+    text-decoration: none;
+    color: #365899;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.main-feed__post-time{
+    text-decoration: none;
+    color: #616770;
+    font-size: 12px;
+    font-weight: 400;
+}
+
+.main-feed__post-time:after{
+    background: url("https://static.xx.fbcdn.net/rsrc.php/v3/yx/r/Bp-a78aosxf.png") -26px -217px;
+
+}
+
+.main-feed__post-capture{
+    font-size: 14px;
+    font-weight: 400;
+    color: rgb(29, 33, 41);
+    overflow-wrap: break-word;
+    margin: 10px;
+}
+
+.main-feed__post-photo{
+    width: 499px;
+    border: none;
+    box-sizing: border-box;
+}
+
+.main-feed__post-footer{
+    margin: 10px;
+    height: 83px;
+    display: flex;
+
+}
+
+.main-feed__post-summary{
+    display: inherit;
+    vertical-align: space-between;
+    flex-direction: row;
+}
+
+.main-feed__like-img{
+    width: 16px;
+    height: 16px;
+    border: none;
+    border-radius: 50%;
+}
+
+.main-feed__post-amount-shares{
+    text-decoration: none;
+    color: #616770;
+}
+
+.main-feed__post-amount-likes{
+    text-decoration: none;
+    color: #616770;
+}
+
+.main-feed__post-footer-buttons{
+    display: inherit;
+    vertical-align: space-between;
+    flex-direction: row;
+}
+
+.main-feed__footer-button{
+    border: none;
+    text-decoration: none;
+    color: #616770;
+    font-size: 14px;
+    font-weight: 700;
+    background: transparent;
+}

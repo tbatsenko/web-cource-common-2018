@@ -1,0 +1,12 @@
+.stories-panel__icon_see-more {
+    background-size: auto;
+    background: url(https://static.xx.fbcdn.net/rsrc.php/v3/yD/r/nvsdYm79QLU.png) no-repeat -220px -270px;
+    display: inline-block;
+    height: 20px;
+    width: 20px;
+}
+
+.stories-panel__footer_see-more {
+    font-size: 13px;
+    display: flex;
+}

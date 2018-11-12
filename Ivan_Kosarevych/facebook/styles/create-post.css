@@ -1,0 +1,41 @@
+.feed__create-post--top-panel{
+    height: 30px;
+    padding: 5px;
+    background-color: #f5f6f7;
+}
+.feed__create-post--top-icons{
+    margin: 0;
+    left: 0;
+    position: relative;
+    vertical-align: middle;
+    display: inline-block;
+    background-size: auto;
+    background: transparent no-repeat;
+
+    height: 16px;
+    width: 16px;
+
+    word-wrap: break-word;
+}
+#compose-post-icon{
+    background: url("https://static.xx.fbcdn.net/rsrc.php/v3/yo/r/k0vzvoc8epV.png") -34px -378px;;
+}
+#media-album-icon{
+    background: url("https://static.xx.fbcdn.net/rsrc.php/v3/yQ/r/LVuVbam6G88.png") -17px -410px;
+}
+#live-video-icon{
+    background: url("https://static.xx.fbcdn.net/rsrc.php/v3/yf/r/35hEpt4eqy1.png") 0 -2272px;
+}
+#compose-post-area{
+    padding: 10px;
+}
+#post-create-text-area{
+    width: 420px;
+    height: 35px;
+}
+.feed__create-post--text{
+    display: inline-block;
+    font-family: inherit;
+    font-size: 12px;
+    font-weight: bold;
+}

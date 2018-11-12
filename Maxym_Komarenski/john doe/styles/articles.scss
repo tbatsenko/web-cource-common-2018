@@ -1,0 +1,50 @@
+.article_titles {
+  text-transform: uppercase;
+  font-family: AvenirNext-Bold, sans-serif;
+  font-size: 23px;
+}
+
+article p {
+  font-family: Montserrat, serif;
+  font-size: 20px;
+}
+
+article ul {
+  padding: 0;
+  margin-left: 20px;
+}
+
+article ul li {
+  color: #c7ac6d;
+  list-style-type: disc;
+  font-family: AvenirNext-Regular, serif;
+  font-size: 20px;
+}
+
+article ul li p {
+  color: black;
+  margin-top: 10px;
+}
+
+.article-preferences h3 {
+  margin-bottom: 0;
+}
+
+.article-preferences ul {
+  margin: 0;
+}
+
+.article-preferences {
+  & ul li {
+    list-style-type: none;
+  }
+
+  & ul li p {
+    margin: 16px 0 0;
+  }
+
+  &-table {
+    display: flex;
+    justify-content: space-between;
+  }
+}

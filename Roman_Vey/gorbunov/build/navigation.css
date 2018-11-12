@@ -1,0 +1,14 @@
+.navigation {
+  display: flex;
+  flex-direction: row;
+}
+.navigation__section {
+  padding: 10px;
+  height: 100%;
+}
+.navigation__section:hover {
+  cursor: pointer;
+  color: red;
+}
+
+/*# sourceMappingURL=navigation.css.map */

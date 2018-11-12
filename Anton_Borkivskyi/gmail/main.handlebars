@@ -6,9 +6,9 @@
 
     <section class="right-part">
         <section class="right-part__search">
-            <button></button>
-            <input>
-            <button></button>
+            <button class="lupa"></button>
+            <input class="search" placeholder="Search mail">
+            <button class="dropdown"></button>
         </section>
         <section class="right-part__buttons">
             <button class="right-part__buttons__tasks"></button>
@@ -19,17 +19,36 @@
 </header>
 
 
-<main>
-    <aside>
-        <button>Написати</button>
+<main class="main">
+    <aside class="left_menu">
+        <button class="compose_button"><img src="images/plus.png" class="compose_icon">
+            <h3>Compose</h3></button>
         {{#left_menu}}
-            <button class="menu_button">{{.}}</button>
+
+            <button class="menu_button"><img src="{{icon}}" class="menu_icon">{{text}}</button>
 
         {{/left_menu}}
     </aside>
 
     <section class="letters">
-
-
+        {{#letters}}
+            <a>
+                <div class="letter">
+                    <button class="letter__square"></button>
+                    <button class="letter__star"></button>
+                    <p class="sender">{{sender}}</p>
+                    <p class="content">{{name}} - {{content}} </p>
+                    <p class="letter_date">{{date}}</p>
+                </div>
+            </a>
+        {{/letters}}
     </section>
+
+    <aside class="right_menu">
+        {{#right_menu}}
+
+            <button class="right_menu_button"><img src="{{.}}" class="right_menu_icon"></button>
+
+        {{/right_menu}}
+    </aside>
 </main>

@@ -1,0 +1,37 @@
+.header {
+  &__side-menu-btn {
+    align-self: center;
+    color: transparent;
+    display: block;
+    width: 40px;
+    height: 40px;
+    background: none;
+    border: none;
+    opacity: 0.5;
+  }
+
+  &__search {
+    margin-right: auto;
+    margin-left: auto;
+    align-self: center;
+    display: flex;
+    width: 640px;
+    height: 30px;
+    justify-content: flex-start;
+    flex-direction: row;
+  }
+
+  &__more-actions {
+    display: flex;
+    flex-direction: row;
+    align-self: center;
+    margin-left: auto;
+  }
+}
+
+.side-menu-btn {
+  &__svg {
+    width: 24px;
+    height: 24px;
+  }
+}
