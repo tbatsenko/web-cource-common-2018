@@ -1,34 +1,39 @@
-@import "characteristics.css";
+@import url("https://fonts.googleapis.com/css?family=Montserrat:400,400i,700");
 @import "typography.css";
-@import url('https://fonts.googleapis.com/css?family=Montserrat:400,700');
 
+html,
 body {
     font-family: Montserrat, sans-serif;
     margin: 0;
     padding: 0;
+    font-size: 22px;
+    display: flex;
+    align-items: center;
+    justify-content: center
 }
 
 .main-profile {
-    padding: 20px;
-    margin: 20px;
-    background: #f7f7f7;
-    width: 470px;
+    width: 600px;
+    height: 1200px;
     float: left;
+    background: url("../img/user_photo.jpg") no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: flex-end;
 }
 
-.user-picture {
-    margin: auto;
-    display: block;
-    border-radius: 100%;
-    box-shadow: 0 7px;
+.main-profile__bottom-content {
+    margin-bottom: 60px;
 }
 
 .detailed-profile {
-    width: 960px;
-    margin: 20px 20px 20px;
+    width: 1000px;
+    margin: 20px 20px 20px 40px;
 }
 
 .column {
-    width: 440px;
+    width: 420px;
     float: left;
+    margin: 0 20px 0 0;
 }

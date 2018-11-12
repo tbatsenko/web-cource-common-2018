@@ -5,127 +5,94 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Jane Doe</title>
-
+    <title>John Doe</title>
     <link rel="stylesheet" href="styles/main.css">
 </head>
 <body>
 <aside class="main-profile">
-    <img class='user-picture' src="" alt="supergirl">
-    <blockquote>
-        I design with all my heart, thinking about the users
-    </blockquote>
-    <dl class="characteristics">
-        <dt class="characteristics__title">Age</dt>
-        <dd class="characteristics__value">21</dd>
-        <dt class="characteristics__title">Job title</dt>
-        <dd class="characteristics__value">UX Designer</dd>
-        <dt class="characteristics__title">Status</dt>
-        <dd class="characteristics__value">Single</dd>
-        <dt class="characteristics__title">Location</dt>
-        <dd class="characteristics__value">Atalanta GA</dd>
-    </dl>
-
-    <ul>
-        <li>Passionate</li>
-        <li>Empathetic</li>
-        <li>Curious</li>
-        <li>Adventurous</li>
-    </ul>
-
-    <h3>Favorite brands</h3>
-    <ul>
-        <li>Facebook</li>
-        <li>LinkedIn</li>
-        <li>Spotify</li>
-        <li>Coca-Cola</li>
-    </ul>
-</aside>
-<section class="detailed-profile"></section>
-<article class="detailed-profile">
-    <h2>
+    <section class="main-profile__bottom-content">
+    <h1>
         <sub>User persona</sub>
-        Jane Doe
-    </h2>
+        John Doe
+    </h1>
 
-    <section>
+    <blockquote>
+        “I care deeply about animal rights and to help them live happier lives”
+    </blockquote>
+    </section>
+
+
+</aside>
+
+<article class="detailed-profile">
+
+    <section class="column">
         <h3>About</h3>
-        <p>Jane is a UX Designer that works for a Fortune 500 company in Atlanta, GA. Ever since she was a child, she
-            loved to make stuff on her own and show them to her parents, friends and classmates. Over the course of her
-            childhood and throughout her school, she won numerous design prizes at various well known competitions
-            across the United States and Canada. Due to her passion for design, she decided to pursue a Master’s degree
-            in Human Computer Interaction and learn more about User Experience (UX) and how she can become a better
-            designer.</p>
+        <p>John is a graduate student at UCLA who cares deeply about animal rights. He spares his own time to volunteer
+            at the local animal shelter and to promote pet adoption. He wishes to order some design artifacts to raise
+            awareness at his school.</p>
     </section>
 
     <section class="column">
-        <h3>Goals</h3>
-        <ul>
-            <li>Become a designer who communicates well of her ideas at any place</li>
-            <li>Easily explain her design ideas to other designers, researchers and engineers</li>
-        </ul>
+        <dl class="column__characteristics">
+            <dt class="column__characteristics--title">Age</dt>
+            <dd class="column__characteristics--value">28</dd>
+            <dt class="column__characteristics--title">Occupation</dt>
+            <dd class="column__characteristics--value">Ph.D Student</dd>
+            <dt class="column__characteristics--title">Income</dt>
+            <dd class="column__characteristics--value">Less than $50k</dd>
+            <dt class="column__characteristics--title">Status</dt>
+            <dd class="column__characteristics--value">Single</dd>
+            <dt class="column__characteristics--title">Location</dt>
+            <dd class="column__characteristics--value">Los Angeles, CA</dd>
+        </dl>
     </section>
 
     <section class="column">
         <h3>Needs</h3>
         <ul>
-            <li>Looking for a design tool that helps to cut down unnecessary time and effort</li>
-            <li>Receive feedback on her progress whenever needed before presentation</li>
+            <li>Create designs that promote animal adoption</li>
+            <li>Order design artifacts such as posters, badges and buttons to distribute them to students</li>
+            <li>Help with the crowdfunding</li>
         </ul>
     </section>
 
     <section class="column">
-        <h3>Pain Points</h3>
+        <h3>Frustrations</h3>
         <ul>
-            <li>There are too many tools that forces her to spend time learning them</li>
-            <li>Cannot rely on other people’s opinion because they are highly subjective</li>
-            <li>Certain situations require different tools to communicate her thoughts</li>
+            <li>Some vendors charge way too much for the designs</li>
+            <li>Connecting with the local vendors require extra time on his end</li>
+            <li>If he ends up not getting the funds, he has to put in his own money</li>
+        </ul>
+    </section>
+
+    <section class="column">
+        <h3>Social media activity</h3>
+        <div class="column__activity">
+
+        </div>
+    </section>
+
+    <section class="column">
+        <h3>Current feelings</h3>
+        <ul>
+            <li>Stressed</li>
+            <li>Conserned</li>
+            <li>Busy</li>
         </ul>
     </section>
 
     <section class="column">
         <h3>Personality</h3>
-        <div class="characteristics">
-            <label class="characteristics__metric">
-                <span class="characteristics__title characteristics__title--right">Introvert</span>
-                <input class="characteristics__value characteristics__value--center" type="range" value="10" max="100"
-                       min="0"/>
-                <span class="characteristics__title characteristics__title--left">Extrovert</span>
-            </label>
-
-            <label class="characteristics__metric">
-                <span class="characteristics__title characteristics__title--right">Analytical</span>
-                <input class="characteristics__value characteristics__value--center" type="range" value="10" max="100"
-                       min="0"/>
-                <span class="characteristics__title characteristics__title--left">Creative</span>
-            </label>
-
-
-            <label class="characteristics__metric">
-                <span class="characteristics__title characteristics__title--right">Busy</span>
-                <input class="characteristics__value characteristics__value--center" type="range" value="10" max="100"
-                       min="0"/>
-                <span class="characteristics__title characteristics__title--left">Time rich</span>
-            </label>
-
-            <label class="characteristics__metric">
-                <span class="characteristics__title characteristics__title--right">Messy</span>
-                <input class="characteristics__value characteristics__value--center" type="range" value="10" max="100"
-                       min="0"/>
-                <span class="characteristics__title characteristics__title--left">Organazied</span>
-            </label>
-
-            <label class="characteristics__metric">
-                <span class="characteristics__title characteristics__title--right">Independent</span>
-                <input class="characteristics__value characteristics__value--center" type="range" value="10" max="100"
-                       min="0"/>
-                <span class="characteristics__title characteristics__title--left">Team player</span>
-            </label>
-        </div>
+        <ul>
+            <li>Passionate</li>
+            <li>Motivational</li>
+            <li>Giving</li>
+            <li>Loving</li>
+            <li>Optimistic</li>
+        </ul>
     </section>
 
-
 </article>
-
 </body>
 </html>
