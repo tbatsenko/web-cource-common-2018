@@ -1,0 +1,19 @@
+{{#post}}
+    <article class="news__post">
+        <div class="news__post__title">
+            <img src="images/{{user-logo}}" class="user_icon">
+            <h3>{{username}}</h3>
+        </div>
+        <p class="news__post__content">{{text}}</p>
+        <img src="images/{{photo}}" class="news__post__photo">
+        <div class="news__post__actions">
+            {{#buttons}}
+                <button class="news__post__actions__button">{{.}}</button>
+            {{/buttons}}
+        </div>
+        <div class="news__new-post__action">
+            <img src="images/new-post_image.jpg" class="user_icon">
+            <input type="text" placeholder="Write comment..." class="news__post__comment">
+        </div>
+    </article>
+{{/post}}
