@@ -17,12 +17,12 @@
   </div>
 </header>
 
-<main class="youtube-video">
-  <article>
+<main class="youtube-main">
+  <article class="youtube-video">
     <iframe id="video" width="640" height="360" src="https://www.youtube.com/embed/cRm54SJxcao" frameborder="0"
             allowfullscreen></iframe>
-    <
-    <h2>{{video.title}}</h2>
+
+    <h2 class="youtube-video__title">{{video.title}}</h2>
     <small>
       {{video.views}}
     </small>
@@ -36,7 +36,7 @@
   </article>
 
   <hr/>
-  <footer>
+  <footer class="youtube-comments">
     <a href="{{video.channel.link}}"><img
         src="{{video.channel.logo}}"/></a>
     <label for="author">{{video.channel.title}} Verified:{{video.channel.verified}}
@@ -65,15 +65,15 @@
 </aside>
 </main>
 
-<aside class="suggested">
+<aside class="youtube-suggested">
   Up next
-  <button>Autoplay</button>
+  <button class="youtube-suggested__autoplay-button">Autoplay</button>
   <br/>
   {{#suggested-videos}}
-    <a class="suggested-video" href="{{link}}">
-      <img class="next-video__preview" src="{{preview}}">
+    <a class="suggested-video suggested-video--{{type}}" href="{{link}}">
+      <img class="suggested-video__preview" src="{{preview}}">
       <h4>{{title}} </h4>
-      <small>{{channel}}, Verified:{{verified}}
+      <small>{{channel}}
     {{#if views}}
         {{views}} views
     {{/if}}
