@@ -1,0 +1,68 @@
+.column__activity {
+    list-style-type: none;
+    padding: 0;
+}
+
+.column__activity--facebook {
+    background: #f4f4f6;
+    height: 40px;
+    width: 305px;
+    margin-bottom: 20px;
+}
+
+.column__activity--facebook:after {
+    content: 'Facebook';
+    color: #ffffff;
+    display: block;
+    background: #ac6b5c;
+    width: 80%;
+    height: 100%;
+}
+
+.column__activity--instagram {
+    background: #f4f4f6;
+    height: 40px;
+    width: 305px;
+    margin-bottom: 20px;
+}
+
+.column__activity--instagram:after {
+    content: 'Instagram';
+    color: #ffffff;
+    display: block;
+    background: #ac6b5c;
+    width: 55%;
+    height: 100%;
+}
+
+.column__activity--twitter {
+    background: #f4f4f6;
+    height: 40px;
+    width: 305px;
+    margin-bottom: 20px;
+}
+
+.column__activity--twitter:after {
+    content: 'Twitter';
+    color: #ffffff;
+    display: block;
+    background: #ac6b5c;
+    width: 30%;
+    height: 100%;
+}
+
+.column__activity--snapchat {
+    background: #f4f4f6;
+    height: 40px;
+    width: 305px;
+    margin-bottom: 20px;
+}
+
+.column__activity--snapchat:after {
+    content: 'Snapchat';
+    color: #ffffff;
+    display: block;
+    background: #ac6b5c;
+    width: 75%;
+    height: 100%;
+}

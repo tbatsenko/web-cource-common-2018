@@ -1,6 +1,9 @@
 @import url("https://fonts.googleapis.com/css?family=Montserrat:400,400i,700");
 @import "typography.css";
 @import "characteristics.css";
+@import "feelings.css";
+@import "progress-bar.css";
+@import "personality.css";
 
 html,
 body {
@@ -43,5 +46,5 @@ body {
 .column {
     width: 420px;
     float: left;
-    padding: 20px 10px 20px 60px;
+    padding: 35px 10px 35px 50px;
 }

@@ -1,0 +1,18 @@
+.column__feelings {
+    list-style-type: none;
+    display: ruby-text-container;
+    font-size: 1.1em;
+    font-weight: 600;
+}
+
+.column__feelings--first {
+    color: #ac6b5c;
+}
+
+.column__feelings--second {
+    color: #d1998c;
+}
+
+.column__feelings--third {
+    color: #dba498;
+}
