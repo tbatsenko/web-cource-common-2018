@@ -5,8 +5,14 @@
     <title>travel</title>
     <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,900" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600" rel="stylesheet">
+
+    <link rel="stylesheet" href="style/themes/blue_theme.css">
+
     <link href="style/main.css" rel="stylesheet" type="text/css">
     <link href="style/typography.less" rel="stylesheet" type="text/less">
+
+    <link href="style/header.less" rel="stylesheet" type="text/less">
+
     <link href="style/navigation.less" rel="stylesheet" type="text/less">
     <link href="style/article.less" rel="stylesheet" type="text/less">
     <link href="style/interactive.less" rel="stylesheet" type="text/less">
@@ -24,11 +30,9 @@
 </head>
 <body>
 <div class="container">
-
     <header class="header">
         <svg class="header__frame" width="1440" height="700" version="1.1" xmlns="http://www.w3.org/2000/svg">
-            <polyline fill="none" points="500,660 40,660 40,40 1400,40 1400,660 940,660" stroke="#ecb84c"
-                      stroke-width="2"/>
+            <polyline class="header__path" points="500,660 40,660 40,40 1400,40 1400,660 940,660"/>
         </svg>
         <p class="heading1">Cuba</p>
         <P class="header__motto">Explore the world of Casas & Cadillacs</P>
@@ -136,9 +140,26 @@
 </div>
 <script src="src/less.min.js"></script>
 <script src="src/index.js"></script>
-<script>
 
 
-</script>
+<nav>
+    <a href="#">Новости</a>
+    <a href="#">Проекты</a>
+    <a href="#">Книги</a>
+    <a href="#">Школа</a>
+    <a href="#">Курсы</a>
+
+    <span>
+        <a href="#">Советы</a>
+        <sub><a href="#">Подборки❱</a></sub>
+    </span>
+
+    <a href="#">Коворкафе</a>
+    <a href="#">О компании</a>
+
+</nav>
+
+
+
 </body>
 </html>

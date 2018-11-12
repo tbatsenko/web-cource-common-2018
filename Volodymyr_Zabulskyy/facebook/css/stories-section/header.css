@@ -1,0 +1,35 @@
+.stories-panel__heading {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 7px 12px 7px;
+    color: #616770;
+    font-weight: 600;
+    font-size: 13px;
+    line-height: 22px;
+}
+
+.stories-panel__heading_annotation {
+    display: flex;
+    align-items: center;
+}
+
+.stories-panel__heading_annotation > a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 13px;
+}
+
+.stories-panel__heading_annotation > span {
+    padding: 0 3px;
+    height: 22px;
+}
+
+.stories-panel__heading_archive-ico {
+    display: inline-block;
+    background-size: auto;
+    width: 12px;
+    height: 12px;
+    background: url("https://static.xx.fbcdn.net/rsrc.php/v3/yd/r/8M2_U-8yMz7.png") no-repeat -37px -167px;
+    margin-right: 4px;
+}

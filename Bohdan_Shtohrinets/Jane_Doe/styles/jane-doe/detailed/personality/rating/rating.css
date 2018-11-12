@@ -9,12 +9,10 @@
     text-align: left;
     color: #181818;
 }
-
 .rating__criteria {
     display: flex;
     justify-content: space-between;
 }
-
 .rating__slider {
     width: 100%;
 }

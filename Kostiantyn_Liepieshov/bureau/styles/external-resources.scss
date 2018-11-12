@@ -1,0 +1,9 @@
+.external-resources {
+  flex: auto;
+  display: flex;
+  justify-content: flex-end;
+
+  &__item {
+    margin-left: 5px;
+  }
+}

@@ -21,36 +21,13 @@ main {
     margin: auto;
 }
 
-
-button{
+button {
     padding: 0;
     border: 0;
     background-color: transparent;
     color: transparent;
 }
 
-img
-{
+img {
     color: transparent !important;
-}
-
-
-.default-page{
-    display: flex;
-    justify-content: space-between;
-    flex-flow: row;
-    width: 1050px;
-    padding-top: 64px;
-}
-
-.profile-page{
-    padding-top: 42px;
-    display: flex;
-    justify-content: space-between;
-    flex-flow: column;
-<<<<<<< HEAD
-    width: 53em;
-=======
-    width: 815px;
->>>>>>> parent of 64dd120... Merge branch 'master' of /home/zabulskyy/UCU/Web/web-cource-common with conflicts.
 }

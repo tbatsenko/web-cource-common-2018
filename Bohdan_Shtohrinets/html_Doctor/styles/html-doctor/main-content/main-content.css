@@ -1,0 +1,33 @@
+.main-content__opener {
+    top: 20px;
+    position: relative;
+    display: block;
+}
+
+.main-content__html-indexes {
+    clear: both;
+    display: block;
+    background-color: #f8f8f8;
+    border-top: 4px solid #f0f0f0;
+    border-bottom: 4px solid #F0F0F0;
+    padding: 0 0 30px;
+    margin: 10px 0 20px;
+    position: relative;
+    overflow: auto;
+}
+
+.main-content__more-posts {
+    clear: both;
+    position: relative;
+}
+
+.main-content__special-offer {
+    clear: both;
+    background: #F0F0F0;
+    width: 980px;
+    padding: 25px 20px;
+    margin: 20px 0 0;
+    float: left;
+}
+
+/*# sourceMappingURL=main-content.css.map */

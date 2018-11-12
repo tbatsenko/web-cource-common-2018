@@ -1,0 +1,32 @@
+.footer {
+  &__content {
+    position: relative;
+    width: 1020px;
+    margin: 40px auto;
+  }
+
+  &__logo {
+    float: left;
+    width: 150px;
+    margin: 10px 0 0 10px;
+  }
+
+  &__copyright {
+    float: left;
+    width: 740px;
+    margin: 0 20px;
+  }
+
+  &__html5-logo {
+    float: right;
+    width: 64px;
+    margin: 10px 0 0 10px;
+  }
+}
+
+.copyright {
+  &__section {
+    font-size: 13px;
+    padding: 0 0 10px 0;
+  }
+}

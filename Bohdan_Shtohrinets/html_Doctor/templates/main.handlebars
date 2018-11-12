@@ -1,0 +1,289 @@
+<div class="html-doctor">
+    <section class="html-doctor__top-banner">
+        {{#top-banner}}
+            <header class="top-banner__main-header">
+                <div class="html-doctor__logo">
+                    {{#logo}}
+                        <a class="logo__link" href="#">
+                            <h1 class="logo__title">{{title}}</h1>
+                            <small class="logo__motto">{{description}}</small>
+                        </a>
+                    {{/logo}}
+                </div>
+                <nav class="main-header__top-nav-bar">
+                    {{#top-nav-bar}}
+                        {{#options}}
+                            <div class="top-nav-bar__option">
+                                {{#if has-drop-down}}
+                                    <a class="top-nav-bar__link top-nav-bar__link_with-button"
+                                       href="#">{{link-name}}</a>
+                                    <ul class="top-nav-bar__drop-down">
+                                        {{#drop-down-links}}
+                                            <li class="drop-down__option"><a class="top-nav-bar__link"
+                                                                             href="#">{{.}}</a></li>
+                                        {{/drop-down-links}}
+                                    </ul>
+                                {{else}}
+                                    <a class="top-nav-bar__link" href="#">{{link-name}}</a>
+                                {{/if}}
+                            </div>
+                        {{/options}}
+                    {{/top-nav-bar}}
+                </nav>
+                <nav class="main-header__main-menu">
+                    {{#main-menu}}
+                        <div class="main-menu__navigation">
+                            {{#options}}
+                                <a class="main-menu__option" href="#">{{.}}</a>
+                            {{/options}}
+                        </div>
+                        <form action="/" class="main-menu__search"><!--
+                            --><input class="search__input-field" type="text" placeholder="" name="search"/><!--
+                            -->
+                            <button class="search__button" type="submit">{{button}}</button><!--
+                        --></form>
+                    {{/main-menu}}
+                </nav>
+            </header>
+        {{/top-banner}}
+    </section>
+    <main class="html-doctor__main-content">
+        {{#main-content}}
+            <section class="main-content__opener">
+                {{#opener}}
+                    <article class="opener__featured-article">
+                        {{#featured}}
+                            <h4 class="featured-article__title">{{title}}</h4>
+                        {{/featured}}
+                    </article>
+                    <article class="opener__post">
+                        {{#post}}
+                            <header class="post__header">
+                                <h1 class="opener__title">
+                                    <a href="#">{{title}}</a>
+                                </h1>
+                                <small class="post__info">
+                                    <time datetime="2016-06-09">{{time}}</time>
+                                    by
+                                    <a href="#">{{author}}</a>
+                                </small>
+                            </header>
+                            <p class="post__content">{{content}}</p>
+                            <p class="post__read-more">
+                                <a href="#">{{read-more-btn}}</a>
+                            </p>
+                        {{/post}}
+                    </article>
+                    <aside class="opener__recent-comments">
+                        {{#recent-comments}}
+                            <h3 class="recent-comments__title">{{title}}</h3>
+                            <ul class="recent-comments__comments-list">
+                                {{#comments}}
+                                    <li class="recent-comments__comment">
+                                        {{#if links}}
+                                            <a class="recent-comments__link" href="#">{{links.[0]}}</a> {{text}}
+                                            <a class="recent-comments__link" href="#">{{links.[1]}}</a>
+                                        {{else}}
+                                            {{text}}
+                                            <a class="recent-comments__link" href="#">{{link.[0]}}</a>
+                                        {{/if}}
+                                    </li>
+                                {{/comments}}
+                            </ul>
+                        {{/recent-comments}}
+                    </aside>
+                {{/opener}}
+            </section>
+            <section class="main-content__html-indexes">
+                {{#html-indexes}}
+                    <h1 class="html-indexes__title">
+                        <a href="#">{{title}}</a>
+                    </h1>
+                    {{#glossary}}
+                        {{#if modify}}
+                            <section class="html-indexes__glossary html-indexes__glossary{{modify}}">
+                                {{#if title}}
+                                    <h2 class="glossary__title">{{title}}</h2>
+                                    <nav class="glossary__tag-list">
+                                        {{#tags}}
+                                            <a class="glossary__tag" href="#">{{.}}</a>
+                                        {{/tags}}
+                                    </nav>
+                                {{else}}
+                                    <h2 class="glossary__title">{{titles.[0]}}</h2>
+                                    <nav class="glossary__tag-list glossary__tag-list_separate">
+                                        {{#tags1}}
+                                            <a class="glossary__tag" href="#">{{.}}</a>
+                                        {{/tags1}}
+                                    </nav>
+                                    <h2 class="glossary__title">{{titles.[1]}}</h2>
+                                    <nav class="glossary__tag-list glossary__tag-list_separate">
+                                        {{#tags2}}
+                                            <a class="glossary__tag" href="#">{{.}}</a>
+                                        {{/tags2}}
+                                    </nav>
+                                    <h2 class="glossary__title">{{titles.[2]}}</h2>
+                                    <nav class="glossary__tag-list glossary__tag-list_separate">
+                                        {{#tags3}}
+                                            <a class="glossary__tag" href="#">{{.}}</a>
+                                        {{/tags3}}
+                                    </nav>
+                                {{/if}}
+                            </section>
+                        {{else}}
+                            <section class="html-indexes__glossary">
+                                {{#if title}}
+                                    <h2 class="glossary__title">{{title}}</h2>
+                                    <nav class="glossary__tag-list">
+                                        {{#tags}}
+                                            <a class="glossary__tag" href="#">{{.}}</a>
+                                        {{/tags}}
+                                    </nav>
+                                {{else}}
+                                    <h2 class="glossary__title">{{titles.[0]}}</h2>
+                                    <nav class="glossary__tag-list glossary__tag-list_separate">
+                                        {{#tags1}}
+                                            <a class="glossary__tag" href="#">{{.}}</a>
+                                        {{/tags1}}
+                                    </nav>
+                                    <h2 class="glossary__title">{{titles.[1]}}</h2>
+                                    <nav class="glossary__tag-list glossary__tag-list_separate">
+                                        {{#tags2}}
+                                            <a class="glossary__tag" href="#">{{.}}</a>
+                                        {{/tags2}}
+                                    </nav>
+                                    <h2 class="glossary__title">{{titles.[2]}}</h2>
+                                    <nav class="glossary__tag-list glossary__tag-list_separate">
+                                        {{#tags3}}
+                                            <a class="glossary__tag" href="#">{{.}}</a>
+                                        {{/tags3}}
+                                    </nav>
+                                {{/if}}
+                            </section>
+                        {{/if}}
+                    {{/glossary}}
+                {{/html-indexes}}
+            </section>
+            <section class="main-content__more-posts">
+                {{#more-posts}}
+                    <main class="more-posts__post-list">
+                        {{#post-list}}
+                            <h1 class="post-list__title">
+                                <a href="#">{{title}}</a>
+                            </h1>
+                            {{#posts}}
+                                {{#if modify}}
+                                    <article class="post-list__post post-list__post{{modify}}">
+                                        <header class="post__header">
+                                            <h2 class="more-posts__title">
+                                                <a href="#">{{title}}</a>
+                                            </h2>
+                                            <small class="post__info">
+                                                <time datetime="2010-12-08">{{time}}</time>
+                                                {{text}}
+                                                <a href="#">{{author}}</a>
+                                            </small>
+                                        </header>
+                                        <p class="post-content">
+                                            {{content}}
+                                        </p>
+                                    </article>
+                                {{else}}
+                                    <article class="post-list__post">
+                                        <header class="post__header">
+                                            <h2 class="more-posts__title">
+                                                <a href="#">{{title}}</a>
+                                            </h2>
+                                            <small class="post__info">
+                                                <time datetime="2010-12-08">{{time}}</time>
+                                                {{text}}
+                                                <a href="#">{{author}}</a>
+                                            </small>
+                                        </header>
+                                        <p class="post-content">
+                                            {{content}}
+                                        </p>
+                                    </article>
+                                {{/if}}
+                            {{/posts}}
+                            <div class="more-posts__button">
+                                <a class="button__link" href="#">{{button}}</a>
+                            </div>
+                        {{/post-list}}
+                    </main>
+                    <aside class="more-posts__sponsors">
+                        {{#sponsors}}
+                            <h3 class="sponsors__title">{{title}}</h3>
+                            <main class="sponsors__poster-list">
+                                <a href="#" class="sponsors__poster sponsors__poster_buy-sell-ads">{{posters.[0]}}</a>
+                                <a href="#" class="sponsors__poster sponsors__poster_word-press">{{posters.[1]}}</a>
+                                <a href="#" class="sponsors__poster sponsors__poster_opt-in">{{posters.[2]}}</a>
+                                <button class="sponsors__add-poster">{{button}}</button>
+                            </main>
+                        {{/sponsors}}
+                    </aside>
+                {{/more-posts}}
+            </section>
+            <footer class="main-content__special-offer">
+                {{#special-offer}}
+                    <article class="special-offer__post">
+                        {{#posts.[0]}}
+                            <a class="special-offer__link" href="#">
+                                <h3 class="post__title">{{title}}</h3>
+                                <img class="post__image" src="{{image}}">
+                            </a>
+                        {{/posts.[0]}}
+                    </article>
+                    <article class="special-offer__post">
+                        {{#posts.[1]}}
+                            <h3 class="post__title">
+                                <a href="#">{{title}}</a>
+                            </h3>
+                            <a href="#" class="post__book">{{book}}</a>
+                            <p class="post__description">
+                                {{description}}
+                            </p>
+                            <a href="#" class="post__btn">{{buy-btn}}</a>
+                        {{/posts.[1]}}
+                    </article>
+                    <article class="special-offer__post special-offer__post_no-separate">
+                        {{#posts.[2]}}
+                            <h3 class="post__title">
+                                <a href="#">{{title}}</a>
+                            </h3>
+                            <p class="post__description">
+                                {{description}}
+                            </p>
+                            <a href="#" class="post__btn">{{read-btn}}</a>
+                        {{/posts.[2]}}
+                    </article>
+                {{/special-offer}}
+            </footer>
+        {{/main-content}}
+    </main>
+    <footer id="html-doctor__footer">
+        {{#footer}}
+            <div class="footer__content">
+                <img class="footer__logo" src="{{logo}}" alt="footer-logo">
+                <div class="footer__copyright">
+                    {{#copyright.[0]}}
+                        <p class="copyright__section">
+                            {{text.[0]}}
+                            <a class="copyright__link" href="#">{{link}}</a>
+                            {{text.[1]}}
+                        </p>
+                    {{/copyright.[0]}}
+                    {{#copyright.[1]}}
+                        <p class="copyright__section">
+                            {{text.[0]}}
+                            <a class="copyright__link" href="#">{{links.[0]}}</a>
+                            {{text.[1]}}
+                            <a class="copyright__link" href="#">{{links.[1]}}</a>
+                        </p>
+                    {{/copyright.[1]}}
+                </div>
+                <img class="footer__html5-logo" src="{{html5-logo}}" alt="W3C HTML5 logo (not CSS3!)">
+            </div>
+        {{/footer}}
+    </footer>
+</div>

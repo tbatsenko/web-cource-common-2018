@@ -2,6 +2,7 @@
 @import "left-nav.css";
 @import "create-post.css";
 @import "stories.css";
+@import "user-post.css";
 
 .container {
     overflow: hidden;

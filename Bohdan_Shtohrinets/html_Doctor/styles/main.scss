@@ -1,0 +1,37 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  font-family: Georgia, serif;
+  background-color: rgb(240, 240, 240);
+}
+
+h1, h2, h3 {
+  margin: 0;
+  padding: 0;
+  font-family: 'Quicksand', 'Helvetica Neue', Arial, sans-serif;
+  font-weight: bold;
+}
+
+h1 {
+  font-size: 32px;
+  line-height: 1;
+  word-spacing: 2px;
+}
+
+a {
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  text-decoration: none;
+  color: #0090D2;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+p {
+  margin: 4px 0 1.5em;
+  font-size: 1em;
+  line-height: 1.5;
+}
