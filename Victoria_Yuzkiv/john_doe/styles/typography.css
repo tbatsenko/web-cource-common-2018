@@ -1,20 +1,12 @@
-img {
-    max-width: 100%;
+h1 sub {
+    font-size: 0.2em;
+    display: block;
+    opacity: 0.6;
+    text-transform: uppercase;
 }
 
-a {
-    color: black;
-}
-
-blockquote {
-    font-style: italic;
-    color: #7b7b7b;
-}
-
-blockquote:before {
-    content: '"';
-}
-
-blockquote:after {
-    content: '"';
+h1 {
+    font-size: 97px;
+    color: #ffffff;
+    font-weight: bold;
 }
