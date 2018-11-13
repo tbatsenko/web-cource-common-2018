@@ -1,0 +1,11 @@
+{
+    "links": [
+        {"icon": "inbox", "text": "Inbox", "active": true},
+        {"icon": "star", "text": "Starred", "active": false},
+        {"icon": "watch_later", "text": "Snoozed", "active": false},
+        {"icon": "send", "text": "Sent", "active": false},
+        {"icon": "insert_drive_file", "text": "Drafts", "active": false},
+        {"icon": "delete", "text": "Trash", "active": false},
+        {"icon": "expand_more", "text": "More", "active": false}
+    ]
+}
