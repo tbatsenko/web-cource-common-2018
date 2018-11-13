@@ -1,0 +1,64 @@
+{
+  "groups": [
+    {
+      "group_header": "Profile",
+      "show_header": false,
+      "items": [
+        {
+          "icon": "images/profiles/feynman.jpg",
+          "icon_rounded": true,
+          "text": "Richard Feynman",
+          "link": "profile.html"
+        }
+      ]
+    },
+    {
+      "group_header": "Communication",
+      "show_header": false,
+      "items": [
+        {
+          "icon": "images/icons/side_menu/feed.png",
+          "text": "News Feed",
+          "link": "index.html"
+        },
+        {
+          "icon": "images/icons/side_menu/messenger.png",
+          "text": "Messenger",
+          "link": "#3"
+        }
+      ]
+    },
+    {
+      "group_header": "Shortcuts",
+      "show_header": true,
+      "items": [
+        {
+          "icon": "images/icons/side_menu/fundraisers.png",
+          "text": "Shortcut1",
+          "link": "#4"
+        }
+      ]
+    },
+    {
+      "group_header": "Explore",
+      "show_header": true,
+      "items": [
+        {
+          "icon": "images/icons/side_menu/events.png",
+          "text": "Events",
+          "link": "#5"
+        },
+        {
+          "icon": "images/icons/side_menu/groups.png",
+          "text": "Groups",
+          "link": "#6"
+        },
+        {
+          "icon": "images/icons/side_menu/pages.png",
+          "text": "Pages",
+          "link": "#7"
+        }
+      ]
+    }
+  ]
+}

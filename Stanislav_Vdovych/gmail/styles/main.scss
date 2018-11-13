@@ -1,0 +1,70 @@
+.main{
+  position: relative;
+  margin-left: 256px;
+  &__header{
+    display: flex;
+    height: 48px;
+    justify-content: space-between;
+    &__button{
+      @extend %button;
+      @extend %icon;
+      padding: 0;
+      &--pick-box{
+        margin-right: 0;
+        padding-right: 0;
+      }
+      &--pick-arrow{
+        margin-left: 0;
+        padding-left: 0;
+      }
+    }
+    &__left{
+      width: 140px;
+    }
+    &__right{
+      width: auto;
+    }
+  }
+  &__body{
+    justify-content: space-between;
+    &__mails{
+      overflow-y: scroll;
+      height: calc(100vh - 112px);
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      &__mail{
+        background: 0;
+        border: 0;
+        height: 20px;
+        padding: 10px 0;
+        display: flex;
+        &__picks{
+
+        }
+        &__date{
+
+        }
+        &__text{
+          &__sender{
+
+          }
+          &__theme{
+
+          }
+          &__text{
+
+          }
+        }
+        &--read{
+
+        }
+      }
+    }
+
+
+  }
+  &__aside{
+    width: 55px;
+  }
+}

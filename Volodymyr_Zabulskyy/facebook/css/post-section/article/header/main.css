@@ -1,0 +1,33 @@
+.post-section__article_header_container {
+    display: flex;
+    align-items: center;
+    padding: 12px 12px 13px;
+}
+
+.post-section__article_header__article-header {
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.post-section__article_header__annotation {
+    display: flex;
+    flex-flow: row;
+    color: #616770;
+    font-size: 12px;
+}
+
+.post-section__article_header__txt-container {
+    display: flex;
+    flex-flow: column;
+}
+
+.post-section__article_header__txt-container > h4 {
+    margin: 0;
+    color: #616770;
+    padding-right: 22px;
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 1.38;
+}

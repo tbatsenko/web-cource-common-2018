@@ -1,0 +1,20 @@
+{
+  "header": [
+    {
+      "left_buttons": [
+        "logo",
+        "Main",
+        "Find friends"
+      ]
+    },
+    {
+      "right_buttons": [
+        "friends.png",
+        "messages.png",
+        "notifications.png",
+        "help.png",
+        "dropdown.png"
+      ]
+    }
+  ]
+}

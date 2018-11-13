@@ -1,0 +1,29 @@
+.Game {
+  display: flex;
+  width: 800px;
+  height: 800px;
+  margin: 30px auto;
+  border: 1px solid;
+  background: #2ecc71;
+}
+
+.Game__row {
+}
+
+.Game__cell {
+  width: 20px;
+  height: 20px;
+}
+
+.Game__cell--ground {
+
+}
+
+.Game__cell--snake {
+  background: #e67e22;
+}
+
+.Game__cell--apple {
+  background: #c0392b;
+  border-radius: 100%;
+}

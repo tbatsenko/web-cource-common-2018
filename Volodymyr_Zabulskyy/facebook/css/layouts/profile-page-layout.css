@@ -1,0 +1,25 @@
+.profile-page-layout__profile-header {
+    position: relative;
+    border: 1px solid #d3d6db;
+    border-radius: 3px;
+}
+
+.profile-page-layout__main-placeholder{
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
+    padding-top: 42px;
+    flex-flow: column;
+    width: 53em;
+}
+
+.profile-page-layout__payload-placeholder{
+    width: 33em;
+}
+
+.profile-page-layout__content-placeholder {
+    flex-flow: row;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}

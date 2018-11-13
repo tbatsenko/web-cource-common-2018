@@ -20,14 +20,14 @@
 
 
 <main class="main">
-    <aside class="left_menu">
+    <aside class="letter_types">
         <button class="compose_button"><img src="images/plus.png" class="compose_icon">
             <h3>Compose</h3></button>
-        {{#left_menu}}
+        {{#letter_types}}
 
-            <button class="menu_button"><img src="{{icon}}" class="menu_icon">{{text}}</button>
+            <button class="letter_types__button"><img src="{{icon}}" class="letter_types__icon">{{text}}</button>
 
-        {{/left_menu}}
+        {{/letter_types}}
     </aside>
 
     <section class="letters">
@@ -36,19 +36,19 @@
                 <div class="letter">
                     <button class="letter__square"></button>
                     <button class="letter__star"></button>
-                    <p class="sender">{{sender}}</p>
-                    <p class="content">{{name}} - {{content}} </p>
-                    <p class="letter_date">{{date}}</p>
+                    <p class="letter__sender">{{sender}}</p>
+                    <p class="letter__content">{{name}} - {{content}} </p>
+                    <p class="letter__date">{{date}}</p>
                 </div>
             </a>
         {{/letters}}
     </section>
 
-    <aside class="right_menu">
-        {{#right_menu}}
+    <aside class="tools">
+        {{#tools}}
 
-            <button class="right_menu_button"><img src="{{.}}" class="right_menu_icon"></button>
+            <button class="tools__button"><img src="{{.}}" class="tools__icon"></button>
 
-        {{/right_menu}}
+        {{/tools}}
     </aside>
 </main>
