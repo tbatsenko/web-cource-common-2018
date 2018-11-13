@@ -1,0 +1,210 @@
+body{
+  background-color: #fafafa;
+  padding: 0;
+  margin: 0;
+  font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+  font-size: 12px;
+  line-height: 18px;
+}
+
+/*------------------ Navigation style -----------------------*/
+nav{
+  height: 60px;
+  background-color: white;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  border-bottom: 1px solid #e6e6e6;
+  display: flex;
+  justify-content: space-around;
+}
+
+a.logo{
+  height: 25px;
+  width: 100px;
+  text-indent: -9999px;
+  margin: 20px 0;
+  background-image: url("https://res.cloudinary.com/maxvoloskiy/image/upload/c_scale,h_25,w_100/v1541638581/logo-2.png");
+}
+
+
+input{
+  height: 22px;
+  width: 160px;
+  margin: 20px 0;
+  border-radius: 2px;
+  border: 1px solid #dbdbdb;
+  color: #999999;
+  background-color: #fafafa;
+  font-size: 10px;
+  text-align: center;
+}
+
+input:focus{
+  outline: none;
+}
+
+.activities{
+  display: flex;
+  margin: 18px;
+  padding: 0;
+}
+
+.activities a{
+  height: 20px;
+  width: 20px;
+  text-indent: -9999px;
+  margin: 0 10px;
+}
+
+a.activities__search{
+  background-image: url("https://res.cloudinary.com/maxvoloskiy/image/upload/c_scale,w_20/v1541641135/compass.png");
+}
+
+a.activities__likes{
+  background-image: url("https://res.cloudinary.com/maxvoloskiy/image/upload/c_scale,w_20/v1541641135/activity.png");
+}
+
+a.activities__profile{
+  background-image: url("https://res.cloudinary.com/maxvoloskiy/image/upload/c_scale,w_20/v1541641132/profile.png");
+}
+
+/*------------------------ Main content  style ----------------------------*/
+
+main{
+  display: flex;
+  justify-content: space-around;
+  height: 100%;
+  padding: 15vh 15vw 0 25vw;
+}
+
+.content{
+  width:500px;
+  margin-right: 20px ;
+}
+
+/*--------------------------- Article style --------------------------------*/
+.article{
+  border: 1px solid #e6e6e6;
+  border-radius: 3px;
+  width: 500px;
+  background-color: #ffffff;
+  margin-bottom: 50px;
+}
+
+.article__header{
+  height: 50px;
+  display: flex;
+}
+
+.article__header .avatar{
+  display: inline-block;
+  text-indent: -9999px;
+  background-image: url("https://res.cloudinary.com/maxvoloskiy/image/upload/ar_1:1,b_rgb:ffffff,bo_1px_solid_rgb:ff0000,c_fill,g_auto,h_30,o_100,r_max,w_30/v1542066922/steve-jobs-wallpapers-27384-7137791.jpg");
+  background-repeat: no-repeat;
+  height: 100%;
+  width: 40px;
+  margin: 10px;
+  border-radius: 80%;
+}
+
+.article__header a{
+  text-decoration: none;
+  color: #000000;
+  font-weight: 600;
+  height: 100%;
+}
+
+.article__header .username{
+  margin-top: 15px;
+}
+
+.article__photo{
+  height: 300px;
+  width: 500px;
+}
+
+.article__activities{
+  display: flex;
+  padding: 0 10px;
+}
+
+.article__activities span{
+  text-indent: -9999px;
+  height: 22px;
+  width: 22px;
+  margin: 10px 5px;
+}
+
+.article__activities--like{
+  background-image: url("https://res.cloudinary.com/maxvoloskiy/image/upload/c_scale,w_22/v1541641135/activity.png");
+}
+
+.article__activities--comment{
+  background-image: url("https://res.cloudinary.com/maxvoloskiy/image/upload/c_scale,w_22/v1542061061/speech-bubble-generator-png-4.png");
+}
+
+.article__activities--share{
+  background-image: url("https://res.cloudinary.com/maxvoloskiy/image/upload/c_scale,w_22/v1542061156/63474-200.png");
+}
+
+.article__activities--save{
+  background-image: url("https://res.cloudinary.com/maxvoloskiy/image/upload/c_scale,w_22/v1542060748/instagram-clipart-instagram-post-648613-3659816.png");
+  margin-left: auto;
+}
+
+.article__likes{
+  font-weight: 600;
+  padding: 2px 15px;
+}
+
+.article__comments .username{
+  font-weight: 600;
+  margin: 2px 10px 2px 15px;
+}
+
+.article__time{
+  text-transform: uppercase;
+  font-size: 8px;
+  margin: 4px 15px;
+  color: #7b7b7b;
+  border-bottom: 1px solid #e6e6e6;
+}
+
+.article__footer{
+  margin: 4px 15px;
+}
+
+.article__footer textarea{
+  border: #ffffff;
+  width: 93%;
+}
+
+.article__footer textarea:focus{
+  outline: none;
+}
+
+.article__footer .addition-btn{
+  height: 35px;
+  width: 5%;
+  border: none;
+  background: Transparent radial-gradient(circle at center, #e6e6e6 3px, transparent 3px) no-repeat;
+}
+
+.article__footer .addition-btn:focus{
+  outline: none;
+}
+/*--------------------------- Sidebar style --------------------------------------*/
+.sidebar{
+  width: 250px;
+}
+
+.sidebar__stories{
+  border: 1px solid #e6e6e6;
+  margin-top: 4px;
+}
+
+.sidebar__suggestions{
+  border: 1px solid #e6e6e6;
+  margin: 12px 0;
+}
