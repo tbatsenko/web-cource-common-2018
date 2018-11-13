@@ -1,0 +1,17 @@
+.column__personality {
+    list-style-type: none;
+    font-size: 1.1em;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding: 0;
+    overflow: hidden;
+}
+
+.column__personality--item {
+    height: 41px;
+    background-color: #f4f4f6;
+    color: #333333;
+    float: left;
+    margin: 10px 10px 10px 0;
+    text-align: center;
+}

@@ -1,0 +1,16 @@
+@import "__mixins";
+
+.language-selector {
+  display: flex;
+  font-size: 25px;
+  width: 100px;
+  justify-content: space-around;
+  &__item {
+    @include text-underline();
+    color: var(--key-color);
+    text-decoration: none;
+    &--active {
+      color: #000;
+    }
+  }
+}

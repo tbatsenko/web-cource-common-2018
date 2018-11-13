@@ -1,0 +1,167 @@
+html, body {
+  margin: 0;
+  width: 100%;
+  font-family: Roboto,RobotoDraft,Helvetica,Arial,sans-serif; }
+
+.header__main__button__menu__icon, .header__search__button, .header__secondary__button, .main__header__button, .nav__icon {
+  font-family: 'Material Icons';
+  font-size: 24px;
+  background: transparent;
+  color: #6d6d6d; }
+
+.header__main__button__menu__icon, .header__search__button, .header__search__field, .header__secondary__button, .header__secondary__button__profile, .main__header__button, .nav__button, .nav__compose {
+  background: transparent;
+  border: 0;
+  cursor: pointer; }
+  .header__main__button__menu__icon:hover, .header__search__button:hover, .header__search__field:hover, .header__secondary__button:hover, .header__secondary__button__profile:hover, .main__header__button:hover, .nav__button:hover, .nav__compose:hover {
+    background: rgba(0, 0, 0, 0.071); }
+
+.header {
+  padding: 8px;
+  height: 64px;
+  box-sizing: border-box;
+  display: flex;
+  border-bottom: 1px solid darkgray;
+  position: relative; }
+  .header__main {
+    display: flex;
+    padding-right: 32px;
+    min-width: 216px; }
+    .header__main__button__home {
+      background: url("../images/logo_gmail.png");
+      background-size: 109px 40px;
+      width: 109px;
+      height: 40px;
+      margin-top: 4px; }
+    .header__main__button__menu__icon {
+      width: 48px;
+      height: 48px;
+      padding: 0;
+      margin-left: 4px;
+      margin-right: 4px;
+      position: relative;
+      border-radius: 50%; }
+  .header__search {
+    max-width: 720px;
+    width: 100%;
+    height: 46px;
+    border: 1px solid transparent;
+    background: rgba(0, 0, 0, 0.04);
+    display: flex;
+    padding-right: 2px; }
+    .header__search:focus-within {
+      border: 1px solid rgba(0, 0, 0, 0.12);
+      box-shadow: 0 1px 1px rgba(0, 0, 0, 0.24);
+      background: white; }
+    .header__search__button {
+      padding-left: 2px;
+      padding-right: 2px;
+      width: 50px;
+      height: 46px;
+      text-align: center; }
+      .header__search__button:focus {
+        outline: none; }
+    .header__search__field {
+      padding-top: 11px;
+      padding-bottom: 11px;
+      flex-grow: 1;
+      font: normal 16px Roboto,sans-serif; }
+      .header__search__field:focus {
+        outline: none; }
+  .header__secondary {
+    margin-left: auto;
+    width: 144px;
+    padding-left: 32px;
+    padding-right: 4px;
+    display: flex;
+    align-content: center; }
+    .header__secondary__button {
+      width: 48px;
+      height: 48px;
+      padding-left: 4px;
+      padding-right: 4px;
+      position: relative; }
+      .header__secondary__button__profile {
+        width: 32px;
+        height: 32px;
+        background: url("../images/icon_profile.jpg");
+        border-radius: 50%;
+        margin: 8px;
+        position: relative; }
+
+.main {
+  position: relative;
+  margin-left: 256px; }
+  .main__header {
+    display: flex;
+    height: 48px;
+    justify-content: space-between; }
+    .main__header__button {
+      padding: 0; }
+      .main__header__button--pick-box {
+        margin-right: 0;
+        padding-right: 0; }
+      .main__header__button--pick-arrow {
+        margin-left: 0;
+        padding-left: 0; }
+    .main__header__left {
+      width: 140px; }
+    .main__header__right {
+      width: auto; }
+  .main__body {
+    justify-content: space-between; }
+    .main__body__mails {
+      overflow-y: scroll;
+      height: calc(100vh - 112px);
+      position: relative;
+      display: flex;
+      flex-direction: column; }
+      .main__body__mails__mail {
+        background: 0;
+        border: 0;
+        height: 20px;
+        padding: 10px 0;
+        display: flex; }
+  .main__aside {
+    width: 55px; }
+
+.nav {
+  float: left;
+  background: 0;
+  width: 256px;
+  border-right: 1px gray; }
+  .nav__main {
+    overflow-y: scroll;
+    height: 200px; }
+  .nav__button {
+    padding-left: 26px;
+    height: 32px;
+    text-align: left;
+    width: 100%; }
+    .nav__button:focus, .nav__button:hover {
+      background: rgba(0, 0, 0, 0.071);
+      border-radius: 0 16px 16px 0;
+      outline: none; }
+  .nav__icon {
+    margin-right: 18px; }
+  .nav__compose {
+    margin-left: 8px;
+    padding: 0 24px 0 0;
+    margin-top: 16px;
+    margin-bottom: 16px;
+    height: 48px;
+    align-items: center;
+    display: inline-flex;
+    border-radius: 24px;
+    box-shadow: 0 1px 2px 0 rgba(60, 64, 67, 0.302), 0 1px 3px 1px rgba(60, 64, 67, 0.149); }
+    .nav__compose:hover {
+      background: 0; }
+    .nav__compose::before {
+      background: url("../images/icon_compose.png") no-repeat center;
+      background-size: 32px;
+      content: '';
+      display: block;
+      height: 48px;
+      width: 56px; }
+
+/*# sourceMappingURL=style.css.map */

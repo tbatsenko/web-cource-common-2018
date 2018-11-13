@@ -1,0 +1,25 @@
+.header {
+  width: 100%;
+  height: 700px;
+  background-image: linear-gradient(
+      to right,
+      rgba(60, 10, 10, 0.5),
+      rgba(60, 10, 10, 0.5)
+    ),
+    url('../assets/cuba/cuba-header02.jpg');
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+
+  &__frame {
+    position: absolute;
+  }
+
+  &__path {
+    fill: none;
+    stroke: var(--main-color);
+    stroke-width: 2;
+  }
+}

@@ -1,0 +1,27 @@
+.main-tool-bar__navigation-list-button_people, .main-tool-bar__navigation-list-button_messenger, .main-tool-bar__navigation-list-button_notifications, .main-tool-bar__navigation-list-button_question, .main-tool-bar__navigation-list-button_dropdown {
+    width: 24px;
+    height: 24px;
+    background: url("https://static.xx.fbcdn.net/rsrc.php/v3/yx/r/0ZnQSqvnMOO.png") no-repeat;
+    background-size: auto;
+    margin: 0 .5em;
+}
+
+.main-tool-bar__navigation-list-button_people {
+    background-position: 0 -892px;
+}
+
+.main-tool-bar__navigation-list-button_messenger {
+    background-position: 0 -942px;
+}
+
+.main-tool-bar__navigation-list-button_notifications {
+    background-position: 0 -792px;
+}
+
+.main-tool-bar__navigation-list-button_question {
+    background-position: 0 -992px;
+}
+
+.main-tool-bar__navigation-list-button_dropdown {
+    background-position: 0 -842px;
+}

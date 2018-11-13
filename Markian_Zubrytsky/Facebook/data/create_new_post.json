@@ -1,0 +1,21 @@
+{
+  "post-type": [
+    "New post",
+    "Picture/video album",
+    "Live video"
+  ],
+  "post-content": [
+    {
+      "image": "list.png",
+      "text": "List"
+    },
+    {
+      "image": "photo.png",
+      "text": "Photo/video"
+    },
+    {
+      "image": "tag_friend.png",
+      "text": "Tag friend"
+    }
+  ]
+}

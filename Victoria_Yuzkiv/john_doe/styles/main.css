@@ -1,34 +1,50 @@
-@import "characteristics.css";
+@import url("https://fonts.googleapis.com/css?family=Montserrat:400,400i,700");
 @import "typography.css";
-@import url('https://fonts.googleapis.com/css?family=Montserrat:400,700');
+@import "characteristics.css";
+@import "feelings.css";
+@import "progress-bar.css";
+@import "personality.css";
 
+html,
 body {
     font-family: Montserrat, sans-serif;
     margin: 0;
     padding: 0;
+    font-size: 22px;
+    display: flex;
+    align-items: center;
+    justify-content: center
 }
 
 .main-profile {
-    padding: 20px;
-    margin: 20px;
-    background: #f7f7f7;
-    width: 470px;
+    width: 600px;
+    height: 1200px;
     float: left;
+    background: url("../img/user_photo.jpg") no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: flex-end;
 }
 
-.user-picture {
-    margin: auto;
-    display: block;
-    border-radius: 100%;
-    box-shadow: 0 7px;
+.main-profile__bottom-content {
+    margin-bottom: 60px;
+    padding-left: 40px;
+    padding-right: 40px;
 }
 
 .detailed-profile {
-    width: 960px;
-    margin: 20px 20px 20px;
+    width: 1000px;
+    height: 1200px;
+}
+
+.detailed-profile__main-info {
+    background-color: #f4f4f6;
+    overflow: hidden;
 }
 
 .column {
-    width: 440px;
+    width: 420px;
     float: left;
+    padding: 35px 10px 35px 50px;
 }
