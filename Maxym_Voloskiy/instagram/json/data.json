@@ -1,0 +1,206 @@
+{
+  "navigation":{
+
+    "left-side":{
+      "logo": "https://res.cloudinary.com/maxvoloskiy/image/upload/c_scale,h_25,w_100/v1541638581/logo-2.png"
+    },
+
+    "right-side":{
+      "activity-search": "https://res.cloudinary.com/maxvoloskiy/image/upload/c_scale,w_20/v1541641135/compass.png",
+      "activity-likes": "https://res.cloudinary.com/maxvoloskiy/image/upload/c_scale,w_20/v1541641135/activity.png",
+      "activity-profile": "https://res.cloudinary.com/maxvoloskiy/image/upload/c_scale,w_20/v1541641132/profile.png"
+    }
+  },
+
+  "main":{
+
+    "sidebar":{
+
+      "sidebar__header":{
+        "avatar": "https://res.cloudinary.com/maxvoloskiy/image/upload/ar_1:1,b_rgb:ffffff,bo_1px_solid_rgb:ff0000,c_fill,g_auto,h_40,o_100,r_max,w_40/v1542066922/steve-jobs-wallpapers-27384-7137791.jpg",
+        "username": "max_voloskiy"
+      },
+
+      "sidebar__stories":{
+        "sidebar__stories--header":{
+          "stories--desc": "Stories",
+          "watch--all": "Watch all"
+        },
+
+        "story":[
+          {
+            "avatar": "https://res.cloudinary.com/maxvoloskiy/image/upload/ar_1:1,b_rgb:ffffff,bo_1px_solid_rgb:ff0000,c_fill,g_auto,h_25,o_100,r_max,w_25/v1542066922/steve-jobs-wallpapers-27384-7137791.jpg",
+            "username": "max_voloskiy"
+          },
+          {
+            "avatar": "https://res.cloudinary.com/maxvoloskiy/image/upload/ar_1:1,b_rgb:ffffff,bo_1px_solid_rgb:ff0000,c_fill,g_auto,h_25,o_100,r_max,w_25/v1542066922/steve-jobs-wallpapers-27384-7137791.jpg",
+            "username": "james_blunt"
+          },
+          {
+            "avatar": "https://res.cloudinary.com/maxvoloskiy/image/upload/ar_1:1,b_rgb:ffffff,bo_1px_solid_rgb:ff0000,c_fill,g_auto,h_25,o_100,r_max,w_25/v1542066922/steve-jobs-wallpapers-27384-7137791.jpg",
+            "username": "edsheeran"
+          }
+        ]
+      },
+
+      "sidebar__suggestions":{
+        "sidebar__suggestions--header":{
+          "suggestions-desc": "Suggestions",
+          "see-all": "See All"
+        },
+
+        "suggestions":[
+          {
+            "avatar": "https://res.cloudinary.com/maxvoloskiy/image/upload/ar_1:1,b_rgb:ffffff,bo_1px_solid_rgb:ff0000,c_fill,g_auto,h_25,o_100,r_max,w_25/v1542066922/steve-jobs-wallpapers-27384-7137791.jpg",
+            "username": "max_voloskiy",
+            "isFollow": "Follow"
+          },
+          {
+            "avatar": "https://res.cloudinary.com/maxvoloskiy/image/upload/ar_1:1,b_rgb:ffffff,bo_1px_solid_rgb:ff0000,c_fill,g_auto,h_25,o_100,r_max,w_25/v1542066922/steve-jobs-wallpapers-27384-7137791.jpg",
+            "username": "james_blunt",
+            "isFollow": "Follow"
+          },
+          {
+            "avatar": "https://res.cloudinary.com/maxvoloskiy/image/upload/ar_1:1,b_rgb:ffffff,bo_1px_solid_rgb:ff0000,c_fill,g_auto,h_25,o_100,r_max,w_25/v1542066922/steve-jobs-wallpapers-27384-7137791.jpg",
+            "username": "edsheeran",
+            "isFollow": "Follow"
+          }
+        ]
+      },
+
+      "sidebar__footer":{
+        "footer--list":[
+          {
+            "list--item":"About us"
+          },
+          {
+            "list--item":"Support"
+          },
+          {
+            "list--item":"Press"
+          },
+          {
+            "list--item":"API"
+          },
+          {
+            "list--item":"Jobs"
+          },
+          {
+            "list--item":"Privacy"
+          },
+          {
+            "list--item":"Terms"
+          },
+          {
+            "list--item":"Directory"
+          },
+          {
+            "list--item":"Profiles"
+          },
+          {
+            "list--item":"Hashtags"
+          },
+          {
+            "list--item":"Language"
+          }
+        ]
+      }
+    },
+
+    "content":{
+      "articles":[
+        {
+          "article__header":{
+            "avatar": "https://res.cloudinary.com/maxvoloskiy/image/upload/ar_1:1,b_rgb:ffffff,bo_1px_solid_rgb:ff0000,c_fill,g_auto,h_25,o_100,r_max,w_25/v1542066922/steve-jobs-wallpapers-27384-7137791.jpg",
+            "username": "max_voloskiy"
+          },
+
+          "article__photo":{
+            "image":"https://res.cloudinary.com/maxvoloskiy/image/upload/c_scale,h_300,w_500/v1541650457/don_t_let_idiots.jpg"
+          },
+
+          "article__activities":{
+            "article__activities--like":"https://res.cloudinary.com/maxvoloskiy/image/upload/c_scale,w_22/v1541641135/activity.png",
+            "article__activities--comment":"https://res.cloudinary.com/maxvoloskiy/image/upload/c_scale,w_22/v1542061061/speech-bubble-generator-png-4.png",
+            "article__activities--share":"https://res.cloudinary.com/maxvoloskiy/image/upload/c_scale,w_22/v1542061156/63474-200.png",
+            "article__activities--save":"https://res.cloudinary.com/maxvoloskiy/image/upload/c_scale,w_22/v1542060748/instagram-clipart-instagram-post-648613-3659816.png"
+          },
+
+          "article__likes":{
+            "num-likes": "100"
+          },
+
+          "article__comments":{
+            "username": "max_voloskiy",
+            "comment": "Don't let idiots ruin your day"
+          },
+
+          "article__time":{
+            "time":"1 hour ago"
+          }
+        },
+
+        {
+          "article__header":{
+            "avatar": "https://res.cloudinary.com/maxvoloskiy/image/upload/ar_1:1,b_rgb:ffffff,bo_1px_solid_rgb:ff0000,c_fill,g_auto,h_25,o_100,r_max,w_25/v1542066922/steve-jobs-wallpapers-27384-7137791.jpg",
+            "username": "james_blunt"
+          },
+
+          "article__photo":{
+            "image":"https://res.cloudinary.com/maxvoloskiy/image/upload/c_scale,h_300,w_500/v1541650457/don_t_let_idiots.jpg"
+          },
+
+          "article__activities":{
+            "article__activities--like":"https://res.cloudinary.com/maxvoloskiy/image/upload/c_scale,w_22/v1541641135/activity.png",
+            "article__activities--comment":"https://res.cloudinary.com/maxvoloskiy/image/upload/c_scale,w_22/v1542061061/speech-bubble-generator-png-4.png",
+            "article__activities--share":"https://res.cloudinary.com/maxvoloskiy/image/upload/c_scale,w_22/v1542061156/63474-200.png",
+            "article__activities--save":"https://res.cloudinary.com/maxvoloskiy/image/upload/c_scale,w_22/v1542060748/instagram-clipart-instagram-post-648613-3659816.png"
+          },
+
+          "article__likes":{
+            "num-likes": "140"
+          },
+
+          "article__comments":{
+            "username": "james_blunt",
+            "comment": "You're so beautiful"
+          },
+
+          "article__time":{
+            "time":"5 hours ago"
+          }
+        },
+        {
+          "article__header":{
+            "avatar": "https://res.cloudinary.com/maxvoloskiy/image/upload/ar_1:1,b_rgb:ffffff,bo_1px_solid_rgb:ff0000,c_fill,g_auto,h_25,o_100,r_max,w_25/v1542066922/steve-jobs-wallpapers-27384-7137791.jpg",
+            "username": "edsheeran"
+          },
+
+          "article__photo":{
+            "image":"https://res.cloudinary.com/maxvoloskiy/image/upload/c_scale,h_300,w_500/v1541650457/don_t_let_idiots.jpg"
+          },
+
+          "article__activities":{
+            "article__activities--like":"https://res.cloudinary.com/maxvoloskiy/image/upload/c_scale,w_22/v1541641135/activity.png",
+            "article__activities--comment":"https://res.cloudinary.com/maxvoloskiy/image/upload/c_scale,w_22/v1542061061/speech-bubble-generator-png-4.png",
+            "article__activities--share":"https://res.cloudinary.com/maxvoloskiy/image/upload/c_scale,w_22/v1542061156/63474-200.png",
+            "article__activities--save":"https://res.cloudinary.com/maxvoloskiy/image/upload/c_scale,w_22/v1542060748/instagram-clipart-instagram-post-648613-3659816.png"
+          },
+
+          "article__likes":{
+            "num-likes": "453"
+          },
+
+          "article__comments":{
+            "username": "edsheeran",
+            "comment": "Thinking out loud"
+          },
+
+          "article__time":{
+            "time":"1 day ago"
+          }
+        }
+      ]
+    }
+  }
+}
