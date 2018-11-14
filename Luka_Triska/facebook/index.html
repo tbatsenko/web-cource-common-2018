@@ -16,9 +16,9 @@
         <a class="header__left-navigation__logo" href=""></a>
         <form class="header__left-navigation__search-form">
             <input class="header__left-navigation__search-form__input" placeholder="Search facebook"/>
-            <a href="#">
-                <button class="header__left-navigation__magnifier-button fb-button"></button>
-            </a>
+            <div class="header__left-navigation__magnifier-button fb-button">
+                <button class="header__left-navigation__magnifier-button--logo"></button>
+            </div>
         </form>
     </nav>
     <nav class="header__right-navigation">
@@ -119,8 +119,48 @@
                 <section class="feed--post">
 
                     <header class="feed--post__header">
-                        <img src="http://2016.igem.org/wiki/images/e/e0/Uclascrolldown.png"
-                             class="feed--post__header__dropdown-button"/>
+                        <a href=#><img class='feed--post__header__profile-pic'
+                                       src="https://res.cloudinary.com/schwajka/image/upload/r_max/v1541887473/facebook_images/tesla-profile-pic.png"></a>
+                        <h1 class="feed--post__header__author-name">
+                            <a href="#">Tesla</a>
+                        </h1>
+                        <p class="feed--post__header__date">2 hr ago</p>
+                    </header>
+
+                    <p class="feed--post__caption">Tesla drivers just passed 3 billion electric miles, saving the world
+                        120M gallons of petrol</p>
+                    <img class="feed--post__image"
+                         src="https://res.cloudinary.com/schwajka/image/upload/v1541884501/facebook_images/red-tesla-model-s.jpg"
+                         alt="Post Image"/>
+
+
+                    <a href="#" class="feed--post__like-info">
+                        <div class="feed--post__like-info--pic"></div>
+                        <span class="feed--post__like-info--number">232</span>
+                    </a>
+
+                    <div class="feed--post__action">
+                        <a class="feed--post__action--button" href="#">
+                            <span class="feed--post__action--button__logo like-button"></span>
+                            <p>Like</p>
+                        </a>
+
+                        <a class="feed--post__action--button" href="#">
+                            <span class="feed--post__action--button__logo comment-button"></span>
+                            <p>Comment</p>
+                        </a>
+
+                        <a class="feed--post__action--button" href="#">
+                            <span class="feed--post__action--button__logo share-button"></span>
+                            <p>Share</p>
+                        </a>
+
+                    </div>
+
+                </section>
+                <section class="feed--post">
+
+                    <header class="feed--post__header">
                         <a href=#><img class='feed--post__header__profile-pic'
                                        src="https://res.cloudinary.com/schwajka/image/upload/r_max/v1541887473/facebook_images/tesla-profile-pic.png"></a>
                         <h1 class="feed--post__header__author-name">
@@ -169,12 +209,65 @@
                 <span>Stories</span>
             </div>
             <div class="aside-right__header-right">
-                <a href="#" class="aside-right__header-right--link">
-                    <div class="aside-right__header-right--link-icon"></div>
+                <a href="#" class="aside-right__header-right--link-archive">
+                    <div class="aside-right__header-right--link-archive-icon"></div>
                     <span>Archive</span>
+                </a>
+                <div>·</div>
+                <a href="#" class="aside-right__header-right--link-settings">
+                    <span>Settings</span>
                 </a>
             </div>
         </header>
+        <article class="aside-right__container">
+            <section class="aside-right__container-section">
+                <div class="aside-right__container-section--logo">
+                    <div class="aside-right__container-section--logo-inside-1"></div>
+                </div>
+                <div class="aside-right__container-section--info">
+                    <header class="aside-right__container-section--info-header">
+                        <a href="#">Add to your story</a>
+                    </header>
+                    <span class="aside-right__container-section--info-info">
+                    Share a photo, or a video
+                </span>
+                </div>
+            </section>
+            <section class="aside-right__container-section">
+                <div class="aside-right__container-section--logo">
+                    <div class="aside-right__container-section--logo-inside-2 stories-logo"></div>
+                </div>
+                <div class="aside-right__container-section--info">
+                    <header class="aside-right__container-section--info-header">
+                        <a href="#">Skrra Boom</a>
+                    </header>
+                    <span class="aside-right__container-section--info-info">69 hours ago</span>
+                </div>
+            </section>
+            <section class="aside-right__container-section">
+                <div class="aside-right__container-section--logo">
+                    <div class="aside-right__container-section--logo-inside-3 stories-logo"></div>
+                </div>
+                <div class="aside-right__container-section--info">
+                    <header class="aside-right__container-section--info-header">
+                        <a href="#">Pa PA</a>
+                    </header>
+                    <span class="aside-right__container-section--info-info">666 hours ago</span>
+                </div>
+            </section>
+            <section class="aside-right__container-section">
+                <div class="aside-right__container-section--logo">
+                    <div class="aside-right__container-section--logo-inside-4 stories-logo"></div>
+                </div>
+                <div class="aside-right__container-section--info">
+                    <header class="aside-right__container-section--info-header">
+                        <a href="#">Pa PA</a>
+                    </header>
+                    <span class="aside-right__container-section--info-info">6969 hours ago</span>
+                </div>
+            </section>
+
+        </article>
     </aside>
 </main>
 
