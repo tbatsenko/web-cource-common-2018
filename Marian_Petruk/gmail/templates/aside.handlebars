@@ -1,9 +1,18 @@
-<button class="google-mail-aside__write-button">
-    <img src="images/create_32dp.png" alt="create_message" class="google-mail-aside__write-button-logo">
-</button>
 <nav class="google-mail-aside__navigation">
-    <ul>
-        <li></li>
-        <li></li>
-    </ul>
+    <button class="google-mail-aside__write-button">
+        <img src="images/create_32dp.png" alt="create_message" class="google-mail-aside__write-button-logo">
+        <span>Написати</span>
+    </button>
+    {{#each links}}
+        <a href="#" class="google-mail-aside__link {{#active}}google-mail-aside__link--active{{/active}}">
+            <span class="google-mail-aside__icon {{#active}}google-mail-aside__icon--active{{/active}}">
+                {{#if active}}<img src="{{src-active}}" class="google-mail-aside__icon-img" alt="{{src-icon}}">
+                {{else}}<img src="{{src}}" class="google-mail-aside__icon-img" alt="{{src-icon}}">{{/if}}
+            </span>
+            {{text}}
+        </a>
+    {{/each}}
 </nav>
+<!--<footer class="google-mail-aside__footer">-->
+
+<!--</footer>-->

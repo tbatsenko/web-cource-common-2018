@@ -1,0 +1,69 @@
+<header>
+    {{#top-bar}}
+        {{#menu-button}}
+            <button title={{title}}>
+                <i class="material-icons">{{icon-source}}</i>
+            </button>
+        {{/menu-button}}
+        {{#logo}}
+            <a href="{{website-index-link}}">
+                <img src="{{img-source}}" alt="">
+            </a>
+        {{/logo}}
+        {{#top-search}}
+            <form>
+                {{#search-button}}
+                    <button title="{{title}}">
+                        <i class="material-icons">{{icon-source}}</i>
+                    </button>
+                {{/search-button}}
+                <input type="text" placeholder="{{search-placeholder}}">
+                {{#options-button}}
+                    <button title="{{title}}">
+                        <i class="material-icons">{{icon-source}}</i>
+                    </button>
+                {{/options-button}}
+            </form>
+        {{/top-search}}
+        {{#each right-nav-buttons}}
+            <button title="{{this}}"><i class="material-icons">{{this}}</i></button>
+        {{/each}}
+    {{/top-bar}}
+</header>
+<main>
+    <aside>
+        {{#left-bar}}
+            {{#compose-button}}
+                <button>
+                    <img src="{{icon-source}}" alt="">
+                    <span>{{text}}</span>
+                </button>
+            {{/compose-button}}
+            <nav>
+                {{#each navigation}}
+                    <a href="{{this.url}}">
+                        <i >{{this.icon-source}}</i>
+                        <span></span>{{this.text}}
+                    </a>
+                {{/each}}
+            </nav>
+        {{/left-bar}}
+    </aside>
+    <section>
+        {{#central-bar}}
+        <header>
+            {{#header}}
+                <nav>
+                    {{#left-navigation}}
+
+                    {{/left-navigation}}
+                </nav>
+                <nav>
+                    {{#right-navigation}}
+                    {{/right-navigation}}
+                </nav>
+            {{/header}}
+        </header>
+        {{/central-bar}}
+    </section>
+</main>
