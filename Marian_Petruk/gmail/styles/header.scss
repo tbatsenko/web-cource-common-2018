@@ -49,6 +49,7 @@
   justify-content: flex-start;
   align-items: center;
   border-radius: 4px;
+  //flex: 1 1 100%;
 
   &__search-button, &__options-button, &__clear-button {
     width: 46px;
@@ -60,7 +61,7 @@
     box-sizing: content-box;
     vertical-align: middle;
   }
-  &__search-button:focus, &__options-button:focus {
+  &__search-button:active, &__options-button:active {
     background-color: rgba(0, 0, 0, 0.20);
   }
 
@@ -80,6 +81,7 @@
     color: gray;
     font: normal 16px Roboto, sans-serif;
     padding: 11px 16px 11px 10px;
+
   }
 
   &__options-button {
@@ -108,7 +110,7 @@
     vertical-align: middle;
   }
 
-  &__google-apps-button:focus, &__notification-button:focus {
+  &__google-apps-button:active, &__notification-button:active {
     background-color: rgba(0, 0, 0, 0.20);
   }
 
