@@ -1,0 +1,36 @@
+{
+  "left-menu": [
+    {
+      "image": "home-page_image.jpg",
+      "text": "Mark Zubrytsky"
+    },
+    {
+      "image": "feed.png",
+      "text": "News"
+    },
+    {
+      "image": "messenger.png",
+      "text": "Messenger"
+    },
+    {
+      "image": "groups.png",
+      "text": "Groups"
+    },
+    {
+      "image": "pages.png",
+      "text": "Fan-club"
+    },
+    {
+      "image": "events.png",
+      "text": "Events"
+    },
+    {
+      "image": "fundraisers.png",
+      "text": "Fundraisers"
+    },
+    {
+      "image": "dropdown.png",
+      "text": "More"
+    }
+  ]
+}

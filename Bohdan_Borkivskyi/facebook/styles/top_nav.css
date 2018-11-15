@@ -1,0 +1,13 @@
+.top_nav {
+  background-color: gold;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  margin-left: 0;
+  padding-left: 0; }
+  .top_nav .logo {
+    padding: 0;
+    margin: 0; }
+
+/*# sourceMappingURL=header.css.map */
