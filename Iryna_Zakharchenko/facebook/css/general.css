@@ -21,8 +21,9 @@ a {
 }
 
 .main-layout{
-    align-items: center;
     justify-content: space-between;;
-    width: 62em;
+    width: 64em;
     margin: auto;
+    display: flex;
+    margin-top: 3.5em;
 }
