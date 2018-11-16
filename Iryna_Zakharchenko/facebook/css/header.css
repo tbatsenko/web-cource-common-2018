@@ -9,7 +9,7 @@
 
 .header-container{
     display: flex;
-    width: 62em;
+    width: 64em;
     justify-content: space-between;
     align-items: center;
     height: 2em;
@@ -123,7 +123,7 @@
     height: 1.9em;
     width: 1.9em;
     border-radius: 50%;
-    padding-right: 0.5em;
+    margin-right: 0.3em;
 }
 
 .header-right__button-create{
