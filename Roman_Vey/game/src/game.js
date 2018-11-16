@@ -26,6 +26,78 @@ const generateNumber = (field) => {
     return field;
 }
 
+const moveField = (field, e) => {
+    console.log(e);
+    if (e.key == "ArrowUp"){
+        let nextSkip = false;
+        for(let j = 0; j < FIELD_SIZE; j++){
+            for(let i = FIELD_SIZE - 1; i >= 1; i--){
+                if (nextSkip){
+                    nextSkip = false;
+                    continue;
+                }
+                if(field[i][j] == field[i - 1][j]){
+                    field[i - 1][j] *= 2;
+                    field[i][j] = 0;
+                    nextSkip = true;
+                }
+            }
+        }
+    }
+
+    if (e.key == "ArrowDown"){
+        let nextSkip = false;
+        for(let j = 0; j < FIELD_SIZE; j++){
+            for(let i = 0; i < FIELD_SIZE - 1; i--){
+                if (nextSkip){
+                    nextSkip = false;
+                    continue;
+                }
+                if(field[i][j] == field[i + 1][j]){
+                    field[i + 1][j] *= 2;
+                    field[i][j] = 0;
+                    nextSkip = true;
+                }
+            }
+        }
+    }
+
+    if (e.key == "ArrowLeft"){
+        let nextSkip = false;
+        for(let j = 0; j < FIELD_SIZE; j++){
+            for(let i = FIELD_SIZE - 1; i >= 1; i--){
+                if (nextSkip){
+                    nextSkip = false;
+                    continue;
+                }
+                if(field[j][i] == field[j][i - 1]){
+                    field[j][i - 1] *= 2;
+                    field[j][i] = 0;
+                    nextSkip = true;
+                }
+            }
+        }
+    }
+
+    if (e.key == "ArrowRight"){
+        let nextSkip = false;
+        for(let j = 0; j < FIELD_SIZE; j++){
+            for(let i = 0; i < FIELD_SIZE - 1; i--){
+                if (nextSkip){
+                    nextSkip = false;
+                    continue;
+                }
+                if(field[j][i] == field[j][i + 1]){
+                    field[j][i + 1] *= 2;
+                    field[j][i] = 0;
+                    nextSkip = true;
+                }
+            }
+        }
+    }
+    return field;
+}
+
 
 const renderCell = cellNumber => {
     if(cellNumber > 0) {
@@ -54,6 +126,7 @@ field = generateNumber(field);
 
 document.addEventListener("keyup", (e)=>{
     // handle moving
+    field = moveField(field, e);
     field = generateNumber(field);
 });
 
