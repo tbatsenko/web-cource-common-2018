@@ -6,11 +6,11 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Gmail</title>
+    <link rel="shortcut icon" href="https://www.google.com/a/ucu.edu.ua/images/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="node_modules/normalize.css/normalize.css">
     <link rel="stylesheet" href="styles/common.css">
 </head>
 <body>
-
 
 <script src="node_modules/handlebars/dist/handlebars.js" type="text/javascript"></script>
 <script>
@@ -21,14 +21,11 @@
         container.innerHTML = template(data);
     };
 
-    // render("templates/main.handlebars", "data/converstation.json", document.body.handlebars);
-
     const renderPage = async () => {
         await render("templates/main.handlebars", "data/common.json", document.body);
-        await render("templates/header.handlebars", "data/common.json", document.getElementById('gmail-header'));
-        await render("templates/aside.handlebars", "data/common.json", document.getElementById('gmail-aside'));
+        await render("templates/header.handlebars", "data/header.json", document.getElementById('gmail-header'));
+        await render("templates/aside.handlebars", "data/aside.json", document.getElementById('gmail-aside'));
         await render("templates/body.handlebars", "data/common.json", document.getElementById('gmail-body'));
-
     };
 
     renderPage();
