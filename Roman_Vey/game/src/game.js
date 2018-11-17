@@ -246,6 +246,9 @@ const startGame = () => {
     moves = 0;
     score = 0;
     startTime = new Date;
+    updateMoves(".moves");
+    updateScore(".score");
+    updateTime(".time");
     field = generateNumber(field);
     const intervalId = setInterval(()=> { updateTime(".time") }, 1000);
     renderField(field, document.querySelector(".layout__game-placeholder"));
