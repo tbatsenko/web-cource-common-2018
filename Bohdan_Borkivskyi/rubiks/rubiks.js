@@ -252,20 +252,62 @@ class Cube{
     this.M();this.M();this.M();
   }
 
-  x(){
+  S(){
+    var buffer = [this.top[1][0], this.top[1][1], this.top[1][2]];
+    this.top[1][0] = this.left[2][1];
+    this.top[1][1] = this.left[1][1];
+    this.top[1][2] = this.left[0][1];
+    this.left[2][1] = this.down[1][2];
+    this.left[1][1] = this.down[1][1];
+    this.left[0][1] = this.down[1][0];
+    this.down[1][2] = this.right[0][1];
+    this.down[1][1] = this.right[1][1];
+    this.down[1][0] = this.right[2][1];
+    this.right[0][1] = buffer[0];
+    this.right[1][1] = buffer[1];
+    this.right[2][1] = buffer[2];
+
+    this.update_view();
+  }
+
+  S_(){
+    this.S();this.S();this.S();
+  }
+
+  X(){
     this.R();
     this.M_();
     this.L_();
   }
 
-  y(){
+  X_(){
+    this.R_();
+    this.M();
+    this.L();
+  }
+
+  Y(){
     this.U();
     this.D_();
     this.E_();
   }
 
-  empty(){
+  Y_(){
+    this.U_();
+    this.D();
+    this.E();
+  }
 
+  Z(){
+    this.F();
+    this.S();
+    this.B_();
+  }
+
+  Z_(){
+    this.F_();
+    this.S_();
+    this.B();
   }
 
 }
@@ -278,22 +320,10 @@ function keyUp(event){
     return;
   }
 
-  switch (event.code) {
-    case "KeyU": if (rubiks.clockwise) {rubiks.U()} else {rubiks.U_();}break;
-    case "KeyD": if (rubiks.clockwise) {rubiks.D()} else {rubiks.D_();}break;
-    case "KeyR": if (rubiks.clockwise) {rubiks.R()} else {rubiks.R_();}break;
-    case "KeyL": if (rubiks.clockwise) {rubiks.L()} else {rubiks.L_();}break;
-    case "KeyF": if (rubiks.clockwise) {rubiks.F()} else {rubiks.F_();}break;
-    case "KeyB": if (rubiks.clockwise) {rubiks.B()} else {rubiks.B_();}break;
+  if(event.code.length != 4){return}
 
-    case "KeyM": if (rubiks.clockwise) {rubiks.M()} else {rubiks.M_();}break;
-    case "KeyS": rubiks.empty();break;
-    case "KeyE": if (rubiks.clockwise) {rubiks.E()} else {rubiks.E_();}break;
+  rubiks[event.code[3]+(!rubiks.clockwise ? '_' : '')]()
 
-    case "KeyX": rubiks.x();break;
-    case "KeyY": rubiks.y();break;
-    case "KeyZ": rubiks.empty();break;
-  }
   rubiks.clockwise = true;
 }
 
