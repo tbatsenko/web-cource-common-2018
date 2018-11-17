@@ -6,6 +6,7 @@ let field = Array(FIELD_SIZE)
 let score = 0;
 let moves = 0;
 let time = 0;
+let startTime;
 
 const valid = (i, j) => {
     return i >= 0 && i < FIELD_SIZE && j >= 0 && j < FIELD_SIZE;
@@ -243,7 +244,7 @@ document.addEventListener("keyup", (e) => {
 });
 
 const startGame = () => {
-    const startTime = new Date;
+    startTime = new Date;
     field = generateNumber(field);
     const intervalId = setInterval(()=> { updateTime(".time") }, 1000);
     renderField(field, document.querySelector(".layout__game-placeholder"));
