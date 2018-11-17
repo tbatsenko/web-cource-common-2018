@@ -61,15 +61,15 @@ class Cube{
     this.right[2] = buffer;
 
     var down_corner_buf = this.down[0][0];
-    this.down[0][0] = this.down[0][2];
-    this.down[0][2] = this.down[2][2];
-    this.down[2][2] = this.down[2][0];
-    this.down[2][0] = down_corner_buf;
+    this.down[0][0] = this.down[2][0];
+    this.down[2][0] = this.down[2][2];
+    this.down[2][2] = this.down[0][2];
+    this.down[0][2] = down_corner_buf;
     var down_edge_buf = this.down[0][1];
-    this.down[0][1] = this.down[1][2];
-    this.down[1][2] = this.down[2][1];
-    this.down[2][1] = this.down[1][0];
-    this.down[1][0] = down_edge_buf;
+    this.down[0][1] = this.down[1][0];
+    this.down[1][0] = this.down[2][1];
+    this.down[2][1] = this.down[1][2];
+    this.down[1][2] = down_edge_buf;
 
     this.update_view();
   }
