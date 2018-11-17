@@ -42,15 +42,7 @@ class Cube{
   }
 
   U(){
-    var buffer = this.front[0];
-    this.front[0] = this.right[0];
-    this.right[0] = this.back[0];
-    this.back[0] = this.left[0];
-    this.left[0] = buffer;
-
-    Cube.rotate_face(this.top);
-
-    this.update_view()
+    this.U_D(true);
   }
 
   U_(){
@@ -58,19 +50,29 @@ class Cube{
   }
 
   D(){
-    var buffer = this.front[2];
-    this.front[2] = this.left[2];
-    this.left[2] = this.back[2];
-    this.back[2] = this.right[2];
-    this.right[2] = buffer;
-
-    Cube.rotate_face(this.down);
-
-    this.update_view();
+    this.U_D(false);
   }
 
   D_(){
     this.D();this.D();this.D();
+  }
+
+  U_D(is_u){
+    var index = (is_u ? 0 : 2)
+    var first_face = this.front
+    var second_face = (is_u ? this.right : this.left)
+    var third_face = this.back
+    var fourth_face = (!is_u ? this.right : this.left)
+
+    var buffer = first_face[index];
+    first_face[index] = second_face[index];
+    second_face[index] = third_face[index];
+    third_face[index] = fourth_face[index];
+    fourth_face[index] = buffer;
+
+    Cube.rotate_face((is_u ? this.top : this.down));
+
+    this.update_view();
   }
 
   R(){
