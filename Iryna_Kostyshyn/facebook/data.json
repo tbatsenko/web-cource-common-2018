@@ -40,7 +40,7 @@
         "Photo/Video Album",
         "Live Video"
       ],
-      "description": "How was your day, Ira",
+      "description": "How was your day, Ira?",
       "footer-buttons": [
         "Photo/Video",
         "Tag Friends",
@@ -63,17 +63,8 @@
         "Comment",
         "Share"
       ]
-    },
-    {
-      "user": "User2",
-      "time": "3hrs.",
-      "post-title": "An incredible day with friends!!!",
-      "options": [
-        "Like",
-        "Comment",
-        "Share"
-      ]
     }
+
   ],
   "stories": [
     {
