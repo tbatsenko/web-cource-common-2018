@@ -76,23 +76,7 @@ class Cube{
   }
 
   R(){
-    var buffer = [this.front[0][2], this.front[1][2], this.front[2][2]];
-    this.front[0][2] = this.down[0][2];
-    this.front[1][2] = this.down[1][2];
-    this.front[2][2] = this.down[2][2];
-    this.down[0][2] = this.back[2][0];
-    this.down[1][2] = this.back[1][0];
-    this.down[2][2] = this.back[0][0];
-    this.back[2][0] = this.up[0][2];
-    this.back[1][0] = this.up[1][2];
-    this.back[0][0] = this.up[2][2];
-    this.up[0][2] = buffer[0];
-    this.up[1][2] = buffer[1];
-    this.up[2][2] = buffer[2];
-
-    Cube.rotate_face(this.right);
-
-    this.update_view()
+    this.R_L(true);
   }
 
   R_(){
@@ -100,27 +84,41 @@ class Cube{
   }
 
   L(){
-    var buffer = [this.front[0][0], this.front[1][0], this.front[2][0]];
-    this.front[0][0] = this.up[0][0];
-    this.front[1][0] = this.up[1][0];
-    this.front[2][0] = this.up[2][0];
-    this.up[0][0] = this.back[2][2];
-    this.up[1][0] = this.back[1][2];
-    this.up[2][0] = this.back[0][2];
-    this.back[2][2] = this.down[0][0];
-    this.back[1][2] = this.down[1][0];
-    this.back[0][2] = this.down[2][0];
-    this.down[0][0] = buffer[0];
-    this.down[1][0] = buffer[1];
-    this.down[2][0] = buffer[2];
-
-    Cube.rotate_face(this.left);
-
-    this.update_view()
+    this.R_L(false);
   }
 
   L_(){
     this.L();this.L();this.L();
+  }
+
+  R_L(is_r){
+    var face_index = (is_r ? 2 : 0);
+    var back_index = (is_r ? 0 : 2);
+    var first_face = this.front;
+    var second_face = (is_r ? this.down : this.up);
+    var third_face = this.back;
+    var fourth_face = (is_r ? this.up : this.down)
+
+    var buffer = [first_face[0][face_index],
+      first_face[1][face_index],
+      first_face[2][face_index]
+    ];
+    first_face[0][face_index] = second_face[0][face_index];
+    first_face[1][face_index] = second_face[1][face_index];
+    first_face[2][face_index] = second_face[2][face_index];
+    second_face[0][face_index] = third_face[2][back_index];
+    second_face[1][face_index] = third_face[1][back_index];
+    second_face[2][face_index] = third_face[0][back_index];
+    third_face[2][back_index] = fourth_face[0][face_index];
+    third_face[1][back_index] = fourth_face[1][face_index];
+    third_face[0][back_index] = fourth_face[2][face_index];
+    fourth_face[0][face_index] = buffer[0];
+    fourth_face[1][face_index] = buffer[1];
+    fourth_face[2][face_index] = buffer[2];
+
+    Cube.rotate_face((is_r ? this.right : this.left));
+
+    this.update_view()
   }
 
   F(){
