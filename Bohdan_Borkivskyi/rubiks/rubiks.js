@@ -144,6 +144,78 @@ class Cube{
     this.L();this.L();this.L();
   }
 
+  F(){
+    {
+      var buffer = [this.top[2][0], this.top[2][1], this.top[2][2]];
+      this.top[2][0] = this.left[2][2];
+      this.top[2][1] = this.left[1][2];
+      this.top[2][2] = this.left[0][2];
+      this.left[2][2] = this.down[0][2];
+      this.left[1][2] = this.down[0][1];
+      this.left[0][2] = this.down[0][0];
+      this.down[0][2] = this.right[0][0];
+      this.down[0][1] = this.right[1][0];
+      this.down[0][0] = this.right[2][0];
+      this.right[0][0] = buffer[0];
+      this.right[1][0] = buffer[1];
+      this.right[2][0] = buffer[2];
+    }
+    {
+      var front_corner_buffer = this.front[0][0];
+      this.front[0][0] = this.front[2][0];
+      this.front[2][0] = this.front[2][2];
+      this.front[2][2] = this.front[0][2];
+      this.front[0][2] = front_corner_buffer;
+      var front_edge_buffer = this.front[0][1];
+      this.front[0][1] = this.front[1][0];
+      this.front[1][0] = this.front[2][1];
+      this.front[2][1] = this.front[1][2];
+      this.front[1][2] = front_edge_buffer;
+    }
+
+    this.update_view()
+  }
+
+  F_(){
+    this.F();this.F();this.F();
+  }
+
+  B(){
+    {
+      var buffer = [this.top[0][0], this.top[0][1], this.top[0][2]];
+      this.top[0][0] = this.right[0][2];
+      this.top[0][1] = this.right[1][2];
+      this.top[0][2] = this.right[2][2];
+      this.right[0][2] = this.down[2][2];
+      this.right[1][2] = this.down[2][1];
+      this.right[2][2] = this.down[2][0];
+      this.down[2][2] = this.left[2][0];
+      this.down[2][1] = this.left[1][0];
+      this.down[2][0] = this.left[0][0];
+      this.left[2][0] = buffer[0];
+      this.left[1][0] = buffer[1];
+      this.left[0][0] = buffer[2];
+    }
+    {
+      var back_corner_buffer = this.back[0][0];
+      this.back[0][0] = this.back[2][0];
+      this.back[2][0] = this.back[2][2];
+      this.back[2][2] = this.back[0][2];
+      this.back[0][2] = back_corner_buffer;
+      var back_edge_buffer = this.back[0][1];
+      this.back[0][1] = this.back[1][0];
+      this.back[1][0] = this.back[2][1];
+      this.back[2][1] = this.back[1][2];
+      this.back[1][2] = back_edge_buffer;
+    }
+
+    this.update_view();
+  }
+
+  B_(){
+    this.B();this.B();this.B();
+  }
+
   E(){
     var buffer = this.front[1];
     this.front[1] = this.left[1];
@@ -211,8 +283,8 @@ function keyUp(event){
     case "KeyD": if (rubiks.clockwise) {rubiks.D()} else {rubiks.D_();}break;
     case "KeyR": if (rubiks.clockwise) {rubiks.R()} else {rubiks.R_();}break;
     case "KeyL": if (rubiks.clockwise) {rubiks.L()} else {rubiks.L_();}break;
-    case "KeyF": rubiks.empty();break;
-    case "KeyB": rubiks.empty();break;
+    case "KeyF": if (rubiks.clockwise) {rubiks.F()} else {rubiks.F_();}break;
+    case "KeyB": if (rubiks.clockwise) {rubiks.B()} else {rubiks.B_();}break;
 
     case "KeyM": if (rubiks.clockwise) {rubiks.M()} else {rubiks.M_();}break;
     case "KeyS": rubiks.empty();break;
@@ -226,11 +298,3 @@ function keyUp(event){
 }
 
 document.body.addEventListener('keyup', keyUp);
-
-
-
-
-
-
-
-
