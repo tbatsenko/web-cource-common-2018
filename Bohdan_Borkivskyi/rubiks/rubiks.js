@@ -1,5 +1,14 @@
 class Cube{
   constructor() {
+    this.clockwise = true;
+    this.game = false;
+
+    this.init_layout()
+    this.update_view()
+    this.scramble(1)
+  }
+
+  init_layout(){
     var white = "#ffffff";
     var yellow = "#ffff00";
     var green = "#00ff00";
@@ -7,16 +16,12 @@ class Cube{
     var red = "#ff0000";
     var orange = "#ff8000";
 
-    this.clockwise = true;
-
     this.up = [[white, white, white], [white, white, white], [white, white, white]];
     this.down = [[yellow, yellow, yellow], [yellow, yellow, yellow], [yellow, yellow, yellow]];
     this.front = [[green, green, green], [green, green, green], [green, green, green]];
     this.back = [[blue, blue, blue], [blue, blue, blue], [blue, blue, blue]];
     this.left = [[orange, orange, orange], [orange, orange, orange], [orange, orange, orange]];
     this.right = [[red, red, red], [red, red, red], [red, red, red]];
-
-    this.update_view()
   }
 
   update_view(){
@@ -25,6 +30,9 @@ class Cube{
       for(var i=0;i<9;i++) {
         document.getElementById(name+(i+1)).style.backgroundColor = this.sides_dict[name][Math.floor(i/3)][i%3];
       }
+    }
+    if(this.game){
+
     }
   }
 
@@ -119,25 +127,7 @@ class Cube{
   }
 
   F(){
-    {
-      var buffer = [this.up[2][0], this.up[2][1], this.up[2][2]];
-      this.up[2][0] = this.left[2][2];
-      this.up[2][1] = this.left[1][2];
-      this.up[2][2] = this.left[0][2];
-      this.left[2][2] = this.down[0][2];
-      this.left[1][2] = this.down[0][1];
-      this.left[0][2] = this.down[0][0];
-      this.down[0][2] = this.right[0][0];
-      this.down[0][1] = this.right[1][0];
-      this.down[0][0] = this.right[2][0];
-      this.right[0][0] = buffer[0];
-      this.right[1][0] = buffer[1];
-      this.right[2][0] = buffer[2];
-    }
-
-    Cube.rotate_face(this.front);
-
-    this.update_view()
+    this.F_B(true);
   }
 
   F_(){
@@ -145,29 +135,39 @@ class Cube{
   }
 
   B(){
-    {
-      var buffer = [this.up[0][0], this.up[0][1], this.up[0][2]];
-      this.up[0][0] = this.right[0][2];
-      this.up[0][1] = this.right[1][2];
-      this.up[0][2] = this.right[2][2];
-      this.right[0][2] = this.down[2][2];
-      this.right[1][2] = this.down[2][1];
-      this.right[2][2] = this.down[2][0];
-      this.down[2][2] = this.left[2][0];
-      this.down[2][1] = this.left[1][0];
-      this.down[2][0] = this.left[0][0];
-      this.left[2][0] = buffer[0];
-      this.left[1][0] = buffer[1];
-      this.left[0][0] = buffer[2];
-    }
-
-    Cube.rotate_face(this.back);
-
-    this.update_view();
+    this.F_B(false);
   }
 
   B_(){
     this.B();this.B();this.B();
+  }
+
+  F_B(is_f){
+    var face_index = (is_f ? 2 : 0)
+    var down_index = (is_f ? 0 : 2)
+
+    var first_face = this.up;
+    var second_face = (is_f ? this.left : this.right)
+    var third_face = this.down;
+    var fourth_face = (is_f ? this.right : this.left)
+
+    var buffer = [first_face[face_index][0], first_face[face_index][1], first_face[face_index][2]];
+    first_face[face_index][0] = second_face[face_index][2];
+    first_face[face_index][1] = second_face[1][2];
+    first_face[face_index][2] = second_face[down_index][2];
+    second_face[face_index][2] = third_face[down_index][2];
+    second_face[1][2] = third_face[down_index][1];
+    second_face[down_index][2] = third_face[down_index][0];
+    third_face[down_index][2] = fourth_face[down_index][0];
+    third_face[down_index][1] = fourth_face[1][0];
+    third_face[down_index][0] = fourth_face[face_index][0];
+    fourth_face[down_index][0] = buffer[0];
+    fourth_face[1][0] = buffer[1];
+    fourth_face[face_index][0] = buffer[2];
+
+    Cube.rotate_face((is_f ? this.front : this.back));
+
+    this.update_view();
   }
 
   E(){
@@ -264,6 +264,46 @@ class Cube{
     this.B();
   }
 
+  scramble(length = 20){
+    this.init_layout()
+    this.scramble_text = ""
+
+    var moves = ["U", "U_", "D", "D_", "R", "R_", "L", "L_", "F", "F_", "B", "B_"]
+    var last_move = "-";
+    var random_move = "-"
+
+    for(var _=0; _<length; ++_){
+      random_move = moves[Math.floor(Math.random()*moves.length)];
+      while(random_move[0] == last_move[0]){
+        random_move = moves[Math.floor(Math.random()*moves.length)];
+      }
+      this.scramble_text += random_move+" ";
+      this[random_move]()
+      last_move = random_move;
+    }
+    this.game = true;
+    return this.scramble_text;
+  }
+
+  is_solved(){
+    console.log(this.up)
+    var sides = [this.up, this.down, this.front, this.back, this.right]
+    console.log(sides)
+    for(var j=0;i<sides.length;++i){
+      var colors = [];
+      for(var i in [0,1,2]){
+        for(var y in [0,1,2]){
+          if(i == 0 && y == 0){
+            colors = [sides[j][[i][y]]];
+          }else if(!colors.includes(sides[j][y])){
+            console.log(j, colors, i, y);
+            return false;
+          }
+        }
+      }
+    }
+    return true;
+  }
 }
 
 rubiks = new Cube();
