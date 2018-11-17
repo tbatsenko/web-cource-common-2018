@@ -2,7 +2,7 @@
     /*background-color: #00e100;*/
     float: left;
     width: 12em;
-    margin-top: 2em;
+
 }
 
 .left-aside-personal-data__person-img{
@@ -28,7 +28,7 @@
 }
 
 .left-aside-navigation__redactor-btn:hover{
-    background: url("../icons/icons-aside.png");
+    background: url("../icons/icons-aside-and-center.png");
     background-position: 0 -2144px;
     background-repeat: no-repeat;
     height: 1em;
@@ -64,14 +64,14 @@
     height: 1em;
     display: block;
     margin-left:auto;
-    background: url("../icons/icons-aside.png");
+    background: url("../icons/icons-aside-and-center.png");
     background-position: 0 -2144px;
     background-repeat: no-repeat;
-    margin-right: 1em;
+    margin-right: 2.5em;
 }
 
 .left-aside-navigation__news-img{
-    background: url("../icons/icons-aside.png");
+    background: url("../icons/icons-aside-and-center.png");
     background-position:0 -1388px;;
     background-repeat: no-repeat;
     width: 1.5em;
@@ -91,10 +91,10 @@
     height: 1em;
     display: block;
     margin-left:auto;
-    background: url("../icons/icons-aside.png");
+    background: url("../icons/icons-aside-and-center.png");
     background-position: 0 -2144px;
     background-repeat: no-repeat;
-    margin-right: 1em;
+    margin-right: 2.5em;
 }
 
 
@@ -109,6 +109,7 @@
 .left-aside-navigation__element-header{
     color: #616770;
     font-size: small;
+    margin-bottom: 0.4em;
 }
 
 .left-aside-navigation__messenger{
@@ -118,7 +119,7 @@
     width: 15em;
 }
 .left-aside-navigation__messenger-img{
-    background: url("../icons/icons-aside.png");
+    background: url("../icons/icons-aside-and-center.png");
     background-position:0 -170px;;;
     background-repeat: no-repeat;
     width: 1.5em;
@@ -136,7 +137,7 @@
 }
 
 .left-aside-navigation__group-img{
-    background: url("../icons/icons-aside.png");
+    background: url("../icons/icons-aside-and-center.png");
     background-position:0 -1556px;
     background-repeat: no-repeat;
     width: 1.5em;
@@ -149,7 +150,7 @@
 .left-aside-navigation__news-number{
     display: block;
     margin-left:auto;
-    margin-right: 1.1em;
+    margin-right: 2.7em;
     color: #9b999e;
     font-size: 0.9em;
 }

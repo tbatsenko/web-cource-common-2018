@@ -13,9 +13,6 @@ const CubaArticles = [
     }
 ];
 
-console.log(CubaArticles[0]);
-
-
 const articleEntry = document.getElementsByClassName("articles")[0];
 
 let articleInnerHTML = "";
@@ -26,7 +23,7 @@ CubaArticles.map((el) => {
     <img class="article__picture article__picture--${el.polarity}" src="${el.picture}">
     <div class="article__caption article__caption--${el.polarity}">
     <h3 class="article__heading heading3">${el.heading}</h3>
-<p class="article__reading">${el.reading}</p>
+<p class="article__reading reading">${el.reading}</p>
 </div>
 </article>`
 });
