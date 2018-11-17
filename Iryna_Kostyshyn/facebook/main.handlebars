@@ -82,7 +82,7 @@
 
             </header>
             <main class="make_post__main">
-                <img class="main-feed__user-avatar" src="https://avatars1.githubusercontent.com/u/25458097?s=400&v=4" alt="profile photo">
+                <img class="post__user-avatar" src="https://avatars1.githubusercontent.com/u/25458097?s=400&v=4" alt="profile photo">
                 <input class="make_post__input" placeholder={{description}}>
 
             </main>
@@ -95,26 +95,26 @@
             {{/make-post}}
         </form>
 
-        <article class="main-feed__post">
+        <article class="post">
             {{#post}}
-            <header class="main-feed__post-header">
-                <img class="main-feed__user-avatar" src="https://avatars0.githubusercontent.com/u/4161345?s=400&v=4">
-                <a class="main-feed__user-name" href="#">{{user}}</a>
-                <a class="main-feed__post-time" href="#">{{time}}</a>
+            <header class="post__header">
+                <img class="post__user-avatar" src="https://avatars0.githubusercontent.com/u/4161345?s=400&v=4">
+                <a class="post__user-name" href="#">{{user}}</a>
+                <a class="post__time" href="#">{{time}}</a>
 
             </header>
-            <p class="main-feed__post-capture">{{poost-title}}</p>
-            <img class="main-feed__post-photo" src={{photo}} alt="post photo">
-            <footer class="main-feed__post-footer">
-                <div class="main-feed__post-summary">
-                    <img class="main-feed__like-img" src="https://i0.wp.com/www.vectorico.com/wp-content/uploads/2018/02/Facebook-Like.png?resize=300%2C300" alt="like">
-                    <a class="main-feed__post-amount-likes" href="#">{{info.[0]}} </a>
-                    <a class="main-feed__post-amount-shares" href="#">{{info.[1]}} </a>
+            <p class="post__capture">{{poost-title}}</p>
+            <img class="post__photo" src={{photo}} alt="post photo">
+            <footer class="post__footer">
+                <div class="post__summary">
+                    <img class="post__like-img" src="https://i0.wp.com/www.vectorico.com/wp-content/uploads/2018/02/Facebook-Like.png?resize=300%2C300" alt="like">
+                    <a class="post__amount-likes" href="#">{{info.[0]}} </a>
+                    <a class="post__amount-shares" href="#">{{info.[1]}} </a>
                 </div>
-                <div class="main-feed__post-footer-buttons">
-                    <button class="main-feed__footer-button">{{options.[0]}}</button>
-                    <button class="main-feed__footer-button">{{options.[1]}}</button>
-                    <button class="main-feed__footer-button">{{options.[2]}}</button>
+                <div class="post__footer-buttons">
+                    <button class="post__footer-button">{{options.[0]}}</button>
+                    <button class="post__footer-button">{{options.[1]}}</button>
+                    <button class="post__footer-button">{{options.[2]}}</button>
                 </div>
             </footer>
             {{/post}}
