@@ -1,11 +1,11 @@
 main {
   height: 100%;
-  padding: 100px 15vw 0 25vw;
+  padding: 100px 27%;
 }
 .content {
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
-  width: 600px;
+  width: 500px;
+  margin: 0;
 }
 /*# sourceMappingURL=content.css.map */
