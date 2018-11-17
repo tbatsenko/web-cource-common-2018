@@ -1,0 +1,208 @@
+class Cube{
+  constructor() {
+    var white = "#ffffff";
+    var yellow = "#ffff00";
+    var green = "#00ff00";
+    var blue = "#0000ff";
+    var red = "#ff0000";
+    var orange = "#ff8000";
+
+    this.clockwise = true;
+
+    this.top = [[white, white, white], [white, white, white], [white, white, white]];
+    this.down = [[yellow, yellow, yellow], [yellow, yellow, yellow], [yellow, yellow, yellow]];
+    this.front = [[green, green, green], [green, green, green], [green, green, green]];
+    this.back = [[blue, blue, blue], [blue, blue, blue], [blue, blue, blue]];
+    this.left = [[orange, orange, orange], [orange, orange, orange], [orange, orange, orange]];
+    this.right = [[red, red, red], [red, red, red], [red, red, red]];
+
+    this.update_view()
+  }
+
+  update_view(){
+    this.sides_dict = {"top":this.top, "front": this.front, "right": this.right};
+    for(const name of ["top", "front", "right"]){
+      for(var i=0;i<9;i++) {
+        document.getElementById(name+(i+1)).style.backgroundColor = this.sides_dict[name][Math.floor(i/3)][i%3];
+      }
+    }
+  }
+
+  U(){
+    var buffer = this.front[0];
+    this.front[0] = this.right[0];
+    this.right[0] = this.back[0];
+    this.back[0] = this.left[0];
+    this.left[0] = buffer;
+
+    var top_corner_buf = this.top[0][0];
+    this.top[0][0] = this.top[2][0];
+    this.top[2][0] = this.top[2][2];
+    this.top[2][2] = this.top[0][2];
+    this.top[0][2] = top_corner_buf;
+    var top_edge_buf = this.top[0][1];
+    this.top[0][1] = this.top[1][0];
+    this.top[1][0] = this.top[2][1];
+    this.top[2][1] = this.top[1][2];
+    this.top[1][2] = top_edge_buf;
+
+    this.update_view()
+  }
+
+  U_(){
+    this.U();this.U();this.U();
+  }
+
+  D(){
+    var buffer = this.front[2];
+    this.front[2] = this.left[2];
+    this.left[2] = this.back[2];
+    this.back[2] = this.right[2];
+    this.right[2] = buffer;
+
+    var down_corner_buf = this.down[0][0];
+    this.down[0][0] = this.down[0][2];
+    this.down[0][2] = this.down[2][2];
+    this.down[2][2] = this.down[2][0];
+    this.down[2][0] = down_corner_buf;
+    var down_edge_buf = this.down[0][1];
+    this.down[0][1] = this.down[1][2];
+    this.down[1][2] = this.down[2][1];
+    this.down[2][1] = this.down[1][0];
+    this.down[1][0] = down_edge_buf;
+
+    this.update_view();
+  }
+
+  D_(){
+    this.D();this.D();this.D();
+  }
+
+  E(){
+    var buffer = this.front[1];
+    this.front[1] = this.left[1];
+    this.left[1] = this.back[1];
+    this.back[1] = this.right[1];
+    this.right[1] = buffer;
+
+    this.update_view();
+  }
+
+  E_(){
+    this.E();this.E();this.E();
+  }
+
+  R(){
+    var buffer = [this.front[0][2], this.front[1][2], this.front[2][2]];
+    this.front[0][2] = this.down[0][2];
+    this.front[1][2] = this.down[1][2];
+    this.front[2][2] = this.down[2][2];
+    this.down[0][2] = this.back[2][0];
+    this.down[1][2] = this.back[1][0];
+    this.down[2][2] = this.back[0][0];
+    this.back[2][0] = this.top[0][2];
+    this.back[1][0] = this.top[1][2];
+    this.back[0][0] = this.top[2][2];
+    this.top[0][2] = buffer[0];
+    this.top[1][2] = buffer[1];
+    this.top[2][2] = buffer[2];
+
+    var right_corner_buf = this.right[0][0];
+    this.right[0][0] = this.right[2][0];
+    this.right[2][0] = this.right[2][2];
+    this.right[2][2] = this.right[0][2];
+    this.right[0][2] = right_corner_buf;
+    var right_edge_buf = this.right[0][1];
+    this.right[0][1] = this.right[1][0];
+    this.right[1][0] = this.right[2][1];
+    this.right[2][1] = this.right[1][2];
+    this.right[1][2] = right_edge_buf;
+
+    this.update_view()
+  }
+
+  R_(){
+    this.R();this.R();this.R();
+  }
+
+  L(){
+    var buffer = [this.front[0][0], this.front[1][0], this.front[2][0]];
+    this.front[0][0] = this.top[0][0];
+    this.front[1][0] = this.top[1][0];
+    this.front[2][0] = this.top[2][0];
+    this.top[0][0] = this.back[2][2];
+    this.top[1][0] = this.back[1][2];
+    this.top[2][0] = this.back[0][2];
+    this.back[2][2] = this.down[0][0];
+    this.back[1][2] = this.down[1][0];
+    this.back[0][2] = this.down[2][0];
+    this.down[0][0] = buffer[0];
+    this.down[1][0] = buffer[1];
+    this.down[2][0] = buffer[2];
+
+    var left_corner_buf = this.left[0][0]
+    this.left[0][0] = this.left[2][0];
+    this.left[2][0] = this.left[2][2];
+    this.left[2][2] = this.left[0][2];
+    this.left[0][2] = left_corner_buf;
+    var left_edge_buf = this.left[0][1];
+    this.left[0][1] = this.left[1][0];
+    this.left[1][0] = this.left[2][1];
+    this.left[2][1] = this.left[1][2];
+    this.left[1][2] = left_edge_buf;
+
+    this.update_view()
+  }
+
+  L_(){
+    this.L();this.L();this.L();
+  }
+
+  y(){
+    this.U();
+    this.D_();
+    this.E_();
+  }
+
+  empty(){
+
+  }
+
+}
+
+rubiks = new Cube();
+
+function keyUp(event){
+  if(event.keyCode == 16){
+    rubiks.clockwise = !rubiks.clockwise;
+    return;
+  }
+
+  switch (event.code) {
+    case "KeyU": if (rubiks.clockwise) {rubiks.U()} else {rubiks.U_();}break;
+    case "KeyD": if (rubiks.clockwise) {rubiks.D()} else {rubiks.D_();}break;
+    case "KeyR": if (rubiks.clockwise) {rubiks.R()} else {rubiks.R_();}break;
+    case "KeyL": if (rubiks.clockwise) {rubiks.L()} else {rubiks.L_();}break;
+    case "KeyF": rubiks.empty();break;
+    case "KeyB": rubiks.empty();break;
+
+    case "KeyM": rubiks.empty();break;
+    case "KeyS": rubiks.empty();break;
+    case "KeyE": if (rubiks.clockwise) {rubiks.E()} else {rubiks.E_();}break;
+
+    case "KeyY": rubiks.y();break;
+    case "KeyX": rubiks.empty();break;
+    case "KeyZ": rubiks.empty();break;
+  }
+  rubiks.clockwise = true;
+}
+
+document.body.addEventListener('keyup', keyUp);
+
+
+
+
+
+
+
+
