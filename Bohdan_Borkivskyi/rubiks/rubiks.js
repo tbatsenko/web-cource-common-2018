@@ -30,8 +30,9 @@ class Cube{
         document.getElementById(name+(i+1)).style.backgroundColor = this.sides_dict[name][Math.floor(i/3)][i%3];
       }
     }
-    if(this.game){
-
+    if(this.game && this.is_solved()){
+      this.game = false;
+      alert("you win")
     }
   }
 
