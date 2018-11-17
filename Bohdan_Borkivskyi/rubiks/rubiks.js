@@ -99,22 +99,19 @@ class Cube{
     var third_face = this.back;
     var fourth_face = (is_r ? this.up : this.down)
 
-    var buffer = [first_face[0][face_index],
-      first_face[1][face_index],
-      first_face[2][face_index]
-    ];
-    first_face[0][face_index] = second_face[0][face_index];
-    first_face[1][face_index] = second_face[1][face_index];
-    first_face[2][face_index] = second_face[2][face_index];
-    second_face[0][face_index] = third_face[2][back_index];
-    second_face[1][face_index] = third_face[1][back_index];
-    second_face[2][face_index] = third_face[0][back_index];
-    third_face[2][back_index] = fourth_face[0][face_index];
-    third_face[1][back_index] = fourth_face[1][face_index];
-    third_face[0][back_index] = fourth_face[2][face_index];
-    fourth_face[0][face_index] = buffer[0];
-    fourth_face[1][face_index] = buffer[1];
-    fourth_face[2][face_index] = buffer[2];
+    var buffer = [0,1,2].map(function(i) {
+      return new Array(3).fill(first_face[i][face_index]);
+    })
+
+    var faces = [first_face, second_face, third_face, fourth_face, buffer]
+
+    for(var i=0;i<4;i++){
+      var face_index_1 = (i != 2 ? face_index : back_index)
+      var face_index_2 = (i != 1 ? face_index : back_index)
+      faces[i][(i != 2 ? 0 : 2)][face_index_1] = faces[i+1][(i != 1 ? 0 : 2)][face_index_2];
+      faces[i][(i != 2 ? 1 : 1)][face_index_1] = faces[i+1][(i != 2 ? 1 : 1)][face_index_2];
+      faces[i][(i != 2 ? 2 : 0)][face_index_1] = faces[i+1][(i != 1 ? 2 : 0)][face_index_2];
+    }
 
     Cube.rotate_face((is_r ? this.right : this.left));
 
