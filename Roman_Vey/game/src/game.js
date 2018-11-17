@@ -1,12 +1,9 @@
 const FIELD_SIZE = 4
-let field = Array(FIELD_SIZE)
-    .fill()
-    .map(() => Array(FIELD_SIZE).fill(0))
-
+let field;
+let startTime;
 let score = 0;
 let moves = 0;
 let time = 0;
-let startTime;
 
 const valid = (i, j) => {
     return i >= 0 && i < FIELD_SIZE && j >= 0 && j < FIELD_SIZE;
@@ -244,6 +241,9 @@ document.addEventListener("keyup", (e) => {
 });
 
 const startGame = () => {
+    field = Array(FIELD_SIZE)
+    .fill()
+    .map(() => Array(FIELD_SIZE).fill(0))
     startTime = new Date;
     field = generateNumber(field);
     const intervalId = setInterval(()=> { updateTime(".time") }, 1000);
