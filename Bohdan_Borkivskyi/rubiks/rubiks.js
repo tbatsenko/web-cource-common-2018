@@ -5,7 +5,6 @@ class Cube{
 
     this.init_layout()
     this.update_view()
-    this.scramble(1)
   }
 
   init_layout(){
@@ -152,6 +151,7 @@ class Cube{
     var fourth_face = (is_f ? this.right : this.left)
 
     var buffer = [first_face[face_index][0], first_face[face_index][1], first_face[face_index][2]];
+
     first_face[face_index][0] = second_face[face_index][2];
     first_face[face_index][1] = second_face[1][2];
     first_face[face_index][2] = second_face[down_index][2];
@@ -286,17 +286,14 @@ class Cube{
   }
 
   is_solved(){
-    console.log(this.up)
-    var sides = [this.up, this.down, this.front, this.back, this.right]
-    console.log(sides)
-    for(var j=0;i<sides.length;++i){
+    var sides = [this.up, this.down, this.front, this.back, this.right];
+    for(var j=0;j<sides.length;++j){
       var colors = [];
-      for(var i in [0,1,2]){
-        for(var y in [0,1,2]){
+      for(var i=0;i<3;++i){
+        for(var y=0;y<3;++y){
           if(i == 0 && y == 0){
-            colors = [sides[j][[i][y]]];
-          }else if(!colors.includes(sides[j][y])){
-            console.log(j, colors, i, y);
+            colors = [sides[j][i][y]];
+          }else if(!colors.includes(sides[j][i][y])){
             return false;
           }
         }
