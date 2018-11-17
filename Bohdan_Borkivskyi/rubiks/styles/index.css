@@ -5,7 +5,7 @@
   background-color: white;
   border: 1px solid #dddfe2;
   border-radius: 10px; }
-  .window .top {
+  .window .up {
     margin-left: 200px;
     display: flex;
     flex-flow: column wrap-reverse;
@@ -13,7 +13,7 @@
     height: 200px;
     background-color: black;
     transform: skewX(-60deg) rotate(-90deg); }
-    .window .top1, .window .top2, .window .top3, .window .top4, .window .top5, .window .top6, .window .top7, .window .top8, .window .top9 {
+    .window .up1, .window .up2, .window .up3, .window .up4, .window .up5, .window .up6, .window .up7, .window .up8, .window .up9 {
       width: calc(100% / 3 - 2px);
       height: calc(100% / 3 - 2px);
       box-sizing: border-box;
