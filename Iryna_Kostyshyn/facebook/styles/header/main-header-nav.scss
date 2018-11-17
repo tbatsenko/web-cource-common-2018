@@ -1,93 +1,23 @@
-.main-header{
-    background: #4267b2;
-    width: 100%;
-    height: 40px;
-    display: flex;
-}
-
-.main-header__content{
-    display: inherit;
-    margin: auto;
-    vertical-align: center;
-}
-
-.main-header__logo{
-
-    height: 24px;
-    width: 24px;
-    align-self: center;
-    background: url("https://static.xx.fbcdn.net/rsrc.php/v3/yx/r/tjBuxcd0g0m.png");
-    background-size: 29px 1475px;
-    background-position-y: -442px;
-    overflow: hidden;
-    margin: 0 5px 0 0 ;
-}
-
-.header-search__input {
-    width: 400px;
-    border-radius: 3px 0 0 3px ;
-    height: 24px;
-    padding: 5px;
-    font-size: 14px;
-    border: none;
-    vertical-align: middle;
-    box-sizing: border-box;
-    margin-right: 0;
-}
-
-
-.header-search {
-    line-height: 40px;
-    display: inline;
-}
-
-.header-search__button{
-    margin-left: 0;
-    border: none;
-    height: 24px;
-    background: rgb(246, 245, 247);
-    width: 45px;
-    overflow: hidden;
-    color: transparent;
-    position: relative;
-    right: 4px;
-    vertical-align: middle;
-    border-radius: 0 3px 3px 0;
-}
-
-
-.header-search__button:before{
-    content: "";
-    height: 16px;
-    width: 16px;
-    position: absolute;
-    left: 13px;
-    top: 4px;
-    background-size: 16px;
-    background: url("https://static.xx.fbcdn.net/rsrc.php/v3/yx/r/tjBuxcd0g0m.png") 3px 32px;
-    border-radius: 0 0 3px 3px;
-}
-
 .main-header-navigation {
-    font-size: 12px;
-    height: 40px;
-    display: flex;
+  font-size: 12px;
+  height: 40px;
+  display: flex;
 
-    align-items: center;
-}
+  align-items: center;
 
 
-.main-header-navigation__button{
+
+  &__button{
     color: rgb(225, 225, 225);
     text-decoration: inherit;
     height: 23px;
     background: transparent;
     vertical-align: center;
     border: none;
-}
+  }
 
 
-.main-header-navigation__button--username{
+  &__button--username{
     position: relative;
     margin-left: 0;
     border: none;
@@ -96,8 +26,8 @@
     overflow: hidden;
     color: white;
 
-}
-.main-header-navigation__button--username:before{
+  }
+  &__button--username:before{
     content: "";
     height: 24px;
     width: 24px;
@@ -108,52 +38,54 @@
     border-radius: 15px 15px 15px 15px;
 
 
-}
+  }
 
-.main-header-navigation__button--main{
+  &__button--main{
     background: #4267b2;
     margin-right: 5px;
 
 
-}
+  }
 
-.main-header-navigation__button--friend-req{
+  &__button--friend-req{
     color: transparent;
     background: url("https://static.xx.fbcdn.net/rsrc.php/v3/yF/r/1c0gE0MbEo8.png") 3px 485px;
     background-size: 24px;
     width: 24px;
     top: 4px;
 
-}
+  }
 
 
-.main-header-navigation__button--message{
+  &__button--message{
     color: transparent;
     background: url("https://static.xx.fbcdn.net/rsrc.php/v3/yF/r/1c0gE0MbEo8.png") 3px 443px;
     background-size: 24px;
     width: 24px;
-}
+  }
 
 
-.main-header-navigation__button--notification{
+  &__button--notification{
     color: transparent;
     background: url("https://static.xx.fbcdn.net/rsrc.php/v3/yF/r/1c0gE0MbEo8.png") 3px 567px;
     background-size: 24px;
     width: 24px;
-}
+  }
 
-.main-header-navigation__button--quick-help{
+  &__button--quick-help{
     color: transparent;
     background: url("https://static.xx.fbcdn.net/rsrc.php/v3/yF/r/1c0gE0MbEo8.png") 3px 422px;
     background-size: 24px;
     width: 24px;
-}
+  }
 
-.main-header-navigation__button--submenu{
+  &__button--submenu{
     color: transparent;
     background: url("https://static.xx.fbcdn.net/rsrc.php/v3/yF/r/1c0gE0MbEo8.png") 3px 546px;
     background-size: 24px;
     width: 24px;
+  }
+
+
+
 }
-
-
