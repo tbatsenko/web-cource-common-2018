@@ -1,0 +1,144 @@
+{
+  "main-header": [
+    {
+      "buttons": [
+        "Search",
+        "Ira",
+        "Головна",
+        "Створити",
+        "Друзі",
+        "Повідомлення",
+        "Сповіщення",
+        "Quick help",
+        "Більше"
+      ]
+    }
+  ],
+  "side-navigation": [
+    {
+      "links": [
+        "Iryna Kostyshyn",
+        "News Feed",
+        "Messenger",
+        "Girl's Night Out",
+        "Events",
+        "Groups",
+        "Pages",
+        "Friend list",
+        "See more"
+      ],
+      "titles": [
+        "Shortcuts",
+        "Explore"
+      ]
+    }
+  ],
+  "make-post": [
+    {
+      "header-buttons": [
+        "Make Post",
+        "Photo/Video Album",
+        "Live Video"
+      ],
+      "description": "How was your day, Ira",
+      "footer-buttons": [
+        "Photo/Video",
+        "Tag Friends",
+        "Felling/Activity"
+      ]
+    }
+  ],
+  "post": [
+    {
+      "user": "Student's problem",
+      "time": "1hr.",
+      "post-title": "My biggest fear right here",
+      "photo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQPFpYHC1woEftYu5xX3vjbYKtZAwQGxpxg5xrIpuQWqBIJsIqeWw",
+      "info": [
+        "13",
+        "1 share"
+      ],
+      "options": [
+        "Like",
+        "Comment",
+        "Share"
+      ]
+    },
+    {
+      "user": "User2",
+      "time": "3hrs.",
+      "post-title": "An incredible day with friends!!!",
+      "options": [
+        "Like",
+        "Comment",
+        "Share"
+      ]
+    }
+  ],
+  "stories": [
+    {
+      "title": "Stories",
+      "options": [
+        "Archive",
+        "Settings"
+      ],
+      "description":"Share a photo, video or write something"
+    }
+  ],
+  "event-list":[
+    {
+      "button":"Event invite 1...",
+      "time":"on October 12"
+    }
+  ],
+  "friend-request":[
+    {
+      "title":"Friend requests",
+      "other-option": "See all",
+      "request":[
+        {
+          "image": "User image",
+          "name": "User 1",
+          "other-info": "5 mutual friends",
+          "confirm": "Confirm friend"
+        }
+      ]
+    }
+  ],
+  "pages_suggestion":[
+    {
+      "title": "Suggested page",
+      "see-all": "See all",
+      "page":{
+        "image": "Page avatar",
+        "link": "Take your tea",
+        "description": "Organization",
+        "poster": "Event image"
+      },
+      "like":"Like Page"
+    }
+  ],
+  "lang":[
+    {
+      "active":"English(US)",
+      "links":[
+        "Українська",
+        "Русский",
+        "Espanol",
+        "Portugues"
+      ]
+    }
+  ],
+  "footer":[
+    {
+      "links":[
+        "Privacy",
+        "Terms",
+        "Advertising",
+        "Ad Choice",
+        "Cookies",
+        "More"
+      ]
+    }
+  ]
+}
