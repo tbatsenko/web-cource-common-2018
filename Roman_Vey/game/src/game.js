@@ -223,21 +223,30 @@ const renderField = (field, container) => {
     `
 }
 
+const validKey = (e) => {
+    return (e.key == "ArrowUp") || (e.key == "ArrowDown") || (e.key == "ArrowLeft") || (e.key == "ArrowRight");
+}
+
 
 document.addEventListener("keyup", (e) => {
-    // handle moving
     move1 = moveNums(field, e);
     mergeNums(field, e);
     move2 = moveNums(field, e);
     if (move1 || move2){
         moves++;
     }
-    field = generateNumber(field);
+    if (validKey(e)){
+        field = generateNumber(field);
+    }
     updateMoves(".moves");
     renderField(field, document.querySelector(".layout__game-placeholder"));
 });
 
-const startTime = new Date;
-field = generateNumber(field);
-const intervalId = setInterval(()=> { updateTime(".time") }, 1000);
-renderField(field, document.querySelector(".layout__game-placeholder"));
+const startGame = () => {
+    const startTime = new Date;
+    field = generateNumber(field);
+    const intervalId = setInterval(()=> { updateTime(".time") }, 1000);
+    renderField(field, document.querySelector(".layout__game-placeholder"));
+}
+startGame()
+
