@@ -78,20 +78,6 @@ class Cube{
     this.D();this.D();this.D();
   }
 
-  E(){
-    var buffer = this.front[1];
-    this.front[1] = this.left[1];
-    this.left[1] = this.back[1];
-    this.back[1] = this.right[1];
-    this.right[1] = buffer;
-
-    this.update_view();
-  }
-
-  E_(){
-    this.E();this.E();this.E();
-  }
-
   R(){
     var buffer = [this.front[0][2], this.front[1][2], this.front[2][2]];
     this.front[0][2] = this.down[0][2];
@@ -158,6 +144,48 @@ class Cube{
     this.L();this.L();this.L();
   }
 
+  E(){
+    var buffer = this.front[1];
+    this.front[1] = this.left[1];
+    this.left[1] = this.back[1];
+    this.back[1] = this.right[1];
+    this.right[1] = buffer;
+
+    this.update_view();
+  }
+
+  E_(){
+    this.E();this.E();this.E();
+  }
+
+  M(){
+    var buffer = [this.front[0][1], this.front[1][1], this.front[2][1]];
+    this.front[0][1] = this.top[0][1];
+    this.front[1][1] = this.top[1][1];
+    this.front[2][1] = this.top[2][1];
+    this.top[0][1] = this.back[2][1];
+    this.top[1][1] = this.back[1][1];
+    this.top[2][1] = this.back[0][1];
+    this.back[2][1] = this.down[0][1];
+    this.back[1][1] = this.down[1][1];
+    this.back[0][1] = this.down[2][1];
+    this.down[0][1] = buffer[0];
+    this.down[1][1] = buffer[1];
+    this.down[2][1] = buffer[2];
+
+    this.update_view();
+  }
+
+  M_(){
+    this.M();this.M();this.M();
+  }
+
+  x(){
+    this.R();
+    this.M_();
+    this.L_();
+  }
+
   y(){
     this.U();
     this.D_();
@@ -186,12 +214,12 @@ function keyUp(event){
     case "KeyF": rubiks.empty();break;
     case "KeyB": rubiks.empty();break;
 
-    case "KeyM": rubiks.empty();break;
+    case "KeyM": if (rubiks.clockwise) {rubiks.M()} else {rubiks.M_();}break;
     case "KeyS": rubiks.empty();break;
     case "KeyE": if (rubiks.clockwise) {rubiks.E()} else {rubiks.E_();}break;
 
+    case "KeyX": rubiks.x();break;
     case "KeyY": rubiks.y();break;
-    case "KeyX": rubiks.empty();break;
     case "KeyZ": rubiks.empty();break;
   }
   rubiks.clockwise = true;
