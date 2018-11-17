@@ -9,7 +9,7 @@ class Cube{
 
     this.clockwise = true;
 
-    this.top = [[white, white, white], [white, white, white], [white, white, white]];
+    this.up = [[white, white, white], [white, white, white], [white, white, white]];
     this.down = [[yellow, yellow, yellow], [yellow, yellow, yellow], [yellow, yellow, yellow]];
     this.front = [[green, green, green], [green, green, green], [green, green, green]];
     this.back = [[blue, blue, blue], [blue, blue, blue], [blue, blue, blue]];
@@ -20,8 +20,8 @@ class Cube{
   }
 
   update_view(){
-    this.sides_dict = {"top":this.top, "front": this.front, "right": this.right};
-    for(const name of ["top", "front", "right"]){
+    this.sides_dict = {"up":this.up, "front": this.front, "right": this.right};
+    for(const name of ["up", "front", "right"]){
       for(var i=0;i<9;i++) {
         document.getElementById(name+(i+1)).style.backgroundColor = this.sides_dict[name][Math.floor(i/3)][i%3];
       }
@@ -70,7 +70,7 @@ class Cube{
     third_face[index] = fourth_face[index];
     fourth_face[index] = buffer;
 
-    Cube.rotate_face((is_u ? this.top : this.down));
+    Cube.rotate_face((is_u ? this.up : this.down));
 
     this.update_view();
   }
@@ -83,12 +83,12 @@ class Cube{
     this.down[0][2] = this.back[2][0];
     this.down[1][2] = this.back[1][0];
     this.down[2][2] = this.back[0][0];
-    this.back[2][0] = this.top[0][2];
-    this.back[1][0] = this.top[1][2];
-    this.back[0][0] = this.top[2][2];
-    this.top[0][2] = buffer[0];
-    this.top[1][2] = buffer[1];
-    this.top[2][2] = buffer[2];
+    this.back[2][0] = this.up[0][2];
+    this.back[1][0] = this.up[1][2];
+    this.back[0][0] = this.up[2][2];
+    this.up[0][2] = buffer[0];
+    this.up[1][2] = buffer[1];
+    this.up[2][2] = buffer[2];
 
     Cube.rotate_face(this.right);
 
@@ -101,12 +101,12 @@ class Cube{
 
   L(){
     var buffer = [this.front[0][0], this.front[1][0], this.front[2][0]];
-    this.front[0][0] = this.top[0][0];
-    this.front[1][0] = this.top[1][0];
-    this.front[2][0] = this.top[2][0];
-    this.top[0][0] = this.back[2][2];
-    this.top[1][0] = this.back[1][2];
-    this.top[2][0] = this.back[0][2];
+    this.front[0][0] = this.up[0][0];
+    this.front[1][0] = this.up[1][0];
+    this.front[2][0] = this.up[2][0];
+    this.up[0][0] = this.back[2][2];
+    this.up[1][0] = this.back[1][2];
+    this.up[2][0] = this.back[0][2];
     this.back[2][2] = this.down[0][0];
     this.back[1][2] = this.down[1][0];
     this.back[0][2] = this.down[2][0];
@@ -125,10 +125,10 @@ class Cube{
 
   F(){
     {
-      var buffer = [this.top[2][0], this.top[2][1], this.top[2][2]];
-      this.top[2][0] = this.left[2][2];
-      this.top[2][1] = this.left[1][2];
-      this.top[2][2] = this.left[0][2];
+      var buffer = [this.up[2][0], this.up[2][1], this.up[2][2]];
+      this.up[2][0] = this.left[2][2];
+      this.up[2][1] = this.left[1][2];
+      this.up[2][2] = this.left[0][2];
       this.left[2][2] = this.down[0][2];
       this.left[1][2] = this.down[0][1];
       this.left[0][2] = this.down[0][0];
@@ -151,10 +151,10 @@ class Cube{
 
   B(){
     {
-      var buffer = [this.top[0][0], this.top[0][1], this.top[0][2]];
-      this.top[0][0] = this.right[0][2];
-      this.top[0][1] = this.right[1][2];
-      this.top[0][2] = this.right[2][2];
+      var buffer = [this.up[0][0], this.up[0][1], this.up[0][2]];
+      this.up[0][0] = this.right[0][2];
+      this.up[0][1] = this.right[1][2];
+      this.up[0][2] = this.right[2][2];
       this.right[0][2] = this.down[2][2];
       this.right[1][2] = this.down[2][1];
       this.right[2][2] = this.down[2][0];
@@ -191,12 +191,12 @@ class Cube{
 
   M(){
     var buffer = [this.front[0][1], this.front[1][1], this.front[2][1]];
-    this.front[0][1] = this.top[0][1];
-    this.front[1][1] = this.top[1][1];
-    this.front[2][1] = this.top[2][1];
-    this.top[0][1] = this.back[2][1];
-    this.top[1][1] = this.back[1][1];
-    this.top[2][1] = this.back[0][1];
+    this.front[0][1] = this.up[0][1];
+    this.front[1][1] = this.up[1][1];
+    this.front[2][1] = this.up[2][1];
+    this.up[0][1] = this.back[2][1];
+    this.up[1][1] = this.back[1][1];
+    this.up[2][1] = this.back[0][1];
     this.back[2][1] = this.down[0][1];
     this.back[1][1] = this.down[1][1];
     this.back[0][1] = this.down[2][1];
@@ -212,10 +212,10 @@ class Cube{
   }
 
   S(){
-    var buffer = [this.top[1][0], this.top[1][1], this.top[1][2]];
-    this.top[1][0] = this.left[2][1];
-    this.top[1][1] = this.left[1][1];
-    this.top[1][2] = this.left[0][1];
+    var buffer = [this.up[1][0], this.up[1][1], this.up[1][2]];
+    this.up[1][0] = this.left[2][1];
+    this.up[1][1] = this.left[1][1];
+    this.up[1][2] = this.left[0][1];
     this.left[2][1] = this.down[1][2];
     this.left[1][1] = this.down[1][1];
     this.left[0][1] = this.down[1][0];
