@@ -28,6 +28,19 @@ class Cube{
     }
   }
 
+  static rotate_face(face){
+    var face_corner_buf = face[0][0];
+    face[0][0] = face[2][0];
+    face[2][0] = face[2][2];
+    face[2][2] = face[0][2];
+    face[0][2] = face_corner_buf;
+    var face_edge_buf = face[0][1];
+    face[0][1] = face[1][0];
+    face[1][0] = face[2][1];
+    face[2][1] = face[1][2];
+    face[1][2] = face_edge_buf;
+  }
+
   U(){
     var buffer = this.front[0];
     this.front[0] = this.right[0];
@@ -35,16 +48,7 @@ class Cube{
     this.back[0] = this.left[0];
     this.left[0] = buffer;
 
-    var top_corner_buf = this.top[0][0];
-    this.top[0][0] = this.top[2][0];
-    this.top[2][0] = this.top[2][2];
-    this.top[2][2] = this.top[0][2];
-    this.top[0][2] = top_corner_buf;
-    var top_edge_buf = this.top[0][1];
-    this.top[0][1] = this.top[1][0];
-    this.top[1][0] = this.top[2][1];
-    this.top[2][1] = this.top[1][2];
-    this.top[1][2] = top_edge_buf;
+    Cube.rotate_face(this.top);
 
     this.update_view()
   }
@@ -60,16 +64,7 @@ class Cube{
     this.back[2] = this.right[2];
     this.right[2] = buffer;
 
-    var down_corner_buf = this.down[0][0];
-    this.down[0][0] = this.down[2][0];
-    this.down[2][0] = this.down[2][2];
-    this.down[2][2] = this.down[0][2];
-    this.down[0][2] = down_corner_buf;
-    var down_edge_buf = this.down[0][1];
-    this.down[0][1] = this.down[1][0];
-    this.down[1][0] = this.down[2][1];
-    this.down[2][1] = this.down[1][2];
-    this.down[1][2] = down_edge_buf;
+    Cube.rotate_face(this.down);
 
     this.update_view();
   }
@@ -93,16 +88,7 @@ class Cube{
     this.top[1][2] = buffer[1];
     this.top[2][2] = buffer[2];
 
-    var right_corner_buf = this.right[0][0];
-    this.right[0][0] = this.right[2][0];
-    this.right[2][0] = this.right[2][2];
-    this.right[2][2] = this.right[0][2];
-    this.right[0][2] = right_corner_buf;
-    var right_edge_buf = this.right[0][1];
-    this.right[0][1] = this.right[1][0];
-    this.right[1][0] = this.right[2][1];
-    this.right[2][1] = this.right[1][2];
-    this.right[1][2] = right_edge_buf;
+    Cube.rotate_face(this.right);
 
     this.update_view()
   }
@@ -126,16 +112,7 @@ class Cube{
     this.down[1][0] = buffer[1];
     this.down[2][0] = buffer[2];
 
-    var left_corner_buf = this.left[0][0]
-    this.left[0][0] = this.left[2][0];
-    this.left[2][0] = this.left[2][2];
-    this.left[2][2] = this.left[0][2];
-    this.left[0][2] = left_corner_buf;
-    var left_edge_buf = this.left[0][1];
-    this.left[0][1] = this.left[1][0];
-    this.left[1][0] = this.left[2][1];
-    this.left[2][1] = this.left[1][2];
-    this.left[1][2] = left_edge_buf;
+    Cube.rotate_face(this.left);
 
     this.update_view()
   }
@@ -160,18 +137,8 @@ class Cube{
       this.right[1][0] = buffer[1];
       this.right[2][0] = buffer[2];
     }
-    {
-      var front_corner_buffer = this.front[0][0];
-      this.front[0][0] = this.front[2][0];
-      this.front[2][0] = this.front[2][2];
-      this.front[2][2] = this.front[0][2];
-      this.front[0][2] = front_corner_buffer;
-      var front_edge_buffer = this.front[0][1];
-      this.front[0][1] = this.front[1][0];
-      this.front[1][0] = this.front[2][1];
-      this.front[2][1] = this.front[1][2];
-      this.front[1][2] = front_edge_buffer;
-    }
+
+    Cube.rotate_face(this.front);
 
     this.update_view()
   }
@@ -196,18 +163,8 @@ class Cube{
       this.left[1][0] = buffer[1];
       this.left[0][0] = buffer[2];
     }
-    {
-      var back_corner_buffer = this.back[0][0];
-      this.back[0][0] = this.back[2][0];
-      this.back[2][0] = this.back[2][2];
-      this.back[2][2] = this.back[0][2];
-      this.back[0][2] = back_corner_buffer;
-      var back_edge_buffer = this.back[0][1];
-      this.back[0][1] = this.back[1][0];
-      this.back[1][0] = this.back[2][1];
-      this.back[2][1] = this.back[1][2];
-      this.back[1][2] = back_edge_buffer;
-    }
+
+    Cube.rotate_face(this.back);
 
     this.update_view();
   }
