@@ -97,6 +97,11 @@ function merge(left, right) {
 
 const testArray = [48, 12, 63, 2211, 363, 4, 99, 51, 7];
 
+/** This uses two new(1) built in methods String.Prototype.padStart
+ *  and String.Prototype.padEnd were introduced in ES2017 (ES8)
+ *  which perform the required padding functions.
+ * (1) node >= 8.2.1 (or >= 7.5.0 if run with the --harmony flag)
+ */
 console.log('Bubble Sort: '.padEnd(16), bubbleSort(testArray));
 console.log('Selection Sort: '.padEnd(16), selectionSort(testArray));
 console.log('Insertion sort: '.padEnd(16), insertionSort(testArray));
