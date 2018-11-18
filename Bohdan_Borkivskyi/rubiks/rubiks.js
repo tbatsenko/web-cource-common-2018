@@ -260,7 +260,11 @@ class Cube{
   }
 
   J(){
-    this.R().U().R_().F_().R().U().R_().U_().R_().F().R().R().U_().R_().U_();
+    return this.R().U().R_().F_().R().U().R_().U_().R_().F().R().R().U_().R_().U_();
+  }
+
+  J_(){
+    return this.L_().U_().L().F().L_().U_().L().U().L().F_().L().L().U().L().U();
   }
 
   scramble(length = 20){
