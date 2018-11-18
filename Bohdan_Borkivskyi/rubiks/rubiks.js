@@ -312,7 +312,11 @@ function keyUp(event){
 
   if(event.code.length != 4){return}
 
-  rubiks[event.code[3]+(!rubiks.clockwise ? '_' : '')]()
+  try {
+    rubiks[event.code[3]+(!rubiks.clockwise ? '_' : '')]()
+  }catch (e) {
+    console.log("Move "+event.code[3]+(!rubiks.clockwise ? '_' : '')+" is not implemented")
+  }
 
   rubiks.clockwise = true;
 }
