@@ -1,0 +1,15 @@
+<main class="main">
+    <nav class="side_menu">
+        <button class="compose_button">Написати</button>
+        {{#side_menu}}
+            {{#buttons}}
+                <button class="side_button">
+                    <img src="{{src}}" class="side_button__img">
+                    <span class="side_button__text">{{text}}</span>
+                    <span class="side_button__number">{{number}}</span>
+                </button>
+            {{/buttons}}
+        {{/side_menu}}
+    </nav>
+    <section id="emails_window" class="emails_window"></section>
+</main>

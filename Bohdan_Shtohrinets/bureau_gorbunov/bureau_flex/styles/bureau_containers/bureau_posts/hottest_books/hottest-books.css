@@ -1,0 +1,27 @@
+.hottest-books__book-image {
+    width: 100%;
+}
+.hottest-books__book {
+    align-self: flex-start;
+    color: transparent;
+    flex-grow: 1;
+    flex-basis: 40%;
+}
+
+.hottest-books__book_advices {
+    margin-right: 10px;
+}
+
+.hottest-books__book_manifest {
+    margin-left: 10px;
+}
+
+.hottest-books__book_tomato {
+    margin-right: 5px;
+}
+
+.hottest-books__book_chess {
+    margin-left: 5px;
+}
+
+/*# sourceMappingURL=hottest-books.css.map */

@@ -1,0 +1,20 @@
+<section class="mails__navigation">
+    {{#mails_navigation}}
+        <button class="mails__mail__button"><img src="images/{{.}}"></button>
+    {{/mails_navigation}}
+</section>
+<section class="mails__sorting">
+    {{#sorting}}
+        <button class="mails__sorting__button"><img src="images/{{icon}}">{{text}}</button>
+    {{/sorting}}
+</section>
+{{#mails}}
+    <section class="mails__mail">
+        {{#buttons}}
+            <button class="mails__mail__button"><img src="images/{{.}}"></button>
+        {{/buttons}}
+        <h4 class="mails__mail__title">{{title}}</h4>
+        <p class="mails_mail__description">{{description}}</p>
+        <h5 class="mails__mail__time">{{date}}</h5>
+    </section>
+{{/mails}}

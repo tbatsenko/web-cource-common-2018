@@ -1,0 +1,32 @@
+@import "header";
+@import "top-banner";
+@import "main-content";
+@import "daily-news";
+@import "footer";
+@import "nav";
+@import "account-menu";
+@import "daily-news";
+@import "external-resources";
+@import "language-selector";
+@import "top-banner";
+@import "theme";
+@import "social-media-link";
+
+html, body {
+  margin: 0;
+  padding: 0;
+  font-family: Bureausans, Arial, sans-serif;
+}
+
+.main-content--padding, .header--padding, .footer--padding {
+  margin-left: 100px;
+
+  margin-right: 100px;
+}
+
+@media (max-width: 840px) {
+  .main-content--padding, .header--padding, .footer--padding {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+}

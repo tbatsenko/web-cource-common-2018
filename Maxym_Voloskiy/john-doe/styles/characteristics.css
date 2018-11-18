@@ -1,0 +1,48 @@
+.characteristics {
+  overflow: hidden;
+  margin: 40px 50px;
+}
+
+.characteristics__title {
+  line-height: 1.5em;
+  font-weight: bold;
+  color: #181818;
+  float: left;
+  clear: left;
+}
+
+.characteristics__metric {
+  height: 2em;
+  display: block;
+  overflow: hidden;
+  position: relative;
+}
+
+.characteristics__title--right {
+}
+.characteristics__title--left {
+  float: right;
+  clear: right;
+}
+
+.characteristics__value {
+  line-height: 1.5em;
+  color: #181818;
+  float: right;
+  clear: right;
+}
+
+.characteristics__value--center {
+  position: absolute;
+  width: calc(100% - 30px);
+  left: 5px;
+  top: 1em;
+
+  display: inline;
+  text-align: center;
+}
+
+.characteristics--ranges .characteristics__title {
+  font-size: 0.7rem;
+  color: #181818;
+}

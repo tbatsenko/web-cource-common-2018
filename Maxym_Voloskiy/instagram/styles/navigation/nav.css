@@ -1,0 +1,42 @@
+nav {
+  height: 60px;
+  background-color: white;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  border-bottom: 1px solid #e6e6e6;
+  display: flex;
+  justify-content: space-around;
+}
+a.logo {
+  height: 25px;
+  width: 100px;
+  text-indent: -9999px;
+  margin: 20px 0;
+}
+input {
+  height: 22px;
+  width: 160px;
+  margin: 20px 0;
+  border-radius: 2px;
+  border: 1px solid #dbdbdb;
+  color: #999999;
+  background-color: #fafafa;
+  font-size: 10px;
+  text-align: center;
+}
+input:focus {
+  outline: none;
+}
+.activities {
+  display: flex;
+  margin: 18px;
+  padding: 0;
+}
+.activities a {
+  height: 20px;
+  width: 20px;
+  text-indent: -9999px;
+  margin: 0 10px;
+}
+/*# sourceMappingURL=nav.css.map */

@@ -1,0 +1,9 @@
+{
+  "version": 3,
+  "mappings": "AACE,wBAAQ;EACN,KAAK,EAAE,IAAI",
+  "sources": [
+    "full-page-advert.scss"
+  ],
+  "names": [],
+  "file": "full-page-advert.css"
+}

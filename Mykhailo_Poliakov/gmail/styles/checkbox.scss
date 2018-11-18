@@ -1,0 +1,41 @@
+.checkbox {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+
+    &__input {
+        display: none;
+    }
+    
+    &__input + &__style::after {
+       @extend %icon;
+       content: 'check_box_outline_blank';
+       font-size: 20px;
+       color: #cccfcf;
+    }
+    
+    &__input:hover + &__style::after {
+        color: #020202;
+        cursor: pointer;
+    }
+    
+    &__input:checked + &__style::after {
+        content: 'check_box';
+        color: #020202;
+    }
+
+    $base: &;
+
+    &--star 
+    {
+        #{$base}__input + #{$base}__style::after {
+            content: 'star_border';
+        }
+    
+        #{$base}__input:checked + #{$base}__style::after {
+            content: 'star';
+            color: #f3b200;
+        }
+    } 
+}
+

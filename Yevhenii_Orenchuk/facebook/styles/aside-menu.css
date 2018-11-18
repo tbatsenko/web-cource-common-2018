@@ -1,0 +1,138 @@
+.right-menu__stories {
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border-radius: 5px;
+  overflow: hidden;
+  border: 1px solid #dddfe2;
+}
+
+.story-icon-box, .stories__link, .header__tool-bar, .story__main-body, .right-menu__top-bar {
+  display: flex;
+  align-items: center;
+}
+
+.point-separator {
+  font-weight: bold;
+  color: #616770;
+  padding: 3px;
+}
+
+.story__timestamp {
+  text-decoration: none;
+  color: #616770;
+  font-size: 12px;
+}
+.story__timestamp:hover {
+  text-decoration: underline;
+}
+
+.add-story_icon, .stories__archive-icon {
+  background-image: url("https://static.xx.fbcdn.net/rsrc.php/v3/yb/r/9zsneNtHdGr.png");
+  background-repeat: no-repeat;
+  background-size: 53px 334px;
+  height: 12px;
+  width: 12px;
+  display: inline-block;
+}
+
+.right-menu__stories {
+  padding: 12px;
+}
+
+.right-menu__top-bar {
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.story__main-body {
+  margin-bottom: 10px;
+}
+
+.stories-header_link {
+  text-decoration: none;
+}
+.stories-header_link:hover {
+  text-decoration: underline;
+}
+
+.stories__header {
+  margin: 0;
+  color: #616770;
+  font-size: 13px;
+}
+
+.stories__link {
+  color: #365899;
+  text-decoration: none;
+  font-size: 13px;
+}
+.stories__link:hover {
+  text-decoration: underline;
+}
+
+.stories__archive-icon {
+  background-position: 0 -308px;
+  margin-right: 5px;
+}
+
+.add-story__icon-box {
+  background-color: #f5f6f7;
+  border: 1px solid #dadde1;
+}
+
+.story-icon-box {
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  justify-content: center;
+  float: left;
+  margin-right: 10px;
+  overflow: hidden;
+}
+.story-icon-box:hover {
+  background-color: #e9ebee;
+}
+
+.add-story_icon {
+  background-position: 0 -180px;
+  height: 24px;
+  width: 24px;
+}
+
+.story__owner-name {
+  font-size: 13px;
+  font-weight: bold;
+}
+
+.story__main-text_link {
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  color: #365899;
+}
+.story__main-text_link:hover {
+  text-decoration: underline;
+}
+
+.story__timestamp {
+  margin-top: 3px;
+}
+.story__timestamp:hover {
+  text-decoration: none;
+}
+
+.story__owner-picture {
+  padding: 2px;
+  width: 55px;
+  height: 55px;
+}
+
+.new-story {
+  padding: 2px;
+  border: 2px solid #3578e5;
+  display: block;
+}
+
+/*# sourceMappingURL=aside-menu.css.map */

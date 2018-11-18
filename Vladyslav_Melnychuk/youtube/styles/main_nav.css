@@ -1,0 +1,28 @@
+.main-nav {
+  color: #111111;
+  padding: 0;
+  margin: 0;
+  width: 240px;
+  height: 1378px;
+  background: rgba(0, 0, 0, 0.03); }
+  .main-nav__nav-element {
+    display: block;
+    width: 192px;
+    height: 40px;
+    padding: 0 24px; }
+    .main-nav__nav-element--link {
+      text-decoration: none;
+      color: inherit;
+      font-size: 1.4rem;
+      font-weight: 400;
+      line-height: 2.1rem; }
+  .main-nav__section {
+    border-bottom: 1px solid grey; }
+  .main-nav__section-title {
+    font-size: 1.4rem;
+    font-weight: 500;
+    letter-spacing: .007px;
+    text-transform: uppercase;
+    color: #666; }
+
+/*# sourceMappingURL=main_nav.css.map */

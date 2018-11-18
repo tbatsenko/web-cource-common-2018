@@ -1,0 +1,24 @@
+@import "rubiks";
+
+body{
+  background-color: #f0f0f0;
+}
+
+.scramble{
+  background-color: gold;
+  border: 3px solid crimson;
+  border-radius: 5px;
+  width: 50%;
+  height: 80px;
+  margin-left: 25%;
+  margin-top: 100px;
+  font-family: Helvetica, Arial, sans-serif;
+  font-weight: 600;
+  font-size: 24px;
+  color: crimson;
+  cursor: pointer;
+  outline: none;
+  &:active{
+    font-size: 22px;
+  }
+}

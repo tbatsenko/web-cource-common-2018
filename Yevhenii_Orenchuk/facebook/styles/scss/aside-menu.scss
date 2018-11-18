@@ -1,0 +1,102 @@
+@import "main";
+@import "icons";
+
+$link-color: #365899;
+
+.right-menu__stories {
+  @extend %feed__item;
+  padding: 12px;
+}
+.right-menu__top-bar {
+  @extend %centered;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+.story__main-body {
+  @extend %centered;
+  margin-bottom: 10px;
+}
+.stories-header_link {
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+.stories__header {
+  margin: 0;
+  color: #616770;
+  font-size: 13px;
+}
+.header__tool-bar {
+  @extend %centered;
+}
+.stories__link {
+  @extend %centered;
+  color: $link-color;
+  text-decoration: none;
+  font-size: 13px;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+.stories__archive-icon {
+  @extend %facebook-icons_stories;
+  background-position: 0 -308px;
+  margin-right: 5px;
+}
+.add-story__icon-box {
+  background-color: #f5f6f7;
+  border: 1px solid #dadde1;
+}
+.story-icon-box {
+  @extend %centered;
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  justify-content: center;
+  float: left;
+  margin-right: 10px;
+  overflow: hidden;
+
+  &:hover {
+    background-color: #e9ebee;
+  }
+}
+.add-story_icon {
+  @extend %facebook-icons_stories;
+  background-position: 0 -180px;
+  height: 24px;
+  width: 24px;
+}
+.story__owner-name {
+  font-size: 13px;
+  font-weight: bold;
+}
+.story__main-text_link {
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  color: $link-color;
+  &:hover {
+    text-decoration: underline;
+  }
+}
+.story__timestamp {
+  @extend %timestamp;
+  margin-top: 3px;
+  &:hover {
+    text-decoration: none;
+  }
+}
+.story__owner-picture {
+  padding: 2px;
+  width: 55px;
+  height: 55px;
+}
+.new-story {
+  padding: 2px;
+  border: 2px solid #3578e5;
+  display: block;
+}

@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-.button--top-menu {
-  background-color: transparent;
-=======
 body {
   margin: 0;
   padding: 0;
@@ -17,40 +13,11 @@ html, body {
 }
 
 .button--top-menu {
->>>>>>> parent of 64dd120... Merge branch 'master' of /home/zabulskyy/UCU/Web/web-cource-common with conflicts.
   outline: none;
   border: none;
   box-sizing: border-box;
 }
 
-<<<<<<< HEAD
-.button {
-  cursor: pointer;
-}
-.button--top-menu {
-  display: flex;
-  height: 40px;
-  width: 40px;
-  align-items: center;
-  justify-content: center;
-  padding: 0;
-  margin: 0px 2px 0 2px;
-}
-
-.h--video-block-title {
-  margin: 24px 0 24px 0;
-  font-family: inherit;
-  font-size: 16px;
-  font-weight: 600;
-  color: black;
-}
-.h--video-title {
-  margin: 8px 0 8px 0;
-  font-family: inherit;
-  font-size: 14px;
-  font-weight: 600;
-  color: black;
-=======
 .link--left-menu {
   text-decoration: none;
 }
@@ -61,7 +28,6 @@ html, body {
 
 .main__center, .header--center {
   width: calc(100% - 240px);
->>>>>>> parent of 64dd120... Merge branch 'master' of /home/zabulskyy/UCU/Web/web-cource-common with conflicts.
 }
 
 .img--user {
@@ -70,23 +36,6 @@ html, body {
   object-fit: cover;
 }
 
-<<<<<<< HEAD
-.img--user-top {
-  width: 30px;
-  height: 30px;
-}
-.img--user-main-left {
-  width: 24px;
-  height: 24px;
-  margin-right: 24px;
-}
-.img--video {
-  width: 210px;
-}
-
-.link--left-menu, .link--top-menu {
-  background-color: transparent;
-=======
 .material-icons {
   color: #9b9b9b;
 }
@@ -102,7 +51,6 @@ html, body {
   justify-content: center;
   padding: 0;
   margin: 0px 2px 0 2px;
->>>>>>> parent of 64dd120... Merge branch 'master' of /home/zabulskyy/UCU/Web/web-cource-common with conflicts.
 }
 
 .link {
@@ -160,8 +108,6 @@ html, body {
   width: 100%;
 }
 
-<<<<<<< HEAD
-=======
 .h--video-block-title {
   margin: 24px 0 24px 0;
   font-family: inherit;
@@ -177,7 +123,6 @@ html, body {
   color: black;
 }
 
->>>>>>> parent of 64dd120... Merge branch 'master' of /home/zabulskyy/UCU/Web/web-cource-common with conflicts.
 .search-form {
   display: flex;
   flex-direction: row;
@@ -185,10 +130,6 @@ html, body {
   border-radius: 2px;
   width: 540px;
   height: 30px;
-<<<<<<< HEAD
-  margin: auto;
-=======
->>>>>>> parent of 64dd120... Merge branch 'master' of /home/zabulskyy/UCU/Web/web-cource-common with conflicts.
 }
 .search-form__text-input {
   display: flex;
@@ -215,61 +156,6 @@ html, body {
   background-color: #f3f3f3;
 }
 
-<<<<<<< HEAD
-.header__left, .main__left {
-  width: 240px;
-}
-
-.header__center, .main__center {
-  width: calc(100% - 240px);
-}
-
-.main {
-  display: flex;
-  flex-direction: row;
-  height: calc(100% - 56px);
-}
-.main__left {
-  display: flex;
-  height: 100%;
-  flex-direction: column;
-  background-color: #f5f5f5;
-  overflow: hidden;
-}
-.main__left::-webkit-scrollbar {
-  width: 8px;
-}
-.main__left::-webkit-scrollbar-track {
-  background: transparent;
-}
-.main__left::-webkit-scrollbar-thumb {
-  height: 60px;
-  background: #cecece;
-}
-.main__left:hover {
-  overflow: auto;
-}
-.main__left-block {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  padding: 8px 0 8px 0;
-  border-bottom: 1px solid #e1e1e1;
-  flex-shrink: 0;
-}
-.main__center {
-  height: 100%;
-  background-color: #fafafa;
-  overflow-y: scroll;
-}
-
-.header__left, .main__left {
-  width: 240px;
-}
-
-.header__center, .main__center {
-  width: calc(100% - 240px);
-=======
 .video-block {
   display: flex;
   width: 1280px;
@@ -316,7 +202,6 @@ html, body {
 }
 .img--video {
   width: 210px;
->>>>>>> parent of 64dd120... Merge branch 'master' of /home/zabulskyy/UCU/Web/web-cource-common with conflicts.
 }
 
 .header {
@@ -328,92 +213,28 @@ html, body {
   box-shadow: 0 1px 5px 1px black;
   z-index: 2;
 }
-<<<<<<< HEAD
-.header__left {
-=======
 .header--left {
->>>>>>> parent of 64dd120... Merge branch 'master' of /home/zabulskyy/UCU/Web/web-cource-common with conflicts.
   padding-left: 16px;
   display: flex;
   flex-direction: row;
   align-items: center;
   box-sizing: border-box;
 }
-<<<<<<< HEAD
-.header__left .button--top-menu {
-  margin-right: 24px;
-}
-.header__center {
-=======
 .header--left .button--top-menu {
   margin-right: 24px;
 }
 .header--center {
->>>>>>> parent of 64dd120... Merge branch 'master' of /home/zabulskyy/UCU/Web/web-cource-common with conflicts.
   display: flex;
   align-items: center;
   flex-direction: row;
   justify-content: space-between;
   padding-right: 16px;
 }
-<<<<<<< HEAD
-.header__buttons {
-=======
 .header--buttons {
->>>>>>> parent of 64dd120... Merge branch 'master' of /home/zabulskyy/UCU/Web/web-cource-common with conflicts.
   display: flex;
   flex-direction: row;
 }
 
-<<<<<<< HEAD
-.video-block {
-  display: flex;
-  width: 1280px;
-  margin: auto;
-  flex-direction: column;
-  border-bottom: 1px solid #e1e1e1;
-}
-.video-block__row {
-  display: flex;
-  width: 100%;
-  flex-direction: row;
-  justify-content: space-between;
-}
-
-.video {
-  display: flex;
-  flex-direction: column;
-  width: 210px;
-  height: 204px;
-  box-sizing: border-box;
-}
-.video__figure {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  margin: 0;
-}
-.video__info {
-  display: flex;
-  width: 100%;
-  margin: 0;
-  padding: 0;
-  flex-direction: column;
-}
-
-body {
-  margin: 0;
-  padding: 0;
-  font-family: Roboto, Arial, sans-serif;
-}
-
-html, body {
-  height: 100%;
-}
-
-.material-icons {
-  color: #9b9b9b;
-=======
 .main {
   display: flex;
   flex-direction: row;
@@ -447,7 +268,6 @@ html, body {
   height: 100%;
   background-color: #fafafa;
   overflow-y: scroll;
->>>>>>> parent of 64dd120... Merge branch 'master' of /home/zabulskyy/UCU/Web/web-cource-common with conflicts.
 }
 
-/*# sourceMappingURL=main.css.map */
+/*# sourceMappingURL=main.oldcss.map */

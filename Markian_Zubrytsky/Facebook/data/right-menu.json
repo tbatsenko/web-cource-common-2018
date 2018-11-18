@@ -1,0 +1,16 @@
+{
+  "stories": [
+    {
+      "image": "add_icon.png",
+      "text": "Add Story"
+    },
+    {
+      "image": "young_male_icon.png",
+      "text": "Young Male"
+    },
+    {
+      "image": "female_logo.png",
+      "text": "Female"
+    }
+  ]
+}

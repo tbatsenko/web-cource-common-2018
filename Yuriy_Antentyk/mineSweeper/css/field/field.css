@@ -1,0 +1,80 @@
+:root{
+    --field-size: 10;
+    --field__cell-size: 40px;
+    --field__cell-icon-size: 35px;
+
+    --field__cell-background-color-opened: #ecf0f1;
+    --field__cell-border-color-opened: #bdc3c7;
+
+    --field__cell-background-color-closed: #95a5a6;
+    --field__cell-border-color-closed: #7f8c8d;
+
+    --field__cell-color-1: #0100fe;
+    --field__cell-color-2: #008000;
+    --field__cell-color-3: #fa0300;
+    --field__cell-color-4: #010082;
+    --field__cell-color-5: #800000;
+    --field__cell-color-6: #017f7c;
+    --field__cell-color-7: #0c0c0c;
+    --field__cell-color-8: #818181;
+}
+
+@import url('https://fonts.googleapis.com/css?family=Allerta+Stencil');
+
+.field{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: calc(var(--field-size) * var(--field__cell-size));
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.field__cell{
+    box-sizing: border-box;
+    height: var(--field__cell-size);
+    width: var(--field__cell-size);
+    margin: 0;
+    padding: 0;
+    background-color: transparent;
+    border: 1px solid transparent;
+    border-radius: 10px;
+    cursor: pointer;
+    text-align: center;
+    font-family: 'Allerta Stencil', sans-serif;
+    font-weight: bold;
+    font-size: var(--field__cell-size);
+    line-height: var(--field__cell-size);
+}
+
+.field__cell_opened{
+    background-color: var(--field__cell-background-color-opened);
+    border-color: var(--field__cell-border-color-opened);
+}
+.field__cell_closed{
+    background-color: var(--field__cell-background-color-closed);
+    border-color: var(--field__cell-border-color-closed);
+}
+
+.field__cell_flagged{
+    background-image: url("../../img/flag.png");
+    background-size: var(--field__cell-icon-size) auto;
+    background-repeat: no-repeat;
+    background-position: 2px 2px;
+}
+
+.field__cell_bombed{
+    background-image: url("../../img/mine.jpg");
+    background-size: var(--field__cell-icon-size) auto;
+    background-repeat: no-repeat;
+    background-position: 2px 4px;
+}
+
+.field__cell_number_1{color: var(--field__cell-color-1);}
+.field__cell_number_2{color: var(--field__cell-color-2);}
+.field__cell_number_3{color: var(--field__cell-color-3);}
+.field__cell_number_4{color: var(--field__cell-color-4);}
+.field__cell_number_5{color: var(--field__cell-color-5);}
+.field__cell_number_6{color: var(--field__cell-color-6);}
+.field__cell_number_7{color: var(--field__cell-color-7);}
+.field__cell_number_8{color: var(--field__cell-color-8);}

@@ -1,0 +1,17 @@
+@import "../colors.less";
+
+@import "../header/header.less";
+@import "../aside-nav/aside-nav.less";
+
+@video-nav-height: 45px;
+
+.video-nav{
+    background-color: @youtube-white;
+    position: fixed;
+    z-index: 2;
+    top: @header-height;
+    left: @aside-nav-width;
+    right: 0;
+    border-bottom: 1px solid @youtube-light-gray;
+    height: @video-nav-height;
+}
