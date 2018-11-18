@@ -3,6 +3,8 @@ canvas.width = window.innerWidth - 10;
 canvas.height = window.innerHeight - 10;
 let ctx = canvas.getContext("2d");
 
+let timeRunning = 0;
+
 function getRandomColor() {
     return "#" + ((1 << 24) * Math.random() | 0).toString(16);
 }
@@ -23,20 +25,23 @@ class SpaceShip {
         this.dt = 0;
         this.turnSpeed = 360 / 180 * Math.PI;
         this.rotCoef = 0;
+
         this.thrustSpeed = 5;
         this.thrustPower = {x: 0, y: 0};
         this.thrusting = false;
-
         this.thrustSound = new Audio("audio/thrust.wav");
+
         this.fireSound = new Audio("audio/fire.wav");
+        this.timeLastFired = 0;
+        this.fireRate = 750; // per second
+        this.bullets = [];
+
         this.deathSound = new Audio("audio/bang.wav");
 
-        this.bullets = [];
     }
 
     rotate() {
         this.a += this.rotCoef * this.turnSpeed * this.dt;
-        // console.log(this.dt);
     }
 
     draw() {
@@ -82,11 +87,12 @@ class SpaceShip {
         this.y += this.thrustPower.y;
     }
 
-    fire() {
-        this.bullets.push(new Bullet(this.x, this.y, this.a));
-        // let x = Math.cos(this.a);
-        // let y = Math.sin(this.a);b
-        this.fireSound.play();
+    fire(time) {
+        if (time - this.timeLastFired > this.fireRate) {
+            this.bullets.push(new Bullet(this.x, this.y, this.a));
+            this.fireSound.play();
+            this.timeLastFired = time;
+        }
     }
 
     die() {
@@ -116,7 +122,17 @@ class SpaceShip {
         } else if (this.y > canvas.height - this.radius) {
             this.y = this.radius;
         }
+
+        for (let i = 0; i < this.bullets.length; i++) {
+            if (this.bullets[i].x < 0 || this.bullets[i].y < 0) {
+                this.destroyBullet(i);
+            }
+        }
         this.lastFrame = time;
+    }
+
+    destroyBullet(i) {
+        this.bullets.splice(i, 1);
     }
 }
 
@@ -147,8 +163,6 @@ class Bullet {
         this.x += this.dx;
         this.y += this.dy;
         this.draw();
-
-        // if ()
     }
 }
 
@@ -209,7 +223,7 @@ function keyDown(ev) {
     } else if (ev.key === "ArrowRight") {
         spaceShip.rotCoef = -1;
     } else if (ev.key === " ") {
-        spaceShip.fire();
+        spaceShip.fire(timeRunning);
     }
 }
 
@@ -272,6 +286,7 @@ function onGameOver() {
 
 // Main
 function main(time = 0) {
+    timeRunning = time;
     if (isGameLost) {
         return 0;
     }
@@ -282,7 +297,6 @@ function main(time = 0) {
     ctx.clearRect(0, 0, innerWidth, innerHeight);
 
     for (let j = 0; j < spaceShip.bullets.length; j++) {
-        console.log(spaceShip.bullets[j]);
         spaceShip.bullets[j].update();
     }
 
@@ -294,7 +308,8 @@ function main(time = 0) {
 
         for (let j = 0; j < spaceShip.bullets.length; j++) {
             if (distance(asteroids[i].x, asteroids[i].y, spaceShip.bullets[j].x, spaceShip.bullets[j].y) < asteroids[i].radius + bulletSize) {
-                asteroids[i] = createAsteroid(spaceShip.x, spaceShip.y);
+                asteroids.splice(i, 1);
+                spaceShip.destroyBullet(j);
             }
         }
     }
@@ -306,7 +321,6 @@ function main(time = 0) {
         ctx.fillStyle = "red";
         ctx.font = "bold 40px Arial";
         let displayScore = Math.round(score);
-        // console.log(displayScore & 10);
         if (displayScore % 10 === 0 && displayScore !== lastRound) {
             lastRound = displayScore;
             asteroids.push(createAsteroid(spaceShip.x, spaceShip.y));
