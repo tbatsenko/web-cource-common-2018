@@ -17,14 +17,15 @@
 }
 .header-left {
     display: flex;
+    align-items: center;
 }
 
 .header__facebook-icon{
     float: left;
     margin: 0.3em;
     background-position: 0 -442px;
-    height: 1.7em;
-    width: 1.7em;
+    height: 1.55em;
+    width: 1.6em;
     color: transparent;
     cursor: pointer;
     padding: 0;
@@ -34,7 +35,7 @@
     border: 1px solid #3b5998;
     float: left;
     display: flex;
-    height: 1.45em;
+    height: 1.5em;
     border-radius: 3px;
     margin: 0.2em 0.1em 0.2em 0.1em;
     width: 28em;
@@ -43,7 +44,6 @@
 .search-form__input{
     max-width: 100em;
     padding-left: 0.3em;
-    height: 1.6em;
     min-width: 5em;
     width: 100%;
     border: none;
@@ -56,7 +56,6 @@
     cursor: pointer;
     text-align: center;
     width: 4.5em;
-    height: 1.6em;
     background-color: #ebedf0;
 
 }
