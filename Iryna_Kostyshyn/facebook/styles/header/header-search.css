@@ -1,0 +1,41 @@
+.header-search {
+  line-height: 40px;
+  display: inline;
+}
+.header-search__input {
+  width: 400px;
+  border-radius: 3px 0 0 3px;
+  height: 24px;
+  padding: 5px;
+  font-size: 14px;
+  border: none;
+  vertical-align: middle;
+  box-sizing: border-box;
+  margin-right: 0;
+}
+.header-search__button {
+  margin-left: 0;
+  border: none;
+  height: 24px;
+  background: #f6f5f7;
+  width: 45px;
+  overflow: hidden;
+  color: transparent;
+  position: relative;
+  right: 4px;
+  vertical-align: middle;
+  border-radius: 0 3px 3px 0;
+}
+.header-search__button:before {
+  content: "";
+  height: 16px;
+  width: 16px;
+  position: absolute;
+  left: 13px;
+  top: 4px;
+  background-size: 16px;
+  background: url("https://static.xx.fbcdn.net/rsrc.php/v3/yx/r/tjBuxcd0g0m.png") 3px 32px;
+  border-radius: 0 0 3px 3px;
+}
+
+/*# sourceMappingURL=header-search.css.map */

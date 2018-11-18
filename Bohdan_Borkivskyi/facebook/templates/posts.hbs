@@ -1,0 +1,34 @@
+{{#posts}}
+    <section class="post">
+        <header class="post__header">
+            <a href="{{author_link}}" class="post__header-img_link"><img src="{{author_img}}" class="post__header-img"></a>
+            <section class="post__header-post_info">
+                <a href="{{author_link}}" class="post__header-author">{{author}}</a>
+                <a href="#" class="post__header-post_time">{{time}}</a>
+            </section>
+        </header>
+        <section class="post__main">
+            {{#text}}
+                <p class="post__main-paragraph">{{.}}</p>
+            {{/text}}
+            {{#if has_media}}
+                <img src="{{media_url}}" class="post__main-media">
+            {{/if}}
+        </section><footer class="post__footer">
+            <section class="post__footer-react">
+                <button class="post__footer-react_button">
+                    <img src="images/icons/post/like.png" class="post__footer-react_img">
+                    <span class="post__footer-react_text">Like</span>
+                </button>
+                <button class="post__footer-react_button">
+                    <img src="images/icons/post/comment.png" class="post__footer-react_img">
+                    <span class="post__footer-react_text">Comment</span>
+                </button>
+                <button class="post__footer-react_button">
+                    <img src="images/icons/post/share.png" class="post__footer-react_img">
+                    <span class="post__footer-react_text">Share</span>
+                </button>
+            </section>
+        </footer>
+    </section>
+{{/posts}}

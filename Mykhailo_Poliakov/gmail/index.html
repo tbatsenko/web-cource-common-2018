@@ -7,6 +7,7 @@
     <title>Inbox</title>
     <link rel="stylesheet" href="styles/style.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.12/handlebars.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 </head>
 <body>
     <div class="gmail-layout">
@@ -42,15 +43,27 @@
     </div>
     
     <script>
-        const render = async (templateURL, dataURL, className) => {
-            const source = await (await fetch("templates/" + templateURL)).text();
-            const template = Handlebars.compile(source);
-            const data = await (await fetch("data/" + dataURL)).json();
-            document.querySelector(className).insertAdjacentHTML('beforeEnd', template(data));
+        function render(templateURL, dataURL, className) {
+            $.get("templates/" + templateURL, function(source) {
+                const template = Handlebars.compile(source);
+                $.getJSON("data/" + dataURL, function(data) {
+                    $(className).append(template(data));
+                });
+            });
         };
 
-        render("email.handlebars", "email.json", ".gmail-main__emails")
-        render("sidebar.handlebars", "sidebar.json", ".gmail-sidebar__menu")
+        render("email.handlebars", "email.json", ".gmail-main__emails");
+        render("sidebar.handlebars", "sidebar.json", ".gmail-sidebar__menu");
+
+        $(".gmail-header__button--menu").on("click", function() {
+            if ($(".gmail-sidebar").hasClass("gmail-sidebar--min")) {
+                $(".gmail-sidebar").removeClass("gmail-sidebar--min");
+                $(".compose-button").removeClass("compose-button--min");
+            } else {
+                $(".gmail-sidebar").addClass("gmail-sidebar--min");
+                $(".compose-button").addClass("compose-button--min");
+            }
+        });
     </script>
 </body>
 </html>

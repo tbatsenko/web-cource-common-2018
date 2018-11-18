@@ -9,7 +9,9 @@
 
     <main class="main">
         <section title="Main photo" class="photo-info">
-            <div role="img" class="main-photo"></div>
+            <div class="main-photo-container">
+                <img src="https://res.cloudinary.com/dh2chxfzx/image/upload/c_scale,h_900,o_100,q_100,w_469/v1541170697/john-doe.jpg" class="main-photo">
+            </div>
             <blockquote class="quote">I love to compete with<br> others and when I do, I<br> always try my best to win</blockquote>
             <dl class="stats">
                 <dt class="stats_definition-name">AGE</dt><dd class="stats_definition-value">35</dd>
@@ -41,43 +43,62 @@
 
             </section>
             <section title="PREFERENCES" class="preferences">
+                <h3 class="cv_section_header">PREFERENCES</h3>
                     <div class="dot-grid">
-                        <h3 style="grid-column: 1; grid-row: 1" class="preferences_item_container cv_section_header">PREFERENCES</h3>
-                        <div style="grid-column: 1; grid-row: 2; " class="preferences_item_container"><span class="preferences_item">Online Games</span></div>
-                        <div class="oval oval_brown" style="grid-column: 2; grid-row: 2"></div>
-                        <div class="oval oval_brown" style="grid-column: 3; grid-row: 2"></div>
-                        <div class="oval oval_brown" style="grid-column: 4; grid-row: 2"></div>
-                        <div class="oval oval_brown" style="grid-column: 5; grid-row: 2"></div>
-                        <div class="oval oval_brown" style="grid-column: 6; grid-row: 2"></div>
+                        <div class="preferences__row">
+                            <div  class="preferences_item_container"><span class="preferences_item">Online Games</span></div>
+                            <div class="preferences__value">
+                                <div class="oval oval_brown"></div>
+                                <div class="oval oval_brown"></div>
+                                <div class="oval oval_brown"></div>
+                                <div class="oval oval_brown"></div>
+                                <div class="oval oval_brown"></div>
+                            </div>
+                        </div>
 
-                        <div style="grid-column: 1; grid-row: 3;" class="preferences_item_container"><span class="preferences_item">Console Games</span></div>
-                        <div class="oval oval_brown" style="grid-column: 2; grid-row: 3"></div>
-                        <div class="oval oval_brown" style="grid-column: 3; grid-row: 3"></div>
-                        <div class="oval oval_brown" style="grid-column: 4; grid-row: 3"></div>
-                        <div class="oval oval_grey" style="grid-column: 5; grid-row: 3"></div>
-                        <div class="oval oval_grey" style="grid-column: 6; grid-row: 3"></div>
+                        <div class="preferences__row">
+                            <div class="preferences_item_container"><span class="preferences_item">Console Games</span></div>
+                            <div class="preferences__value">
+                                <div class="oval oval_brown"></div>
+                                <div class="oval oval_brown"></div>
+                                <div class="oval oval_brown"></div>
+                                <div class="oval oval_grey"></div>
+                                <div class="oval oval_grey"></div>
+                            </div>
+                        </div>
 
+                        <div class="preferences__row">
+                            <div  class="preferences_item_container"><span class="preferences_item">Augmented Reality </span></div>
+                            <div class="preferences__value">
+                                <div class="oval oval_brown"></div>
+                                <div class="oval oval_brown"></div>
+                                <div class="oval oval_grey"></div>
+                                <div class="oval oval_grey"></div>
+                                <div class="oval oval_grey"></div>
+                            </div>
+                        </div>
 
-                        <div style="grid-column: 1; grid-row: 4" class="preferences_item_container"><span class="preferences_item">Augmented Reality Games</span></div>
-                        <div class="oval oval_brown" style="grid-column: 2; grid-row: 4"></div>
-                        <div class="oval oval_brown" style="grid-column: 3; grid-row: 4"></div>
-                        <div class="oval oval_brown" style="grid-column: 4; grid-row: 4"></div>
-                        <div class="oval oval_brown" style="grid-column: 5; grid-row: 4"></div>
-                        <div class="oval oval_grey" style="grid-column: 6; grid-row: 4"></div>
+                        <div class="preferences__row">
+                            <div  class="preferences_item_container"><span class="preferences_item">Virtual Reality</span></div>
+                            <div class="preferences__value">
+                                <div class="oval oval_brown"></div>
+                                <div class="oval oval_brown"></div>
+                                <div class="oval oval_grey"></div>
+                                <div class="oval oval_grey"></div>
+                                <div class="oval oval_grey"></div>
+                            </div>
+                        </div>
 
-                        <div style="grid-column: 1; grid-row: 5" class="preferences_item_container"><span class="preferences_item">Virtual Reality Games</span></div>
-                        <div class="oval oval_brown" style="grid-column: 2; grid-row: 5"></div>
-                        <div class="oval oval_brown" style="grid-column: 3; grid-row: 5"></div>
-                        <div class="oval oval_grey" style="grid-column: 4; grid-row: 5"></div>
-                        <div class="oval oval_grey" style="grid-column: 5; grid-row: 5"></div>
-                        <div class="oval oval_grey" style="grid-column: 6; grid-row: 5"></div>
-
-                        <div style="grid-column: 1; grid-row: 6" class="preferences_item_container"><span class="preferences_item">Board Games</span></div>
-                        <div class="oval oval_brown" style="grid-column: 2; grid-row: 6"></div>
-                        <div class="oval oval_brown" style="grid-column: 3; grid-row: 6"></div>
-                        <div class="oval oval_grey" style="grid-column: 4; grid-row: 6"></div>
-                        <div class="oval oval_grey" style="grid-column: 5; grid-row: 6"></div>
-                        <div class="oval oval_grey" style="grid-column: 6; grid-row: 6"></div>
+                        <div class="preferences__row">
+                            <div  class="preferences_item_container"><span class="preferences_item">Board Games</span></div>
+                            <div class="preferences__value">
+                            <div class="oval oval_brown"></div>
+                            <div class="oval oval_brown"></div>
+                            <div class="oval oval_brown"></div>
+                            <div class="oval oval_grey"></div>
+                            <div class="oval oval_grey"></div>
+                            </div>
+                        </div>
                 </div>
 
 

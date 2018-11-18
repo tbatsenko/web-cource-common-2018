@@ -1,0 +1,43 @@
+{
+  "links": [
+    {
+      "src": "https://www.gstatic.com/images/icons/material/system/1x/inbox_black_20dp.png",
+      "src-active": "https://www.gstatic.com/images/icons/material/system/1x/inbox_gm_googlered600_20dp.png",
+      "src-icon": "inbox-icon",
+      "text": "Вхідні",
+      "number": "10",
+      "active": true
+    },
+    {
+      "src": "https://www.gstatic.com/images/icons/material/system/1x/grade_black_20dp.png",
+      "src-active": "https://www.gstatic.com/images/icons/material/system/1x/grade_black_20dp.png",
+      "src-icon": "starred-icon",
+      "text": "Із зірочкою",
+      "number": "5",
+      "active": false
+    },
+    {
+      "src": "https://www.gstatic.com/images/icons/material/system/1x/watch_later_black_20dp.png",
+      "src-active": "https://www.gstatic.com/images/icons/material/system/1x/watch_later_black_20dp.png",
+      "src-icon": "postponed-icon",
+      "text": "Відкладені",
+      "number": "3",
+      "active": false
+    },
+    {
+      "src": "https://www.gstatic.com/images/icons/material/system/1x/send_black_20dp.png",
+      "src-icon": "sent-icon",
+      "text": "Надіслані",
+      "number": "2",
+      "active": false
+    },
+    {
+      "src": "https://www.gstatic.com/images/icons/material/system/1x/insert_drive_file_black_20dp.png",
+      "src-active": "https://www.gstatic.com/images/icons/material/system/1x/insert_drive_file_black_20dp.png",
+      "src-icon": "draft-icon",
+      "text": "Чернетки",
+      "number": "1",
+      "active": false
+    }
+  ]
+}

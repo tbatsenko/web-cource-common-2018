@@ -1,5 +1,8 @@
 @import url("https://fonts.googleapis.com/css?family=Roboto");
 @import url("https://fonts.googleapis.com/icon?family=Material+Icons");
+@font-face {
+  font-family: 'Google Sans';
+  src: url(../fonts/google-sans.ttf); }
 .gmail-header__icon, .gmail-header__button, .search__button, .gmail-sidebar__icon, .checkbox__input + .checkbox__style::after {
   font-family: 'Material Icons';
   font-size: 24px;
@@ -92,9 +95,6 @@ body {
   .gmail-layout__content {
     display: flex; }
 
-@font-face {
-  font-family: 'Google Sans';
-  src: url(../fonts/google-sans.ttf); }
 .compose-button {
   font-family: 'Google Sans', 'Roboto', Arial, Helvetica, sans-serif;
   margin: 16px 0 16px 8px;
@@ -121,6 +121,12 @@ body {
     box-shadow: 0 1px 3px 0 rgba(60, 64, 67, 0.302), 0 4px 8px 3px rgba(60, 64, 67, 0.149);
     background-color: #fafafb;
     cursor: pointer; }
+  .compose-button--min {
+    height: 56px;
+    width: 56px;
+    border-radius: 50%;
+    font-size: 0;
+    margin: 12px 0 12px 8px; }
 
 .gmail-sidebar {
   min-width: 256px;
@@ -137,19 +143,34 @@ body {
     color: #202124; }
     .gmail-sidebar__link:hover {
       background: #f0f2f4; }
+    .gmail-sidebar__link--active {
+      background: #fce8e6;
+      font-weight: 900;
+      font-size: 14px;
+      letter-spacing: .3px;
+      color: #d73429; }
   .gmail-sidebar__icon {
     font-size: 20px;
     margin-left: 26px;
     margin-right: 18px;
     color: #747474; }
-  .gmail-sidebar__link--active {
-    background: #fce8e6;
-    font-weight: 1000;
-    font-size: 14px;
-    letter-spacing: .3px;
-    color: #d73429; }
-  .gmail-sidebar__icon--active {
-    color: #d73429; }
+    .gmail-sidebar__icon--active {
+      color: #d73429;
+      font-weight: normal; }
+  .gmail-sidebar--min {
+    min-width: 72px; }
+    .gmail-sidebar--min .gmail-sidebar__link {
+      font-size: 0;
+      border-radius: 50%;
+      height: 32px;
+      width: 32px;
+      margin: 0 20px;
+      justify-content: center; }
+      .gmail-sidebar--min .gmail-sidebar__link--active {
+        margin-left: 21px; }
+    .gmail-sidebar--min .gmail-sidebar__icon {
+      font-size: 20px;
+      margin: 0; }
 
 .gmail-main {
   margin-right: 10px;

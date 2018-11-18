@@ -1,13 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="stylesheet" href="styles/aside-left.css">
-    <link rel="stylesheet" href="styles/main.css">
-    <link rel="stylesheet" href="styles/post.css">
-    <link rel="stylesheet" href="styles/header.css">
-    <link rel="stylesheet" href="styles/aside-right.css">
+    <link rel="stylesheet" href="styles/aside-left/aside-left.css">
+    <link rel="stylesheet" href="styles/main/main.css">
+    <link rel="stylesheet" href="styles/post/post.css">
+    <link rel="stylesheet" href="styles/header/header.css">
+    <link rel="stylesheet" href="styles/aside-right/aside-right.css">
     <meta charset="UTF-8">
     <title>Facebook</title>
+    <link rel="stylesheet" href="styles/header/header.scss">
 </head>
 <body>
 <header class="header">
@@ -15,9 +16,9 @@
         <a class="header__left-navigation__logo" href=""></a>
         <form class="header__left-navigation__search-form">
             <input class="header__left-navigation__search-form__input" placeholder="Search facebook"/>
-            <a href="#">
-                <button class="header__left-navigation__magnifier-button fb-button"></button>
-            </a>
+            <div class="header__left-navigation__magnifier-button fb-button">
+                <button class="header__left-navigation__magnifier-button--logo"></button>
+            </div>
         </form>
     </nav>
     <nav class="header__right-navigation">
@@ -42,41 +43,40 @@
 
     </nav>
 </header>
-
 <main class="container">
-    <aside class="container__aside-left">
-        <a href="" class="container__aside-left--link container__aside-left__profile">
-            <div class="container__aside-left--link--image container__aside-left__profile--pic"></div>
+    <aside class="aside-left">
+        <a href="" class="aside-left--link aside-left__profile">
+            <div class="aside-left--link--image aside-left__profile--pic"></div>
             <span>Nin Ja</span>
         </a>
 
-        <a href="#" class="container__aside-left--link container__aside-left__news">
-            <div class="container__aside-left--link--image container__aside-left__news--logo"></div>
+        <a href="#" class="aside-left--link aside-left__news">
+            <div class="aside-left--link--image aside-left__news--logo"></div>
             <span>News</span>
         </a>
-        <a href="#" class="container__aside-left--link fb-button">
-            <div class="container__aside-left--link--image container__aside-left--messenger"></div>
+        <a href="#" class="aside-left--link fb-button">
+            <div class="aside-left--link--image aside-left--messenger"></div>
             <span>Messenger</span>
         </a>
 
-        <span class="container__aside-left--bar-header"><b>Shortcuts</b></span>
-        <a href="#" class="container__aside-left--link fb-button">
+        <span class="aside-left--bar-header"><b>Shortcuts</b></span>
+        <a href="#" class="aside-left--link fb-button">
             <img src="https://scontent.flwo1-1.fna.fbcdn.net/v/t39.2081-6/c4.4.37.37/p40x40/42630609_2166936443330818_3464735768197464064_n.png?_nc_cat=1&_nc_ht=scontent.flwo1-1.fna&oh=7630de80eb75f5336ea652dbb74ae4e0&oe=5C6C8C84"
-                 class="container__aside-left--link--image container__aside-left--8-ball-pool"/>
+                 class="aside-left--link--image aside-left--8-ball-pool"/>
             <span>8 Ball Pool</span>
         </a>
 
-        <span class="container__aside-left--bar-header"><b>Interesting</b></span>
-        <a href="#" class="container__aside-left--link fb-button">
-            <div class="container__aside-left--link--image container__aside-left--events"></div>
+        <span class="aside-left--bar-header"><b>Interesting</b></span>
+        <a href="#" class="aside-left--link fb-button">
+            <div class="aside-left--link--image aside-left--events"></div>
             <span>Events</span>
         </a>
-        <a href="#" class="container__aside-left--link fb-button">
-            <div class="container__aside-left--link--image container__aside-left--groups"></div>
+        <a href="#" class="aside-left--link fb-button">
+            <div class="aside-left--link--image aside-left--groups"></div>
             <span>Groups</span>
         </a>
-        <a href="#" class="container__aside-left--link fb-button">
-            <div class="container__aside-left--link--image container__aside-left--fan-clubs"></div>
+        <a href="#" class="aside-left--link fb-button">
+            <div class="aside-left--link--image aside-left--fan-clubs"></div>
             <span>Fan-Clubs</span>
         </a>
     </aside>
@@ -93,15 +93,25 @@
                     <a href="#">Live Video</a>
                 </button>
             </section>
-            <section class="main__create-container__section">
-                <img class="main__create-container__section--profile-pic"
+            <section class="main__create-container__input-section">
+                <img class="main__create-container__input-section--profile-pic"
                      src="https://res.cloudinary.com/schwajka/image/upload/c_scale,w_40/v1541718636/facebook_images/ninja-icon.png"/>
-                <input class="main__create-container__section--input" type="text" placeholder="What's on your mind?">
+                <input class="main__create-container__input-section--input" type="text"
+                       placeholder="What's on your mind?">
             </section>
             <section class="main__create-container__bottom-bar">
-                <button class="main__create-container__bottom-bar--button">List</button>
-                <button class="main__create-container__bottom-bar--button">Photo / video</button>
-                <button class="main__create-container__bottom-bar--button">Add People</button>
+                <a href="#" class="main__create-container__bottom-bar--link">
+                    <div class="main__create-container__bottom-bar--link__logo-list bottom-bar-button"></div>
+                    <span>List</span>
+                </a>
+                <a href="#" class="main__create-container__bottom-bar--link">
+                    <div class="main__create-container__bottom-bar--link__logo-photo-video bottom-bar-button"></div>
+                    <span>Photo / video</span>
+                </a>
+                <a href="#" class="main__create-container__bottom-bar--link">
+                    <div class="main__create-container__bottom-bar--link__logo-add-people bottom-bar-button"></div>
+                    <span>Add People</span>
+                </a>
             </section>
         </form>
         <article class="main__feed">
@@ -109,8 +119,6 @@
                 <section class="feed--post">
 
                     <header class="feed--post__header">
-                        <img src="http://2016.igem.org/wiki/images/e/e0/Uclascrolldown.png"
-                             class="feed--post__header__dropdown-button"/>
                         <a href=#><img class='feed--post__header__profile-pic'
                                        src="https://res.cloudinary.com/schwajka/image/upload/r_max/v1541887473/facebook_images/tesla-profile-pic.png"></a>
                         <h1 class="feed--post__header__author-name">
@@ -125,9 +133,53 @@
                          src="https://res.cloudinary.com/schwajka/image/upload/v1541884501/facebook_images/red-tesla-model-s.jpg"
                          alt="Post Image"/>
 
-                    <div class="feed--post__like-info">
+
+                    <a href="#" class="feed--post__like-info">
+                        <div class="feed--post__like-info--pic"></div>
+                        <span class="feed--post__like-info--number">232</span>
+                    </a>
+
+                    <div class="feed--post__action">
+                        <a class="feed--post__action--button" href="#">
+                            <span class="feed--post__action--button__logo like-button"></span>
+                            <p>Like</p>
+                        </a>
+
+                        <a class="feed--post__action--button" href="#">
+                            <span class="feed--post__action--button__logo comment-button"></span>
+                            <p>Comment</p>
+                        </a>
+
+                        <a class="feed--post__action--button" href="#">
+                            <span class="feed--post__action--button__logo share-button"></span>
+                            <p>Share</p>
+                        </a>
 
                     </div>
+
+                </section>
+                <section class="feed--post">
+
+                    <header class="feed--post__header">
+                        <a href=#><img class='feed--post__header__profile-pic'
+                                       src="https://res.cloudinary.com/schwajka/image/upload/r_max/v1541887473/facebook_images/tesla-profile-pic.png"></a>
+                        <h1 class="feed--post__header__author-name">
+                            <a href="#">Tesla</a>
+                        </h1>
+                        <p class="feed--post__header__date">2 hr ago</p>
+                    </header>
+
+                    <p class="feed--post__caption">Tesla drivers just passed 3 billion electric miles, saving the world
+                        120M gallons of petrol</p>
+                    <img class="feed--post__image"
+                         src="https://res.cloudinary.com/schwajka/image/upload/v1541884501/facebook_images/red-tesla-model-s.jpg"
+                         alt="Post Image"/>
+
+
+                    <a href="#" class="feed--post__like-info">
+                        <div class="feed--post__like-info--pic"></div>
+                        <span class="feed--post__like-info--number">232</span>
+                    </a>
 
                     <div class="feed--post__action">
                         <a class="feed--post__action--button" href="#">
@@ -151,22 +203,74 @@
             </div>
         </article>
     </article>
-    <aside class="container__aside--right">Aside Right</aside>
+    <aside class="aside-right">
+        <header class="aside-right__header">
+            <div class="aside-right__header-left">
+                <span>Stories</span>
+            </div>
+            <div class="aside-right__header-right">
+                <a href="#" class="aside-right__header-right--link-archive">
+                    <div class="aside-right__header-right--link-archive-icon"></div>
+                    <span>Archive</span>
+                </a>
+                <div>·</div>
+                <a href="#" class="aside-right__header-right--link-settings">
+                    <span>Settings</span>
+                </a>
+            </div>
+        </header>
+        <article class="aside-right__container">
+            <section class="aside-right__container-section">
+                <div class="aside-right__container-section--logo">
+                    <div class="aside-right__container-section--logo-inside-1"></div>
+                </div>
+                <div class="aside-right__container-section--info">
+                    <header class="aside-right__container-section--info-header">
+                        <a href="#">Add to your story</a>
+                    </header>
+                    <span class="aside-right__container-section--info-info">
+                    Share a photo, or a video
+                </span>
+                </div>
+            </section>
+            <section class="aside-right__container-section">
+                <div class="aside-right__container-section--logo">
+                    <div class="aside-right__container-section--logo-inside-2 stories-logo"></div>
+                </div>
+                <div class="aside-right__container-section--info">
+                    <header class="aside-right__container-section--info-header">
+                        <a href="#">Skrra Boom</a>
+                    </header>
+                    <span class="aside-right__container-section--info-info">69 hours ago</span>
+                </div>
+            </section>
+            <section class="aside-right__container-section">
+                <div class="aside-right__container-section--logo">
+                    <div class="aside-right__container-section--logo-inside-3 stories-logo"></div>
+                </div>
+                <div class="aside-right__container-section--info">
+                    <header class="aside-right__container-section--info-header">
+                        <a href="#">Pa PA</a>
+                    </header>
+                    <span class="aside-right__container-section--info-info">666 hours ago</span>
+                </div>
+            </section>
+            <section class="aside-right__container-section">
+                <div class="aside-right__container-section--logo">
+                    <div class="aside-right__container-section--logo-inside-4 stories-logo"></div>
+                </div>
+                <div class="aside-right__container-section--info">
+                    <header class="aside-right__container-section--info-header">
+                        <a href="#">Pa PA</a>
+                    </header>
+                    <span class="aside-right__container-section--info-info">6969 hours ago</span>
+                </div>
+            </section>
+
+        </article>
+    </aside>
 </main>
 
-
-<!--
-<script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.12/handlebars.js"></script>
-<script>
-    const render = async (templateURL, dataURL, container) => {
-        const source = await (await fetch(templateURL)).text();
-        const template = Handlebars.compile(source);
-        const data = await (await fetch(dataURL)).json();
-        container.innerHTML = template(data);
-    };
-    render("templates/template.hbs", "data.json", document.body)
-</script>
--->
 </body>
 
 </html>
