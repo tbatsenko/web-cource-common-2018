@@ -1,0 +1,10 @@
+@import "colors";
+
+.page-content__row-2 {
+  &__first-cell{
+    display: grid;
+    grid-template-columns: 1fr 5fr;
+    grid-template-rows: 120px;
+    grid-gap: 25px;
+  }
+}
