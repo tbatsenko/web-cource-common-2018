@@ -1,0 +1,20 @@
+.game {
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.game__title {
+    width: 320px;
+    text-align: center;
+    font-family: 'Press Start 2P', cursive;
+    margin: 0 auto 20px;
+    font-size: 25px;
+}
+
+.game__canvas {
+    margin: 0 auto;
+    width: 320px;
+    height: 512px;
+}
