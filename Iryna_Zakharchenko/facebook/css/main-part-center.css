@@ -72,14 +72,16 @@
     height: 2.6em;
     width: 2.6em;
     border-radius: 50%;
-    margin: 0.5em;
+    /*margin: 0.5em;*/
     border: 0.05em solid aliceblue;
+    margin-left: 0.5em;
 }
 
 .center-first-block__write-post{
-    margin-top: 0.3em;
+    margin-top: 0.8em;
     display: flex;
     align-items: center;
+    margin-bottom: 0.8em;
 }
 
 .center-first-block__post-input{
@@ -87,6 +89,7 @@
     width: 30em;
     height: 3em;
     color: #cec9ca;
+    margin-left: 0.4em;
 }
 .center-first-block__down-buttons{
     list-style: none;
@@ -142,4 +145,45 @@
     width: 2em;
     height: 1.7em;
     background: url("../icons/icons-aside-and-center.png") no-repeat 0 -2143px;
+}
+
+.center-block-post{
+    margin-top: 0.7em;
+    border: 0.1em solid #dddfe2;
+    border-radius: 0.35em;
+    background: #ffffff;
+
+}
+
+.center-block-post__main-data{
+    display: flex;
+    align-items: center;
+}
+
+.center-block-post__img-container{
+    margin: 0.5em;
+}
+
+.center-first-block__post-person-img{
+    height: 2.6em;
+    width: 2.6em;
+    border-radius: 50%;
+    /*margin: 0.5em;*/
+    border: 0.05em solid aliceblue;
+}
+
+.enter-block-post__person-name{
+    color: #3658ac;
+    margin: 0;
+}
+
+
+.center-block-post__main-text-data-container{}
+
+.center-first-block-post__other-img{
+    margin-left: 0.7em;
+    width: 2em;
+    height: 1.3em;
+    background: url("../icons/icons-aside-and-center.png") no-repeat 0 -2143px;
+
 }

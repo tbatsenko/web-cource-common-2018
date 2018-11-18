@@ -13,12 +13,10 @@
     justify-content: space-between;
     align-items: center;
     height: 2em;
-    /*position: fixed;*/
     margin: auto;
 }
 .header-left {
     display: flex;
-
 }
 
 .header__facebook-icon{
@@ -57,9 +55,7 @@
     border: none;
     cursor: pointer;
     text-align: center;
-
     width: 4.5em;
-
     height: 1.6em;
     background-color: #ebedf0;
 
@@ -67,14 +63,11 @@
 
 .img-header-search{
     background-position: 0 -1445px;
-    /*background-size: 1.1em 1.1em;*/
 }
 
 
 .search-form__search-icon{
     background-position: 6px -1444px;
-    /*background-size: 30px 1475px;*/
-    /*clip-path: inset(20px 20px 20px 20px);*/
     width: 1.4em;
     height: 1.05em;
 }
@@ -91,18 +84,7 @@
     align-items: center;
     float: right;
     padding-left: 1.5em;
-
-
 }
-
-.header-right__element>a{
-    color: rgb(255, 255, 255);
-    line-height: 190%;
-    /*font-size: 85%;*/
-    font-weight: bold;
-    font-size: 80%;
-}
-
 
 .header-right__button{
     line-height: 145%;
@@ -116,7 +98,10 @@
 
 .header-right__profile-details{
     display: flex;
-
+    color: rgb(255, 255, 255);
+    line-height: 190%;
+    font-weight: bold;
+    font-size: 80%;
 }
 
 .header-right__profile-picture{
@@ -142,33 +127,25 @@
 
 .header-right__button-friends{
     background-position: 0 -892px;;
-    /*background-size: 1.1em 1.1em;*/
-
-
-
     text-align: center;
 }
 
 .header-right__button-messages{
     background-position: 0 -942px;;
-
     text-align: center;
 }
 
 .header-right__button-notifications{
     background-position: 0 -792px;
-
     text-align: center;
 }
 
 .header-right__button-help{
-
     text-align: center;
     background-position: 0 -992px;
 }
 
 .header-right__button-other{
-
     text-align: center;
     background-position: 0 -842px;
 }
