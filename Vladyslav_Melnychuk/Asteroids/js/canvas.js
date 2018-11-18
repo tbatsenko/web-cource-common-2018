@@ -26,6 +26,12 @@ class SpaceShip {
         this.thrustSpeed = 5;
         this.thrustPower = {x: 0, y: 0};
         this.thrusting = false;
+
+        this.thrustSound = new Audio("audio/thrust.wav");
+        this.fireSound = new Audio("audio/fire.wav");
+        this.deathSound = new Audio("audio/bang.wav");
+
+        this.bullets = [];
     }
 
     rotate() {
@@ -65,6 +71,7 @@ class SpaceShip {
         this.thrustPower.y -= this.thrustSpeed * Math.sin(this.a) * this.dt;
         this.x += this.thrustPower.x;
         this.y += this.thrustPower.y;
+        this.thrustSound.play();
     }
 
     decelerate() {
@@ -73,6 +80,17 @@ class SpaceShip {
         this.thrustPower.y -= friction * this.thrustPower.y * this.dt;
         this.x += this.thrustPower.x;
         this.y += this.thrustPower.y;
+    }
+
+    fire() {
+        this.bullets.push(new Bullet(this.x, this.y, this.a));
+        // let x = Math.cos(this.a);
+        // let y = Math.sin(this.a);b
+        this.fireSound.play();
+    }
+
+    die() {
+        this.deathSound.play();
     }
 
     update(time) {
@@ -104,25 +122,33 @@ class SpaceShip {
 
 class Bullet {
 
-    constructor(x, y, dx, dy, a) {
+    constructor(x, y, a) {
         this.x = x;
         this.y = y;
-        this.dx = dx;
-        this.dy = dy;
-        this.a = 90 / 180 * Math.PI;
-        this.lastFrame = 0;
-        this.dt = 0;
+        // a -= a / Math.PI * 90;
+        this.dx = Math.cos(a) * 10;
+        this.dy = -Math.sin(a) * 10;
+
+        // this.a = a;
+        /*this.lastFrame = 0;
+        this.dt = 0;*/
     }
 
     draw() {
+
+        ctx.beginPath();
+        ctx.arc(this.x, this.y, 4, 0, Math.PI * 2);
+        ctx.strokeStyle = "red";
         ctx.fillStyle = 'white';
-        ctx.rect(this.x, this.y, )
+        ctx.fill();
     }
 
-    update(time) {
-        this.dt = (time - this.lastFrame) / 1024;
-        this.lastFrame = time;
+    update() {
+        this.x += this.dx;
+        this.y += this.dy;
         this.draw();
+
+        // if ()
     }
 }
 
@@ -183,9 +209,7 @@ function keyDown(ev) {
     } else if (ev.key === "ArrowRight") {
         spaceShip.rotCoef = -1;
     } else if (ev.key === " ") {
-        // Fire
-
-        alert("fire");
+        spaceShip.fire();
     }
 }
 
@@ -222,7 +246,10 @@ const asteroidCount = 30;
 let lastRound = 0;
 
 let spaceShip = new SpaceShip();
+
 let isGameLost = false;
+let gameOverImg = new Image();
+gameOverImg.src = 'img/10.jpg';
 
 for (let i = 0; i < asteroidCount; i++) {
     asteroids.push(createAsteroid(spaceShip.x, spaceShip.y));
@@ -231,14 +258,13 @@ let score = 0;
 let scoreX = canvas.width * .05;
 let scoreY = canvas.height / 10;
 
-let bullets = [];
 let bulletSize = 5;
 
 // Game Over Screen
 function onGameOver() {
-    let gameOverImg = new Image();
-    gameOverImg.src = 'img/10.jpg';
+    spaceShip.die();
     ctx.drawImage(gameOverImg, 0, 0, canvas.width, canvas.height);
+
     ctx.fillStyle = "white";
     ctx.font = "bold 40px Arial";
     ctx.fillText("Refresh to restart", (canvas.width / 2.55), (canvas.height / 1.2));
@@ -246,14 +272,18 @@ function onGameOver() {
 
 // Main
 function main(time = 0) {
+    if (isGameLost) {
+        return 0;
+    }
     score += time / 131072;
     requestAnimationFrame(main);
     document.addEventListener('keydown', keyDown);
     document.addEventListener("keyup", keyUp);
     ctx.clearRect(0, 0, innerWidth, innerHeight);
 
-    for (let j = 0; j < bullets.length; j++) {
-        bullets[j].update();
+    for (let j = 0; j < spaceShip.bullets.length; j++) {
+        console.log(spaceShip.bullets[j]);
+        spaceShip.bullets[j].update();
     }
 
     for (let i = 0; i < asteroids.length; i++) {
@@ -262,9 +292,9 @@ function main(time = 0) {
             isGameLost = true;
         }
 
-        for (let j = 0; j < bullets.length; j++) {
-            if (distance(asteroids[i].x, asteroids[i].y, bullets[j].x, bullets[j].y) < asteroids[i].radius + bulletSize) {
-                asteroids[i]= createAsteroid(spaceShip.x, spaceShip.y);
+        for (let j = 0; j < spaceShip.bullets.length; j++) {
+            if (distance(asteroids[i].x, asteroids[i].y, spaceShip.bullets[j].x, spaceShip.bullets[j].y) < asteroids[i].radius + bulletSize) {
+                asteroids[i] = createAsteroid(spaceShip.x, spaceShip.y);
             }
         }
     }
@@ -276,17 +306,15 @@ function main(time = 0) {
         ctx.fillStyle = "red";
         ctx.font = "bold 40px Arial";
         let displayScore = Math.round(score);
-        console.log(displayScore & 10);
+        // console.log(displayScore & 10);
         if (displayScore % 10 === 0 && displayScore !== lastRound) {
             lastRound = displayScore;
             asteroids.push(createAsteroid(spaceShip.x, spaceShip.y));
         }
         ctx.fillText(displayScore.toString(), scoreX, scoreY);
-        console.log(Math.round(score).toString())
     } else {
         onGameOver();
     }
-
 }
 
 main();
