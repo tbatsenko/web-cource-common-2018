@@ -1,0 +1,126 @@
+.feed--post {
+  margin-bottom: 10px;
+  padding: 12px 12px 0 12px;
+  background-color: #fff;
+  border: 1px solid #D0D1D5;
+  border-radius: 4px;
+
+  &__caption {
+    margin-bottom: 11px;
+  }
+
+  &__image {
+    width: 100%;
+    border: 1px solid rgba(0, 0, 0, .1);
+  }
+
+  &__like-info {
+    display: flex;
+    align-items: center;
+    height: 44px;
+    width: auto;
+    border-top: 1px solid #d3d3d3;
+    margin: 0 5px 0 5px;
+
+    &--pic {
+      height: 20px;
+      width: 20px;
+      background: url("https://static.xx.fbcdn.net/rsrc.php/v3/yG/r/S-tmaD99SDv.png") no-repeat 0 -710px;
+    }
+
+  }
+
+  &__action {
+    display: flex;
+    margin: 0 5px 0 5px;
+    border-top: 1px solid #d3d3d3;
+
+    &--button {
+      color: #7F7F7F;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 33px;
+      width: 130px;
+      margin: 5px 10px 5px 10px;
+      border-radius: 4px;
+
+      &__logo {
+        width: 18px;
+        height: 18px;
+      }
+
+    }
+
+    &--button:hover {
+      background: #eeece9;
+    }
+
+    &--button__logo {
+      display: inline-block;
+      vertical-align: text-bottom;
+      margin-right: 5px;
+    }
+
+  }
+
+  &__header {
+
+    &__profile-pic {
+      width: 40px;
+      height: auto;
+      float: left;
+      margin-right: 8px;
+    }
+
+    &__author-name,
+    &__date {
+      margin: 0;
+    }
+
+    &__author-name {
+      color: #385A97;
+      font-size: 15px;
+      margin-bottom: 5px;
+    }
+
+    &__date {
+      font-size: 12px;
+      color: #90949C;
+    }
+
+    &__dropdown-button {
+      position: absolute;
+      width: 12px;
+      border: none;
+      height: auto;
+      right: 0;
+    }
+
+    &:before,
+    &:after {
+      content: "";
+      /* 1 */
+      display: table;
+      /* 2 */
+    }
+
+    &:after {
+      clear: both;
+    }
+
+  }
+}
+
+.like-button {
+  background: url(https://static.xx.fbcdn.net/rsrc.php/v3/yx/r/Bp-a78aosxf.png) no-repeat 0 -85px;
+}
+
+.comment-button {
+  background: url(https://static.xx.fbcdn.net/rsrc.php/v3/yT/r/hOoEd7Hq3Rg.png) no-repeat -38px -462px;
+}
+
+.share-button {
+  background: url(https://static.xx.fbcdn.net/rsrc.php/v3/yT/r/hOoEd7Hq3Rg.png) no-repeat -38px -519px;
+}
+

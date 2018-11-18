@@ -1,83 +1,110 @@
 <header class="youtube-header">
   <button class="youtube-header__open_menu" aria-label="Site menu"></button>
-  <a class="youtube-header__homepage-link" href="https://www.youtube.com/"><img class="youtube-homepage-link__logo"
-                                                                                    src="/images/logo_main.png"/></a>
+  <a class="youtube-header__homepage-link" href="https://www.youtube.com/">
+    <img class="youtube-homepage-link__logo" src="/images/logo_main.png"/>
+  </a>
 
   <form class="site-search">
     <input class="site-search__input-field" placeholder="Search" title="Search">
-    <button class="site-search__submit-button">Submit</button>
+    <button class="site-search__submit-button" aria-label="Submit"></button>
   </form>
 
   <div class="user-options-menu">
     <button class="user-options-menu__button user-options-menu__button--up" aria-label="Upload"></button>
     <button class="user-options-menu__button user-options-menu__button--app" aria-label="Apps"></button>
     <button class="user-options-menu__button user-options-menu__button--mess" aria-label="Messages"></button>
-    <button class="user-options-menu__button user-options-menu__button--notifications" aria-label="Notifications"></button>
-    <button class="user-options-menu__button user-options-menu__button--profile" aria-label="Profile"></button>
+    <button class="user-options-menu__button user-options-menu__button--notifications" aria-label="Notifications">
+    </button>
+    <button class="profile-button" aria-label="Profile"><img class="profile-button__avatar" width="32px" src="images/profile_photo.jpg"/></button>
   </div>
 </header>
 
-<main class="youtube-video">
-  <article>
+<main class="youtube-main">
+  <article class="youtube-video">
     <iframe id="video" width="640" height="360" src="https://www.youtube.com/embed/cRm54SJxcao" frameborder="0"
             allowfullscreen></iframe>
-    <
-    <h2>{{video.title}}</h2>
+
+    <h2 class="youtube-video__title">{{video.title}}</h2>
     <small>
       {{video.views}}
     </small>
-    <span class="youtube-video__options">
-<button>Like {{video.likes}}</button>
-<button>Dislike {{video.dislikes}}</button>
-<button>Share</button>
-<button>save</button>
-<button>...</button>
-</span>
+    <div class="youtube-video__options">
+      <button class="options-button">
+        <img class="options-button__logo" width="20px" src="images/like_button.png"
+             aria-label="Like"/>{{video.likes}}
+      </button>
+      <button class="options-button">
+        <img class="options-button__logo" width="20px" src="images/dislike_button.png"
+             aria-label="Dislike"/>{{video.dislikes}}
+      </button>
+      <button class="options-button">
+        <img class="options-button__logo" width="20px" src="images/share_button.png"
+             aria-label="Share"/>Share
+      </button>
+      <button class="options-button">
+        <img class="options-button__logo" width="20px" src="images/save_button.png"
+             aria-label="Save"/>Save
+      </button>
+      <button class="options-button">
+        <img class="options-button__logo" width="20px" src="images/more_button.png"
+             aria-label="More"/>
+      </button>
+    </div>
   </article>
 
   <hr/>
-  <footer>
-    <a href="{{video.channel.link}}"><img
-        src="{{video.channel.logo}}"/></a>
-    <label for="author">{{video.channel.title}} Verified:{{video.channel.verified}}
+  <footer class="youtube-info">
+    <a class="youtube-info__owner-link" href="{{video.owner-link}}">
+      <img src="{{video.channel.logo}}" width="48px"/>
+    </a>
+    <a class="youtube-info__channel_link" href={{video.channel.link}}>{{video.channel.title}}
+      Verified:{{video.channel.verified}}
       <!--TODO:Verified icon-->
+    </a>
+    <br/>
+    <small class="youtube-info__publish_date">
       Published on
       <time datetime={{video.publish-date-formatted}}>{{video.publish-date}}</time>
-    </label>
-    <button>Subscribe {{video.channel.subscribers}}</button>
-</footer>
+    </small>
+    <button class="youtube-info__subscribe-button">Subscribe {{video.channel.subscribers}}</button>
+    <br/>
+    <span class="youtube-info__description">
+      {{video.description-preview}}
+    </span>
+  </footer>
   <hr/>
-<aside>
-  {{comments.length}}Comments
-  <button title="Sort by">Sort By</button>
-  {{#comments}}
-    <br>
-    {{user-name}}
-    <br>
-    {{date}}
-    <br>
-    {{text}}
-    <br>
-    {{likes}}, {{dislikes}}
-    <button>Reply</button>
-    <button>View {{replies.length}} replies</button>
-  {{/comments}}
-</aside>
+  <aside>
+    {{comments.length}} Comments
+    <button title="Sort by">Sort By</button>
+    {{#comments}}
+      <br>
+      {{user-name}}
+      <br>
+      {{date}}
+      <br>
+      {{text}}
+      <br>
+      {{likes}}, {{dislikes}}
+      <button>Reply</button>
+      <button>View {{replies.length}} replies</button>
+    {{/comments}}
+  </aside>
 </main>
 
-<aside class="suggested">
+<nav class="youtube-suggested">
   Up next
-  <button>Autoplay</button>
+  <button class="youtube-suggested__autoplay-button">Autoplay</button>
   <br/>
   {{#suggested-videos}}
-    <a class="suggested-video" href="{{link}}">
-      <img class="next-video__preview" src="{{preview}}">
-      <h4>{{title}} </h4>
-      <small>{{channel}}, Verified:{{verified}}
-    {{#if views}}
-        {{views}} views
-    {{/if}}
+    <a class="suggested-video suggested-video--{{type}}" href="{{link}}">
+      <img class="suggested-video__preview" src="{{preview}}">
+      <h4 class="suggested-video__title">{{title}} </h4>
+      <small class="suggested-video__author">{{channel}}
+        <br/>
+        {{#if views}}
+          {{views}} views
+        {{/if}}
       </small>
     </a>
   {{/suggested-videos}}
-</aside>
+</nav>

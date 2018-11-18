@@ -4,8 +4,9 @@
     "views": "5120629 views",
     "likes": "34K",
     "dislikes": "1.8K",
+    "owner-link":"https://www.youtube.com/user/gazgolder ",
     "channel": {
-      "link": "https://www.youtube.com/user/gazgolder",
+      "link": "https://www.youtube.com/channel/UCthfjHehYgSyhf8ONjzJMUw",
       "logo": "https://yt3.ggpht.com/a-/AN66SAw8JqNrquEJYuDJLPh_qBJTS46mauPbxieNLw=s176-mo-c-c0xffffffff-rj-k-no",
       "title": "ТО \"Gazgolder\"",
       "verified": "Yes",
@@ -13,7 +14,7 @@
     },
     "publish-date": "Oct 22, 2014",
     "publish-date-formatted": "2014-10-22",
-    "description-preview": "Баста | 29 сентября | Ростов-на-Дону | Ростов - Арена \n Начало в 19:00 \n Билеты по ссылке: http://bit.ly/bastarostovarena",
+    "description-preview": "Баста | 29 сентября | Ростов-на-Дону | Ростов - Арена \r\n Начало в 19:00 \n Билеты по ссылке: http://bit.ly/bastarostovarena",
     "left-description": "\n\n Загрузить на iTunes: https://itunes.apple.com/ru/album/cp/... \nЗагрузить на GooglePlay: https://play.google.com/store/music/a... \n\n #БандаГаза \n \n Сайт - http://gazgolder.com \n Twitter - http://twitter.com/gazgolder \n YouTube - http://www.youtube.com/gazgolder \n VK - http://vk.com/gazgolder \n FaceBook - http://www.facebook.com/gazgolder \n SoundCloud - http://soundcloud.com/gazgolder \n Instagram - http://instagram.com/gazgolderlive",
     "category": "Music",
     "category-link": "https://www.youtube.com/channel/UC-9-kyTW8ZkZNDHQJ6FgpwQ"
@@ -122,7 +123,7 @@
   ],
   "suggested-videos": [
     {
-      "type": "next-video",
+      "type": "next",
       "link": "https://www.youtube.com/watch?v=nuJjc8GEp60",
       "preview": "https://i.ytimg.com/vi/nuJjc8GEp60/hqdefault.jpg?sqp=-oaymwEZCNACELwBSFXyq4qpAwsIARUAAIhCGAFwAQ==&rs=AOn4CLCbQFaK61gilnKHqpobOL9aNdkVoA",
       "title": "Гуф ft. Баста - Гуф Умер",
@@ -131,7 +132,7 @@
       "views": "6M"
     },
     {
-      "type": "mix-video",
+      "type": "mix",
       "link": "https://www.youtube.com/watch?v=cRm54SJxcao&list=RDcRm54SJxcao&start_radio=1",
       "preview": "https://i.ytimg.com/vi/cRm54SJxcao/hqdefault.jpg?sqp=-oaymwEXCNACELwBSFryq4qpAwkIARUAAIhCGAE=&rs=AOn4CLAy6kbppzXOKL-wzvJWkvRbRmtGmg",
       "title": "Mix - Баста / Гуф - ЧП",
@@ -140,7 +141,7 @@
       "views":""
     },
     {
-      "type": "recommended-video",
+      "type": "recommended",
       "link": "https://www.youtube.com/watch?v=rRs03Tov6cI",
       "preview": "https://i.ytimg.com/vi/rRs03Tov6cI/hqdefault.jpg?sqp=-oaymwEZCNACELwBSFXyq4qpAwsIARUAAIhCGAFwAQ==&rs=AOn4CLB0_Xt4SVupO-k8Q-pdEAghJqehjw",
       "title": "Игровой ноутбук, который я хочу себе купить",
@@ -149,7 +150,7 @@
       "views": "382K"
     },
     {
-      "type": "recommended-video",
+      "type": "recommended",
       "link": "https://www.youtube.com/watch?v=wmfmVkiv_V4",
       "preview": "https://i.ytimg.com/vi/wmfmVkiv_V4/hqdefault.jpg?sqp=-oaymwEZCNACELwBSFXyq4qpAwsIARUAAIhCGAFwAQ==&rs=AOn4CLCDFmAQkY5605oyq3UFu9CvYGLtNg",
       "title": "KillaGram – Будь мудаком",
@@ -158,7 +159,7 @@
       "views": "48K"
     },
     {
-      "type": "recommended-video",
+      "type": "recommended",
       "link": "https://www.youtube.com/watch?v=75JjflWKs98",
       "preview": "https://i.ytimg.com/vi/75JjflWKs98/hqdefault.jpg?sqp=-oaymwEZCNACELwBSFXyq4qpAwsIARUAAIhCGAFwAQ==&rs=AOn4CLBXqz2v-zzWWoakF0pjjMsux4akMw",
       "title": "Leningrad - Real St.P bullshit",
@@ -167,7 +168,7 @@
       "views": "60M"
     },
     {
-      "type": "recommended-video",
+      "type": "recommended",
       "link": "https://www.youtube.com/watch?v=EdeDx9Z-2FE",
       "preview": "https://i.ytimg.com/vi/EdeDx9Z-2FE/hqdefault.jpg?sqp=-oaymwEZCNACELwBSFXyq4qpAwsIARUAAIhCGAFwAQ==&rs=AOn4CLBGCwHOh4HP0g7v19iRR33Zc2EoCg",
       "title": "Баста ft. Гуф - Только Сегодня",

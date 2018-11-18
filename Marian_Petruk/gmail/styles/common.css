@@ -1,210 +1,299 @@
 .header {
-  height: 64px;
-  padding: 8px;
-  box-sizing: border-box;
-  display: flex;
-  justify-content: space-between;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+    height: 64px;
+    padding: 8px;
+    display: flex;
+    box-sizing: border-box;
+    box-shadow: inset 0 -1px 0 rgba(100, 121, 143, 0.122);
+    flex-grow: 1;
+    align-items: center;
 }
 
-.logo_part {
-  padding-right: 32px;
-  display: flex;
-  box-sizing: content-box;
-}
-.logo_part__menu-button {
-  width: 24px;
-  height: 24px;
-  padding: 12px;
-  margin: 0 4px;
-  border-radius: 50%;
-  border: 0;
-  box-sizing: content-box;
-}
-.logo_part__menu-button:hover {
-  background: rgba(0, 0, 0, 0.071);
-}
-.logo_part__menu-icon {
-  width: 24px;
-  height: 24px;
-}
-.logo_part__logo-icon {
-  width: 109px;
-  height: 40px;
-  margin: 4px 0px 0px -1px;
+.header__menu-button {
+    width: 24px;
+    height: 24px;
+    padding: 12px;
+    margin: 0 5px 0 4px;
+    border-radius: 50%;
+    border: 0;
+    box-sizing: content-box;
 }
 
-.search-part {
-  background: rgba(0, 0, 0, 0.04);
-  width: 722px;
-  height: 48px;
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  border-radius: 4px;
-}
-.search-part__search-button, .search-part__options-button, .search-part__clear-button {
-  width: 46px;
-  height: 46px;
-  padding-left: 2px;
-  padding-right: 2px;
-  border-radius: 50%;
-  border: 0;
-  box-sizing: content-box;
-  vertical-align: middle;
-}
-.search-part__search-button:focus, .search-part__options-button:focus {
-  background-color: rgba(0, 0, 0, 0.2);
-}
-.search-part__search_icon, .search-part__options-icon {
-  width: 24px;
-  height: 24px;
-  padding: 7px;
-  margin: 4px;
-  color: black;
-  opacity: 0.54;
-}
-.search-part__input-text {
-  width: 100%;
-  height: 24px;
-  background: transparent;
-  border: none;
-  color: gray;
-  font: normal 16px Roboto, sans-serif;
-  padding: 11px 16px 11px 10px;
-}
-.search-part__options-button {
-  padding-left: 4px;
-  padding-right: 4px;
+.header__menu-button:hover {
+    background: rgba(0, 0, 0, 0.071);
 }
 
-.buttons-part {
-  display: flex;
-  height: 48px;
-  justify-content: flex-end;
-  align-items: center;
-  box-sizing: border-box;
-  padding-left: 32px;
+.header__menu-icon {
+    width: 24px;
+    height: 24px;
 }
-.buttons-part__google-apps-button, .buttons-part__notification-button {
-  width: 46px;
-  height: 46px;
-  padding-left: 2px;
-  padding-right: 2px;
-  border-radius: 50%;
-  border: 0;
-  box-sizing: content-box;
-  vertical-align: middle;
+
+.header__logo-icon {
+    width: 109px;
+    height: 40px;
+    margin: 4px 0px 0px -1px;
 }
-.buttons-part__google-apps-button:focus, .buttons-part__notification-button:focus {
-  background-color: rgba(0, 0, 0, 0.2);
+
+.header__google-apps-button, .header__notification-button {
+    width: 46px;
+    height: 46px;
+    padding-left: 2px;
+    padding-right: 2px;
+    border-radius: 50%;
+    border: 0;
+    box-sizing: content-box;
+    vertical-align: middle;
 }
-.buttons-part__google-apps-icon, .buttons-part__notification-icon {
-  width: 24px;
-  height: 24px;
-  padding: 7px;
-  margin: 4px;
-  color: black;
-  opacity: 0.54;
+
+.header__google-apps-button:active, .header__notification-button:active {
+    background-color: rgba(0, 0, 0, 0.2);
 }
-.buttons-part__google-profile-button {
-  width: 132px;
-  border: 1px solid #dadce0;
-  box-sizing: border-box;
-  height: 46px;
-  border-radius: 8px;
-  display: flex;
-  align-items: center;
+
+.header__google-apps-button {
+    margin-right: -2px;
+    margin-left: auto;
 }
-.buttons-part__google-profile-button:hover {
-  border: 1px solid #d2e3fc;
-  background-color: rgba(248, 250, 255, 0.88);
+
+.header__notification-button {
+    padding-right: 13px;
 }
-.buttons-part__ucu-logo {
-  width: 78px;
-  line-height: 32px;
+
+.header__google-profile-button {
+    margin-right: 6px;
 }
-.buttons-part__user-avatar {
-  width: 32px;
-  height: 32px;
-  padding: 3px 3px 3px 4px;
+
+.header__google-apps-icon, .header__notification-icon {
+    width: 24px;
+    height: 24px;
+    padding: 7px;
+    margin: 4px;
+    color: black;
+    opacity: 0.54;
+}
+
+.header__google-profile-button {
+    width: 132px;
+    border: 1px solid #dadce0;
+    box-sizing: border-box;
+    height: 46px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+}
+
+.header__google-profile-button:hover {
+    border: 1px solid #d2e3fc;
+    background-color: rgba(248, 250, 255, 0.88);
+}
+
+.header__ucu-logo {
+    width: 78px;
+    line-height: 32px;
+}
+
+.header__user-avatar {
+    width: 32px;
+    height: 32px;
+    padding: 3px 0 3px 5px;
+}
+
+.search-form {
+    flex: 1 1 auto;
+    display: flex;
+    flex-direction: row;
+    margin-left: 83px;
+    margin-right: 40px;
+    max-width: 720px;
+    border: 1px solid #f5f5f5;
+    background: #f5f5f5;
+    border-radius: 4px;
+}
+
+.search-form__search-button {
+    margin-right: -15px;
+    margin-left: -5px;
+}
+
+.search-form__search-button, .search-form__options-button, .search-form__clear-button {
+    width: 46px;
+    height: 46px;
+    border-radius: 50%;
+    border: 0;
+    box-sizing: content-box;
+    vertical-align: middle;
+}
+
+.search-form__search-button:active, .search-form__options-button:active, .search-form__clear-button:active {
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+.search-form__options-button {
+    margin-right: 0px;
+}
+
+.search-form__search_icon, .search-form__options-icon {
+    width: 24px;
+    height: 24px;
+    padding: 7px;
+    margin: 4px;
+    color: black;
+    opacity: 0.54;
+}
+
+.search-form__input-text {
+    width: 100%;
+    height: 24px;
+    border: none;
+    color: gray;
+    font: normal 16px Roboto, sans-serif;
+    padding: 11px 16px 11px 10px;
+    background: #f5f5f5;
+    flex-grow: 1;
+}
+
+.search-form__options-button {
+    padding-left: 4px;
+    padding-right: 4px;
 }
 
 :root {
-  --gmail-aside-width: 64px;
+    --gmail-aside-width: 256px;
 }
 
 .google-mail-aside {
-  width: var(--gmail-aside-width);
-  height: 575px;
-  background: #27ae60;
+    width: var(--gmail-aside-width);
+    height: 575px;
 }
+
 .google-mail-aside__write-button {
-  width: 72px;
-  height: 80px;
-  border-radius: 28px;
-  font-size: 0;
-  padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    border-radius: 28px;
+    background: transparent;
+    margin: 16px 0 16px 8px;
+    height: 48px;
+    width: 146px;
+    border: 0;
+    box-shadow: 0 1px 2px 0 rgba(60, 64, 67, 0.302), 0 1px 3px 1px rgba(60, 64, 67, 0.149);
+    font-family: "Google Sans", Roboto, RobotoDraft, Helvetica, Arial, sans-serif;
+    letter-spacing: 0.25px;
+    color: #3c4043;
+    font-weight: 500;
+    font-size: 14px;
+    padding-right: 12px;
+    padding-left: 1px;
 }
+
+.google-mail-aside__write-button:hover {
+    box-shadow: 0 1px 3px 0 rgba(60, 64, 67, 0.302), 0 4px 8px 3px rgba(60, 64, 67, 0.149);
+    background-color: #fafafb;
+}
+
 .google-mail-aside__write-button-logo {
-  width: 32px;
-  height: 32px;
+    width: 32px;
+    height: 32px;
 }
+
 .google-mail-aside__navigation {
-  height: 24px;
+    padding-right: 16px;
+}
+
+.google-mail-aside__link {
+    height: 24px;
+    color: #202124;
+    background: transparent;
+    line-height: 20px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    border-radius: 0 16px 16px 0;
+    font-size: 0.875rem;
+    letter-spacing: 0.2px;
+}
+
+.google-mail-aside__link:hover {
+    background: #f0f2f4;
+}
+
+.google-mail-aside__link--active {
+    background: #fce8e6;
+    font-weight: 900;
+    letter-spacing: 0.2px;
+    color: #d73429;
+}
+
+.google-mail-aside__icon {
+    margin-left: 26px;
+    margin-right: 18px;
+    color: #747474;
+}
+
+.google-mail-aside__icon-img {
+    vertical-align: middle;
+}
+
+.google-mail-aside__footer {
+    position: relative;
+    bottom: 0;
+    height: 32px;
+    background: violet;
+    border-top: 1px solid rgba(0, 0, 0, 0.2);
 }
 
 .gmail-body {
-  height: 575px;
-  width: calc(100% - var(--gmail-aside-width));
-  background: #2980b9;
+    height: 575px;
+    width: calc(100% - var(--gmail-aside-width));
+    background: #2980b9;
 }
 
 .header-gmail-emails {
-  height: 48px;
-  width: 100%;
-  background: #ecf0f1;
+    height: 48px;
+    width: 100%;
+    background: #ecf0f1;
 }
 
 .gmail-emails-main {
-  width: 100%;
-  height: calc(100% - 48px);
-  background: #f39c12;
+    width: 100%;
+    height: calc(100% - 48px);
+    background: #f39c12;
 }
 
 .gmail-emails {
-  width: 100%;
-  height: auto;
-  background: #8e44ad;
+    width: 100%;
+    height: auto;
+    background: #8e44ad;
 }
 
 .gmail-footer {
-  height: 40px;
-  width: 100%;
-  margin-top: 16px;
-  margin-bottom: 16px;
-  background: #2c3e50;
+    height: 40px;
+    width: 100%;
+    margin-top: 16px;
+    margin-bottom: 16px;
+    background: #2c3e50;
 }
 
 body {
-  margin: 0;
-  padding: 0;
-  background: #ffffff;
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    background: #ffffff;
+    font-family: "Roboto", Arial, Helvetica, sans-serif;
 }
 
 .google-mail-main {
-  display: flex;
+    display: flex;
 }
 
 button {
-  background: transparent;
+    background: transparent;
 }
+
 button:hover {
-  cursor: pointer;
+    cursor: pointer;
 }
 
 :root {
-  --window-header-height: 32px;
+    --window-header-height: 32px;
 }
 
 /*# sourceMappingURL=common.css.map */
