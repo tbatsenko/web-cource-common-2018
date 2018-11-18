@@ -65,7 +65,7 @@ function updateWalls(){
                 wallContainer.remove();
                 score++;
                 scoreObject.innerText = score;
-                if (gapSize > 200 && score % 2 === 0){
+                if (gapSize > 250 && score % 2 === 0){
                     gapSize -= 100;
                 }
             }
