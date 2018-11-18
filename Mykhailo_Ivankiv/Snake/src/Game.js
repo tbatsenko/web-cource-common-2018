@@ -106,7 +106,8 @@ setInterval(() => {
   renderField(fieldWithSnakeAndApple, document.body)
 }, 100)
 
-document.addEventListener('keypress', e => {
+document.addEventListener('keydown', e => {
+  console.log(e)
   switch (e.keyCode) {
     case KEY_DOWN: {
       direction = 'BOTTOM'
