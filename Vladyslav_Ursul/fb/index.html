@@ -1,0 +1,57 @@
+<html>
+    <head>
+    <link rel="stylesheet" href="styles/main.css">
+    <script src="../handlebars-v4.0.12.js"></script>
+</head>
+
+<body>
+
+    <header>
+        <nav class="navigator">
+            <div class="container">
+                <a href="/index.html"><span class="icon icon-fb">facebook.com</span></a>
+                <form action="" class="navigator__search-form" id="navigator__search-form">
+                    <input type="text" name="q" value="Vladyslav Ursul" placeholder="Search">
+                    <button type="submit" form="navigator__search-form" value="Search" class="search-form__button">
+                        <span class="icon icon-search">Search</span>
+                    </button>
+                </form>
+
+                <ul class="navigator_navigation">
+                    <li><a href="" class="navigation_profile-link"> <img src="img/avatar.jpg" alt="Avatar">Vladyslav</a></li>
+                    <li><a href="">Home</a></li>
+                    <li><button>Create</button></li>
+                    <li class="navigation_icons">
+                        <button class="navigation_icon-btn" id="navigator_friends-btn"><span class="icon icon-friends"></span></button><label>Friends</label>
+                        <button class="navigation_icon-btn" id="navigator_messages-btn"><span class="icon icon-messages"></span></button><label>Messages</label>
+                        <button class="navigation_icon-btn" id="navigator_notifications-btn"><span class="icon icon-notifications"></span></button><label>Notifications</label>
+                    </li>
+                    <li class="navigation_icons">
+                        <button class="navigation_icon-btn" id="navigator_notifications-btn"><span class="icon icon-faq"></span></button><label>Quick Help</label>
+                        <button class="navigation_icon-btn" id="navigator_notifications-btn"><span class="icon icon-dropdown">See more</span></button>
+                    </li>
+                </ul>
+
+            </div>
+        </nav>
+    </header>
+    <main class="main-container container">
+        <div class="container">
+            <section class="profile-header">
+                <div class="profile-header__cover">
+                    <img src="img/cover.jpg" alt="Profile cover">
+                    <h1>Vladyslav Ursul</h1>
+                    <div class="profile-header_cover_btn-group">
+                        <button>Edit profile</button>
+                        <button>Activity Log</button>
+                    </div>
+                </div>
+                <div class="profile-header__avatar">
+                    <img src="img/avatar.jpg" alt="Vladyslav's Avatar">
+                </div>
+            </section>
+        </div>
+    </main>
+
+</body>
+</html>

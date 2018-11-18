@@ -1,0 +1,54 @@
+<header>
+    <section class="left-part">
+        <button class="left-part__menu"></button>
+        <button><img src="https://ssl.gstatic.com/ui/v1/icons/mail/rfr/logo_gmail_lockup_default_1x.png"></button>
+    </section>
+
+    <section class="right-part">
+        <section class="right-part__search">
+            <button class="lupa"></button>
+            <input class="search" placeholder="Search mail">
+            <button class="dropdown"></button>
+        </section>
+        <section class="right-part__buttons">
+            <button class="right-part__buttons__tasks"></button>
+            <button class="right-part__buttons__bell"></button>
+            <button><img src="images/me.jpg" class="profile_picture"><img></button>
+        </section>
+    </section>
+</header>
+
+
+<main class="main">
+    <aside class="letter_types">
+        <button class="compose_button"><img src="images/plus.png" class="compose_icon">
+            <h3>Compose</h3></button>
+        {{#letter_types}}
+
+            <button class="letter_types__button"><img src="{{icon}}" class="letter_types__icon">{{text}}</button>
+
+        {{/letter_types}}
+    </aside>
+
+    <section class="letters">
+        {{#letters}}
+            <a>
+                <div class="letter">
+                    <button class="letter__square"></button>
+                    <button class="letter__star"></button>
+                    <p class="letter__sender">{{sender}}</p>
+                    <p class="letter__content">{{name}} - {{content}} </p>
+                    <p class="letter__date">{{date}}</p>
+                </div>
+            </a>
+        {{/letters}}
+    </section>
+
+    <aside class="tools">
+        {{#tools}}
+
+            <button class="tools__button"><img src="{{.}}" class="tools__icon"></button>
+
+        {{/tools}}
+    </aside>
+</main>

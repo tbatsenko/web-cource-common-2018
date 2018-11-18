@@ -1,0 +1,23 @@
+.statistics {
+  &__client {
+    margin-right: 20px;
+    align-self: flex-start;
+    color: transparent;
+    flex-grow: 1;
+    flex-basis: 40%;
+
+    &_image {
+      width: 100%;
+    }
+  }
+  &__social-media {
+    align-self: flex-start;
+    color: transparent;
+    flex-grow: 1;
+    flex-basis: 40%;
+
+    &_image {
+      width: 100%;
+    }
+  }
+}

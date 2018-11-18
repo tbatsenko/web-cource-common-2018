@@ -1,0 +1,20 @@
+.profile-background {
+    width: 100%;
+    height: 328px;
+    position: relative;
+}
+
+.profile-background__img-cover{
+    background: linear-gradient(rgba(0,0,0,0) 71%, rgba(0,0,0, .53));
+    height: 100%;
+    position: absolute;
+    width: 100%;
+    top: 0;
+    z-index: 0;
+}
+
+.profile-background__img {
+    width: 100%;
+    object-fit: fill;
+    height: 100%;
+}

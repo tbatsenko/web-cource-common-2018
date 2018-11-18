@@ -1,0 +1,27 @@
+.main-menu__navigation {
+    float: left;
+    padding: 10px;
+    width: 476px;
+}
+
+.main-menu__option {
+    margin-left: 20px;
+    display: inline-block;
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: 1px;
+    color: white;
+}
+
+.main-menu__search {
+    float: right;
+    width: 275px;
+    height: 30px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    margin-right: 20px;
+    border-radius: 3px;
+    position: relative;
+}
+
+/*# sourceMappingURL=main-menu.css.map */

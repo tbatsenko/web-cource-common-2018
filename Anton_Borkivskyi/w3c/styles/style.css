@@ -1,0 +1,30 @@
+body{
+    margin:auto;
+    width: 960px;
+}
+
+h1,h2,h3,h4{
+    font-family: "PT Sans Caption", sans-serif;
+}
+
+
+p:first-letter{
+    padding-left: 2rem;
+}
+
+p:first-child{
+    padding: 0px;
+}
+
+a {
+    color:#3498DB;
+}
+
+a[href*="#"]{
+    text-decoration: none;
+    border-bottom: 1px dashed;
+}
+
+a:visited{
+    color:#9B59B6;
+}

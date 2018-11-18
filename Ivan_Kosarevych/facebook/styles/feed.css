@@ -1,0 +1,53 @@
+#central-feed{
+    display: inline-block;
+    position: absolute;
+    width: 500px;
+}
+.main-feed-element{
+    height: 100%;
+    background-color: white;
+    margin: 15px 0 0 0;
+    border-radius: 3px;
+}
+.main-block__posts li{
+    margin: 15px 0 0 0;
+}
+.feed-post header{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+}
+.feed-post p{
+    margin: 0;
+}
+#feed-post-ava{
+    display: inline-block;
+    border-radius: 50%;
+}
+.feed-post__username-text{
+    display: inline;
+    font-weight: bold;
+    font-style: normal;
+    color: #425899;
+}
+.post-time{
+    color: #616770;
+    font-style: normal;
+    font-size: 12px;
+    margin: 0;
+}
+.post-text{
+    padding: 10px 10px 0 10px;
+    align-content: center;
+}
+.post-actions{
+    position: absolute;
+}
+.post-actions button{
+    display: inline-block;
+}
+.post-image{
+    width: 100%;
+    position: relative;
+    margin: 10px 0 0 0;
+}

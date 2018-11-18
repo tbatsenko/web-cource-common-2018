@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Бюро Горбунова</title>
+    <link rel="stylesheet" type="text/css" href="styles/main.css">
+    <link rel="stylesheet" type="text/css" href="styles/bureau_containers/bureau.css">
+    <link rel="stylesheet" type="text/css" href="styles/bureau_containers/bureau_header/header.css">
+    <link rel="stylesheet" type="text/css" href="styles/bureau_containers/bureau_posts/posts.css">
+    <link rel="stylesheet" type="text/css" href="styles/bureau_containers/bureau_footer/footer.css">
+    <link rel="stylesheet" type="text/css" href="styles/bureau_containers/bureau_posts/advert/advert.css">
+    <link rel="stylesheet" type="text/css" href="styles/bureau_containers/bureau_posts/courses/courses.css">
+    <link rel="stylesheet" type="text/css" href="styles/bureau_containers/bureau_posts/educational/educational.css">
+    <link rel="stylesheet" type="text/css" href="styles/bureau_containers/bureau_posts/hottest_books/hottest-books.css">
+    <link rel="stylesheet" type="text/css" href="styles/bureau_containers/bureau_posts/materials/materials.css">
+    <link rel="stylesheet" type="text/css" href="styles/bureau_containers/bureau_posts/books/books.css">
+    <link rel="stylesheet" type="text/css" href="styles/bureau_containers/bureau_posts/cafe/cafe.css">
+    <link rel="stylesheet" type="text/css" href="styles/bureau_containers/bureau_posts/statistics/statistics.css">
+</head>
+<body>
+<script src="node_modules/handlebars/dist/handlebars.js"></script>
+<script>
+    const render = async (templateSrc, dataSrc, container) => {
+        const templateStr = await (await fetch(templateSrc)).text();
+        const data = await (await fetch(dataSrc)).json();
+        const compiled = Handlebars.compile(templateStr);
+
+        document.body.innerHTML = compiled(data);
+    };
+
+    render("templates/main.handlebars", "data/data.json", document.body);
+</script>
+<header>
+
+</header>
+</body>
+</html>

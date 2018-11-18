@@ -1,0 +1,35 @@
+.header-nav {
+  width: 77px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-right: 7px; }
+  .header-nav__button {
+    width: 10px;
+    height: 10px;
+    object-fit: contain;
+    overflow: hidden;
+    color: transparent;
+    border: none; }
+    .header-nav__button--add {
+      width: 12px;
+      height: 12px;
+      background: url("../images/plus.svg") no-repeat;
+      background-size: cover; }
+    .header-nav__button--video-call {
+      width: 12px;
+      height: 8px;
+      background: url("../images/video.svg") no-repeat;
+      background-size: cover; }
+    .header-nav__button--settings {
+      width: 12px;
+      height: 12px;
+      background: url("../images/cog.svg") no-repeat;
+      background-size: cover; }
+    .header-nav__button--close {
+      width: 18px;
+      height: 18px;
+      background: url("../images/close.svg") no-repeat;
+      background-size: cover; }
+
+/*# sourceMappingURL=header-navigation.css.map */

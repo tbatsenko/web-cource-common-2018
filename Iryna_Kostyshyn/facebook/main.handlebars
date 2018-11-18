@@ -1,0 +1,179 @@
+<header class="main-header">
+    {{#main-header}}
+    <div class="main-header__content">
+        <a class="main-header__logo" href="#" name="Facebook"></a>
+        <form class="header-search" action="/" method="get">
+            <input class="header-search__input" type="text" name="q" required><!--
+                --><button class="header-search__button">{{buttons.[0]}}</button>
+        </form>
+        <nav class="main-header-navigation">
+
+            <button class="main-header-navigation__button main-header-navigation__button--username">{{buttons.[1]}}</button>
+            <button class="main-header-navigation__button main-header-navigation__button--main">{{buttons.[2]}}</button>
+            <button class="main-header-navigation__button main-header-navigation__button--create">{{buttons.[3]}}</button>
+            <button class="main-header-navigation__button main-header-navigation__button--friend-req-">{{buttons.[4]}}</button>
+            <button class="main-header-navigation__button main-header-navigation__button--message">{{buttons.[5]}}</button>
+            <button class="main-header-navigation__button main-header-navigation__button--notification">{{buttons.[6]}}</button>
+
+            <button class="main-header-navigation__button main-header-navigation__button--quick-help">{{buttons.[7]}}</button>
+            <button class="main-header-navigation__button main-header-navigation__button--submenu">{{buttons.[8]}}</button>
+
+        </nav>
+    </div>
+    {{/main-header}}
+</header>
+<main class="container">
+    <nav class="side-navigation">
+        {{#side-navigation}}
+        <ul class="side-navigation__list">
+            <li class="side-navigation__link">
+                <div class="side-navigation__icon side-navigation__icon--user"></div>
+                <a class="side-navigation__direct_link" href="#">{{links.[0]}}</a>
+            </li>
+            <li class="side-navigation__link">
+                <div class="side-navigation__icon side-navigation__icon--news"></div>
+                <a class="side-navigation__direct_link" href="#">{{links.[1]}}</a>
+            </li>
+            <li class="side-navigation__link">
+                <div class="side-navigation__icon side-navigation__icon--messenger"></div>
+                <a class="side-navigation__direct_link" href="#">{{links.[2]}}</a>
+            </li>
+            <li>
+                <h5 class="side-navigation__section_name">{{titles.[0]}}</h5>
+            </li>
+            <li class="side-navigation__link">
+                <div class="side-navigation__icon side-navigation__icon--shortcut-page"></div>
+                <a class="side-navigation__direct_link" href="#">{{links.[3]}}</a>
+            </li>
+            <li>
+                <h5 class="side-navigation__section_name">{{titles.[1]}}</h5>
+            </li>
+            <li class="side-navigation__link">
+                <div class="side-navigation__icon side-navigation__icon--events"></div>
+                <a class="side-navigation__direct_link" href="#">{{links.[4]}}</a>
+            </li>
+            <li class="side-navigation__link">
+                <div class="side-navigation__icon side-navigation__icon--groups"></div>
+                <a class="side-navigation__direct_link" href="#">{{links.[5]}}</a>
+            </li>
+            <li class="side-navigation__link">
+                <div class="side-navigation__icon side-navigation__icon--pages"></div>
+                <a class="side-navigation__direct_link" href="#">{{links.[6]}}</a>
+            </li>
+            <li class="side-navigation__link">
+                <div class="side-navigation__icon side-navigation__icon--friends"></div>
+                <a class="side-navigation__direct_link" href="#">{{links.[7]}}</a>
+            </li>
+            <li class="drop_link">
+                <div class="side-navigation__icon side-navigation__icon--see-more"></div>
+                <a class="side-navigation__direct_link" href="#">{{links.[8]}}</a>
+            </li>
+        </ul>
+        {{/side-navigation}}
+    </nav>
+    <section class="main-feed">
+        <form class="make_post">
+            {{#make-post}}
+            <header class="make_post__header">
+
+                <button class="make-post__header-button">{{header-buttons.[0]}}</button>
+                <button class="make-post__header-button">{{header-buttons.[1]}}</button>
+                <button class="make-post__header-button">{{header-buttons.[2]}}</button>
+
+            </header>
+            <main class="make_post__main">
+                <img class="post__user-avatar" src="https://avatars1.githubusercontent.com/u/25458097?s=400&v=4" alt="profile photo">
+                <input class="make_post__input" placeholder={{description}}>
+
+            </main>
+            <footer class="make_post__footer">
+                <button class="make-post__footer-button">{{footer-buttons.[0]}}</button>
+                <button class="make-post__footer-button">{{footer-buttons.[1]}}</button>
+                <button class="make-post__footer-button">{{footer-buttons.[2]}}</button>
+                <button class="make-post__footer-button make-post__footer-button--more">...</button>
+            </footer>
+            {{/make-post}}
+        </form>
+
+        <article class="post">
+            {{#post}}
+            <header class="post__header">
+                <img class="post__user-avatar" src="https://avatars0.githubusercontent.com/u/4161345?s=400&v=4">
+                <a class="post__user-name" href="#">{{user}}</a>
+                <a class="post__time" href="#">{{time}}</a>
+
+            </header>
+            <p class="post__capture">{{poost-title}}</p>
+            <img class="post__photo" src={{photo}} alt="post photo">
+            <footer class="post__footer">
+                <div class="post__summary">
+                    <img class="post__like-img" src="https://i0.wp.com/www.vectorico.com/wp-content/uploads/2018/02/Facebook-Like.png?resize=300%2C300" alt="like">
+                    <a class="post__amount-likes" href="#">{{info.[0]}} </a>
+                    <a class="post__amount-shares" href="#">{{info.[1]}} </a>
+                </div>
+                <div class="post__footer-buttons">
+                    <button class="post__footer-button">{{options.[0]}}</button>
+                    <button class="post__footer-button">{{options.[1]}}</button>
+                    <button class="post__footer-button">{{options.[2]}}</button>
+                </div>
+            </footer>
+            {{/post}}
+        </article>
+
+    </section>
+    <section class="right-side-block">
+        <section class="right-side-block__story">
+            {{#story}}
+            <header class="right-side-block__story-header">
+                <a class="right-side-block__story-name" href="#">{{title}}</a>
+                <a class="right-side-block__story-navigation" href="#">{{options.[0]}}</a>
+                ·
+                <a class="right-side-block__story-navigation"href="#">{{options.[1]}}</a>
+            </header>
+            <div class="story">
+                <img class="right-side-block__user-avatar" src="https://avatars1.githubusercontent.com/u/25458097?s=400&v=4" alt="profile photo">
+                <p class="right-side-block__help-text">{{description}}</p>
+            </div>
+            <div class="story">
+                <img class="right-side-block__user-avatar" src="https://avatars1.githubusercontent.com/u/25458097?s=400&v=4" alt="profile photo">
+                <p class="right-side-block__user-name">Дмитро Наконечний</p>
+                <p class="right-side-block__help-text">23 години тому</p>
+            </div>
+            <div class="story">
+                <img class="right-side-block__user-avatar" src="https://avatars1.githubusercontent.com/u/25458097?s=400&v=4" alt="profile photo">
+                <p class="right-side-block__user-name">Віра Тухлій</p>
+                <p class="right-side-block__help-text">9 годин тому</p>
+            </div>
+            {{/story}}
+        </section>
+        <section class="right-side-block__event">
+            <a href="#">4 запрошення на події</a>
+        </section>
+        <section class="right-side-block__pages">
+            {{#pages_suggestion}}
+                <header class="right-side-block__pages-head">
+                    <a class="right-side-block__story-name" href="#">{{title}}</a>
+                    <a class="right-side-block__story-navigation" href="#">{{see-all}}</a>
+                </header>
+                {{#page}}
+                <img class="right-side-block__pages-to-like-photo" src="https://scontent.fiev12-1.fna.fbcdn.net/v/t1.0-0/s417x417/22814519_1473528489433960_7986790218313159823_n.jpg?_nc_cat=105&_nc_ht=scontent.fiev12-1.fna&oh=580663f16409e489c0559c2272751b08&oe=5C77FE8B" alt="page photo">
+                <button class="like-button">Вподобати цю сторінку</button>
+                    <hr>
+                {{/page}}
+            {{/pages_suggestion}}
+        </section>
+        <section class="right-side-block__language-selection">
+            {{#lang}}
+                {{active}} · {{links.[0]}} · {{links.[1]}} · {{links.[2]}} · {{links.[3]}}
+                <button class="right-side-block__language-add">+</button>
+            {{/lang}}
+        </section>
+        <footer class="right-side-block__footer">
+            {{#footer}}
+                {{links.[0]}} · {{links.[1]}} · {{links.[2]}} · {{links.[3]}} · {{links.[4]}} ·
+                {{links.[5]}}
+                Facebook © 2018
+            {{/footer}}
+        </footer>
+    </section>
+</main>

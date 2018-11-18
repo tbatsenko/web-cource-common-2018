@@ -1,8 +1,23 @@
 @import "header.css";
 @import "left-nav.css";
+@import "create-post.css";
+@import "stories.css";
+@import "user-post.css";
 
-#container {
+.container {
     overflow: hidden;
     margin: auto;
     width: 1020px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-top: 15px;
+}
+
+.feed-container {
+    width: 500px;
+}
+
+.right-menu {
+    width: 308px;
 }

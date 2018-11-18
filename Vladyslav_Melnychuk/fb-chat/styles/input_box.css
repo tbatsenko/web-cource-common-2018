@@ -1,0 +1,28 @@
+.input-box {
+  margin-top: 30px;
+  border-top: solid 1px #e5e5e5; }
+  .input-box__textarea {
+    display: block;
+    resize: none;
+    width: 258px;
+    border: none;
+    padding: 9px 2px 2px 2px;
+    margin: 0 16px 0 16px; }
+
+.message-nav {
+  flex-shrink: 0;
+  margin-left: 16px; }
+  .message-nav__button {
+    margin-right: 10px;
+    overflow: hidden;
+    color: transparent;
+    background: none;
+    height: 16px;
+    border: none;
+    position: relative; }
+    .message-nav__button--square {
+      width: 16px; }
+    .message-nav__button--wide {
+      width: 21px; }
+
+/*# sourceMappingURL=input_box.css.map */

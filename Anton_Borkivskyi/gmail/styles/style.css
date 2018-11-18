@@ -1,0 +1,109 @@
+:root {
+  --menu-width: 248px;
+  --header-h: 48px; }
+
+* {
+  padding: 0;
+  margin: 0; }
+
+button {
+  background: transparent;
+  border: 0px; }
+
+header {
+  height: var(--header-h);
+  padding: 8px;
+  display: flex;
+  border-bottom: 1px silver solid; }
+  header .left-part {
+    width: var(--menu-width);
+    display: flex;
+    align-items: center; }
+    header .left-part .left-part__menu {
+      background: url("../images/menu.png") center no-repeat;
+      background-size: 20px 20px;
+      height: 50px;
+      width: 50px; }
+  header .right-part {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center; }
+    header .right-part__search {
+      background: #F5F5F5;
+      width: 70%;
+      display: flex;
+      align-items: center; }
+      header .right-part__search .lupa {
+        background: url("../images/lupa.png") center no-repeat;
+        background-size: 15px 15px;
+        height: 30px;
+        width: 30px; }
+      header .right-part__search .search {
+        height: 100%;
+        width: 90%;
+        background: #F5F5F5;
+        border: 0; }
+        header .right-part__search .search:focus {
+          outline: none; }
+      header .right-part__search .dropdown {
+        background: url("../images/dropdown.svg") center no-repeat;
+        background-size: 15px 15px;
+        height: 30px;
+        width: 30px;
+        margin-left: auto; }
+    header .right-part .right-part__buttons {
+      display: flex; }
+      header .right-part .right-part__buttons .right-part__buttons__tasks {
+        background: url("../images/tasks.svg") center no-repeat;
+        background-size: 15px 15px;
+        height: 50px;
+        width: 50px; }
+      header .right-part .right-part__buttons .right-part__buttons__bell {
+        background: url("../images/bell.png") center no-repeat;
+        background-size: 20px 20px;
+        height: 50px;
+        width: 50px; }
+      header .right-part .right-part__buttons .profile_picture {
+        width: 40px;
+        height: 40px;
+        border-radius: 100%; }
+
+.main {
+  display: flex;
+  flex-direction: row; }
+  .main .letters {
+    overflow-y: scroll; }
+    .main .letters .letter {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      border-bottom: 1px silver solid;
+      border-left: 1px white solid;
+      height: 40px; }
+      .main .letters .letter .letter__square {
+        background: url("../images/square.png") center no-repeat;
+        background-size: 20px 20px;
+        height: 30px;
+        width: 30px; }
+      .main .letters .letter .letter__star {
+        background: url("../images/star.png") center no-repeat;
+        background-size: 20px 20px;
+        height: 30px;
+        width: 30px; }
+      .main .letters .letter .letter__sender {
+        width: 200px; }
+      .main .letters .letter .letter__content {
+        flex: 1;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis; }
+      .main .letters .letter .letter__date {
+        justify-self: flex-end; }
+    .main .letters .letter:hover {
+      border: 1px gray solid;
+      border-top: 0;
+      box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1); }
+
+/*# sourceMappingURL=style.css.map */

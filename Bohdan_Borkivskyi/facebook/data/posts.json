@@ -1,0 +1,27 @@
+{
+  "posts": [
+    {
+      "author": "Mikołaj Kopernik",
+      "author_img": "images/profiles/kopernik.jpg",
+      "author_link": "#1",
+      "time": "40 mins",
+      "text": [
+        "Сидів собі, та й думу гадав: а чого це Земля - центр Всесвіту? Хоч я й погоджуюсь з цією теорією - вирішив підкинути вогню в бесіди наукових кіл.",
+        "Представляю Геліоцентричну модель Сонячної системи"
+      ],
+      "has_media": true,
+      "media_url": "images/posts/gelio.jpg"
+    },
+    {
+      "author": "Marie Skłodowska Curie",
+      "author_img": "images/profiles/curie.jpg",
+      "author_link": "#3",
+      "time": "2 hr",
+      "text": [
+        "Мало хто знав нашого лаборанта Андре. Та він особливо й не світився."
+      ],
+      "has_media": true,
+      "media_url": "images/posts/pierre_and_marie_curie.jpg"
+    }
+  ]
+}

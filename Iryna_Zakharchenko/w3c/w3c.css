@@ -1,0 +1,19 @@
+body {
+    margin: auto;
+    width: 960px;
+
+}
+
+
+a[href*="#"] {
+    color: gold;
+}
+
+
+
+#logo{
+    color: transparent;
+    background: no-repeat
+            url("https://upload.wikimedia.org/wikipedia/commons/e/ed/W3C%C2%AE_Icon.svg");
+    background-size: contain;
+}

@@ -1,0 +1,22 @@
+.post-section__article__reaction-area__likes-container {
+    cursor: pointer;
+    color: #606770;
+    font-size: 13px;
+    padding: 10px 20px;
+    height: 15px;
+}
+
+.post-section__article__reaction-area__likes-container > span {
+    display: flex;
+}
+
+
+.post-section__article__reaction-area__likes-container .post-section__article__reaction-area__who-reacted {
+    float: left;
+    line-height: 18px;
+    padding-left: 5px;
+}
+
+.post-section__article__reaction-area__likes-container .post-section__article_reaction_area__how-many-comments {
+    float: right;
+}

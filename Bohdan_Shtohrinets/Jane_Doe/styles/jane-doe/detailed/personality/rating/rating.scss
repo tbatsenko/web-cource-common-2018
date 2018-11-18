@@ -1,0 +1,20 @@
+.rating {
+  &__text {
+    font-family: Montserrat, serif;
+    font-size: 15px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: left;
+    color: #181818;
+  }
+  &__criteria {
+    display: flex;
+    justify-content: space-between;
+  }
+  &__slider {
+    width: 100%;
+  }
+}

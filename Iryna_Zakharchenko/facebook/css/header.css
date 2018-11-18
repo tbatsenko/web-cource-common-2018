@@ -1,0 +1,180 @@
+.header-blue {
+    width: 100%;
+    background: #4267b2;
+    padding: 0.4em 0;
+    height: 1.8em;
+    position: fixed;
+    top:0;
+}
+
+.header-container{
+    display: flex;
+    width: 64em;
+    justify-content: space-between;
+    align-items: center;
+    height: 2em;
+    /*position: fixed;*/
+    margin: auto;
+}
+.header-left {
+    display: flex;
+
+}
+
+.header__facebook-icon{
+    float: left;
+    margin: 0.3em;
+    background-position: 0 -442px;
+    height: 1.7em;
+    width: 1.7em;
+    color: transparent;
+    cursor: pointer;
+    padding: 0;
+}
+
+.search-form{
+    border: 1px solid #3b5998;
+    float: left;
+    display: flex;
+    height: 1.45em;
+    border-radius: 3px;
+    margin: 0.2em 0.1em 0.2em 0.1em;
+    width: 28em;
+}
+
+.search-form__input{
+    max-width: 100em;
+    padding-left: 0.3em;
+    height: 1.6em;
+    min-width: 5em;
+    width: 100%;
+    border: none;
+    border-radius: 0.1em 0 0 0.1em;
+}
+
+.search-form__button{
+    border-radius: 0 0.1em 0.1em 0;
+    border: none;
+    cursor: pointer;
+    text-align: center;
+
+    width: 4.5em;
+
+    height: 1.6em;
+    background-color: #ebedf0;
+
+}
+
+.img-header-search{
+    background-position: 0 -1445px;
+    /*background-size: 1.1em 1.1em;*/
+}
+
+
+.search-form__search-icon{
+    background-position: 6px -1444px;
+    /*background-size: 30px 1475px;*/
+    /*clip-path: inset(20px 20px 20px 20px);*/
+    width: 1.4em;
+    height: 1.05em;
+}
+
+.header-navigation{
+    height: 2.1em;
+    float: left;
+}
+
+
+
+.header-right__element{
+    display: flex;
+    align-items: center;
+    float: right;
+    padding-left: 1.5em;
+
+
+}
+
+.header-right__element>a{
+    color: rgb(255, 255, 255);
+    line-height: 190%;
+    /*font-size: 85%;*/
+    font-weight: bold;
+    font-size: 80%;
+}
+
+
+.header-right__button{
+    line-height: 145%;
+    font-weight: bold;
+    font-size: 80%;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    text-align: center;
+}
+
+.header-right__profile-details{
+    display: flex;
+
+}
+
+.header-right__profile-picture{
+    height: 1.9em;
+    width: 1.9em;
+    border-radius: 50%;
+    margin-right: 0.3em;
+}
+
+.header-right__button-create{
+    color: #fff;
+}
+
+.header-right {
+
+    color: rgb(255, 255, 255);
+    display: flex;
+    padding-left: 0.1em;
+    float: right;
+    margin: 0.1em;
+}
+
+
+.header-right__button-friends{
+    background-position: 0 -892px;;
+    /*background-size: 1.1em 1.1em;*/
+
+
+
+    text-align: center;
+}
+
+.header-right__button-messages{
+    background-position: 0 -942px;;
+
+    text-align: center;
+}
+
+.header-right__button-notifications{
+    background-position: 0 -792px;
+
+    text-align: center;
+}
+
+.header-right__button-help{
+
+    text-align: center;
+    background-position: 0 -992px;
+}
+
+.header-right__button-other{
+
+    text-align: center;
+    background-position: 0 -842px;
+}
+
+.header-right__button__transparent-w2-h2 {
+    color: transparent;
+    width: 2em;
+    height: 2em;
+}

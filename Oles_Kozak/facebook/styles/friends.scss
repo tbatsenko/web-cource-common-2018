@@ -1,0 +1,45 @@
+//Friends block implementation
+
+@import "before_item";
+
+.friends {
+  height: 100%;
+  width: 190px;
+  background: #e9ebee;
+  border: none;
+  border-left: 1px solid rgba(0, 0, 0, .2);
+  float: right;
+  right: 0;
+  top: 41px;
+  padding-left: 10px;
+  position: fixed;
+
+  &__title5{
+    color: #4a4a4a;
+    font-size: 11px;
+    font-weight: 700;
+    margin-bottom: 0px;
+  }
+
+  &__list{
+    padding: 0;
+    line-height: 20px;
+    list-style-type: none;
+    color: #333;
+    font-size: 12px;
+  }
+  &__list-item{
+    display: inline-block;
+    cursor: pointer;
+    margin-bottom: 10px;
+  }
+  &__list-item_before:before{
+    @extend %before-item;
+    width: 30px;
+    height: 30px;
+    background: url("https://scontent.flwo1-1.fna.fbcdn.net/v/t1.0-1/p320x320/37013174_2034295666886553_1601782394908573696_n.jpg?_nc_cat=110&oh=70163461dad0bd167e4783a2fb672ff5&oe=5C5BC25F") no-repeat;
+    background-size: 30px;
+    border-radius: 50%;
+    margin-right: 10px;
+  }
+}

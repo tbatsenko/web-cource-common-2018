@@ -1,0 +1,174 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Facebook</title>
+    <style>
+        html, body {
+            margin: 0;
+            padding: 0;
+            font-family: Helvetica, Arial, sans-serif;
+        }
+
+        header {
+            height: 42px;
+            background-color: #4267b2;;
+            overflow: hidden;
+        }
+
+        .header-center {
+            position: relative;
+            width: 1020px;
+            margin: 0 auto;
+            padding: 8px;
+        }
+
+        form#search {
+            height: 32px;
+            width: 480px;
+            display: inline;
+        }
+        #logo {
+            width: 24px;
+            height: 24px;
+            color: transparent;
+            background-image: url("https://static.xx.fbcdn.net/rsrc.php/v3/yf/r/dxigF_3tzG8.png");
+            display: inline-block;
+            vertical-align: middle;
+            background-size: cover;
+        }
+
+        #search img, #search input, #search button {
+            vertical-align: middle;
+        }
+
+        #search input {
+            height: 24px;
+            padding: 5px 10px;
+            border: 0;
+            margin: 0;
+            width: 400px;
+            box-sizing: border-box;
+            font-size: 14px;
+            border-radius: 2px 0 0 2px;
+        }
+
+        #search input::placeholder {
+            opacity: .3;
+        }
+
+        #search button {
+            width: 46px;
+            border: 0;
+            background-color: #f5f6f7;;
+            height: 24px;
+            border-radius: 0 2px 2px 0;
+        }
+
+        #search button:hover {
+            background-color: #ebedf0;
+        }
+
+        #search button:before {
+            content: "";
+            width: 19px;
+            height: 22px;
+            background: transparent url("https://static.xx.fbcdn.net/rsrc.php/v3/yf/r/dxigF_3tzG8.png");
+            display: inline-block;
+            vertical-align: middle;
+            background-position-y: 34px;
+            background-size: 30px auto;
+            background-position-x: 4px;
+        }
+
+
+
+        #main-nav {
+            height: 32px;
+            display: inline;
+            margin-left: 200px;
+        }
+
+        #main-nav ul {
+            margin: 0;
+            display: inherit;
+        }
+
+        #main-nav ul li {
+            display: inline;
+        }
+
+        #main-nav li a {
+            text-decoration: none;
+            color: white;
+            font-weight: 600;
+        }
+
+        #main-nav li button {
+            border: 0;
+            padding: 0;
+        }
+
+        .main-nav-icon:before {
+            /*content: "";*/
+            color: transparent;
+            width: 27px;
+            height: 27px;
+            background: transparent url("https://static.xx.fbcdn.net/rsrc.php/v3/yf/r/dxigF_3tzG8.png");
+            display: inline-block;
+            vertical-align: middle;
+            background-size: cover;
+        }
+
+        .friend-requests-icon:before {
+            background-position-y: -434px;
+        }
+        .messages-icon {
+            background-position-y: -665px;
+        }
+        .notifications-icon {
+            background-position-y: -572px;
+        }
+        .quickhelp-icon {
+            background-position-y: -1163px;
+        }
+    </style>
+</head>
+<body>
+<header>
+    <div class="header-center">
+        <form id="search">
+            <a href="#" id="logo">Facebook</a>
+            <input name="search" type="text" placeholder="Search"><!--
+            --><button type="submit"></button><!--
+    --></form>
+        <nav id="main-nav">
+            <ul>
+                <li><a title="Kostya" href="#">Kostya</a></li>
+                <li><a title="Home" href="#">Home</a></li>
+                <li>
+                    <button class="friend-requests-icon main-nav-icon" aria-label="Friend Requests" title="Friend Requests"></button>
+                </li>
+                <li>
+                    <button class="messages-icon main-nav-icon" aria-label="Messages" title="Messages"></button>
+                </li>
+                <li>
+                    <button class="notifications-icon main-nav-icon" aria-label="Notifications" title="Notifications"></button>
+                </li>
+                <li>
+                    <button class="quickhelp-icon main-nav-icon" aria-label="Quickhelp" title="Quickhelp"></button>
+                </li>
+                <li>
+                    <button class="more-icon main-nav-icon" aria-label="More" title="More"></button>
+                </li>
+            </ul>
+        </nav>
+    </div>
+</header>
+<main>
+</main>
+</body>
+</html>

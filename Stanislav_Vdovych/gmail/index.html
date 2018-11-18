@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Inbox</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+<header class="header">
+    <div class="header__main">
+        <button class="header__main__button__menu__icon" aria-label="Main menu" title="Main menu">menu</button>
+        <a class="header__main__button__home" aria-label="Gmail" title="Gmail" href="#"></a>
+    </div>
+    <form class="header__search">
+        <button class="header__search__button" aria-label="Search" title="Search">search</button>
+        <input class="header__search__field" type="search" placeholder="Search mail">
+        <button class="header__search__button" aria-label="More options" title="More options">arrow_drop_down</button>
+    </form>
+    <div class="header__secondary">
+        <button class="header__secondary__button" aria-label="Google Apps" title="Google Apps">apps</button>
+        <button class="header__secondary__button" aria-label="Notifications" title="Notifications">notifications
+        </button>
+        <button class="header__secondary__button__profile" aria-label="Google Account" title="Google Account"></button>
+    </div>
+</header>
+<nav class="nav">
+    <button class="nav__compose">
+        Compose
+    </button>
+    <div class="nav__main">
+        <button class="nav__button"><span class="nav__icon">inbox</span>Inbox</button>
+        <button class="nav__button"><span class="nav__icon">star</span>Starred</button>
+        <button class="nav__button"><span class="nav__icon">access_time</span>Snoozed</button>
+        <button class="nav__button"><span class="nav__icon">send</span>Sent</button>
+        <button class="nav__button"><span class="nav__icon">insert_drive_file</span>Drafts</button>
+        <button class="nav__button"><span class="nav__icon">keyboard_arrow_down</span>More</button>
+    </div>
+    <button class="nav__profile">Username</button>
+</nav>
+<main class="main">
+    <header class="main__header">
+        <div class="main__header__left">
+            <button class="main__header__button main__header__button--pick-box">check_box_outline_blank</button>
+            <button class="main__header__button main__header__button--pick-arrow">arrow_drop_down</button>
+            <button class="main__header__button">refresh</button>
+            <button class="main__header__button">more_vert</button>
+        </div>
+        <div class="main__header__right">
+            <button class="main__header__button">Num</button>
+            <button class="main__header__button">keyboard_arrow_left</button>
+            <button class="main__header__button">keyboard_arrow_right</button>
+            <button class="main__header__button">settings</button>
+        </div>
+    </header>
+    <section class="main__body">
+        <section class="main__body__mails">
+            <section class="main__body__mails__mail">
+                <div>
+                    <button>Check</button>
+                    <button>Star</button>
+                    <button>Important</button>
+                </div>
+                <a class="main__body__mails__mail__text" href="#">
+                    <p class="main__body__mails__mail__text__sender">Sender</p>
+                    <p>Lorem ipsum</p>
+                </a>
+                <div style="display: none">
+                    <button>Archive</button>
+                    <button>Delete</button>
+                    <button>Mark as unread</button>
+                    <button>Snooze</button>
+                </div>
+                <p>Date</p>
+            </section>
+
+            <footer>
+                <p>1.42 GB (9%) of 15 GB used</p>
+                <a href="#">Terms</a>
+                <a href="#">Privacy</a>
+                <a href="#">Program Policies</a>
+                <p>Last account activity: 16 minutes ago</p>
+                <a>Manage</a>
+                <a>Details</a>
+            </footer>
+        </section>
+
+
+    </section>
+    <aside>
+        <button>Addon1</button>
+        <button>Addon2</button>
+    </aside>
+
+</main>
+
+</body>
+</html>

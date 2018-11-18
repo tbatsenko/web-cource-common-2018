@@ -1,0 +1,328 @@
+@import "main";
+@import "variables";
+@import "icons";
+
+$status-text-color: #606770;
+
+%feed__button-decorator {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  font-size: 12px;
+  font-weight: bold;
+  color: #4b4f56;
+}
+%panel-button-decorator {
+  @extend %feed__button-decorator;
+  width: 155px;
+  height: 32px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  justify-content: center;
+  color: #606770;
+  font-size: 13px;
+
+  &:hover {
+    background-color: rgba(29, 33, 41, .04);
+    border-radius: 2px;
+  }
+}
+%engagement-button_border {
+  border: 1px solid white;
+  border-radius: 50%;
+}
+
+.make-post__button {
+  @extend %feed__button-decorator;
+  @extend %centered;
+}
+.feed__make-post {
+  @extend %feed__item;
+  margin-bottom: 10px;
+  height: 155px;
+}
+.feed__post {
+  @extend %feed__item;
+  margin-top: 10px;
+}
+.post__attachments {
+  @extend %centered;
+  padding: 5px 0;
+  margin-right: 10px;
+  margin-left: 10px;
+  border-top: 1px solid #e9ebee;
+}
+.post__top-menu {
+  @extend %centered;
+  background-color: #f5f6f7;
+  height: 33px;
+  border-bottom: $feed-border;
+}
+.make-post__icon {
+  @extend %facebook-icons_feed;
+  background-position: -17px -465px;
+  margin-right: 5px;
+}
+.upload-photo_video-icon {
+  @extend %facebook-icons_feed;
+  background-position: -34px -465px;
+  margin-right: 5px;
+  margin-left: 5px;
+}
+.upload-photo_video__button {
+  @extend %feed__button-decorator;
+  @extend %centered;
+  border-left: 1px solid #ccd0d5;
+  margin-top: 2px;
+  padding: 0 0 0 5px;
+}
+.feed-post__profile-picture {
+  width: 40px;
+  height: 40px;
+  margin-left: 10px;
+}
+.feed-post__text {
+  @extend %centered;
+}
+.button__gif-icon {
+  @extend %facebook-icons_post;
+  background-position: 0 -1073px;
+  margin-right: 5px;
+}
+.bottom-menu__button {
+  @extend %feed__button-decorator;
+  @extend  %centered;
+  border-radius: 18px;
+  background-color: #f5f6f7;
+  padding: 5px 10px;
+  margin-right: 5px;
+}
+.button__gif_text {
+  text-transform: uppercase;
+}
+.attachments-icon {
+  @extend %facebook-icons_post;
+  background-position: 0 -1514px;
+  margin-right: 5px;
+}
+.button__tag_text {
+  text-transform: capitalize;
+}
+.button__tag-friend-icon {
+  @extend %facebook-icons_post;
+  background-position: 0 -968px;
+  margin-right: 5px;
+}
+.button__more-icon {
+  @extend %facebook-icons_post;
+  background-position: 0 -2291px;
+  margin: 0;
+}
+.feed-post__input-text {
+  height: 60px;
+  margin-right: 10px;
+  margin-left: 10px;
+  width: 100%;
+  border: none;
+  font-size: 14px;
+}
+.profile-picture {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: $feed-border
+}
+.post-header {
+  font-size: 14px;
+  font-weight: normal;
+  color: #616770;
+  margin: 2px;
+}
+.top-bar__post-info {
+  width: 420px;
+  margin-left: 8px;
+}
+.post__top-bar {
+  @extend %centered;
+  padding: 10px;
+}
+.post-header__description {
+  @extend %centered;
+  margin: 2px;
+  font-weight: normal;
+}
+.profile-link {
+  text-decoration: none;
+  color: #365899;
+  font-weight: bold;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+.location-link {
+  text-decoration: none;
+  color: #365899;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+.public-icon {
+  @extend %facebook-icons_post-description;
+  background-position: -382px -270px;
+}
+.post__button-more {
+  @extend %facebook-icons_post-description;
+  @extend %feed__button-decorator;
+  background-position: -284px -245px;
+  height: 20px;
+  width: 20px;
+  align-self: flex-start;
+  color: #616770;
+  opacity: .7;
+
+  &:hover {
+    opacity: 1;
+  }
+}
+.online-indicator {
+  background-color: #42b72a;
+  border: 2px solid #fff;
+  border-radius: 50%;
+  height: 9px;
+  width: 9px;
+  z-index: 1;
+}
+.post__main-text {
+  margin: 0 10px 10px 10px;
+  font-size: 14px;
+  line-height: 1.38;
+}
+.paragraph:first-child {
+  margin-top: 0;
+}
+.post__photo {
+  width: 100%;
+  border-top: $feed-border;
+  border-bottom: $feed-border;
+}
+.post__status-panel {
+  @extend %centered;
+  margin: 5px;
+  height: 20px;
+  justify-content: space-between;
+  font-size: 12px;
+}
+.post__engagement {
+  @extend %centered;
+  margin-left: 5px;
+}
+.likes-icon {
+  @extend %feed-icons_emoji;
+  background-position: 0 -526px;
+  z-index: 2;
+  @extend %engagement-button_border;
+}
+.loves-icon {
+  @extend %feed-icons_emoji;
+  background-position: -17px -492px;
+  margin-left: -5px;
+  z-index: 1;
+  @extend %engagement-button_border;
+}
+.status-text {
+  color: $status-text-color;
+  margin-left: 5px;
+}
+.button_text {
+  margin-left: 5px;
+}
+.status-numbers {
+  color: $status-text-color;
+  margin-right: 5px;
+}
+.status-panel-buttons {
+  @extend %centered;
+  margin: 0 10px 0 10px;
+  border-top: 1px solid #e9ebee;
+  justify-content: space-between;
+}
+.panel__button {
+  @extend %panel-button-decorator;
+  @extend %centered;
+}
+.like-button__icon {
+  @extend %facebook-icons_post-description;
+  background-position: -368px -245px;
+  height: 18px;
+  width: 18px;
+}
+.comment-button__icon {
+  @extend %feed-icons_emoji;
+  background-position: -19px -198px;
+  height: 18px;
+  width: 18px;
+}
+.share-button__icon {
+  @extend %feed-icons_emoji;
+  background-position: 0 -293px;
+  height: 18px;
+  width: 18px;
+}
+.post__comment {
+  @extend %centered;
+  border-top: 1px solid #e9ebee;
+  padding: 8px 12px;
+}
+.comment__profile-picture {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: $feed-border;
+}
+.comment__input {
+  @extend %centered;
+  margin-left: 10px;
+  border-radius: 16px;
+  overflow: hidden;
+  border: 1px solid #dddfe2;
+  background-color: #f2f3f5;
+  width: 100%;
+  justify-content: space-between;
+}
+.comment__input-text {
+  border: none;
+  width: 100%;
+  font-size: 13px;
+  margin: 5px 5px 5px 10px;
+  background-color: transparent;
+}
+.comment__attachments {
+  @extend %centered;
+}
+.comment__emoji-icon {
+  @extend %feed__button-decorator;
+  @extend %facebook-icons_comment;
+  background-position: -34px -222px;
+}
+.comment__photo-icon {
+  @extend %feed__button-decorator;
+  @extend %facebook-icons_comment;
+  background-position: -17px -188px;
+}
+.comment__gif-icon {
+  @extend %feed__button-decorator;
+  @extend %facebook-icons_comment;
+  background-position: -34px -239px;
+  opacity: .7;
+}
+.comment__sticker-icon {
+  @extend %feed__button-decorator;
+  @extend %facebook-icons_comment;
+  background-position: -34px -273px;
+  opacity: .7;
+}
+.timestamp {
+  @extend %timestamp;
+}

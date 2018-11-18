@@ -1,0 +1,21 @@
+@import "variables";
+
+.main {
+  display: flex;
+  flex-direction: row;
+  height: calc(100% - #{$header_height});
+
+  &__left {
+    display: flex;
+    width: $left-side-width;
+    height: 100%;
+    box-sizing: border-box;
+  }
+
+  &__center {
+    display: flex;
+    width: $center-width;
+    height: 100%;
+    box-sizing: border-box;
+  }
+}
