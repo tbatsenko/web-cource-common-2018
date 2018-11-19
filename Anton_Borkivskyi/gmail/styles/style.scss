@@ -1,33 +1,31 @@
-:root{
+:root {
   --menu-width: 248px;
   --header-h: 48px;
 }
 
-*{
+* {
   padding: 0;
   margin: 0;
 }
 
-button{
+button {
   background: transparent;
   border: 0px;
 }
 
-
-header{
+header {
   height: var(--header-h);
   padding: 8px;
   //background: silver;
   display: flex;
-  flex-direction: row;
   border-bottom: 1px silver solid;
 
-  .left-part{
+  .left-part {
     width: var(--menu-width);
     display: flex;
     align-items: center;
 
-    .left-part__menu{
+    .left-part__menu {
 
       background: url("../images/menu.png") center no-repeat;
       background-size: 20px 20px;
@@ -37,7 +35,7 @@ header{
 
   }
 
-  .right-part{
+  .right-part {
     width: 100%;
     //background: blue;
     display: flex;
@@ -45,25 +43,31 @@ header{
     justify-content: space-between;
     align-items: center;
 
-    .right-part__search{
+    &__search {
       background: #F5F5F5;
       width: 70%;
       display: flex;
       align-items: center;
-      .lupa{
+      .lupa {
         background: url("../images/lupa.png") center no-repeat;
         background-size: 15px 15px;
         height: 30px;
         width: 30px
       }
 
-      .search{
+      .search {
         height: 100%;
+        width: 90%;
         background: #F5F5F5;
         border: 0;
+
+        &:focus {
+          outline: none;
+        }
       }
 
-      .dropdown{
+
+      .dropdown {
         background: url("../images/dropdown.svg") center no-repeat;
         background-size: 15px 15px;
         height: 30px;
@@ -91,7 +95,7 @@ header{
         width: 50px;
       }
 
-      .profile_picture{
+      .profile_picture {
         width: 40px;
         height: 40px;
         border-radius: 100%;
@@ -105,55 +109,10 @@ header{
   //background: yellow;
   display: flex;
   flex-direction: row;
-  .left_menu {
-    width: var(--menu-width);
-    //background: #9B59B6;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    margin-left: 16px;
 
-    .compose_icon{
-      width: 20px;
-      height: 20px;
-    }
-
-    .compose_button{
-      width: 80%;
-      height: 50px;
-      border: 1px silver solid;
-      border-radius: 25px;
-      margin: 16px 8px;
-      box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
-      display: flex;
-      align-items: center;
-      justify-content: space-evenly;
-    }
-
-    .menu_button {
-      //background: aqua;
-      display: flex;
-      align-items: center;
-      height: 32px;
-      border-top-right-radius: 16px;
-      border-bottom-right-radius: 16px;
-      width: 90%;
-    }
-
-    .menu_button:hover{
-      background: #F5F5F5;
-    }
-
-    .menu_icon{
-      width: 20px;
-      height: 20px;
-      margin-right: 20px;
-    }
-  }
-
-  .letters{
+  .letters {
     overflow-y: scroll;
-    .letter{
+    .letter {
       display: flex;
       flex-direction: row;
       align-items: center;
@@ -161,15 +120,14 @@ header{
       border-left: 1px white solid;
       height: 40px;
 
-      .letter__square{
+      .letter__square {
         background: url("../images/square.png") center no-repeat;
         background-size: 20px 20px;
         height: 30px;
         width: 30px;
 
-
       }
-      .letter__star{
+      .letter__star {
         background: url("../images/star.png") center no-repeat;
         background-size: 20px 20px;
         height: 30px;
@@ -177,46 +135,29 @@ header{
 
       }
 
-      .sender{
+      .letter__sender {
         width: 200px;
       }
 
-      .content{
+      .letter__content {
         flex: 1;
         white-space: nowrap;
         overflow: hidden;
         text-overflow: ellipsis;
       }
 
-      .letter_date{
+      .letter__date {
         justify-self: flex-end;
       }
 
-
     }
 
-    .letter:hover{
+    .letter:hover {
       border: 1px gray solid;
       border-top: 0;
       box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
     }
   }
 
-
-  .right_menu{
-    display: flex;
-    flex-direction: column;
-    border-left: 1px silver solid;
-
-    .right_menu_button{
-      width: 50px;
-      height: 50px;
-    }
-
-    .right_menu_icon{
-      width: 30px;
-      height: 30px;
-    }
-  }
 }
 

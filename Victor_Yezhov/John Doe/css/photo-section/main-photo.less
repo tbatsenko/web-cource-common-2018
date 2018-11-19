@@ -17,9 +17,18 @@
 .main-photo{
   width: @photo_width;
   height: @photo_height;
-  background:linear-gradient(to bottom, rgba(255, 253, 248, 0.68), rgba(151, 111, 17, 0.68)),
-  url("https://res.cloudinary.com/dh2chxfzx/image/upload/c_scale,h_900,o_100,q_100,w_469/v1541170697/john-doe.jpg") no-repeat center;
   background-size: cover;
+}
+
+.main-photo-container::after{
+  display: block;
+  position: relative;
+  background-image: linear-gradient(to bottom, rgba(255, 253, 248, 0.68), rgba(151, 111, 17, 0.68));
+  margin-top: -1145px;
+  height: @photo_height;
+  width: 100%;
+  content: '';
+
 }
 .stats{
   position: absolute;

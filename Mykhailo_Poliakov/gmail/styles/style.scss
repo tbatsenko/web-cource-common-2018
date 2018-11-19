@@ -1,9 +1,11 @@
-@import url('https://fonts.googleapis.com/css?family=Roboto');
-@import url('https://fonts.googleapis.com/icon?family=Material+Icons');
+@import 'common';
 @import 'body';
-@import 'header';
+@import 'gmail-header';
 @import 'search';
-@import 'compose';
-@import 'sidebar';
-@import 'main';
+@import 'gmail-layout';
+@import 'compose-button';
+@import 'gmail-sidebar';
+@import 'gmail-main';
+@import 'email';
 @import 'checkbox';
+

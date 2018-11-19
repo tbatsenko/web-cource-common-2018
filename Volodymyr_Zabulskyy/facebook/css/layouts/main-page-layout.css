@@ -1,0 +1,24 @@
+.main-page-layout__right-part {
+    width: 15em;
+    height: 100%;
+    padding: 10px 12px;
+    background: #fff;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+}
+
+.main-page-layout__main-placeholder {
+    display: flex;
+    justify-content: space-between;
+    flex-flow: row;
+    width: 1050px;
+    padding-top: 64px;
+}
+
+.main-page-layout__left-part {
+    width: 12em;
+    font-size: 15px;
+    height: 100%;
+    position: sticky;
+    top: 50px;
+}

@@ -1,28 +1,7 @@
-%icon {
-    font-family: 'Material Icons';
-    font-size: 24px;
-    background: transparent;
-    color: #6d6d6d;
-}
-
-* {
+body {
     margin: 0;
     padding: 0;
-    outline: 0;
-    border: 0;
-    font: inherit;
-    color: inherit;
-    box-sizing: inherit;
-}
-
-body {
-    background: #ffffff;
     font-family: 'Roboto', Arial, Helvetica, sans-serif;
-    font-size: .875rem;
-    color: #202124;
+    font-size: 14px;
     overflow: hidden;
-}
-
-button:hover {
-    cursor: pointer;
 }

@@ -1,0 +1,57 @@
+.oval{
+    width: 20px;
+    height: 20px;
+    display: inline;
+    border-radius: 100%;
+}
+
+.oval_brown{
+    background-color: #c7ac6d;
+}
+.oval_grey{
+    background-color: #d2d2d2;
+}
+
+.favorite-brands{
+    margin-left: 30px;
+}
+
+.favorite-brands__container{
+    display: flex;
+    align-items: flex-start;
+    flex-flow:row wrap;
+    width: 300px;
+}
+
+.brand-icon {
+    width: 90px;
+    height: 70px;
+    padding: 5px 5px 5px 5px;
+    color: #c7ac6d;
+}
+
+.preferences_item{
+    font-size:22px;color: #181818;
+}
+li{font-size:22px;color: #181818;}
+
+.last-items{
+    align-self: flex-end;
+    justify-content: space-around;
+}
+
+.detailed-info__pain-section{
+    margin-top: 60px;
+}
+
+.preferences_item_container{
+    padding: 15px 0 0 0;
+    font-size: 18px;
+}
+.first{
+    padding: 5px 0 0 0;
+}
+.preferences{
+    width: 300px;
+    height: 212px;
+}

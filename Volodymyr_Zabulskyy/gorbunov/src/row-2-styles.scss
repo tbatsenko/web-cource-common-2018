@@ -1,0 +1,22 @@
+@import "colors";
+
+.page-content__row-2 {
+  &__countdown-days {
+    margin: 0 0 -5px;
+    font-size: 70px;
+    font-weight: 400;
+    line-height: 68px;
+  }
+
+  &__countdown-container {
+    color: $red;
+    padding: 9px 18px 12px;
+    border: 1px solid $red;
+    border-radius: 6px;
+    font-size: 16px;
+    text-align: center;
+  }
+  &__first-cell__header{
+    color: $red;
+  }
+}

@@ -1,0 +1,17 @@
+.gmail-main {
+    margin-right: 10px;
+    overflow: hidden;
+    box-sizing: border-box;
+    
+    &__control {
+        height: 48px;
+        border-bottom: 1px solid #eceff1;
+    }
+    
+    &__emails {
+        background: #f4f7f7;
+        overflow-y: scroll; 
+        height: calc(100vh - 112px);   
+    }   
+}
+

@@ -1,0 +1,59 @@
+@import "__mixins";
+
+.daily-news {
+  &__first-row {
+    border-bottom: 1px solid var(--border-color);
+  }
+  &__figure {
+    margin: 0;
+  }
+  &__daily-icon {
+    margin: 0 57px;
+    width: calc(100% - 114px);
+  }
+  &__title {
+    &--big {
+      font: 70px/72px "Bureauserif",Arial,sans-serif;
+      color: var(--key-color);
+    }
+    margin: 5px 0;
+    font-size: 24px;
+    font-weight: 700;
+  }
+  &__description {
+    margin: 5px 0;
+    font-size: 24px;
+  }
+  &__link {
+    @include text-underline();
+    line-height: 26px;
+  }
+  &__section {
+    &--special-padding {
+      padding: 0 31px 31px 0;
+    }
+    border-right:1px solid var(--border-color);
+    padding: 10px;
+    min-height: 100%;
+    &--last {
+      border-right: none;
+    }
+  }
+}
+
+.b-days-left {
+  text-align: center;
+  border: 1px solid var(--key-color);
+  border-radius: 8px;
+  color: var(--key-color);
+  width: 104px;
+  height: 118px;
+  &__days {
+    font-size: 70px;
+    margin: 0;
+  }
+  &__text {
+    margin: 0;
+    font-size: 16px;
+  }
+}
