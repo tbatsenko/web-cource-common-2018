@@ -2,11 +2,19 @@
 //   document.getElementById(id).style.backgroundColor = this.background
 // }
 
+function shuffle(a) {
+  for (let i = a.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [a[i], a[j]] = [a[j], a[i]]
+  }
+  return a
+}
+
+
 class Cell {
   constructor(id, value) {
     this.id = id
     this.value = value
-    this.opened = false
   }
 }
 
@@ -14,24 +22,14 @@ class Cell {
 class Game {
 
   constructor() {
-    this.opened = 0
-    this.num_rows = 4
-    this.data = ['Anton', 'Anton', 'Bohdan', 'Bohdan', 'Mark', 'Mark', 'Marian', 'Marian', 'Ivan', 'Ivan', 'VASYL2000', 'VASYL2000', 'IS7', 'IS7', 'BWT', 'BWT', '100', '100', 'XD', 'XD']
-    this.cells = []
-
-    for (var i = 0; i < this.data.length; i++) {
-      this.cells.push(new Cell(i, this.data[i]))
-    }
-
-    this.opened_cells = []
-
+    this.init_const()
     this.init()
   }
 
   flip(tile) {
-    if (this.opened_cells.length < 2 && !this.cells[tile.id].opened) {
-
-      tile.style.backgroundColor = '#ff0000'
+    if (this.opened_cells.length < 2) {
+      tile.innerHTML = '<img src="images/' + this.cells[tile.id].value + '.png">'
+      tile.style.backgroundColor = '#ffffff'
 
       this.opened_cells.push(this.cells[tile.id])
 
@@ -42,15 +40,27 @@ class Game {
           this.opened += 2
           this.opened_cells = []
 
-          if (this.opened === this.data.length) {
-            alert('End of the game')
-          }
+          setTimeout(() => {
+
+            if (this.opened === this.data.length) {
+              alert('End of the game')
+              this.init()
+            }
+
+          }, 1000)
+
 
         } else {
 
-          setTimeout(()=> {
-            document.getElementById(this.opened_cells[0].id).style.backgroundColor = '#123C69'
-            document.getElementById(this.opened_cells[1].id).style.backgroundColor = '#123C69'
+          setTimeout(() => {
+            var tile1 = document.getElementById(this.opened_cells[0].id)
+            tile1.style.backgroundColor = '#123C69'
+            tile1.innerHTML = ''
+
+            var tile2 = document.getElementById(this.opened_cells[1].id)
+            tile2.style.backgroundColor = '#123C69'
+            tile2.innerHTML = ''
+
             this.opened_cells = []
           }, 1000)
 
@@ -59,7 +69,26 @@ class Game {
     }
   }
 
+  init_const() {
+
+    this.num_rows = 4
+    this.data = ['android', 'android', 'apple', 'apple', 'cpp', 'cpp', 'css', 'css', 'html', 'html', 'java', 'java', 'js', 'js', 'python', 'python', 'swift', 'swift', 'windows', 'windows']
+  }
+
   init() {
+
+    this.opened = 0
+
+    this.data = shuffle(this.data)
+
+    this.cells = []
+
+    for (var j = 0; j < this.data.length; j++) {
+      this.cells.push(new Cell(j, this.data[j]))
+    }
+
+    this.opened_cells = []
+
     var divs = ''
     var i = 0
     for (var r = 0; r < this.num_rows; r++) {

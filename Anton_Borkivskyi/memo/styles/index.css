@@ -40,5 +40,9 @@
       height: 80px;
       background: var(--text2-color);
       border-radius: 5px; }
+    .main .row .cell > img {
+      width: 70px;
+      height: 70px;
+      padding: 5px; }
 
 /*# sourceMappingURL=index.css.map */
