@@ -18,18 +18,44 @@ class Game {
     this.num_rows = 4
     this.data = ['Anton', 'Anton', 'Bohdan', 'Bohdan', 'Mark', 'Mark', 'Marian', 'Marian', 'Ivan', 'Ivan', 'VASYL2000', 'VASYL2000', 'IS7', 'IS7', 'BWT', 'BWT', '100', '100', 'XD', 'XD']
     this.cells = []
+
     for (var i = 0; i < this.data.length; i++) {
       this.cells.push(new Cell(i, this.data[i]))
     }
+
     this.opened_cells = []
-    this.opened_cells_id = []
 
     this.init()
   }
 
   flip(tile) {
     if (this.opened_cells.length < 2 && !this.cells[tile.id].opened) {
-      tile.style.backgroundColor = "#ffffff";
+
+      tile.style.backgroundColor = '#ff0000'
+
+      this.opened_cells.push(this.cells[tile.id])
+
+      if (this.opened_cells.length === 2) {
+
+        if (this.opened_cells[0].value === this.opened_cells[1].value) {
+
+          this.opened += 2
+          this.opened_cells = []
+
+          if (this.opened === this.data.length) {
+            alert('End of the game')
+          }
+
+        } else {
+
+          setTimeout(()=> {
+            document.getElementById(this.opened_cells[0].id).style.backgroundColor = '#123C69'
+            document.getElementById(this.opened_cells[1].id).style.backgroundColor = '#123C69'
+            this.opened_cells = []
+          }, 1000)
+
+        }
+      }
     }
   }
 
