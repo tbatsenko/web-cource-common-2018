@@ -1,0 +1,27 @@
+.card__front, .card__back, .card {
+  width: 118px;
+  height: 118px; }
+
+.card__front, .card__back {
+  backface-visibility: hidden;
+  position: absolute;
+  top: 0;
+  left: 0; }
+
+.card {
+  perspective: 1000px; }
+  .card__sides {
+    transition: 0.6s;
+    transform-style: preserve-3d;
+    position: relative; }
+  .card__front {
+    z-index: 2;
+    transform: rotateY(0deg);
+    background-color: #e67e22; }
+  .card__back {
+    transform: rotateY(180deg); }
+
+.card__sides {
+  transform: rotateY(180deg); }
+
+/*# sourceMappingURL=card.css.map */
