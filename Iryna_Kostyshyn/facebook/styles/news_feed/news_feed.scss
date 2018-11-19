@@ -1,0 +1,13 @@
+@import "new_post";
+@import "post";
+
+
+.main-feed{
+  width: 500px;
+  margin-top: 10px;
+  margin-right: 5px;
+  vertical-align: top;
+  display: flex;
+  flex-direction: column;
+  height: auto;
+}

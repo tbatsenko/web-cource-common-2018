@@ -10,6 +10,7 @@
 @import "main/main_content/emails_functions_container.css";
 @import "main/main_content/letters-filter.css";
 @import "main/main_content/letters.css";
+@import "main/main_content/inbox.css";
 body{
     margin: 0;
 }

@@ -1,11 +1,11 @@
 {
   "navigation":{
 
-    "left-side":{
+    "logo-side":{
       "logo": "https://res.cloudinary.com/maxvoloskiy/image/upload/c_scale,h_25,w_100/v1541638581/logo-2.png"
     },
 
-    "right-side":{
+    "activities":{
       "activity-search": "https://res.cloudinary.com/maxvoloskiy/image/upload/c_scale,w_20/v1541641135/compass.png",
       "activity-likes": "https://res.cloudinary.com/maxvoloskiy/image/upload/c_scale,w_20/v1541641135/activity.png",
       "activity-profile": "https://res.cloudinary.com/maxvoloskiy/image/upload/c_scale,w_20/v1541641132/profile.png"
@@ -120,10 +120,10 @@
           },
 
           "article__activities":{
-            "article__activities--like":"https://res.cloudinary.com/maxvoloskiy/image/upload/c_scale,w_22/v1541641135/activity.png",
-            "article__activities--comment":"https://res.cloudinary.com/maxvoloskiy/image/upload/c_scale,w_22/v1542061061/speech-bubble-generator-png-4.png",
-            "article__activities--share":"https://res.cloudinary.com/maxvoloskiy/image/upload/c_scale,w_22/v1542061156/63474-200.png",
-            "article__activities--save":"https://res.cloudinary.com/maxvoloskiy/image/upload/c_scale,w_22/v1542060748/instagram-clipart-instagram-post-648613-3659816.png"
+            "article__activities--like":"https://res.cloudinary.com/maxvoloskiy/image/upload/c_scale,w_25/v1541641135/activity.png",
+            "article__activities--comment":"https://res.cloudinary.com/maxvoloskiy/image/upload/c_scale,w_25/v1542061061/speech-bubble-generator-png-4.png",
+            "article__activities--share":"https://res.cloudinary.com/maxvoloskiy/image/upload/c_scale,w_25/v1542061156/63474-200.png",
+            "article__activities--save":"https://res.cloudinary.com/maxvoloskiy/image/upload/c_scale,w_25/v1542060748/instagram-clipart-instagram-post-648613-3659816.png"
           },
 
           "article__likes":{
@@ -151,10 +151,10 @@
           },
 
           "article__activities":{
-            "article__activities--like":"https://res.cloudinary.com/maxvoloskiy/image/upload/c_scale,w_22/v1541641135/activity.png",
-            "article__activities--comment":"https://res.cloudinary.com/maxvoloskiy/image/upload/c_scale,w_22/v1542061061/speech-bubble-generator-png-4.png",
-            "article__activities--share":"https://res.cloudinary.com/maxvoloskiy/image/upload/c_scale,w_22/v1542061156/63474-200.png",
-            "article__activities--save":"https://res.cloudinary.com/maxvoloskiy/image/upload/c_scale,w_22/v1542060748/instagram-clipart-instagram-post-648613-3659816.png"
+            "article__activities--like":"https://res.cloudinary.com/maxvoloskiy/image/upload/c_scale,w_25/v1541641135/activity.png",
+            "article__activities--comment":"https://res.cloudinary.com/maxvoloskiy/image/upload/c_scale,w_25/v1542061061/speech-bubble-generator-png-4.png",
+            "article__activities--share":"https://res.cloudinary.com/maxvoloskiy/image/upload/c_scale,w_25/v1542061156/63474-200.png",
+            "article__activities--save":"https://res.cloudinary.com/maxvoloskiy/image/upload/c_scale,w_25/v1542060748/instagram-clipart-instagram-post-648613-3659816.png"
           },
 
           "article__likes":{
@@ -181,10 +181,10 @@
           },
 
           "article__activities":{
-            "article__activities--like":"https://res.cloudinary.com/maxvoloskiy/image/upload/c_scale,w_22/v1541641135/activity.png",
-            "article__activities--comment":"https://res.cloudinary.com/maxvoloskiy/image/upload/c_scale,w_22/v1542061061/speech-bubble-generator-png-4.png",
-            "article__activities--share":"https://res.cloudinary.com/maxvoloskiy/image/upload/c_scale,w_22/v1542061156/63474-200.png",
-            "article__activities--save":"https://res.cloudinary.com/maxvoloskiy/image/upload/c_scale,w_22/v1542060748/instagram-clipart-instagram-post-648613-3659816.png"
+            "article__activities--like":"https://res.cloudinary.com/maxvoloskiy/image/upload/c_scale,w_25/v1541641135/activity.png",
+            "article__activities--comment":"https://res.cloudinary.com/maxvoloskiy/image/upload/c_scale,w_25/v1542061061/speech-bubble-generator-png-4.png",
+            "article__activities--share":"https://res.cloudinary.com/maxvoloskiy/image/upload/c_scale,w_25/v1542061156/63474-200.png",
+            "article__activities--save":"https://res.cloudinary.com/maxvoloskiy/image/upload/c_scale,w_25/v1542060748/instagram-clipart-instagram-post-648613-3659816.png"
           },
 
           "article__likes":{
@@ -211,10 +211,10 @@
           },
 
           "article__activities":{
-            "article__activities--like":"https://res.cloudinary.com/maxvoloskiy/image/upload/c_scale,w_22/v1541641135/activity.png",
-            "article__activities--comment":"https://res.cloudinary.com/maxvoloskiy/image/upload/c_scale,w_22/v1542061061/speech-bubble-generator-png-4.png",
-            "article__activities--share":"https://res.cloudinary.com/maxvoloskiy/image/upload/c_scale,w_22/v1542061156/63474-200.png",
-            "article__activities--save":"https://res.cloudinary.com/maxvoloskiy/image/upload/c_scale,w_22/v1542060748/instagram-clipart-instagram-post-648613-3659816.png"
+            "article__activities--like":"https://res.cloudinary.com/maxvoloskiy/image/upload/c_scale,w_25/v1541641135/activity.png",
+            "article__activities--comment":"https://res.cloudinary.com/maxvoloskiy/image/upload/c_scale,w_25/v1542061061/speech-bubble-generator-png-4.png",
+            "article__activities--share":"https://res.cloudinary.com/maxvoloskiy/image/upload/c_scale,w_25/v1542061156/63474-200.png",
+            "article__activities--save":"https://res.cloudinary.com/maxvoloskiy/image/upload/c_scale,w_25/v1542060748/instagram-clipart-instagram-post-648613-3659816.png"
           },
 
           "article__likes":{
@@ -242,10 +242,10 @@
           },
 
           "article__activities":{
-            "article__activities--like":"https://res.cloudinary.com/maxvoloskiy/image/upload/c_scale,w_22/v1541641135/activity.png",
-            "article__activities--comment":"https://res.cloudinary.com/maxvoloskiy/image/upload/c_scale,w_22/v1542061061/speech-bubble-generator-png-4.png",
-            "article__activities--share":"https://res.cloudinary.com/maxvoloskiy/image/upload/c_scale,w_22/v1542061156/63474-200.png",
-            "article__activities--save":"https://res.cloudinary.com/maxvoloskiy/image/upload/c_scale,w_22/v1542060748/instagram-clipart-instagram-post-648613-3659816.png"
+            "article__activities--like":"https://res.cloudinary.com/maxvoloskiy/image/upload/c_scale,w_25/v1541641135/activity.png",
+            "article__activities--comment":"https://res.cloudinary.com/maxvoloskiy/image/upload/c_scale,w_25/v1542061061/speech-bubble-generator-png-4.png",
+            "article__activities--share":"https://res.cloudinary.com/maxvoloskiy/image/upload/c_scale,w_25/v1542061156/63474-200.png",
+            "article__activities--save":"https://res.cloudinary.com/maxvoloskiy/image/upload/c_scale,w_25/v1542060748/instagram-clipart-instagram-post-648613-3659816.png"
           },
 
           "article__likes":{
@@ -272,10 +272,10 @@
           },
 
           "article__activities":{
-            "article__activities--like":"https://res.cloudinary.com/maxvoloskiy/image/upload/c_scale,w_22/v1541641135/activity.png",
-            "article__activities--comment":"https://res.cloudinary.com/maxvoloskiy/image/upload/c_scale,w_22/v1542061061/speech-bubble-generator-png-4.png",
-            "article__activities--share":"https://res.cloudinary.com/maxvoloskiy/image/upload/c_scale,w_22/v1542061156/63474-200.png",
-            "article__activities--save":"https://res.cloudinary.com/maxvoloskiy/image/upload/c_scale,w_22/v1542060748/instagram-clipart-instagram-post-648613-3659816.png"
+            "article__activities--like":"https://res.cloudinary.com/maxvoloskiy/image/upload/c_scale,w_25/v1541641135/activity.png",
+            "article__activities--comment":"https://res.cloudinary.com/maxvoloskiy/image/upload/c_scale,w_25/v1542061061/speech-bubble-generator-png-4.png",
+            "article__activities--share":"https://res.cloudinary.com/maxvoloskiy/image/upload/c_scale,w_25/v1542061156/63474-200.png",
+            "article__activities--save":"https://res.cloudinary.com/maxvoloskiy/image/upload/c_scale,w_25/v1542060748/instagram-clipart-instagram-post-648613-3659816.png"
           },
 
           "article__likes":{

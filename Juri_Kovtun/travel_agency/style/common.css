@@ -1,0 +1,19 @@
+:root {
+    --gunmetal: #4e5665;
+    --reading: #505050;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #bbb;
+    background-color: #444;
+}
+
+p {
+    margin: 0;
+}
+
+.payload {
+    padding: 0 16%;
+}

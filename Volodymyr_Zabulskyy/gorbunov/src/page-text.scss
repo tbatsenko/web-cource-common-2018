@@ -1,0 +1,45 @@
+@import "colors";
+
+.page-text{
+  &__entry{
+    font-weight: bold;
+    line-height: 27px;
+    font-size: 20px;
+  }
+
+  &__caption{
+    font-weight: normal;
+    line-height: 18px;
+    font-size: 16px;
+  }
+
+  &__main{
+    line-height: 27px;
+    font-size: 24px;
+
+    &_bigger{
+      line-height: 45px;
+      font-size: 43px;
+    }
+  }
+
+  &__link{
+    color: $blue;
+    cursor: pointer;
+
+    &-bold{
+      font-weight: bold;
+    }
+    &-normal{
+      font-weight: normal;
+    }
+    &-light{
+      font-weight: lighter;
+    }
+  }
+  &__link:hover{
+    color: $red;
+    text-decoration: underline;
+  }
+}
+

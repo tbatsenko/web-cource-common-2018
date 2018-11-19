@@ -8,6 +8,11 @@
   margin: 0;
 }
 
+
+html, body{
+  height: 100%;
+}
+
 button {
   background: transparent;
   border: 0px;
@@ -46,11 +51,14 @@ header {
     &__search {
       background: #F5F5F5;
       width: 70%;
+
       display: flex;
       align-items: center;
+
       .lupa {
         background: url("../images/lupa.png") center no-repeat;
         background-size: 15px 15px;
+
         height: 30px;
         width: 30px
       }
@@ -83,6 +91,7 @@ header {
 
         background: url("../images/tasks.svg") center no-repeat;
         background-size: 15px 15px;
+
         height: 50px;
         width: 50px;
       }
@@ -91,6 +100,7 @@ header {
 
         background: url("../images/bell.png") center no-repeat;
         background-size: 20px 20px;
+
         height: 50px;
         width: 50px;
       }
@@ -110,12 +120,16 @@ header {
   display: flex;
   flex-direction: row;
 
+  height: calc(100% - 65px);
+
   .letters {
     overflow-y: scroll;
+
     .letter {
       display: flex;
       flex-direction: row;
       align-items: center;
+
       border-bottom: 1px silver solid;
       border-left: 1px white solid;
       height: 40px;
@@ -123,6 +137,7 @@ header {
       .letter__square {
         background: url("../images/square.png") center no-repeat;
         background-size: 20px 20px;
+
         height: 30px;
         width: 30px;
 
@@ -130,6 +145,7 @@ header {
       .letter__star {
         background: url("../images/star.png") center no-repeat;
         background-size: 20px 20px;
+
         height: 30px;
         width: 30px;
 
@@ -141,6 +157,7 @@ header {
 
       .letter__content {
         flex: 1;
+
         white-space: nowrap;
         overflow: hidden;
         text-overflow: ellipsis;

@@ -1,5 +1,9 @@
-
 .interactive {
+    font-family: var(--sans);
+    color: var(--primary-color);
+    font-size: 1rem;
+    font-weight: 600;
+    line-height: 1.75;
     &__beacon {
         &--shape1 {
             fill: #f6cd35;
@@ -8,4 +12,113 @@
             stroke: #f6cd35;
         }
     }
+    &__rule {
+        text-align: center;
+    }
+    &__wrapper {
+        width: 1265px;
+        margin: 0 auto;
+
+    }
+    &__content {
+        &--one {
+            z-index: 1;
+            position: relative;
+            left: 1000px;
+            top: 200px;
+        }
+        &--two {
+            z-index: 1;
+            position: relative;
+            left: 687px;
+            top: 57px;
+        }
+        &--three {
+            z-index: 1;
+            position: relative;
+            left: 270px;
+            top: 155px;
+        }
+    }
+    &__caption {
+        position: absolute;
+        color: #505050;
+        white-space: nowrap;
+        transition: transform 0.8s;
+        &--one {
+            transform: rotateY(90deg);
+            left: 120px;
+            top: -30px;
+        }
+        &--two {
+            transform: rotateY(90deg);
+            left: 120px;
+            top: -30px;
+        }
+        &--three {
+            transform: rotateY(90deg);
+            left: 25px;
+            top: -30px;
+        }
+    }
+    &__handle {
+        position: absolute;
+        width: 180px;
+        transition: opacity 0.8s;
+        &--one {
+            opacity: 0;
+            left: 24px;
+        }
+        &--two {
+            opacity: 0;
+            left: 24px;
+        }
+        &--three {
+            opacity: 0;
+            left: 24px;
+            transform: scaleX(-1);
+        }
+    }
+    &__point {
+        position: absolute;
+        width: 32px;
+        &--one {
+            //:hover ~ .interactive__caption--one {
+            //    transform: rotateY(0);
+            //}
+            top: 85px;
+        }
+        &--two {
+            top: 85px;
+        }
+        &--three {
+            top: 85px;
+            left: 200px;
+        }
+    }
+    &__image {
+        position: relative;
+        width: 100%
+    }
+}
+
+.interactive__point--one:hover ~ .interactive__caption--one {
+    transform: rotateY(0);
+}
+.interactive__point--one:hover ~ .interactive__handle--one {
+    opacity: 1;
+}
+
+.interactive__point--two:hover ~ .interactive__caption--two {
+     transform: rotateY(0);
+ }
+.interactive__point--two:hover ~ .interactive__handle--two {
+    opacity: 1;
+}
+
+.interactive__point--three:hover ~ .interactive__caption--three {
+    transform: rotateY(0);
+}
+.interactive__point--three:hover ~ .interactive__handle--three {
+    opacity: 1;
 }
