@@ -44,7 +44,7 @@ document.addEventListener("keypress", e => {
             return;
         }
         case "w" : {
-            camera.position.y += 1;
+            camera.position.z -= 1;
             return;
         }
         case "d" : {
@@ -52,6 +52,14 @@ document.addEventListener("keypress", e => {
             return;
         }
         case "s" : {
+            camera.position.z += 1;
+            return;
+        }
+        case "q": {
+            camera.position.y += 1;
+            return;
+        }
+        case "e": {
             camera.position.y -= 1;
             return;
         }

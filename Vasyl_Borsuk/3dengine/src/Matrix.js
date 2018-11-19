@@ -119,8 +119,8 @@ class Matrix {
     }
 
     static PerspectiveFovLH(fov, aspect, znear, zfar) {
-        var matrix = Matrix.Zero();
-        var tan = 1.0 / (Math.tan(fov * 0.5));
+        let matrix = Matrix.Zero();
+        let tan = 1.0 / (Math.tan(fov * 0.5));
         matrix.m[0] = tan / aspect;
         matrix.m[4] = matrix.m[8] = matrix.m[12] = 0.0;
         matrix.m[5] = tan;
