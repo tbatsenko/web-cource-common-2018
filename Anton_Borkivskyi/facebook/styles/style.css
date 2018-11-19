@@ -1,136 +1,114 @@
-body{
-    margin: 0;
-    background-color: #dfe3ee;
-}
+* {
+  padding: 0;
+  margin: 0; }
 
-#navig{
+button {
+  background: transparent;
+  border: 0; }
+
+body {
+  background-color: #f5f6f7; }
+
+.header {
+  background-color: #4267b2;
+  height: 42px;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0; }
+  .header .navigation {
     width: 70%;
     height: 100%;
+    padding-left: 15%;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between; }
+    .header .navigation .search {
+      display: flex;
+      align-items: center; }
+    .header .navigation .buttons {
+      display: flex;
+      align-items: center;
+      justify-content: space-between; }
+      .header .navigation .buttons > * {
+        padding-right: 40px; }
+      .header .navigation .buttons .text_button {
+        color: white; }
+      .header .navigation .buttons .img_button {
+        width: 30px;
+        height: 30px; }
 
-    margin: 0px auto;
-}
+.options {
+  width: 15%;
+  position: fixed;
+  top: 42px;
+  left: 15%;
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; }
+  .options__button {
+    display: flex;
+    align-items: center;
+    height: 30px;
+    width: 100%; }
+    .options__button:hover {
+      background: white; }
 
-#navig *{
-    display: inline-block;
-
-}
-
-#navig button{
-    background: transparent;
-    border: 0;
-}
-
-#logo{
-    width: 30px;
-}
-
-#myphoto{
-    width: 30px;
-    border-radius: 100%;
-    vertical-align: 20%;
-}
-
-#header{
-    background: #3b5998;
-    height: 50px;
-}
-
-nav ul{
-    padding: 0px;
-}
-
-
-#right_menu{
-    float: right;
-    margin: 0px;
-}
-
-#right_menu>li{
-    vertical-align: 50%;
-}
-
-#right_menu ul{
-    vertical-align: 40%;
-}
-
-#main{
-    background-color: #dfe3ee;
-}
-
-#mainsection{
-    width: 70%;
-    margin: 0px auto;
-    padding: 0px;
-    display: grid;
-    grid-template-columns: 20% 45% 35%;
-}
-
-#leftsection{
-    /*background-color: red;*/
-    margin: 10px 0px;
-    padding:0;
-}
-
-#lsmenu{
-    padding: 0;
-    margin:0;
-}
-
-#lsmenu>*{
-    display: block;
-}
-
-#lsmenu button{
-    background: transparent;
-    border: 0px;
-    margin: 2px;
-}
-
-#lsmenu button:hover{
-    background: #f7f7f7;
-    border: 1px solid #8b9dc3;
-    margin: 1px;
-}
-
-#lsmenu img{
-    vertical-align: -25%;
-}
-
-#centersection{
-    /*background-color: green;*/
-    background-color: #dfe3ee;
-    margin: 10px;
-    padding:0;
-}
-
-#rightsection{
-    background-color: #dfe3ee;
-    margin: 10px 0px;
-    padding:0;
-}
-
-.post{
-    width: 100%;
+.main {
+  margin: 10px;
+  position: absolute;
+  width: 35%;
+  top: 42px;
+  left: 30%;
+  z-index: -2;
+  display: flex;
+  flex-direction: column; }
+  .main .post {
     background-color: white;
-    border: 1px solid #f7f7f7;
-    margin-bottom: 10px;
-}
+    border: 1px solid #dddfe2;
+    border-radius: 2px;
+    margin-bottom: 10px; }
+    .main .post__head {
+      display: flex;
+      align-items: center; }
+    .main .post__head-logo {
+      width: 40px;
+      height: 40px;
+      border-radius: 100%;
+      padding: 10px; }
+    .main .post__body-text {
+      padding: 10px; }
+    .main .post__body-image {
+      width: 100%; }
+    .main .post__footer {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap; }
 
-.post_head>*{
-    display: inline-block;
-    /*background: coral;*/
-    padding: 0px;
-    margin: 0px;
-    vertical-align: top;
-}
+.stories {
+  background: white;
+  border: 1px #dddfe2 solid;
+  border-radius: 4px;
+  margin-top: 10px;
+  margin-left: 20px;
+  padding: 10px;
+  position: fixed;
+  width: 20%;
+  top: 42px;
+  left: 65%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; }
 
-.post_logo{
-    width:40px;
+.story {
+  display: flex;
+  align-items: center; }
+  .story__logo {
+    width: 40px;
+    height: 40px;
     border-radius: 100%;
-    padding: 10px;
-}
+    border: 1px red solid; }
 
-.post_head_text>*{
-    margin: 10px 0px;
-    padding: 0;
-}
+/*# sourceMappingURL=style.css.map */

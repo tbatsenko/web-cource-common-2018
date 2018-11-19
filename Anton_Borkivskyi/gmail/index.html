@@ -4,18 +4,20 @@
     <meta charset="UTF-8">
     <title>Gmaiil</title>
     <link href="styles/style.css" rel="stylesheet">
+    <link href="styles/tools.css" rel="stylesheet">
+    <link href="styles/letter_types.css" rel="stylesheet">
 </head>
 <body>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.12/handlebars.js"></script>
 <script>
-    const render = async (templateURL, dataURL, container) => {
-        const source = await (await fetch(templateURL)).text();
-        const template = Handlebars.compile(source);
-        const data = await (await fetch(dataURL)).json();
-        container.innerHTML = template(data);
-    };
-    render("main.handlebars", "data.json", document.body)
+  const render = async (templateURL, dataURL, container) => {
+    const source = await (await fetch(templateURL)).text()
+    const template = Handlebars.compile(source)
+    const data = await (await fetch(dataURL)).json()
+    container.innerHTML = template(data)
+  }
+  render('main.handlebars', 'data.json', document.body)
 </script>
 
 </body>

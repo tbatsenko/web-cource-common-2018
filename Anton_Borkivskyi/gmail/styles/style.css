@@ -14,7 +14,6 @@ header {
   height: var(--header-h);
   padding: 8px;
   display: flex;
-  flex-direction: row;
   border-bottom: 1px silver solid; }
   header .left-part {
     width: var(--menu-width);
@@ -31,21 +30,24 @@ header {
     flex-direction: row;
     justify-content: space-between;
     align-items: center; }
-    header .right-part .right-part__search {
+    header .right-part__search {
       background: #F5F5F5;
       width: 70%;
       display: flex;
       align-items: center; }
-      header .right-part .right-part__search .lupa {
+      header .right-part__search .lupa {
         background: url("../images/lupa.png") center no-repeat;
         background-size: 15px 15px;
         height: 30px;
         width: 30px; }
-      header .right-part .right-part__search .search {
+      header .right-part__search .search {
         height: 100%;
+        width: 90%;
         background: #F5F5F5;
         border: 0; }
-      header .right-part .right-part__search .dropdown {
+        header .right-part__search .search:focus {
+          outline: none; }
+      header .right-part__search .dropdown {
         background: url("../images/dropdown.svg") center no-repeat;
         background-size: 15px 15px;
         height: 30px;
@@ -71,38 +73,6 @@ header {
 .main {
   display: flex;
   flex-direction: row; }
-  .main .left_menu {
-    width: var(--menu-width);
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    margin-left: 16px; }
-    .main .left_menu .compose_icon {
-      width: 20px;
-      height: 20px; }
-    .main .left_menu .compose_button {
-      width: 80%;
-      height: 50px;
-      border: 1px silver solid;
-      border-radius: 25px;
-      margin: 16px 8px;
-      box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
-      display: flex;
-      align-items: center;
-      justify-content: space-evenly; }
-    .main .left_menu .menu_button {
-      display: flex;
-      align-items: center;
-      height: 32px;
-      border-top-right-radius: 16px;
-      border-bottom-right-radius: 16px;
-      width: 90%; }
-    .main .left_menu .menu_button:hover {
-      background: #F5F5F5; }
-    .main .left_menu .menu_icon {
-      width: 20px;
-      height: 20px;
-      margin-right: 20px; }
   .main .letters {
     overflow-y: scroll; }
     .main .letters .letter {
@@ -122,28 +92,18 @@ header {
         background-size: 20px 20px;
         height: 30px;
         width: 30px; }
-      .main .letters .letter .sender {
+      .main .letters .letter .letter__sender {
         width: 200px; }
-      .main .letters .letter .content {
+      .main .letters .letter .letter__content {
         flex: 1;
         white-space: nowrap;
         overflow: hidden;
         text-overflow: ellipsis; }
-      .main .letters .letter .letter_date {
+      .main .letters .letter .letter__date {
         justify-self: flex-end; }
     .main .letters .letter:hover {
       border: 1px gray solid;
       border-top: 0;
       box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1); }
-  .main .right_menu {
-    display: flex;
-    flex-direction: column;
-    border-left: 1px silver solid; }
-    .main .right_menu .right_menu_button {
-      width: 50px;
-      height: 50px; }
-    .main .right_menu .right_menu_icon {
-      width: 30px;
-      height: 30px; }
 
 /*# sourceMappingURL=style.css.map */

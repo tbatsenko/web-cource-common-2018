@@ -1,0 +1,148 @@
+<div class="Layout Layout--higlight">
+    {{#navigation}}
+    <div class="Layout__header">
+        <div class="Layout__wrapper Layout__wrapper--justify">
+
+            <div class="Layout__header-placeholder">
+            {{#logo-side}}
+                <a href="#" class="logo" style="background-image: url({{logo}});">Logo</a>
+            {{/logo-side}}
+            </div>
+
+            <div class="Layout__header-placeholder">
+                <input type="search" placeholder="Search">
+            </div>
+
+            {{#activities}}
+            <div class="Layout__header-placeholder">
+                <div class="activities">
+                    <a href="" class="activities__search" style="background-image: url({{activity-search}});">search</a>
+                    <a href="" class="activities__likes" style="background-image: url({{activity-likes}});">likes</a>
+                    <a href="" class="activities__profile" style="background-image: url({{activity-profile}});">profile</a>
+                </div>
+            </div>
+            {{/activities}}
+        </div>
+    </div>
+    {{/navigation}}
+
+    {{#main}}
+    <div class="Layout__wrapper">
+        {{#content}}
+        <div class="Layout__content">
+        {{#articles}}
+            <article class="article">
+
+                {{#article__header}}
+                <header class="article__header">
+                <a href="#" class="avatar" style="background-image: url({{avatar}});">Avatar</a>
+                <a href="#" class="username">{{username}}</a>
+                </header>
+                    {{/article__header}}
+
+                {{#article__photo}}
+                <div class="article__photo">
+                <img src="{{image}}" alt="" class="article__photo">
+                </div>
+                    {{/article__photo}}
+
+                {{#article__activities}}
+                <div class="article__activities">
+                <span class="article__activities--like" style="background-image: url({{article__activities--like}});">Like</span>
+                <span class="article__activities--comment" style="background-image: url({{article__activities--comment}});">Comment</span>
+                <span class="article__activities--share" style="background-image: url({{article__activities--share}});">Share</span>
+                <span class="article__activities--save" style="  background-image: url({{article__activities--save}});">Save</span>
+                </div>
+                    {{/article__activities}}
+
+                {{#article__likes}}
+                <div class="article__likes"><span class="num-likes">{{num-likes}}</span> likes</div>
+                    {{/article__likes}}
+
+                {{#article__comments}}
+                <div class="article__comments">
+                <span class="username">{{username}}</span>
+                <span class="comment">{{comment}}</span>
+                </div>
+                    {{/article__comments}}
+
+                {{#article__time}}
+                <div class="article__time">
+                <span class="time">{{time}}</span>
+                </div>
+                    {{/article__time}}
+
+            <footer class="article__footer">
+            <textarea name="add-comment" placeholder="Add a comment..."></textarea>
+            <button class="addition-btn"></button>
+            </footer>
+
+            </article>
+            {{/articles}}
+        </div>
+        {{/content}}
+        <div class="Layout__aside">
+            {{#sidebar}}
+                {{#sidebar__header}}
+                <header class="sidebar__header">
+                <a href="#" class="avatar" style="background-image: url({{avatar}});">Avatar</a>
+                <a href="#" class="username">{{username}}</a>
+                </header>
+                    {{/sidebar__header}}
+
+                {{#sidebar__stories}}
+                <section class="sidebar__stories">
+
+                    {{#sidebar__stories--header}}
+                    <header class="sidebar__stories--header">
+                    <span class="stories--desc">{{stories--desc}}</span>
+                    <span class="watch--all">{{watch--all}}</span>
+                    </header>
+                        {{/sidebar__stories--header}}
+
+                    {{#story}}
+                    <div class="story">
+                    <a href="#" class="avatar" style="background-image: url({{avatar}});">Avatar</a>
+                    <a href="#" class="username">{{username}}</a>
+                    </div>
+                        {{/story}}
+
+                </section>
+                    {{/sidebar__stories}}
+
+                {{#sidebar__suggestions}}
+                <section class="sidebar__suggestions">
+
+                    {{#sidebar__suggestions--header}}
+                    <header class="sidebar__suggestions--header">
+                    <span class="suggestions--desc">{{suggestions-desc}}</span>
+                    <span class="see--all">{{see-all}}</span>
+                    </header>
+                        {{/sidebar__suggestions--header}}
+
+                    {{#suggestions}}
+                    <div class="suggestion">
+                    <a href="#" class="avatar" style="background-image: url({{avatar}});">Avatar</a>
+                    <a href="#" class="username">{{username}}</a>
+                    <a href="#" class="follow">{{isFollow}}</a>
+                    </div>
+                        {{/suggestions}}
+
+                </section>
+                    {{/sidebar__suggestions}}
+
+                {{#sidebar__footer}}
+                <footer class="sidebar__footer">
+                <ul class="footer--list">
+                    {{#footer--list}}
+                    <li class="list--item">{{list--item}}</li>
+                        {{/footer--list}}
+                </ul>
+                <span class="copyrights">&copy; 2018 Instagram</span>
+                </footer>
+                    {{/sidebar__footer}}
+            {{/sidebar}}
+        </div>
+    </div>
+    {{/main}}
+</div>

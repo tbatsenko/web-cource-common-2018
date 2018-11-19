@@ -84,6 +84,26 @@ setInterval(() => {
   renderField(fieldWithSnakeAndApple, document.body)
 }, 100)
 
+document.addEventListener('keydown', e => {
+  console.log(e)
+  switch (e.keyCode) {
+    case KEY_DOWN: {
+      direction = 'BOTTOM'
+      return
+    }
+    case KEY_LEFT: {
+      direction = 'LEFT'
+      return
+    }
+    case KEY_RIGHT: {
+      direction = 'RIGHT'
+      return
+    }
+    case KEY_UP: {
+      direction = 'TOP'
+      return
+    }
+  }
 const KEY_DOWN = 40
 const KEY_LEFT = 37
 const KEY_RIGHT = 39

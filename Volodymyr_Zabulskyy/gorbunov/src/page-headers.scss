@@ -1,0 +1,38 @@
+.page-header{
+    margin:0;
+    &__main {
+      font-size: 81px;
+      line-height: 90px;
+      font-weight: bolder;
+    }
+
+    &__sub-header {
+      font-size: 65px;
+      line-height: 63px;
+      font-weight: bolder;
+    }
+
+    &__big-advice, &__portfolio-courses {
+      font-size: 43px;
+      line-height: 45px;
+      font-weight: normal;
+    }
+
+    &__entry {
+      font-weight: bold;
+      line-height: 27px;
+      font-size: 20px;
+    }
+
+    &__item-header {
+        &_bigger{
+          line-height: 45px;
+          font-size: 43px;
+        }
+    line-height: 27px;
+    font-size: 24px;
+     font-weight: bolder;
+    }
+}
+
+/*# sourceMappingURL=page-headers.css.map */

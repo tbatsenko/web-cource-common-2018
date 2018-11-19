@@ -1,0 +1,39 @@
+{
+  "top_menu": {
+    "text_links": [
+      {
+        "text": "Bohdan",
+        "href": "profile.html",
+        "has_img": true,
+        "img_url": "images/profiles/feynman.jpg"
+      },
+      {
+        "text": "Home",
+        "href": "index.html",
+        "has_img": false
+      }
+    ],
+    "text_buttons": [
+      {
+        "text": "Create"
+      }
+    ],
+    "icon_buttons": [
+      {
+        "img_url": "images/icons/friends.png"
+      },
+      {
+        "img_url": "images/icons/messages.png"
+      },
+      {
+        "img_url": "images/icons/notifications.png"
+      },
+      {
+        "img_url": "images/icons/help.png"
+      },
+      {
+        "img_url": "images/icons/dropdown.png"
+      }
+    ]
+  }
+}
