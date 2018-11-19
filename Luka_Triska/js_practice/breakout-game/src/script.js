@@ -83,18 +83,7 @@ const collisionDetection = () => {
                     b.status = 0;
                     score++;
                     if (score === brickRowCount * brickColumnCount) {
-                        // alert("You won!");
-                        $(window).load(function () {
-                            $(".").click(function(){
-                                $('.container__canvas--text').show();
-                            });
-                            // $('.hover_bkgr_fricc').click(function(){
-                            //     $('.hover_bkgr_fricc').hide();
-                            // });
-                            // $('.popupCloseButton').click(function(){
-                            //     $('.hover_bkgr_fricc').hide();
-                            // });
-                        });
+                        alert("You won!");
                         document.location.reload();
                     }
                 }
@@ -142,13 +131,8 @@ const draw = () => {
             else dy = -dy;
 
         } else {
-            // alert("Game Over\n" + "Score: " + score);
-            // document.location.reload();
-            /*$(window).load(function () {
-                $(".").click(function () {
-                    $('.container__canvas--text').show();
-                });
-            }*/
+            alert("Game Over\n" + "Score: " + score);
+            document.location.reload();
         }
     }
 
