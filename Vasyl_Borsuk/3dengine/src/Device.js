@@ -70,6 +70,10 @@ class Device {
         if (vector2.y > vector3.y) {[vector2, vector3] = [vector3, vector2]}
         if (vector1.y > vector2.y) {[vector1, vector2] = [vector2, vector1]}
 
+        if (vector1.y === vector2.y) {
+            vector2.y += 0.01;
+        }
+
         let d12 = vector1.y !== vector2.y ? (vector2.x - vector1.x) / (vector2.y - vector1.y) : 0;
         let d13 = vector1.y !== vector3.y ? (vector3.x - vector1.x) / (vector3.y - vector1.y) : 0;
 
