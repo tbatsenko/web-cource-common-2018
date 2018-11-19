@@ -1,17 +1,13 @@
 body {
-    background: aliceblue;
     margin: 0;
 }
 
 .content {
-    height: 100%;
+    height: 100vh;
     box-sizing: border-box;
     margin: auto;
     width: 60em;
-    background: ghostwhite;
-    border-right: 1px solid lightgray;
-    border-left: 1px solid lightgray;
-    min-height: 40em;
+    box-shadow: lightgray 0 0 10px;
     padding: 4em 3em 0 5em;
     overflow: auto;
 }
@@ -23,17 +19,16 @@ body {
 }
 
 .content__item {
-    padding: 8px 12px;
-    margin: 8px 0;
+    padding: 8px 0;
     height: 30px;
+    border-bottom: 1px inset lightgray;
     line-height: 30px;
-
 }
 
 .task__delete-button{
     float: right;
     height: 30px;
-    width: 30px;
+    width: 50px;
     margin: 0;
     opacity: .5;
     border: 0;
@@ -41,30 +36,44 @@ body {
     padding: 5px;
 }
 
-.form-create-task__button-create-task{
-    float: right;
-    height: 30px;
-    width: 30px;
+.form-create-task__btn{
+    width: 55px;
+    height: 50px;
+    background: transparent;
     padding: 0;
-    margin: 0;
+    border-width: 0;
+    background: url("img/plus.png");
+    background-size: 24px;
+    background-position: center;
+    opacity: 0.2;
+    cursor: pointer;
+    background-repeat: no-repeat;
 }
 
 .form-create-task__input{
-    width: 100%;
+    width: 40em;
     border: 0;
     font-size: 20px;
     height: 30px;
     background: transparent;
-    border-bottom: 1px solid lightgray;
-    padding-bottom: 6px;
+    padding: 10px 0;
 }
 
 .form-new-task{
+    margin-bottom: 25px;
+    padding: 0;
+    height: auto;
+}
+
+.form-new-task__container{
+    display: flex;
+    align-items: center;
 }
 
 .task__text{
     border: 0;
     padding: 0;
+    width: 38em;
     margin: 0;
     background: transparent;
     font-size: 20px;
