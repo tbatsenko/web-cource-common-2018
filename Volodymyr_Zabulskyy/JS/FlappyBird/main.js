@@ -2,8 +2,8 @@ const birdObject = document.getElementById("bird");
 const fieldObject = document.getElementById("field");
 const scoreObject = document.getElementById("score");
 
-const momentumFactor = 10;
-const rotationFactor = 50;
+const momentumFactor = 10;  // initial momentum and momentum while jumping
+const rotationFactor = 50;  // initial rotation and rotation while jumping
 const initialHeight = 600;
 const g = 9.8;
 const birdSize = 40;
@@ -11,12 +11,13 @@ const fieldSize = 1000;
 const wallWidth = 100;
 
 let momentum = momentumFactor;
-let gapSize = 500;
-let currentHeight = 0;
-let delta = 0;
-let rotateTransform = 0;
+let gapSize = 500;  // gap between walls
+let currentHeight = 0;  // variable to store birds height
+let deltaHeight = 0;  // variable to store birds height delta
+let deltaRotation = 0; // variable to store birds rotation delta
 let score = 0;
 
+// intervals
 let updateBirdInterval;
 let updateWallsInterval;
 let updateGravityInterval;
@@ -30,16 +31,15 @@ function updateBird() {
         momentum = momentumFactor;
     });
     updateBirdInterval = setInterval(() => {
-        currentHeight = +birdObject.style.bottom.replace("px", '');
-        delta = currentHeight + momentum * g / momentumFactor;
-        if (delta > fieldSize - birdSize / 2) {
-            delta = fieldSize - birdSize / 2;
+        currentHeight = parseInt(birdObject.style.bottom);
+        deltaHeight = currentHeight + momentum * g / momentumFactor;
+        if (deltaHeight > fieldSize - birdSize / 2) {
+            deltaHeight = fieldSize - birdSize / 2;
             momentum = -2;
         }
-        birdObject.style.bottom = delta + 'px';
-        rotateTransform = momentum > -momentumFactor ? momentum * 6 : -rotationFactor;
-        birdObject.style.transform = "rotate($deg)".replace('$', -rotateTransform);
-            // transform: rotate(-90deg);
+        birdObject.style.bottom = deltaHeight + 'px';
+        deltaRotation = momentum > -momentumFactor ? momentum * 6 : -rotationFactor;
+        birdObject.style.transform = "rotate($deg)".replace('$', -deltaRotation);
 
         if (currentHeight <= birdSize) {
             birdObject.style.bottom = birdSize + 'px';
@@ -103,8 +103,8 @@ function reinitializeParams() {
     momentum = momentumFactor;
     gapSize = 500;
     currentHeight = 0;
-    delta = 0;
-    rotateTransform = 0;
+    deltaHeight = 0;
+    deltaRotation = 0;
     score = 0;
     scoreObject.innerText = score;
 }
