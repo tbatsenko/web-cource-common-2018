@@ -1,12 +1,12 @@
 .article {
   border: 1px solid #e6e6e6;
   border-radius: 3px;
-  width: 500px;
+  width: 600px;
   background-color: #ffffff;
-  margin: 20px;
+  margin: 0 auto 100px auto;
 }
 .article__header {
-  height: 50px;
+  height: 60px;
   display: flex;
 }
 .article__header .avatar {
@@ -15,7 +15,7 @@
   background-repeat: no-repeat;
   height: 100%;
   width: 25px;
-  margin: 10px;
+  margin: 15px;
 }
 .article__header a {
   text-decoration: none;
@@ -27,17 +27,18 @@
   margin-top: 15px;
 }
 .article__photo {
-  height: 300px;
-  width: 500px;
+  height: 400px;
+  width: 100%;
 }
 .article__activities {
   display: flex;
   padding: 0 10px;
 }
 .article__activities span {
+  background-repeat: no-repeat;
   text-indent: -9999px;
-  height: 22px;
-  width: 22px;
+  height: 25px;
+  width: 25px;
 }
 .article__activities--like {
   margin: 10px 5px;
@@ -62,7 +63,7 @@
 .article__time {
   text-transform: uppercase;
   font-size: 8px;
-  margin: 4px 15px;
+  margin: 10px 15px;
   color: #7b7b7b;
   border-bottom: 1px solid #e6e6e6;
 }

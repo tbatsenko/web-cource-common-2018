@@ -1,8 +1,7 @@
 .sidebar {
   min-width: 240px;
   max-width: 240px;
-  margin-left: 45em;
-  margin-top: 20px;
+  margin-top: 40px;
   position: fixed;
 }
 .sidebar__header {
