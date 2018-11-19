@@ -52,6 +52,26 @@
 .red-cell {
   background-color: red; }
 
+.help {
+  position: fixed;
+  right: 10px;
+  top: 8px;
+  background-color: white;
+  border-radius: 10px; }
+  .help--small {
+    width: 75px;
+    height: 75px;
+    background: url("../images/question.png") no-repeat center;
+    background-size: 75px 75px; }
+  .help--big {
+    border: 1px solid #dddfe2;
+    width: 350px;
+    height: 120px;
+    padding: 0 10px;
+    font-family: Helvetica, Arial, sans-serif;
+    font-weight: 600;
+    font-size: 14px; }
+
 body {
   background-color: #f0f0f0; }
 

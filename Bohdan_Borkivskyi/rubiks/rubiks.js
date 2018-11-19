@@ -307,6 +307,7 @@ class Cube{
 }
 
 rubiks = new Cube();
+help_window = document.getElementById("help");
 
 function keyUp(event){
   if(event.keyCode == 16){
@@ -325,4 +326,18 @@ function keyUp(event){
   rubiks.clockwise = true;
 }
 
+function help_clicked(event){
+  if(help_window.classList.contains("help--small")){
+    help_window.classList.remove("help--small");
+    help_window.classList.add("help--big");
+    help_window.innerHTML += "<p>Keys on keyboard corresponds to face rotations, slice turns and whole cube rotations, as showed <a href='https://ruwix.com/the-rubiks-cube/notation/' title='rubiks cube notation'>here</a></p><p>To do counterclockwise move press single Shift key before move</p>"
+  }else{
+    help_window.classList.remove("help--big");
+    help_window.innerText = ""
+    help_window.classList.add("help--small");
+  }
+
+}
+
 document.body.addEventListener('keyup', keyUp);
+help_window.addEventListener('click', help_clicked);
