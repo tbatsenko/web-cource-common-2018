@@ -1,12 +1,17 @@
 let canvas = document.getElementsByClassName("container__canvas")[0];
-canvas.width = 1080;
-canvas.height = 720;
+canvas.width = 810;
+canvas.height = 540;
 
-let ballRadius = 20;
+let ballRadius = 18;
 
 let ctx = canvas.getContext("2d");
 
-let x = Math.floor(Math.random() * (canvas.width));
+// let myGif = GIF();
+// myGif.load("GIFurl.gif");
+//
+// ctx.drawImage(myGif.image,0,0); // will draw the playing gif image
+
+let x = Math.floor(Math.random() * (canvas.width - 10));
 let y = canvas.height - 2 * ballRadius - 10;
 let dx = 1.2;
 let dy = -1.2;
@@ -24,8 +29,10 @@ let boardX = (canvas.width - boardWidth) / 2;
 // bricks variables
 let brickWidth = 75;
 let brickHeight = 20;
-let brickRowCount = Math.floor(canvas.height / brickHeight) * 0.2;
 let brickColumnCount = Math.floor(canvas.width / brickWidth) * 0.75;
+let brickRowCount = 2;
+// let brickRowCount = Math.floor(canvas.height / brickHeight) * 0.2;
+// let brickColumnCount = 5;
 let brickPadding = 20;
 let brickOffsetTop = 30;
 let brickOffsetLeft = 30;
@@ -68,37 +75,44 @@ const collisionDetection = () => {
         for (let r = 0; r < brickRowCount; r++) {
             let b = bricks[c][r];
             if (b.status === 1) {
-                if (x > b.x && x < b.x + brickWidth && y > b.y && y < b.y + brickHeight) {
+                if (x + ballRadius / 2 > b.x
+                    && x - ballRadius / 2 < b.x + brickWidth
+                    && y + ballRadius > b.y
+                    && y - ballRadius < b.y + brickHeight) {
                     dy = -dy;
                     b.status = 0;
                     score++;
-                    if (!(bricks[0].length * bricks[1].length)) {
-                        alert("You won!");
+                    if (score === brickRowCount * brickColumnCount) {
+                        // alert("You won!");
+                        $(window).load(function () {
+                            $(".").click(function(){
+                                $('.container__canvas--text').show();
+                            });
+                            // $('.hover_bkgr_fricc').click(function(){
+                            //     $('.hover_bkgr_fricc').hide();
+                            // });
+                            // $('.popupCloseButton').click(function(){
+                            //     $('.hover_bkgr_fricc').hide();
+                            // });
+                        });
                         document.location.reload();
                     }
                 }
             }
-
         }
     }
 };
 
 const drawScore = () => {
-    ctx.font = "20px serif";
-    ctx.fillStyle = "red";
-    ctx.fillText("Score: " + score, canvas.width / 2, 20);
+    ctx.font = "20px Agency FB";
+    ctx.fillStyle = "black";
+    ctx.fillText("Score: " + score, canvas.width / 2 - 29, 23);
 };
 
 const drawBall = () => {
-
-    let img = document.createElement("img");
-    img.src = "https://res.cloudinary.com/schwajka/image/upload/c_scale,r_" + ballRadius * 2 + ","
-        + "w_" + ballRadius * 2 + "/v1542570686/js_game/37013174_2034295666886553_1601782394908573696_n.jpg";
-
     ctx.beginPath();
-    // ctx.arc(x, y, ballRadius, 0, Math.PI * 2);
-    ctx.drawImage(img, x, y, ballRadius * 2, ballRadius * 2);
-    ctx.fillStyle = "#0095DD";
+    ctx.arc(x, y, ballRadius, 0, Math.PI * 2);
+    ctx.fillStyle = "#d35400";
     ctx.fill();
     ctx.closePath();
 };
@@ -122,18 +136,24 @@ const draw = () => {
     // makes sure the ball bounces off the top and the board of canvas
     if (y + dy < ballRadius) {
         dy = -dy;
-    } else if (y + ballRadius * 2 > canvas.height) {
-        if (x > boardX && x < boardX + boardWidth) {
-            dy = -dy * 1.2;
-            // ctx.fillStyle = "#000000";
+    } else if (y + ballRadius + boardHeight > canvas.height) {
+        if (x + ballRadius > boardX && x - ballRadius < boardX + boardWidth) {
+            if (Math.abs(dy < 6)) dy = -dy * 1.2;
+            else dy = -dy;
+
         } else {
-            alert("Game Over\n" + "Score: " + score);
-            document.location.reload();
+            // alert("Game Over\n" + "Score: " + score);
+            // document.location.reload();
+            /*$(window).load(function () {
+                $(".").click(function () {
+                    $('.container__canvas--text').show();
+                });
+            }*/
         }
     }
 
     // makes sure the ball bounces off the left and right side of canvas
-    if (x + ballRadius < ballRadius || x + ballRadius > canvas.width - ballRadius) dx = -dx;
+    if (x < ballRadius || x + ballRadius > canvas.width) dx = -dx;
 
     // move board to the right
     if (rightPressed && boardX < canvas.width - boardWidth) boardX += boardWidth / 11;
@@ -142,8 +162,8 @@ const draw = () => {
     if (leftPressed && boardX > 0) boardX -= boardWidth / 11;
 
 
-    x += dx;
-    y += dy;
+    x += dx * 2;
+    y += dy * 2;
 };
 
 // listening for right / left arrow button presses

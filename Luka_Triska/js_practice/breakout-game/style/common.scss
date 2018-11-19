@@ -1,21 +1,28 @@
 .container {
   display: flex;
   flex-flow: column;
-  align-items: center; }
-  .container__header {
+  align-items: center;
+
+  &__header {
     height: auto;
-    margin: 8px 0 17px 0; }
-    .container__header--text {
+    margin: 8px 0 17px 0;
+
+    &--text {
       margin: 0;
-      font: bold 23px/40px "Agency FB"; }
-  .container__canvas {
-    box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.22);
+      font: bold 23px/40px "Agency FB";
+    }
+
+  }
+
+  &__canvas {
+    box-shadow: 0 19px 38px rgba(0, 0, 0, 0.30), 0 15px 12px rgba(0, 0, 0, 0.22);
     width: 810px;
     height: 540px;
     background: #fff;
     display: block;
-    margin: 0 auto; }
-    .container__canvas--text {
+    margin: 0 auto;
+
+    &--text {
       /*.hover_bkgr_fricc{
         background:rgba(0,0,0,.4);
         cursor:pointer;
@@ -65,10 +72,16 @@
       .popupCloseButton:hover {
         background-color: #ccc;
       }*/
+
       cursor: pointer;
       font-size: 20px;
       margin: 20px;
       display: inline-block;
-      font-weight: bold; }
+      font-weight: bold;
 
-/*# sourceMappingURL=common.css.map */
+    }
+
+  }
+}
+
+
