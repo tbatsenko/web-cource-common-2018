@@ -22,6 +22,7 @@
     await render("templates/options.handlebars", "data/options.json", document.getElementById("options"));
     await render("templates/post.handlebars", "data/post.json", document.getElementById("main"));
     await render("templates/stories.handlebars", "data/stories.json", document.getElementById("stories"));
+    await render("templates/post_footer.handlebars", "data/post.json", document.getElementById("post__footer"));
   }
 
   renderPage();

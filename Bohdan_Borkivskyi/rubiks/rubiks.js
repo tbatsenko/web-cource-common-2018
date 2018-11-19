@@ -50,19 +50,19 @@ class Cube{
   }
 
   U(){
-    this.U_D(true);
+    return this.U_D(true);
   }
 
   U_(){
-    this.U();this.U();this.U();
+    return this.U().U().U();
   }
 
   D(){
-    this.U_D(false);
+    return this.U_D(false);
   }
 
   D_(){
-    this.D();this.D();this.D();
+    return this.D().D().D();
   }
 
   U_D(is_u){
@@ -81,22 +81,23 @@ class Cube{
     Cube.rotate_face((is_u ? this.up : this.down));
 
     this.update_view();
+    return this;
   }
 
   R(){
-    this.R_L(true);
+    return this.R_L(true);
   }
 
   R_(){
-    this.R();this.R();this.R();
+    return this.R().R().R();
   }
 
   L(){
-    this.R_L(false);
+    return this.R_L(false);
   }
 
   L_(){
-    this.L();this.L();this.L();
+    return this.L().L().L();
   }
 
   R_L(is_r){
@@ -124,22 +125,23 @@ class Cube{
     Cube.rotate_face((is_r ? this.right : this.left));
 
     this.update_view()
+    return this;
   }
 
   F(){
-    this.F_B(true);
+    return this.F_B(true);
   }
 
   F_(){
-    this.F();this.F();this.F();
+    return this.F().F().F();
   }
 
   B(){
-    this.F_B(false);
+    return this.F_B(false);
   }
 
   B_(){
-    this.B();this.B();this.B();
+    return this.B().B().B();
   }
 
   F_B(is_f){
@@ -169,6 +171,7 @@ class Cube{
     Cube.rotate_face((is_f ? this.front : this.back));
 
     this.update_view();
+    return this;
   }
 
   E(){
@@ -179,10 +182,11 @@ class Cube{
     this.right[1] = buffer;
 
     this.update_view();
+    return this;
   }
 
   E_(){
-    this.E();this.E();this.E();
+    return this.E().E().E();
   }
 
   M(){
@@ -201,10 +205,11 @@ class Cube{
     this.down[2][1] = buffer[2];
 
     this.update_view();
+    return this;
   }
 
   M_(){
-    this.M();this.M();this.M();
+    return this.M().M().M();
   }
 
   S(){
@@ -223,46 +228,43 @@ class Cube{
     this.right[2][1] = buffer[2];
 
     this.update_view();
+    return this;
   }
 
   S_(){
-    this.S();this.S();this.S();
+    return this.S().S().S();
   }
 
   X(){
-    this.R();
-    this.M_();
-    this.L_();
+    return this.R().M_().L_();
   }
 
   X_(){
-    this.R_();
-    this.M();
-    this.L();
+    return this.R_().M().L();
   }
 
   Y(){
-    this.U();
-    this.D_();
-    this.E_();
+    this.U().D_().E_();
   }
 
   Y_(){
-    this.U_();
-    this.D();
-    this.E();
+    this.U_().D().E();
   }
 
   Z(){
-    this.F();
-    this.S();
-    this.B_();
+    this.F().S().B_();
   }
 
   Z_(){
-    this.F_();
-    this.S_();
-    this.B();
+    this.F_().S_().B();
+  }
+
+  J(){
+    return this.R().U().R_().F_().R().U().R_().U_().R_().F().R().R().U_().R_().U_();
+  }
+
+  J_(){
+    return this.L_().U_().L().F().L_().U_().L().U().L().F_().L().L().U().L().U();
   }
 
   scramble(length = 20){
@@ -305,6 +307,7 @@ class Cube{
 }
 
 rubiks = new Cube();
+help_window = document.getElementById("help");
 
 function keyUp(event){
   if(event.keyCode == 16){
@@ -314,9 +317,27 @@ function keyUp(event){
 
   if(event.code.length != 4){return}
 
-  rubiks[event.code[3]+(!rubiks.clockwise ? '_' : '')]()
+  try {
+    rubiks[event.code[3]+(!rubiks.clockwise ? '_' : '')]()
+  }catch (e) {
+    console.log("Move "+event.code[3]+(!rubiks.clockwise ? '_' : '')+" is not implemented")
+  }
 
   rubiks.clockwise = true;
 }
 
+function help_clicked(event){
+  if(help_window.classList.contains("help--small")){
+    help_window.classList.remove("help--small");
+    help_window.classList.add("help--big");
+    help_window.innerHTML += "<p>Keys on keyboard corresponds to face rotations, slice turns and whole cube rotations, as showed <a href='https://ruwix.com/the-rubiks-cube/notation/' title='rubiks cube notation'>here</a></p><p>To do counterclockwise move press single Shift key before move</p>"
+  }else{
+    help_window.classList.remove("help--big");
+    help_window.innerText = ""
+    help_window.classList.add("help--small");
+  }
+
+}
+
 document.body.addEventListener('keyup', keyUp);
+help_window.addEventListener('click', help_clicked);

@@ -1,0 +1,22 @@
+%standard-grid{
+  grid-gap: 20px;
+  display: grid;
+}
+
+.page-content{
+
+  display: grid;
+  grid-gap: 30px;
+
+  &__row-1{
+    @extend %standard-grid;
+    grid-template-columns: 6fr 1fr;
+  }
+
+  &__row-2{
+    @extend %standard-grid;
+    grid-template-columns: 5fr 2fr;
+  }
+
+}
+
