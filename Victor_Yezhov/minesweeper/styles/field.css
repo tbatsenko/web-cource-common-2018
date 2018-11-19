@@ -1,0 +1,55 @@
+
+@font-face {
+    font-family: LED; /* Имя шрифта */
+    src: url("../fonts/LED.ttf"); /* Путь к файлу со шрифтом */
+}
+
+.board__header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #c0c0c0;
+    border: 10px solid #9b9b9b;
+    box-sizing: border-box;
+}
+
+
+.health-container{
+    border: 2px solid #9b9b9b;
+    background-color: #c0c2c1;
+}
+
+.health-indicator{
+    width: 30px;
+    height: 30px;
+}
+
+.mines-counter{
+
+}
+
+.led{
+    background-color: black;
+    color: red;
+    font-family: LED, serif;
+    padding: 2px;
+    font-size: 20px;
+    text-align: center;
+}
+
+
+.field__cell{
+    width: 50px;
+    height: 50px;
+    background-color: #bebbbf;
+    border: 1px solid #7e7b7f;
+    box-shadow: 10px 10px 5px grey;
+    box-sizing: border-box;
+
+}
+
+.field__row{
+    display: flex;
+    flex-direction: row;
+}
