@@ -1,3 +1,8 @@
+@import "header";
+@import "main";
+@import "letter_types";
+@import "tools";
+
 :root {
   --menu-width: 248px;
   --header-h: 48px;
@@ -8,156 +13,13 @@
   margin: 0;
 }
 
+
+html, body{
+  height: 100%;
+}
+
 button {
   background: transparent;
   border: 0px;
-}
-
-header {
-  height: var(--header-h);
-  padding: 8px;
-  //background: silver;
-  display: flex;
-  border-bottom: 1px silver solid;
-
-  .left-part {
-    width: var(--menu-width);
-    display: flex;
-    align-items: center;
-
-    .left-part__menu {
-
-      background: url("../images/menu.png") center no-repeat;
-      background-size: 20px 20px;
-      height: 50px;
-      width: 50px;
-    }
-
-  }
-
-  .right-part {
-    width: 100%;
-    //background: blue;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-
-    &__search {
-      background: #F5F5F5;
-      width: 70%;
-      display: flex;
-      align-items: center;
-      .lupa {
-        background: url("../images/lupa.png") center no-repeat;
-        background-size: 15px 15px;
-        height: 30px;
-        width: 30px
-      }
-
-      .search {
-        height: 100%;
-        width: 90%;
-        background: #F5F5F5;
-        border: 0;
-
-        &:focus {
-          outline: none;
-        }
-      }
-
-
-      .dropdown {
-        background: url("../images/dropdown.svg") center no-repeat;
-        background-size: 15px 15px;
-        height: 30px;
-        width: 30px;
-        margin-left: auto;
-      }
-    }
-
-    .right-part__buttons {
-      display: flex;
-
-      .right-part__buttons__tasks {
-
-        background: url("../images/tasks.svg") center no-repeat;
-        background-size: 15px 15px;
-        height: 50px;
-        width: 50px;
-      }
-
-      .right-part__buttons__bell {
-
-        background: url("../images/bell.png") center no-repeat;
-        background-size: 20px 20px;
-        height: 50px;
-        width: 50px;
-      }
-
-      .profile_picture {
-        width: 40px;
-        height: 40px;
-        border-radius: 100%;
-      }
-
-    }
-  }
-}
-
-.main {
-  //background: yellow;
-  display: flex;
-  flex-direction: row;
-
-  .letters {
-    overflow-y: scroll;
-    .letter {
-      display: flex;
-      flex-direction: row;
-      align-items: center;
-      border-bottom: 1px silver solid;
-      border-left: 1px white solid;
-      height: 40px;
-
-      .letter__square {
-        background: url("../images/square.png") center no-repeat;
-        background-size: 20px 20px;
-        height: 30px;
-        width: 30px;
-
-      }
-      .letter__star {
-        background: url("../images/star.png") center no-repeat;
-        background-size: 20px 20px;
-        height: 30px;
-        width: 30px;
-
-      }
-
-      .letter__sender {
-        width: 200px;
-      }
-
-      .letter__content {
-        flex: 1;
-        white-space: nowrap;
-        overflow: hidden;
-        text-overflow: ellipsis;
-      }
-
-      .letter__date {
-        justify-self: flex-end;
-      }
-
-    }
-
-    .letter:hover {
-      border: 1px gray solid;
-      border-top: 0;
-      box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
-    }
-  }
-
 }
 

@@ -1,0 +1,24 @@
+//Round info implementation
+
+.round-info{
+  width: 165px;
+  height: 170px;
+  background-color: #ecf0f1;
+  padding-left: 17px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+
+  &__title3{
+    color: #2c3e50;
+    font-size: 22px;
+    font-weight: 500;
+    margin: 0;
+  }
+
+  &__num-text{
+    color: #c0392b;
+    font-size: 55px;
+    font-weight: 900;
+  }
+}
