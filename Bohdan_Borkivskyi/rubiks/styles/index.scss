@@ -1,5 +1,6 @@
 @import "rubiks";
 @import "help";
+@import "timer";
 
 body{
   background-color: #f0f0f0;
@@ -22,10 +23,4 @@ body{
   &:active{
     font-size: 22px;
   }
-}
-
-.timer{
-  width: 100px;
-  height: 100px;
-  background-color: white;
 }

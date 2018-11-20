@@ -320,10 +320,7 @@ class Game {
     try {
       this.rubiks[event.code[3] + (!this.clockwise ? '_' : '')]()
       if (this.game && this.rubiks.is_solved()) {
-        this.game = false;
-        this.work.terminate();
-        this.work = undefined;
-        // alert('you win')
+        this.stop();
       }
     } catch (e) {
       console.log('Move ' + event.code[3] + (!this.clockwise ? '_' : '') + ' is not implemented')
@@ -331,10 +328,6 @@ class Game {
 
     this.clockwise = true
   }
-
-  // updateTimer(event){
-  //     document.getElementById("timer").innerHTML = "<span>" + event.data + "</span>";
-  // }
 
   start() {
     this.rubiks.scramble(1)
@@ -345,9 +338,14 @@ class Game {
     }
     this.work = new Worker("src/timer.js");
     this.work.onmessage = function(event) {
-      document.getElementById("timer").innerHTML = "<span>" + Math.floor(event.data/100) +"." + event.data%100 + "</span>";
+      document.getElementById("timer").innerHTML = "<span>" + Math.floor(event.data/10) +"." + event.data%10 + "</span>";
     }
-    // work.start();
+  }
+
+  stop(){
+    this.game = false;
+    this.work.terminate();
+    this.work = undefined;
   }
 }
 
