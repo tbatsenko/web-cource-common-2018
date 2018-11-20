@@ -1,0 +1,63 @@
+header {
+  height: var(--header-h);
+  padding: 8px;
+  display: flex;
+  border-bottom: 1px silver solid; }
+  header .left-part {
+    width: var(--menu-width);
+    display: flex;
+    align-items: center; }
+    header .left-part .left-part__menu {
+      background: url("../images/menu.png") center no-repeat;
+      background-size: 20px 20px;
+      height: 50px;
+      width: 50px; }
+  header .right-part {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center; }
+    header .right-part__search {
+      background: #F5F5F5;
+      width: 70%;
+      height: 100%;
+      border-radius: 5px;
+      display: flex;
+      align-items: center; }
+      header .right-part__search .lupa {
+        background: url("../images/lupa.png") center no-repeat;
+        background-size: 15px 15px;
+        height: 30px;
+        width: 30px; }
+      header .right-part__search .search {
+        height: 100%;
+        width: 90%;
+        background: #F5F5F5;
+        border: 0; }
+        header .right-part__search .search:focus {
+          outline: none; }
+      header .right-part__search .dropdown {
+        background: url("../images/dropdown.svg") center no-repeat;
+        background-size: 15px 15px;
+        height: 30px;
+        width: 30px;
+        margin-left: auto; }
+    header .right-part .right-part__buttons {
+      display: flex; }
+      header .right-part .right-part__buttons .right-part__buttons__tasks {
+        background: url("../images/tasks.svg") center no-repeat;
+        background-size: 15px 15px;
+        height: 50px;
+        width: 50px; }
+      header .right-part .right-part__buttons .right-part__buttons__bell {
+        background: url("../images/bell.png") center no-repeat;
+        background-size: 20px 20px;
+        height: 50px;
+        width: 50px; }
+      header .right-part .right-part__buttons .profile_picture {
+        width: 40px;
+        height: 40px;
+        border-radius: 100%; }
+
+/*# sourceMappingURL=header.css.map */

@@ -1,0 +1,29 @@
+@import "letter";
+
+.main {
+  //background: yellow;
+  display: flex;
+  flex-direction: row;
+
+  height: calc(100% - 65px);
+
+  .letters {
+    overflow-y: scroll;
+
+  }
+
+  .letters::-webkit-scrollbar-track {
+    background-color: #F5F5F5;
+  }
+
+  .letters::-webkit-scrollbar {
+    width: 10px;
+    background-color: #F5F5F5;
+  }
+
+  .letters::-webkit-scrollbar-thumb {
+    background-color: #cccccc;
+    border: 1px #b7b7b7 solid;
+  }
+
+}
