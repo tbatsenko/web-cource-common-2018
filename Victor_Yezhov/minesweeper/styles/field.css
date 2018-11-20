@@ -53,3 +53,9 @@
     display: flex;
     flex-direction: row;
 }
+
+.amount_of_mines_in_cell{
+    font-family: LED, serif;
+    text-align: center;
+    font-size: 45px;
+}
