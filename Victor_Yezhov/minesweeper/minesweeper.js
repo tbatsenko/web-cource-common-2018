@@ -52,11 +52,18 @@ $(document).ready(function(){
     startGame();
 });
 
-var difficulties = {
+var difficulties_dimenstions = {
     "easy": 10,
     "beginner":15,
     "intermediate":20,
     "advanced":25
+};
+
+var difficulties_mines = {
+    "easy": 15,
+    "beginner":30,
+    "intermediate":40,
+    "advanced":50
 };
 
 
@@ -64,23 +71,23 @@ function startGame() {
     gameState.game = true;
     var selector = $('.level');
     var selectedDifficulty = selector.val();
-    gameState.MaxMinesOnField = difficulties[selectedDifficulty];
+    gameState.MaxMinesOnField = difficulties_mines[selectedDifficulty]+5;
     gameState.remainingFlags = gameState.MaxMinesOnField;
-    gameState.dimension = gameState.MaxMinesOnField;
+    gameState.dimension = difficulties_dimenstions[selectedDifficulty];
     gameState.minesCorrectlyMarked=0;
     gameState.totalMarkedMines = 0;
 
     cell.width = 50;
     cell.height = 50;
-    drawField(selectedDifficulty);
+    drawField();
     changeFace();
 
 
 }
 
 
-function drawField(difficulty){
-    var dimension  = difficulties[difficulty];
+function drawField(){
+    var dimension  = gameState.dimension;
     resizeHeader(dimension);
     clearField();
     var  field = $("#board__field");
@@ -115,15 +122,15 @@ function clearField() {
 
 function getRandomNumber()
 {
-    return Math.floor((Math.random() * 1000) + 1) % gameState.MaxMinesOnField;
+    return Math.floor((Math.random() * 1000) + 1) % gameState.dimension;
 }
 
 function plantMines() {
     var  minesPlanted = 0;
     while (minesPlanted < gameState.MaxMinesOnField)
     {
-        let x = getRandomNumber(gameState.MaxMinesOnField);
-        let y = getRandomNumber(gameState.MaxMinesOnField);
+        let x = getRandomNumber(gameState.dimension);
+        let y = getRandomNumber(gameState.dimension);
         if (!fieldData[x][y].hasMine) {
             fieldData[x][y].hasMine = true;
             minesPlanted++;
@@ -186,7 +193,12 @@ function  dealWithRightClick(x, y) {
     if(!gameState.game){
         return;
     }
+
     cell = fieldData[x][y];
+
+    if(cell.isRevealed){
+        return;
+    }
     if(!cell.hasFlag) {
         cell.elem.css({
             'background-image': 'url(' + 'http://home.avvanta.com/~sydde/flagIcon.png' + ')',
