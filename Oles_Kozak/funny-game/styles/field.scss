@@ -1,0 +1,14 @@
+//Field implementation
+
+@import "card";
+
+.field{
+  width: 450px;
+  height: 430px;
+  padding: 50px;
+  background-color: #f1c40f;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  align-content: space-between;
+}
