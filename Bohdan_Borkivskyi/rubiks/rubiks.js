@@ -1,8 +1,5 @@
 class Cube{
   constructor() {
-    this.clockwise = true;
-    this.game = false;
-
     this.init_layout()
     this.update_view()
   }
@@ -29,10 +26,6 @@ class Cube{
       for(var i=0;i<9;i++) {
         document.getElementById(name+(i+1)).style.backgroundColor = this.sides_dict[name][Math.floor(i/3)][i%3];
       }
-    }
-    if(this.game && this.is_solved()){
-      this.game = false;
-      alert("you win")
     }
   }
 
@@ -284,7 +277,6 @@ class Cube{
       this[random_move]()
       last_move = random_move;
     }
-    this.game = true;
     return this.scramble_text;
   }
 
@@ -308,22 +300,28 @@ class Cube{
 
 rubiks = new Cube();
 help_window = document.getElementById("help");
+var game = false;
+var clockwise = true;
 
 function keyUp(event){
   if(event.keyCode == 16){
-    rubiks.clockwise = !rubiks.clockwise;
+    clockwise = !clockwise;
     return;
   }
 
   if(event.code.length != 4){return}
 
   try {
-    rubiks[event.code[3]+(!rubiks.clockwise ? '_' : '')]()
+    rubiks[event.code[3]+(!clockwise ? '_' : '')]()
+    if(game && rubiks.is_solved()){
+      game = false;
+      alert("you win")
+    }
   }catch (e) {
-    console.log("Move "+event.code[3]+(!rubiks.clockwise ? '_' : '')+" is not implemented")
+    console.log("Move "+event.code[3]+(!clockwise ? '_' : '')+" is not implemented")
   }
 
-  rubiks.clockwise = true;
+  clockwise = true;
 }
 
 function help_clicked(event){
