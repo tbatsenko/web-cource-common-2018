@@ -1,0 +1,53 @@
+
+.letter {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+  border-bottom: 1px silver solid;
+  border-left: 1px white solid;
+  height: 40px;
+
+  .letter__square {
+    background: url("../images/square.png") center no-repeat;
+    background-size: 20px 20px;
+
+    height: 30px;
+    width: 30px;
+
+  }
+  .letter__star {
+    background: url("../images/star.png") center no-repeat;
+    background-size: 20px 20px;
+
+    height: 30px;
+    width: 30px;
+
+  }
+
+  .letter__sender {
+    width: 200px;
+  }
+
+  .letter__content {
+    flex: 1;
+    padding-right: 20px;
+
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .letter__date {
+    justify-self: flex-end;
+    padding: 0 10px;
+  }
+
+}
+
+.letter:hover {
+  border: 1px gray solid;
+  border-right: 0;
+  border-top: 0;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+}

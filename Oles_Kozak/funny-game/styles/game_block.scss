@@ -1,0 +1,11 @@
+//Game block implementation
+
+@import "field";
+@import "round_info";
+
+.game-block{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 50px;
+}
