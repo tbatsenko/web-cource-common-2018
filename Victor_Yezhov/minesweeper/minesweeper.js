@@ -60,7 +60,7 @@ var difficulties_dimenstions = {
 };
 
 var difficulties_mines = {
-    "easy": 15,
+    "easy": 20,
     "beginner":30,
     "intermediate":40,
     "advanced":50
@@ -71,7 +71,7 @@ function startGame() {
     gameState.game = true;
     var selector = $('.level');
     var selectedDifficulty = selector.val();
-    gameState.MaxMinesOnField = difficulties_mines[selectedDifficulty]+5;
+    gameState.MaxMinesOnField = difficulties_mines[selectedDifficulty];
     gameState.remainingFlags = gameState.MaxMinesOnField;
     gameState.dimension = difficulties_dimenstions[selectedDifficulty];
     gameState.minesCorrectlyMarked=0;
@@ -299,7 +299,11 @@ var digits_colors ={
     2:"#007e00",
     3:"#ff0000",
     4:"#000080",
-    5:"#5d1519"
+    5:"#5d1519",
+    6:"#92174e",
+    7:"#306b15",
+    8:"#ff52aa",
+    9:"#0b030a"
 };
 
 
