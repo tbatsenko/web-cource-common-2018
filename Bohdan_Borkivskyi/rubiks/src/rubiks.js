@@ -302,7 +302,9 @@ class Game {
   constructor() {
     this.rubiks = new Cube()
     this.game = false
+    this.time = 0
     this.clockwise = true
+    this.work = undefined;
   }
 
   keyUp(event) {
@@ -318,8 +320,10 @@ class Game {
     try {
       this.rubiks[event.code[3] + (!this.clockwise ? '_' : '')]()
       if (this.game && this.rubiks.is_solved()) {
-        this.game = false
-        alert('you win')
+        this.game = false;
+        this.work.terminate();
+        this.work = undefined;
+        // alert('you win')
       }
     } catch (e) {
       console.log('Move ' + event.code[3] + (!this.clockwise ? '_' : '') + ' is not implemented')
@@ -328,9 +332,22 @@ class Game {
     this.clockwise = true
   }
 
+  // updateTimer(event){
+  //     document.getElementById("timer").innerHTML = "<span>" + event.data + "</span>";
+  // }
+
   start() {
-    this.rubiks.scramble()
+    this.rubiks.scramble(1)
     this.game = true
+    this.time = 0
+    if(this.work != undefined){
+      this.work.terminate();
+    }
+    this.work = new Worker("src/timer.js");
+    this.work.onmessage = function(event) {
+      document.getElementById("timer").innerHTML = "<span>" + Math.floor(event.data/100) +"." + event.data%100 + "</span>";
+    }
+    // work.start();
   }
 }
 

@@ -92,4 +92,9 @@ body {
   .scramble:active {
     font-size: 22px; }
 
+.timer {
+  width: 100px;
+  height: 100px;
+  background-color: white; }
+
 /*# sourceMappingURL=index.css.map */
