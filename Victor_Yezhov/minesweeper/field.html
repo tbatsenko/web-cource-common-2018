@@ -8,7 +8,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script type="text/javascript" src="minesweeper.js"></script>
 </head>
-<body>
+<body oncontextmenu="return false;">
 <main  class="minesweeper">
     <div>
         <span>Level:</span>
@@ -24,8 +24,7 @@
         <div class="board__header">
             <span class="mines-counter led" style="margin-left: 10px">999</span>
             <div class="health-container">
-                <img src="https://vignette.wikia.nocookie.net/39cluesidea/images/2/26/Smile.png/revision/latest?cb=20110217131619"
-                     class="health-indicator">
+                <img class="health-indicator">
             </div>
             <span class="timer led" style="margin-right: 10px">999</span>
         </div>
