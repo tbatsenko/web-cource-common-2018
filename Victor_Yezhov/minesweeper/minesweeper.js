@@ -67,6 +67,8 @@ function startGame() {
     gameState.MaxMinesOnField = difficulties[selectedDifficulty];
     gameState.remainingFlags = gameState.MaxMinesOnField;
     gameState.dimension = gameState.MaxMinesOnField;
+    gameState.minesCorrectlyMarked=0;
+    gameState.totalMarkedMines = 0;
     cell.width = 50;
     cell.height = 50;
     drawField(selectedDifficulty);
