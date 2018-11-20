@@ -330,7 +330,7 @@ class Game {
   }
 
   start() {
-    this.rubiks.scramble(1)
+    this.rubiks.scramble(document.getElementById("slider").value)
     this.game = true
     this.time = 0
     if(this.work != undefined){
