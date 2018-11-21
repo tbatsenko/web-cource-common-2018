@@ -1,0 +1,25 @@
+.container__module-4 {
+  display: flex;
+  height: 420px;
+  &--item-1 {
+    height: 100%;
+    width: 100%;
+  }
+  &--item-2 {
+    height: 100%;
+    width: 100%;
+  }
+
+  &--item-3 {
+    margin-left: 50px;
+    &-link {
+      color: blue;
+      text-decoration: underline;
+      text-decoration-color: rgba(255, 255, 255, 0);
+    }
+
+    &-link:hover {
+      text-decoration-color: rgb(226, 0, 22);;
+    }
+  }
+}
