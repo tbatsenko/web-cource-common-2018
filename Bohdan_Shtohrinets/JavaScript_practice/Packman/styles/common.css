@@ -4,6 +4,14 @@ body {
 }
 
 .game {
+    padding: 25px;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.game__field {
     box-sizing: border-box;
     overflow: hidden;
     display: flex;
@@ -11,7 +19,7 @@ body {
     flex-direction: column;
     width: 600px;
     height: 600px;
-    margin: 50px auto;
+    align-self: center;
     background: #333;
     border: 1px solid;
 }
@@ -20,7 +28,6 @@ body {
 }
 
 .game__cell {
-    /*border: 1px solid yellow;*/
     box-sizing: border-box;
     width: 30px;
     height: 30px;
@@ -48,9 +55,6 @@ body {
     background-color: #2980b9;
 }
 
-.game__cell_pacman {
-}
-
 .game__cell_ghost {
     background-color: red;
 }
@@ -67,4 +71,8 @@ body {
     padding: 20px;
     box-sizing: border-box;
     overflow: hidden;
+}
+
+.game__score {
+    align-self: center;
 }
