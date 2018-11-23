@@ -1,0 +1,46 @@
+.todo {
+    width: 480px;
+    margin: 0 auto;
+
+    &__list {
+        list-style: none;
+        padding: 0;
+    }
+
+    &__item {
+        border-bottom: 1px solid hsl(120, 40%, 40%);
+    }
+
+    &__completed {
+        margin: 10px 17px 0 7px;
+        float: left;
+    }
+
+    &__content {
+        width: 95%;
+        padding: 0 8px 5px 8px;
+        color: hsl(0, 0%, 20%);
+        font-size: 1.3rem;
+        line-height: 1.8rem;
+        font-family: sans-serif;
+
+        &--completed {
+            text-decoration: line-through;
+            color: hsl(0, 0%, 60%);
+        }
+    }
+
+    &__edit {
+        min-width: 65px;
+        height: 28px;
+        float: right;
+        margin-top: 3px;
+    }
+
+    &__remove {
+        min-width: 65px;
+        height: 28px;
+        float: right;
+        margin-top: 3px;
+    }
+}
