@@ -1,0 +1,70 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.game {
+    box-sizing: border-box;
+    overflow: hidden;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    width: 600px;
+    height: 600px;
+    margin: 50px auto;
+    background: #333;
+    border: 1px solid;
+}
+
+.game__row {
+}
+
+.game__cell {
+    /*border: 1px solid yellow;*/
+    box-sizing: border-box;
+    width: 30px;
+    height: 30px;
+    background-color: #333333;
+}
+
+.game__cell_with-coin {
+    position: relative;
+}
+
+.game__cell_with-coin:after {
+    content: "";
+    position: absolute;
+    display: block;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: #ecf0f1;
+}
+
+.game__cell_wall {
+    background-color: #2980b9;
+}
+
+.game__cell_pacman {
+}
+
+.game__cell_ghost {
+    background-color: red;
+}
+
+.game__path {
+    display: flex;
+    justify-content: flex-start;
+    align-content: center;
+    margin: 100px auto;
+    position: relative;
+    width: 500px;
+    height: 100px;
+    background: #333;
+    padding: 20px;
+    box-sizing: border-box;
+    overflow: hidden;
+}
