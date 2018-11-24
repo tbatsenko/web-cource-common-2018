@@ -1,0 +1,27 @@
+.footer {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  margin: 100px 0 50px 0;
+  padding: 109px 89px 0 89px; }
+  .footer-left {
+    display: grid;
+    grid-auto-columns: min-content;
+    grid-gap: 14px; }
+    .footer-left__top {
+      font-size: 16px; }
+    .footer-left__bottom--link {
+      color: #e20016; }
+    .footer-left__bottom--link:hover {
+      text-decoration: underline; }
+  .footer-middle {
+    display: grid;
+    grid-auto-columns: min-content;
+    grid-gap: 14px; }
+    .footer-middle__bottom {
+      width: 348px; }
+    .footer-middle__top {
+      color: #e20016; }
+    .footer-middle__top:hover {
+      text-decoration: underline; }
+
+/*# sourceMappingURL=footer.css.map */

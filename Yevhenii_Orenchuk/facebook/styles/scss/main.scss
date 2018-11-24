@@ -1,0 +1,28 @@
+@import "variables";
+%feed__item {
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border-radius: 5px;
+  overflow: hidden;
+  border: $feed-border;
+}
+%centered {
+  display: flex;
+  align-items: center;
+}
+.point-separator {
+  font-weight: bold;
+  color: #616770;
+  padding: 3px;
+}
+%timestamp {
+  text-decoration: none;
+  color: #616770;
+  font-size: 12px;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}

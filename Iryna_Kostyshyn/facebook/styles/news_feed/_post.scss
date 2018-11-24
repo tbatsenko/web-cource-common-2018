@@ -1,0 +1,98 @@
+.post {
+  padding: 15px;
+  background-color: white;
+  border-radius: 5px;
+  border: 1px solid #bdc3c7;
+  margin-bottom: 10px;
+  margin-top: 15px;
+
+  &__header{
+    margin: 10px;
+  }
+
+  &__user-avatar{
+    width: 40px;
+    height: 40px;
+    border: none;
+    border-radius: 50%;
+  }
+
+  &__user-name{
+    text-decoration: none;
+    color: #365899;
+    font-size: 14px;
+    font-weight: 600;
+  }
+
+  &__time{
+    text-decoration: none;
+    color: #616770;
+    font-size: 12px;
+    font-weight: 400;
+  }
+
+  &__time:after{
+    background: url("https://static.xx.fbcdn.net/rsrc.php/v3/yx/r/Bp-a78aosxf.png") -26px -217px;
+
+  }
+
+  &__capture{
+    font-size: 14px;
+    font-weight: 400;
+    color: rgb(29, 33, 41);
+    overflow-wrap: break-word;
+    margin: 10px;
+  }
+
+  &__photo{
+    width: 499px;
+    border: none;
+    box-sizing: border-box;
+  }
+
+  &__footer{
+    margin: 10px;
+    height: 83px;
+    display: flex;
+
+  }
+
+  &__summary{
+    display: inherit;
+    vertical-align: space-between;
+    flex-direction: row;
+  }
+
+  &__like-img{
+    width: 16px;
+    height: 16px;
+    border: none;
+    border-radius: 50%;
+  }
+
+  &__amount-shares{
+    text-decoration: none;
+    color: #616770;
+  }
+
+  &__amount-likes{
+    text-decoration: none;
+    color: #616770;
+  }
+
+  &__footer-buttons{
+    display: inherit;
+    vertical-align: space-between;
+    flex-direction: row;
+  }
+
+  &__footer-button{
+    border: none;
+    text-decoration: none;
+    color: #616770;
+    font-size: 14px;
+    font-weight: 700;
+    background: transparent;
+  }
+
+}

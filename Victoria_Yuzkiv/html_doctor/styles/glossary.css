@@ -1,33 +1,28 @@
-.glossary{
+.glossary {
     border-bottom: 4px solid #F0F0F0;
     border-top: 4px solid #F0F0F0;
-    clear: both;
     font-family: sans-serif;
     font-size: 13px;
-    margin: 10px 0 20px;
-    padding: 0 0 30px;
+    margin-top: 10px;
     position: relative;
     overflow: auto;
     background-color: #f8f8f8;
 }
 
-.glossary section{
+.glossary__section {
     float: left;
     margin-right: 2.14%;
     width: 8.3%;
 }
-.glossary-first{
-    margin-left: 12px;
-}
 
-.glossary h2{
+.glossary__section__header {
     color: #888;
     font-size: 96%;
     margin-left: 12px;
     letter-spacing: 0;
 }
 
-.glossary ul{
+.glossary__section__group {
     list-style: none;
     column-count: 1;
     margin-left: -28px;

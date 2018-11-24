@@ -1,0 +1,90 @@
+:root {
+  --gmail-aside-width: 256px;
+}
+
+.google-mail-aside {
+  width: var(--gmail-aside-width);
+  height: 575px;
+  //background: #27ae60;
+  //align-self: flex-start;
+
+  &__write-button {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    border-radius: 28px;
+    background: transparent;
+    margin: 16px 0 16px 8px;
+    height: 48px;
+    width: 146px;
+    border: 0;
+    box-shadow: 0 1px 2px 0 rgba(60, 64, 67, 0.302), 0 1px 3px 1px rgba(60, 64, 67, 0.149);
+    font-family: 'Google Sans', Roboto, RobotoDraft, Helvetica, Arial, sans-serif;
+    letter-spacing: .25px;
+    color: #3c4043;
+    font-weight: 500;
+    font-size: 14px;
+    padding-right: 12px;
+    padding-left: 1px;
+
+    &:hover {
+      box-shadow: 0 1px 3px 0 rgba(60, 64, 67, 0.302), 0 4px 8px 3px rgba(60, 64, 67, 0.149);
+      background-color: #fafafb;
+    }
+  }
+
+  &__write-button-logo {
+    width: 32px;
+    height: 32px;
+  }
+
+  &__navigation {
+    //height: 24px;
+    padding-right: 16px;
+  }
+
+  &__link {
+    height: 24px;
+    //margin-right: 16px;
+    color: #202124;
+    background: transparent;
+    line-height: 20px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    border-radius: 0 16px 16px 0;
+    font-size: .875rem;
+    letter-spacing: .2px;
+
+    &:hover {
+      background: #f0f2f4;
+    }
+
+    &--active {
+      background: rgb(252, 232, 230);;
+      font-weight: 900;
+      //font-size: 14px;
+      letter-spacing: .2px;
+      color: #d73429;
+    }
+  }
+
+  &__icon {
+    margin-left: 26px;
+    margin-right: 18px;
+    color: #747474;
+  }
+
+  &__icon-img {
+    vertical-align: middle;
+  }
+
+  &__footer {
+    position: relative;
+    bottom: 0;
+    height: 32px;
+    background: violet;
+    border-top: 1px solid rgba(0, 0, 0, .2); //#ccc;
+  }
+}
+

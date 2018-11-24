@@ -1,0 +1,14 @@
+<img class="main-header__logo" src="images/facebook-emblem.jpg">
+<input class="main-header__search" type="search" placeholder="Search">
+<div id="right-buttons">
+    {{#header}}
+
+        {{#left_buttons}}
+            <button class="main-header__left-buttons">{{.}}</button>
+        {{/left_buttons}}
+
+        {{#right_buttons}}
+            <button class="main-header__right-buttons"><img src='images/{{.}}'></button>
+        {{/right_buttons}}
+    {{/header}}
+</div>

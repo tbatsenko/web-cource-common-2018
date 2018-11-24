@@ -1,0 +1,30 @@
+<nav class="top_nav">
+    <a href="#" class="logo"></a>
+    <div class="searchbar">
+        <input type="text" class="searchbar__input" title="input" placeholder="Search">
+        <button class="searchbar__search"></button>
+    </div>
+    <section class="top_menu">
+        {{#top_menu}}
+
+            {{#text_links}}
+                <a href="{{href}}" class="text_link">
+                    {{#if has_img}}
+                        <img src="{{img_url}}" class="text_link__image">
+                    {{/if}}
+                    {{text}}
+                </a>
+            {{/text_links}}
+
+            {{#text_buttons}}
+                <button class="text_button">{{text}}</button>
+            {{/text_buttons}}
+
+            {{#icon_buttons}}
+                <button class="icon_button"><img src="{{img_url}}" class="icon_button__image"></button>
+            {{/icon_buttons}}
+
+
+        {{/top_menu}}
+    </section>
+</nav>

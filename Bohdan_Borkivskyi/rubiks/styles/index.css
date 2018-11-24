@@ -1,0 +1,126 @@
+.window {
+  width: 500px;
+  height: 600px;
+  margin: 0 auto;
+  background-color: white;
+  border: 1px solid #dddfe2;
+  border-radius: 10px; }
+  .window .up {
+    margin-left: 200px;
+    display: flex;
+    flex-flow: column wrap-reverse;
+    width: 100px;
+    height: 200px;
+    background-color: black;
+    transform: skewX(-60deg) rotate(-90deg); }
+    .window .up1, .window .up2, .window .up3, .window .up4, .window .up5, .window .up6, .window .up7, .window .up8, .window .up9 {
+      width: calc(100% / 3 - 2px);
+      height: calc(100% / 3 - 2px);
+      box-sizing: border-box;
+      border: 2px solid black;
+      margin: 1px; }
+  .window .front {
+    background-color: black;
+    width: 200px;
+    height: 200px;
+    margin-left: 65px;
+    margin-top: -50px;
+    display: flex;
+    flex-wrap: wrap; }
+    .window .front1, .window .front2, .window .front3, .window .front4, .window .front5, .window .front6, .window .front7, .window .front8, .window .front9 {
+      width: calc(100% / 3 - 2px);
+      height: calc(100% / 3 - 2px);
+      box-sizing: border-box;
+      border: 2px solid black;
+      margin: 1px; }
+  .window .right {
+    width: 170px;
+    height: 200px;
+    transform: skewY(-30deg);
+    background-color: black;
+    display: flex;
+    flex-flow: row wrap;
+    margin-left: 265px;
+    margin-top: -250px; }
+    .window .right1, .window .right2, .window .right3, .window .right4, .window .right5, .window .right6, .window .right7, .window .right8, .window .right9 {
+      width: calc(100% / 3 - 2px);
+      height: calc(100% / 3 - 2px);
+      box-sizing: border-box;
+      border: 2px solid black;
+      margin: 1px; }
+
+.help {
+  position: fixed;
+  right: 10px;
+  top: 8px;
+  background-color: white;
+  border-radius: 10px; }
+  .help--small {
+    width: 75px;
+    height: 75px;
+    background: url("../images/question.png") no-repeat center;
+    background-size: 75px 75px; }
+  .help--big {
+    border: 1px solid #dddfe2;
+    width: 350px;
+    height: 120px;
+    padding: 0 10px;
+    font-family: Helvetica, Arial, sans-serif;
+    font-weight: 600;
+    font-size: 14px; }
+
+@font-face {
+  font-family: "digital";
+  src: url("../fonts/digital-7.ttf"); }
+.timer {
+  width: 200px;
+  height: 100px;
+  background-color: white;
+  position: fixed;
+  top: 8px;
+  left: 10px;
+  font-family: "digital";
+  padding-top: 10px;
+  padding-left: 10px;
+  font-size: 80px; }
+
+.slider {
+  width: 50%;
+  margin: 20px 0 20px 25%;
+  height: 25px;
+  background: #d3d3d3;
+  outline: none;
+  opacity: 0.7;
+  transition: opacity .2s; }
+  .slider:hover {
+    opacity: 1;
+    cursor: pointer; }
+
+.slider_value {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  font-family: Helvetica, Arial, sans-serif;
+  font-weight: 600; }
+
+body {
+  background-color: #f0f0f0; }
+
+.scramble {
+  background-color: gold;
+  border: 3px solid crimson;
+  border-radius: 5px;
+  width: 50%;
+  height: 80px;
+  margin-left: 25%;
+  margin-top: 100px;
+  font-family: Helvetica, Arial, sans-serif;
+  font-weight: 600;
+  font-size: 24px;
+  color: crimson;
+  cursor: pointer;
+  outline: none; }
+  .scramble:active {
+    font-size: 22px; }
+
+/*# sourceMappingURL=index.css.map */

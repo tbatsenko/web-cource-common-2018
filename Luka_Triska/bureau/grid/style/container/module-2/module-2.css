@@ -1,0 +1,39 @@
+.container__module-2 {
+  border-top: 1px solid #d3d3d3;
+  margin: 70px 0 36px 0;
+  height: 378px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 2fr; }
+  .container__module-2--item-1 {
+    border-right: 1px solid #d3d3d3;
+    font: 700 24px/27px Bureausans, Arial, sans-serif; }
+  .container__module-2--item-2 {
+    border-right: 1px solid #d3d3d3;
+    font: 700 24px/27px Bureausans, Arial, sans-serif; }
+    .container__module-2--item-2-h4 {
+      padding: 0 9px 0 9px;
+      margin-bottom: 0; }
+    .container__module-2--item-2-h5 {
+      margin: 0;
+      padding: 0 9px 0 9px; }
+    .container__module-2--item-2-link {
+      width: 100%;
+      padding: 0 9px 0 9px; }
+    .container__module-2--item-2-link:hover {
+      text-decoration: underline; }
+  .container__module-2--item-3 {
+    font: 700 24px/27px Bureausans, Arial, sans-serif; }
+    .container__module-2--item-3-h2 {
+      padding: 0 9px 0 9px;
+      margin-bottom: 0; }
+    .container__module-2--item-3-h3 {
+      margin: 10px 0 10px 0;
+      padding: 0 9px 0 9px;
+      font-size: 35px; }
+    .container__module-2--item-3-link {
+      width: 100%;
+      padding: 0 9px 0 9px; }
+    .container__module-2--item-3-link:hover {
+      text-decoration: underline; }
+
+/*# sourceMappingURL=module-2.css.map */

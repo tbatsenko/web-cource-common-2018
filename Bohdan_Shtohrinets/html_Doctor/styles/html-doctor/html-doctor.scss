@@ -1,0 +1,30 @@
+.html-doctor {
+  &__top-banner {
+    background-color: #0063A6;
+    width: 100%;
+    height: 200px;
+  }
+
+  &__logo {
+    top: 5px;
+    position: relative;
+    float: left;
+    width: 505px;
+    height: 144px;
+  }
+
+  &__main-content {
+    display: block;
+    width: 1020px;
+    margin: 0 auto;
+    height: 2640px;
+    background-color: white;
+    box-shadow: 1px 1px 20px #7f8c8d;
+  }
+
+  &__footer {
+    display: block;
+    margin: 40px 0 0 0;
+    padding: 0 0 20px 0;
+  }
+}

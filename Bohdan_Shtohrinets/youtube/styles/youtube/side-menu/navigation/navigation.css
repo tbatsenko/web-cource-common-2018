@@ -1,0 +1,64 @@
+.navigation__title {
+    font-size: 14px;
+    text-transform: uppercase;
+    margin-left: 20px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    color: rgba(17, 17, 17, 0.6);
+}
+
+.navigation__option {
+    padding-left: 20px;
+    justify-content: flex-start;
+    height: 40px;
+    display: flex;
+}
+
+.navigation__option_active {
+    background: rgba(0, 0, 0, 0.1);
+}
+
+.navigation__option:hover {
+    background: rgba(0, 0, 0, 0.04);
+}
+
+.navigation__link {
+    margin-left: 20px;
+    color: #000000;
+    font-size: 14px;
+    font-weight: 400;
+    align-self: center;
+}
+
+.navigation__link_active {
+    font-weight: 700;
+}
+
+.navigation__svg {
+    align-self: center;
+    display: block;
+    width: 24px;
+    height: 24px;
+}
+
+.navigation__channel-logo {
+    display: block;
+    width: 24px;
+    height: 24px;
+    align-self: center;
+    border-radius: 50%;
+}
+
+.navigation__icon-path {
+    fill: #888888;
+}
+
+.navigation__icon-path_active {
+    fill: #ff0000;
+}
+
+.navigation__icon-path_no-fill {
+    fill: none;
+}
+
+/*# sourceMappingURL=navigation.css.map */

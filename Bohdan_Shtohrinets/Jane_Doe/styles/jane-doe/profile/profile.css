@@ -1,0 +1,52 @@
+.profile__image {
+    align-self: center;
+    overflow: hidden;
+    color: transparent;
+    display: block;
+    width: 350px;
+    height: 350px;
+    border-radius: 50%;
+    box-shadow: 0 7px 11px 0 rgba(116, 116, 116, 0.5);
+}
+
+.profile__image:before {
+    content: "";
+    display: block;
+    width: 350px;
+    height: 350px;
+    background: url("/images/profile-image.png");
+    background-size: cover;
+}
+.profile__motto {
+    margin-top: 64px;
+    display: flex;
+    font-size: 25px;
+    font-weight: 500;
+    font-style: italic;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: center;
+    align-self: center;
+    color: #7b7b7b;
+}
+.profile__info {
+    margin-top: 64px;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+.profile__feelings {
+    margin-top: 60px;
+    display: flex;
+    flex-wrap: wrap;
+}
+.profile__brands {
+    margin-top: 60px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+/*# sourceMappingURL=profile.css.map */

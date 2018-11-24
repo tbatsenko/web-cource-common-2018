@@ -1,0 +1,19 @@
+.container__module-4 {
+  display: flex;
+  height: 420px; }
+  .container__module-4--item-1 {
+    height: 100%;
+    width: 100%; }
+  .container__module-4--item-2 {
+    height: 100%;
+    width: 100%; }
+  .container__module-4--item-3 {
+    margin-left: 50px; }
+    .container__module-4--item-3-link {
+      color: blue;
+      text-decoration: underline;
+      text-decoration-color: rgba(255, 255, 255, 0); }
+    .container__module-4--item-3-link:hover {
+      text-decoration-color: #e20016; }
+
+/*# sourceMappingURL=module-4.css.map */

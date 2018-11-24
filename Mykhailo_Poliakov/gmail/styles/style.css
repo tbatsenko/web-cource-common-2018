@@ -1,68 +1,60 @@
 @import url("https://fonts.googleapis.com/css?family=Roboto");
 @import url("https://fonts.googleapis.com/icon?family=Material+Icons");
-.main-menu .main-menu__button, .search .search__button, .sidebar-menu .sidebar__button .sidebar__icon, .custom-checkbox__input + .custom-checkbox__style::after {
+@font-face {
+  font-family: 'Google Sans';
+  src: url(../fonts/google-sans.ttf); }
+.gmail-header__icon, .gmail-header__button, .search__button, .gmail-sidebar__icon, .checkbox__input + .checkbox__style::after {
   font-family: 'Material Icons';
   font-size: 24px;
   background: transparent;
   color: #6d6d6d; }
 
-* {
+body {
   margin: 0;
   padding: 0;
-  outline: 0;
-  border: 0;
-  font: inherit;
-  color: inherit;
-  box-sizing: inherit; }
-
-body {
-  background: #ffffff;
   font-family: 'Roboto', Arial, Helvetica, sans-serif;
-  font-size: .875rem;
-  color: #202124;
+  font-size: 14px;
   overflow: hidden; }
 
-button:hover {
-  cursor: pointer; }
-
-.header {
+.gmail-header {
   height: 64px;
   border-top: 1px solid #ffffff;
   border-bottom: 1px solid #eceff1;
   box-sizing: border-box;
   display: flex; }
-
-.main-menu {
-  flex-grow: 1;
-  display: flex;
-  align-items: center; }
-  .main-menu .main-menu__icon {
-    font-family: 'Material Icons';
-    font-size: 24px;
-    background: transparent;
-    margin-right: 16px;
-    margin-left: 24px;
-    color: #6d6d6d; }
-  .main-menu .main-menu__button:hover {
-    color: #000000; }
-  .main-menu .main-menu__button--menu {
+  .gmail-header__menu {
+    flex-grow: 1;
+    display: flex;
+    align-items: center; }
+  .gmail-header__icon {
     margin-right: 16px;
     margin-left: 24px; }
-  .main-menu .main-menu__logo {
+  .gmail-header__button {
+    border: 0;
+    padding: 0;
+    outline: 0; }
+    .gmail-header__button:hover {
+      color: #000000;
+      cursor: pointer; }
+  .gmail-header__button--menu {
+    margin-right: 16px;
+    margin-left: 24px; }
+  .gmail-header__logo {
     background: url(../images/logo.png);
     background-size: 109px 40px;
     height: 40px;
     width: 109px; }
-  .main-menu .main-menu__button--apps {
+  .gmail-header__button--apps {
     margin-right: 24px;
     margin-left: auto; }
-  .main-menu .main-menu__profile {
+  .gmail-header__profile {
     background: url(../images/photo.jpg);
     background-size: 32px;
     height: 32px;
     width: 32px;
     border-radius: 50%;
-    margin: 0 20px; }
+    margin: 0 20px;
+    border: 0; }
 
 .search {
   margin-left: 83px;
@@ -76,27 +68,35 @@ button:hover {
   background: #f5f5f5;
   border-radius: 4px;
   transition: border 150ms; }
-  .search .search__button {
+  .search__button {
     margin-right: 15px;
-    margin-left: 14px; }
-  .search .search__input {
+    margin-left: 14px;
+    border: 0;
+    padding: 0;
+    outline: 0; }
+    .search__button:hover {
+      cursor: pointer; }
+  .search__input {
     background: #f5f5f5;
     flex-grow: 1;
-    font-size: 1rem;
-    height: 24px; }
-  .search .search__input:focus {
+    font-size: 16px;
+    height: 24px;
+    border: 0;
+    outline: 0; }
+  .search__input:focus {
     background: #ffffff; }
+  .search:focus-within {
+    background: #ffffff;
+    border-color: rgba(0, 0, 0, 0.12);
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.24); }
 
-.search:focus-within {
-  background: #ffffff;
-  border-color: rgba(0, 0, 0, 0.12);
-  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.24); }
+.gmail-layout {
+  width: 100%; }
+  .gmail-layout__content {
+    display: flex; }
 
-@font-face {
-  font-family: 'Google Sans';
-  src: url(../fonts/GoogleSans.ttf); }
 .compose-button {
-  font-family: 'Google Sans', Arial, Helvetica, sans-serif;
+  font-family: 'Google Sans', 'Roboto', Arial, Helvetica, sans-serif;
   margin: 16px 0 16px 8px;
   height: 48px;
   width: 145px;
@@ -107,135 +107,139 @@ button:hover {
   box-shadow: 0 1px 2px 0 rgba(60, 64, 67, 0.302), 0 1px 3px 1px rgba(60, 64, 67, 0.149);
   border: 1px;
   display: flex;
-  align-items: center; }
-  .compose-button .compose-button__create {
+  align-items: center;
+  font-size: 14px;
+  padding: 0;
+  outline: 0; }
+  .compose-button__icon {
     background: url(../images/create.png);
     height: 32px;
     width: 32px;
     background-size: 32px;
     margin: 0 12px; }
+  .compose-button:hover {
+    box-shadow: 0 1px 3px 0 rgba(60, 64, 67, 0.302), 0 4px 8px 3px rgba(60, 64, 67, 0.149);
+    background-color: #fafafb;
+    cursor: pointer; }
+  .compose-button--min {
+    height: 56px;
+    width: 56px;
+    border-radius: 50%;
+    font-size: 0;
+    margin: 12px 0 12px 8px; }
 
-.compose-button:hover {
-  box-shadow: 0 1px 3px 0 rgba(60, 64, 67, 0.302), 0 4px 8px 3px rgba(60, 64, 67, 0.149);
-  background-color: #fafafb; }
-
-.sidebar {
-  width: 256px;
-  float: left; }
-
-.sidebar-menu {
-  display: flex;
-  flex-direction: column; }
-  .sidebar-menu .sidebar__button:first-of-type {
-    background: #fce8e6;
-    font-weight: 1000;
-    font-size: .850rem;
-    letter-spacing: .3px;
-    color: #d73429; }
-    .sidebar-menu .sidebar__button:first-of-type .sidebar__icon:first-of-type {
-      color: #d73429; }
-  .sidebar-menu .sidebar__button {
+.gmail-sidebar {
+  min-width: 256px;
+  align-self: flex-start; }
+  .gmail-sidebar__link {
     height: 32px;
-    width: 240px;
+    margin-right: 16px;
     background: transparent;
     display: flex;
     align-items: center;
     border-radius: 0 16px 16px 0;
-    line-height: 20px; }
-    .sidebar-menu .sidebar__button .sidebar__icon {
+    line-height: 20px;
+    text-decoration: none;
+    color: #202124; }
+    .gmail-sidebar__link:hover {
+      background: #f0f2f4; }
+    .gmail-sidebar__link--active {
+      background: #fce8e6;
+      font-weight: 900;
+      font-size: 14px;
+      letter-spacing: .3px;
+      color: #d73429; }
+  .gmail-sidebar__icon {
+    font-size: 20px;
+    margin-left: 26px;
+    margin-right: 18px;
+    color: #747474; }
+    .gmail-sidebar__icon--active {
+      color: #d73429;
+      font-weight: normal; }
+  .gmail-sidebar--min {
+    min-width: 72px; }
+    .gmail-sidebar--min .gmail-sidebar__link {
+      font-size: 0;
+      border-radius: 50%;
+      height: 32px;
+      width: 32px;
+      margin: 0 20px;
+      justify-content: center; }
+      .gmail-sidebar--min .gmail-sidebar__link--active {
+        margin-left: 21px; }
+    .gmail-sidebar--min .gmail-sidebar__icon {
       font-size: 20px;
-      margin-left: 26px;
-      margin-right: 18px;
-      color: #747474; }
-  .sidebar-menu .sidebar__button:first-of-type:hover {
-    background: #fce8e6; }
-  .sidebar-menu .sidebar__button:hover {
-    background: #f0f2f4; }
+      margin: 0; }
 
-.main {
+.gmail-main {
   margin-right: 10px;
   overflow: hidden;
   box-sizing: border-box; }
-
-.control-menu {
-  height: 48px;
-  border-bottom: 1px solid #eceff1; }
-
-.email-container {
-  background: #f4f7f7;
-  overflow-y: scroll;
-  height: calc(100vh - 112px); }
-
-.main__email:first-of-type {
-  border-top: 0; }
+  .gmail-main__control {
+    height: 48px;
+    border-bottom: 1px solid #eceff1; }
+  .gmail-main__emails {
+    background: #f4f7f7;
+    overflow-y: scroll;
+    height: calc(100vh - 112px); }
 
 .email {
   height: 40px;
   box-sizing: border-box;
   box-shadow: inset 0 -1px 0 0 rgba(100, 121, 143, 0.122);
-  width: 100%;
   display: flex;
   flex-direction: row;
   align-items: center;
   padding-left: 16px; }
-  .email .email__text {
+  .email__from {
+    min-width: 168px;
+    margin-right: 32px;
+    letter-spacing: .2px;
+    color: #202124;
+    font: inherit; }
+  .email__theme {
+    font: inherit;
+    color: #000000;
+    letter-spacing: .2px;
+    white-space: nowrap; }
+  .email__text {
     text-overflow: ellipsis;
     white-space: nowrap;
     overflow: hidden;
-    padding-top: 5px;
-    padding-bottom: 5px;
-    flex: 1 1 auto;
     color: #5f6368;
+    margin-left: 3px;
     margin-right: 78px; }
-  .email .email__theme {
-    color: #000000;
-    letter-spacing: .2px; }
-  .email .email__from {
-    min-width: 168px;
-    margin-right: 32px;
-    letter-spacing: .2px; }
-  .email .email__date {
+  .email__date {
     margin-left: auto;
     margin-right: 16px;
     color: #5f6368;
-    font-size: .750rem;
+    font-size: 13px;
     white-space: nowrap; }
+  .email:hover {
+    box-shadow: inset 1px 0 0 #dadce0, inset -1px 0 0 #dadce0, 0 1px 2px 0 rgba(60, 64, 67, 0.3), 0 1px 3px 1px rgba(60, 64, 67, 0.15);
+    cursor: pointer; }
+    .email:hover .checkbox__style::after {
+      color: #6d6d6d; }
 
-.email:hover {
-  box-shadow: inset 1px 0 0 #dadce0, inset -1px 0 0 #dadce0, 0 1px 2px 0 rgba(60, 64, 67, 0.3), 0 1px 3px 1px rgba(60, 64, 67, 0.15);
-  cursor: pointer; }
-  .email:hover .custom-checkbox__style::after {
-    color: #6d6d6d; }
-
-.custom-checkbox {
+.checkbox {
   width: 20px;
   height: 20px;
   margin-right: 10px; }
-
-.custom-checkbox__input {
-  display: none; }
-
-.custom-checkbox__input + .custom-checkbox__style::after {
-  content: 'check_box_outline_blank';
-  font-size: 20px;
-  color: #cccfcf; }
-
-.custom-checkbox__input:hover + .custom-checkbox__style::after {
-  color: #020202;
-  cursor: pointer; }
-
-.custom-checkbox__input:checked + .custom-checkbox__style::after {
-  content: 'check_box';
-  color: #020202; }
-
-.custom-checkbox__input + .custom-checkbox__style--star::after {
-  content: 'star_border'; }
-
-.custom-checkbox__input:checked + .custom-checkbox__style--star::after {
-  content: 'star';
-  color: #f3b200; }
-<<<<<<< Updated upstream
-=======
-
-/*# sourceMappingURL=style.css.map */
->>>>>>> Stashed changes
+  .checkbox__input {
+    display: none; }
+  .checkbox__input + .checkbox__style::after {
+    content: 'check_box_outline_blank';
+    font-size: 20px;
+    color: #cccfcf; }
+  .checkbox__input:hover + .checkbox__style::after {
+    color: #020202;
+    cursor: pointer; }
+  .checkbox__input:checked + .checkbox__style::after {
+    content: 'check_box';
+    color: #020202; }
+  .checkbox--star .checkbox__input + .checkbox__style::after {
+    content: 'star_border'; }
+  .checkbox--star .checkbox__input:checked + .checkbox__style::after {
+    content: 'star';
+    color: #f3b200; }

@@ -1,0 +1,25 @@
+.characters{
+    list-style: none;
+}
+
+.characters li{
+    margin: 0 45px 10px 10px;
+    padding: 15px 25px;
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: bold;
+    color: #ffffff;
+    display: block;
+    background: #7b7b7b;
+    overflow: hidden;
+    width: auto;
+}
+
+.characters--up{
+    float: left;
+}
+
+.characters--down{
+    float: left;
+}
+

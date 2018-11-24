@@ -1,0 +1,13 @@
+<nav class="side_menu">
+    {{#groups}}
+        {{#if show_header}}
+            <h4 class="side_menu__header">{{group_header}}</h4>
+        {{/if}}
+        {{#items}}
+            <a href="{{link}}" class="side_menu__link">
+                <img src="{{icon}}" class="side_menu__link-img {{#if icon_rounded}}side_menu__link-img--rounded{{/if}}">
+                <span class="side_menu__link-text">{{text}}</span>
+            </a>
+        {{/items}}
+    {{/groups}}
+</nav>

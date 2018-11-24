@@ -1,0 +1,61 @@
+{
+  "top-bar": {
+    "menu-button":{
+      "title": "top-menu",
+      "icon-source": "menu"
+    },
+    "logo":{
+      "website-index-link": "https://mail.google.com/mail/u/0/#inbox",
+      "img-source": "images/logo_gmail_lockup_default.png"
+    },
+    "top-search":{
+      "search-button":{
+        "title": "search-button",
+        "icon-source": "search"
+      },
+      "search-placeholder": "Search mail",
+      "options-button":{
+        "title": "options-button",
+        "icon-source": "arrow_drop_down"
+      }
+    },
+    "right-nav-buttons":[
+      "apps", "notifications"
+    ]
+  },
+  "left-bar":{
+    "compose-button":{
+      "icon-source": "images/create_32dp.png",
+      "text": "Compose"
+    },
+    "navigation": {
+      "inbox": {
+        "url": "https://mail.google.com/mail/u/0/#inbox",
+        "icon-source": "",
+        "text": "Inbox"
+      },
+      "starred":{
+        "url": "https://mail.google.com/mail/u/0/#starred",
+        "icon-source": "",
+        "text": "Starred"
+      },
+      "trash":{
+        "url": "https://mail.google.com/mail/u/0/#trash",
+        "icon-source": "",
+        "text": "Trash"
+      }
+    }
+  },
+  "central-bar":{
+    "header":{
+      "left-navigation": {
+        "select-button": ["check_box_outline_blank", "arrow_drop_down"],
+        "other-buttons": ["refresh", "more_vert"]
+      },
+      "right-navigation": {
+        "msg-filter-text": "1-50",
+        "other-buttons": ["chevron_left", "chevron_right", "settings"]
+      }
+    }
+  }
+}

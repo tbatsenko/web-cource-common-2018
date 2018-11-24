@@ -1,0 +1,69 @@
+.ghost {
+    box-sizing: border-box;
+    position: relative;
+    z-index: 99;
+    background: red;
+    height: 30px;
+    width: 30px;
+    border-top-left-radius: 70px;
+    border-top-right-radius: 70px;
+    animation: final__colourSwap 0.5s linear infinite;
+}
+
+/* using these for eyes */
+.ghost::before, .ghost::after {
+    content: "";
+    position: absolute;
+    background: white;
+    height: 9px;
+    width: 7px;
+    border-radius: 100%;
+    top: 7px;
+    left: 4px;
+}
+
+.ghost::after {
+    left: 13px;
+}
+
+.ghost__eyes::before, .ghost__eyes::after {
+    content: "";
+    position: absolute;
+    background: blue;
+    height: 4px;
+    width: 4px;
+    border-radius: 100%;
+    top: 10px;
+    left: 5px;
+    z-index: 1;
+    /*animation: final__peeperLeft 1.7s linear infinite;*/
+}
+
+.ghost__eyes::after {
+    left: 14px;
+    /*animation: final__peeperRight 1.7s linear infinite;*/
+}
+
+@keyframes final__peeperLeft {
+    0%, 100% {
+        left: 4px;
+    }
+    50% {
+        left: 5px;
+    }
+}
+
+@keyframes final__peeperRight {
+    0%, 100% {
+        left: 14px;
+    }
+    50% {
+        left: 16px;
+    }
+}
+
+@keyframes final__colourSwap {
+    50% {
+        background: hotpink;
+    }
+}

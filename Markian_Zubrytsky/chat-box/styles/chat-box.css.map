@@ -1,0 +1,9 @@
+{
+  "version": 3,
+  "mappings": "AAAA,IAAI;EACF,MAAM,EAAE,CAAC;EACT,OAAO,EAAE,CAAC;;AAGZ,WAAW;EACT,QAAQ,EAAE,KAAK;EACf,GAAG,EAAE,GAAG;EACR,IAAI,EAAE,GAAG;EACT,KAAK,EAAE,KAAK;EACZ,MAAM,EAAE,IAAI;EACZ,gBAAgB,EAAE,OAAO;EACzB,OAAO,EAAE,IAAI;EACb,SAAS,EAAE,UAAU",
+  "sources": [
+    "chat-box.scss"
+  ],
+  "names": [],
+  "file": "chat-box.css"
+}
