@@ -8,16 +8,29 @@
     color: #fff;
     display: flex;
     flex-direction: column;
+    position: relative;
 
-    background: url("../images/user.jpeg") no-repeat;
-    background-size: cover;
-    object-fit: cover;
+    //background: url("../images/user.jpeg") no-repeat;
+    //background-size: cover;
+    //object-fit: cover;
 
     padding: 50px 70px;
 
     &-bottom-group {
       margin-top: auto;
+      z-index: 9999;
     }
+
+    &-background-img {
+      position: absolute;
+      object-fit: cover;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 0;
+    }
+
 
     &-subheader {
       font-family: Montserrat-Bold, serif;
@@ -65,7 +78,7 @@
       margin-right: 10px;
 
       @media screen and (max-width: 1400px) {
-          margin-top: 10px;
+        margin-top: 10px;
       }
 
     }
