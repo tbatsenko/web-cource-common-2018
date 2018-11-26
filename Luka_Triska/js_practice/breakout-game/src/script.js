@@ -37,6 +37,14 @@ let brickPadding = 20;
 let brickOffsetTop = 30;
 let brickOffsetLeft = 30;
 
+// sound variables
+let gameSound = new Audio();
+let hitSound = new Audio();
+
+
+gameSound.src = "sounds/gameSound.wav";
+hitSound.src = "sounds/hitSound.wav";
+
 // initialising bricks
 let bricks = [];
 for (let c = 0; c < brickColumnCount; c++) {
@@ -79,6 +87,7 @@ const collisionDetection = () => {
                     && x - ballRadius / 2 < b.x + brickWidth
                     && y + ballRadius > b.y
                     && y - ballRadius < b.y + brickHeight) {
+                    hitSound.play();
                     dy = -dy;
                     b.status = 0;
                     score++;
@@ -115,6 +124,7 @@ const drawBoard = () => {
 };
 
 const draw = () => {
+    gameSound.play();
     ctx.clearRect(0, 0, canvas.width, canvas.height);
     drawBricks();
     drawBall();
@@ -124,8 +134,10 @@ const draw = () => {
 
     // makes sure the ball bounces off the top and the board of canvas
     if (y + dy < ballRadius) {
+        hitSound.play();
         dy = -dy;
     } else if (y + ballRadius + boardHeight > canvas.height) {
+        hitSound.play();
         if (x + ballRadius > boardX && x - ballRadius < boardX + boardWidth) {
             if (Math.abs(dy < 6)) dy = -dy * 1.2;
             else dy = -dy;
@@ -137,7 +149,10 @@ const draw = () => {
     }
 
     // makes sure the ball bounces off the left and right side of canvas
-    if (x < ballRadius || x + ballRadius > canvas.width) dx = -dx;
+    if (x < ballRadius || x + ballRadius > canvas.width) {
+        hitSound.play();
+        dx = -dx;
+    }
 
     // move board to the right
     if (rightPressed && boardX < canvas.width - boardWidth) boardX += boardWidth / 11;
@@ -159,6 +174,11 @@ document.addEventListener("keydown", e => {
 document.addEventListener("keyup", e => {
     if (e.keyCode === 39) rightPressed = false;
     else if (e.keyCode === 37) leftPressed = false;
+});
+
+document.addEventListener("mousemove", e => {
+    let relativeX = e.clientX - canvas.offsetLeft;
+    if (relativeX > 0 && relativeX < canvas.width) boardX = relativeX - boardWidth / 2;
 });
 
 setInterval(draw, 10);
