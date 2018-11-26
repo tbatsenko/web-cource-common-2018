@@ -1,9 +1,9 @@
 .resume {
   display: flex;
-  height: 100vh; }
+  height: 100%; }
   .resume__brief {
-    flex-grow: 1;
-    flex-basis: 0;
+    width: 50%;
+    box-sizing: border-box;
     color: #fff;
     display: flex;
     flex-direction: column;
@@ -33,6 +33,9 @@
       margin: 25px 0; }
     .resume__brief-skills {
       display: flex; }
+      @media screen and (max-width: 1400px) {
+        .resume__brief-skills {
+          flex-flow: column nowrap; } }
     .resume__brief-skill {
       text-align: center;
       font-family: AvenirNext, serif;
@@ -43,10 +46,14 @@
       background-color: #fff;
       text-transform: uppercase;
       margin-right: 10px; }
+      @media screen and (max-width: 1400px) {
+        .resume__brief-skill {
+          margin-top: 10px; } }
   .resume__info {
-    flex-grow: 1;
-    flex-basis: 0;
+    width: 50%;
+    box-sizing: border-box;
     background-color: #fff;
+    overflow-y: scroll;
     padding: 60px 80px; }
     .resume__info-blockquote {
       text-align: center;
@@ -89,5 +96,15 @@ body {
   padding: 0;
   font-family: AvenirNext-Regular, sans-serif;
   font-size: 22px; }
+
+.resume-window {
+  height: 70vh;
+  width: 1470px;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.11); }
+
+.pretty-body-for-presentation {
+  align-items: center;
+  justify-content: center;
+  display: flex; }
 
 /*# sourceMappingURL=main.css.map */

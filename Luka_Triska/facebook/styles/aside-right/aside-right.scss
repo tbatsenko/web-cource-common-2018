@@ -4,7 +4,7 @@
   border: 1px solid #d3d3d3;
   border-radius: 3px;
   background: #fff;
-  height: 305px;
+  height: 100%;
   width: 284px;
   padding: 12px;
 
@@ -67,6 +67,7 @@
         background-color: #f5f6f7;
         border: 1px solid #dadde1;
         border-radius: 50%;
+        height: 56px;
         width: 56px;
         &-inside-1 {
           height: 24px;
@@ -108,9 +109,4 @@
 
   }
 
-}
-
-.stories-logo {
-  height: 56px;
-  width: 56px;
 }

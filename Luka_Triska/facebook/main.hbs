@@ -1,0 +1,190 @@
+<header class="header">
+    <nav class="header__left-navigation">
+        <a class="header__left-navigation__logo" href=""></a>
+        <form class="header__left-navigation__search-form">
+            <input class="header__left-navigation__search-form__input" placeholder="Search"/>
+            <div class="header__left-navigation__magnifier-button fb-button">
+                <button class="header__left-navigation__magnifier-button--logo"></button>
+            </div>
+        </form>
+    </nav>
+    <nav class="header__right-navigation">
+        <img src="https://res.cloudinary.com/schwajka/image/upload/c_scale,w_22/v1541718636/facebook_images/ninja-icon.png"
+             alt="Profile Pic"
+             class="header__right-navigation--profile-image">
+        {{#each header-links}}
+            <button type="submit" class="header__right-navigation--button-wide fb-button">{{this}}</button>
+            <span class="header__right-navigation--separator button-separator"></span>
+        {{/each}}
+        <button type="submit"
+                class="header__right-navigation--button-round fb-button friend-requests-button"></button>
+        <button type="submit" class="header__right-navigation--button-round fb-button messenger-button"></button>
+        <button type="submit"
+                class="header__right-navigation--button-round fb-button notifications-button"></button>
+        <span class="header__right-navigation--separator button-separator"></span>
+        <button type="submit" class="header__right-navigation--button-round fb-button account-switcher-button"> |
+        </button>
+        <button type="submit" class="header__right-navigation--button-round fb-button FAQ-button"></button>
+        <button type="submit" class="header__right-navigation--button-round fb-button dropdown-button"></button>
+    </nav>
+</header>
+<main class="container">
+    {{#container}}
+        <aside class="aside-left">
+            {{#aside-left}}
+                <a href="" class="aside-left--link aside-left__profile">
+                    <div class="aside-left--link--image aside-left__profile--pic"></div>
+                    <span>{{buttons.[0]}}</span>
+                </a>
+
+                <a href="#" class="aside-left--link aside-left__news">
+                    <div class="aside-left--link--image aside-left__news--logo"></div>
+                    <span>{{buttons.[1]}}</span>
+                </a>
+                <a href="#" class="aside-left--link fb-button">
+                    <div class="aside-left--link--image aside-left--messenger"></div>
+                    <span>{{buttons.[2]}}</span>
+                </a>
+
+                <span class="aside-left--bar-header"><b>{{headings.[0]}}</b></span>
+                <a href="#" class="aside-left--link fb-button">
+                    <img src="https://scontent.flwo1-1.fna.fbcdn.net/v/t39.2081-6/c4.4.37.37/p40x40/42630609_2166936443330818_3464735768197464064_n.png?_nc_cat=1&_nc_ht=scontent.flwo1-1.fna&oh=7630de80eb75f5336ea652dbb74ae4e0&oe=5C6C8C84"
+                         class="aside-left--link--image aside-left--8-ball-pool"/>
+                    <span>{{buttons.[3]}}</span>
+                </a>
+
+                <span class="aside-left--bar-header"><b>{{headings.[1]}}</b></span>
+                <a href="#" class="aside-left--link fb-button">
+                    <div class="aside-left--link--image aside-left--events"></div>
+                    <span>{{buttons.[4]}}</span>
+                </a>
+                <a href="#" class="aside-left--link fb-button">
+                    <div class="aside-left--link--image aside-left--groups"></div>
+                    <span>{{buttons.[5]}}</span>
+                </a>
+                <a href="#" class="aside-left--link fb-button">
+                    <div class="aside-left--link--image aside-left--fan-clubs"></div>
+                    <span>{{buttons.[6]}}</span>
+                </a>
+            {{/aside-left}}
+        </aside>
+        <article class="container__main">
+            {{#main}}
+                <form class="main__create-container">
+                    {{#create-container}}
+                        <section class="main__create-container__top-bar">
+                            <button class="main__create-container__top-bar--button fb-button">{{buttons.[0]}}</button>
+                            <span class="button-separator"></span>
+                            <button class="main__create-container__top-bar--button fb-button">
+                                <a href="#">{{buttons.[1]}}</a>
+                            </button>
+                            <span class="button-separator"></span>
+                            <button class="main__create-container__top-bar--button fb-button">
+                                <a href="#">{{buttons.[2]}}</a>
+                            </button>
+                        </section>
+                        <section class="main__create-container__input-section">
+                            <img class="main__create-container__input-section--profile-pic"
+                                 src="https://res.cloudinary.com/schwajka/image/upload/c_scale,w_40/v1541718636/facebook_images/ninja-icon.png"/>
+                            <input class="main__create-container__input-section--input" type="text"
+                                   placeholder="What's on your mind?">
+                        </section>
+                        <section class="main__create-container__bottom-bar">
+                            <a href="#" class="main__create-container__bottom-bar--link">
+                                <div class="main__create-container__bottom-bar--link__logo-list bottom-bar-button"></div>
+                                <span>{{buttons.[3]}}</span>
+                            </a>
+                            <a href="#" class="main__create-container__bottom-bar--link">
+                                <div class="main__create-container__bottom-bar--link__logo-photo-video bottom-bar-button"></div>
+                                <span>{{buttons.[4]}}</span>
+                            </a>
+                            <a href="#" class="main__create-container__bottom-bar--link">
+                                <div class="main__create-container__bottom-bar--link__logo-add-people bottom-bar-button"></div>
+                                <span>{{buttons.[5]}}</span>
+                            </a>
+                        </section>
+                    {{/create-container}}
+                </form>
+                <article class="main__feed">
+                    {{#feed-post}}
+                        <div class="feed__post--layout">
+                            {{#each post-info}}
+                                <section class="feed--post">
+                                    <header class="feed--post__header">
+                                        <a href=#><img class='feed--post__header__profile-pic' src={{user-photo}}></a>
+                                        <h1 class="feed--post__header__author-name"><a href="#">{{user}}</a></h1>
+                                        <p class="feed--post__header__date">{{date}}</p>
+                                    </header>
+                                    <p class="feed--post__caption">{{text}}</p>
+                                    <img class="feed--post__image" src={{image}} alt="Post Image"/>
+                                    <a href="#" class="feed--post__like-info">
+                                        <div class="feed--post__like-info--pic"></div>
+                                        <span class="feed--post__like-info--number">{{likes}}</span>
+                                    </a>
+                                    <div class="feed--post__action">
+                                        <a class="feed--post__action--button" href="#">
+                                            <span class="feed--post__action--button__logo like-button"></span>
+                                            <p>{{post-buttons.[0]}}</p>
+                                        </a>
+                                        <a class="feed--post__action--button" href="#">
+                                            <span class="feed--post__action--button__logo comment-button"></span>
+                                            <p>{{post-buttons.[1]}}</p>
+                                        </a>
+                                        <a class="feed--post__action--button" href="#">
+                                            <span class="feed--post__action--button__logo share-button"></span>
+                                            <p>{{post-buttons.[2]}}</p>
+                                        </a>
+                                    </div>
+                                </section>
+                            {{/each}}
+                        </div>
+                    {{/feed-post}}
+                </article>
+            {{/main}}
+        </article>
+        <aside class="aside-right">
+            {{#aside-right}}
+                <header class="aside-right__header">
+                    <div class="aside-right__header-left">
+                        <span>{{header-items.[0]}}</span>
+                    </div>
+                    <div class="aside-right__header-right">
+                        <a href="#" class="aside-right__header-right--link-archive">
+                            <div class="aside-right__header-right--link-archive-icon"></div>
+                            <span>{{header-items.[1]}}</span>
+                        </a>
+                        <div>·</div>
+                        <a href="#" class="aside-right__header-right--link-settings">
+                            <span>{{header-items.[2]}}</span>
+                        </a>
+                    </div>
+                </header>
+                <article class="aside-right__container">
+                    <section class="aside-right__container-section">
+                        <div class="aside-right__container-section--logo">
+                            <div class="aside-right__container-section--logo-inside-1"></div>
+                        </div>
+                        <div class="aside-right__container-section--info">
+                            <header class="aside-right__container-section--info-header">
+                                <a href="#">{{add-story.[0]}}</a>
+                            </header>
+                            <span class="aside-right__container-section--info-info">{{add-story.[1]}}</span>
+                        </div>
+                    </section>
+                    {{#each stories}}
+                        <section class="aside-right__container-section">
+                            <img src={{logo}}
+                                 class="aside-right__container-section--logo stories-logo"/>
+                            <div class="aside-right__container-section--info">
+                                <header class="aside-right__container-section--info-header">
+                                    <a href="#">{{name}}</a>
+                                </header>
+                                <span class="aside-right__container-section--info-info">{{date}}</span>
+                            </div>
+                        </section>
+                    {{/each}}
+                </article>
+            {{/aside-right}}
+        </aside>
+    {{/container}}
+</main>

@@ -1,0 +1,17 @@
+@font-face {
+  font-family: "digital";
+  src: url("../fonts/digital-7.ttf");
+}
+
+.timer{
+  width: 200px;
+  height: 100px;
+  background-color: white;
+  position: fixed;
+  top: 8px;
+  left: 10px;
+  font-family: "digital";
+  padding-top: 10px;
+  padding-left: 10px;
+  font-size: 80px;
+}

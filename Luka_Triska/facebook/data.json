@@ -1,0 +1,94 @@
+{
+  "header-links": [
+    "Luka",
+    "Home",
+    "Create"
+  ],
+  "container": {
+    "aside-left": {
+      "buttons": [
+        "Luka",
+        "News",
+        "Messenger",
+        "8 Ball Pool",
+        "Events",
+        "Groups",
+        "Fan-Clubs"
+      ],
+      "headings": [
+        "Shortcuts",
+        "Interesting"
+      ]
+    },
+    "main": {
+      "create-container": {
+        "buttons": [
+          "Create Post",
+          "Photo / video album",
+          "Live Video",
+          "List",
+          "Photo / video",
+          "Add People"
+        ]
+      },
+      "feed-post": {
+        "post-info": [
+          {
+            "user": "Tesla",
+            "user-photo": "https://res.cloudinary.com/schwajka/image/upload/r_max/v1541887473/facebook_images/tesla-profile-pic.png",
+            "date": "2 hr ago",
+            "image": "https://res.cloudinary.com/schwajka/image/upload/v1541884501/facebook_images/red-tesla-model-s.jpg",
+            "text": "Tesla drivers just passed 3 billion electric miles, saving the world 120M gallons of petrol",
+            "likes": 232,
+            "post-buttons": [
+              "Like",
+              "Comment",
+              "Share"
+            ]
+          },
+          {
+            "user": "SpaceX",
+            "user-photo": "https://res.cloudinary.com/schwajka/image/upload/r_max/v1543096854/facebook_images/spacex.png",
+            "date": "19 hr ago",
+            "image": "https://res.cloudinary.com/schwajka/image/upload/v1543096941/facebook_images/spacex-launch.jpg",
+            "text": "SpaceX just launched this bitch",
+            "likes": 999,
+            "post-buttons": [
+              "Like",
+              "Comment",
+              "Share"
+            ]
+          }
+        ]
+      }
+    },
+    "aside-right": {
+      "header-items": [
+        "Stories",
+        "Archive",
+        "Settings"
+      ],
+      "add-story": [
+        "Add to your story",
+        "Share a photo, or a video"
+      ],
+      "stories": [
+        {
+          "logo": "https://res.cloudinary.com/schwajka/image/upload/r_max,c_fill,h_56,w_56/v1542184997/facebook_images/maxresdefault.jpg",
+          "name": "Skrra Boom",
+          "date": "69 hours ago"
+        },
+        {
+          "logo": "https://res.cloudinary.com/schwajka/image/upload/c_fill,g_face:center,h_56,r_30,w_56/a_0/v1542184935/facebook_images/ben-shapiro-1280x720.jpg",
+          "name": "Pa PA",
+          "date": "666 hours ago"
+        },
+        {
+          "logo": "https://res.cloudinary.com/schwajka/image/upload/c_fill,g_face:center,h_56,r_30,w_56/a_0/v1543097034/facebook_images/pewds.jpg",
+          "name": "Skrattadu",
+          "date": "6969 hours ago"
+        }
+      ]
+    }
+  }
+}

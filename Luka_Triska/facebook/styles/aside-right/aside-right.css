@@ -4,7 +4,7 @@
   border: 1px solid #d3d3d3;
   border-radius: 3px;
   background: #fff;
-  height: 305px;
+  height: 100%;
   width: 284px;
   padding: 12px; }
   .aside-right__header {
@@ -50,6 +50,7 @@
         background-color: #f5f6f7;
         border: 1px solid #dadde1;
         border-radius: 50%;
+        height: 56px;
         width: 56px; }
         .aside-right__container-section--logo-inside-1 {
           height: 24px;
@@ -71,9 +72,5 @@
           font-weight: 600; }
         .aside-right__container-section--info-info {
           color: #8d949e; }
-
-.stories-logo {
-  height: 56px;
-  width: 56px; }
 
 /*# sourceMappingURL=aside-right.css.map */

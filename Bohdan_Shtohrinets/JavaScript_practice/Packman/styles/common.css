@@ -1,0 +1,78 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.game {
+    padding: 25px;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.game__field {
+    box-sizing: border-box;
+    overflow: hidden;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    width: 600px;
+    height: 600px;
+    align-self: center;
+    background: #333;
+    border: 1px solid;
+}
+
+.game__row {
+}
+
+.game__cell {
+    box-sizing: border-box;
+    width: 30px;
+    height: 30px;
+    background-color: #333333;
+}
+
+.game__cell_with-coin {
+    position: relative;
+}
+
+.game__cell_with-coin:after {
+    content: "";
+    position: absolute;
+    display: block;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: #ecf0f1;
+}
+
+.game__cell_wall {
+    background-color: #2980b9;
+}
+
+.game__cell_ghost {
+    background-color: red;
+}
+
+.game__path {
+    display: flex;
+    justify-content: flex-start;
+    align-content: center;
+    margin: 100px auto;
+    position: relative;
+    width: 500px;
+    height: 100px;
+    background: #333;
+    padding: 20px;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+.game__score {
+    align-self: center;
+}

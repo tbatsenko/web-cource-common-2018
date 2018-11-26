@@ -11,7 +11,9 @@
 
     <link rel="stylesheet" href="styles/main.css">
 </head>
-<body>
+<body class="pretty-body-for-presentation">
+
+<div class="resume-window" id="resume-window"></div>
 
 <script src="node_modules/handlebars/dist/handlebars.js"></script>
 <script>
@@ -23,7 +25,7 @@
   }
 
   const renderPage = async () => {
-    await render('templates/resume.hbs', 'data/info.json', document.body)
+    await render('templates/resume.hbs', 'data/info.json', document.getElementById("resume-window"))
   }
 
   renderPage()
