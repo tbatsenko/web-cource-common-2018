@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>AJAX example</title>
+</head>
+<body>
+<h1>Hello</h1>
+<button id="download">Load content</button>
+<script>
+    document.getElementById("download").addEventListener('click', () => {
+        fetch("/dat2a.json")
+            .then(response => response.json())
+            .then(({data}) => console.log(data))
+            .catch(a => console.log("Error"))
+    });
+
+    // const getData = async () => {
+    //     const response = await fetch("/data.json")
+    //     const data = await response.json()
+    //     console.log(data)
+    // }
+    // getData()
+
+    const _get = (url, callback) => {
+        const xhr = new XMLHttpRequest();
+        xhr.open("GET", url);
+        xhr.send();
+        xhr.onreadystatechange = () => {
+            if (xhr.readyState === 4) {
+                if (xhr.status === 200) {
+                    console.log(":)");
+                    callback(JSON.parse(xhr.responseText));
+                } else {
+                    console.log(":(", xhr.status);
+                }
+            }
+        };
+    };
+
+    const get = (url) => new Promise((resolve, reject) => {
+        const xhr = new XMLHttpRequest();
+        xhr.open("GET", url);
+        xhr.send();
+        xhr.onreadystatechange = () => {
+            if (xhr.readyState === 4) {
+                if (xhr.status === 200) {
+                    resolve(JSON.parse(xhr.responseText));
+                } else {
+                    reject(xhr.status);
+                }
+            }
+        };
+    });
+</script>
+</body>
+</html>
