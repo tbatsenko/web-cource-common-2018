@@ -6,47 +6,35 @@ class Hero extends GameObject {
 
     this.keysmap = {}
 
-    console.log("Created keysmap")
+    console.log('Created keysmap')
     console.log(this.keysmap)
 
-    setTimeout(() => {}, 1000)
+    setTimeout(() => {
+    }, 1000)
 
-    this.startListening()
+    this.startListeningMoves()
   }
 
-  startListening(){
-    document.addEventListener('keydown', this.onkeydown)
-    document.addEventListener('onkeyup', this.onkeydown)
-  }
+  startListeningMoves() {
+    let offsetUp = 5
+    let offsetDown = 5
 
-  onkeydown(e) {
-    console.log(e)
-    console.log(this.keysmap)
-    const offset = 5
-
-    this.keysmap[e.key] = (e.type === 'keydown');
-
-    for (let key in this.keysmap) {
-
-      if (! this.keysmap.hasOwnProperty(key) || this.keysmap[key] === false)
-        continue
-
-      switch (key) {
+    document.addEventListener('keydown', (e) => {
+      switch (e.key) {
         case 'w': {
-          this.y -= offset; return
+          this.y -= offsetUp
+          offsetUp *= 1.05
+          offsetDown = 5
+          return
         }
         case 's': {
-          this.y += offset; return
-        }
-        case 'd' : {
-          this.x+= offset; return
-        }
-        case 'a': {
-          this.x -= offset; return
+          this.y += Math.max(offsetDown, 10)
+          offsetDown *= 1.05
+          offsetUp = 5
+          return
         }
       }
-
-    }
+    })
   }
 
   render() {
