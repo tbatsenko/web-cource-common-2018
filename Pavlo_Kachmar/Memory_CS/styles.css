@@ -70,7 +70,10 @@ body {
     border: 2px solid sandybrown;
     position: relative;
     transform: scale(1);
-    transform-style: preserve-3d;
+    animation-name: spin;
+    animation-duration: 50ms;
+    animation-iteration-count: 1;
+    transform-style: preserve-3d ;
     transition: transform .2s;
     box-sizing: border-box;
 }
