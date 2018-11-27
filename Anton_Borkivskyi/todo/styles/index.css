@@ -55,11 +55,22 @@
   .main .item {
     height: 30px;
     padding-left: 20px;
+    padding-right: 20px;
     margin-bottom: 10px;
     display: flex;
-    align-items: center; }
-    .main .item:focus {
+    align-items: center;
+    justify-content: space-between; }
+    .main .item__text:focus {
       text-decoration: line-through;
       outline: none; }
+    .main .item .cancel_button {
+      width: 20px;
+      height: 20px;
+      background: transparent; }
+      .main .item .cancel_button:focus {
+        outline: none; }
+      .main .item .cancel_button .cancel_image {
+        width: 20px;
+        height: 20px; }
 
 /*# sourceMappingURL=index.css.map */

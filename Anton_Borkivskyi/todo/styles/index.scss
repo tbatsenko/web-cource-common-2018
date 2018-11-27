@@ -79,14 +79,36 @@
     height: 30px;
 
     padding-left: 20px;
+    padding-right: 20px;
     margin-bottom: 10px;
 
     display: flex;
     align-items: center;
+    justify-content: space-between;
 
-    &:focus {
-      text-decoration: line-through;
-      outline: none;
+
+    &__text{
+      &:focus {
+        text-decoration: line-through;
+        outline: none;
+      }
     }
+
+    .cancel_button {
+      width: 20px;
+      height: 20px;
+
+      background: transparent;
+
+      &:focus {
+        outline: none;
+      }
+
+      .cancel_image{
+        width: 20px;
+        height: 20px;
+      }
+    }
+
   }
 }
