@@ -93,16 +93,29 @@ body {
 }
 
 .memory-card.win {
-    background: black;
+    transform: rotateY(180deg) scale(.5);
+    animation-name: spin;
+    animation-duration: 100ms;
+    animation-iteration-count: 5;
 }
 
 .front-face {
     transform: rotateY(180deg);
 }
 
+
 .click-counter {
     background-color: #ffa498;
     height: 40px;
     font-size: 30px;
     color: #ffe600;
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg) rotateY(180deg);
+    }
+    to {
+        transform: rotate(360deg)  rotateY(180deg);
+    }
 }

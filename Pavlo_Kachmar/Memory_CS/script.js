@@ -5,6 +5,7 @@ let guessed = 0;
 let cardCount = 0;
 
 const cardsUrls = ["http://cs.ucu.edu.ua/wp-content/uploads/2017/01/107.jpg", "http://cs.ucu.edu.ua/wp-content/uploads/2017/02/11737893_10206436360523037_157901722997740251_n.jpg", "http://cs.ucu.edu.ua/wp-content/uploads/2015/04/Romaniuk-5-of-12-150x150.jpg", "http://cs.ucu.edu.ua/wp-content/uploads/2017/02/tymo.png", "http://cs.ucu.edu.ua/wp-content/uploads/2017/01/Hryniv-picture-small-1.jpg", "http://cs.ucu.edu.ua/wp-content/uploads/2018/01/%D0%BC%D0%B8%D1%85%D0%B0%D0%B9%D0%BB%D0%BE-320x320.jpg"];
+// const cardsUrls = ["https://lh3.googleusercontent.com/-UDb2iHMQij8/AAAAAAAAAAI/AAAAAAAAA6c/ib_NuJWQzGw/s60-p-rw-no-il/photo.jpg", "http://old.clio.lnu.edu.ua/Pracivniki_kafedri_istoricnogo_kraeznavstva/Zapisi/2012/3/28_SEREDAK_ALLA_VOLODIMIRIVNA_files/shapeimage_2.png", "https://lh3.googleusercontent.com/-hy3wBqYAd8I/AAAAAAAAAAI/AAAAAAAAAAA/AGDgw-gmHlpFP2qvb2C6u4OW8trGsDZiPg/s32-c-mo/photo.jpg", "https://miro.medium.com/fit/c/240/240/0*RnFQUbNbY3e8gY8x."]
 const cardElements = cardsUrls.map((v, i) => getCard(v, i));
 const doubledCardElements = cardElements.concat(cardElements);
 const shuffledCardElements = shuffle(doubledCardElements);
@@ -14,7 +15,7 @@ gameField.innerHTML = "";
 function getCard(src, i) {
     return `<div class="memory-card" data-match="${i}">
         <img class="front-face" src="${src}" alt="${i}">
-        <img class="back-face" src="https://supporting.ucu.edu.ua/wp-content/uploads/2014/11/ucu-logo.jpg" alt="js">
+        <img class="back-face" src="http://cs.ucu.edu.ua/wp-content/themes/twentythirteen/images/ucu_logo_uk.png" alt="js">
     </div>`;
 }
 
@@ -57,6 +58,10 @@ function flipCard() {
                 guessed += 2;
                 firstCard.removeEventListener('click', flipCard);
                 secondCard.removeEventListener('click', flipCard);
+                setTimeout(() => {
+                    firstCard.classList.add('win');
+                    secondCard.classList.add('win');
+                }, 100);
             } else {
                 lockBoard = true;
 
