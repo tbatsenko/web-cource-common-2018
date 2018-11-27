@@ -6,6 +6,7 @@
   &__bottom-text {
     display: flex;
     flex-flow: column;
+    overflow: auto;
     position: absolute;
     width: 82.5%;
     bottom: 19%;
@@ -31,6 +32,7 @@
   &__traits {
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
     margin: 10px 0 10px 0;
     &-item {
       background: aliceblue;

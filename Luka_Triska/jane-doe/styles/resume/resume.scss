@@ -1,7 +1,12 @@
 .resume {
   right: 0;
   &--layout {
+    overflow: auto;
+    display: flex;
+    flex-flow: column;
+    justify-content: space-between;
     position: absolute;
+    height: 83.9%;
     width: 80%;
     right: 10%;
     top: 7.25%;

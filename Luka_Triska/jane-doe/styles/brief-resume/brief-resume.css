@@ -5,6 +5,7 @@
   .brief-resume__bottom-text {
     display: flex;
     flex-flow: column;
+    overflow: auto;
     position: absolute;
     width: 82.5%;
     bottom: 19%; }
@@ -25,6 +26,7 @@
   .brief-resume__traits {
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
     margin: 10px 0 10px 0; }
     .brief-resume__traits-item {
       background: aliceblue;
