@@ -1,0 +1,62 @@
+:root {
+  --bg-color: #EDC7B7;
+  --text-color: #AC3B61;
+  --text2-color: #123C69;
+  --game-color: #EEE2DC;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+button {
+  cursor: pointer;
+}
+
+.body {
+  background: var(--bg-color);
+
+  display: flex;
+
+  .main{
+    background: white;
+    height: 350px;
+    width: 700px;
+    margin: 100px auto;
+
+    display: flex;
+
+    .calendar{
+      width: 60%;
+      background: aqua;
+      display: flex;
+      flex-direction: column;
+
+      &__header{
+        height: 50px;
+        background: white;
+      }
+
+      &__header-text{
+        font-family: "Lato", Helvetica, Arial, sans-serif;
+        color: red;
+        background: yellow;
+      }
+
+      &__body{
+        height: 300px;
+        background: silver;
+      }
+
+    }
+
+    .todo{
+      width: 40%;
+      background: aquamarine;
+    }
+  }
+}
+
+
