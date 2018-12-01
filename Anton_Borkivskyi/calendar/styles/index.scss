@@ -37,12 +37,31 @@ button {
       &__header{
         height: 50px;
         background: white;
+
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
       }
 
       &__header-text{
         font-family: "Lato", Helvetica, Arial, sans-serif;
+        width: 60%;
+        font-size: 30px;
         color: red;
         background: yellow;
+        text-align: center;
+      }
+
+
+      &__header-button, &__header-img{
+        width: 30px;
+        height: 30px;
+        background: transparent;
+      }
+
+
+      &__header-button:focus{
+        outline: none;
       }
 
       &__body{

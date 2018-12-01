@@ -28,11 +28,23 @@ button {
       flex-direction: column; }
       .body .main .calendar__header {
         height: 50px;
-        background: white; }
+        background: white;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly; }
       .body .main .calendar__header-text {
         font-family: "Lato", Helvetica, Arial, sans-serif;
+        width: 60%;
+        font-size: 30px;
         color: red;
-        background: yellow; }
+        background: yellow;
+        text-align: center; }
+      .body .main .calendar__header-button, .body .main .calendar__header-img {
+        width: 30px;
+        height: 30px;
+        background: transparent; }
+      .body .main .calendar__header-button:focus {
+        outline: none; }
       .body .main .calendar__body {
         height: 300px;
         background: silver; }
