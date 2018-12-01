@@ -17,37 +17,44 @@ button {
   display: flex; }
   .body .main {
     background: white;
-    height: 350px;
+    height: 400px;
     width: 700px;
     margin: 100px auto;
     display: flex; }
-    .body .main .calendar {
+    .body .main .calendar-section {
       width: 60%;
       background: aqua;
       display: flex;
       flex-direction: column; }
-      .body .main .calendar__header {
+      .body .main .calendar-section .header {
         height: 50px;
         background: white;
         display: flex;
         align-items: center;
         justify-content: space-evenly; }
-      .body .main .calendar__header-text {
-        font-family: "Lato", Helvetica, Arial, sans-serif;
-        width: 60%;
-        font-size: 30px;
-        color: red;
-        background: yellow;
-        text-align: center; }
-      .body .main .calendar__header-button, .body .main .calendar__header-img {
-        width: 30px;
-        height: 30px;
-        background: transparent; }
-      .body .main .calendar__header-button:focus {
-        outline: none; }
-      .body .main .calendar__body {
-        height: 300px;
-        background: silver; }
+        .body .main .calendar-section .header__text {
+          font-family: "Lato", Helvetica, Arial, sans-serif;
+          width: 60%;
+          font-size: 30px;
+          color: red;
+          background: yellow;
+          text-align: center; }
+        .body .main .calendar-section .header__button, .body .main .calendar-section .header__img {
+          width: 30px;
+          height: 30px;
+          background: transparent; }
+        .body .main .calendar-section .header__button:focus {
+          outline: none; }
+      .body .main .calendar-section .calendar {
+        height: 350px;
+        background: silver;
+        display: flex;
+        flex-flow: wrap; }
+        .body .main .calendar-section .calendar__cell {
+          width: 40px;
+          height: 40px;
+          margin: 8px;
+          background: #00e100; }
     .body .main .todo {
       width: 40%;
       background: aquamarine; }
