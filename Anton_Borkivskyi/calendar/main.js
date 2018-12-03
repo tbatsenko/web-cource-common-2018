@@ -26,7 +26,7 @@ class Calendar{
     }
 
     for(var j = 1; j <= days_in_month; j++){
-      calendar_body_html += '<div class="calendar__cell">' + j + '</div>'
+      calendar_body_html += '<div class="calendar__cell" onclick="calendar.make_todo_list(' + j + ')">' + j + '</div>'
     }
 
     for(var k = 0; k < blank_cells_after; k++){
@@ -66,6 +66,41 @@ class Calendar{
     this.build_calendar()
   }
 
+  make_todo_list(day){
+    var todo = new TODOList()
+
+    var date = this.year + '-' + (this.month + 1) + '-' + day
+    var resp = todo.get("http://localhost:3000/todo_lists/" + date)
+    alert(resp)
+    if (resp === '{}'){
+
+      var send_post = todo.post("http://localhost:3000/todo_lists", JSON.stringify({"id": date, "name": "anton548"}))
+      alert(send_post)
+    }
+
+  }
+
+}
+
+
+class TODOList{
+  constructor(){
+  }
+
+  get(url){
+    var xmlHttp = new XMLHttpRequest();
+    xmlHttp.open( "GET", url, false ); // false for synchronous request
+    xmlHttp.send( null );
+    return xmlHttp.responseText;
+  }
+
+  post(url, req){
+    var xmlHttp = new XMLHttpRequest();
+    xmlHttp.open( "POST", url, false ); // false for synchronous request
+    xmlHttp.setRequestHeader('Content-type', 'application/json; charset=utf-8');
+    xmlHttp.send(req);
+    return xmlHttp.responseText;
+  }
 
 }
 
