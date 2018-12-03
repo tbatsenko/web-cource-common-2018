@@ -1,5 +1,45 @@
-<header class="header-gmail-emails"></header>
+<header class="header-gmail-emails">
+
+    <label class="header-gmail-emails__checkall-checkbox">
+        <input type="checkbox" class="header-gmail-emails__checkall-checkbox-input" name="checkall"/>
+        <span class="header-gmail-emails__checkall-checkbox-style"></span>
+    </label>
+    <button class="header-gmail-emails__checkall-options-button">arrow_drop_down</button>
+    <button class="header-gmail-emails__refresh-button">refresh</button>
+    <button class="header-gmail-emails__more-options-button">more_vert</button>
+    <button class="header-gmail-emails__counter-button">1 - {{emails.length}} of {{emails.length}}</button>
+    <button class="header-gmail-emails__new-emails-button">chevron_left</button>
+    <button class="header-gmail-emails__old-emails-button">chevron_right</button>
+    <button class="header-gmail-emails__settings-button">settings</button>
+</header>
 <section class="gmail-emails-main">
-    <main class="gmail-emails">test email</main>
-    <footer class="gmail-footer"></footer>
+    <main class="gmail-emails">
+        {{#each emails}}
+            <article class="email">
+                <label class="email__checkbox">
+                    <input type="checkbox" class="email__checkbox-input"/>
+                    <span class="email__checkbox-style"></span>
+                </label>
+                <label class="email__checkbox">
+                    <input type="checkbox" class="email__checkbox-input--star"/>
+                    <span class="email__checkbox-style--star"></span>
+                </label>
+                <h1 class="email__from">{{from}}</h1>
+                <h1 class="email__title">{{title}} </h1>
+                <p class="email__text">
+                    - Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Vivamus augue nulla, porta a velit vitae, imperdiet cursus nibh.
+                    Sed pulvinar a velit a rhoncus. Maecenas id sagittis justo.
+                    Vivamus ac metus quis libero ullamcorper faucibus.
+                </p>
+                <time class="email__date">{{date}}</time>
+            </article>
+        {{/each}}
+    </main>
+    <footer class="gmail-footer">
+        <span class="gmail-footer__content-block gmail-footer__content-block--left">Використано 10 TB<br/>Керувати</span>
+        <span class="gmail-footer__content-block gmail-footer__content-block--middle">Політика програми<br/>За технологією Google</span>
+        <span class="gmail-footer__content-block gmail-footer__content-block--right">Остання діяльність в обліковому записі: 1 годину тому<br/>Деталі</span>
+
+    </footer>
 </section>

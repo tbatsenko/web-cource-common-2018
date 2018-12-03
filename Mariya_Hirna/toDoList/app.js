@@ -30,14 +30,14 @@ function addItem() {
 function removeItem(id){
     // Remove element after click on Delete
     console.log(id);
-    var e = document.getElementById(id);
+    let e = document.getElementById(id);
     e.parentNode.parentNode.removeChild(e.parentNode);
 }
 
 function completeItem(id){
     // Append element into COMPLETED section and remove element in TODO section
-    var old_node = document.getElementById(id).parentNode;
-    var new_node = old_node.cloneNode(true);
+    let old_node = document.getElementById(id).parentNode;
+    let new_node = old_node.cloneNode(true);
     old_node.parentNode.removeChild(old_node);
 
     let completedContainer = document.getElementById("CompletedItems");

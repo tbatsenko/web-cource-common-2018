@@ -1,0 +1,38 @@
+.brief-resume {
+  display: flex; }
+  .brief-resume__profile-pic {
+    width: 100%; }
+  .brief-resume__bottom-text {
+    display: flex;
+    flex-flow: column;
+    overflow: auto;
+    position: absolute;
+    width: 82.5%;
+    bottom: 19%; }
+  .brief-resume__user-persona {
+    position: absolute;
+    top: 4.1%;
+    font-size: 19px;
+    color: #ffffff; }
+  .brief-resume__name {
+    font-size: 97px;
+    font-weight: bold; }
+  .brief-resume__age-job {
+    font-size: 30px; }
+  .brief-resume__separator {
+    margin-top: 15px;
+    height: 2px;
+    background-color: red; }
+  .brief-resume__traits {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin: 10px 0 10px 0; }
+    .brief-resume__traits-item {
+      background: aliceblue;
+      font-size: 20px; }
+
+.brief-resume-element {
+  left: 8.75%; }
+
+/*# sourceMappingURL=brief-resume.css.map */
