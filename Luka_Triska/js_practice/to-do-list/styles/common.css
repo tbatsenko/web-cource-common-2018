@@ -1,0 +1,23 @@
+body {
+    display: flex;
+    justify-content: center;
+    font-family: Roboto, serif;
+}
+
+ul {
+    list-style-type: none;
+}
+
+.container {
+    box-shadow: 0 19px 38px rgba(0, 0, 0, 0.30), 0 15px 12px rgba(0, 0, 0, 0.22);
+    background: #fff;
+    padding: 10px 90px 30px 90px;
+}
+
+.header {
+    text-align: center;
+}
+
+.add-todo {
+
+}
