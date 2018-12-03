@@ -1,0 +1,48 @@
+.title {
+  width: 600px;
+  height: 150px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+
+  color: var(--text-color);
+
+  .input-item {
+    height: 40px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    border: 1px var(--text-color) solid;
+
+    &__input {
+      padding: 0 10px;
+      height: 100%;
+      width: 85%;
+      //border: 1px solid red;
+      font-size: 20px;
+
+      color: var(--text-color);
+
+      &:focus {
+        outline: none;
+      }
+    }
+
+    &__button {
+      height: 100%;
+      width: 15%;
+      //border: 1px solid red;
+      background: var(--text-color);
+      color: var(--game-color);
+
+      font-size: 20px;
+
+      &:focus {
+        outline: none;
+      }
+    }
+  }
+
+}

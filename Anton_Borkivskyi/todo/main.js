@@ -9,7 +9,7 @@ class Item {
 
 class ToDo {
   constructor() {
-    this.todo_array = [new Item(0, 'Buy potato'), new Item(1, 'Go to TMVK'), new Item(2, 'Verstaty TODO List')]
+    this.todo_array = []
   }
 
 
@@ -17,13 +17,13 @@ class ToDo {
     document.getElementById('main').innerHTML = ''
     var inner_html = ''
     for (var i = 0; i < this.todo_array.length; i++) {
-      inner_html += '<div class="item"><p class="item__text" onclick="todo.check('+ i +')"'
+      inner_html += '<div class="item"><p class="item__text" onclick="todo.check(' + i + ')"'
 
-      if (this.todo_array[i].checked == true){
+      if (this.todo_array[i].checked == true) {
         inner_html += ' style="text-decoration: line-through;"'
       }
 
-      inner_html += '>' + this.todo_array[i].value + '</p><button class="cancel_button" onclick="todo.remove('+ i +')"><img class="cancel_image" src="images/cancel.svg"></button></div>'
+      inner_html += '>' + this.todo_array[i].value + '</p><button class="cancel_button" onclick="todo.remove(' + i + ')"><img class="cancel_image" src="images/cancel.svg"></button></div>'
     }
     document.getElementById('main').innerHTML = inner_html
   }
@@ -40,14 +40,14 @@ class ToDo {
   }
 
 
-  remove(i){
+  remove(i) {
     this.todo_array.splice(i, 1)
     this.build_list()
   }
 
 
-  check(i){
-    this.todo_array[i].checked = !this.todo_array[i].checked;
+  check(i) {
+    this.todo_array[i].checked = !this.todo_array[i].checked
     this.build_list()
   }
 

@@ -1,3 +1,6 @@
+@import "main";
+@import "title";
+
 :root {
   --bg-color: #EDC7B7;
   --text-color: #AC3B61;
@@ -11,100 +14,13 @@
   border: 0;
 }
 
+button {
+  cursor: pointer;
+}
+
 .body {
   display: flex;
   flex-direction: column;
   align-items: center;
   background: var(--bg-color);
-}
-
-.title {
-  width: 600px;
-  height: 150px;
-  background: white;
-
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-evenly;
-
-  color: var(--text-color);
-
-  .input-item {
-    height: 40px;
-    width: 90%;
-    background: #00e100;
-    display: flex;
-    align-items: center;
-    border: 1px var(--text-color) solid;
-
-    &__input {
-      padding: 0 10px;
-      height: 100%;
-      width: 85%;
-      //border: 1px solid red;
-      font-size: 20px;
-
-      &:focus {
-        outline: none;
-      }
-    }
-
-    &__button {
-      height: 100%;
-      width: 15%;
-      //border: 1px solid red;
-      background: var(--text-color);
-      color: var(--game-color);
-
-      font-size: 20px;
-
-      &:focus {
-        outline: none;
-      }
-    }
-  }
-
-}
-
-.main {
-  display: flex;
-  flex-direction: column;
-
-  background: silver;
-
-  width: 600px;
-
-  .item {
-    background: white;
-    height: 30px;
-    margin-bottom: 5px;
-
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
-
-
-
-    &__text{
-      width: 90%;
-    }
-
-    .cancel_button {
-      width: 20px;
-      height: 20px;
-
-      background: transparent;
-
-      &:focus {
-        outline: none;
-      }
-
-      .cancel_image{
-        width: 20px;
-        height: 20px;
-      }
-    }
-
-  }
 }
