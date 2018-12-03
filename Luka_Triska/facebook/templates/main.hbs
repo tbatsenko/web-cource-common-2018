@@ -1,31 +1,31 @@
 <header class="header">
-    <nav class="header__left-navigation">
-        <a class="header__left-navigation__logo" href=""></a>
-        <form class="header__left-navigation__search-form">
-            <input class="header__left-navigation__search-form__input" placeholder="Search"/>
-            <div class="header__left-navigation__magnifier-button fb-button">
-                <button class="header__left-navigation__magnifier-button--logo"></button>
+    <nav class="left-nav">
+        <a class="left-nav__logo" href=""></a>
+        <form class="left-nav__search-form">
+            <input class="left-nav__search-form__input" placeholder="Search"/>
+            <div class="left-nav__magnifier-button fb-button">
+                <button class="left-nav__magnifier-button--logo"></button>
             </div>
         </form>
     </nav>
-    <nav class="header__right-navigation">
+    <nav class="header__right-nav">
         <img src="https://res.cloudinary.com/schwajka/image/upload/c_scale,w_22/v1541718636/facebook_images/ninja-icon.png"
              alt="Profile Pic"
-             class="header__right-navigation--profile-image">
+             class="header__right-nav--profile-image">
         {{#each header-links}}
-            <button type="submit" class="header__right-navigation--button-wide fb-button">{{this}}</button>
-            <span class="header__right-navigation--separator button-separator"></span>
+            <button type="submit" class="header__right-nav--button-wide fb-button">{{this}}</button>
+            <span class="header__right-nav--separator button-separator"></span>
         {{/each}}
         <button type="submit"
-                class="header__right-navigation--button-round fb-button friend-requests-button"></button>
-        <button type="submit" class="header__right-navigation--button-round fb-button messenger-button"></button>
+                class="header__right-nav--button-round fb-button friend-requests-button"></button>
+        <button type="submit" class="header__right-nav--button-round fb-button messenger-button"></button>
         <button type="submit"
-                class="header__right-navigation--button-round fb-button notifications-button"></button>
-        <span class="header__right-navigation--separator button-separator"></span>
-        <button type="submit" class="header__right-navigation--button-round fb-button account-switcher-button"> |
+                class="header__right-nav--button-round fb-button notifications-button"></button>
+        <span class="header__right-nav--separator button-separator"></span>
+        <button type="submit" class="header__right-nav--button-round fb-button account-switcher-button"> |
         </button>
-        <button type="submit" class="header__right-navigation--button-round fb-button FAQ-button"></button>
-        <button type="submit" class="header__right-navigation--button-round fb-button dropdown-button"></button>
+        <button type="submit" class="header__right-nav--button-round fb-button FAQ-button"></button>
+        <button type="submit" class="header__right-nav--button-round fb-button dropdown-button"></button>
     </nav>
 </header>
 <main class="container">
@@ -173,8 +173,7 @@
                     </section>
                     {{#each stories}}
                         <section class="aside-right__container-section">
-                            <img src={{logo}}
-                                 class="aside-right__container-section--logo stories-logo"/>
+                            <img src={{logo}} class="aside-right__container-section--logo">
                             <div class="aside-right__container-section--info">
                                 <header class="aside-right__container-section--info-header">
                                     <a href="#">{{name}}</a>
