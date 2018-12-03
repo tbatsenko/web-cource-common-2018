@@ -28,7 +28,7 @@ let todoList = {
             }
         }
 
-        // uncheck (uncomplete) all todos if they're all checked (completed); otherwise -- check (complete) all todos
+        // uncheck (uncomplete) all todos if they"re all checked (completed); otherwise -- check (complete) all todos
 
         this.todos.forEach((todo) => {
             allTrue ? todo.completed = false : todo.completed = true
@@ -43,15 +43,15 @@ let handlers = {
     },
     addTodo: () => {
         let addTodoInput = document.getElementById("add-todo-input");
-        todoList.addTodo(addTodoInput.value);
-        addTodoInput.value = '';
+        todoList.addTodo(addTodoInput.value ? addTodoInput.value : "todo " + (todoList.todos.length + 1));
+        addTodoInput.value = "";
         view.displayTodos();
     },
     changeTodo: () => {
         let changeTodoIndexInput = document.getElementById("change-todo-index-input");
         let changeTodoTextInput = document.getElementById("change-todo-text-input");
         todoList.changeTodo(changeTodoIndexInput.valueAsNumber, changeTodoTextInput.value);
-        changeTodoTextInput.value = '';
+        changeTodoTextInput.value = "";
         changeTodoIndexInput.value = 0;
         view.displayTodos();
     },
@@ -69,30 +69,43 @@ let handlers = {
 
 let view = {
     displayTodos: function () {
-        let todosUl = document.querySelector('ul');
-        todosUl.innerHTML = '';
+        let todosUl = document.querySelector("ul");
+        todosUl.innerHTML = "";
 
         todoList.todos.forEach((todo) => {
-            let todoLi = document.createElement('li');
+            let todoLi = document.createElement("li");
             todoLi.id = todoList.todos.indexOf(todo).toString();
-            todoLi.textContent = todo.completed ? '[x]' + todo.todoText : '[   ]' + todo.todoText;
+            // todoLi.textContent = todo.todoText;
+            let checkBox = this.createCompleteCheckbox();
+            checkBox.id = todoList.todos.indexOf(todo).toString();
+            checkBox.checked = todo.completed;
+            todoLi.appendChild(checkBox);
+            let liText = document.createElement("span");
+            liText.textContent = todo.todoText;
+            todoLi.appendChild(liText);
             todoLi.appendChild(this.createDeleteButton());
             todosUl.appendChild(todoLi);
         });
     },
     createDeleteButton: () => {
-        let deleteButton = document.createElement('button');
-        deleteButton.textContent = 'Delete';
-        deleteButton.className = 'delete-button';
+        let deleteButton = document.createElement("button");
+        deleteButton.textContent = "X";
+        deleteButton.className = "delete-button";
         return deleteButton;
     },
+    createCompleteCheckbox: () => {
+        let completeCheckbox = document.createElement("input");
+        completeCheckbox.setAttribute("type", "checkbox");
+        completeCheckbox.className = "check-box";
+        return completeCheckbox;
+    },
     setUpEventListeners: () => {
-        let todosUl = document.querySelector('ul');
+        let todosUl = document.querySelector("ul");
         todosUl.addEventListener("click", (e) => {
             let elementClicked = e.target;
-            if (elementClicked.className === 'delete-button') handlers.deleteTodo(parseInt(elementClicked.parentNode.id));
-            console.log(e.target.parentNode.id);
+            if (elementClicked.className === "delete-button") handlers.deleteTodo(parseInt(elementClicked.parentNode.id));
         });
+
     }
 };
 
