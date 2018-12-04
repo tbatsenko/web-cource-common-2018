@@ -67,16 +67,21 @@ class Calendar{
   }
 
   make_todo_list(day){
-    var todo = new TODOList()
-
     var date = this.year + '-' + (this.month + 1) + '-' + day
+
+    todo.date = date
+
     var resp = todo.get("http://localhost:3000/todo_lists/" + date)
     alert(resp)
+
     if (resp === '{}'){
 
-      var send_post = todo.post("http://localhost:3000/todo_lists", JSON.stringify({"id": date, "name": "anton548"}))
-      alert(send_post)
+      var resp = todo.post("http://localhost:3000/todo_lists", JSON.stringify({"id": date, "items":[]}))
+      alert(resp)
     }
+    var decoded = JSON.parse(resp)
+    var items = decoded.items
+    todo.build_list(items)
 
   }
 
@@ -85,6 +90,9 @@ class Calendar{
 
 class TODOList{
   constructor(){
+
+    this.date = ''
+
   }
 
   get(url){
@@ -102,7 +110,43 @@ class TODOList{
     return xmlHttp.responseText;
   }
 
+
+  put(url, req){
+    var xmlHttp = new XMLHttpRequest();
+    xmlHttp.open( "PUT", url, false ); // false for synchronous request
+    xmlHttp.setRequestHeader('Content-type', 'application/json; charset=utf-8');
+    xmlHttp.send(req);
+    return xmlHttp.responseText;
+  }
+
+
+  add() {
+    var input = document.getElementById('input')
+    var new_item = input.value.trim()
+    if (new_item !== '') {
+      var resp = todo.get("http://localhost:3000/todo_lists/" + this.date)
+
+      var decoded = JSON.parse(resp)
+      var items = decoded.items
+      items.push(new_item)
+      var resp_post = todo.put("http://localhost:3000/todo_lists/"+this.date, JSON.stringify({"id": this.date, "items":items}))
+
+      this.build_list(items)
+    }
+    input.value = ''
+  }
+
+  build_list(items) {
+    document.getElementById('todo').innerHTML = ''
+    var inner_html = ''
+    for (var i = 0; i < items.length; i++) {
+      inner_html += '<div class="item"><p class="item__text">' + items[i] + '</p><button class="cancel_button"></button></div>'
+    }
+    document.getElementById('todo').innerHTML = inner_html
+  }
+
+
 }
 
-
+var todo = new TODOList()
 var calendar = new Calendar()

@@ -55,8 +55,29 @@ button {
           height: 40px;
           margin: 8px;
           background: #00e100; }
-    .body .main .todo {
+    .body .main .todo-section {
       width: 40%;
       background: aquamarine; }
+      .body .main .todo-section .input-item {
+        height: 40px;
+        width: 100%;
+        display: flex;
+        align-items: center; }
+        .body .main .todo-section .input-item__input {
+          padding: 0 10px;
+          height: 100%;
+          width: 85%;
+          font-size: 20px;
+          color: var(--text-color); }
+          .body .main .todo-section .input-item__input:focus {
+            outline: none; }
+        .body .main .todo-section .input-item__button {
+          height: 100%;
+          width: 15%;
+          background: var(--text-color);
+          color: var(--game-color);
+          font-size: 20px; }
+          .body .main .todo-section .input-item__button:focus {
+            outline: none; }
 
 /*# sourceMappingURL=index.css.map */

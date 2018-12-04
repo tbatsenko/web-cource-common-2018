@@ -12,9 +12,11 @@
 <main class="main">
     <section class="calendar-section" id="calendar-section">
         <header class="header" id="header">
-            <button class="header__button" onclick="calendar.prev_month()"><img src="images/back.png" class="header__img"></button>
+            <button class="header__button" onclick="calendar.prev_month()"><img src="images/back.png"
+                                                                                class="header__img"></button>
             <h1 class="header__text" id="header__text"></h1>
-            <button class="header__button" onclick="calendar.next_month()"><img src="images/forward.png" class="header__img"></button>
+            <button class="header__button" onclick="calendar.next_month()"><img src="images/forward.png"
+                                                                                class="header__img"></button>
         </header>
 
         <section class="calendar" id="calendar">
@@ -23,7 +25,15 @@
 
     </section>
 
-    <section class="todo">
+    <section class="todo-section">
+        <header class="input-item">
+            <input class="input-item__input" id="input" placeholder="Your item">
+            <button class="input-item__button" onclick="todo.add()">Add</button>
+        </header>
+
+        <section class="todo" id="todo">
+
+        </section>
 
     </section>
 </main>
