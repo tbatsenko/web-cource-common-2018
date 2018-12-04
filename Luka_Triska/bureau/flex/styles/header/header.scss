@@ -1,0 +1,16 @@
+.header {
+  display: flex;
+  margin: 0;
+  padding: 7px 99px 0 99px;
+  height: 37px;
+  &__menu {
+    margin-left: 10px;
+  }
+}
+
+.menu__item {
+  height: 100%;
+  width: 100%;
+  margin-right: 18px;
+  font: 14px Bureausans, Arial, sans-serif;
+}

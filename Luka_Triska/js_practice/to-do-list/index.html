@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Practical JS</title>
+    <link rel="stylesheet" href="styles/common.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700" rel="stylesheet"></head>
+<body>
+
+<main class="container">
+    <h1 class="header">Todo List</h1>
+
+    <div>
+        <button onclick="handlers.toggleAll()">Toggle All</button>
+    </div>
+
+    <div>
+        <input type="number" id="change-todo-index-input">
+        <input type="text" id="change-todo-text-input" placeholder="New todo text">
+        <button onclick="handlers.changeTodo()">Change Todo</button>
+    </div>
+
+    <div>
+        <input type="number" id="toggle-todo-index-input">
+        <button onclick="handlers.toggleCompleted()">Toggle Todo</button>
+    </div>
+
+    <div class="add-todo">
+        <input id="add-todo-input" type="text" placeholder="Type a todo...">
+        <button onclick="handlers.addTodo()">Add</button>
+    </div>
+
+    <ul>
+
+    </ul>
+
+</main>
+
+<script src="script.js"></script>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+

@@ -16,6 +16,7 @@ body {
 
 button {
   background: transparent;
+
   &:hover {
     cursor: pointer;
   }
@@ -24,17 +25,7 @@ button {
 //
 :root {
   --window-header-height: 32px;
+  --gmail-footer-height: 60px;
+  --header-gmail-emails-height: calc(48px);
 }
 
-//window{
-//  box-shadow: 0 0 20px 0 rgba(0,0,0,0.11);
-//  height:var(--window-header-height);
-//  width:250px;
-//
-//  &__header{
-//
-//  }
-//  &__payload{
-//
-//  }
-//}

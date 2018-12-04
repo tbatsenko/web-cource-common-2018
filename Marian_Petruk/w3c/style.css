@@ -3,51 +3,52 @@
 @import url('https://fonts.googleapis.com/css?family=PT+Serif');
 @import url('https://fonts.googleapis.com/css?family=PT+Mono');
 
-body{
-    margin:auto;
-    width:960px;
+body {
+    margin: auto;
+    width: 960px;
     font-family: 'PT Serif', serif;
 }
 
-h1, h2, h3, h4{
+h1, h2, h3, h4 {
     font-family: 'PT Sans Caption', sans-serif;
 }
 
-p:first-letter{
+p:first-letter {
     padding-left: 2rem;
 }
+
 /*p:first-child:first-letter{*/
-    /*padding-left:0;*/
+/*padding-left:0;*/
 /*}*/
 
-p.first-paragraph:first-letter{
-    padding-left:0;
+p.first-paragraph:first-letter {
+    padding-left: 0;
 }
 
-a{
-    color:#3498db;
+a {
+    color: #3498db;
     text-decoration: none;
-    bordor-bottom:1px solid;
+    bordor-bottom: 1px solid;
 }
 
-a:visited{
+a:visited {
     color: #9b59b6;
 }
 
-a[href*="#"]{
+a[href*="#"] {
     text-decoration: none;
     border-bottom: 1px dashed;
 }
 
-code{
+code {
     font-family: "PT mono", monospace;
     color: #e74c3c;
 }
 
-#logo{
+#logo {
     color: transparent;
     background: url(https://upload.wikimedia.org/wikipedia/commons/e/ed/W3C%C2%AE_Icon.svg) no-repeat;
-    background-size:contain;
-    height:143px;
+    background-size: contain;
+    height: 143px;
     width: 210px;
 }

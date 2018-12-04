@@ -1,0 +1,11 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Montserrat, serif; }
+
+.split {
+  height: 100%;
+  width: 50%;
+  position: fixed; }
+
+/*# sourceMappingURL=common.css.map */

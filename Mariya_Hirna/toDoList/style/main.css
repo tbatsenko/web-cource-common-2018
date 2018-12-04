@@ -1,0 +1,38 @@
+body{
+    font-family: Lato, sans-serif;
+    color: #434a54;
+    background-color: white;
+}
+
+
+.section__header{
+    display: flex;
+    border-width: 0px 0px 1px 0px;
+    border-style: solid;
+    border-color: #434a54;
+}
+
+.form__input, .checklist-container__label{
+    font-size: 12px;
+}
+
+
+.to-do__section{
+    width: 300px;
+}
+
+.section__checklist-container{
+    display: flex;
+    align-items: center;
+    max-width: 300px;
+    height: auto;
+}
+
+.form__button{
+    background:none;
+    border:none;
+    margin: 0px 10px 0px 10px;
+    padding:0;
+    cursor: pointer;
+    font-weight: 600;
+}

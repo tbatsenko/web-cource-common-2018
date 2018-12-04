@@ -4,7 +4,7 @@ var content = {
             header: "Recommended",
             videos: [
                 {
-                    coverImage: "images/cover-image.jpg",
+                    coverImage: "img/cover-image.jpg",
                     name: "Kokoko",
                     duration: "10:20",
                     channelName: "Channel1",
@@ -13,7 +13,7 @@ var content = {
                     uploadDate: "1 day ago"
                 },
                 {
-                    coverImage: "images/cover-image.jpg",
+                    coverImage: "img/cover-image.jpg",
                     name: "Kikiki",
                     duration: "20:10",
                     channelName: "Channel2",
@@ -22,7 +22,7 @@ var content = {
                     uploadDate: "2 days ago"
                 },
                 {
-                    coverImage: "images/cover-image.jpg",
+                    coverImage: "img/cover-image.jpg",
                     name: "Kokoko",
                     duration: "10:20",
                     channelName: "Channel1",
@@ -31,7 +31,7 @@ var content = {
                     uploadDate: "1 day ago"
                 },
                 {
-                    coverImage: "images/cover-image.jpg",
+                    coverImage: "img/cover-image.jpg",
                     name: "Kikiki",
                     duration: "20:10",
                     channelName: "Channel2",
@@ -40,7 +40,7 @@ var content = {
                     uploadDate: "2 days ago"
                 },
                 {
-                    coverImage: "images/cover-image.jpg",
+                    coverImage: "img/cover-image.jpg",
                     name: "Kokoko",
                     duration: "10:20",
                     channelName: "Channel1",
@@ -49,7 +49,7 @@ var content = {
                     uploadDate: "1 day ago"
                 },
                 {
-                    coverImage: "images/cover-image.jpg",
+                    coverImage: "img/cover-image.jpg",
                     name: "Kikiki",
                     duration: "20:10",
                     channelName: "Channel2",
@@ -63,7 +63,7 @@ var content = {
             header: "Watch later",
             videos: [
                 {
-                    coverImage: "images/cover-image.jpg",
+                    coverImage: "img/cover-image.jpg",
                     name: "Kekeke",
                     duration: "10:20",
                     channelName: "Channel101",
@@ -72,7 +72,7 @@ var content = {
                     uploadDate: "1 day ago"
                 },
                 {
-                    coverImage: "images/cover-image.jpg",
+                    coverImage: "img/cover-image.jpg",
                     name: "Kukuku",
                     duration: "20:10",
                     channelName: "Channel3",

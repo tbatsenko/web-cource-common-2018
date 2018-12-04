@@ -1,0 +1,80 @@
+.main {
+  display: flex;
+  flex-direction: column;
+  width: 600px; }
+  .main .item {
+    border: 1px solid var(--text-color);
+    background: white;
+    color: var(--text-color);
+    height: 40px;
+    font-size: 20px;
+    margin-bottom: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly; }
+    .main .item__text {
+      width: 90%; }
+      .main .item__text:hover {
+        cursor: pointer; }
+    .main .item .cancel_button {
+      width: 20px;
+      height: 20px;
+      background: transparent; }
+      .main .item .cancel_button:focus {
+        outline: none; }
+      .main .item .cancel_button .cancel_image {
+        width: 20px;
+        height: 20px; }
+
+.title {
+  width: 600px;
+  height: 150px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  color: var(--text-color); }
+  .title .input-item {
+    height: 40px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    border: 1px var(--text-color) solid; }
+    .title .input-item__input {
+      padding: 0 10px;
+      height: 100%;
+      width: 85%;
+      font-size: 20px;
+      color: var(--text-color); }
+      .title .input-item__input:focus {
+        outline: none; }
+    .title .input-item__button {
+      height: 100%;
+      width: 15%;
+      background: var(--text-color);
+      color: var(--game-color);
+      font-size: 20px; }
+      .title .input-item__button:focus {
+        outline: none; }
+
+:root {
+  --bg-color: #EDC7B7;
+  --text-color: #AC3B61;
+  --text2-color: #123C69;
+  --game-color: #EEE2DC; }
+
+* {
+  padding: 0;
+  margin: 0;
+  border: 0; }
+
+button {
+  cursor: pointer; }
+
+.body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: var(--bg-color); }
+
+/*# sourceMappingURL=index.css.map */

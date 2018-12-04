@@ -1,6 +1,6 @@
 .window {
   width: 500px;
-  height: 500px;
+  height: 600px;
   margin: 0 auto;
   background-color: white;
   border: 1px solid #dddfe2;
@@ -49,9 +49,6 @@
       border: 2px solid black;
       margin: 1px; }
 
-.red-cell {
-  background-color: red; }
-
 .help {
   position: fixed;
   right: 10px;
@@ -71,6 +68,40 @@
     font-family: Helvetica, Arial, sans-serif;
     font-weight: 600;
     font-size: 14px; }
+
+@font-face {
+  font-family: "digital";
+  src: url("../fonts/digital-7.ttf"); }
+.timer {
+  width: 200px;
+  height: 100px;
+  background-color: white;
+  position: fixed;
+  top: 8px;
+  left: 10px;
+  font-family: "digital";
+  padding-top: 10px;
+  padding-left: 10px;
+  font-size: 80px; }
+
+.slider {
+  width: 50%;
+  margin: 20px 0 20px 25%;
+  height: 25px;
+  background: #d3d3d3;
+  outline: none;
+  opacity: 0.7;
+  transition: opacity .2s; }
+  .slider:hover {
+    opacity: 1;
+    cursor: pointer; }
+
+.slider_value {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  font-family: Helvetica, Arial, sans-serif;
+  font-weight: 600; }
 
 body {
   background-color: #f0f0f0; }
