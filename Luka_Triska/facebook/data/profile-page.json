@@ -1,0 +1,59 @@
+{
+  "header-links": [
+    "Luka",
+    "Home",
+    "Create"
+  ],
+  "profile-header-buttons": [
+    "Lifetime",
+    "About Me",
+    "Friends",
+    "Photos",
+    "Archive",
+    "More"
+  ],
+  "container": {
+    "main": {
+      "create-container": {
+        "buttons": [
+          "Create Post",
+          "Photo / video album",
+          "Live Video",
+          "List",
+          "Photo / video",
+          "Add People"
+        ]
+      },
+      "feed-post": {
+        "post-info": [
+          {
+            "user": "Tesla",
+            "user-photo": "https://res.cloudinary.com/schwajka/image/upload/r_max/v1541887473/facebook_images/tesla-profile-pic.png",
+            "date": "2 hr ago",
+            "image": "https://res.cloudinary.com/schwajka/image/upload/v1541884501/facebook_images/red-tesla-model-s.jpg",
+            "text": "Tesla drivers just passed 3 billion electric miles, saving the world 120M gallons of petrol",
+            "likes": 232,
+            "post-buttons": [
+              "Like",
+              "Comment",
+              "Share"
+            ]
+          },
+          {
+            "user": "SpaceX",
+            "user-photo": "https://res.cloudinary.com/schwajka/image/upload/r_max/v1543096854/facebook_images/spacex.png",
+            "date": "19 hr ago",
+            "image": "https://res.cloudinary.com/schwajka/image/upload/v1543096941/facebook_images/spacex-launch.jpg",
+            "text": "SpaceX just launched this",
+            "likes": 999,
+            "post-buttons": [
+              "Like",
+              "Comment",
+              "Share"
+            ]
+          }
+        ]
+      }
+    }
+  }
+}

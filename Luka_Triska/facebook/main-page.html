@@ -1,16 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="stylesheet" href="styles/aside-left/aside-left.css">
-    <link rel="stylesheet" href="styles/main/main.css">
-    <link rel="stylesheet" href="styles/post/post.css">
+    <link rel="stylesheet" href="styles/main-page/aside-left/aside-left.css">
+    <link rel="stylesheet" href="styles/common/main/main.css">
+    <link rel="stylesheet" href="styles/common/post/post.css">
 
-    <link rel="stylesheet" href="styles/header/header.css">
-    <link rel="stylesheet" href="styles/header/left-nav/left-nav.css">
+    <link rel="stylesheet" href="styles/common/header/header.css">
+    <link rel="stylesheet" href="styles/common/header/left-nav/left-nav.css">
 
-    <link rel="stylesheet" href="styles/aside-right/aside-right.css">
-    <link rel="stylesheet" href="styles/aside-right/header/header.css">
-    <link rel="stylesheet" href="styles/aside-right/container/container.css">
+    <link rel="stylesheet" href="styles/main-page/aside-right/aside-right.css">
+    <link rel="stylesheet" href="styles/main-page/aside-right/header/header.css">
+    <link rel="stylesheet" href="styles/main-page/aside-right/container/container.css">
     <meta charset="UTF-8">
     <title>Facebook</title>
 </head>
@@ -27,7 +27,7 @@
     };
 
     const renderPage = async () => {
-        await render("templates/main.hbs", "data/data.json", document.body);
+        await render("templates/main-page.hbs", "data/main-page.json", document.body);
     };
 
     renderPage();

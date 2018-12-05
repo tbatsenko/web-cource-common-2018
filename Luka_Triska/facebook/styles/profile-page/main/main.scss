@@ -1,4 +1,7 @@
 body {
+  display: flex;
+  align-items: center;
+  flex-flow: column;
   margin: 0;
   background-color: #E9EBEE;
   font-family: Helvetica, serif;
@@ -24,8 +27,7 @@ a {
     display: flex;
     flex-flow: column;
     text-align: left;
-    width: 500px;
-    margin: 0 20px 0 20px;
+    grid-area: article;
   }
 
 }
@@ -116,7 +118,6 @@ a {
 .main__feed {
   display: flex;
   flex-flow: column;
-  width: 500px;
 }
 
 .button-separator {
