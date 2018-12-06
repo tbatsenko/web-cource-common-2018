@@ -1,0 +1,55 @@
+$input-field-height: 50px;
+$input-field-border-radius: 30px;
+
+.header {
+  margin-top: 80px;
+  margin-bottom: 0;
+  text-align: center;
+  color: black;
+}
+.quote {
+  font-weight: normal;
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  color: black;
+}
+.task-manager {
+  width: 500px;
+  margin: auto;
+}
+.input {
+  height: $input-field-height;
+  margin-top: 30px;
+  background-color: white;
+  border-radius: $input-field-border-radius;
+  border: 2px solid #007aff;
+}
+.input__form {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.input__text-field {
+  margin: 15px;
+  width: 350px;
+  border: 0;
+  padding: 0;
+  line-height: 20px;
+  font-size: 10pt;
+}
+.input__submit-button {
+  padding: 0;
+  border: 0;
+  height: $input-field-height;
+  width: 100px;
+  border-radius: $input-field-border-radius;
+  background-color: #007aff;
+  color: white;
+  font-size: 12pt;
+  cursor: pointer;
+}
+.tasks-list {
+  //background-color: orangered;
+}

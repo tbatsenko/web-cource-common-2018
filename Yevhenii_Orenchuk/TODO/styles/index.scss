@@ -1,51 +1,21 @@
-$input-field-width: 50px;
-$input-field-border-radius: 30px;
 .body {
+  margin: 0;
+  padding: 0;
+  display: flex;
   font-family: "apercu",sans-serif;
-  background-color: coral;
-}
-.header {
-  margin-top: 80px;
-  margin-bottom: 0;
-  text-align: center;
-  color: white;
-}
-.quote {
-  font-weight: normal;
-  text-align: center;
-  margin-top: 10px;
-  margin-bottom: 10px;
-  color: white;
-}
-.input {
-  height: $input-field-width;
-  margin: 20px auto auto;
-  display: flex;
-  justify-content: flex-end;
   background-color: white;
-  width: 800px;
-  border-radius: $input-field-border-radius;
 }
-.input__form {
+.todo {
   display: flex;
+  width: 50%;
+  //background-color: coral;
+  flex-direction: column;
+}
+.calendar {
+  display: flex;
+  width: 50%;
+  float: right;
+  //background-color: red;
+  justify-content: center;
   align-items: center;
-}
-.input__text-field {
-  width: 670px;
-  border: 0;
-  padding: 0;
-  line-height: 20px;
-  font-size: 10pt;
-}
-.input__submit-button {
-  margin-left: 10px;
-  padding: 0;
-  border: 0;
-  height: $input-field-width;
-  width: 100px;
-  border-radius: $input-field-border-radius;
-  background-color: #49c5b6;
-  color: white;
-  font-size: 12pt;
-  cursor: pointer;
 }
