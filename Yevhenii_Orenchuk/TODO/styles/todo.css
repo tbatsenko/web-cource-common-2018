@@ -53,5 +53,29 @@
   font-size: 12pt;
   cursor: pointer;
 }
+.input__submit-button:active {
+  background-color: red;
+}
+
+.tasks {
+  padding-left: 20px;
+}
+
+.tasks__item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.tasks__buttons {
+  padding: 0;
+  margin: 10px;
+}
+
+.label-text {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+}
 
 /*# sourceMappingURL=todo.css.map */

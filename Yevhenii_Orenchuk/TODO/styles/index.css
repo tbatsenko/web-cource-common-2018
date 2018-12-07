@@ -4,6 +4,8 @@
   display: flex;
   font-family: "apercu", sans-serif;
   background-color: white;
+  height: 100%;
+  overflow: hidden;
 }
 
 .todo {

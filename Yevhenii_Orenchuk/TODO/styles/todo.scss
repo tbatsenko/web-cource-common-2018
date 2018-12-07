@@ -49,7 +49,28 @@ $input-field-border-radius: 30px;
   color: white;
   font-size: 12pt;
   cursor: pointer;
+
+  &:active {
+    background-color: red;
+  }
 }
-.tasks-list {
-  //background-color: orangered;
+.tasks {
+  padding-left: 20px;
+  //background-color: coral;
+}
+.tasks__item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.tasks__buttons {
+  //width: 150px;
+  padding: 0;
+  margin: 10px;
+}
+.label-text {
+  //width: 320px;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
 }
