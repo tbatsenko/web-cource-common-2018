@@ -23,12 +23,22 @@
             </div>
             <ul id="list" class="tasks">
                 <li class="tasks__item">
-                    <label class="label-text">Example</label>
-                    <menu class="tasks__buttons">
-                        <button>Done</button>
-                        <button>Edit</button>
-                        <button>Remove</button>
-                    </menu>
+                    <input class="label-text" type="text" placeholder="Example">
+                    <div class="tasks__buttons">
+                        <button class="isDone">Done</button>
+                        <button class="edit">Edit</button>
+                        <button class="remove">Remove</button>
+                    </div>
+                </li>
+            </ul>
+            <ul id="completed-list" class="tasks">
+                <li class="tasks__item">
+                    <label class="label-text--completed">Example</label>
+                    <div class="tasks__buttons">
+                        <button class="isDone">Undone</button>
+                        <button class="edit">Edit</button>
+                        <button class="remove">Remove</button>
+                    </div>
                 </li>
             </ul>
         </main>
