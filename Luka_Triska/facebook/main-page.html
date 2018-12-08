@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="styles/main-page/aside-left/aside-left.css">
+    <link rel="stylesheet" href="styles/common/main/main.css">
+    <link rel="stylesheet" href="styles/common/post/post.css">
+
+    <link rel="stylesheet" href="styles/common/header/header.css">
+    <link rel="stylesheet" href="styles/common/header/left-nav/left-nav.css">
+
+    <link rel="stylesheet" href="styles/main-page/aside-right/aside-right.css">
+    <link rel="stylesheet" href="styles/main-page/aside-right/header/header.css">
+    <link rel="stylesheet" href="styles/main-page/aside-right/container/container.css">
+    <meta charset="UTF-8">
+    <title>Facebook</title>
+</head>
+<body>
+
+
+<script src="node_modules/handlebars/dist/handlebars.js"></script>
+<script>
+    const render = async (templateSrc, dataSrc, container) => {
+        const templateStr = await (await fetch(templateSrc)).text();
+        const data = await (await fetch(dataSrc)).json();
+        const compiled = Handlebars.compile(templateStr);
+        container.innerHTML = compiled(data);
+    };
+
+    const renderPage = async () => {
+        await render("templates/main-page.hbs", "data/main-page.json", document.body);
+    };
+
+    renderPage();
+</script>
+
+
+</body>
+
+</html>

@@ -1,16 +1,22 @@
-const collapsibleListener = document.getElementsByClassName('collapsible__listener');
+//import {articleEntry} from './render-article';
+//import {addCollapsibleListeners} from './collapsible';
 
 
-for (let i = 0; i < collapsibleListener.length; i++) {
-    collapsibleListener[i].addEventListener('click', function () {
-        this.previousElementSibling.classList.toggle("collapsible__content--hidden");
-        if (this.innerHTML === " Read More »") {
-            this.innerHTML = " « Hide";
 
-        } else {
-            this.innerHTML = " Read More »";
-        }
+// setting global parameters:
+// Carousel post ID. Cuba carousel: 20.
 
-    });
+// Antarctica articles category: categories.0: 8
+// Cuba articles category: categories.0: 6
+// Cuba photo gallery category: categories.0: 7
 
-}
+
+// render articles laboratory
+//const postsURL = 'http://localhost/travel-agency/wp-json/wp/v2/posts';
+
+
+
+
+
+
+

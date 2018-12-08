@@ -10,27 +10,25 @@
 <main class="container">
     <h1 class="header">Todo List</h1>
 
-    <div>
-        <button onclick="handlers.toggleAll()">Toggle All</button>
-    </div>
+    <button onclick="handlers.toggleAll()">Toggle All</button>
 
-    <div>
-        <input type="number" id="change-todo-index-input">
-        <input type="text" id="change-todo-text-input" placeholder="New todo text">
+    <section class="change-todo-text">
+        <input type="number" class="change-todo-index-input">
+        <input type="text" class="change-todo-text-input" placeholder="New todo text">
         <button onclick="handlers.changeTodo()">Change Todo</button>
-    </div>
+    </section>
 
-    <div>
-        <input type="number" id="toggle-todo-index-input">
+    <section class="toggle-todo">
+        <input type="number" class="toggle-todo-index-input">
         <button onclick="handlers.toggleCompleted()">Toggle Todo</button>
-    </div>
+    </section>
 
-    <div class="add-todo">
-        <input id="add-todo-input" type="text" placeholder="Type a todo...">
+    <section class="add-todo">
+        <input class="add-todo-input" type="text" placeholder="Type a todo...">
         <button onclick="handlers.addTodo()">Add</button>
-    </div>
+    </section>
 
-    <ul>
+    <ul class="todo-display">
 
     </ul>
 

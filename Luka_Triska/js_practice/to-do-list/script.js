@@ -42,14 +42,14 @@ let handlers = {
         view.displayTodos();
     },
     addTodo: () => {
-        let addTodoInput = document.getElementById("add-todo-input");
+        let addTodoInput = document.getElementsByClassName("add-todo-input")[0];
         todoList.addTodo(addTodoInput.value ? addTodoInput.value : "todo " + (todoList.todos.length + 1));
         addTodoInput.value = "";
         view.displayTodos();
     },
     changeTodo: () => {
-        let changeTodoIndexInput = document.getElementById("change-todo-index-input");
-        let changeTodoTextInput = document.getElementById("change-todo-text-input");
+        let changeTodoIndexInput = document.getElementsByClassName("change-todo-index-input")[0];
+        let changeTodoTextInput = document.getElementsByClassName("change-todo-text-input")[0];
         todoList.changeTodo(changeTodoIndexInput.valueAsNumber, changeTodoTextInput.value);
         changeTodoTextInput.value = "";
         changeTodoIndexInput.value = 0;
@@ -60,7 +60,7 @@ let handlers = {
         view.displayTodos();
     },
     toggleCompleted: () => {
-        let toggleTodoIndexInput = document.getElementById("toggle-todo-index-input");
+        let toggleTodoIndexInput = document.getElementsByClassName("toggle-todo-index-input")[0];
         todoList.toggleCompleted(toggleTodoIndexInput.valueAsNumber);
         toggleTodoIndexInput.value = 0;
         view.displayTodos();
@@ -75,6 +75,7 @@ let view = {
         todoList.todos.forEach((todo) => {
             let todoLi = document.createElement("li");
             todoLi.id = todoList.todos.indexOf(todo).toString();
+            todoLi.className = "todo-display-item";
             // todoLi.textContent = todo.todoText;
             let checkBox = this.createCompleteCheckbox();
             checkBox.id = todoList.todos.indexOf(todo).toString();

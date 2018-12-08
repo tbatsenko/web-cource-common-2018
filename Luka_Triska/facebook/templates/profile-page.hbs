@@ -1,0 +1,135 @@
+<header class="header">
+    <nav class="left-nav">
+        <a class="left-nav__logo" href=""></a>
+        <form class="left-nav__search-form">
+            <input class="left-nav__search-form__input" placeholder="Search"/>
+            <div class="left-nav__magnifier-button fb-button">
+                <button class="left-nav__magnifier-button--logo"></button>
+            </div>
+        </form>
+    </nav>
+    <nav class="header__right-nav">
+        <img src="https://res.cloudinary.com/schwajka/image/upload/c_scale,w_22/v1541718636/facebook_images/ninja-icon.png"
+             alt="Profile Pic"
+             class="header__right-nav--profile-image">
+        {{#each header-links}}
+            <button type="submit" class="header__right-nav--button-wide fb-button">{{this}}</button>
+            <span class="header__right-nav--separator button-separator"></span>
+        {{/each}}
+        <button type="submit"
+                class="header__right-nav--button-round fb-button friend-requests-button"></button>
+        <button type="submit" class="header__right-nav--button-round fb-button messenger-button"></button>
+        <button type="submit"
+                class="header__right-nav--button-round fb-button notifications-button"></button>
+        <span class="header__right-nav--separator button-separator"></span>
+        <button type="submit" class="header__right-nav--button-round fb-button account-switcher-button"> |
+        </button>
+        <button type="submit" class="header__right-nav--button-round fb-button FAQ-button"></button>
+        <button type="submit" class="header__right-nav--button-round fb-button dropdown-button"></button>
+    </nav>
+</header>
+<main class="profile-container">
+    <header class="profile-header">
+        <section class="profile-header__background">
+            <img class="profile-header__background-image"
+                 src="https://scontent-frx5-1.xx.fbcdn.net/v/t1.0-9/13876316_1232344343464907_2078308630776521128_n.jpg?_nc_cat=101&_nc_ht=scontent-frx5-1.xx&oh=1717a0382cb49c878bca0dd7d5cd7db1&oe=5C697724"
+                 alt="Background profile image">
+        </section>
+        <div class="profile-header__buttons-bar">
+            <button class="profile-header__button">Lifetime</button>
+            <button class="profile-header__button">About Me</button>
+            <button class="profile-header__button">Friends</button>
+            <button class="profile-header__button">Photos</button>
+            <button class="profile-header__button">Archive</button>
+            <button class="profile-header__button">More</button>
+        </div>
+        <div class="profile-image-layout">
+            <img class="profile-image"
+                 src="https://scontent-frx5-1.xx.fbcdn.net/v/t1.0-1/p160x160/13880246_1232344176798257_8166887070037339987_n.jpg?_nc_cat=105&_nc_ht=scontent-frx5-1.xx&oh=bd4c1c00c1b05923b9f6cda224dbcc97&oe=5CB204F8"
+                 alt="Profile Image">
+        </div>
+        <div class="profile-header__name">Luka Triska</div>
+    </header>
+    {{#container}}
+        <aside class="profile-about">
+            <header class="profile-about__header">
+                <div class="profile-about__header-logo"></div>
+                <span class="profile-about__header-title">About Me</span>
+            </header>
+        </aside>
+        <article class="container__main">
+            {{#main}}
+                <form class="main__create-container">
+                    {{#create-container}}
+                        <section class="main__create-container__top-bar">
+                            <button class="main__create-container__top-bar--button fb-button">{{buttons.[0]}}</button>
+                            <span class="button-separator"></span>
+                            <button class="main__create-container__top-bar--button fb-button">
+                                <a href="#">{{buttons.[1]}}</a>
+                            </button>
+                            <span class="button-separator"></span>
+                            <button class="main__create-container__top-bar--button fb-button">
+                                <a href="#">{{buttons.[2]}}</a>
+                            </button>
+                        </section>
+                        <section class="main__create-container__input-section">
+                            <img class="main__create-container__input-section--profile-pic"
+                                 src="https://res.cloudinary.com/schwajka/image/upload/c_scale,w_40/v1541718636/facebook_images/ninja-icon.png"/>
+                            <input class="main__create-container__input-section--input" type="text"
+                                   placeholder="What's on your mind?">
+                        </section>
+                        <section class="main__create-container__bottom-bar">
+                            <a href="#" class="main__create-container__bottom-bar--link">
+                                <div class="main__create-container__bottom-bar--link__logo-list bottom-bar-button"></div>
+                                <span>{{buttons.[3]}}</span>
+                            </a>
+                            <a href="#" class="main__create-container__bottom-bar--link">
+                                <div class="main__create-container__bottom-bar--link__logo-photo-video bottom-bar-button"></div>
+                                <span>{{buttons.[4]}}</span>
+                            </a>
+                            <a href="#" class="main__create-container__bottom-bar--link">
+                                <div class="main__create-container__bottom-bar--link__logo-add-people bottom-bar-button"></div>
+                                <span>{{buttons.[5]}}</span>
+                            </a>
+                        </section>
+                    {{/create-container}}
+                </form>
+                <article class="main__feed">
+                    {{#feed-post}}
+                        <div class="feed__post--layout">
+                            {{#each post-info}}
+                                <section class="feed--post">
+                                    <header class="feed--post__header">
+                                        <a href=#><img class='feed--post__header__profile-pic' src={{user-photo}}></a>
+                                        <h1 class="feed--post__header__author-name"><a href="#">{{user}}</a></h1>
+                                        <p class="feed--post__header__date">{{date}}</p>
+                                    </header>
+                                    <p class="feed--post__caption">{{text}}</p>
+                                    <img class="feed--post__image" src={{image}} alt="Post Image"/>
+                                    <a href="#" class="feed--post__like-info">
+                                        <div class="feed--post__like-info--pic"></div>
+                                        <span class="feed--post__like-info--number">{{likes}}</span>
+                                    </a>
+                                    <div class="feed--post__action">
+                                        <a class="feed--post__action--button" href="#">
+                                            <span class="feed--post__action--button__logo like-button"></span>
+                                            <p>{{post-buttons.[0]}}</p>
+                                        </a>
+                                        <a class="feed--post__action--button" href="#">
+                                            <span class="feed--post__action--button__logo comment-button"></span>
+                                            <p>{{post-buttons.[1]}}</p>
+                                        </a>
+                                        <a class="feed--post__action--button" href="#">
+                                            <span class="feed--post__action--button__logo share-button"></span>
+                                            <p>{{post-buttons.[2]}}</p>
+                                        </a>
+                                    </div>
+                                </section>
+                            {{/each}}
+                        </div>
+                    {{/feed-post}}
+                </article>
+            {{/main}}
+        </article>
+    {{/container}}
+</main>
