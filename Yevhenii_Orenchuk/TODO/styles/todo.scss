@@ -62,15 +62,13 @@ $input-field-border-radius: 30px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
+  align-content: center;
 }
 .tasks__buttons {
-  //width: 150px;
   padding: 0;
   margin: 10px;
 }
-.label-text {
-  //width: 320px;
-  display: flex;
-  flex-wrap: wrap;
-  align-content: center;
+.label-text--completed {
+  text-decoration: line-through;
 }
