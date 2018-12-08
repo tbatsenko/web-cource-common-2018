@@ -1,32 +1,58 @@
-var myApp = angular.module("myApp", []);
+function onSignIn(googleUser) {
+  var profile = googleUser.getBasicProfile();
+  console.log('ID: ' + profile.getId()); // Do not send to your backend! Use an ID token instead.
+  console.log('Name: ' + profile.getName());
+  console.log('Image URL: ' + profile.getImageUrl());
+  console.log('Email: ' + profile.getEmail()); // This is null if the 'email' scope is not present.
+}
+window.fbAsyncInit = function() {
+  FB.init({
+    appId      : '2314892068570979',
+    xfbml      : true,
+    version    : 'v2.8'
+  });
+  FB.getLoginStatus(function(response){
+    if(response.status === 'connected'){
+      document.getElementById('status').innerHTML = 'we are connected';
+    } else if(response.status === 'not_authorized') {
+      document.getElementById('status').innerHTML = 'we are not logged in.'
+    } else {
+      document.getElementById('status').innerHTML = 'you are not logged in to Facebook';
+    }
+  });
+  // FB.AppEvents.logPageView();
+};
 
-myApp.controller('myController', ['$scope', function($scope) {
-  $scope.gmail = {
-    username:"",
-    email:""
-  };
-  $scope.onGoogleLogin = function() {
-    var params = {
-      'clientid': '92268480394-ndtbroh51md527lhsojov7ac7f78aq94.apps.googleusercontent.com',
-      'cookiepolicy': 'single_host_origin',
-      'callback':function(result) {
-        if (result['status']['signed_in']){
-          var request = gapi.client.plus.people.get({
-            'userId': 'me'
-          })
+(function(d, s, id){
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) {return;}
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/sdk.js";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
 
-          request.execute(function(resp) {
-            $scope.$apply(function() {
-              $scope.gmail.username = resp.displayName;
-              $scope.gmail.email = resp.emails[0].value;
-            })
-          })
-        }
-      },
-      'approvalprompt':'force',
-      'scope':'https://www.googleapis.com/auth/plus.login https://www.googleapis.com/auth/plus.profile.emails.read'
-    };
+function login(){
+  FB.login(function(response){
+    if(response.status === 'connected'){
+      document.getElementById('status').innerHTML = 'we are connected';
+    } else if(response.status === 'not_authorized') {
+      document.getElementById('status').innerHTML = 'we are not logged in.'
+    } else {
+      document.getElementById('status').innerHTML = 'you are not logged in to Facebook';
+    }
 
-    gapi.auth.signIn(params)
-  }
-}]);
+  });
+}
+// get user basic info
+
+function getInfo() {
+  FB.api('/me', 'GET', {fields: 'first_name,last_name,name,id'}, function(response) {
+    document.getElementById('status').innerHTML = response.id;
+  });
+}
+
+function logout(){
+  FB.logout(function(response) {
+    document.location.reload();
+  });
+}

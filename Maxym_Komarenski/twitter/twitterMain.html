@@ -10,21 +10,19 @@
     <link rel="stylesheet" href="styles/style.css">
     <link rel="stylesheet" href="styles/login_buttons.css">
 
-    <!--<meta name="google-signin-client-id" content="92268480394-l0d9acop1udco09n59o8h8kupct94hbo.apps.googleusercontent.com">-->
-    <!--<script src="https://apis.google.com/js/platform.js" async defer></script>-->
-    <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>-->
-
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
-    <script src="scripts/script_google_login.js" type="text/javascript"></script>
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
     <script src="scripts/script.js" type="text/javascript"></script>
+
+    <meta name="google-signin-client_id" content="92268480394-ndtbroh51md527lhsojov7ac7f78aq94.apps.googleusercontent.com">
 </head>
-<body class="grid-container" ng-app="myApp" ng-controller="myController">
+<body class="grid-container">
 <aside class="aside-quotes">
     <ul class="quote-list">
         <li>Читайте те, що вам цікаво.</li>
         <li>Послухайте, про що говорять люди.</li>
         <li>Долучайтеся до розмов.</li>
     </ul>
+
 </aside>
 <article class="login">
     <div>
@@ -32,24 +30,16 @@
         <h1 class="first-sentence">Дізнайтеся, що відбувається у світі просто зараз</h1>
         <h2 class="second-sentence">Приєднуйтесь до Твіттера сьогодні.</h2>
 
+        <div class="g-signin2" data-onsuccess="onSignIn"></div>
 
-        <div>
-            <button class="loginBtn loginBtn--google" ng-click="onGoogleLogin()">
-                Login with Google
-            </button>
-
-        </div>
-
-        <div>
-            <button class="loginBtn loginBtn--facebook">
-                Login with Facebook
-            </button>
-        </div>
+        <div id="status"></div>
+        <!-- <button onclick="getInfo()">Get Info</button> -->
+        <button onclick="login()">login</button>
+        <button onclick="logout()">logout</button>
 
 
     </div>
 
-    <script type="text/javascript" src="app.js"></script>
 
 
 </article>
@@ -75,10 +65,6 @@
         <li>© 2018 Твіттер</li>
     </ul>
 </footer>
-
-<img ng-src="{{g_image}}" class="img-from-google" style="width: 100px; height: 100px">
-<h4>{{gmail.username}}</h4>
-<h4>{{gmail.email}}</h4>
 
 </body>
 </html>
