@@ -1,0 +1,63 @@
+:root {
+    --icon-width: 80px;
+}
+
+.back-image--settings {
+    background-repeat: no-repeat;
+    background-position: center 0;
+    background-size: auto 76px;
+}
+
+.info-gfx {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding-top: 60px;
+    padding-bottom: 60px;
+    &__unit {
+        display: inline-block;
+        width: 120px;
+        text-align: center;
+        padding-top: 120px;
+
+        &--trips {
+            background-image: url("../assets/cuba/info-gfx__cuba--trips.svg");
+            .back-image--settings();
+        }
+
+        &--venues {
+            background: url("../assets/cuba/info-gfx__cuba--venues.svg");
+            .back-image--settings();
+        }
+
+        &--tickets {
+            background: url("../assets/cuba/info-gfx__cuba--tickets.svg");
+            .back-image--settings();
+        }
+
+        &--reviews {
+            background: url("../assets/cuba/info-gfx__cuba--reviews.svg");
+            .back-image--settings();
+        }
+    }
+
+    &__data {
+        display: block;
+        font-size: 1.375rem;
+        font-weight: 500;
+        font-family: var(--sans);
+        color: var(--gunmetal);
+
+    }
+
+    &__caption {
+        display: block;
+        font-size: 0.75rem;
+        font-weight: 500;
+        font-family: var(--sans);
+        color: #909090;
+        padding-top: 5px;
+
+    }
+}
+

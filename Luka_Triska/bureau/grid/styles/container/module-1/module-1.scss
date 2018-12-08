@@ -1,0 +1,7 @@
+.container__module-1 {
+  display: grid;
+  grid-template-columns: 5fr 1fr;
+  &--image {
+    width: 100%;
+  }
+}

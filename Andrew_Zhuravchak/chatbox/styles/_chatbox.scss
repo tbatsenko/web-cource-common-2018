@@ -9,6 +9,7 @@
   flex-direction: column;
   border-radius: 4px 4px 0 0;
   background-color: #ffffff;
+  font-family: $chat-box__font-family;
 
   &__header {
     display: flex;
@@ -24,7 +25,6 @@
   &__header-title {
     margin: 0;
     font-size: $chat-box__font-size;
-    font-family: $chat-box__font-family;
     color: $chat-box__font-color_active;
     font-weight: bold;
 
@@ -43,7 +43,6 @@
   &__header-actions {
     display: flex;
     align-items: center;
-    height: 18px;
   }
 
   &__header-action-button {
@@ -56,9 +55,6 @@
       cursor: pointer;
     }
 
-    &:focus {
-      outline: none;
-    }
 
     &:first-child {
       margin-left: 0;
@@ -94,7 +90,6 @@
     box-sizing: border-box;
     font-size: 12px;
     resize: none;
-    font-family: $chat-box__font-family;
     color: $chat-box__font-color__nonactive;
 
     @include chatbox-scrollbar;
@@ -124,10 +119,6 @@
 
     &:hover {
       cursor: pointer;
-    }
-
-    &:focus {
-      outline: none;
     }
 
     &:last-child {

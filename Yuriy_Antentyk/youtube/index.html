@@ -10,8 +10,15 @@
 
     <link rel="stylesheet/less" href="css/disable-indentation/disable-indentation.less">
 
+    <link rel="stylesheet/less" href="css/face-button/face-button.less">
+    <link rel="stylesheet/less" href="css/face-button/__face/face-button__face.less">
+
+    <link rel="stylesheet/less" href="css/layout/layout.less">
+    <link rel="stylesheet/less" href="css/layout/__header/layout__header.less">
+    <link rel="stylesheet/less" href="css/layout/__aside-nav/layout__aside-nav.less">
+    <link rel="stylesheet/less" href="css/layout/__video-nav/layout__video-nav.less">
+
     <link rel="stylesheet/less" href="css/icon-button/icon-button.less">
-    <link rel="stylesheet/less" href="css/icon-button/_type/icon-button_type_face.less">
     <link rel="stylesheet/less" href="css/icon-button/_type/icon-button_type_guide.less">
     <link rel="stylesheet/less" href="css/icon-button/_type/icon-button_type_notifications.less">
     <link rel="stylesheet/less" href="css/icon-button/_type/icon-button_type_upload.less">
@@ -40,11 +47,11 @@
     <link rel="stylesheet/less" href="css/search-form/__text/search-form__text.less">
     <link rel="stylesheet/less" href="css/search-form/__submit/search-form__submit.less">
 
-    <link rel="stylesheet/less" href="css/header/header.less">
-    <link rel="stylesheet/less" href="css/header/__guide/header__guide.less">
-    <link rel="stylesheet/less" href="css/header/__icons-nav/header__icons-nav.less">
-    <link rel="stylesheet/less" href="css/header/__logo/header__logo.less">
-    <link rel="stylesheet/less" href="css/header/__search-form/header__search-form.less">
+    <link rel="stylesheet/less" href="css/layout-header/layout-header.less">
+    <link rel="stylesheet/less" href="css/layout-header/__guide/layout-header__guide.less">
+    <link rel="stylesheet/less" href="css/layout-header/__icons-nav/layout-header__icons-nav.less">
+    <link rel="stylesheet/less" href="css/layout-header/__logo/layout-header__logo.less">
+    <link rel="stylesheet/less" href="css/layout-header/__search-form/layout-header__search-form.less">
 
     <link rel="stylesheet/less" href="css/list/list.less">
     <link rel="stylesheet/less" href="css/list/__item/list__item.less">
@@ -53,16 +60,16 @@
     <link rel="stylesheet/less" href="css/list/_undotted/list_undotted.less">
     <link rel="stylesheet/less" href="css/list/_align/list_align_center.less">
 
-    <link rel="stylesheet/less" href="css/aside-nav/aside-nav.less">
-    <link rel="stylesheet/less" href="css/aside-nav/__header/aside-nav__header.less">
-    <link rel="stylesheet/less" href="css/aside-nav/__header/_clickable/aside-nav__header_clickable.less">
-    <link rel="stylesheet/less" href="css/aside-nav/__section/aside-nav__section.less">
-    <link rel="stylesheet/less" href="css/aside-nav/__item/aside-nav__item.less">
+    <link rel="stylesheet/less" href="css/layout-aside-nav/layout-aside-nav.less">
+    <link rel="stylesheet/less" href="css/layout-aside-nav/__header/layout-aside-nav__header.less">
+    <link rel="stylesheet/less" href="css/layout-aside-nav/__header/_clickable/layout-aside-nav__header_clickable.less">
+    <link rel="stylesheet/less" href="css/layout-aside-nav/__section/layout-aside-nav__section.less">
+    <link rel="stylesheet/less" href="css/layout-aside-nav/__item/layout-aside-nav__item.less">
 
-    <link rel="stylesheet/less" href="css/video-nav/video-nav.less">
-    <link rel="stylesheet/less" href="css/video-nav/__item/video-nav__item.less">
-    <link rel="stylesheet/less" href="css/video-nav/__item/_selected/video-nav__item_selected.less">
-    <link rel="stylesheet/less" href="css/video-nav/__item/_no-indent/video-nav__item_no-indent.less">
+    <link rel="stylesheet/less" href="css/layout-video-nav/layout-video-nav.less">
+    <link rel="stylesheet/less" href="css/layout-video-nav/__item/layout-video-nav__item.less">
+    <link rel="stylesheet/less" href="css/layout-video-nav/__item/_selected/layout-video-nav__item_selected.less">
+    <link rel="stylesheet/less" href="css/layout-video-nav/__item/_no-indent/layout-video-nav__item_no-indent.less">
 
     <link rel="stylesheet/less" href="css/video/video.less">
     <link rel="stylesheet/less" href="css/video/__cover-image/video__cover-image.less">
@@ -76,21 +83,22 @@
     <link rel="stylesheet/less" href="css/video-section/__header/video-section__header.less">
     <link rel="stylesheet/less" href="css/video-section/__item/video-section__item.less">
 
-    <link rel="stylesheet/less" href="css/content/content.less">
+    <link rel="stylesheet/less" href="css/content-wrapper/content-wrapper.less">
+    <link rel="stylesheet/less" href="css/content-wrapper/__content/content-wrapper__content.less">
 
     <script src="//cdnjs.cloudflare.com/ajax/libs/less.js/3.7.1/less.min.js" ></script>
 </head>
-<body class="disable-indentation">
-    <header class="header">
-        <button class="header__guide icon-button icon-button_type_guide">Guide</button>
+<body class="layout">
+    <header class="layout-header layout__header">
+        <button class="layout-header__guide icon-button icon-button_type_guide">Guide</button>
         <h1 class="disable-indentation">
-            <a href="https://www.youtube.com" class="header__logo logo logo_nationality_ua">Youtube</a>
+            <a href="https://www.youtube.com" class="layout-header__logo logo logo_nationality_ua">Youtube</a>
         </h1>
-        <form class="header__search-form search-form">
+        <form class="layout-header__search-form search-form">
             <input type="text" placeholder="Search" class="search-form__text">
             <button type="submit" class="search-form__submit">Submit</button>
         </form>
-        <nav class="header__icons-nav icons-nav">
+        <nav class="layout-header__icons-nav icons-nav">
             <ul class="list list_undotted list_row">
                 <li class="list__item">
                     <button class="icons-nav__upload icon-button icon-button_type_upload">Upload</button>
@@ -99,51 +107,53 @@
                     <button class="icons-nav__notifications icon-button icon-button_type_notifications">Notifications</button>
                 </li>
                 <li class="list__item">
-                    <button class="icons-nav__face icon-button icon-button_type_face">Yuriy Antentyk</button>
+                    <button class="icons-nav__face face-button">
+                        <img class="face-button__face" src="/img/face.jpg" alt="Yuriy Antentyk">
+                    </button>
                 </li>
             </ul>
         </nav>
     </header>
-    <aside class="aside-nav">
-        <ul class="aside-nav__section list list_order_column">
-            <li class="list__item icon-text icon-text_selected aside-nav__item">
+    <aside class="layout-aside-nav layout__aside-nav">
+        <ul class="layout-aside-nav__section list list_order_column">
+            <li class="list__item icon-text icon-text_selected layout-aside-nav__item">
                 <a class="icon-text__icon icon-text__icon_type_home icon-text__text" href="https://www.youtube.com/">Home</a>
             </li>
-            <li class="list__item icon-text aside-nav__item">
+            <li class="list__item icon-text layout-aside-nav__item">
                 <a class="icon-text__icon icon-text__icon_type_my-channel icon-text__text" href="https://www.youtube.com/">My channel</a>
             </li>
-            <li class="list__item icon-text aside-nav__item">
+            <li class="list__item icon-text layout-aside-nav__item">
                 <a class="icon-text__icon icon-text__icon_type_trending icon-text__text" href="https://www.youtube.com/">Trending</a>
             </li>
-            <li class="list__item icon-text aside-nav__item">
+            <li class="list__item icon-text layout-aside-nav__item">
                 <a class="icon-text__icon icon-text__icon_type_subscriptions icon-text__text" href="https://www.youtube.com/">Subscriptions</a>
             </li>
         </ul>
 
         <h3 class="disable-indentation">
-            <a class="aside-nav__header aside-nav__header_clickable" href="https://www.youtube.com">Library</a>
+            <a class="layout-aside-nav__header layout-aside-nav__header_clickable" href="https://www.youtube.com">Library</a>
         </h3>
-        <ul class="aside-nav__section list list_order_column">
-            <li class="list__item icon-text aside-nav__item">
+        <ul class="layout-aside-nav__section list list_order_column">
+            <li class="list__item icon-text layout-aside-nav__item">
                 <a class="icon-text__icon icon-text__icon_type_home icon-text__text" href="https://www.youtube.com">History</a>
             </li>
-            <li class="list__item icon-text aside-nav__item">
+            <li class="list__item icon-text layout-aside-nav__item">
                 <a class="icon-text__icon icon-text__icon_type_home icon-text__text" href="https://www.youtube.com">History</a>
             </li>
-            <li class="list__item icon-text aside-nav__item">
+            <li class="list__item icon-text layout-aside-nav__item">
                 <a class="icon-text__icon icon-text__icon_type_home icon-text__text" href="https://www.youtube.com">History</a>
             </li>
         </ul>
 
-        <h3 class="disable-indentation aside-nav__header">Subscriptions</h3>
-        <ul class="aside-nav__section list list_order_column">
-            <li class="list__item icon-text aside-nav__item">
+        <h3 class="disable-indentation layout-aside-nav__header">Subscriptions</h3>
+        <ul class="layout-aside-nav__section list list_order_column">
+            <li class="list__item icon-text layout-aside-nav__item">
                 <a class="icon-text__icon icon-text__icon_type_cynthia-lin-music icon-text__text" href="https://www.youtube.com">
                     Cynthia lin music
                     <span class="icon-text__number">23</span>
                 </a>
             </li>
-            <li class="list__item icon-text aside-nav__item">
+            <li class="list__item icon-text layout-aside-nav__item">
                 <a class="icon-text__icon icon-text__icon_type_google-developers icon-text__text" href="https://www.youtube.com">
                     Google developers
                     <span class="icon-text__number">1</span>
@@ -151,33 +161,35 @@
             </li>
         </ul>
     </aside>
-    <nav class="video-nav">
+    <nav class="layout-video-nav layout__video-nav">
         <ul class="list list_order_row list_align_center">
             <li class="list__item">
                 <h3 class="disable-indentation">
-                    <a class="video-nav__item video-nav__item_selected video-nav__item_no-indent" href="https://www.youtube.com">Home</a>
+                    <a class="layout-video-nav__item layout-video-nav__item_selected layout-video-nav__item_no-indent" href="https://www.youtube.com">Home</a>
                 </h3>
             </li>
             <li class="list__item">
                 <h3 class="disable-indentation">
-                    <a class="video-nav__item" href="https://www.youtube.com">Trending</a>
+                    <a class="layout-video-nav__item" href="https://www.youtube.com">Trending</a>
                 </h3>
             </li>
             <li class="list__item">
                 <h3 class="disable-indentation">
-                    <a class="video-nav__item" href="https://www.youtube.com">Subscriptions</a>
+                    <a class="layout-video-nav__item" href="https://www.youtube.com">Subscriptions</a>
                 </h3>
             </li>
         </ul>
     </nav>
 
-    <div class="content">
-        <main id="template-target">
-            
-        </main>
-        <footer>
-            
-        </footer>
+    <div class="content-wrapper">
+        <div class="content-wrapper__content">
+            <main id="template-target">
+                
+            </main>
+            <footer>
+                
+            </footer>
+        </div>
     </div>
 
 
