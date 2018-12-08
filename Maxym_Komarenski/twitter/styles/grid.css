@@ -1,0 +1,21 @@
+.grid-container{
+    display: grid;
+    grid-template-columns: 50% auto;
+    grid-template-rows: 100% auto;
+    grid-template-areas:
+            "sidequotes login"
+            "footer footer";
+}
+
+.aside-quotes {
+    grid-area: sidequotes;
+}
+
+.login{
+    grid-area: login;
+}
+
+.twitter-footer{
+    grid-area: footer;
+}
+
