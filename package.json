@@ -19,7 +19,9 @@
   "homepage": "https://github.com/ucu-web-2018/web-cource-common#readme",
   "devDependencies": {
     "prettier": "1.14.3",
-    "sass": "^1.14.3"
+    "sass": "^1.14.3",
+    "webpack": "^4.27.1",
+    "webpack-cli": "^3.1.2"
   },
   "dependencies": {
     "handlebars": "^4.0.12",

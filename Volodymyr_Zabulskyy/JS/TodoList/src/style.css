@@ -6,9 +6,9 @@ body {
     height: 100vh;
     box-sizing: border-box;
     margin: auto;
-    width: 60em;
+    width: 50em;
     box-shadow: lightgray 0 0 10px;
-    padding: 4em 3em 0 5em;
+    padding: 2em 3em 0 5em;
     overflow: auto;
 }
 
@@ -42,7 +42,7 @@ body {
     background: transparent;
     padding: 0;
     border-width: 0;
-    background: url("img/plus.png");
+    background: url("../img/plus.png");
     background-size: 24px;
     background-position: center;
     opacity: 0.2;
@@ -73,7 +73,7 @@ body {
 .task__text{
     border: 0;
     padding: 0;
-    width: 38em;
+    width: 28em;
     margin: 0;
     background: transparent;
     font-size: 20px;
@@ -83,4 +83,17 @@ body {
     width: 100%;
     height: 100%;
     opacity: .5;
+}
+
+.todo-filter__btn{
+    grid-row-start: 1;
+    padding: 5px 0;
+    border: 0;
+    background: transparent;
+    cursor: pointer;
+
+}
+
+.todo-filter{
+    display: grid;
 }

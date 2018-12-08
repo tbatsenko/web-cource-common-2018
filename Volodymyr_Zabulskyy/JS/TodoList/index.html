@@ -3,20 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <title>TodoList</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="src/style.css">
 </head>
 <body>
 <main class="content">
-        <form class="form-new-task" id="newTaskForm">
-            <label class="form-new-task__container" for="newTaskInput">
-                <input placeholder="Type new task here" id="newTaskInput" class="form-create-task__input" type="text">
-                <button type="submit" class="form-create-task__btn"></button>
-            </label>
-        </form>
-        <ul class="tasks-container" id="taskContainer">
+    <header id="todo-filter" class="todo-filter">
+        <button id="filter-all" class="todo-filter__btn">All</button>
+        <button id="filter-active"  class="todo-filter__btn">Active</button>
+        <button id="filter-done"  class="todo-filter__btn">Completed</button>
+    </header>
+    <form class="form-new-task" id="newTaskForm">
+        <label class="form-new-task__container" for="newTaskInput">
+            <input placeholder="Type new task here" id="newTaskInput" class="form-create-task__input" type="text">
+            <button type="submit" class="form-create-task__btn"></button>
+        </label>
+    </form>
+    <div id="content">
 
-        </ul>
+    </div>
+
 </main>
-<script src="main.js"></script>
+<script type="module" src="dist/main.js"></script>
 </body>
 </html>
