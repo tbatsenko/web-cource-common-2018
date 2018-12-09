@@ -13,4 +13,4 @@ for (let i = 999; i > 99; i--) {
   }
 }
 
-console.log(max);пш
+console.log(max);

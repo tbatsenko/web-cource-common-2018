@@ -1,0 +1,105 @@
+body {
+    margin: 0;
+}
+
+.placeholder {
+    margin: auto;
+    width: 50em;
+    box-shadow: lightgray 0 0 10px;
+    height: 100vh;
+    overflow: auto;
+    box-sizing: border-box;
+}
+
+.content {
+    padding: .5em 1em 0em 2em;
+}
+
+.input-filter-header {
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    box-shadow: 0px 0px 11px lightgray;
+    background: white;
+}
+
+.tasks-container {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.content__item {
+    padding: 8px 0;
+    height: 30px;
+    border-bottom: 1px inset lightgray;
+    line-height: 30px;
+}
+
+.task__delete-button {
+    background: transparent;
+    float: right;
+    height: 30px;
+    width: 50px;
+    margin: 0;
+    opacity: .5;
+    border: 0;
+    cursor: pointer;
+    padding: 5px;
+}
+
+.form-create-task__btn {
+    background: transparent;
+    border-width: 0;
+    font-size: 30px;
+    color: lightgray;
+}
+
+.form-create-task__input {
+    border: 0;
+    width: 100%;
+    font-size: 17px;
+    height: 30px;
+    background: transparent;
+    padding: 10px 0;
+}
+
+.form-new-task {
+    padding: 0;
+    height: auto;
+}
+
+.form-new-task__container {
+    padding: 1em 2em;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.task__text {
+    border: 0;
+    padding: 0;
+    width: 28em;
+    margin: 0;
+    background: transparent;
+}
+
+.task__delete-button__ico {
+    width: 100%;
+    height: 100%;
+    opacity: .5;
+}
+
+.todo-filter__btn {
+    grid-row-start: 1;
+    padding: 5px 0;
+    border: 0;
+    background: transparent;
+    cursor: pointer;
+
+}
+
+.todo-filter {
+    display: grid;
+    padding: 1em 0;
+}
