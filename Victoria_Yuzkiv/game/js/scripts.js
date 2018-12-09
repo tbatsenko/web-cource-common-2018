@@ -85,6 +85,8 @@ startBtn.addEventListener('click', function() {
   instructions.style.display = 'none'
   submitBtn.style.display = 'block'
   quiz.style.display = 'block'
+  myMusic = new playSong('audio/hp_song.mp3')
+  myMusic.play()
   getQAs()
 })
 
@@ -137,9 +139,30 @@ function getQAs() {
 }
 
 function displayResults() {
+  myMusic.stop()
   quiz.style.display = 'none'
   showScore.style.display = 'block'
-  inform.innerHTML = 'Congratulations! You scored ' + score + ' out of 10 correct.'
+  if (score === 0) {
+    inform.innerHTML = 'Ooooops... You scored ' + score + ' out of 10 correct :('
+  }
+  else {
+    inform.innerHTML = 'Congratulations! You scored ' + score + ' out of 10 correct.'
+  }
+}
+
+function playSong(src) {
+  this.sound = document.createElement('audio')
+  this.sound.src = src
+  this.sound.setAttribute('preload', 'auto')
+  this.sound.setAttribute('controls', 'none')
+  this.sound.style.display = 'none'
+  document.body.appendChild(this.sound)
+  this.play = function() {
+    this.sound.play()
+  }
+  this.stop = function() {
+    this.sound.pause()
+  }
 }
 
 resetBtn.addEventListener('click', function() {
