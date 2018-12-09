@@ -1,0 +1,21 @@
+.column {
+
+  &__feelings {
+    list-style-type: none;
+    display: ruby-text-container;
+    font-size: 1.1em;
+    font-weight: 600;
+
+    &--first {
+      color: #ac6b5c;
+    }
+
+    &--second {
+      color: #d1998c;
+    }
+
+    &--third {
+      color: #dba498;
+    }
+  }
+}

@@ -1,4 +1,6 @@
-.column__title {
+.column {
+
+  &__title {
     font-size: 1.1em;
     font-weight: bold;
     line-height: 1.5em;
@@ -6,11 +8,13 @@
     float: left;
     clear: left;
     text-transform: uppercase;
-}
+  }
 
-.column__value {
+  &__value {
     color: #181818;
     line-height: 1.5em;
     float: right;
     clear: right;
+  }
+
 }
