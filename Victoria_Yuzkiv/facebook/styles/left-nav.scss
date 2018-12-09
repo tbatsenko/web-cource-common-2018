@@ -1,0 +1,49 @@
+.left-menu {
+  width: 180px;
+  height: auto;
+  display: inline-block;
+
+  &__user {
+    display: flex;
+    padding: 0;
+    &_picture {
+      max-height: 20px;
+      max-width: 20px;
+      border-radius: 50%;
+    }
+  }
+
+  &__list {
+    padding: 0;
+    margin: 0;
+  }
+
+  &__item {
+    height: 28px;
+    display: flex;
+    align-items: center;
+    &_description {
+      text-decoration: none;
+      color: black;
+      font-size: 13px;
+      margin-left: 4px;
+    }
+    &_more {
+      display: flex;
+      padding-left: 5px;
+      margin-top: 5px;
+      &_text {
+        font-size: 13px;
+        text-decoration: none;
+        color: #365899;
+      }
+    }
+  }
+
+  &__items_header {
+    font-size: 13px;
+    line-height: 17px;
+    color: #616770;
+    margin: 0;
+  }
+}

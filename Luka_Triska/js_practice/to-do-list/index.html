@@ -4,50 +4,64 @@
     <meta charset="UTF-8">
     <title>Practical JS</title>
     <link rel="stylesheet" href="styles/common.css">
-    <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700" rel="stylesheet"></head>
+    <link rel="stylesheet" href="styles/calendar.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700" rel="stylesheet">
+</head>
 <body>
 
 <main class="container">
+
+    <table>
+        <caption><h2>Calendar</h2></caption>
+        <thead>
+        <tr class="year">
+            <td id="year-name"></td>
+        </tr>
+        <tr class="month">
+            <td>
+                <button onclick="viewCalendar.displayDiffMonth(false)" class="month__button"
+                        id="month-prev-button"><
+                </button>
+            </td>
+            <td id="month-name"></td>
+            <td>
+                <button onclick="viewCalendar.displayDiffMonth(true)" class="month__button" id="month-next-button">>
+                </button>
+            </td>
+        </tr>
+        <tr class="day-of-week-header-row">
+            <th scope="col" headers="day" class="day-of-week-header-item">mon</th>
+            <th scope="col" headers="day" class="day-of-week-header-item">tue</th>
+            <th scope="col" headers="day" class="day-of-week-header-item">wed</th>
+            <th scope="col" headers="day" class="day-of-week-header-item">thu</th>
+            <th scope="col" headers="day" class="day-of-week-header-item">fri</th>
+            <th scope="col" headers="day" class="day-of-week-header-item">sat</th>
+            <th scope="col" headers="day" class="day-of-week-header-item">sun</th>
+        </tr>
+        </thead>
+        <tbody id="table-body" class="table-body">
+        </tbody>
+    </table>
+
+<section class="todo-container">
     <h1 class="header">Todo List</h1>
 
-    <div>
-        <button onclick="handlers.toggleAll()">Toggle All</button>
-    </div>
-
-    <div>
-        <input type="number" id="change-todo-index-input">
-        <input type="text" id="change-todo-text-input" placeholder="New todo text">
-        <button onclick="handlers.changeTodo()">Change Todo</button>
-    </div>
-
-    <div>
-        <input type="number" id="toggle-todo-index-input">
-        <button onclick="handlers.toggleCompleted()">Toggle Todo</button>
-    </div>
-
-    <div class="add-todo">
-        <input id="add-todo-input" type="text" placeholder="Type a todo...">
+    <section class="add-todo">
+        <input class="add-todo-input" type="text" placeholder="Type a todo...">
         <button onclick="handlers.addTodo()">Add</button>
-    </div>
+    </section>
 
-    <ul>
+    <ul class="todo-display">
 
     </ul>
 
+</section>
+
 </main>
 
-<script src="script.js"></script>
+<script src="src/jquery-3.3.1.min.js"></script>
+<script src="src/calendar.js"></script>
+<script src="src/to-do.js"></script>
 
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-

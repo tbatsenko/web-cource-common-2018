@@ -1,0 +1,37 @@
+@import url("https://fonts.googleapis.com/css?family=Quicksand:400,700");
+@import "logo";
+@import "search-form";
+@import "typography";
+@import "glossary";
+@import "header";
+@import "post-section";
+@import "comments-section";
+
+body {
+  margin: 0;
+  padding: 0;
+  background: #F0F0F0;
+  font-family: Georgia, serif;
+  color: #444;
+}
+
+.whole-header {
+  background: #0063A6;
+  height: 200px;
+  width: 100%;
+}
+
+.main-header {
+  width: 1020px;
+  margin: auto;
+  position: relative;
+}
+
+.content {
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  background: #FFF;
+  margin: 0 auto 0;
+  padding: 24px 0 0 0;
+  width: 1020px;
+  overflow: hidden;
+}

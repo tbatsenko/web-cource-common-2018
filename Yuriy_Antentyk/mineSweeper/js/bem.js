@@ -18,3 +18,5 @@ const bemToString = (blockName) => {
 }
 
 const b = bemToString("field")
+
+export default {bemToString, b}
