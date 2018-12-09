@@ -46,9 +46,19 @@
         <div class="right9" id="right9"></div>
     </div>
 
-    <button class="scramble" onclick="rubiks.scramble()">Scramble</button>
+    <button class="scramble" onclick="my_game.start()">Scramble</button>
+
+    <input type="range" min="1" max="20" value="10" class="slider" id="slider">
+    <div class="slider_value" id="slider_value">Number of moves in scramble: 10</div>
 
 </section>
-<script src="rubiks.js"></script>
+<section class="help help--small" id="help">
+
+</section>
+
+<section class="timer" id="timer"></section>
+
+<script src="src/rubiks.js"></script>
+<script src="src/slider.js"></script>
 </body>
 </html>

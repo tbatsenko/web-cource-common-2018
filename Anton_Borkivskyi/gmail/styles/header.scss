@@ -1,0 +1,99 @@
+
+header {
+  height: var(--header-h);
+  padding: 8px;
+  //background: silver;
+  display: flex;
+  border-bottom: 1px silver solid;
+
+  .left-part {
+    width: var(--menu-width);
+    display: flex;
+    align-items: center;
+
+    .left-part__menu {
+
+      background: url("../images/menu.png") center no-repeat;
+      background-size: 20px 20px;
+      height: 50px;
+      width: 50px;
+    }
+
+  }
+
+  .right-part {
+    width: 100%;
+    //background: blue;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    &__search {
+      background: #F5F5F5;
+      width: 70%;
+      height: 100%;
+
+      border-radius: 5px;
+
+      display: flex;
+      align-items: center;
+
+      .lupa {
+        background: url("../images/lupa.png") center no-repeat;
+        background-size: 15px 15px;
+
+        height: 30px;
+        width: 30px
+      }
+
+      .search {
+        height: 100%;
+        width: 90%;
+        background: #F5F5F5;
+        border: 0;
+
+        &:focus {
+          outline: none;
+        }
+      }
+
+      .dropdown {
+        background: url("../images/dropdown.svg") center no-repeat;
+        background-size: 15px 15px;
+        height: 30px;
+        width: 30px;
+        margin-left: auto;
+      }
+    }
+
+    .right-part__buttons {
+      display: flex;
+
+      .right-part__buttons__tasks {
+
+        background: url("../images/tasks.svg") center no-repeat;
+        background-size: 15px 15px;
+
+        height: 50px;
+        width: 50px;
+      }
+
+      .right-part__buttons__bell {
+
+        background: url("../images/bell.png") center no-repeat;
+        background-size: 20px 20px;
+
+        height: 50px;
+        width: 50px;
+      }
+
+      .profile_picture {
+        width: 40px;
+        height: 40px;
+        border-radius: 100%;
+      }
+
+    }
+  }
+}

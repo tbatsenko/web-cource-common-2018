@@ -1,0 +1,52 @@
+:root{
+    --field__spaceship-size: 50px;
+    --field__stone-size: 100px;
+    --field__bullet-size: 20px;
+}
+
+.field{
+    position: relative;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("/img/background.jpg");
+    background-size: 100% auto;
+    overflow: hidden;
+}
+
+.field__score{
+    position: absolute;
+    right: 0;
+    top: 0;
+    color: white;
+    font-size: 2em;
+    z-index: 100;
+}
+
+.field__spaceship{
+    background-image: url("/img/misha.jpg");
+    height: var(--field__spaceship-size);
+    width: var(--field__spaceship-size);
+    background-size: var(--field__spaceship-size) var(--field__spaceship-size);
+    border-radius: 100%;
+    position: absolute;
+}
+
+.field__stone{
+    background-image: url("/img/yura.jpg");
+    height: var(--field__stone-size);
+    width: var(--field__stone-size);
+    background-size: var(--field__stone-size) var(--field__stone-size);
+    border-radius: 100%;
+    position: absolute;
+}
+
+.field__bullet{
+    background-image: url("/img/explorer.png");
+    height: var(--field__bullet-size);
+    width: var(--field__bullet-size);
+    background-size: var(--field__bullet-size) var(--field__bullet-size);
+    border-radius: 100%;
+    position: absolute;
+}

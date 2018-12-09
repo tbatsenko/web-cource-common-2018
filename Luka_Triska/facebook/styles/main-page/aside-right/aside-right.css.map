@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAAA,YAAa;EACX,OAAO,EAAE,IAAI;EACb,SAAS,EAAE,MAAM;EACjB,MAAM,EAAE,iBAAiB;EACzB,aAAa,EAAE,GAAG;EAClB,UAAU,EAAE,IAAI;EAChB,MAAM,EAAE,IAAI;EACZ,KAAK,EAAE,KAAK;EACZ,OAAO,EAAE,IAAI",
+"sources": ["aside-right.scss"],
+"names": [],
+"file": "aside-right.css"
+}

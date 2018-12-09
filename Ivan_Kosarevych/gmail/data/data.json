@@ -48,12 +48,14 @@
   },
   "central-bar":{
     "header":{
-      "left-navigation":[
-        "", "", "", ""
-      ],
-      "right-navigation":[
-        "", "", "", ""
-      ]
+      "left-navigation": {
+        "select-button": ["check_box_outline_blank", "arrow_drop_down"],
+        "other-buttons": ["refresh", "more_vert"]
+      },
+      "right-navigation": {
+        "msg-filter-text": "1-50",
+        "other-buttons": ["chevron_left", "chevron_right", "settings"]
+      }
     }
   }
 }

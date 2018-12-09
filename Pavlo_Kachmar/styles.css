@@ -1,0 +1,132 @@
+:root {
+    --card_width: 250px;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+.header {
+    position: relative;
+    left: 45%;
+    font-size: 50px;
+}
+
+.win-cover {
+    top: 0;
+    left: 0;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-size: auto 800px;
+    background: rgba(250, 238, 56, 0.58) no-repeat center center;
+    z-index: 1;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+}
+
+.win-cover__figure {
+    align-self: center;
+}
+
+.win-cover__text {
+    text-align: center;
+    font-size: 50px;
+}
+
+
+.win-cover--hidden {
+    display: none;
+}
+
+*.win {
+    z-index: 1;
+    background-color: gold;
+}
+
+body {
+    height: 100vh;
+    background: bisque;
+    display: flex;
+    align-content: center;
+}
+
+
+.memory-game {
+    width: calc(4 * var(--card_width));
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    perspective: calc(5 * var(--card_width));
+    animation-duration: 3s;
+    animation-name: fadein;
+}
+
+
+.memory-card {
+    width: var(--card_width);
+    height: var(--card_width);
+    border: 2px solid sandybrown;
+    position: relative;
+    transform: scale(1);
+    transform-style: preserve-3d;
+    transition: transform .2s;
+    box-sizing: border-box;
+}
+
+.memory-card:active {
+    transform: scale(.97);
+    transition: transform .2s;
+}
+
+.memory-card.flip {
+    transform: rotateY(180deg);
+}
+
+.front-face, .back-face {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background: bisque;
+    backface-visibility: hidden;
+}
+
+.memory-card.win {
+    transform: rotateY(180deg) scale(.5);
+    animation-name: spin;
+    animation-duration: 100ms;
+    animation-iteration-count: 5;
+}
+
+.front-face {
+    transform: rotateY(180deg);
+}
+
+
+.click-counter {
+    background-color: #ffa498;
+    height: 40px;
+    font-size: 30px;
+    color: #ffe600;
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg) rotateY(180deg);
+    }
+    to {
+        transform: rotate(360deg) rotateY(180deg);
+    }
+}
+
+
+@keyframes fadein {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}

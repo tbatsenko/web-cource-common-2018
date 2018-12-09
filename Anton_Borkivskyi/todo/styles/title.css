@@ -1,0 +1,32 @@
+.title {
+  width: 600px;
+  height: 150px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  color: var(--text-color); }
+  .title .input-item {
+    height: 40px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    border: 1px var(--text-color) solid; }
+    .title .input-item__input {
+      padding: 0 10px;
+      height: 100%;
+      width: 85%;
+      font-size: 20px;
+      color: var(--text-color); }
+      .title .input-item__input:focus {
+        outline: none; }
+    .title .input-item__button {
+      height: 100%;
+      width: 15%;
+      background: var(--text-color);
+      color: var(--game-color);
+      font-size: 20px; }
+      .title .input-item__button:focus {
+        outline: none; }
+
+/*# sourceMappingURL=title.css.map */
