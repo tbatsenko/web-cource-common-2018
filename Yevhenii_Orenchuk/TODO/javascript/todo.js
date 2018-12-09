@@ -23,7 +23,6 @@ let createNewTask = (taskName) => {
     editButton.id = 'edit';
     removeButton.id = 'remove';
 
-
     listItem.appendChild(label);
 
     buttonsContainer.appendChild(doneButton);
@@ -70,7 +69,6 @@ let editTask = (taskItem) => {
 
     let editButton = taskItem.querySelector('#edit');
     let doneButton = taskItem.querySelector('#done');
-    let removeButton = taskItem.querySelector('#remove');
 
     if (editButton.className !== 'edit--active') {
         const label = taskItem.querySelector("label");
@@ -87,7 +85,6 @@ let editTask = (taskItem) => {
     } else {
         const editField = taskItem.querySelector("input");
         let newLabel = document.createElement('label');
-        console.log(editField.value);
         newLabel.innerText = editField.value === '' ? editField.placeholder : editField.value;
 
         taskItem.replaceChild(newLabel, editField);
@@ -95,8 +92,6 @@ let editTask = (taskItem) => {
         editButton.className = null;
         doneButton.disabled = false;
     }
-
-
 };
 
 let removeTask = (taskItem) => {

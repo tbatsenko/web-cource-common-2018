@@ -1,8 +1,8 @@
 :root {
-  --contrast-letter-color: #fff;
-  --background-color: black;
-  --white-shadow-color: rgba(255, 255, 255, 0.3);
-  --black-shadow-color: rgba(0, 0, 0, 0.3); }
+  --contrast-letter-color: black;
+  --background-color: #fff;
+  --white-shadow-color: rgba(0, 0, 0, 0.3);
+  --black-shadow-color: rgba(255, 255, 255, 0.3); }
 
 body {
   display: flex;
@@ -23,12 +23,14 @@ ul {
   margin-top: 6px; }
 
 .todo-container {
+  width: 40%;
   margin-left: 50px; }
 
 .container {
   display: flex;
+  justify-content: center;
+  width: 70%;
   margin-top: 20px;
-  border: 1px solid var(--contrast-letter-color);
   box-shadow: 0 19px 38px var(--white-shadow-color), 0 15px 12px var(--white-shadow-color);
   background: var(--background-color);
   padding: 10px 90px 30px 90px; }
@@ -36,10 +38,17 @@ ul {
 .header {
   text-align: center; }
 
-.delete-button {
-  margin-left: 20px;
+.temp-edit-input {
   border: 0;
-  background: var(--contrast-letter-color); }
+  width: 50%;
+  background: bisque;
+  text-align: center;
+  font-family: inherit; }
+
+.delete-button {
+  border: 0;
+  background: var(--background-color);
+  color: var(--contrast-letter-color); }
 
 .delete-button:hover {
   cursor: pointer;
