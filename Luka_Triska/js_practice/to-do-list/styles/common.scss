@@ -1,55 +1,65 @@
 :root {
-    --contrast-letter-color: #fff;
-    --background-color: black;
-    --white-shadow-color: rgba(255, 255, 255, 0.3);
-    --black-shadow-color: rgba(0, 0, 0, 0.3);
+  --contrast-letter-color: black;
+  --background-color: #fff;
+  --white-shadow-color: rgba(0, 0, 0, 0.3);
+  --black-shadow-color: rgba(255, 255, 255, 0.3);
 }
 
 body {
-    display: flex;
-    justify-content: center;
-    font-family: Roboto, serif;
-    background: var(--background-color);
-    color: var(--contrast-letter-color);
+  display: flex;
+  justify-content: center;
+  font-family: Roboto, serif;
+  background: var(--background-color);
+  color: var(--contrast-letter-color);
 }
 
 ul {
-    list-style-type: none;
-    padding: 0;
+  list-style-type: none;
+  padding: 0;
 }
 
 .todo-display-item {
-    display: flex;
-    justify-content: space-between;
-    box-shadow: 0 2px 7px rgba(0, 0, 0, 0.30), 0 2px 2px rgba(0, 0, 0, 0.22);
-    border: 1px solid var(--contrast-letter-color);
-    margin-top: 6px;
+  display: flex;
+  justify-content: space-between;
+  box-shadow: 0 2px 7px rgba(0, 0, 0, 0.30), 0 2px 2px rgba(0, 0, 0, 0.22);
+  border: 1px solid var(--contrast-letter-color);
+  margin-top: 6px;
 }
 
 .todo-container {
-    margin-left: 50px;
+  width: 40%;
+  margin-left: 50px;
 }
 
 .container {
-    display: flex;
-    margin-top: 20px;
-    border: 1px solid var(--contrast-letter-color);
-    box-shadow: 0 19px 38px var(--white-shadow-color), 0 15px 12px var(--white-shadow-color);
-    background: var(--background-color);
-    padding: 10px 90px 30px 90px;
+  display: flex;
+  justify-content: center;
+  width: 70%;
+  margin-top: 20px;
+  box-shadow: 0 19px 38px var(--white-shadow-color), 0 15px 12px var(--white-shadow-color);
+  background: var(--background-color);
+  padding: 10px 90px 30px 90px;
 }
 
 .header {
-    text-align: center;
+  text-align: center;
+}
+
+.temp-edit-input {
+  border: 0;
+  width: 50%;
+  background: bisque;
+  text-align: center;
+  font-family: inherit;
 }
 
 .delete-button {
-    margin-left: 20px;
-    border: 0;
-    background: var(--contrast-letter-color);
+  border: 0;
+  background: var(--background-color);
+  color: var(--contrast-letter-color)
 }
 
 .delete-button:hover {
-    cursor: pointer;
-    background: coral;
+  cursor: pointer;
+  background: coral;
 }

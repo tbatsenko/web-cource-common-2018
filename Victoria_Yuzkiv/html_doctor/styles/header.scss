@@ -1,0 +1,41 @@
+.main-header {
+  &__right-navigation {
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-size: 14px;
+    li {
+      display: inline;
+      a {
+        color: white;
+        text-decoration: none;
+      }
+      &:after {
+        content: " | ";
+      }
+    }
+  }
+
+  &__main-navigation {
+    position: relative;
+    background: #0090d2;
+    overflow: hidden;
+    top: -4px;
+    ul {
+      float: left;
+      font-family: 'Helvetica Neue', Arial, sans-serif;
+      letter-spacing: 1px;
+    }
+    li {
+      display: inline;
+      a {
+        font-family: "Helvetica Neue", Arial, sans-serif;
+        font-size: 14px;
+        text-decoration: none;
+        float: left;
+        color: white;
+        margin: 0 10px;
+      }
+    }
+  }
+}
