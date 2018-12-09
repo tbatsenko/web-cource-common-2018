@@ -1,15 +1,19 @@
+import utilities from "./utilities"
+import bem from "./bem"
+import cell_module from "./cell"
+
 class Field{
     constructor(size, minesCnt){
         this.__size = size
         minesCnt = Math.min(minesCnt, size * size)
 
-        this.__cells = get2dArray(size, size, undefined)
+        this.__cells = utilities.get2dArray(size, size, undefined)
         for(let i = 0; i < size; ++i)
             for(let j = 0; j < size; ++j)
-                this.__cells[i][j] = new Cell(false, false, false, 0)
+                this.__cells[i][j] = new cell_module.Cell(false, false, false, 0)
         
         while(minesCnt > 0){
-            let i = getRandomInt(0, size - 1), j = getRandomInt(0, size - 1)
+            let i = utilities.getRandomInt(0, size - 1), j = utilities.getRandomInt(0, size - 1)
             if(this.getCell(i, j).mined)
                 continue
             this.getCell(i, j).mined = true
@@ -49,7 +53,8 @@ class Field{
 
     toHTML(){
         const inner = Array.from(this).map(obj => obj.cell).map(cell => cell.toHTML()).join("")
-        return `<div class='${b({})}'>` + inner + `</div>`
+        return `<div class='${bem.b({})}'>` + inner + `</div>`
     }
 }
 
+export default {Field}

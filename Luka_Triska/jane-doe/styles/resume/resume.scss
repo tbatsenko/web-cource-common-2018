@@ -1,0 +1,26 @@
+.resume {
+  right: 0;
+  &--layout {
+    overflow: auto;
+    display: flex;
+    flex-flow: column;
+    justify-content: space-between;
+    position: absolute;
+    height: 83.9%;
+    width: 80%;
+    right: 10%;
+    top: 7.25%;
+  }
+  &__quote {
+    font-size: 25px;
+    font-style: italic;
+    text-align: center;
+  }
+  &-element {
+    font-size: 14.6px;
+    color: #181818;
+  }
+  &__header {
+    font-weight: 600;
+  }
+}

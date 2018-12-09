@@ -1,0 +1,73 @@
+body{
+    margin: 0;
+    font-family: 'Open Sans', sans-serif;
+    height: 100vh;
+    background: url("../img/background.jpg") no-repeat;
+    background-size: cover;
+    background-position: 0 bottom;
+}
+
+.layout__moves{
+    display: flex;
+    justify-content: space-evenly;
+    opacity: 0.5;
+    background: aliceblue;
+    font-size: 1.7em;
+    color: blue;
+    border-bottom: 1px solid #7b9fa5;;
+}
+
+.move{
+    margin: 0.5em;
+
+}
+
+
+.Game{
+    background: aliceblue ;
+    opacity: 0.9;
+    display: flex;
+    width: 30em;
+    height: 30em;
+    margin: 1em auto;
+    border: 1px solid #7b9fa5;
+    border-radius: 3%;
+    justify-content: space-evenly;
+}
+
+.Game__cell {
+    width: 4.8em;
+    height: 4.8em;
+
+    border-radius: 9%;
+    color: #e6c2c6;;
+
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.Game__cell--free{
+    /*border: none;*/
+    background: #e4b9bc;
+    color: transparent;
+    opacity: 0.85       ;
+}
+
+.Game__col{
+    /*margin-top: 1em;*/
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.Game__cell--num{
+    background: #c95c98;
+    /*border: 1px solid #e6c2c6;*/
+    overflow: hidden;
+    opacity: 1;
+}

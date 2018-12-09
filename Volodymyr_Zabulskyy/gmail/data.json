@@ -1,0 +1,107 @@
+{
+  "mail-labels": [
+    {
+      "label-name": "Inbox",
+      "btn-classes": [
+        "mail-labels-menu__btn_active"
+      ],
+      "ico-src": "img/inbox.png",
+      "ico-classes": [
+        "mail-labels-menu__btn__ico",
+        "inbox"
+      ]
+    },
+    {
+      "label-name": "Starred",
+      "btn-classes": [
+        "mail-labels-menu__btn"
+      ],
+      "ico-src": "img/starred.png",
+      "ico-classes": [
+        "mail-labels-menu__btn__ico",
+        "starred"
+      ]
+    },
+    {
+      "label-name": "Snoozed",
+      "btn-classes": [
+        "mail-labels-menu__btn"
+      ],
+      "ico-src": "img/snoozed.png",
+      "ico-classes": [
+        "mail-labels-menu__btn__ico",
+        "snoozed"
+      ]
+    },
+    {
+      "label-name": "Sent",
+      "btn-classes": [
+        "mail-labels-menu__btn"
+      ],
+      "ico-src": "img/sent.png",
+      "ico-classes": [
+        "mail-labels-menu__btn__ico",
+        "sent"
+      ]
+    },
+    {
+      "label-name": "Drafts",
+      "btn-classes": [
+        "mail-labels-menu__btn"
+      ],
+      "ico-src": "img/drafts.png",
+      "ico-classes": [
+        "mail-labels-menu__btn__ico",
+        "drafts"
+      ]
+    },
+    {
+      "label-name": "More",
+      "btn-classes": [
+        "mail-labels-menu__btn"
+      ],
+      "ico-src": "img/more.png",
+      "ico-classes": [
+        "mail-labels-menu__btn__ico",
+        "more"
+      ]
+    }
+  ],
+  "mail-sources": [
+    {
+      "name": "Primary",
+      "active": true,
+      "ico-style": "inbox"
+    },
+    {
+      "name": "Social",
+      "active": false,
+      "ico-style": "social"
+    },
+    {
+      "name": "Promotions",
+      "active": false,
+      "ico-style": "promotions"
+    }
+  ],
+  "mails": [
+    {
+      "from": "",
+      "title": "",
+      "content": "",
+      "datetime": ""
+    },
+    {
+      "from": "",
+      "title": "",
+      "content": "",
+      "datetime": ""
+    },
+    {
+      "from": "",
+      "title": "",
+      "content": "",
+      "datetime": ""
+    }
+  ]
+}

@@ -1,5 +1,7 @@
+import field from "./field"
+
 class Game{
-    restart(fieldSize, minesCnt){this.field = new Field(fieldSize, minesCnt)}
+    restart(fieldSize, minesCnt){this.field = new field.Field(fieldSize, minesCnt)}
     constructor(fieldSize, minesCnt){this.restart(fieldSize, minesCnt)}
 
     checkLose(){return Array.from(this.field).map(obj => obj.cell).filter(cell => (cell.mined && cell.discovered)).length > 0}
@@ -36,3 +38,5 @@ class Game{
             cell.discovered = (cell.discovered || cell.mined)
     }
 }
+
+export default {Game}

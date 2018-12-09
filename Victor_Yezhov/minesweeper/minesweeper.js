@@ -60,7 +60,7 @@ var difficulties_dimenstions = {
 };
 
 var difficulties_mines = {
-    "easy": 20,
+    "easy": 15,
     "beginner":30,
     "intermediate":40,
     "advanced":50
