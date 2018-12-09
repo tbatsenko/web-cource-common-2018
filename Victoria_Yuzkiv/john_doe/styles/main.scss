@@ -1,0 +1,47 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat:400,400i,700");
+@import "typography";
+@import "characteristics";
+@import "feelings";
+@import "progress-bar";
+@import "personality";
+
+html, body {
+  font-family: Montserrat, sans-serif;
+  margin: 0;
+  padding: 0;
+  font-size: 22px;
+  display: flex;
+  align-items: center;
+  justify-content: center
+}
+
+.main-profile {
+  width: 600px;
+  height: 1200px;
+  float: left;
+  background: url("../img/user_photo.jpg") no-repeat;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: flex-end;
+  &__bottom-content {
+    margin-bottom: 60px;
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+}
+
+.detailed-profile {
+  width: 1000px;
+  height: 1200px;
+  &__main-info {
+    background-color: #f4f4f6;
+    overflow: hidden;
+  }
+}
+
+.column {
+  width: 420px;
+  float: left;
+  padding: 35px 10px 35px 50px;
+}
