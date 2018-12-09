@@ -5,17 +5,17 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="styles/index.css">
+    <link href="../src/styles/index.css" rel="stylesheet">
     <title>Calendar</title>
 </head>
 <body class="body">
 <main class="main">
     <section class="calendar-section" id="calendar-section">
         <header class="header" id="header">
-            <button class="header__button" onclick="calendar.prev_month()"><img src="images/back.png"
+            <button class="header__button" onclick="calendar.prev_month()"><img src="../images/back.png"
                                                                                 class="header__img"></button>
             <h1 class="header__text" id="header__text"></h1>
-            <button class="header__button" onclick="calendar.next_month()"><img src="images/forward.png"
+            <button class="header__button" onclick="calendar.next_month()"><img src="../images/forward.png"
                                                                                 class="header__img"></button>
         </header>
 
@@ -37,6 +37,6 @@
 
     </section>
 </main>
-<script src="main.js"></script>
+<script src="../src/main.js"></script>
 </body>
 </html>

@@ -20,7 +20,7 @@ button {
 
   display: flex;
 
-  .main{
+  .main {
     background: white;
     height: 400px;
     width: 700px;
@@ -28,68 +28,81 @@ button {
 
     display: flex;
 
-    .calendar-section{
+    .calendar-section {
       width: 60%;
-      background: aqua;
       display: flex;
       flex-direction: column;
 
-      .header{
+      //border: 1px var(--text-color) solid;
+
+      .header {
         height: 50px;
-        background: white;
+        background: var(--game-color);
 
         display: flex;
         align-items: center;
         justify-content: space-evenly;
 
-        &__text{
+        &__text {
           font-family: "Lato", Helvetica, Arial, sans-serif;
           width: 60%;
           font-size: 30px;
-          color: red;
-          background: yellow;
+          color: var(--text-color);
+
           text-align: center;
         }
 
-
-        &__button, &__img{
+        &__button, &__img {
           width: 30px;
           height: 30px;
           background: transparent;
         }
 
-
-        &__button:focus{
+        &__button:focus {
           outline: none;
         }
 
       }
 
-
-
-      .calendar{
+      .calendar {
         height: 350px;
-        background: silver;
+        width: 100%;
+        background: white;
 
         display: flex;
         flex-flow: wrap;
 
-        &__cell{
-          width: 40px;
+        &__cell {
+          width: 10%;
+          margin: 2%;
           height: 40px;
-          margin: 8px;
-          background: #00e100;
+
+
+
+          border-radius: 5px;
+
+          font-size: 20px;
+
+          background: var(--text2-color);
+          color: white;
+
+          display: flex;
+          justify-content: center;
+          align-items: center;
         }
       }
 
     }
 
-    .todo-section{
+    .todo-section {
       width: 40%;
-      background: aquamarine;
+      background: var(--game-color);
+
+      //border: 1px var(--text-color) solid;
+      //border-left: 0;
 
       .input-item {
-        height: 40px;
+        height: 50px;
         width: 100%;
         display: flex;
         align-items: center;
@@ -123,6 +136,21 @@ button {
         }
       }
 
+      .item {
+
+        border: 1px solid var(--text-color);
+        background: white;
+        color: var(--text-color);
+
+        height: 40px;
+        font-size: 20px;
+
+        margin-top: 5px;
+
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
 
     }
   }

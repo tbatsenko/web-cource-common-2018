@@ -1,10 +1,41 @@
+// import TODOList from "./todo"
+// // import Calendar from "./calendar"
+// import "./styles/index.scss"
+//
+
+// var todo = new TODOList()
+
+
 class Calendar{
   constructor() {
     this.months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
     this.date = new Date()
+    this.last_day = 1
     this.year = this.date.getFullYear()
     this.month = this.date.getMonth()
     this.build_calendar();
+
+  }
+
+  make_todo_list(day){
+    document.getElementById(this.last_day).setAttribute('style', "background: #123C69")
+    document.getElementById(day).setAttribute('style', "background: #AC3B61; color: white")
+    this.last_day = day
+    var date = this.year + '-' + (this.month + 1) + '-' + day
+
+    todo.date = date
+
+    var resp = todo.get("http://localhost:3000/todo_lists/" + date)
+
+
+    if (resp === '{}'){
+
+      var resp = todo.post("http://localhost:3000/todo_lists", JSON.stringify({"id": date, "items":[]}))
+
+    }
+    var decoded = JSON.parse(resp)
+    var items = decoded.items
+    todo.build_list(items)
 
   }
 
@@ -26,7 +57,8 @@ class Calendar{
     }
 
     for(var j = 1; j <= days_in_month; j++){
-      calendar_body_html += '<div class="calendar__cell" onclick="calendar.make_todo_list(' + j + ')">' + j + '</div>'
+      // calendar_body_html += '<div class="calendar__cell" onclick="calendar.make_todo_list(' + j + ')" id="' + j + '">' + j + '</div>'
+      calendar_body_html += '<div class="calendar__cell" onclick="calendar.make_todo_list(' + j + ')" id="' + j + '">' + j + '</div>'
     }
 
     for(var k = 0; k < blank_cells_after; k++){
@@ -66,27 +98,10 @@ class Calendar{
     this.build_calendar()
   }
 
-  make_todo_list(day){
-    var date = this.year + '-' + (this.month + 1) + '-' + day
-
-    todo.date = date
-
-    var resp = todo.get("http://localhost:3000/todo_lists/" + date)
-    alert(resp)
-
-    if (resp === '{}'){
-
-      var resp = todo.post("http://localhost:3000/todo_lists", JSON.stringify({"id": date, "items":[]}))
-      alert(resp)
-    }
-    var decoded = JSON.parse(resp)
-    var items = decoded.items
-    todo.build_list(items)
-
-  }
 
 }
 
+var calendar = new Calendar()
 
 class TODOList{
   constructor(){
@@ -129,18 +144,30 @@ class TODOList{
       var decoded = JSON.parse(resp)
       var items = decoded.items
       items.push(new_item)
-      var resp_post = todo.put("http://localhost:3000/todo_lists/"+this.date, JSON.stringify({"id": this.date, "items":items}))
+      var resp_put = todo.put("http://localhost:3000/todo_lists/"+this.date, JSON.stringify({"id": this.date, "items":items}))
 
       this.build_list(items)
     }
     input.value = ''
   }
 
+  remove(i){
+    var resp = todo.get("http://localhost:3000/todo_lists/" + this.date)
+
+    var decoded = JSON.parse(resp)
+    var items = decoded.items
+
+    items.splice(i, 1)
+    var resp_put = todo.put("http://localhost:3000/todo_lists/"+this.date, JSON.stringify({"id": this.date, "items":items}))
+
+    this.build_list(items)
+  }
+
   build_list(items) {
     document.getElementById('todo').innerHTML = ''
     var inner_html = ''
     for (var i = 0; i < items.length; i++) {
-      inner_html += '<div class="item"><p class="item__text">' + items[i] + '</p><button class="cancel_button"></button></div>'
+      inner_html += '<div class="item"><p class="item__text">' + items[i] + '</p><button class="cancel_button" onclick="todo.remove(' + i + ')">X</button></div>'
     }
     document.getElementById('todo').innerHTML = inner_html
   }
@@ -149,4 +176,3 @@ class TODOList{
 }
 
 var todo = new TODOList()
-var calendar = new Calendar()
