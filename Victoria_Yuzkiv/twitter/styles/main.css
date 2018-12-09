@@ -19,9 +19,6 @@
   margin-left: 30px;
   cursor: pointer;
 }
-.main-header__left_nav--item_first {
-  margin: 0;
-}
 .main-header__left_nav--img {
   margin-right: 7px;
   height: 20px;
@@ -41,7 +38,7 @@
   border-radius: 16px;
   font-size: 12px;
   width: 220px;
-  background: #f5f8fa url(../images/magnifying-glass.svg) no-repeat 195px;
+  background: #f5f8fa url(../images/search.svg) no-repeat 195px;
   background-size: 13px;
 }
 .main-header__right_nav--button {
@@ -54,6 +51,10 @@
   color: #fff;
   border-radius: 16px;
   cursor: pointer;
+}
+
+.first-item {
+  margin: 0;
 }
 
 * {
