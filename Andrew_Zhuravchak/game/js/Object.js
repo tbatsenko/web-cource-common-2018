@@ -11,5 +11,5 @@ class GameObject {
     this.htmlObject = undefined
   }
 
-  render(){} // needs to be override
+  render(context){} // needs to be override
 }
