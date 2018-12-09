@@ -1,0 +1,106 @@
+.calendar{
+  width: 300px;
+  min-width: 100px;
+  box-sizing: border-box;
+  overflow: hidden;
+
+  border: 2px solid #009688;
+  border-radius: 10px;
+  background-color: #83d0c9;
+
+  &__header{
+    //background-color: #009688;
+    height: 50px;
+    border-bottom: 2px solid #009688;
+    color: #009688;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-family: Montserrat, monospace;
+    font-size: 20px;
+    .change_month_button{
+
+      font-family: Montserrat, monospace;
+      background-color: transparent;
+      border: 0;
+      color: #009688;
+      padding: 0;
+      margin: 0;
+      width: 30px;
+      height: 30px;
+      border-radius: 100%;
+      font-size: 24px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden;
+
+      &:hover{
+        //background-color: #65c3ba;
+        cursor: pointer;
+        //padding: 0;
+        //margin: 0;
+        color: white;
+      }
+
+      &:active{
+        font-size: 20px;
+      }
+    }
+
+  }
+
+  &__weekdays{
+    display: flex;
+    flex-flow: wrap;
+  }
+
+  &__body{
+    display: flex;
+    flex-flow: wrap;
+  }
+
+  &__cell{
+    box-sizing: border-box;
+    border: 0;
+    background-color: transparent;
+    width: calc(100%/7);
+    height: 40px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Montserrat, monospace;
+    color: #009688;
+    font-size: 24px;
+
+    &:hover{
+      color: white;
+      cursor: pointer;
+    }
+
+    &:active{
+      font-size: 20px;
+    }
+
+    &-selected{
+      color: white;
+    }
+
+    &-inactive{
+      &:hover{
+        cursor: default;
+      }
+    }
+
+    &-weekday{
+      &:hover{
+        color: #009688;
+        cursor: default;
+      }
+      &:active{
+        font-size: 24px;
+      }
+    }
+  }
+}
