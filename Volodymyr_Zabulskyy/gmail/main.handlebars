@@ -1,0 +1,124 @@
+<header class="header-main">
+    <ul class="header-main__container">
+        <li class="header-main-layout__left-container">
+            <ul class="header-main-layout__left">
+                <li class="header-main__item">
+                    <button class="header-main__hamburger-btn"></button>
+                </li>
+                <li class="header-main__item">
+                    <button class="header-main__logo-btn"></button>
+                </li>
+                <li class="header-main__item">
+                    <form class="header-main__form" action="">
+                        <button class="header-main__form__search-btn"></button>
+                        <label>
+                            <input class="header-main__form__input" type="text" placeholder="Search">
+                        </label>
+                    </form>
+                </li>
+            </ul>
+        </li>
+        <li class="header-main-layout__right-container">
+            <ul class="header-main-layout__right">
+                <li>
+                    <button class="header-main__menu-btn" aria-label="menu"></button>
+                </li>
+                <li>
+                    <button class="header-main__ring-btn" aria-label="bell"></button>
+                </li>
+                <li>
+                    <button class="header-main__profile-btn" aria-label="profile"></button>
+                </li>
+            </ul>
+        </li>
+
+    </ul>
+</header>
+<aside class="mail-labels-menu">
+    <button class="compose-btn">
+        <img class="mail-labels-menu__label__ico compose" src="img/compose.png" alt="">
+        <span>Compose</span>
+    </button>
+    <ul>
+        {{#mail-labels}}
+        <li>
+            <button class="{{#btn-classes}}{{.}} {{/btn-classes}}">
+                <img class="{{#ico-classes}}{{.}} {{/ico-classes}}" src="{{ico-src}}" alt="">
+                <span>{{label-name}}</span>
+            </button>
+        </li>
+        {{/mail-labels}}
+    </ul>
+</aside>
+<main class="content">
+    <header class="mail-sources">
+        <ul class="mail-sources-list">
+            {{#mail-sources}}
+            <li class="mail-sources-list__item mail-sources-list__item_active">
+                <div class="mail-sources-list__item__ico mail-sources-list__item__ico_{{ico-style}}"></div>
+                <button class="mail-sources-list__item__btn">{{name}}</button>
+                {{#if active}}
+                <div class="mail-sources-list__item__underline"></div>
+                {{/if}}
+            </li>
+            {{/mail-sources}}
+        </ul>
+    </header>
+    <ul class="mails-list">
+        <li class="mails__item">
+            <div class="mails__item__ico mails__item__ico__checkbox"></div>
+            <div class="mails__item__ico mails__item__ico__star"></div>
+            <span class="mails__item__author">Український Католицький Університет</span>
+            <span class="mails__item__title">УВАГА!!! Освячення ноутбуків</span>
+            <span class="mails__item__content">
+                Повідомляємо що освячення ноутбуків відбудеться у звичний час. Студентів у яких
+                ноут взБІСився, просимо купити додатково лампадки.
+            </span>
+            <span class="mails__item__datetime">17 лис</span>
+        </li>
+        <li class="mails__item">
+            <div class="mails__item__ico mails__item__ico__checkbox"></div>
+            <div class="mails__item__ico mails__item__ico__star"></div>
+            <span class="mails__item__author">Український Католицький Університет</span>
+            <span class="mails__item__title">УВАГА!!! Освячення ноутбуків</span>
+            <span class="mails__item__content">
+                Повідомляємо що освячення ноутбуків відбудеться у звичний час. Студентів у яких
+                ноут взБІСився, просимо купити додатково лампадки.
+            </span>
+            <span class="mails__item__datetime">17 лис</span>
+        </li>
+        <li class="mails__item">
+            <div class="mails__item__ico mails__item__ico__checkbox"></div>
+            <div class="mails__item__ico mails__item__ico__star"></div>
+            <span class="mails__item__author">Український Католицький Університет</span>
+            <span class="mails__item__title">УВАГА!!! Освячення ноутбуків</span>
+            <span class="mails__item__content">
+                Повідомляємо що освячення ноутбуків відбудеться у звичний час. Студентів у яких
+                ноут взБІСився, просимо купити додатково лампадки.
+            </span>
+            <span class="mails__item__datetime">17 лис</span>
+        </li>
+        <li class="mails__item">
+            <div class="mails__item__ico mails__item__ico__checkbox"></div>
+            <div class="mails__item__ico mails__item__ico__star"></div>
+            <span class="mails__item__author">Український Католицький Університет</span>
+            <span class="mails__item__title">УВАГА!!! Освячення ноутбуків</span>
+            <span class="mails__item__content">
+                Повідомляємо що освячення ноутбуків відбудеться у звичний час. Студентів у яких
+                ноут взБІСився, просимо купити додатково лампадки.
+            </span>
+            <span class="mails__item__datetime">17 лис</span>
+        </li>
+        <li class="mails__item">
+            <div class="mails__item__ico mails__item__ico__checkbox"></div>
+            <div class="mails__item__ico mails__item__ico__star"></div>
+            <span class="mails__item__author">Український Католицький Університет</span>
+            <span class="mails__item__title">УВАГА!!! Освячення ноутбуків</span>
+            <span class="mails__item__content">
+                Повідомляємо що освячення ноутбуків відбудеться у звичний час. Студентів у яких
+                ноут взБІСився, просимо купити додатково лампадки.
+            </span>
+            <span class="mails__item__datetime">17 лис</span>
+        </li>
+    </ul>
+</main>

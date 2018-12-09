@@ -2,29 +2,39 @@ import TodoItem from './TodoItem'
 
 class TodoList {
 
-    constructor(container) {
+    constructor(container, form, input) {
+        this.form = form;
+        this.inputForm = input;
+        this.form.addEventListener('submit', (e) => {
+            e.preventDefault();
+            const text = this.inputForm.value;
+            if (!/\S/.test(text)) return;
+            this.addTodo(text);
+            this.inputForm.value = "";
+        });
         this.container = container;
         this.todoItems = [];
         this.htmlElem = document.createElement('ul');
         this.htmlElem.setAttribute('class', 'tasks-container');
         this.container.appendChild(this.htmlElem);
+        this.currentFilter = 'all';
         this.filters = {
             'all': (elem) => true,
             'done': (elem) => elem.done,
             'active': (elem) => !elem.done
-        }
+        };
+        this.removeFilters = {
+            'done': (elem) => elem.done
+        };
+        this.render();
     }
 
-    render(filter) {
+    render() {
         let content = document.createElement('ul');
         content.setAttribute('class', 'tasks-container');
         for (let elem in this.todoItems) {
-            if (filter === undefined) {
-                content.appendChild(this.todoItems[elem].render());
-            } else {
-                if (filter(this.todoItems[elem])) {
-                    content.appendChild(this.todoItems[elem].render());
-                }
+            if (this.filters[this.currentFilter](this.todoItems[elem])) {
+                content.appendChild(this.todoItems[elem].htmlElem);
             }
         }
         this.container.removeChild(this.htmlElem);
@@ -33,21 +43,36 @@ class TodoList {
     }
 
 
-    addBtnFilterAll(btn) {
+    addBtnFilter(btn, filterName, filter) {
+        if (filter !== undefined) {
+            this.filters[filterName] = filter;
+        }
         btn.onclick = () => {
-            this.render(this.filters.all)
+            this.currentFilter = filterName;
+            this.render();
         };
     }
 
-    addBtnFilterDone(btn) {
-        btn.onclick = () => {
-            this.render(this.filters.done)
-        };
+    removeByFilter(filter) {
+        let toRemove = [];
+        for (let elem in this.todoItems) {
+            if (filter(this.todoItems[elem])) {
+                toRemove.push(this.todoItems[elem])
+            }
+        }
+
+        for (let elem in toRemove) {
+            this.removeTodo(toRemove[elem])
+        }
+        this.render();
     }
 
-    addBtnFilterActive(btn) {
+    addBtnRemoveByFilter(btn, filterName, filter) {
+        if (filter !== undefined) {
+            this.removeFilters[filterName] = filter;
+        }
         btn.onclick = () => {
-            this.render(this.filters.active)
+            this.removeByFilter(this.removeFilters[filterName])
         };
     }
 
