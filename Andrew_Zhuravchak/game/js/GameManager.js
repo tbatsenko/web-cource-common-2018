@@ -19,22 +19,21 @@ class GameManager {
 
   start() {
     setInterval(() => {
-      this.context.clearRect(0, 0, this.width, this.height);
+      let clouds = this.objects.slice(1)
+      // check for collisions
+      for (let i = 0; i < clouds.length; i++) {
+        let cloud = clouds[i]
+        if ((this.hero.y <= cloud.y - 25 + cloud.height) && (cloud.y <= this.hero.y + this.hero.height - 25) &&
+          (this.hero.x <= cloud.x + cloud.width - 20) && (cloud.x <= this.hero.x + this.hero.width - 20)) {
+          alert('You looseeee!')
+        }
+      }
+
+      this.context.clearRect(0, 0, this.width, this.height)
 
       for (let scene_object in this.objects)
         this.objects[scene_object].render(this.context)
 
-
-      let clouds = this.objects.slice(1)
-      // check for collisions
-      for(let i = 0; i < clouds.length; i++){
-        let cloud = clouds[i]
-        if( (this.hero.y <= cloud.y + cloud.height) && (cloud.y <= this.hero.y + this.hero.height) &&
-          (this.hero.x <= cloud.x + cloud.width) && (cloud.x <= this.hero.x + this.hero.width) ){
-          alert("You looseeee!")
-        }
-
-      }
 
     }, UPDATE_INTERVAL)
   }

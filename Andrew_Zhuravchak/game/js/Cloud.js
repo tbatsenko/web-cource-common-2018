@@ -1,9 +1,11 @@
 class Cloud extends GameObject {
   constructor(position_x, position_y) {
     super(position_x, position_y)
-    this.image = CLOUD_IMAGES[parseInt(Math.random() * 2)]
-    this.width = 100
-    this.height = 80
+
+    const cloud = CLOUD_IMAGES[parseInt(Math.random() * 2)]
+    this.image = cloud["src"]
+    this.width = cloud["width"]
+    this.height = cloud["height"]
   }
 
   render(context) {
