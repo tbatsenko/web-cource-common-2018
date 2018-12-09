@@ -1,4 +1,7 @@
-class Hero extends GameObject {
+import { GameObject } from "./Object"
+import { PLANE_IMG} from './env'
+
+export class Hero extends GameObject {
   constructor(position_x, position_y) {
     super(position_x, position_y)
 

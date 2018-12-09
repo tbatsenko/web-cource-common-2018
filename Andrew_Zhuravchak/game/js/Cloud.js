@@ -1,4 +1,7 @@
-class Cloud extends GameObject {
+import { GameObject } from "./Object"
+import { CLOUD_IMAGES, UPDATE_INTERVAL } from './env'
+
+export class Cloud extends GameObject {
   constructor(position_x, position_y) {
     super(position_x, position_y)
 
@@ -26,7 +29,7 @@ function generate_cloud(window_height, window_width, game_manager, cloud_manager
   setTimeout(generate_cloud, cloud_manager.cloud_generation_speed, window_height, window_width, game_manager, cloud_manager)
 }
 
-class CloudManager {
+export class CloudManager {
   constructor() {
     this.clouds = []
     this.cloud_generation_speed = UPDATE_INTERVAL * 200

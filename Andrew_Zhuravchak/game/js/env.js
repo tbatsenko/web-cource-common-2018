@@ -1,5 +1,5 @@
-const UPDATE_INTERVAL = 10
-const CLOUD_IMAGES = [
+export const UPDATE_INTERVAL = 10
+export const CLOUD_IMAGES = [
   {
     src: './images/cloud1.png',
     width: 323 / 2,
@@ -10,5 +10,4 @@ const CLOUD_IMAGES = [
     width: 219 / 2,
     height: 143 / 2,
   }]
-const PLANE_IMG = './images/plane.gif'
-let ID = 1
+export const PLANE_IMG = './images/plane.gif'

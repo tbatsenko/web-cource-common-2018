@@ -1,4 +1,8 @@
-class GameManager {
+import { CloudManager } from "./Cloud"
+import { Hero } from "./Hero"
+import { UPDATE_INTERVAL } from './env'
+
+export class GameManager {
   constructor(game_container) {
     this.height = game_container.offsetHeight
     this.width = game_container.offsetWidth
