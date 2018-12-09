@@ -1,0 +1,42 @@
+//input {
+//  width: 500px;
+//  height: 60px;
+//  font-size: 2rem;
+//  border: 0;
+//}
+//
+//input:focus {
+//  outline: none;
+//}
+//
+//li {
+//  text-align: left;
+//  font-size: 40px;
+//  list-style: none;
+//  margin: 0;
+//}
+//h2 {
+//  text-align: center;
+//}
+
+.todo-list-wrapper{
+  width: 50vw;
+  height: 100vh;
+  background: #2980b9;
+  padding-left:30px;
+  padding-right:30px;
+
+  &__header{
+    text-align: center;
+  }
+}
+
+.todo-list {
+  &__task-checkbox{
+    margin-right: 20px;
+  }
+
+  &__item{
+    word-wrap: break-word;
+  }
+}
