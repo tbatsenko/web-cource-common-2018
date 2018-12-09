@@ -1,24 +1,15 @@
-const sleep = (ms) => {
-    return new Promise(resolve => setTimeout(resolve, ms));
-};
+const sleep = (ms) => new Promise(resolve => setTimeout(resolve, ms));
 
 let todoList = {
-    todos: [],
     addTodo: function (todoText) {
-        this.todos.push({
-            'todoText': todoText,
-            'completed': false
-        });
         $.post('http://localhost:3000/todos', {
             'todoText': todoText,
             'completed': false
         })
     },
     changeTodo: function (index, todoText) {
-        index++;
-        this.todos[index - 1].todoText = todoText;
         $.ajax({
-                url: 'http://localhost:3000/todos/' + index,
+                url: `http://localhost:3000/todos/${index}`,
                 type: 'PUT',
                 data: {
                     'todoText': todoText,
@@ -28,63 +19,71 @@ let todoList = {
         );
     },
     deleteTodo: function (index) {
-        this.todos.splice(index - 1, 1);
-        // index++;
         $.ajax({
-                url: 'http://localhost:3000/todos/' + index,
+                url: `http://localhost:3000/todos/${index}`,
                 type: 'DELETE'
             }
         );
     },
     toggleCompleted: function (index) {
-        this.todos[index].completed = !this.todos[index].completed;
-    },
-    toggleAll: function () {
-        let allTrue = true;
-
-        // check if all todos are completed
-        for (let todo of this.todos) {
-            if (todo.completed) {
-                allTrue = true
-            } else {
-                allTrue = false;
-                break;
-            }
-        }
-
-        // uncheck (uncomplete) all todos if they're all checked (completed); otherwise -- check (complete) all todos
-        this.todos.forEach((todo) => allTrue ? todo.completed = false : todo.completed = true);
+        $.getJSON(`http://localhost:3000/todos/${index}`, (todo) => {
+            $.ajax({
+                    url: `http://localhost:3000/todos/${index}`,
+                    type: 'PUT',
+                    data: {
+                        'todoText': todo.todoText,
+                        'completed': todo.completed === "false"
+                    }
+                }
+            );
+        });
     }
 };
 
 let handlers = {
-    toggleAll: () => {
-        todoList.toggleAll();
-        view.displayTodos();
-    },
     addTodo: () => {
         let addTodoInput = document.getElementsByClassName("add-todo-input")[0];
-        todoList.addTodo(addTodoInput.value ? addTodoInput.value : "todo " + (todoList.todos.length + 1));
+        if (addTodoInput.value) {
+            todoList.addTodo(addTodoInput.value);
+        } else {
+            let idOfLastTodo = parseInt($('li').last().attr('id'));
+            todoList.addTodo(`todo ${(idOfLastTodo ? idOfLastTodo : 0) + 1}`);
+        }
         addTodoInput.value = "";
         view.displayTodos();
     },
-    changeTodo: () => {
-        let changeTodoIndexInput = document.getElementsByClassName("change-todo-index-input")[0];
-        let changeTodoTextInput = document.getElementsByClassName("change-todo-text-input")[0];
-        todoList.changeTodo(changeTodoIndexInput.valueAsNumber, changeTodoTextInput.value);
-        changeTodoTextInput.value = "";
-        changeTodoIndexInput.value = 0;
-        view.displayTodos();
+    changeTodo: (index) => {
+        let clickedTodoText = document.getElementById("span-" + index);
+
+        let tempInput = document.createElement("input");
+        tempInput.className = "temp-edit-input";
+        tempInput.type = "text";
+
+        clickedTodoText.parentNode.replaceChild(tempInput, clickedTodoText);
+        tempInput.focus();
+
+        tempInput.addEventListener("keydown", (e) => {
+            if (e.key === "Enter") {
+                let receivedInput = document.getElementsByClassName("temp-edit-input")[0];
+
+                let liText = document.createElement("span");
+                liText.className = "todo-text";
+                liText.id = "span-" + index;
+                liText.textContent = receivedInput.value;
+
+                receivedInput.parentNode.replaceChild(liText, receivedInput);
+                todoList.changeTodo(index, receivedInput.value);
+            }
+        });
     },
     deleteTodo: async (index) => {
         todoList.deleteTodo(index);
         await sleep(100);
         view.displayTodos();
     },
-    toggleCompleted: () => {
-        let toggleTodoIndexInput = document.getElementsByClassName("toggle-todo-index-input")[0];
-        todoList.toggleCompleted(toggleTodoIndexInput.valueAsNumber);
-        toggleTodoIndexInput.value = 0;
+    toggleCompleted: async (index) => {
+        todoList.toggleCompleted(index);
+        await sleep(100);
         view.displayTodos();
     }
 };
@@ -103,13 +102,15 @@ let view = {
                 let completeCheckbox = document.createElement("input");
                 completeCheckbox.setAttribute("type", "checkbox");
                 completeCheckbox.className = "check-box";
-                completeCheckbox.id = data.indexOf(todo).toString();
-                completeCheckbox.checked = todo.completed;
+                completeCheckbox.checked = todo.completed === "true";
                 todoLi.appendChild(completeCheckbox);
 
                 let liText = document.createElement("span");
+                liText.className = "todo-text";
+                liText.id = "span-" + todo.id.toString();
                 liText.textContent = todo.todoText;
                 todoLi.appendChild(liText);
+
 
                 let deleteButton = document.createElement("button");
                 deleteButton.textContent = "X";
@@ -119,49 +120,20 @@ let view = {
                 todosUl.appendChild(todoLi);
             });
         });
-        /*
-                todoList.todos.forEach((todo) => {
-                    let todoLi = document.createElement("li");
-                    todoLi.id = (todoList.todos.indexOf(todo) + 1).toString();
-                    todoLi.className = "todo-display-item";
-
-                    let checkBox = this.createCompleteCheckbox();
-                    checkBox.id = todoList.todos.indexOf(todo).toString();
-                    checkBox.checked = todo.completed;
-
-                    todoLi.appendChild(checkBox);
-                    todoLi.appendChild(this.createLiText(todo));
-                    todoLi.appendChild(this.createDeleteButton());
-                    todosUl.appendChild(todoLi);
-                });
-        */
     },
-    /*
-        createCompleteCheckbox: () => {
-            let completeCheckbox = document.createElement("input");
-            completeCheckbox.setAttribute("type", "checkbox");
-            completeCheckbox.className = "check-box";
-            return completeCheckbox;
-        },
-        createLiText: (todo) => {
-            let liText = document.createElement("span");
-            liText.textContent = todo.todoText;
-            return liText;
-        },
-        createDeleteButton: () => {
-            let deleteButton = document.createElement("button");
-            deleteButton.textContent = "X";
-            deleteButton.className = "delete-button";
-            return deleteButton;
-        },
-    */
     setUpEventListeners: () => {
         let todosUl = document.querySelector("ul");
         todosUl.addEventListener("click", (e) => {
+
             let elementClicked = e.target;
+            let elementClickedIndex = parseInt(elementClicked.parentNode.id);
+
             if (elementClicked.className === "delete-button") {
-                console.log("parseInt(elementClicked.parentNode.id)" + parseInt(elementClicked.parentNode.id));
-                handlers.deleteTodo(parseInt(elementClicked.parentNode.id));
+                handlers.deleteTodo(elementClickedIndex);
+            } else if (elementClicked.className === 'check-box') {
+                handlers.toggleCompleted(elementClickedIndex);
+            } else if (elementClicked.className === 'todo-text') {
+                handlers.changeTodo(elementClickedIndex);
             }
         });
     }

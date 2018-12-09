@@ -71,4 +71,4 @@ let viewCalendar = {
 };
 
 
-document.onload(viewCalendar.displayCalendar(new Date()));
+viewCalendar.displayCalendar(new Date());
