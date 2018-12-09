@@ -1,3 +1,5 @@
+import bem from "./bem"
+
 class Cell{
     constructor(discovered, flagged, mined, surroundingMines){
         this.discovered = discovered
@@ -15,6 +17,8 @@ class Cell{
         if(this.discovered && !this.mined && this.surroundingMines > 0)
             res.number = this.surroundingMines
         const txt = this.surroundingMines > 0 && this.discovered && !this.mined? String(this.surroundingMines): ""
-        return `<div class='${b(res)}'>${txt}</div>`
+        return `<div class='${bem.b(res)}'>${txt}</div>`
     }
 }
+
+export default {Cell}
