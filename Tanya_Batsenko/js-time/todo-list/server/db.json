@@ -1,13 +1,16 @@
 {
   "todos": [
     {
-      "title": "Finish Web Homework",
-      "id": 0
+      "title": "Finish todo list",
+      "status": "active",
+      "when": "2018-11-9",
+      "id": 2
     },
     {
-      "title": "Finish todo list",
-      "id": 2
+      "title": "Finish Web Homework",
+      "status": "active",
+      "when": "2018-11-10",
+      "id": 3
     }
-  ],
-  "completed": []
+  ]
 }

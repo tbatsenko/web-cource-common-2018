@@ -11,8 +11,15 @@ export class TodoList {
 
   }
 
-  getTodos() {
-    const url = this.serverURL + '/todos?';
+  getTodos(filterDate = "") {
+    let url = "";
+    if (filterDate === "") { 
+      url = this.serverURL + `/todos`;
+    }
+    else {
+      url = this.serverURL + `/todos/?when=${filterDate}`;
+    }
+    
 
     return fetch(url)
       .then(function(response) {
@@ -35,7 +42,9 @@ export class TodoList {
       fetch(url, {
           method: 'POST',
           body: JSON.stringify({
-            title: taskTitle
+            title: taskTitle,
+            status: "active",
+            when: "2018-12-19",
           }), // data can be `string` or {object}!
           headers: {
             'Content-Type': 'application/json'
@@ -67,18 +76,42 @@ export class TodoList {
       .catch(error => console.error('Error:', error));
   }
 
+  updateTodoStatus(itemId, status) {
+    const url = this.serverURL + '/todos/' + itemId;
 
-  async updateTodoList() {
+    const statusString = status ? "completed" : "active";
+
+    fetch(url, {
+        method: 'PATCH',
+        body: JSON.stringify({
+          status: statusString,
+        }), // data can be `string` or {object}!
+        headers: {
+          'Content-Type': 'application/json'
+        }
+      })
+      .then(res => res.json())
+      .then(response => {
+        console.log('Success:', JSON.stringify(response));
+        this.updateTodoList();
+      })
+      .catch(error => console.error('Error:', error));
+  }
+
+
+  async updateTodoList(filterDate = "") {
     let todos;
 
     try {
-      todos = await this.getTodos();
+      todos = await this.getTodos(filterDate);
     } catch (e) {
       console.error(e);
     }
 
     let todosEl = document.getElementById('todos');
+    let completedEl = document.getElementById('completed');
     todosEl.innerHTML = '';
+    completedEl.innerHTML = '';
 
     todos.forEach(todo => {
       const todoEl = document.createElement('li');
@@ -86,6 +119,7 @@ export class TodoList {
       const todoDeleteBtn = document.createElement('button');
 
       todoCheckbox.type = 'checkbox';
+      todoCheckbox.id = 'checkbox-' + todo.id;
       todoCheckbox.className = 'todo-checkbox';
 
       todoDeleteBtn.innerHTML = 'Delete';
@@ -98,7 +132,14 @@ export class TodoList {
       todoEl.appendChild(document.createTextNode(`${todo.title}`));
       todoEl.appendChild(todoDeleteBtn);
 
-      todosEl.appendChild(todoEl);
+      if (todo.status === "active") {
+        todosEl.appendChild(todoEl);
+
+      } else {
+        todoCheckbox.checked = true;
+        todoEl.classList.add("todo__completed");
+        completedEl.appendChild(todoEl);
+      }
     });
 
     let delBtns = Array.from(document.getElementsByClassName("delete-button"));
@@ -108,6 +149,21 @@ export class TodoList {
       try {
         const itemId = event.target.id.split("-").pop(); // del-btn-10
         this.deleteTodo(itemId);
+      } catch (e) {
+        console.error(e);
+      }
+
+    }));
+
+    let checkboxes = Array.from(document.getElementsByClassName("todo-checkbox"));
+
+    checkboxes.map(btn => btn.addEventListener('change', (event) => {
+
+      try {
+        console.log(event);
+        const itemId = event.target.id.split("-").pop(); // checkbox-10
+        let checkboxStatus = event.target.checked;
+        this.updateTodoStatus(itemId, checkboxStatus);
       } catch (e) {
         console.error(e);
       }

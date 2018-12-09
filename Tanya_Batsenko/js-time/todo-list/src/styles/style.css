@@ -49,8 +49,11 @@ li button {
   text-align: center;
 }
 
-.btn {
+.calendar-btn {
   color: white;
+}
+
+.btn {
   width: 40px;
   height: 30px;
   margin: 0;
@@ -98,6 +101,10 @@ td:hover {
 .bg-info {
   border: 1px solid;
   border-radius: 50%;
+}
+
+.todo__completed {
+  text-decoration: line-through;
 }
 
 /*# sourceMappingURL=style.css.map */
