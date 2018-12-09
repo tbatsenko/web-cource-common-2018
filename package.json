@@ -23,6 +23,7 @@
   },
   "dependencies": {
     "node-sass": "^4.9.4",
-    "scss": "^0.2.4"
+    "scss": "^0.2.4",
+    "serve": "^10.1.1"
   }
 }
