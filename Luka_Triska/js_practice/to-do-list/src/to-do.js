@@ -1,18 +1,40 @@
+const sleep = (ms) => {
+    return new Promise(resolve => setTimeout(resolve, ms));
+};
+
 let todoList = {
     todos: [],
     addTodo: function (todoText) {
-        $.post('http://localhost:3000/todos',
-            {
-                'todoText': todoText,
-                'completed': false
+        this.todos.push({
+            'todoText': todoText,
+            'completed': false
+        });
+        $.post('http://localhost:3000/todos', {
+            'todoText': todoText,
+            'completed': false
+        })
+    },
+    changeTodo: function (index, todoText) {
+        index++;
+        this.todos[index - 1].todoText = todoText;
+        $.ajax({
+                url: 'http://localhost:3000/todos/' + index,
+                type: 'PUT',
+                data: {
+                    'todoText': todoText,
+                    'completed': false
+                }
             }
         );
     },
-    changeTodo: function (index, todoText) {
-        this.todos[index].todoText = todoText;
-    },
     deleteTodo: function (index) {
-        this.todos.splice(index, 1);
+        this.todos.splice(index - 1, 1);
+        // index++;
+        $.ajax({
+                url: 'http://localhost:3000/todos/' + index,
+                type: 'DELETE'
+            }
+        );
     },
     toggleCompleted: function (index) {
         this.todos[index].completed = !this.todos[index].completed;
@@ -42,16 +64,7 @@ let handlers = {
     },
     addTodo: () => {
         let addTodoInput = document.getElementsByClassName("add-todo-input")[0];
-
-        let request = new XMLHttpRequest();
-        request.open("GET", "http://localhost:3000/todos");
-        let response = '';
-
-        request.onreadystatechange = (e) => {
-            response = JSON.parse(request.responseText);
-            todoList.addTodo(addTodoInput.value ? addTodoInput.value : "todo " + (response.length + 1));
-        };
-        request.send(null);
+        todoList.addTodo(addTodoInput.value ? addTodoInput.value : "todo " + (todoList.todos.length + 1));
         addTodoInput.value = "";
         view.displayTodos();
     },
@@ -63,8 +76,9 @@ let handlers = {
         changeTodoIndexInput.value = 0;
         view.displayTodos();
     },
-    deleteTodo: (index) => {
+    deleteTodo: async (index) => {
         todoList.deleteTodo(index);
+        await sleep(100);
         view.displayTodos();
     },
     toggleCompleted: () => {
@@ -80,106 +94,78 @@ let view = {
         let todosUl = document.querySelector("ul");
         todosUl.innerHTML = "";
 
-        let request = new XMLHttpRequest();
-        request.open("GET", "http://localhost:3000/todos");
-        request.send(null);
-
-        let response = "";
-
-        request.onreadystatechange = function(e) {
-            response = JSON.parse(request.responseText);
-            console.log('response' + response);
-            for (let todo of response) {
-                console.log("todo: " + todo.todoText);
+        $.getJSON('http://localhost:3000/todos', function (data) {
+            data.forEach((todo) => {
                 let todoLi = document.createElement("li");
-                // console.log("ID" + response.indexOf(todo).toString());
-                todoLi.id = response.indexOf(todo).toString();
+                todoLi.id = todo.id.toString();
                 todoLi.className = "todo-display-item";
-                let checkBox = this.createCompleteCheckbox();
-                // checkBox.id = response.indexOf(todo).toString();
-                checkBox.checked = todo.completed;
 
-                todoLi.appendChild(checkBox);
+                let completeCheckbox = document.createElement("input");
+                completeCheckbox.setAttribute("type", "checkbox");
+                completeCheckbox.className = "check-box";
+                completeCheckbox.id = data.indexOf(todo).toString();
+                completeCheckbox.checked = todo.completed;
+                todoLi.appendChild(completeCheckbox);
+
                 let liText = document.createElement("span");
                 liText.textContent = todo.todoText;
                 todoLi.appendChild(liText);
-                todoLi.appendChild(this.createDeleteButton());
+
+                let deleteButton = document.createElement("button");
+                deleteButton.textContent = "X";
+                deleteButton.className = "delete-button";
+                todoLi.appendChild(deleteButton);
+
                 todosUl.appendChild(todoLi);
-            }
-            /*response.forEach((todo) => {
-                console.log("foreach iteration " + 1);
-                let todoLi = document.createElement("li");
-                todoLi.id = response.indexOf(todo).toString();
-                todoLi.className = "todo-display-item";
-                let checkBox = this.createCompleteCheckbox();
-                checkBox.id = response.indexOf(todo).toString();
-                checkBox.checked = todo.completed;
-                todoLi.appendChild(checkBox);
-                let liText = document.createElement("span");
-                liText.textContent = todo.todoText;
-                todoLi.appendChild(liText);
-                todoLi.appendChild(this.createDeleteButton());
-                todosUl.appendChild(todoLi);
-            });*/
-        };
+            });
+        });
+        /*
+                todoList.todos.forEach((todo) => {
+                    let todoLi = document.createElement("li");
+                    todoLi.id = (todoList.todos.indexOf(todo) + 1).toString();
+                    todoLi.className = "todo-display-item";
+
+                    let checkBox = this.createCompleteCheckbox();
+                    checkBox.id = todoList.todos.indexOf(todo).toString();
+                    checkBox.checked = todo.completed;
+
+                    todoLi.appendChild(checkBox);
+                    todoLi.appendChild(this.createLiText(todo));
+                    todoLi.appendChild(this.createDeleteButton());
+                    todosUl.appendChild(todoLi);
+                });
+        */
     },
-    createDeleteButton: () => {
-        let deleteButton = document.createElement("button");
-        deleteButton.textContent = "X";
-        deleteButton.className = "delete-button";
-        return deleteButton;
-    },
-    createCompleteCheckbox: () => {
-        let completeCheckbox = document.createElement("input");
-        completeCheckbox.setAttribute("type", "checkbox");
-        completeCheckbox.className = "check-box";
-        return completeCheckbox;
-    },
+    /*
+        createCompleteCheckbox: () => {
+            let completeCheckbox = document.createElement("input");
+            completeCheckbox.setAttribute("type", "checkbox");
+            completeCheckbox.className = "check-box";
+            return completeCheckbox;
+        },
+        createLiText: (todo) => {
+            let liText = document.createElement("span");
+            liText.textContent = todo.todoText;
+            return liText;
+        },
+        createDeleteButton: () => {
+            let deleteButton = document.createElement("button");
+            deleteButton.textContent = "X";
+            deleteButton.className = "delete-button";
+            return deleteButton;
+        },
+    */
     setUpEventListeners: () => {
         let todosUl = document.querySelector("ul");
         todosUl.addEventListener("click", (e) => {
             let elementClicked = e.target;
-            if (elementClicked.className === "delete-button") handlers.deleteTodo(parseInt(elementClicked.parentNode.id));
+            if (elementClicked.className === "delete-button") {
+                console.log("parseInt(elementClicked.parentNode.id)" + parseInt(elementClicked.parentNode.id));
+                handlers.deleteTodo(parseInt(elementClicked.parentNode.id));
+            }
         });
     }
 };
 
 view.displayTodos();
 view.setUpEventListeners();
-
-/*
-const userAction = async () => {
-    const response = await fetch('http://localhost:3000/todos');
-    const myJson = await response.json(); //extract JSON from the http response
-    console.log(myJson);
-};
-// userAction();
-
-const postTodo = async () => {
-    const response = await fetch('http://localhost:3000/todos', {
-        method: 'POST',
-        body: "some string", // string or object
-        headers: {
-            'Content-Type': 'application/json'
-        }
-    });
-    const myJson = await response.json(); //extract JSON from the http response
-    // do something with myJson
-};
-*/
-
-const get = (url, callback) => {
-    const xhr = new XMLHttpRequest();
-    xhr.open("GET", url);
-    xhr.send();
-    xhr.onreadystatechange = () => {
-        if (xhr.readyState === 4) {
-            if (xhr.status === 304) {
-                callback(JSON.parse(xhr.responseText));
-            } else {
-                console.log(":(");
-            }
-        }
-    }
-};
-
