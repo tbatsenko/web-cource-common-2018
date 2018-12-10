@@ -54,16 +54,19 @@
 
         render("email.handlebars", "email.json", ".gmail-main__emails");
         render("sidebar.handlebars", "sidebar.json", ".gmail-sidebar__menu");
-
-        $(".gmail-header__button--menu").on("click", function() {
-            if ($(".gmail-sidebar").hasClass("gmail-sidebar--min")) {
-                $(".gmail-sidebar").removeClass("gmail-sidebar--min");
-                $(".compose-button").removeClass("compose-button--min");
-            } else {
-                $(".gmail-sidebar").addClass("gmail-sidebar--min");
-                $(".compose-button").addClass("compose-button--min");
-            }
+        
+        $(document).ready(function() {
+            $(".gmail-header__button--menu").on("click", function() {
+                if ($(".gmail-sidebar").hasClass("gmail-sidebar--min")) {
+                    $(".gmail-sidebar").removeClass("gmail-sidebar--min");
+                    $(".compose-button").removeClass("compose-button--min");
+                } else {
+                    $(".gmail-sidebar").addClass("gmail-sidebar--min");
+                    $(".compose-button").addClass("compose-button--min");
+                }
+            });
         });
+       
     </script>
 </body>
 </html>

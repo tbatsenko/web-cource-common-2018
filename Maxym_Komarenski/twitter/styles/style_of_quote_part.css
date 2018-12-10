@@ -1,0 +1,11 @@
+.aside-quotes{
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 24px;
+    font-family: "Segoe UI",Arial,sans-serif;
+    color: white;
+}
+
+.quote-list{
+    list-style-type: none;
+}

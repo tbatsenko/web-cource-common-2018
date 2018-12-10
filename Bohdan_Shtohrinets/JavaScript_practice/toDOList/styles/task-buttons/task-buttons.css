@@ -1,0 +1,96 @@
+.input-task {
+    font-family: "Nunito", sans-serif;
+    background: inherit;
+    border: none;
+    border-bottom: 1px solid white;
+    color: white;
+    font-size: 18px;
+    margin: 0;
+    padding: 0;
+}
+
+.input-task_inactive {
+    display: none;
+}
+
+.input-task_add {
+    font-size: 16px;
+    width: 50%;
+    margin-right: 10px;
+}
+
+.buttons {
+    display: flex;
+    margin-left: auto;
+}
+
+.buttons_left {
+    margin-right: auto;
+}
+
+.buttons__add-task {
+    width: 30px;
+    height: 30px;
+}
+
+.buttons__add-task:before {
+    top: -3px;
+    left: 1px;
+    position: absolute;
+    color: white;
+    content: "+";
+    display: block;
+    width: 25px;
+    height: 25px;
+    font-size: 25px;
+}
+
+.buttons__edit {
+    margin-right: 10px;
+    width: 25px;
+    height: 25px;
+}
+
+.buttons__edit:before {
+    top: 4px;
+    left: 4.5px;
+    position: absolute;
+    color: white;
+    content: "";
+    display: block;
+    width: 13px;
+    height: 13px;
+    background-size: cover;
+    background: url("/images/edit.svg");
+}
+
+.buttons__delete {
+    width: 25px;
+    height: 25px;
+}
+
+.buttons__delete:before {
+    top: 4px;
+    left: 4.5px;
+    position: absolute;
+    color: white;
+    content: "";
+    display: block;
+    width: 13px;
+    height: 13px;
+    background-size: cover;
+    background: url("/images/trash.svg");
+}
+
+.buttons__checkbox {
+    width: 20px;
+    height: 20px;
+    margin-top: 3px;
+    margin-right: 10px;
+}
+
+.buttons__checkbox:active {
+    background-color: yellow;
+}
+
+/*# sourceMappingURL=task-buttons.css.map */

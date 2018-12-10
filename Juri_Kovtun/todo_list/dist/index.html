@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>todo</title>
+    <link rel="stylesheet/less" type="text/css" href="../style/common.less">
+    <link rel="stylesheet/less" type="text/css" href="../style/todo.less">
+    <link rel="stylesheet/less" type="text/css" href="../style/input-group.less">
+</head>
+<body>
+<div class="container">
+    <section class="todo">
+        <header class="header">
+            <h1 class="heading1">To Do List</h1>
+            <div class="input-group">
+                <input class="input-group__input" type="text" placeholder="what needs to be done? " autofocus>
+                <input class="input-group__addItem" type="submit" value="add item">
+            </div>
+        </header>
+
+        <section class="main">
+            <ul class="todo__list"></ul>
+        </section>
+
+        <footer class="footer">
+            <p class="text">Things to do</p>
+        </footer>
+
+    </section>
+</div>
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/less.js/3.7.1/less.min.js"></script>
+<!--<script src="../src/index.js"></script>-->
+<script src="main.js"></script>
+
+
+</body>
+</html>

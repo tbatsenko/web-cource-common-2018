@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <link rel="stylesheet" href="src/styles/style.css" />
+  <title>Todo List</title>
+</head>
+
+<body>
+  <div class="container">
+    <div class="card calendar-card">
+      <button class="btn calendar-btn" type="button" onclick="myCalendar.previous(); return false; " id="previous">
+        < </button> 
+      <button class="btn calendar-btn" type="button" id="next" onclick="myCalendar.next(); return false;"> >
+      </button>
+
+      <form class="form-inline">
+          <label class="lead mr-2 ml-2" for="month">Jump To: </label>
+          <select class="form-control col-sm-4" name="month" id="month" change="jump()">
+            <option value=0>Jan</option>
+            <option value=1>Feb</option>
+            <option value=2>Mar</option>
+            <option value=3>Apr</option>
+            <option value=4>May</option>
+            <option value=5>Jun</option>
+            <option value=6>Jul</option>
+            <option value=7>Aug</option>
+            <option value=8>Sep</option>
+            <option value=9>Oct</option>
+            <option value=10>Nov</option>
+            <option value=11>Dec</option>
+          </select>
+          <label for="year"></label><select name="year" id="year" change="jump()">
+            <option value=2018>2018</option>
+            <option value=2019>2019</option>
+            <option value=2020>2020</option>
+          </select>
+          <button class="btn calendar-btn" name="jump" onclick="myCalendar.jump()">Go</button>
+        </form>
+      <h3 class="card-header" id="monthAndYear"></h3>
+      
+      <table id="calendar">
+        <thead>
+          <tr>
+            <th>Sun</th>
+            <th>Mon</th>
+            <th>Tue</th>
+            <th>Wed</th>
+            <th>Thu</th>
+            <th>Fri</th>
+            <th>Sat</th>
+          </tr>
+        </thead>
+        <tbody id="calendar-body">
+        </tbody>
+      </table>
+    </div>
+    <div class="todo-list">
+      <!-- Add task -->
+      <div>
+        <button id="reset-date">Reset</button>
+        <h4 id="today-date"> Tasks for: </h4> 
+      </div>
+      <div class="button-container">
+        <input type="text" name="add-task" id="add-task" placeholder="What needs to be done?" />
+        <button class="btn" id="add-btn">Add</button>
+      </div>
+      <!-- To-Dos -->
+      <h3>TODOs</h3>
+      <ul id="todos"></ul>
+      <!-- Completed -->
+      <h3>Completed</h3>
+      <ul id="completed"></ul>
+    </div>
+  </div>
+  <script src="dist/index.js"></script>
+  <script src="dist/calendar.js"></script>
+  <script src="dist/todos.js"></script>
+  <script>
+  const serverURL = 'http://localhost:3000';
+  todoList = new TodoList(serverURL);
+  myCalendar = new Calendar(todoList);
+
+  </script>
+  <script>
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,25 @@
+.dino {
+    width: 88px;
+    height: 95px;
+    background: url(../assets/dino.png);
+    position: relative;
+    margin-top: -75px;
+    margin-left: 75px;
+
+    &--move {
+        animation: .2s steps(2) infinite;
+        @include animation-keyframes {
+            from { background-position: -176px; }
+              to { background-position: -352px; }
+        }
+    }
+    
+    &--jump {
+        animation: .9s ease 0s 1;
+        @include animation-keyframes {
+            50%  { transform: translateY(-160px); }
+            100% { transform: translateY(0); }
+        }
+    }
+}
+

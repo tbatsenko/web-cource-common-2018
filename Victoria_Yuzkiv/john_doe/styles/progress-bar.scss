@@ -1,0 +1,66 @@
+.column {
+  &__activity {
+    list-style-type: none;
+    padding: 0;
+
+    &--facebook {
+      background: #f4f4f6;
+      height: 40px;
+      width: 305px;
+      margin-bottom: 20px;
+      &:after {
+        content: 'Facebook';
+        color: #ffffff;
+        display: block;
+        background: #ac6b5c;
+        width: 80%;
+        height: 100%;
+      }
+    }
+
+    &--instagram {
+      background: #f4f4f6;
+      height: 40px;
+      width: 305px;
+      margin-bottom: 20px;
+      &:after {
+        content: 'Instagram';
+        color: #ffffff;
+        display: block;
+        background: #ac6b5c;
+        width: 55%;
+        height: 100%;
+      }
+    }
+
+    &--twitter {
+      background: #f4f4f6;
+      height: 40px;
+      width: 305px;
+      margin-bottom: 20px;
+      &:after {
+        content: 'Twitter';
+        color: #ffffff;
+        display: block;
+        background: #ac6b5c;
+        width: 30%;
+        height: 100%;
+      }
+    }
+
+    &--snapchat {
+      background: #f4f4f6;
+      height: 40px;
+      width: 305px;
+      margin-bottom: 20px;
+      &:after {
+        content: 'Snapchat';
+        color: #ffffff;
+        display: block;
+        background: #ac6b5c;
+        width: 75%;
+        height: 100%;
+      }
+    }
+  }
+}

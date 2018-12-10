@@ -1,0 +1,40 @@
+.calendar_container {
+  position: absolute;
+  bottom: 0;
+  left: 3em;
+  box-shadow: 1px 1px 8px lightgray;
+  z-index: 10;
+  background: white;
+}
+
+.calendar_table {
+  display: flex;
+  flex-flow: column;
+}
+
+.calendar_table__row {
+  display: flex;
+  flex-flow: row;
+}
+
+.calendar_table__cell {
+  width: 5em;
+  height: 3.5em;
+  margin: 1px;
+  background: lightcyan;
+}
+
+.calendar__btn {
+  float: right;
+  position: relative;
+  border: 0;
+  cursor: pointer;
+  font-weight: bolder;
+  background: white;
+}
+
+.calendar-header {
+  background: white;
+  height: 1.3em;
+  padding: 5px 3px 5px 20px;
+}

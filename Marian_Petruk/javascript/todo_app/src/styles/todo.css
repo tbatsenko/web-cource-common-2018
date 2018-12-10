@@ -1,0 +1,10 @@
+.todo-list {
+  width: 50vw;
+  height: 100vh;
+  background: #2980b9;
+}
+.todo-list__header {
+  text-align: center;
+}
+
+/*# sourceMappingURL=todo.css.map */

@@ -1,0 +1,74 @@
+.container {
+  display: flex;
+  flex-flow: column;
+  align-items: center; }
+  .container__header {
+    height: auto;
+    margin: 8px 0 17px 0; }
+    .container__header--text {
+      margin: 0;
+      font: bold 23px/40px "Agency FB"; }
+  .container__canvas {
+    box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.22);
+    width: 810px;
+    height: 540px;
+    background: #fff;
+    display: block;
+    margin: 0 auto; }
+    .container__canvas--text {
+      /*.hover_bkgr_fricc{
+        background:rgba(0,0,0,.4);
+        cursor:pointer;
+        display:none;
+        height:100%;
+        position:fixed;
+        text-align:center;
+        top:0;
+        width:100%;
+        z-index:10000;
+      }
+      .hover_bkgr_fricc .helper{
+        display:inline-block;
+        height:100%;
+        vertical-align:middle;
+      }
+      .hover_bkgr_fricc > div {
+        background-color: #fff;
+        box-shadow: 10px 10px 60px #555;
+        display: inline-block;
+        height: auto;
+        max-width: 551px;
+        min-height: 100px;
+        vertical-align: middle;
+        width: 60%;
+        position: relative;
+        border-radius: 8px;
+        padding: 15px 5%;
+      }
+      .popupCloseButton {
+        background-color: #fff;
+        border: 3px solid #999;
+        border-radius: 50px;
+        cursor: pointer;
+        display: inline-block;
+        font-family: arial;
+        font-weight: bold;
+        position: absolute;
+        top: -20px;
+        right: -20px;
+        font-size: 25px;
+        line-height: 30px;
+        width: 30px;
+        height: 30px;
+        text-align: center;
+      }
+      .popupCloseButton:hover {
+        background-color: #ccc;
+      }*/
+      cursor: pointer;
+      font-size: 20px;
+      margin: 20px;
+      display: inline-block;
+      font-weight: bold; }
+
+/*# sourceMappingURL=common.css.map */

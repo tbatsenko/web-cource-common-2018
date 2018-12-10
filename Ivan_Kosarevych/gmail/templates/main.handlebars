@@ -30,40 +30,67 @@
         {{/each}}
     {{/top-bar}}
 </header>
+<aside>
+    {{#left-bar}}
+        {{#compose-button}}
+            <button>
+                <img src="{{icon-source}}" alt="">
+                <span>{{text}}</span>
+            </button>
+        {{/compose-button}}
+        <nav>
+            {{#each navigation}}
+                <a href="{{this.url}}">
+                    <i>{{this.icon-source}}</i>
+                    <span></span>{{this.text}}
+                </a>
+            {{/each}}
+        </nav>
+    {{/left-bar}}
+</aside>
 <main>
-    <aside>
-        {{#left-bar}}
-            {{#compose-button}}
-                <button>
-                    <img src="{{icon-source}}" alt="">
-                    <span>{{text}}</span>
-                </button>
-            {{/compose-button}}
-            <nav>
-                {{#each navigation}}
-                    <a href="{{this.url}}">
-                        <i >{{this.icon-source}}</i>
-                        <span></span>{{this.text}}
-                    </a>
-                {{/each}}
-            </nav>
-        {{/left-bar}}
-    </aside>
-    <section>
-        {{#central-bar}}
+    {{#central-bar}}
         <header>
             {{#header}}
                 <nav>
                     {{#left-navigation}}
-
+                        <div>
+                            {{#select-button}}
+                                <button><i class="material-icons">{{.}}</i></button>
+                            {{/select-button}}
+                        </div>
+                        <div>
+                            {{#other-buttons}}
+                                <button><i class="material-icons">{{.}}</i></button>
+                            {{/other-buttons}}
+                        </div>
                     {{/left-navigation}}
                 </nav>
                 <nav>
                     {{#right-navigation}}
+                        <button><span>{{msg-filter-text}}</span></button>
+                        {{#other-buttons}}
+                            <button><i class="material-icons">{{.}}</i></button>
+                        {{/other-buttons}}
                     {{/right-navigation}}
                 </nav>
             {{/header}}
         </header>
-        {{/central-bar}}
-    </section>
+        <section>
+            {{#feed}}
+                <a href="#">
+                    <aside>
+                        {{#control-buttons}}
+                            <button><i class="material-icons">{{.}}</i></button>
+                        {{/control-buttons}}
+                    </aside>
+                    <address>
+                        <span>{{author}}</span>
+                        <time datetime="{{datetime.time}}">{{datetime.text}}</time>
+                    </address>
+                    <p>{{text}}</p>
+                </a>
+            {{/feed}}
+        </section>
+    {{/central-bar}}
 </main>

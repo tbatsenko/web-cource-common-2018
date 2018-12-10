@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <link rel="stylesheet" href="styles/common.css">
+    <link rel="stylesheet" href="styles/brief-resume/brief-resume.css">
+    <link rel="stylesheet" href="styles/resume/resume.css">
+
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,600" rel="stylesheet">
+
+    <title>Jane Doe</title>
+</head>
+<body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.12/handlebars.js"></script>
+<script>
+    const render = async (templateURL, dataURL, container) => {
+        const source = await (await fetch(templateURL)).text();
+        const template = Handlebars.compile(source);
+        const data = await (await fetch(dataURL)).json();
+        container.innerHTML = template(data)
+    };
+    render('templates/main.hbs', 'data/data.json', document.body)
+</script>
+</body>
+</html>

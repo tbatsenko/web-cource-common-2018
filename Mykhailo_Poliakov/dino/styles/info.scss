@@ -1,0 +1,18 @@
+
+.info {
+    width: 100%;
+    border: 0;
+    outline: 0;
+    background: transparent;
+    text-align: center;
+    margin-top: 100px;
+    font-family: "Press Start 2P", cursive;
+    font-size: 24px;
+    color: #020202;
+    font-weight: normal;
+    
+    &--hidden {
+        visibility: hidden;
+    }
+}
+

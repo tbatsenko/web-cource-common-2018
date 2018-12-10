@@ -1,0 +1,31 @@
+$font: 'Nunito', sans-serif;
+
+.todo-list {
+  max-width: 500px;
+  min-width: 320px;
+  margin: 0 auto;
+  background: #353839;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  font-family: $font;
+
+  &__header {
+    padding: 10px;
+    border-bottom: 1px solid #F1C40F;
+  }
+
+  &__title {
+    padding: 0;
+    margin: 0;
+    color: #F1C40F;
+  }
+}
+
+#completed .buttons__checkbox {
+  background-color: #F1C40F;
+}
+
+#completed .task__name {
+  text-decoration: line-through;
+}
