@@ -179,6 +179,11 @@ function addTask() {
     let enteredMonthObject = document.getElementById("month").value;
     let enteredYearObject = document.getElementById("year-options").value;
     // var cellsWithTasks = {"30-12-2018": "sdfsfsdf"};
-    cellsWithTasks[enteredDayObject + "-" + enteredMonthObject + "-" + enteredYearObject] = enteredText;
+    if (cellsWithTasks[enteredDayObject + "-" + enteredMonthObject + "-" + enteredYearObject]){
+        cellsWithTasks[enteredDayObject + "-" + enteredMonthObject + "-" + enteredYearObject] += "\n" + enteredText;
+    } else {
+        cellsWithTasks[enteredDayObject + "-" + enteredMonthObject + "-" + enteredYearObject] = enteredText;
+    }
+
 
 }
