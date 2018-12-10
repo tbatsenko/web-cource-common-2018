@@ -1,0 +1,46 @@
+{
+  "todo": [
+    {
+      "text": "vasiko",
+      "completed": true,
+      "date": "2018-12-09",
+      "id": 1
+    },
+    {
+      "text": "vasiko",
+      "completed": true,
+      "date": "2018-12-05",
+      "id": 1
+    },
+    {
+      "text": "asd",
+      "completed": false,
+      "date": "2019-12-10",
+      "id": 2
+    },
+    {
+      "text": "vasiko",
+      "completed": true,
+      "date": "2018-12-09",
+      "id": 3
+    },
+    {
+      "text": "asd",
+      "completed": false,
+      "date": "2019-12-10",
+      "id": 4
+    },
+    {
+      "text": "vasiko",
+      "completed": true,
+      "date": "2018-12-09",
+      "id": 5
+    },
+    {
+      "text": "asd",
+      "completed": false,
+      "date": "2019-12-10",
+      "id": 6
+    }
+  ]
+}
