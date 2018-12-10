@@ -7,7 +7,7 @@ let obs_speed = 1.1;
 let ground_speed = 5.5;
 let cloud_speed = 0.4;
 let score = 0;
-let high_score = 0;
+let high_score = localStorage.getItem("high_score") === null ? 0 : localStorage.getItem("high_score");
 let div_game_field;
 let div_game_field_ground;
 let elem;
@@ -18,6 +18,7 @@ let cloud_position = 0;
 let min_distance1 = 180;
 let min_distance2 = 360;
 renderGame();
+
 
 function renderGame() {
     document.body.innerHTML = '';
@@ -134,7 +135,10 @@ function checkDeath(obs) {
         if (obs_coordinates.top < dino_coordinates.bottom && obs_coordinates.bottom > dino_coordinates.top){
             gameOver();
             alert("GAME OVER, loser\nYour score: " + score + "\nPress ENTER");
-            high_score = high_score < score ? score : high_score;
+            if (score > high_score){
+                localStorage.setItem('high_score', score);
+                high_score = localStorage.getItem('high_score')
+            }
             renderGame();
             return true
         }

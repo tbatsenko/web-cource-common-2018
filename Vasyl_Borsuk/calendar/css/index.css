@@ -1,0 +1,123 @@
+.calendar {
+  color: #ecf0f1;
+  display: flex;
+  width: 300px;
+  height: 300px;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+  border: 1px solid #ecf0f1;
+}
+.calendar--header {
+  display: flex;
+  width: 100%;
+  height: 50px;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  margin: 0;
+  border: none;
+  box-sizing: border-box;
+  flex-shrink: 0;
+}
+.calendar--main {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding: 0;
+  margin: 0;
+  border: none;
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+}
+.calendar--month-name {
+  display: flex;
+  width: 200px;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+  font-size: 20px;
+  color: inherit;
+}
+.calendar--week-line {
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+.calendar--day, .calendar--weekday, .calendar--button {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+  background: transparent;
+  border: none;
+  outline: none;
+  color: inherit;
+}
+.calendar--button {
+  font-size: 24px;
+  cursor: pointer;
+  width: 50px;
+  height: 30px;
+}
+.calendar--day, .calendar--weekday {
+  font-size: 16px;
+  width: 39px;
+  height: 32.5px;
+}
+.calendar--day {
+  cursor: pointer;
+}
+.calendar--day:hover {
+  background-color: #5e5a59;
+}
+.calendar--day__active {
+  border: 2px solid #3498db;
+}
+.calendar--day__passive {
+  color: #95a5a6;
+}
+
+.todo-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #ecf0f1;
+  width: 300px;
+  height: 300px;
+  margin: 0;
+  padding: 0;
+  border: 1px solid #ecf0f1;
+}
+
+html, body {
+  padding: 0;
+  margin: 0;
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.pretty-body-for-presentation {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 1000px;
+  height: 500px;
+  border-radius: 8px;
+  background: #2c3e50;
+}
+
+/*# sourceMappingURL=index.css.map */

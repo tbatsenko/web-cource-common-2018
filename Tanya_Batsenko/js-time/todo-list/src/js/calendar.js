@@ -1,15 +1,25 @@
+import { TodoList } from './todo-list';
+
 export class Calendar {
-  constructor() {
+  constructor(todoList = new TodoList()) {
     this.today = new Date();
     this.currentMonth = this.today.getMonth();
     this.currentYear = this.today.getFullYear();
     this.selectYear = document.getElementById("year");
     this.selectMonth = document.getElementById("month");
 
+    this.todoList = todoList;
+
     this.months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
     this.monthAndYear = document.getElementById("monthAndYear");
 
+    document.getElementById('reset-date').addEventListener('click', () => {
+      this.updateShownDate();
+      this.todoList.updateTodoList();
+    });
+
     this.showCalendar(this.currentMonth, this.currentYear);
+    this.updateShownDate();
   }
 
   next() {
@@ -32,6 +42,19 @@ export class Calendar {
     this.showCalendar(this.currentMonth, this.currentYear);
   }
 
+  updateShownDate(date = "") { 
+    let innerText = "";
+    if (date === "") {
+      innerText = "All tasks:";
+    }
+    else { 
+      const dateArr = date.split('-'); // 2018-11-9 -> [2018, 11, 9]
+      // Dec 9, 2018
+      date = `${this.months[dateArr[1]]} ${dateArr[2]}, ${dateArr[0]}`;
+      innerText = "Tasks for " + date;
+    }
+    document.getElementById("today-date").innerText = innerText;
+  }
   showCalendar(month, year) {
     let firstDay = (new Date(year, month)).getDay();
     let daysInMonth = 32 - new Date(year, month, 32).getDate();
@@ -66,14 +89,23 @@ export class Calendar {
           // cells with numbers
           let cell = document.createElement("td");
           let cellText = document.createTextNode(date);
+          cell.id = `${year}-${month}-${date}`;
 
             if (date === this.today.getDay()) { 
-                cell.classList.add("today-cell");
+              cell.classList.add("today-cell");
+
 
             }
           cell.classList.add("day-cell");
 
-          cell.addEventListener('click', event => console.log(event));
+          cell.addEventListener('click', event => { 
+            console.log(event.target.id);
+            let filterByDate = event.target.id;
+
+            this.updateShownDate(filterByDate);
+            this.todoList.updateTodoList(filterByDate);
+
+          });
           if (date === this.today.getDate() && year === this.today.getFullYear() && month === this.today.getMonth()) {
             cell.classList.add("bg-info");
           } // color today's date

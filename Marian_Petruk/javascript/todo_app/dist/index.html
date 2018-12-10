@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+    <title>To-do app</title>
+</head>
+<body>
+<article class="todo-list-wrapper">
+    <h2 class="todo-list-wrapper__header">To-Do List</h2>
+    <div class="todo-list" aria-label="todo-list block">
+        <input type="text" id="input" placeholder="What needs to be done?">
+        <ul id="todo-list__list"></ul>
+    </div>
+</article>
+<article class="calendar-wrapper">
+    <h2 class="calendar-wrapper__header">Calendar</h2>
+    <div id="calendar" class="calendar" aria-label="calendar block"></div>
+    <p class="calendar-wrapper__date-picked">Date picked: <span data-calendar-label="picked"></span>
+    </p>
+</article>
+<script src="main.js"></script>
+</body>
+</html>

@@ -1,8 +1,7 @@
 .day-of-week-header-row {
   display: flex; }
-
-.day-of-week-header-item {
-  width: 36px; }
+  .day-of-week-header-row__item {
+    width: 36px; }
 
 .week-row {
   display: flex;
@@ -41,16 +40,5 @@
 .year {
   display: flex;
   justify-content: center; }
-  .year__button {
-    border: 0;
-    width: 38px;
-    height: 21px;
-    padding: 0;
-    background: var(--background-color);
-    color: var(--contrast-letter-color);
-    cursor: pointer; }
-  .year__button:hover {
-    background: var(--contrast-letter-color);
-    color: var(--background-color); }
 
 /*# sourceMappingURL=calendar.css.map */

@@ -52,9 +52,10 @@ li button {
   width: 320px;
   text-align: center;
 }
-
-.btn {
+.calendar-btn {
   color: white;
+}
+.btn {
   width: 40px;
   height: 30px;
   margin: 0;
@@ -109,5 +110,11 @@ td:hover {
 }
 
 .today-date {
+
+}
+
+.todo__completed {
+
+  text-decoration: line-through;
 
 }

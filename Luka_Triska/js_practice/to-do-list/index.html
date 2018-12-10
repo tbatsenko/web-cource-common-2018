@@ -5,11 +5,12 @@
     <title>Practical JS</title>
     <link rel="stylesheet" href="styles/common.css">
     <link rel="stylesheet" href="styles/calendar.css">
+    <link rel="stylesheet" href="styles/to-do-list.css">
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700" rel="stylesheet">
 </head>
 <body>
 
-<main class="container">
+<main class="main-container">
 
     <table>
         <caption><h2>Calendar</h2></caption>
@@ -30,45 +31,29 @@
             </td>
         </tr>
         <tr class="day-of-week-header-row">
-            <th scope="col" headers="day" class="day-of-week-header-item">mon</th>
-            <th scope="col" headers="day" class="day-of-week-header-item">tue</th>
-            <th scope="col" headers="day" class="day-of-week-header-item">wed</th>
-            <th scope="col" headers="day" class="day-of-week-header-item">thu</th>
-            <th scope="col" headers="day" class="day-of-week-header-item">fri</th>
-            <th scope="col" headers="day" class="day-of-week-header-item">sat</th>
-            <th scope="col" headers="day" class="day-of-week-header-item">sun</th>
+            <th scope="col" headers="day" class="day-of-week-header-row__item">mon</th>
+            <th scope="col" headers="day" class="day-of-week-header-row__item">tue</th>
+            <th scope="col" headers="day" class="day-of-week-header-row__item">wed</th>
+            <th scope="col" headers="day" class="day-of-week-header-row__item">thu</th>
+            <th scope="col" headers="day" class="day-of-week-header-row__item">fri</th>
+            <th scope="col" headers="day" class="day-of-week-header-row__item">sat</th>
+            <th scope="col" headers="day" class="day-of-week-header-row__item">sun</th>
         </tr>
         </thead>
-        <tbody id="table-body" class="table-body">
+        <tbody id="table-body">
         </tbody>
     </table>
 
-<section class="todo-container">
-    <h1 class="header">Todo List</h1>
+    <section class="todo__container">
+        <h2>Todo List</h2>
 
-    <button onclick="handlers.toggleAll()">Toggle All</button>
+        <form onsubmit="handlers.addTodo();return false;">
+            <input class="container__add-todo-input" type="text"
+                   placeholder="Type a todo...">
+        </form>
 
-    <section class="change-todo-text">
-        <input type="number" class="change-todo-index-input">
-        <input type="text" class="change-todo-text-input" placeholder="New todo text">
-        <button onclick="handlers.changeTodo()">Change Todo</button>
+        <ul></ul>
     </section>
-
-    <section class="toggle-todo">
-        <input type="number" class="toggle-todo-index-input">
-        <button onclick="handlers.toggleCompleted()">Toggle Todo</button>
-    </section>
-
-    <section class="add-todo">
-        <input class="add-todo-input" type="text" placeholder="Type a todo...">
-        <button onclick="handlers.addTodo()">Add</button>
-    </section>
-
-    <ul class="todo-display">
-
-    </ul>
-
-</section>
 
 </main>
 
