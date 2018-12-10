@@ -2,9 +2,15 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="google-signin-client_id" content="248666754332-0ipq7di1t9ogps8mi4le5vvl3ipqhagn.apps.googleusercontent.com">
     <title>Title</title>
     <link rel="stylesheet" href="../css/login/all-css.css">
+    <script src="../js/login/fb_init.js" async></script>
+    <script src="https://apis.google.com/js/platform.js"  defer></script>
+    <script src="../js/login/google_login.js" defer></script>
+
 </head>
+
 <body>
 <main class="main-container">
     <section class="left-side introduction_blue introduction-text-container">
@@ -29,7 +35,15 @@
             <h2 class="heading_text_minor segoe_black">Присоединяйтесь к Твиттеру прямо<br> сейчас!</h2>
 
             <button class="registration_button segoe_white button_round">Зарегестрироватся</button>
-            <button  class="enter_button segoe_blue button_round">Войти</button>
+            <button  class="enter_button segoe_blue button_round" data-onsuccess="onSignIn">Войти</button>
+            <div class="g-signin2" data-onsuccess="onSignIn"></div>
+            <a href="#" onclick="onSignOut();">Sign out</a>
+
+            <div id="status"></div>
+            <!-- <button onclick="getInfo()">Get Info</button> -->
+            <button onclick="fb_login()">login</button>
+            <button onclick="fb_logout()">logout</button>
+
 
         </section>
     </section>

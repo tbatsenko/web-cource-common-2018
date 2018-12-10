@@ -12,8 +12,9 @@
 <body>
   <div class="container">
     <div class="card calendar-card">
-      <button class="btn" type="button" onclick="myCalendar.previous(); return false; " id="previous">
-        < </button> <button class="btn" type="button" id="next" onclick="myCalendar.next(); return false;"> >
+      <button class="btn calendar-btn" type="button" onclick="myCalendar.previous(); return false; " id="previous">
+        < </button> 
+      <button class="btn calendar-btn" type="button" id="next" onclick="myCalendar.next(); return false;"> >
       </button>
 
       <form class="form-inline">
@@ -37,7 +38,7 @@
             <option value=2019>2019</option>
             <option value=2020>2020</option>
           </select>
-          <button class="btn" name="jump" onclick="myCalendar.jump()">Go</button>
+          <button class="btn calendar-btn" name="jump" onclick="myCalendar.jump()">Go</button>
         </form>
       <h3 class="card-header" id="monthAndYear"></h3>
       
@@ -60,7 +61,8 @@
     <div class="todo-list">
       <!-- Add task -->
       <div>
-        <h4 id="today-date"> Today is</h4>
+        <button id="reset-date">Reset</button>
+        <h4 id="today-date"> Tasks for: </h4> 
       </div>
       <div class="button-container">
         <input type="text" name="add-task" id="add-task" placeholder="What needs to be done?" />
@@ -71,6 +73,7 @@
       <ul id="todos"></ul>
       <!-- Completed -->
       <h3>Completed</h3>
+      <ul id="completed"></ul>
     </div>
   </div>
   <script src="dist/index.js"></script>
@@ -78,10 +81,8 @@
   <script src="dist/todos.js"></script>
   <script>
   const serverURL = 'http://localhost:3000';
-  myCalendar = new Calendar();
   todoList = new TodoList(serverURL);
-
-  document.getElementById("today-date").innerText = "Today is " + myCalendar.today;
+  myCalendar = new Calendar(todoList);
 
   </script>
   <script>

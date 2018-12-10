@@ -1,0 +1,151 @@
+.calendar_container {
+  position: absolute;
+  bottom: 0;
+  left: 3em;
+  box-shadow: 1px 1px 8px lightgray;
+  z-index: 10;
+  background: white; }
+
+.calendar_table {
+  display: flex;
+  flex-flow: column; }
+
+.calendar_table__row {
+  display: flex;
+  flex-flow: row; }
+
+.calendar_table__cell {
+  width: 5em;
+  height: 3.5em;
+  margin: 5px;
+  box-shadow: 0 0 6px 0px lightgray;
+  padding: 1px 5px;
+  box-sizing: border-box;
+  color: #444;
+  cursor: pointer; }
+  .calendar_table__cell_empty {
+    box-shadow: none; }
+  .calendar_table__cell_active {
+    font-weight: bolder;
+    border: 1px solid grey; }
+
+.calendar-subheader {
+  display: flex;
+  justify-content: space-around;
+  padding: 8px 0;
+  font-size: 13px;
+  color: #aaa; }
+
+.calendar__btn {
+  position: relative;
+  border: 0;
+  cursor: pointer;
+  font-weight: bolder;
+  background: transparent; }
+  .calendar__btn_shift-right, .calendar__btn_shift-left, .calendar__btn_shift-right, .calendar__btn_hide-calendar {
+    float: right; }
+
+.calendar-header {
+  background: white;
+  height: 1.3em;
+  padding: 5px 3px 5px 20px;
+  box-shadow: 0px 2px 2px #ddd; }
+
+.form-create-task__btn {
+  background: transparent;
+  border-width: 0;
+  font-size: 30px;
+  color: lightgray; }
+
+.form-create-task__input {
+  border: 0;
+  width: 100%;
+  font-size: 17px;
+  height: 30px;
+  background: transparent;
+  padding: 10px 0; }
+
+.form-new-task {
+  padding: 0;
+  height: auto; }
+
+.form-new-task__container {
+  padding: 1em 2em;
+  display: flex;
+  align-items: center;
+  justify-content: space-between; }
+
+.input-filter-header {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  box-shadow: 0px 0px 11px lightgray;
+  background: white; }
+
+.task__text {
+  border: 0;
+  padding: 0;
+  width: 100%;
+  margin: 0 0 0 10px;
+  background: transparent; }
+
+.task__timestamp {
+  border: 1px solid darkred;
+  border-radius: 23px;
+  font-size: 13px;
+  color: darkred;
+  padding: 0 10px;
+  line-height: 18px; }
+
+.todo-filter__btn {
+  grid-row-start: 1;
+  padding: 5px 0;
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+  border-radius: 4em;
+  margin: 0 16px;
+  box-shadow: 0px 0px 10px 1px #ddd; }
+
+.todo-filter {
+  display: grid;
+  padding: 1em 0; }
+
+.task__delete-button {
+  background: transparent;
+  width: 4em;
+  padding: 0;
+  margin: 0;
+  opacity: .5;
+  border: 0;
+  cursor: pointer; }
+
+.tasks-container {
+  list-style: none;
+  margin: 0;
+  padding: 0; }
+
+.task {
+  align-items: center;
+  padding: 8px 0;
+  cursor: pointer;
+  height: 30px;
+  border-bottom: 1px inset lightgray;
+  line-height: 30px;
+  display: flex; }
+
+body {
+  margin: 0;
+  font-family: Ubuntu, serif;
+  color: #444; }
+
+.placeholder {
+  margin: auto;
+  width: 50em;
+  box-shadow: lightgray 0 0 10px;
+  height: 100vh;
+  overflow: auto;
+  box-sizing: border-box; }
+
+.content {
+  padding: .5em 1em 0em 2em; }

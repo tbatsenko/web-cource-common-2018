@@ -1,0 +1,16 @@
+.button_view {
+  margin: 15px auto 0 auto;
+  display: block;
+  padding: 5px 15px;
+  border-radius: 10px;
+  font-size: 1.25em;
+  background: black;
+  color: white;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  &:hover {
+    color: black;
+    background: white;
+  }
+}
