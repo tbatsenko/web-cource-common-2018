@@ -92,7 +92,7 @@ function createCalendar(d) {
     for (let j = 0; j <= 6; j++) {
         headerRow.cells[j].textContent = weekDayNames[j];
     }
-    tasksCreator(d.innerText, d.getMonth(), d.getFullYear(), monthDays);
+    tasksCreator(d.getDate(), d.getMonth(), d.getFullYear(), monthDays);
 }
 
 function showTasks(cell, month, year) {
@@ -107,10 +107,6 @@ function showTasks(cell, month, year) {
     } else {
         box.innerText = "No tasks for " + cell.innerText + "-" + month + "-" + year;
     }
-
-
-    // "tasks"
-
 }
 
 function tasksCreator(day, month, year, monthDays) {
@@ -126,19 +122,21 @@ function tasksCreator(day, month, year, monthDays) {
         yearsOptions.push(i);
     }
 
-//Create and append select list
     var daysSelectList = document.createElement("select");
     var monthSelectList = document.createElement("select");
     var yearSelectList = document.createElement("select");
 
     tasksCreator.appendChild(daysSelectList);
     daysSelectList.id = "day";
+
     for (var i = 0; i < monthDaysOptions.length; i++) {
         let option = document.createElement("option");
         option.value = monthDaysOptions[i];
         option.text = monthDaysOptions[i];
         daysSelectList.appendChild(option);
     }
+    console.log(day);
+    daysSelectList.options[day - 1].selected =true;
 
     tasksCreator.appendChild(monthSelectList);
     monthSelectList.id = "month";
@@ -148,6 +146,7 @@ function tasksCreator(day, month, year, monthDays) {
         option.text = monthOptions[i];
         monthSelectList.appendChild(option);
     }
+    monthSelectList.options[month].selected = true;
 
     tasksCreator.appendChild(yearSelectList);
     yearSelectList.id = "year-options";
@@ -157,7 +156,8 @@ function tasksCreator(day, month, year, monthDays) {
         option.text = yearsOptions[i];
         yearSelectList.appendChild(option);
     }
-
+    console.log(typeof year);
+    yearSelectList.options[yearsOptions.indexOf(year)].selected = true;
 
 
     var inputBox = document.createElement("INPUT");
@@ -169,7 +169,6 @@ function tasksCreator(day, month, year, monthDays) {
     var button = document.createElement("button");
     button.innerText = "Add task";
     button.onclick = function () {
-        // var enteredDay = enteredDayObject.options[enteredDayObject.selectedIndex].text;
         addTask();
     };
     tasksCreator.appendChild(button);
@@ -181,7 +180,7 @@ function addTask() {
     let enteredMonthObject = document.getElementById("month").value;
     let enteredYearObject = document.getElementById("year-options").value;
     // var cellsWithTasks = {"30-12-2018": "sdfsfsdf"};
-    if (cellsWithTasks[enteredDayObject + "-" + enteredMonthObject + "-" + enteredYearObject]){
+    if (cellsWithTasks[enteredDayObject + "-" + enteredMonthObject + "-" + enteredYearObject]) {
         cellsWithTasks[enteredDayObject + "-" + enteredMonthObject + "-" + enteredYearObject] += "\n" + enteredText;
     } else {
         cellsWithTasks[enteredDayObject + "-" + enteredMonthObject + "-" + enteredYearObject] = enteredText;
