@@ -204,5 +204,7 @@ add_button.addEventListener("click", () => {
 
 todo_section = document.getElementById("todo")
 todo_section.addEventListener("click", (e) => {
-  todo.remove(e.target.id - 100)
+  if(!isNaN(parseInt(e.target.id))){
+    todo.remove(e.target.id - 100)
+  }
 })
