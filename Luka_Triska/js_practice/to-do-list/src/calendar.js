@@ -11,10 +11,6 @@ const days = {
 
 let currMonth = new Date().getMonth();
 
-
-
-// console.log(new Date(2018, currMonth-1).getDate());
-
 let viewCalendar = {
     displayCalendar: function (currDate) {
 

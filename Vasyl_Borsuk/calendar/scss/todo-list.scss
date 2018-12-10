@@ -1,0 +1,14 @@
+@import "colors";
+@import "variables";
+
+.todo-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: $font-color;
+  width: $todo-list-width;
+  height: $todo-list-height;
+  margin: 0;
+  padding: 0;
+  border: 1px solid $calendar-border-color;
+}

@@ -1,0 +1,28 @@
+@import "calendar";
+@import "todo-list";
+@import "colors";
+
+
+html, body {
+  padding: 0;
+  margin: 0;
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.pretty-body-for-presentation {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 1000px;
+  height: 500px;
+  border-radius: 8px;
+  background: $calendar-background-color;
+}
