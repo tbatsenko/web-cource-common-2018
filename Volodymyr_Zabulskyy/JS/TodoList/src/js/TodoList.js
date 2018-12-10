@@ -1,9 +1,11 @@
 import TodoItem from './TodoItem'
+import {compareDayMonthYear}from './utils'
 
 class TodoList {
-    constructor(container, form, input) {
+    constructor(container, form, input, calendar) {
         this.form = form;
         this.inputForm = input;
+        this.calendar = calendar;
         this.form.addEventListener('submit', (e) => {
             e.preventDefault();
             const text = this.inputForm.value;
@@ -20,7 +22,8 @@ class TodoList {
         this.filters = {
             'all': (elem) => true,
             'done': (elem) => elem.done,
-            'active': (elem) => !elem.done
+            'active': (elem) => !elem.done,
+            'date': (elem) => compareDayMonthYear(this.calendar.today, elem.date)
         };
         this.removeFilters = {
             'done': (elem) => elem.done
@@ -33,7 +36,7 @@ class TodoList {
         content.setAttribute('class', 'tasks-container');
         for (let elem in this.todoItems) {
             if (this.filters[this.currentFilter](this.todoItems[elem])) {
-                content.appendChild(this.todoItems[elem].htmlElem);
+                content.appendChild(this.todoItems[elem].render());
             }
         }
         this.container.removeChild(this.htmlElem);
@@ -77,7 +80,7 @@ class TodoList {
 
 
     addTodo(text) {
-        let newItem = new TodoItem(text, this);
+        let newItem = new TodoItem(text, this, this.calendar.today);
         this.todoItems.unshift(newItem);
         this.htmlElem.insertBefore(newItem.htmlElem, this.htmlElem.firstChild);
     };
