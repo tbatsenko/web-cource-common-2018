@@ -1,0 +1,160 @@
+.game-field{
+    height: 150px;
+    width: 600px;
+    display: flex;
+    position: relative;
+
+    margin: 30px auto;
+    overflow: hidden;
+}
+
+.game-field__ground{
+    height: 13px;
+    width: 600px;
+    align-self: flex-end;
+    background: url("assets/offline-sprite-2x.png") repeat;
+    background-size: 1202px 65px;
+    animation: ground-move infinite;
+    animation-duration: 5.5s;
+    animation-timing-function: linear;
+}
+
+
+.game-field__dino{
+    height: 42px;
+    /*width: 42px;*/
+    width: 42px;
+    position: absolute;
+    /*background: red url("assets/default_200_percent/200-error-offline.png") repeat;-38*/
+    background: url("assets/offline-sprite-2x.png") repeat;
+    /*background-position: -932px -4px;*/
+    animation: dino-run 1s infinite;
+    background-size: 1202px 65px;
+    margin-left: 60px;
+    align-self: flex-end;
+    overflow: hidden;
+}
+
+
+
+.game-field__obstacle{
+    position: absolute;
+    align-self: flex-end;
+    right: -35px;
+    /*animation: obstacle-move 3s;*/
+    /*animation-timing-function: linear;*/
+}
+
+.game-field__obstacle__cactus3 {
+    height: 44px;
+    width: 49px;
+    background: url("assets/offline-sprite-2x.png") repeat -426px -2px;
+    background-size: 1202px 65px;
+}
+
+.game-field__obstacle__cactus2 {
+    height: 34px;
+    width: 15px;
+    background: url("assets/offline-sprite-2x.png") repeat -224px -2px;
+    background-size: 1202px 65px;
+}
+
+.game-field__obstacle__cactus1 {
+    height: 44px;
+    width: 23px;
+    background: url("assets/offline-sprite-2x.png") repeat -377px -2px;
+    background-size: 1202px 65px;
+}
+
+.game-field__obstacle__bird {
+    height: 29px;
+    width: 41px;
+    background: url("assets/offline-sprite-2x.png") repeat;
+    background-size: 1202px 65px;
+    animation: bird-fly 0.5s infinite;
+}
+
+.game-field__obstacle__bird__second{
+    bottom: 48px;
+}
+
+.game-field__obstacle__bird__first{
+    bottom: 29px;
+}
+
+.game-field__failure-text{
+    font-size: 300%;
+    margin: auto;
+}
+
+.game-field__score-text{
+    right: 5px;
+    position: absolute;
+    font-weight: bold;
+    font-size: 120%;
+    color: gray;
+    font-family: Bungee, monospace;
+}
+
+.game-field__clouds{
+    position: absolute;
+    align-self: flex-end;
+    right: -35px;
+    z-index: -1;
+    height: 15px;
+    width: 47px;
+    background: url("assets/offline-sprite-2x.png") repeat -82px 0;
+    background-size: 1202px 65px;
+
+}
+
+@keyframes obstacle-move {
+    0%{
+        right: -35px;
+    }
+    100% {
+        right: 600px;
+    }
+}
+
+
+@keyframes ground-move {
+    0%{
+        background-position: 600px -52px;
+    }
+    100% {
+        background-position: -602px -52px;
+    }
+}
+
+
+@keyframes dino-dash {
+    0%, 49.99%, 100% {
+        background-position: -992px -18px;
+    }
+    50%, 99.999% {
+        background-position: -933px -18px;
+    }
+}
+
+
+@keyframes bird-fly {
+    0%, 49.99%, 100% {
+        background-position: -178px -3px;
+    }
+    50%, 99.999% {
+        background-position: -132px -9px;
+    }
+}
+
+@keyframes dino-run {
+    0%, 33.999%, 100% {
+        background-position: -670px -4px;
+    }
+    34%, 66.999%{
+        background-position: -758px -4px;
+    }
+    67%, 99.999%{
+        background-position: -802px -4px;
+    }
+}

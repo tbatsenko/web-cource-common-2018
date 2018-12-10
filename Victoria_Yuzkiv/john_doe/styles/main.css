@@ -1,50 +1,191 @@
 @import url("https://fonts.googleapis.com/css?family=Montserrat:400,400i,700");
-@import "typography.css";
-@import "characteristics.css";
-@import "feelings.css";
-@import "progress-bar.css";
-@import "personality.css";
+h1 {
+  font-size: 97px;
+  color: #ffffff;
+  font-weight: bold;
+}
+h1 sub {
+  font-size: 0.2em;
+  display: block;
+  opacity: 0.6;
+  text-transform: uppercase;
+}
 
-html,
-body {
-    font-family: Montserrat, sans-serif;
-    margin: 0;
-    padding: 0;
-    font-size: 22px;
-    display: flex;
-    align-items: center;
-    justify-content: center
+h3 {
+  font-size: 1.1em;
+  color: #181818;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+q, blockquote {
+  text-align: center;
+  font-style: italic;
+  color: #ffffff;
+  text-shadow: 0 1px 4px rgba(72, 72, 72, 0.5);
+  margin: 0;
+}
+
+q, blockquote:before, q, blockquote:after {
+  content: '"';
+}
+
+ul li {
+  color: #ac6b5c;
+}
+ul li span {
+  color: black;
+}
+
+.column__title {
+  font-size: 1.1em;
+  font-weight: bold;
+  line-height: 1.5em;
+  color: #202020;
+  float: left;
+  clear: left;
+  text-transform: uppercase;
+}
+.column__value {
+  color: #181818;
+  line-height: 1.5em;
+  float: right;
+  clear: right;
+}
+
+.column__feelings {
+  list-style-type: none;
+  display: ruby-text-container;
+  font-size: 1.1em;
+  font-weight: 600;
+}
+.column__feelings--first {
+  color: #ac6b5c;
+}
+.column__feelings--second {
+  color: #d1998c;
+}
+.column__feelings--third {
+  color: #dba498;
+}
+
+.column__activity {
+  list-style-type: none;
+  padding: 0;
+}
+.column__activity--facebook {
+  background: #f4f4f6;
+  height: 40px;
+  width: 305px;
+  margin-bottom: 20px;
+}
+.column__activity--facebook:after {
+  content: "Facebook";
+  color: #ffffff;
+  display: block;
+  background: #ac6b5c;
+  width: 80%;
+  height: 100%;
+}
+.column__activity--instagram {
+  background: #f4f4f6;
+  height: 40px;
+  width: 305px;
+  margin-bottom: 20px;
+}
+.column__activity--instagram:after {
+  content: "Instagram";
+  color: #ffffff;
+  display: block;
+  background: #ac6b5c;
+  width: 55%;
+  height: 100%;
+}
+.column__activity--twitter {
+  background: #f4f4f6;
+  height: 40px;
+  width: 305px;
+  margin-bottom: 20px;
+}
+.column__activity--twitter:after {
+  content: "Twitter";
+  color: #ffffff;
+  display: block;
+  background: #ac6b5c;
+  width: 30%;
+  height: 100%;
+}
+.column__activity--snapchat {
+  background: #f4f4f6;
+  height: 40px;
+  width: 305px;
+  margin-bottom: 20px;
+}
+.column__activity--snapchat:after {
+  content: "Snapchat";
+  color: #ffffff;
+  display: block;
+  background: #ac6b5c;
+  width: 75%;
+  height: 100%;
+}
+
+.column__personality {
+  list-style-type: none;
+  font-size: 1.1em;
+  font-weight: bold;
+  text-transform: uppercase;
+  padding: 0;
+  overflow: hidden;
+}
+.column__personality--item {
+  height: 41px;
+  background-color: #f4f4f6;
+  color: #333333;
+  float: left;
+  margin: 10px 10px 10px 0;
+  text-align: center;
+}
+
+html, body {
+  font-family: Montserrat, sans-serif;
+  margin: 0;
+  padding: 0;
+  font-size: 22px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .main-profile {
-    width: 600px;
-    height: 1200px;
-    float: left;
-    background: url("../img/user_photo.jpg") no-repeat;
-    background-size: cover;
-    background-position: center;
-    display: flex;
-    align-items: flex-end;
+  width: 600px;
+  height: 1200px;
+  float: left;
+  background: url("../img/user_photo.jpg") no-repeat;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: flex-end;
 }
-
 .main-profile__bottom-content {
-    margin-bottom: 60px;
-    padding-left: 40px;
-    padding-right: 40px;
+  margin-bottom: 60px;
+  padding-left: 40px;
+  padding-right: 40px;
 }
 
 .detailed-profile {
-    width: 1000px;
-    height: 1200px;
+  width: 1000px;
+  height: 1200px;
 }
-
 .detailed-profile__main-info {
-    background-color: #f4f4f6;
-    overflow: hidden;
+  background-color: #f4f4f6;
+  overflow: hidden;
 }
 
 .column {
-    width: 420px;
-    float: left;
-    padding: 35px 10px 35px 50px;
+  width: 420px;
+  float: left;
+  padding: 35px 10px 35px 50px;
 }
+
+/*# sourceMappingURL=main.css.map */

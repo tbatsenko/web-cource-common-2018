@@ -65,6 +65,8 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
+  align-content: center;
 }
 
 .tasks__buttons {
@@ -72,10 +74,24 @@
   margin: 10px;
 }
 
-.label-text {
-  display: flex;
-  flex-wrap: wrap;
-  align-content: center;
+.label-text--completed {
+  text-decoration: line-through;
+}
+
+.label-text__edit {
+  margin: 0;
+  font-size: 14px;
+  width: 50%;
+  padding: 5px;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+}
+
+.edit--active {
+  background-color: transparent;
+  border: 1px solid red;
+  border-radius: 3px;
+  padding: 1px 6px;
 }
 
 /*# sourceMappingURL=todo.css.map */

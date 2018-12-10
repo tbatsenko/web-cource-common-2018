@@ -90,6 +90,7 @@ document.addEventListener('keypress', e => {
         .map(() => Array(FIELD_SIZE).fill(0))
       move = 0
       createNumber()
+      updateMovesNumber()
       renderField(field, ".Game")
 
     }
@@ -247,6 +248,8 @@ function thereAreMoreMoves() {
   }
   return res
 }
+
+
 let direction = 'TOP'
 createNumber()
 renderField(field, '.Game')

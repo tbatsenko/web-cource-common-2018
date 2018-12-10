@@ -1,0 +1,35 @@
+
+.form-create-task__btn {
+  background: transparent;
+  border-width: 0;
+  font-size: 30px;
+  color: lightgray;
+}
+
+.form-create-task__input {
+  border: 0;
+  width: 100%;
+  font-size: 17px;
+  height: 30px;
+  background: transparent;
+  padding: 10px 0;
+}
+
+.form-new-task {
+  padding: 0;
+  height: auto;
+}
+
+.form-new-task__container {
+  padding: 1em 2em;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.input-filter-header {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  box-shadow: 0px 0px 11px lightgray;
+  background: white;
+}

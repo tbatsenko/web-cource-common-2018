@@ -1,0 +1,9 @@
+.friend-post {
+  background-color: #fff;
+  border-radius: 3px;
+  border: 1px solid #dddfe2;
+
+  &__head {
+    border-radius: 2px 2px 0 0;
+  }
+}
