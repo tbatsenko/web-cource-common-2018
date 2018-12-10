@@ -57,8 +57,7 @@ class Calendar{
     }
 
     for(var j = 1; j <= days_in_month; j++){
-      // calendar_body_html += '<div class="calendar__cell" onclick="calendar.make_todo_list(' + j + ')" id="' + j + '">' + j + '</div>'
-      calendar_body_html += '<div class="calendar__cell" onclick="calendar.make_todo_list(' + j + ')" id="' + j + '">' + j + '</div>'
+      calendar_body_html += '<div class="calendar__cell calendar__active-cell" id="' + j + '">' + j + '</div>'
     }
 
     for(var k = 0; k < blank_cells_after; k++){
@@ -101,7 +100,8 @@ class Calendar{
 
 }
 
-var calendar = new Calendar()
+let calendar = new Calendar()
+
 
 class TODOList{
   constructor(){
@@ -167,7 +167,8 @@ class TODOList{
     document.getElementById('todo').innerHTML = ''
     var inner_html = ''
     for (var i = 0; i < items.length; i++) {
-      inner_html += '<div class="item"><p class="item__text">' + items[i] + '</p><button class="cancel_button" onclick="todo.remove(' + i + ')">X</button></div>'
+      // inner_html += '<div class="item"><p class="item__text">' + items[i] + '</p><button class="cancel_button" onclick="todo.remove(' + i + ')">X</button></div>'
+      inner_html += '<div class="item"><p class="item__text">' + items[i] + '</p><button class="cancel_button" id = "' + (100 + i) + '">X</button></div>'
     }
     document.getElementById('todo').innerHTML = inner_html
   }
@@ -175,4 +176,33 @@ class TODOList{
 
 }
 
-var todo = new TODOList()
+let todo = new TODOList()
+
+calendar_body = document.getElementById("calendar")
+calendar_body.addEventListener("click", (e) => {
+  if(!isNaN(parseInt(e.target.id))){
+  // if(e.target.id !== "" || e.target.id !== "calendar"){
+    calendar.make_todo_list(e.target.id)
+  }
+})
+
+calendar_header = document.getElementById("header")
+calendar_header.addEventListener("click", (e) => {
+
+  if(e.target.id === "prev_month"){
+    calendar.prev_month()
+  }
+  else if(e.target.id === "next_month"){
+    calendar.next_month()
+  }
+})
+
+add_button = document.getElementById("add")
+add_button.addEventListener("click", () => {
+  todo.add()
+})
+
+todo_section = document.getElementById("todo")
+todo_section.addEventListener("click", (e) => {
+  todo.remove(e.target.id - 100)
+})
