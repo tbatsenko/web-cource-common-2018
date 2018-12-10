@@ -131,7 +131,6 @@ function tasksCreator(day, month, year, monthDays) {
     var monthSelectList = document.createElement("select");
     var yearSelectList = document.createElement("select");
 
-
     tasksCreator.appendChild(daysSelectList);
     daysSelectList.id = "day";
     for (var i = 0; i < monthDaysOptions.length; i++) {
@@ -158,11 +157,14 @@ function tasksCreator(day, month, year, monthDays) {
         option.text = yearsOptions[i];
         yearSelectList.appendChild(option);
     }
+
+
+
     var inputBox = document.createElement("INPUT");
     inputBox.id = "input-box";
     inputBox.setAttribute("type", "text");
     inputBox.setAttribute("value", "...");
-    document.body.appendChild(inputBox);
+    tasksCreator.appendChild(inputBox);
 
     var button = document.createElement("button");
     button.innerText = "Add task";
@@ -170,7 +172,7 @@ function tasksCreator(day, month, year, monthDays) {
         // var enteredDay = enteredDayObject.options[enteredDayObject.selectedIndex].text;
         addTask();
     };
-    document.body.appendChild(button);
+    tasksCreator.appendChild(button);
 }
 
 function addTask() {
