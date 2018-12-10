@@ -1,10 +1,11 @@
-import TodoList from './TodoList'
+import {compareDayMonthYear}from './utils'
 
 class TodoItem {
-    constructor(text, parent) {
+    constructor(text, parent, date) {
         this.text = text;
         this.parent = parent;
         this.done = false;
+        this.date = date === undefined ? new Date() : date;
         this.htmlElem = this.render();
     }
 
@@ -16,6 +17,20 @@ class TodoItem {
         this.done = !this.done;
         this.htmlElem.style.textDecoration = this.done ? "line-through" : "";
         this.checkBoxHtml.checked = this.done;
+    }
+
+    parseDate(d) {
+        const today = new Date();
+        if (compareDayMonthYear(d, today))
+            return 'today';
+        return d.getDate() + '/' + (d.getMonth() + 1) + '/' + d.getFullYear().toString()[2] + d.getFullYear().toString()[3]
+    }
+
+    addDate() {
+        let date = document.createElement('span');
+        date.innerText = this.parseDate(this.date);
+        date.setAttribute('class', "task__timestamp");
+        return date;
     }
 
     addRemoveBtn() {
@@ -47,14 +62,17 @@ class TodoItem {
     }
 
     render() {
-        let elem = document.createElement('li');
-        elem.setAttribute('class', 'task');
-        elem.appendChild(this.addCheckBox());
-        elem.appendChild(this.addText(this.text));
-        elem.appendChild(this.addRemoveBtn());
-        elem.addEventListener('click', () => {this.toggleDone()});
-        elem.style.textDecoration = this.done ? "line-through" : "";
-        return elem;
+        this.htmlElem = document.createElement('li');
+        this.htmlElem.setAttribute('class', 'task');
+        this.htmlElem.appendChild(this.addCheckBox());
+        this.htmlElem.appendChild(this.addText(this.text));
+        this.htmlElem.appendChild(this.addDate());
+        this.htmlElem.appendChild(this.addRemoveBtn());
+        this.htmlElem.addEventListener('click', () => {
+            this.toggleDone()
+        });
+        this.htmlElem.style.textDecoration = this.done ? "line-through" : "";
+        return this.htmlElem;
     }
 }
 
