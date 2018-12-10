@@ -1,0 +1,129 @@
+.calendar_container {
+  position: absolute;
+  bottom: 0;
+  left: 3em;
+  box-shadow: 1px 1px 8px lightgray;
+  z-index: 10;
+  background: white; }
+
+.calendar_table {
+  display: flex;
+  flex-flow: column; }
+
+.calendar_table__row {
+  display: flex;
+  flex-flow: row; }
+
+.calendar_table__cell {
+  width: 5em;
+  height: 3.5em;
+  margin: 1px;
+  background: lightcyan; }
+
+.calendar__btn {
+  float: right;
+  position: relative;
+  border: 0;
+  cursor: pointer;
+  font-weight: bolder;
+  background: white; }
+
+.calendar-header {
+  background: white;
+  height: 1.3em;
+  padding: 5px 3px 5px 20px; }
+
+.form-create-task__btn {
+  background: transparent;
+  border-width: 0;
+  font-size: 30px;
+  color: lightgray; }
+
+.form-create-task__input {
+  border: 0;
+  width: 100%;
+  font-size: 17px;
+  height: 30px;
+  background: transparent;
+  padding: 10px 0; }
+
+.form-new-task {
+  padding: 0;
+  height: auto; }
+
+.form-new-task__container {
+  padding: 1em 2em;
+  display: flex;
+  align-items: center;
+  justify-content: space-between; }
+
+.input-filter-header {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  box-shadow: 0px 0px 11px lightgray;
+  background: white; }
+
+.task__text {
+  border: 0;
+  padding: 0;
+  width: 28em;
+  margin: 0;
+  background: transparent; }
+
+.task__delete-button__ico {
+  width: 100%;
+  height: 100%;
+  opacity: .5; }
+
+.todo-filter__btn {
+  grid-row-start: 1;
+  padding: 5px 0;
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+  border-radius: 4em;
+  margin: 0 16px;
+  box-shadow: 0px 0px 10px 1px #ddd; }
+
+.todo-filter {
+  display: grid;
+  padding: 1em 0; }
+
+.task__delete-button {
+  background: transparent;
+  float: right;
+  height: 30px;
+  width: 50px;
+  margin: 0;
+  opacity: .5;
+  border: 0;
+  cursor: pointer;
+  padding: 5px; }
+
+.tasks-container {
+  list-style: none;
+  margin: 0;
+  padding: 0; }
+
+.task {
+  padding: 8px 0;
+  cursor: pointer;
+  height: 30px;
+  border-bottom: 1px inset lightgray;
+  line-height: 30px; }
+
+body {
+  margin: 0;
+  font-family: Ubuntu, serif; }
+
+.placeholder {
+  margin: auto;
+  width: 50em;
+  box-shadow: lightgray 0 0 10px;
+  height: 100vh;
+  overflow: auto;
+  box-sizing: border-box; }
+
+.content {
+  padding: .5em 1em 0em 2em; }

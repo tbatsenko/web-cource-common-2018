@@ -1,7 +1,6 @@
 import TodoItem from './TodoItem'
 
 class TodoList {
-
     constructor(container, form, input) {
         this.form = form;
         this.inputForm = input;
