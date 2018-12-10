@@ -40,14 +40,17 @@ function login(){
     } else {
       document.getElementById('status').innerHTML = 'you are not logged in to Facebook';
     }
-
+    getInfo()
   });
+
+
 }
 // get user basic info
 
 function getInfo() {
   FB.api('/me', 'GET', {fields: 'first_name,last_name,name,id'}, function(response) {
     document.getElementById('status').innerHTML = response.id;
+    console.log(response)
   });
 }
 

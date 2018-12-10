@@ -1,0 +1,51 @@
+:root {
+    --arrows_height: 20px;
+}
+
+
+.header{
+    display: table;
+    background-color: lightblue;
+    height: 26px;
+    width: 200px;
+}
+
+.current-date{
+    display: inline-block;
+    margin-left: 10px;
+}
+
+
+.arrow--left {
+    display: inline;
+    height: var(--arrows_height);
+    width: 50px;
+}
+
+.year{
+    color: white;
+    font-size: 20px;
+    text-align: center;
+    display: inline;
+
+}
+
+.arrow--right {
+    display: inline;
+    height: var(--arrows_height);
+    width: 50px;
+}
+
+/*.calendar-body{*/
+    /*display: table;*/
+/*}*/
+.weekdays1{
+    font-weight: bold;
+
+}
+/*.days{*/
+
+    /*size: auto;*/
+    /*font-size: 10px;*/
+/*}*/
+

@@ -1,0 +1,28 @@
+@import "answers";
+@import "button";
+
+body {
+  background: linear-gradient(to left, #f46b45, #eea849);
+}
+
+.game_container {
+  font-family: "Crimson Text", serif;
+  margin: auto;
+  width: 500px;
+  border: 2px solid black;
+  padding: 3% 3%;
+  background: rgba(0, 0, 20, 0.3);
+}
+
+.game_header {
+  margin: 30px;
+}
+
+.question_number {
+  text-align: right;
+  margin-top: -45px;
+}
+
+.center {
+  text-align: center;
+}

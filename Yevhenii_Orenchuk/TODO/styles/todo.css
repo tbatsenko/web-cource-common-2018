@@ -78,4 +78,20 @@
   text-decoration: line-through;
 }
 
+.label-text__edit {
+  margin: 0;
+  font-size: 14px;
+  width: 50%;
+  padding: 5px;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+}
+
+.edit--active {
+  background-color: transparent;
+  border: 1px solid red;
+  border-radius: 3px;
+  padding: 1px 6px;
+}
+
 /*# sourceMappingURL=todo.css.map */
