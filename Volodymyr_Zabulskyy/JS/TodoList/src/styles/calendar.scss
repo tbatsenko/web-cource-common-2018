@@ -20,21 +20,44 @@
 .calendar_table__cell {
   width: 5em;
   height: 3.5em;
-  margin: 1px;
-  background: lightcyan;
+  margin: 5px;
+  box-shadow: 0 0 6px 0px lightgray;
+  padding: 1px 5px;
+  box-sizing: border-box;
+  color: #444;
+  cursor: pointer;
+
+  &_empty {
+    box-shadow: none;
+  }
+  &_active {
+    font-weight: bolder;
+    border: 1px solid grey;
+  }
+}
+
+.calendar-subheader{
+  display: flex;
+  justify-content: space-around;
+  padding: 8px 0;
+  font-size: 13px;
+  color: #aaa;
 }
 
 .calendar__btn {
-  float: right;
   position: relative;
   border: 0;
   cursor: pointer;
   font-weight: bolder;
-  background: white;
+  background: transparent;
+  &_shift-right, &_shift-left, &_shift-right, &_hide-calendar {
+    float: right;
+  }
 }
 
 .calendar-header {
   background: white;
   height: 1.3em;
   padding: 5px 3px 5px 20px;
+  box-shadow: 0px 2px 2px #ddd;
 }

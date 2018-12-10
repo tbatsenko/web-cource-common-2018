@@ -1,0 +1,14 @@
+@import "calendar";
+@import "list";
+
+body{
+  padding: 0;
+}
+
+.window{
+  width: 100%;
+  height: 340px;
+  display: flex;
+  justify-content: center;
+}
+
