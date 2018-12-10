@@ -7,3 +7,5 @@ const getRandomInt = (min, max) => {
 const get2dArray = (n, m, initialValue) => ((new Array(n)).fill(0).map(entry => (new Array(m)).fill(initialValue)))
 
 const getIndexOfDOMNode = (element) => {return Array.from(element.parentNode.children).indexOf(element)}
+
+export default {getRandomInt, get2dArray, getIndexOfDOMNode}

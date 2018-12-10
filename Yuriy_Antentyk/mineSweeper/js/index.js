@@ -1,44 +1,47 @@
+import game from "./game"
+import utilities from "./utilities"
+
 const fieldSize = 10
 const minesCnt = 10
 
 document.documentElement.style.setProperty('--field-size', fieldSize)
-fieldView = document.getElementById("field")
+const fieldView = document.getElementById("field")
 
-const game = new Game(fieldSize, minesCnt)
+const g = new game.Game(fieldSize, minesCnt)
 
-const render = () => {fieldView.innerHTML = game.field.toHTML()}
+const render = () => {fieldView.innerHTML = g.field.toHTML()}
 render()
 
-const bindDiscover = (i, j) => {game.discover(i, j)}
-const bindFlag = (i, j) => {game.flag(i, j)}
+const bindDiscover = (i, j) => {g.discover(i, j)}
+const bindFlag = (i, j) => {g.flag(i, j)}
 
 const handleMove = (ev, action) => {
     ev.preventDefault()
 
-    if(game.checkLose() || game.checkWin())
+    if(g.checkLose() || g.checkWin())
         return
 
-    const index = getIndexOfDOMNode(ev.target)
+    const index = utilities.getIndexOfDOMNode(ev.target)
     const i = Math.floor(index / fieldSize), j = index % fieldSize
 
     action(i, j)
 
     render()
 
-    if(!(game.checkLose() || game.checkWin()))
+    if(!(g.checkLose() || g.checkWin()))
         return
 
-    if(game.checkLose()){
-        game.discoverAllMines()
+    if(g.checkLose()){
+        g.discoverAllMines()
         render()
     }
 
-    alert(game.checkWin()? "You won!" : "You lost!")
+    alert(g.checkWin()? "You won!" : "You lost!")
 }
 
 const click = fieldView.addEventListener("click", (ev) => handleMove(ev, bindDiscover))
 const contextmenu = fieldView.addEventListener("contextmenu", (ev) => handleMove(ev, bindFlag))
 const restart = document.getElementById("restart").addEventListener("click", (ev) => {
-    game.restart(fieldSize, minesCnt)
+    g.restart(fieldSize, minesCnt)
     render()
 })
