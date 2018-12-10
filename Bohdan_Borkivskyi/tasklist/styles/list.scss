@@ -1,5 +1,64 @@
 .list{
-  width: 100px;
-  height: 100px;
-  background-color: blue;
+  width: 300px;
+  box-sizing: border-box;
+
+  border: 2px solid #009688;
+  border-radius: 10px;
+  background-color: #83d0c9;
+  display: flex;
+  flex-direction: column;
+
+  overflow: hidden;
+
+  &__input_box{
+    width: calc(80% - 20px);
+    outline: white;
+    border: 0;
+    padding: 0;
+    margin-left: 10px;
+    height: 100%;
+    background-color: transparent;
+    color: white;
+    border-bottom: 1px solid white;
+    font-family: Montserrat, monospace;
+  }
+
+  .input__add_button{
+    width: 20%;
+    background-color: transparent;
+    font-family: Montserrat, monospace;
+    box-sizing: border-box;
+    font-size: 20px;
+    color: white;
+    border: 1px solid white;
+    &:hover{
+      cursor: pointer;
+    }
+  }
+
+  &__tasks{
+    height: 100%;
+    overflow-y: scroll;
+  }
+
+  &__task{
+    width: 100%;
+    color: white;
+    box-sizing: border-box;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+
+    &-text{
+      padding-right: 10px;
+      font-family: Montserrat, monospace;
+    }
+
+    &-button{
+      margin-left: auto;
+      height: 20px;
+      cursor: pointer;
+    }
+
+  }
 }

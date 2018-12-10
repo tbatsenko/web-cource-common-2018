@@ -1,6 +1,6 @@
 .calendar{
   width: 300px;
-  min-width: 100px;
+  //height: 340px;
   box-sizing: border-box;
   overflow: hidden;
 
@@ -9,7 +9,6 @@
   background-color: #83d0c9;
 
   &__header{
-    //background-color: #009688;
     height: 50px;
     border-bottom: 2px solid #009688;
     color: #009688;
@@ -36,10 +35,7 @@
       overflow: hidden;
 
       &:hover{
-        //background-color: #65c3ba;
         cursor: pointer;
-        //padding: 0;
-        //margin: 0;
         color: white;
       }
 
