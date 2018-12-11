@@ -29,7 +29,17 @@ function update_calendar() {
 
   for(i=0;i<num_of_days;++i){
     var additional_class = (i+1 === current_day ? " calendar__cell-selected":"")
-    calendar_body.innerHTML += "<button onclick='current_day = parseInt(this.innerText); update_window()' class='calendar__cell"+additional_class+"'>"+(i+1)+"</button>"
+    calendar_body.innerHTML += "<button class='calendar__cell"+additional_class+"'>"+(i+1)+"</button>"
+  }
+  // onclick='current_day = parseInt(this.innerText); update_window()'
+  buttons = document.getElementsByClassName("calendar__cell")
+  for(var i=0;i<buttons.length;++i){
+    buttons[i].addEventListener("click", (event)=>{
+      var value = event.path[0].innerText
+      if(value === ""){return}
+      current_day = parseInt(value);
+      update_window()
+    })
   }
 }
 
