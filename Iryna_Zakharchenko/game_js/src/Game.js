@@ -18,7 +18,7 @@ const renderField = (field, gameClass) => {
 }
 
 const renderCell = cellNumber =>
-  //prettier-ignore
+
   (cellNumber === 0) ? `<div class="Game__cell Game__cell--free"></div>`
     : `<div class="Game__cell Game__cell--num">${cellNumber}</div>`
 
