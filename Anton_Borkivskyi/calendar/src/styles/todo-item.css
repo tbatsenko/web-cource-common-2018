@@ -1,0 +1,19 @@
+.item {
+  border: 1px solid var(--text-color);
+  background: white;
+  color: var(--text-color);
+  margin-left: 5px;
+  border-radius: 5px;
+  height: 30px;
+  width: 95%;
+  font-size: 15px;
+  margin-bottom: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between; }
+  .item__text {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis; }
+
+/*# sourceMappingURL=todo-item.css.map */
