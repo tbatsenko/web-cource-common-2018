@@ -18,7 +18,7 @@ const renderField = (field, gameClass) => {
 }
 
 const renderCell = cellNumber =>
-  //prettier-ignore
+
   (cellNumber === 0) ? `<div class="Game__cell Game__cell--free"></div>`
     : `<div class="Game__cell Game__cell--num">${cellNumber}</div>`
 
@@ -83,15 +83,15 @@ document.addEventListener('keypress', e => {
     createNumber()
     renderField(field, '.Game')
     updateMovesNumber('.move')
-    if (!thereAreMoreMoves()){
-      alert(" You lose.\n \n You done "+ move + " moves")
+    if (!thereAreMoreMoves()) {
+      alert(' You lose.\n \n You done ' + move + ' moves')
       field = Array(FIELD_SIZE)
         .fill()
         .map(() => Array(FIELD_SIZE).fill(0))
       move = 0
       createNumber()
-      updateMovesNumber()
-      renderField(field, ".Game")
+      updateMovesNumber('.move')
+      renderField(field, '.Game')
 
     }
   }
@@ -238,10 +238,10 @@ function thereAreMoreMoves() {
   for (let i = 0; i < field.length; i++) {
     for (let j = 0; j < field[i].length; j++) {
       if (field[i][j] === 0) return true
-      if (isValid(i-1) && field[i-1][j] === field[i][j]){
+      if (isValid(i - 1) && field[i - 1][j] === field[i][j]) {
         return true
       }
-      if (isValid(j-1) && field[i][j-1] === field[i][j]){
+      if (isValid(j - 1) && field[i][j - 1] === field[i][j]) {
         return true
       }
     }
