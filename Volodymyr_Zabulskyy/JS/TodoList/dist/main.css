@@ -99,7 +99,8 @@
   padding: 0;
   width: 100%;
   margin: 0 0 0 10px;
-  background: transparent; }
+  background: transparent;
+  cursor: pointer; }
 
 .task__timestamp {
   border: 1px solid darkred;
@@ -140,7 +141,6 @@
 .task {
   align-items: center;
   padding: 8px 0;
-  cursor: pointer;
   border-bottom: 1px inset lightgray;
   line-height: 30px;
   display: flex; }

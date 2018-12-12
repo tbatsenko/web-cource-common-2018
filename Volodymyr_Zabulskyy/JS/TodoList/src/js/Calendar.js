@@ -16,11 +16,6 @@ class Calendar {
         this.date = this.today.getDate();
         this.day = this.today.getDay();
         this.hidden = false;
-
-        this.dbHandler = new DataBaseHandler(
-            dbUrl === undefined ? "http://localhost:3000/todoList" : dbUrl
-        );
-
         this.render();
     }
 
@@ -75,19 +70,6 @@ class Calendar {
 
     }
 
-    getTasksForDate(date, callback){
-        this.dbHandler.getAllTodos((dataFromResponce) => {
-            let jsonData = JSON.parse(dataFromResponce);
-            let result = [];
-            for(let i in jsonData){
-                if (compareDayMonthYear(new Date(jsonData[i].date), date)){
-                    result.push(jsonData[i])
-                }
-            }
-            callback(result);
-        })
-    }
-
     setNewDate(date) {
         this.today = date;
         this.year = this.today.getFullYear();
@@ -125,20 +107,11 @@ class Calendar {
         }
     }
 
-    generateCellText(date){
+    generateCellText(date) {
         let text = document.createElement('div');
         let day = document.createElement('span');
         day.innerText = date.getDate();
         text.appendChild(day);
-
-        this.getTasksForDate(date, (r)=>{
-            if (r.length > 0){
-                let tasks = document.createElement('span');
-                tasks.setAttribute('class', "calendar_table__cell__date-badge")
-                tasks.innerText = r.length;
-                text.appendChild(tasks);
-            }
-        });
 
         return text;
 
