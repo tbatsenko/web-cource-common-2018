@@ -22,13 +22,14 @@
   height: 3.5em;
   margin: 5px;
   box-shadow: 0 0 6px 0px lightgray;
-  padding: 1px 5px;
+  padding: 3px 5px;
   box-sizing: border-box;
   color: #444;
   cursor: pointer;
 
   &_empty {
     box-shadow: none;
+    cursor: default;
   }
   &_active {
     font-weight: bolder;
@@ -36,7 +37,19 @@
   }
 }
 
-.calendar-subheader{
+.calendar_table__cell__date-badge{
+  float: right;
+  color: darkred;
+  width: 20px;
+  height: 20px;
+  text-align: center;
+  border-radius: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.calendar-subheader {
   display: flex;
   justify-content: space-around;
   padding: 8px 0;

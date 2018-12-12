@@ -1,10 +1,11 @@
-import {createElementFromHTML, generateMonth, compareDayMonthYear }from './utils';
+import {createElementFromHTML, generateMonth, compareDayMonthYear} from './utils';
+import DataBaseHandler from "./DataBaseHandler";
 
 const months = ["January", "February", "March", "April", "May", "June",
     "July", "August", "September", "October", "November", "December"];
 
 class Calendar {
-    constructor(container, todoList) {
+    constructor(container, todoList, dbUrl) {
         this.container = container;
         this.todoList = todoList;
         this.htmlElem = document.createElement('div');
@@ -15,6 +16,11 @@ class Calendar {
         this.date = this.today.getDate();
         this.day = this.today.getDay();
         this.hidden = false;
+
+        this.dbHandler = new DataBaseHandler(
+            dbUrl === undefined ? "http://localhost:3000/todoList" : dbUrl
+        );
+
         this.render();
     }
 
@@ -54,7 +60,7 @@ class Calendar {
         if (!this.hidden) {
             this.subheader = createElementFromHTML(`<div class="calendar-subheader"></div>`);
             const weeks = ['M', 'T', "W", "T", "F", "S", "S"];
-            for (let week in weeks){
+            for (let week in weeks) {
                 this.subheader.appendChild(createElementFromHTML(`<span>${weeks[week]}</span>`))
             }
             content.appendChild(this.subheader);
@@ -69,7 +75,20 @@ class Calendar {
 
     }
 
-    setNewDate(date){
+    getTasksForDate(date, callback){
+        this.dbHandler.getAllTodos((dataFromResponce) => {
+            let jsonData = JSON.parse(dataFromResponce);
+            let result = [];
+            for(let i in jsonData){
+                if (compareDayMonthYear(new Date(jsonData[i].date), date)){
+                    result.push(jsonData[i])
+                }
+            }
+            callback(result);
+        })
+    }
+
+    setNewDate(date) {
         this.today = date;
         this.year = this.today.getFullYear();
         this.month = this.today.getMonth();
@@ -106,6 +125,25 @@ class Calendar {
         }
     }
 
+    generateCellText(date){
+        let text = document.createElement('div');
+        let day = document.createElement('span');
+        day.innerText = date.getDate();
+        text.appendChild(day);
+
+        this.getTasksForDate(date, (r)=>{
+            if (r.length > 0){
+                let tasks = document.createElement('span');
+                tasks.setAttribute('class', "calendar_table__cell__date-badge")
+                tasks.innerText = r.length;
+                text.appendChild(tasks);
+            }
+        });
+
+        return text;
+
+    }
+
     getThisMonthCalendar() {
         let monthTable = generateMonth(this.month, this.year);
         for (let i in monthTable) {
@@ -114,12 +152,13 @@ class Calendar {
             for (let j in monthTable[i]) {
                 let cell = document.createElement('div');
                 cell.setAttribute('class', 'calendar_table__cell');
-                if (monthTable[i][j] === -1){
+                if (monthTable[i][j] === -1) {
                     cell.innerText = "";
                     cell.setAttribute('class', 'calendar_table__cell calendar_table__cell_empty');
                 } else {
-                    cell.innerText = monthTable[i][j].getDate();
-                    if (compareDayMonthYear(monthTable[i][j], this.today)){
+                    let cellText = this.generateCellText(monthTable[i][j]);
+                    cell.appendChild(cellText);
+                    if (compareDayMonthYear(monthTable[i][j], this.today)) {
                         cell.setAttribute('class', 'calendar_table__cell calendar_table__cell_active');
                     }
                     cell.addEventListener('click', () => {
