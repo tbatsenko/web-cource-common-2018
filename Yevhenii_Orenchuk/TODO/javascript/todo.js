@@ -12,6 +12,7 @@ let createNewTask = (taskName) => {
     let removeButton = document.createElement('button');
 
     label.innerText = taskName;
+    label.className = "label-text";
 
     doneButton.innerText = 'Done';
     editButton.innerText = 'Edit';
@@ -39,10 +40,12 @@ let createNewTask = (taskName) => {
 let addTask = () => {
     console.log('Add task');
 
-    const listItem = createNewTask(taskInput.value);
-    tasksList.appendChild(listItem);
+    if (taskInput.value !== '') {
+        const listItem = createNewTask(taskInput.value);
+        tasksList.appendChild(listItem);
 
-    taskInput.value = '';
+        taskInput.value = '';
+    }
 };
 
 let taskCompleted = (taskItem) => {

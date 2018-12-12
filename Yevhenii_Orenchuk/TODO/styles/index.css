@@ -10,13 +10,18 @@
 
 .todo {
   display: flex;
+  position: absolute;
   width: 50%;
+  height: 100%;
+  right: 0;
   flex-direction: column;
 }
 
 .calendar {
+  position: absolute;
   display: flex;
   width: 50%;
+  height: 100%;
   float: right;
   justify-content: center;
   align-items: center;

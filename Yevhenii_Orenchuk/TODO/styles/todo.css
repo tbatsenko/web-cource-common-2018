@@ -8,14 +8,9 @@
 .quote {
   font-weight: normal;
   text-align: center;
-  margin-top: 20px;
+  margin-top: 10px;
   margin-bottom: 10px;
   color: black;
-}
-
-.task-manager {
-  width: 500px;
-  margin: auto;
 }
 
 .input {
@@ -65,13 +60,19 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  flex-wrap: wrap;
   align-content: center;
+  overflow: auto;
 }
 
 .tasks__buttons {
   padding: 0;
   margin: 10px;
+}
+
+.label-text {
+  width: auto;
+  overflow: scroll;
+  max-height: 72px;
 }
 
 .label-text--completed {
@@ -92,6 +93,18 @@
   border: 1px solid red;
   border-radius: 3px;
   padding: 1px 6px;
+}
+
+.lists-container {
+  height: inherit;
+  overflow: scroll;
+}
+
+.task-manager {
+  width: 500px;
+  margin: 0 auto;
+  height: 80%;
+  overflow: hidden;
 }
 
 /*# sourceMappingURL=todo.css.map */
