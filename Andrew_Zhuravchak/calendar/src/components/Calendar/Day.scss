@@ -1,0 +1,17 @@
+.day {
+  text-align: center;
+  padding: 5px;
+
+  &--week {
+    flex: 1;
+    border-right: 1px solid #263238;
+
+    &:last-child {
+      border-right: none;
+    }
+  }
+
+  &--number {
+    flex: 1 calc(100% / 10);
+  }
+}
