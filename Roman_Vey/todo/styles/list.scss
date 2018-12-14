@@ -1,0 +1,19 @@
+.list{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    &__item{
+        height: 40px;
+        width: 300px;
+        font-size: 18px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    &__close{
+        width: 12px;
+        height: 12px;
+        cursor: pointer;
+    }
+}

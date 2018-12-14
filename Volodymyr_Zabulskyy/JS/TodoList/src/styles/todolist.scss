@@ -2,16 +2,19 @@
 .task__text {
   border: 0;
   padding: 0;
-  width: 28em;
-  margin: 0;
+  width: 100%;
+  margin: 0 0 0 10px;
   background: transparent;
-
+  cursor: pointer;
 }
 
-.task__delete-button__ico {
-  width: 100%;
-  height: 100%;
-  opacity: .5;
+.task__timestamp {
+  border: 1px solid darkred;
+  border-radius: 23px;
+  font-size: 13px;
+  color: darkred;
+  padding: 0 10px;
+  line-height: 18px;
 }
 
 .todo-filter__btn {
@@ -29,28 +32,27 @@
   display: grid;
   padding: 1em 0;
 }
+
 .task__delete-button {
   background: transparent;
-  float: right;
-  height: 30px;
-  width: 50px;
+  width: 4em;
+  padding: 0;
   margin: 0;
   opacity: .5;
   border: 0;
   cursor: pointer;
-  padding: 5px;
 }
+
 .tasks-container {
   list-style: none;
   margin: 0;
   padding: 0;
 }
 
-
 .task {
+  align-items: center;
   padding: 8px 0;
-  cursor: pointer;
-  height: 30px;
   border-bottom: 1px inset lightgray;
   line-height: 30px;
+  display: flex;
 }
