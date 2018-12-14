@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Calendar</title>
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
+    <link rel="stylesheet" href="styles/calendar/calendar.css">
+</head>
+<body>
+<div class="calendar">
+    <header class="calendar__header">
+        <h1 id="months-name" class="calendar__month-name"></h1>
+    </header>
+    <main class="calendar__contents">
+        <header class="calendar__weekdays">
+            <a class="weekdays__day" href="#">Sun</a>
+            <a class="weekdays__day" href="#">Mon</a>
+            <a class="weekdays__day" href="#">Tue</a>
+            <a class="weekdays__day" href="#">Wed</a>
+            <a class="weekdays__day" href="#">Thu</a>
+            <a class="weekdays__day" href="#">Fri</a>
+            <a class="weekdays__day" href="#">Sat</a>
+        </header>
+        <main id="dates" class="calendar__dates">
+
+        </main>
+    </main>
+    <form class="calendar__buttons">
+        <button id="previous" class="buttons buttons_left">Previous</button>
+        <button id="next" class="buttons buttons_right">Next</button>
+    </form>
+</div>
+
+<script src="dist/main.js"></script>
+</body>
+</html>
