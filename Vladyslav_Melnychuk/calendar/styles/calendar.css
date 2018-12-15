@@ -1,0 +1,10 @@
+html, body {
+  margin: 0;
+  padding: 0; }
+
+.calendar__week {
+  display: flex;
+  justify-content: space-around;
+  margin: 13px; }
+
+/*# sourceMappingURL=calendar.css.map */
