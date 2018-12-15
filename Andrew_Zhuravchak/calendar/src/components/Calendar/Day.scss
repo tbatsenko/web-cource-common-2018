@@ -1,9 +1,10 @@
 .day {
   text-align: center;
   padding: 5px;
+  flex-basis: calc(100% / 7);
+  box-sizing: border-box;
 
   &--week {
-    flex: 1;
     border-right: 1px solid #263238;
 
     &:last-child {
@@ -12,9 +13,6 @@
   }
 
   &--number {
-    flex-basis: calc(100%/7);
-    box-sizing: border-box;
-
     &:hover {
       cursor: pointer;
     }
