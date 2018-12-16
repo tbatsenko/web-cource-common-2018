@@ -1,0 +1,76 @@
+.ToDoList {
+  width: 400px;
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #263238;
+  overflow: hidden;
+  border-radius: 5px;
+  box-shadow: 4px 4px 8px 0 #d1d1d1;
+
+  &--header {
+    text-align: center;
+    padding: 6.5px;
+    border-bottom: 1px solid #263238;
+  }
+
+  &--controls {
+    text-align: center;
+    padding: 5px;
+    border-bottom: 1px solid #263238;
+  }
+
+  &--tasks {
+    display: flex;
+    flex-direction: column;
+    overflow: auto;
+    padding: 10px 15px;
+    height: 100%;
+
+    &-placeholder {
+      height: 100%;
+      text-align: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: #ccc;
+      font-size: 26px;
+      font-style: italic;
+    }
+  }
+
+  &--footer {
+    margin-top: auto;
+
+    &-form {
+      height: 30px;
+    }
+
+    &-input {
+      height: 100%;
+      box-sizing: border-box;
+      border: none;
+      border-top: 1px solid #37474f;
+      width: calc(100% - 50px);
+      padding: 0 15px;
+
+      &:focus {
+        outline: none;
+      }
+
+    }
+
+    &-submit {
+      background-color: #37474f;
+      border: none;
+      color: white;
+      height: 100%;
+      width: 50px;
+      padding: 0;
+
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
+}
