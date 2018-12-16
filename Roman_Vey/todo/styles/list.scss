@@ -1,11 +1,30 @@
+@import "variables";
 .list{
-    height: 100%;
+    width: $list-width;
+    height: $content-height;
+    padding-top: $top;
     display: flex;
     flex-direction: column;
     align-items: center;
+    &__content{
+        width: $list-width;
+        max-height: $content-height - $input-height;
+        overflow-y: auto;
+        overflow-x: hidden;
+        padding-right: 20px;
+    }
+    &__input{
+        margin-top: $input-top-margin;
+        height: $input-height;
+        width: $list-width;
+    }
+    &__submit-btn{
+        height: $input-height;
+        font-size: 18px;
+    }
     &__item{
         height: 40px;
-        width: 300px;
+        width: 100%;
         font-size: 18px;
         display: flex;
         align-items: center;
