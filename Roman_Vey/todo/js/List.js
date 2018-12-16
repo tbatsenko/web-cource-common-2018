@@ -39,8 +39,8 @@ class List{
         });
     }
     render = () => {
-        this.db.getTodos((data) => {
-            data = this.filter(data);
+        let selectedDayDate = this.calendar.selected;
+        this.db.getTodosForSelectedDay(selectedDayDate, (data) => {
             this.container.innerHTML = ""
             this.renderTodos(data);
             this.renderInput();
@@ -73,24 +73,10 @@ class List{
         <span class="material__bar"></span>
         </div>
         `
-    } 
-
-    filter = (data) => {
-        let selectedDayDate = this.calendar.selected;
-        return data.filter((todo) => {
-            let todoDate = this.toDate(todo.time);
-            return (todoDate.getDate() == selectedDayDate.getDate() &&
-            todoDate.getMonth() == selectedDayDate.getMonth() &&
-            todoDate.getFullYear() == selectedDayDate.getFullYear());
-        })
     }
     toTimestamp = (date) => {
         let timestamp = Date.parse(date);
         return timestamp / 1000;
-    }
-    toDate = (timestamp) => {
-        timestamp = timestamp instanceof String ? parseInt(timestamp, 10): timestamp;
-        return new Date(timestamp * 1000);
     }
 }
 module.exports = List;
