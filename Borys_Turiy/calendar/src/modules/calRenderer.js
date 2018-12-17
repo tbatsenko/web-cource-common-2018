@@ -4,17 +4,15 @@ class CalendarRenderer {
     this.html = ``
   }
 
-
   static horizontalWeekDays() {
-    let html = `<div class="Calendar__row">`
     let week = [`Mo`, `Tu`, `We`, `Th`, `Fr`, `Sa`, `Su`]
-    week.forEach(function(s) {
-      html += `<div class="Calendar__cell Calendar__cell--weekday">
-${s}
-</div>`
-    })
-    html += `</div>`
-    return html
+    return `<div class="Calendar__row">
+    ${week
+      .map(
+        s => `<div class="Calendar__cell Calendar__cell--weekday">${s}</div>`
+      )
+      .join('')}
+    </div>`
   }
 
   renderHorizontal() {
@@ -22,7 +20,9 @@ ${s}
     this.html += CalendarRenderer.horizontalWeekDays()
     let firstDayOfWeek = new Date(this.calendar.firstDayOfCalendar)
     for (let week = 1; week <= 6; week++) {
-      this.html += CalendarRenderer.renderWeek(this.calendar.getWeek(firstDayOfWeek))
+      this.html += CalendarRenderer.renderWeek(
+        this.calendar.getWeek(firstDayOfWeek)
+      )
       firstDayOfWeek.setDate(firstDayOfWeek.getDate() + 7)
     }
     this.html += `</div>`
@@ -30,14 +30,13 @@ ${s}
   }
 
   static renderWeek(week) {
-    let weekHtml = `<div class="Calendar__row">`
-    for (let counter = 0; counter <= 6; counter += 1) {
-      weekHtml += week[counter].represent()
-    }
+    return `<div class="Calendar__row">
+    ${Array(7)
+      .fill()
+      .map((_, i) => week[i].represent())
+      .join('')}
 
-    weekHtml += `
-</div>`
-    return weekHtml
+    </div>`
   }
 }
 export default CalendarRenderer

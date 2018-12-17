@@ -5,7 +5,7 @@ setInterval(() => {
   let workCalendar = new Calendar(new Date())
   let renderer = new CalendarRenderer(workCalendar)
   renderer.renderHorizontal()
-}, 10000)
+}, 1000 )
 
 document.body.addEventListener('click', e => {
   console.log(e)
