@@ -116,5 +116,8 @@
     "presets": [
       "react-app"
     ]
+  },
+  "devDependencies": {
+    "date-fns": "^1.30.1"
   }
 }
