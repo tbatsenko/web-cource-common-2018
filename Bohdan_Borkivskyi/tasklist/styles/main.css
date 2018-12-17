@@ -1,0 +1,127 @@
+.calendar {
+  width: 300px;
+  box-sizing: border-box;
+  overflow: hidden;
+  border: 2px solid #009688;
+  border-radius: 10px;
+  background-color: #83d0c9; }
+  .calendar__header {
+    height: 50px;
+    border-bottom: 2px solid #009688;
+    color: #009688;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-family: Montserrat, monospace;
+    font-size: 20px; }
+    .calendar__header .change_month_button {
+      font-family: Montserrat, monospace;
+      background-color: transparent;
+      border: 0;
+      color: #009688;
+      padding: 0;
+      margin: 0;
+      width: 30px;
+      height: 30px;
+      border-radius: 100%;
+      font-size: 24px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden; }
+      .calendar__header .change_month_button:hover {
+        cursor: pointer;
+        color: white; }
+      .calendar__header .change_month_button:active {
+        font-size: 20px; }
+  .calendar__weekdays {
+    display: flex;
+    flex-flow: wrap; }
+  .calendar__body {
+    display: flex;
+    flex-flow: wrap; }
+  .calendar__cell {
+    box-sizing: border-box;
+    border: 0;
+    background-color: transparent;
+    width: calc(100%/7);
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Montserrat, monospace;
+    color: #009688;
+    font-size: 24px; }
+    .calendar__cell:hover {
+      color: white;
+      cursor: pointer; }
+    .calendar__cell:active {
+      font-size: 20px; }
+    .calendar__cell-selected {
+      color: white; }
+    .calendar__cell-inactive:hover {
+      cursor: default; }
+    .calendar__cell-weekday:hover {
+      color: #009688;
+      cursor: default; }
+    .calendar__cell-weekday:active {
+      font-size: 24px; }
+
+.list {
+  width: 300px;
+  box-sizing: border-box;
+  border: 2px solid #009688;
+  border-radius: 10px;
+  background-color: #83d0c9;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden; }
+  .list__input_box {
+    width: calc(80% - 20px);
+    outline: white;
+    border: 0;
+    padding: 0;
+    margin-left: 10px;
+    height: 100%;
+    background-color: transparent;
+    color: white;
+    border-bottom: 1px solid white;
+    font-family: Montserrat, monospace; }
+  .list .input__add_button {
+    width: 20%;
+    background-color: transparent;
+    font-family: Montserrat, monospace;
+    box-sizing: border-box;
+    font-size: 20px;
+    color: white;
+    border: 1px solid white; }
+    .list .input__add_button:hover {
+      cursor: pointer; }
+  .list__tasks {
+    height: 100%;
+    overflow-y: scroll; }
+  .list__task {
+    width: 100%;
+    color: white;
+    box-sizing: border-box;
+    padding: 10px;
+    display: flex;
+    align-items: center; }
+    .list__task-text {
+      padding-right: 10px;
+      font-family: Montserrat, monospace; }
+    .list__task-button {
+      margin-left: auto;
+      height: 20px;
+      cursor: pointer; }
+
+body {
+  padding: 0; }
+
+.window {
+  width: 100%;
+  height: 340px;
+  display: flex;
+  justify-content: center; }
+
+/*# sourceMappingURL=main.css.map */

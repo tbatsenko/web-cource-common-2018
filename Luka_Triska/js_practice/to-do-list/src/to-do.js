@@ -56,7 +56,7 @@ let handlers = {
         let clickedTodoText = document.getElementById("span-" + index);
 
         let tempInput = document.createElement("input");
-        tempInput.className = "temp-edit-input";
+        tempInput.className = "container__todo--temp-edit-input";
         tempInput.type = "text";
 
         clickedTodoText.parentNode.replaceChild(tempInput, clickedTodoText);
@@ -64,7 +64,7 @@ let handlers = {
 
         tempInput.addEventListener("keydown", (e) => {
             if (e.key === "Enter") {
-                let receivedInput = document.getElementsByClassName("temp-edit-input")[0];
+                let receivedInput = document.getElementsByClassName("container__todo--temp-edit-input")[0];
 
                 let liText = document.createElement("span");
                 liText.className = "todo-text";
@@ -97,7 +97,7 @@ let view = {
             data.forEach((todo) => {
                 let todoLi = document.createElement("li");
                 todoLi.id = todo.id.toString();
-                todoLi.className = "todo-display-item";
+                todoLi.className = "container__todo";
 
                 let completeCheckbox = document.createElement("input");
                 completeCheckbox.setAttribute("type", "checkbox");
@@ -114,7 +114,7 @@ let view = {
 
                 let deleteButton = document.createElement("button");
                 deleteButton.textContent = "X";
-                deleteButton.className = "delete-button";
+                deleteButton.className = "container__todo--delete-button";
                 todoLi.appendChild(deleteButton);
 
                 todosUl.appendChild(todoLi);

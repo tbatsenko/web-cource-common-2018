@@ -1,0 +1,32 @@
+.day {
+  text-align: center;
+  padding: 5px;
+  flex-basis: calc(100% / 7);
+  box-sizing: border-box;
+
+  &--week {
+    border-right: 1px solid #263238;
+
+    &:last-child {
+      border-right: none;
+    }
+  }
+
+  &--number {
+    &:hover {
+      cursor: pointer;
+    }
+
+    &-active {
+      border: 1px solid #263238;
+      border-radius: 5px;
+      font-weight: bold;
+      padding: 4px;
+    }
+  }
+
+  &--empty {
+
+  }
+
+}

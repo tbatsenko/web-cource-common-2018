@@ -20,13 +20,19 @@ class Calendar {
     next() {
         this.year = (this.month === 11) ? this.year + 1 : this.year;
         this.month = (this.month + 1) % 12;
+        this.activeDay = (this.activeDay > this.daysInMonth()) ? 1 : this.activeDay;
         this.show();
     }
 
     previous() {
         this.year = (this.month === 0) ? this.year - 1 : this.year;
         this.month = (this.month === 0) ? 11 : this.month - 1;
+        this.activeDay = (this.activeDay > this.daysInMonth()) ? 1 : this.activeDay;
         this.show();
+    }
+
+    daysInMonth() {
+        return new Date(this.year, this.month + 1, 0).getDate();
     }
 
     show() {
@@ -42,7 +48,7 @@ class Calendar {
             firstDay = (firstDay + 6) % 7;
         }
         
-        let daysInMonth = new Date(this.year, this.month + 1, 0).getDate();
+       // let daysInMonth = 
     
         let calendarMain = document.querySelector(".calendar__main");
         calendarMain.innerHTML = "";
@@ -63,7 +69,7 @@ class Calendar {
     
                 if (i === 0) {
                     cellText = document.createTextNode(days[day]);
-                } else if (i === 1 && day < firstDay || date > daysInMonth) {
+                } else if (i === 1 && day < firstDay || date > this.daysInMonth()) {
                     cellText = document.createTextNode("");
                 } else {
                     cellText = document.createTextNode(date);
@@ -147,5 +153,5 @@ class Calendar {
     }
 }
 
-//localStorage.clear();
+localStorage.clear();
 let calendar = new Calendar();
