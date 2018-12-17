@@ -15,9 +15,13 @@ const config = {
   },
   watch: true,
   watchOptions: {
-    ignored: /node_modules/,
+    ignored: [
+      /node_modules/,
+      /data/
+    ],
     aggregateTimeout: 100
   },
+  devtool: "eval",
   module: {
       rules: [{
         test: /\.scss/,
@@ -25,6 +29,15 @@ const config = {
           fallback: "style-loader",
           use: "css-loader!sass-loader"
         })
+      },
+    {
+        test: /\.js$/,
+        loader: 'babel-loader',
+        exclude: /node_modules/,
+        query: {
+          presets: ['es2015'],
+          plugins: ['transform-class-properties']
+        }
       }]
   },
   plugins: [
