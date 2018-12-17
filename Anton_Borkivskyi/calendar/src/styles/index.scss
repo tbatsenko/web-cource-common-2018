@@ -1,0 +1,40 @@
+@import "calendar-section";
+@import "todo-section";
+
+:root {
+  --bg-color: #EDC7B7;
+  --text-color: #AC3B61;
+  --text2-color: #123C69;
+  --game-color: #EEE2DC;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+button {
+  cursor: pointer;
+}
+
+.body {
+  background: var(--bg-color);
+
+  display: flex;
+
+  .main {
+    background: var(--game-color);
+    height: 400px;
+    width: 700px;
+    margin: 100px auto;
+
+    border: 1px var(--text-color) solid;
+    border-radius: 5px;
+
+    display: flex;
+
+  }
+}
+
+

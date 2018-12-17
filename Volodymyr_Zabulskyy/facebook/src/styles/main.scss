@@ -1,0 +1,70 @@
+@import "layout__main-page-layout";
+@import "layout__profile-page-layout";
+@import "layout__page-layout";
+@import "main-toolbar";
+@import "main-toolbar__navigation-list";
+@import "main-toolbar__navigation-list__buttons";
+@import "main-toolbar__profile-section";
+@import "main-toolbar__search-bar";
+@import "nav-pages";
+@import "nav-pages__icons";
+@import "nav-pages__see-more";
+@import "nav-pages__profile";
+@import "post-section";
+@import "post-section__article__content";
+@import "post-section__article__header";
+@import "post-section__article__header__author";
+@import "post-section__article__header__icons";
+@import "post-section__article__post-reaction__post-comment";
+@import "post-section__article__post-reaction__post-comment__icons";
+@import "post-section__article__post-reaction__reaction-options";
+@import "post-section__article__post-reaction__reaction-options__icons";
+@import "post-section__article__reaction-area";
+@import "profile-page__header";
+@import "post-section__article__reaction-area__icons";
+@import "posting-form";
+@import "profile-page__header__background";
+@import "profile-page__header__profile-image";
+@import "profile-page__header__tools";
+@import "profile-page__short-info";
+@import "profile-page__short-info__icons";
+@import "stories-section";
+@import "stories-section__your-story";
+@import "stories-section__story-img";
+@import "stories-section__story";
+@import "stories-section__header";
+@import "stories-section__footer";
+
+body {
+  font-family: Helvetica, Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #efefef;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  color: #365899;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+main {
+  margin: auto;
+}
+
+button {
+  padding: 0;
+  border: 0;
+  background-color: transparent;
+  color: transparent;
+}
+
+img {
+  color: transparent !important;
+}

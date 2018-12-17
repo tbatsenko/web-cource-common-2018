@@ -1,0 +1,27 @@
+.login {
+    font-family: "Segoe UI",Arial,sans-serif;
+    background: white;
+    display: flex;
+    justify-content: center;
+}
+
+.first-sentence{
+    font-size: 27px;
+    line-height: 32px;
+    height: 96px;
+    width: 350px;
+    margin: 0;
+}
+
+.second-sentence{
+    margin-top: 48px;
+    margin-bottom: 16px;
+    color: #14171a;
+    font-size: 18px;
+    line-height: 24px;
+}
+
+.little-bird {
+    height: 60px;
+    width: 60px;
+}

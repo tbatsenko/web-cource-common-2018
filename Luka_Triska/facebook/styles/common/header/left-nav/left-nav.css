@@ -1,0 +1,37 @@
+.left-nav {
+  display: flex;
+  align-items: center;
+  margin-left: 65px; }
+  .left-nav__logo {
+    margin-right: 4px;
+    height: 24px;
+    width: 24px;
+    background: url("https://static.xx.fbcdn.net/rsrc.php/v3/yF/r/1c0gE0MbEo8.png");
+    background-size: cover; }
+  .left-nav__search-form__input, .left-nav__search-form {
+    display: flex;
+    border: 1px solid #3b5998;
+    border-right: 0;
+    border-bottom-left-radius: 3px;
+    border-top-left-radius: 3px;
+    margin-bottom: 2px;
+    height: 25px;
+    width: 448px; }
+  .left-nav__search-form__input {
+    text-indent: 10px; }
+  .left-nav__magnifier-button {
+    margin-top: 1px;
+    padding: 0 27px 0 16px;
+    width: 10px;
+    height: 23px;
+    background: #f5f6f7;
+    border-top-right-radius: 2px;
+    border-bottom-right-radius: 2px;
+    cursor: pointer; }
+    .left-nav__magnifier-button--logo {
+      border: 0;
+      width: 14px;
+      height: 14px;
+      background: url("https://static.xx.fbcdn.net/rsrc.php/v3/yB/r/3hwroj4Plov.png") no-repeat 1px -1382px; }
+
+/*# sourceMappingURL=left-nav.css.map */

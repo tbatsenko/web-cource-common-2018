@@ -1,57 +1,30 @@
 .body {
+  margin: 0;
+  padding: 0;
+  display: flex;
   font-family: "apercu", sans-serif;
-  background-color: coral;
-}
-
-.header {
-  margin-top: 80px;
-  margin-bottom: 0;
-  text-align: center;
-  color: white;
-}
-
-.quote {
-  font-weight: normal;
-  text-align: center;
-  margin-top: 10px;
-  margin-bottom: 10px;
-  color: white;
-}
-
-.input {
-  height: 50px;
-  margin: 20px auto auto;
-  display: flex;
-  justify-content: flex-end;
   background-color: white;
-  width: 800px;
-  border-radius: 30px;
+  height: 100%;
+  overflow: hidden;
 }
 
-.input__form {
+.todo {
   display: flex;
+  position: absolute;
+  width: 50%;
+  height: 100%;
+  right: 0;
+  flex-direction: column;
+}
+
+.calendar {
+  position: absolute;
+  display: flex;
+  width: 50%;
+  height: 100%;
+  float: right;
+  justify-content: center;
   align-items: center;
-}
-
-.input__text-field {
-  width: 670px;
-  border: 0;
-  padding: 0;
-  line-height: 20px;
-  font-size: 10pt;
-}
-
-.input__submit-button {
-  margin-left: 10px;
-  padding: 0;
-  border: 0;
-  height: 50px;
-  width: 100px;
-  border-radius: 30px;
-  background-color: #49c5b6;
-  color: white;
-  font-size: 12pt;
-  cursor: pointer;
 }
 
 /*# sourceMappingURL=index.css.map */

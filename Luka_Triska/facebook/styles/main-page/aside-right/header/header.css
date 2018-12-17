@@ -1,0 +1,29 @@
+.aside-right__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: auto;
+  padding-bottom: 12px; }
+  .aside-right__header-left {
+    color: #616770;
+    font-size: 13px;
+    font-weight: 600;
+    line-height: 13px; }
+  .aside-right__header-right {
+    display: flex; }
+    .aside-right__header-right--link-archive {
+      display: flex;
+      margin-right: 4px; }
+      .aside-right__header-right--link-archive-icon {
+        margin: 0 5px 0 5px;
+        height: 12px;
+        width: 12px;
+        background-size: auto;
+        background: url("https://static.xx.fbcdn.net/rsrc.php/v3/y3/r/gkGTiCyWKAb.png") no-repeat 0 -329px; }
+    .aside-right__header-right--link-settings {
+      margin-left: 4px; }
+    .aside-right__header-right--link-archive:hover, .aside-right__header-right--link-settings:hover {
+      text-decoration: underline; }
+
+/*# sourceMappingURL=header.css.map */

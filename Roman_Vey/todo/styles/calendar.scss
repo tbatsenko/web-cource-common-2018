@@ -1,0 +1,18 @@
+.calendar{
+    height: 100%;
+    width: 380px;
+    &__row{
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        margin-bottom: 10px;
+    }
+    &__item{
+
+    }
+    &__header{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}
