@@ -3,34 +3,31 @@ import Calendar from '../Calendar/Calendar'
 import ToDoList from '../ToDoList/ToDoList'
 import './ToDoListWithCalendar.scss'
 
-class ToDoListWithCalendar extends Component {
-  constructor(params) {
-    super(params)
+const FormatDate = ({ date }) => <div>{date.getDate()}</div>
 
-    this.state = {
-      year: null,
-      month: null,
-      day: null,
-    }
+class ToDoListWithCalendar extends Component {
+  state = {
+    date: new Date(),
   }
 
   render() {
-    return <div className="ToDoListWithCalendar">
-      <Calendar callback={this.passDateProps.bind(this)}/>
-      <ToDoList year={this.state.year} month={this.state.month} day={this.state.day}/>
-    </div>
-
+    const { date } = this.state
+    return (
+      <div className="ToDoListWithCalendar">
+        <Calendar date={date} onChange={this.passDateProps}>
+          {date => <FormatDate date={date} />}
+        </Calendar>
+        <ToDoList
+          year={date.getFullYear()}
+          month={date.getMonth()}
+          day={date.getDate()}
+        />
+      </div>
+    )
   }
 
-  passDateProps(year, month, day) {
-    console.log('passDateProps function')
-    console.log(year, month, day)
-
-    this.setState({
-      year: year,
-      month: month,
-      day: day,
-    })
+  passDateProps = date => {
+    this.setState({ date })
   }
 }
 
