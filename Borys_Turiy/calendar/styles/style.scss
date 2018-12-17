@@ -1,0 +1,36 @@
+#Calendar {
+  width: 1800px;
+  height: 1800px;
+  margin: 30px auto;
+  border: 1px solid;
+}
+
+.Calendar__row {
+  height: 40px;
+}
+
+.Calendar__cell {
+  height: 40px;
+  width: 80px;
+  text-align:center;
+  padding-right:20px;
+  float:left;
+}
+
+.Calendar__cell--current_day {
+  background-color: yellow;
+}
+
+.Calendar__cell--other_month {
+  background: lightcoral;
+}
+
+.Calendar__cell--current_month {
+  background: darkred;
+}
+.Calendar__cell--weekday{
+  background: #ffffff;
+}
+.Calendar__cell--clicked{
+  background-color: #5a4fcc;
+}
