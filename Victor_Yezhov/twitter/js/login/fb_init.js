@@ -4,16 +4,6 @@ window.fbAsyncInit = function() {
         xfbml      : true,
         version    : 'v2.8'
     });
-    FB.getLoginStatus(function(response){
-        if(response.status === 'connected'){
-            document.getElementById('status').innerHTML = 'we are connected';
-        } else if(response.status === 'not_authorized') {
-            document.getElementById('status').innerHTML = 'we are not logged in.'
-        } else {
-            document.getElementById('status').innerHTML = 'you are not logged in to Facebook';
-        }
-    });
-    // FB.AppEvents.logPageView();
 };
 
 (function(d, s, id){
@@ -27,13 +17,9 @@ window.fbAsyncInit = function() {
 function fb_login(){
     FB.login(function(response){
         if(response.status === 'connected'){
-            document.getElementById('status').innerHTML = 'we are connected';
-        } else if(response.status === 'not_authorized') {
-            document.getElementById('status').innerHTML = 'we are not logged in.'
-        } else {
-            document.getElementById('status').innerHTML = 'you are not logged in to Facebook';
+            getInfo();
         }
-        getInfo();
+
 
     });
 }
@@ -41,13 +27,19 @@ function fb_login(){
 
 function getInfo() {
     FB.api('/me', 'GET', {fields: 'first_name,last_name,name,id'}, function(response) {
-        document.getElementById('status').innerHTML = response.id;
+        window.location.href = "main_page.html";
         console.log(response)
     });
 }
 
 function fb_logout(){
-    FB.logout(function(response) {
-        document.location.reload();
-    });
+    console.log("LOGOUT!");
+    try {
+        FB.logout(function (response) {ss
+            document.location.reload();
+            window.location.href = "login.html";
+        });
+    }catch (e) {
+        window.location.href = "login.html";
+    }
 }
