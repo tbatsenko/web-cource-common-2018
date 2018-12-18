@@ -1,0 +1,76 @@
+.ToDo {
+  width: 100%;
+  min-height: 30px;
+  height: 30px;
+  margin: 0;
+  display: flex;
+  align-items: center;
+
+  &__checkbox {
+    display: none;
+  }
+
+  &__checkbox + &__note:before {
+    content: "\2714";
+    border: 0.1em solid #000;
+    border-radius: 0.2em;
+    display: inline-block;
+    width: 22px;
+    height: 22px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    margin-right: 1em;
+    padding-left: 2px;
+    box-sizing: border-box;
+    vertical-align: bottom;
+    color: transparent;
+    transition: .1s;
+  }
+
+  &__checkbox + &__note:before:active {
+    transform: scale(0);
+  }
+
+  &__checkbox:checked + &__note:before {
+    background-color: MediumSeaGreen;
+    border-color: MediumSeaGreen;
+    color: #fff;
+  }
+
+  &__checkbox:disabled + &__note:before {
+    transform: scale(1);
+    border-color: #aaa;
+  }
+
+  &__checkbox:checked:disabled + &__note:before {
+    transform: scale(1);
+    background-color: #bfb;
+    border-color: #bfb;
+  }
+
+  &__note {
+    color: #263238;
+    height: 100%;
+    display: flex;
+    align-items: center;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  &__remove-btn {
+    background: none;
+    border: none;
+    width: 20px;
+    height: 20px;
+    padding: 5px;
+    box-sizing: content-box;
+    margin: 0 0 0 auto;
+    align-self: flex-end;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}
