@@ -15,14 +15,14 @@ class ToDo extends Component {
   }
 
   render() {
-    const { onToggleTaskCompletement, onTaskRemove, completed, note, id } = this.props
+    const { onToggleTaskCompletement, onTaskRemove, completed, note, id, date } = this.props
 
     return (
       <div className="ToDo">
         <input type="checkbox"
                className="ToDo__checkbox"
                aria-label="Task is completed?"
-               onChange={() => onToggleTaskCompletement(id)}
+               onChange={() => onToggleTaskCompletement({id, note, date, completed: !completed})}
                checked={completed}
                name={note}
                id={id}

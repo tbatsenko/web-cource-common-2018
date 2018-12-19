@@ -10,7 +10,9 @@ import './ToDoList.scss'
 
 class ToDoList extends Component {
   static propTypes = {
-    onTasksListChange: PropTypes.func,
+    onTaskEdit: PropTypes.func,
+    onTaskCreate: PropTypes.func,
+    onTaskRemove: PropTypes.func,
     date: PropTypes.object,
     tasks: PropTypes.array,
   }
@@ -26,18 +28,7 @@ class ToDoList extends Component {
       completed: false,
     }
 
-    this.props.onTasksListChange([...this.props.tasks, newTask])
-  }
-
-  removeTask = (taskId) => {
-    this.props.onTasksListChange(this.props.tasks.filter(task => task.id !== taskId))
-  }
-
-  toggleTaskCompletement = (taskId) => {
-    this.props.onTasksListChange(this.props.tasks.map(task => {
-      task.completed = (task.id === taskId) ? !task.completed : task.completed
-      return task
-    }))
+    this.props.onTaskCreate(newTask)
   }
 
   getTasksForCurrentDate() {
@@ -52,7 +43,7 @@ class ToDoList extends Component {
 
   render() {
     const tasks = this.getTasksForCurrentDate()
-    const { date } = this.props
+    const { date, onTaskEdit, onTaskRemove } = this.props
 
     return (
       <div className="ToDoList">
@@ -71,8 +62,8 @@ class ToDoList extends Component {
                 completed={todo.completed}
                 date={todo.date}
                 id={todo.id}
-                onTaskRemove={this.removeTask}
-                onToggleTaskCompletement={this.toggleTaskCompletement}
+                onTaskRemove={onTaskRemove}
+                onToggleTaskCompletement={onTaskEdit}
                 key={index}
               />
             ))

@@ -60,7 +60,7 @@
     "uuid": "^3.3.2"
   },
   "scripts": {
-    "start": "node scripts/start.js",
+    "start": "node scripts/start.js & json-server --watch ./db.json --port 3030",
     "build": "node scripts/build.js",
     "test": "node scripts/test.js"
   },
@@ -118,5 +118,8 @@
     "presets": [
       "react-app"
     ]
+  },
+  "devDependencies": {
+    "json-server": "^0.14.0"
   }
 }
