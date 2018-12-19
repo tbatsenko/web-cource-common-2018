@@ -3,15 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <title>TodoList</title>
-    <link rel="stylesheet" href="src/style.css">
+    <link rel="stylesheet" href="dist/main.css">
 </head>
 <body>
-<main class="placeholder">
+<div id="calendarPlaceholder" class="calendar_container">
 
+</div>
+<main class="placeholder">
     <header class="input-filter-header">
         <form class="form-new-task" id="newTaskForm">
             <label class="form-new-task__container" for="newTaskInput">
-                <input placeholder="Type new task here" id="newTaskInput" class="form-create-task__input" type="text">
+                <input placeholder="Type new task here" id="newTaskInput" class="form-create-task__input"
+                       type="text">
                 <button type="submit" class="form-create-task__btn">+</button>
             </label>
         </form>
@@ -26,6 +29,7 @@
     <div class="content" id="content">
 
     </div>
+
 </main>
 <script type="module" src="dist/main.js"></script>
 </body>

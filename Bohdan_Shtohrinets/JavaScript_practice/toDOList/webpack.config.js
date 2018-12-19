@@ -1,27 +1,27 @@
 const path = require('path');
 
 module.exports = {
-    context: __dirname + '/src',
+  context: __dirname + '/src',
 
-    entry: './todo-list.js',
-    output: {
-        path: path.resolve(__dirname, 'dist'),
-        filename: 'main.js',
-        library: "toDoList"
-    },
+  entry: './index.js',
+  output: {
+    path: path.resolve(__dirname, 'dist'),
+    filename: 'main.js',
+    library: 'toDoList',
+  },
 
-    watch: false,
+  watch: false,
 
-    module: {
-        rules: [{
-            test: /\.m?js$/,
-            exclude: /(node_modules|bower_components)/,
-            use: {
-                loader: 'babel-loader',
-                options: {
-                    presets: ['@babel/preset-env']
-                }
-            }
-        }],
-    }
+  module: {
+    rules: [{
+      test: /\.m?js$/,
+      exclude: /(node_modules|bower_components)/,
+      use: {
+        loader: 'babel-loader',
+        options: {
+          presets: ['@babel/preset-env'],
+        },
+      },
+    }],
+  },
 };

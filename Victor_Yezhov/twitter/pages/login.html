@@ -6,8 +6,8 @@
     <title>Title</title>
     <link rel="stylesheet" href="../css/login/all-css.css">
     <script src="../js/login/fb_init.js" async></script>
-    <script src="https://apis.google.com/js/platform.js"  defer></script>
-    <script src="../js/login/google_login.js" defer></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
 
 </head>
 
@@ -34,15 +34,8 @@
             <h1 class="heading_text_major segoe_black">Узнайте, что происходит<br> в мире прямо сейчас.</h1>
             <h2 class="heading_text_minor segoe_black">Присоединяйтесь к Твиттеру прямо<br> сейчас!</h2>
 
-            <button class="registration_button segoe_white button_round">Зарегестрироватся</button>
-            <button  class="enter_button segoe_blue button_round" data-onsuccess="onSignIn">Войти</button>
-            <div class="g-signin2" data-onsuccess="onSignIn"></div>
-            <a href="#" onclick="onSignOut();">Sign out</a>
+            <button onclick="fb_login()" class="registration_button segoe_white button_round">Войти с facebook</button>
 
-            <div id="status"></div>
-            <!-- <button onclick="getInfo()">Get Info</button> -->
-            <button onclick="fb_login()">login</button>
-            <button onclick="fb_logout()">logout</button>
 
 
         </section>

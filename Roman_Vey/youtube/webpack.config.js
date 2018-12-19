@@ -4,7 +4,7 @@ const ExtractTextPlugin = require('extract-text-webpack-plugin')
 const config = {
   entry: {
       bundle: './js/index',
-      styles: './styles/styles',
+      styles: './styles/main',
   },
   output: {
     path: path.resolve(__dirname, 'dist'),

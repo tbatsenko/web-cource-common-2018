@@ -1,0 +1,198 @@
+.todo-list {
+    max-width: 500px;
+    min-width: 320px;
+    margin: 0 auto;
+    background: #353839;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    font-family: "Nunito", sans-serif;
+}
+
+.todo-list__header {
+    padding: 10px;
+    border-bottom: 1px solid #F1C40F;
+}
+
+.todo-list__title {
+    padding: 0;
+    margin: 0;
+    color: #F1C40F;
+}
+
+#completed .buttons__checkbox {
+    background-color: #F1C40F;
+}
+
+#completed .task__name {
+    text-decoration: line-through;
+}
+
+.task-list {
+    display: flex;
+    flex-direction: column;
+    color: white;
+    padding: 10px;
+}
+
+.task-list__title {
+    margin: 0;
+    padding: 0;
+    color: #F1C40F;
+}
+
+.task-list__add-new {
+    display: flex;
+    justify-content: center;
+    margin: 10px 0;
+}
+
+.task-list__buttons {
+    color: transparent;
+    border-radius: 50%;
+    border: 2px solid white;
+    background: inherit;
+    position: relative;
+    display: block;
+}
+
+.task-list__buttons:hover {
+    border-color: #F1C40F;
+}
+
+.task-list__task {
+    padding: 10px 10px;
+    display: flex;
+    flex-direction: row;
+}
+
+.task__name {
+    order: 2;
+    color: white;
+    font-size: 18px;
+    position: relative;
+    overflow: hidden;
+}
+
+.task__name_crossed {
+    text-decoration: line-through;
+}
+
+.input-task {
+    font-family: "Nunito", sans-serif;
+    background: inherit;
+    border: none;
+    border-bottom: 1px solid white;
+    color: white;
+    font-size: 16px;
+    width: 50%;
+    margin: 0 10px 0 0;
+    padding: 0;
+}
+
+.buttons {
+    display: flex;
+    margin-left: auto;
+}
+
+.buttons__add-task {
+    width: 30px;
+    height: 30px;
+}
+
+.buttons__add-task:before {
+    top: -3px;
+    left: 1px;
+    position: absolute;
+    color: white;
+    content: "+";
+    display: block;
+    width: 25px;
+    height: 25px;
+    font-size: 25px;
+}
+
+.buttons__delete {
+    width: 25px;
+    height: 25px;
+    order: 3;
+    margin-left: auto;
+}
+
+.buttons__delete:before {
+    top: -7.5px;
+    left: 4.5px;
+    position: absolute;
+    color: white;
+    content: "-";
+    display: block;
+    font-size: 28px;
+    width: 13px;
+    height: 13px;
+}
+
+.buttons__checkbox {
+    width: 20px;
+    height: 20px;
+    margin-top: 3px;
+    margin-right: 10px;
+    order: 1;
+}
+
+.buttons__checkbox:active {
+    background-color: #F1C40F;
+}
+
+.checkbox {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.checkbox:hover .checkbox_hidden ~ .checkbox__mark {
+    background-color: #F1C40F;
+}
+
+.checkbox_hidden {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+.checkbox_hidden:checked ~ .checkbox__mark:after {
+    display: block;
+}
+
+.checkbox__mark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 20px;
+    width: 20px;
+    background-color: inherit;
+    border: 1px solid white;
+}
+
+.checkbox__mark:after {
+    content: "";
+    position: absolute;
+    display: none;
+    left: 7px;
+    top: 2px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+/*# sourceMappingURL=todo-list.css.map */

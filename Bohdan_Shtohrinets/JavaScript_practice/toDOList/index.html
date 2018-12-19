@@ -7,10 +7,7 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
-    <link rel="stylesheet" href="styles/todo-list/todo-list.css">
-    <link rel="stylesheet" href="styles/task-list/task-list.css">
-    <link rel="stylesheet" href="styles/task-buttons/task-buttons.css">
-    <link rel="stylesheet" href="styles/checkbox/checkbox.css">
+    <link rel="stylesheet" href="styles/todo-list.css">
 </head>
 <body>
 <div class="todo-list">
@@ -19,35 +16,17 @@
     </header>
     <main class="task-list">
         <form class="task-list__add-new">
-            <input id="item" type="text" class="input-task input-task_add" placeholder="Type task here...">
+            <input id="item" type="text" class="input-task" placeholder="Type task here...">
             <button id="add" class="task-list__buttons buttons__add-task">Add task</button>
         </form>
         <div class="task-list__incomplete">
             <h3 class="task-list__title">Tasks</h3>
             <nav id="todo" class="task-list__all-tasks">
-                <!--<form class="task-list__task">-->
-                <!--<label class="task__name">Pay Bills</label>-->
-                <!--<button class="task-list__buttons buttons__checkbox task__buttons_first">Check</button>-->
-                <!--<input type="text" class="input-task input-task_inactive">-->
-                <!--<div class="task__buttons_last buttons">-->
-                <!--<button class="task-list__buttons buttons__edit">Edit</button>-->
-                <!--<button class="task-list__buttons buttons__delete">Delete</button>-->
-                <!--</div>-->
-                <!--</form>-->
             </nav>
         </div>
         <div class="task-list__complete">
             <h3 class="task-list__title">Completed</h3>
             <nav id="completed" class="task-list__all-tasks">
-                <!--<form class="task-list__task">-->
-                <!--<label class="task__name">Pay Bills</label>-->
-                <!--<button class="task-list__buttons buttons__checkbox task__buttons_first">Check</button>-->
-                <!--<input type="text" class="input-task input-task_inactive">-->
-                <!--<div class="task__buttons_last buttons">-->
-                <!--<button class="task-list__buttons buttons__edit">Edit</button>-->
-                <!--<button class="task-list__buttons buttons__delete">Delete</button>-->
-                <!--</div>-->
-                <!--</form>-->
             </nav>
         </div>
     </main>
