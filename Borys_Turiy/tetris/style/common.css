@@ -1,0 +1,41 @@
+
+.Game {
+  width: 200px;
+  height: 200px;
+  margin: 30px auto;
+  border: 1px solid;
+  background: black;
+}
+
+.Game__row {
+}
+
+.Game__cell {
+  float:left;
+  width: 20px;
+  height: 20px;
+}
+.Game__cell--clean{
+  background-color: black;
+}
+.Game__cell--cyan{
+background-color: cyan;
+}
+.Game__cell--blue{
+  background-color: blue;
+}
+.Game__cell--orange{
+  background-color: orange;
+}
+.Game__cell--yellow{
+  background-color: yellow;
+}
+.Game__cell--green{
+  background-color: lawngreen;
+}
+.Game__cell--violet{
+  background-color: blueviolet;
+}
+.Game__cell--red{
+  background-color: red;
+}

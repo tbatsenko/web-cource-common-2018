@@ -1,3 +1,113 @@
+.calendar-section {
+  width: 60%;
+  display: flex;
+  flex-direction: column; }
+  .calendar-section .header {
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly; }
+    .calendar-section .header__text {
+      font-family: "Lato", Helvetica, Arial, sans-serif;
+      width: 60%;
+      font-size: 30px;
+      color: var(--text-color);
+      text-align: center; }
+    .calendar-section .header__button, .calendar-section .header__img {
+      width: 30px;
+      height: 30px;
+      background: transparent; }
+    .calendar-section .header__button:focus {
+      outline: none; }
+  .calendar-section .calendar {
+    height: 350px;
+    width: 100%;
+    background: white;
+    display: flex;
+    flex-flow: wrap;
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 5px; }
+    .calendar-section .calendar__cell {
+      width: 10%;
+      margin: 2%;
+      height: 40px;
+      border-radius: 5px;
+      font-size: 20px;
+      background: transparent;
+      border: 1px solid var(--text-color);
+      box-sizing: border-box;
+      color: var(--text-color);
+      display: flex;
+      justify-content: center;
+      align-items: center; }
+    .calendar-section .calendar__active-cell {
+      color: white;
+      background: #AC3B61; }
+    .calendar-section .calendar__day-cell:hover {
+      cursor: pointer; }
+
+.item {
+  border: 1px solid var(--text-color);
+  background: white;
+  color: var(--text-color);
+  margin-left: 5px;
+  border-radius: 5px;
+  height: 30px;
+  width: 95%;
+  font-size: 15px;
+  margin-bottom: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between; }
+  .item__text {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis; }
+
+.todo-section {
+  width: 40%; }
+  .todo-section .input-item {
+    height: 50px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center; }
+    .todo-section .input-item__input {
+      padding: 0 10px;
+      height: 40px;
+      width: 65%;
+      font-size: 15px;
+      border-bottom-left-radius: 10px;
+      border-top-left-radius: 10px;
+      color: var(--text-color);
+      border: 1px solid var(--text-color); }
+      .todo-section .input-item__input:focus {
+        outline: none; }
+    .todo-section .input-item__button {
+      height: 42px;
+      width: 20%;
+      font-size: 15px;
+      margin-right: 10px;
+      border: 1px solid var(--text-color);
+      border-bottom-right-radius: 10px;
+      border-top-right-radius: 10px;
+      background: var(--text-color);
+      color: var(--game-color); }
+      .todo-section .input-item__button:focus {
+        outline: none; }
+  .todo-section .todo {
+    height: 350px;
+    border-bottom-right-radius: 5px;
+    overflow-y: scroll; }
+    .todo-section .todo::-webkit-scrollbar {
+      width: 10px; }
+    .todo-section .todo::-webkit-scrollbar-track {
+      background-color: transparent;
+      border-radius: 5px; }
+    .todo-section .todo::-webkit-scrollbar-thumb {
+      background-color: var(--text-color);
+      border-radius: 5px 5px 4px 5px; }
+
 :root {
   --bg-color: #EDC7B7;
   --text-color: #AC3B61;
@@ -16,85 +126,12 @@ button {
   background: var(--bg-color);
   display: flex; }
   .body .main {
-    background: white;
+    background: var(--game-color);
     height: 400px;
     width: 700px;
     margin: 100px auto;
+    border: 1px var(--text-color) solid;
+    border-radius: 5px;
     display: flex; }
-    .body .main .calendar-section {
-      width: 60%;
-      display: flex;
-      flex-direction: column; }
-      .body .main .calendar-section .header {
-        height: 50px;
-        background: var(--game-color);
-        display: flex;
-        align-items: center;
-        justify-content: space-evenly; }
-        .body .main .calendar-section .header__text {
-          font-family: "Lato", Helvetica, Arial, sans-serif;
-          width: 60%;
-          font-size: 30px;
-          color: var(--text-color);
-          text-align: center; }
-        .body .main .calendar-section .header__button, .body .main .calendar-section .header__img {
-          width: 30px;
-          height: 30px;
-          background: transparent; }
-        .body .main .calendar-section .header__button:focus {
-          outline: none; }
-      .body .main .calendar-section .calendar {
-        height: 350px;
-        width: 100%;
-        background: white;
-        display: flex;
-        flex-flow: wrap; }
-        .body .main .calendar-section .calendar__cell {
-          width: 10%;
-          margin: 2%;
-          height: 40px;
-          border-radius: 5px;
-          font-size: 20px;
-          background: var(--text2-color);
-          color: white;
-          display: flex;
-          justify-content: center;
-          align-items: center; }
-        .body .main .calendar-section .calendar__active-cell:hover {
-          cursor: pointer; }
-    .body .main .todo-section {
-      width: 40%;
-      background: var(--game-color); }
-      .body .main .todo-section .input-item {
-        height: 50px;
-        width: 100%;
-        display: flex;
-        align-items: center; }
-        .body .main .todo-section .input-item__input {
-          padding: 0 10px;
-          height: 100%;
-          width: 85%;
-          font-size: 20px;
-          color: var(--text-color); }
-          .body .main .todo-section .input-item__input:focus {
-            outline: none; }
-        .body .main .todo-section .input-item__button {
-          height: 100%;
-          width: 15%;
-          background: var(--text-color);
-          color: var(--game-color);
-          font-size: 20px; }
-          .body .main .todo-section .input-item__button:focus {
-            outline: none; }
-      .body .main .todo-section .item {
-        border: 1px solid var(--text-color);
-        background: white;
-        color: var(--text-color);
-        height: 40px;
-        font-size: 20px;
-        margin-top: 5px;
-        display: flex;
-        align-items: center;
-        justify-content: space-between; }
 
 /*# sourceMappingURL=index.css.map */

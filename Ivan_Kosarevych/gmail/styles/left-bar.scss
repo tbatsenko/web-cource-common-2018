@@ -1,0 +1,70 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+.left-bar{
+  //height: 100%;
+  width: 256px;
+  float: left;
+  box-sizing: border-box;
+  overflow: hidden;
+  &__navigation{
+    min-height: 90px;
+    resize: vertical;
+    overflow: auto;
+    display: flex;
+    //padding: 15px;
+    flex-direction: column;
+    border-bottom: 2px #eceff1 solid;
+    cursor: ns-resize;
+  }
+  &__button {
+    display: flex;
+    height: 48px;
+    margin: 15px 0 15px 10px;
+    padding: 0 25px 0 10px;
+    flex-direction: row;
+    align-items: center;
+    box-sizing: border-box;
+
+    background-color: transparent;
+    border: 1px;
+    border-radius: 24px;
+    box-shadow: 0 2px 2px 2px lightgray;
+    &--image{
+      height: 30px;
+      width: 30px;
+    }
+    &--text{
+      font-family: 'Roboto', 'RobotoDraft', sans-serif;
+      font-size: 14px;
+      font-weight: 400;
+      margin: 0 0 0 10px;
+    }
+  }
+  &__link{
+    text-decoration: none;
+    color:inherit;
+    padding: 7px 15px;
+    border-radius: 0 15px 15px 0;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    &--active{
+      background-color: #fce8e6;
+    }
+    &--text{
+      font-family: 'Roboto', sans-serif;
+      margin-left: 20px;
+    }
+    &--text-active{
+      font-weight: bold;
+      color: #db3429
+    }
+    &--icon-active{
+      color: #db3429;
+    }
+    &:hover{
+      background-color: #f4f4f4;
+    }
+  }
+}
