@@ -42,9 +42,9 @@ class TodoCalendar extends React.Component {
     render() {
         return (
             [
-                <Calendar {...this.state} next={this.next} previous={this.previous} 
+                <Calendar key='0' {...this.state} next={this.next} previous={this.previous} 
                     select={this.select} daysInMonth={this.daysInMonth} />,
-                <Todo {...this.state} />
+                <Todo key='1'  {...this.state} />
             ]
         );
     }
