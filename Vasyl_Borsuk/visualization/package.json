@@ -1,19 +1,20 @@
 {
-  "name": "calendar-react",
+  "name": "visualization",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "node-sass": "^4.11.0",
+    "@vx/vx": "0.0.182",
+    "d3": "^5.7.0",
     "react": "^16.6.3",
     "react-dom": "^16.6.3",
-    "react-scripts": "2.1.1"
+    "react-scripts": "2.1.1",
+    "react-sizeme": "^2.5.2"
   },
   "scripts": {
-    "start": "react-scripts start & npm run rest",
+    "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "rest": "json-server --watch --port 4000 db.json"
+    "eject": "react-scripts eject"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -23,8 +24,5 @@
     "not dead",
     "not ie <= 11",
     "not op_mini all"
-  ],
-  "devDependencies": {
-    "react": "^16.6.3"
-  }
+  ]
 }
