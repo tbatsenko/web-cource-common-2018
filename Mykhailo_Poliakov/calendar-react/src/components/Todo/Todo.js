@@ -20,10 +20,6 @@ class Todo extends React.Component {
         this.setState({value: ''});
     }
 
-    /*setStorage(storage) {
-        localStorage.setItem('storage', JSON.stringify(storage));
-    }*/
-
     componentDidMount() {
         fetch('http://localhost:4000/dates').then((response) => response.json()).then(data => {
             this.setState({data: data, id: data[data.length - 1].id});        
@@ -71,8 +67,6 @@ class Todo extends React.Component {
         } 
         
         if (!isDayFound) {
-            //this.state.data.push()
-
             this.postData(
             {
                 "id": this.state.id + 1, "day": this.props.day, 
