@@ -2,19 +2,23 @@
 
   <a href="https://www.facebook.com/?ref=logo"><img class="site-logo"
                                                     src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTX-Sq9h-GrBb8BrHPO_PMnhZ_XyvNl9Zd2xjrWHn9klYl_2qBB"/></a>
-  <form class="search-form" action="" name="Facebook search" method="get">
-    <input type="search" placeholder="Search" aria-label="Facebook search">
-    <button type="submit" class="submit-button"><img class="submit-button__image"
-                                                     src="https://cdn1.iconfinder.com/data/icons/hawcons/32/698627-icon-111-search-512.png"/>
-    </button>
+  <form class="site-search">
+    <input class="site-search__input-field" placeholder="Search" title="Search">
+    <button class="site-search__submit-button" aria-label="Submit"></button>
   </form>
-
-  <a href="#">
-    <img src="http://pngimages.net/sites/default/files/user-png-image-15189.png" alt="" width="25" height="25">
-    <span>Borys</span>
+  <div class="facebook-header__user-options">
+  <a href="#" class="">
+    <img src={{profile_info.avatar}} alt="" width="25" height="25">
+    {{profile_info.first_name}}
   </a>
-  <br>
-  <a href="#">Main</a>
+  <a href="https://www.facebook.com/?ref=tn_tnmn">Home</a>
+    <button>Create</button>
+    <button>Friends</button>
+    <button>Messages</button>
+    <button>Notifications</button>
+    <button>Help</button>
+    <button>More</button>
+  </div>
 </header>
 <!--<nav class="site_nav">-->
 <!--<ul id="user_nav">-->

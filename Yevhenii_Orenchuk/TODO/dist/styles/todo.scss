@@ -1,0 +1,99 @@
+$input-field-height: 50px;
+$input-field-border-radius: 30px;
+
+.header {
+  margin-top: 80px;
+  margin-bottom: 0;
+  text-align: center;
+  color: black;
+}
+.quote {
+  font-weight: normal;
+  text-align: center;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  color: black;
+}
+.input {
+  height: $input-field-height;
+  margin-top: 30px;
+  background-color: white;
+  border-radius: $input-field-border-radius;
+  border: 2px solid #007aff;
+}
+.input__form {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.input__text-field {
+  margin: 15px;
+  width: 350px;
+  border: 0;
+  padding: 0;
+  line-height: 20px;
+  font-size: 10pt;
+}
+.input__submit-button {
+  padding: 0;
+  border: 0;
+  height: $input-field-height;
+  width: 100px;
+  border-radius: $input-field-border-radius;
+  background-color: #007aff;
+  color: white;
+  font-size: 12pt;
+  cursor: pointer;
+
+  &:active {
+    background-color: red;
+  }
+}
+.tasks {
+  padding-left: 15px;
+}
+.tasks__item {
+  padding-left: 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  align-content: center;
+  overflow: auto;
+}
+.tasks__buttons {
+  padding: 0;
+  margin: 10px;
+}
+.label-text {
+  width: auto;
+  overflow: scroll;
+  max-height: 72px;
+}
+.label-text--completed {
+  text-decoration: line-through;
+}
+.label-text__edit {
+  margin: 0;
+  font-size: 14px;
+  width: 50%;
+  padding: 5px;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+}
+.edit--active {
+  background-color: transparent;
+  border: 1px solid red;
+  border-radius: 3px;
+  padding: 1px 6px;
+}
+.lists-container {
+  height: inherit;
+  overflow: scroll;
+}
+.task-manager {
+  width: 500px;
+  margin: 0 auto;
+  height: 80%;
+  overflow: hidden;
+}
