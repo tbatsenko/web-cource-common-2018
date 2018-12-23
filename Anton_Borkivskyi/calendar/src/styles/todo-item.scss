@@ -3,15 +3,15 @@
   border: 1px solid var(--text-color);
   background: white;
   color: var(--text-color);
+
   margin-left: 5px;
+  margin-bottom: 5px;
 
   border-radius: 5px;
 
   height: 30px;
   width: 95%;
   font-size: 15px;
-
-  margin-bottom: 5px;
 
   display: flex;
   align-items: center;
@@ -21,5 +21,24 @@
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
+
+    margin-left: 5px;
+  }
+
+  &__button{
+    width: 20px;
+    height: 20px;
+    margin-right: 5px;
+
+    background: transparent;
+
+    &:focus {
+      outline: none;
+    }
+  }
+
+  &__img{
+    width: 20px;
+    height: 20px;
   }
 }

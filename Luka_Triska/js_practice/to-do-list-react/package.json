@@ -1,19 +1,19 @@
 {
-  "name": "calendar-react",
+  "name": "new-react",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "node-sass": "^4.11.0",
-    "react": "^16.6.3",
-    "react-dom": "^16.6.3",
-    "react-scripts": "2.1.1"
+    "moment": "^2.23.0",
+    "react": "^16.7.0",
+    "react-dom": "^16.7.0",
+    "react-scripts": "2.1.1",
+    "shortid": "^2.2.14"
   },
   "scripts": {
-    "start": "react-scripts start & npm run rest",
+    "start": "react-scripts start --open --hot",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "rest": "json-server --watch --port 4000 db.json"
+    "eject": "react-scripts eject"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -25,6 +25,6 @@
     "not op_mini all"
   ],
   "devDependencies": {
-    "react": "^16.6.3"
+    "axios": "^0.18.0"
   }
 }

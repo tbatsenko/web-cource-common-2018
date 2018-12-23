@@ -3,7 +3,9 @@ import './Todo.scss';
 
 class Todo extends React.Component {
     state = {
-        value: ''
+        value: '',
+        data: null,
+        id: 1
     };
 
     change = (e) => {
@@ -18,58 +20,74 @@ class Todo extends React.Component {
         this.setState({value: ''});
     }
 
-    setStorage(storage) {
-        localStorage.setItem('storage', JSON.stringify(storage));
+    componentDidMount() {
+        fetch('http://localhost:4000/dates').then((response) => response.json()).then(data => {
+            this.setState({data: data, id: data[data.length - 1].id});        
+        })
     }
-
-    getStorage() {
-        return JSON.parse(localStorage.getItem('storage'));
-    }
+        
 
     isSameDate(date) {
         return date.day === this.props.day && date.month === this.props.month && date.year === this.props.year;
     }
 
+    async postData(data) {
+        this.state.data.push(data);
+        let options = {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(data)
+          }
+          return fetch('http://localhost:4000/dates', options).then((response) => response.json)
+    }
+
+    async putData(data) {
+        let options = {
+            method: 'PUT',
+            headers: {
+              'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(data)
+          }
+          return fetch('http://localhost:4000/dates/' + data.id, options).then((response) => response.json)
+    }
+
     addItem(item) {
-        let storage = this.getStorage();
         let isDayFound = false;
 
-        for (let i = 0; i < storage.length; i++) {
-            if (this.isSameDate(storage[i])) {          
-                storage[i].items.push(item);
-                this.setStorage(storage);
-                isDayFound = true;
+        for (let i = 0; i < this.state.data.length; i++) {
+            if (this.isSameDate(this.state.data[i])) {   
+                isDayFound = true;       
+                this.state.data[i].items.push(item);
+                this.putData(this.state.data[i]);
                 break;
             }
         } 
         
         if (!isDayFound) {
-            storage.push({"day": this.props.day, 
-                          "month":  this.props.month, 
-                          "year": this.props.year, 
-                          "items": [item]
-                        })
-            this.setStorage(storage);
+            this.postData(
+            {
+                "id": this.state.id + 1, "day": this.props.day, 
+                "month":  this.props.month, "year": this.props.year, "items": [item]
+            });
         }
     }
 
     render() {
-        let storage = this.getStorage();
-
-        if (storage == null) {
-            this.setStorage([{"day": 0, "month": 0, "year": 0, "items": ["-"]}]);
-            storage = this.getStorage();
-        }
-        
         let items = [];
-
-        for (let i = 0; i < storage.length; i++) {
-            if (this.isSameDate(storage[i])) {           
-                for (let j = 0; j < storage[i].items.length; j++) {
-                    items.push(<li key={j} className="todo__item">{storage[i].items[j]}</li>);
+        if (this.state.data != null) {
+            for (let i = 0; i < this.state.data.length; i++) {
+                if (this.isSameDate(this.state.data[i])) {           
+                    for (let j = 0; j < this.state.data[i].items.length; j++) {
+                        items.push(<li key={j} className="todo__item">{this.state.data[i].items[j]}</li>);
+                    }
                 }
             }
+
         }
+       
 
         return (
             <section className="todo">
