@@ -1,5 +1,8 @@
 import React from 'react';
 import './Days.scss';
+import BEM from '../../bem';
+
+const b = BEM('days');
 
 class Days extends React.Component {
     state = {
@@ -31,14 +34,14 @@ class Days extends React.Component {
         for (let i = 0; i < 7; i++) {
             let row = []
             for (let j = 0; j < 7; j++) {
-                let className = 'days__day';
+                let className = b('day');
                 let value = '';
 
                 if (i === 0) value = days[j];
                 else if ((i === 1 && j < firstDay) || day > this.daysInMonth()) {} else {
                     value = day;
-                    className += ' days__day--date';
-                    if (day === this.props.day) className += ' days__day--active';
+                    className += ' ' + b('day--date');
+                    if (day === this.props.day) className += ' ' + b('day--active');;
                     day++;
                 }
 
@@ -46,7 +49,7 @@ class Days extends React.Component {
                     <li key={j} value={value} onClick={this.props.onSelect} className={className}>{value}</li>
                 );
             }
-            rows.push(<ul key={i} className="days">{row}</ul>);
+            rows.push(<ul key={i} className={b()}>{row}</ul>);
         }
       
         return rows;

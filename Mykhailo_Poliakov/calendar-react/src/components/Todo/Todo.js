@@ -1,5 +1,8 @@
 import React from 'react';
 import './Todo.scss';
+import BEM from '../bem';
+
+const b = BEM('todo');
 
 class Todo extends React.Component {
     state = {
@@ -81,26 +84,25 @@ class Todo extends React.Component {
             for (let i = 0; i < this.state.data.length; i++) {
                 if (this.isSameDate(this.state.data[i])) {           
                     for (let j = 0; j < this.state.data[i].items.length; j++) {
-                        items.push(<li key={j} className="todo__item">{this.state.data[i].items[j]}</li>);
+                        items.push(<li key={j} className={b('item')}>{this.state.data[i].items[j]}</li>);
                     }
                 }
             }
 
         }
-       
 
         return (
-            <section className="todo">
-                <header className="todo__header">
-                    <h1 className="todo__date">
+            <section className={b()}>
+                <header className={b('header')}>
+                    <h1 className={b('date')}>
                         {this.props.day} {this.props.months[this.props.month]} {this.props.year}
                     </h1>
                 </header>
-                <main className="todo__main">
-                    <ul className="todo__list">{items}</ul>
+                <main className={b('main')}>
+                    <ul className={b('list')}>{items}</ul>
                 </main>
-                <form className="todo__form" onSubmit={this.onSubmit}>
-                    <input className="todo__input" value={this.state.value} type="text" onChange={this.onChange} placeholder="Enter a task for this day" />
+                <form className={b('form')} onSubmit={this.onSubmit}>
+                    <input className={b('input')} value={this.state.value} type="text" onChange={this.onChange} placeholder="Enter a task for this day" />
                 </form>
             </section>
         )
