@@ -14,9 +14,6 @@ class Todo extends React.Component {
 
     submit = (e) => {
         e.preventDefault();
-
-        if (this.state.value === 'Clear') localStorage.clear();
-        else this.addItem(this.state.value);
         this.setState({value: ''});
     }
 
@@ -34,7 +31,7 @@ class Todo extends React.Component {
     async postData(data) {
         this.state.data.push(data);
         this.state.id = this.state.id + 1;
-        
+
         let options = {
             method: 'POST',
             headers: {
