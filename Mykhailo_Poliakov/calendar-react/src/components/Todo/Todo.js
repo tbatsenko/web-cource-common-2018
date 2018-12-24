@@ -8,12 +8,13 @@ class Todo extends React.Component {
         id: 1
     };
 
-    change = (e) => {
+    onChange = (e) => {
         this.setState({value: e.target.value});
     }
 
-    submit = (e) => {
+    onSubmit = (e) => {
         e.preventDefault();
+        this.addItem(this.state.value);
         this.setState({value: ''});
     }
 
@@ -98,8 +99,8 @@ class Todo extends React.Component {
                 <main className="todo__main">
                     <ul className="todo__list">{items}</ul>
                 </main>
-                <form className="todo__form" onSubmit={this.submit}>
-                    <input className="todo__input" value={this.state.value} type="text" onChange={this.change} placeholder="Enter a task for this day" />
+                <form className="todo__form" onSubmit={this.onSubmit}>
+                    <input className="todo__input" value={this.state.value} type="text" onChange={this.onChange} placeholder="Enter a task for this day" />
                 </form>
             </section>
         )
