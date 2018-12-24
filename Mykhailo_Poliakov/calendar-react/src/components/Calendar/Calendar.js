@@ -2,7 +2,7 @@ import React from 'react';
 import Days from './Days/Days';
 import './Calendar.scss';
 
-import BEM from '../bem';
+import BEM from '../../utils/bem';
 
 const b = BEM('calendar');
 

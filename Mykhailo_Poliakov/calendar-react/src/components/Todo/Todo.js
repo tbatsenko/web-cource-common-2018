@@ -1,6 +1,6 @@
 import React from 'react';
 import './Todo.scss';
-import BEM from '../bem';
+import BEM from '../../utils/bem';
 
 const b = BEM('todo');
 
