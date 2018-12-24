@@ -38,12 +38,20 @@ const TodoContainer = props => {
     </div>
 };
 
+
 const TodoList = React.memo(props => {
-    return <ul className='todo-list'>
-        {props.items.map(item => <TodoItem key={item.id} modifyId={props.modifyTodobyId(item.id)}
-                                           removeId={props.removeTodoById(item.id)} text={item.text}
-                                           done={item.done}/>)}
-    </ul>;
+    const items = props.items.filter(item => item.date === props.currentDate);
+    return (items.length > 0) ?
+        <ul className='todo-list'>
+            {props.items.map(item =>
+                <TodoItem
+                    key={item.id}
+                    modifyId={props.modifyTodobyId(item.id)}
+                    removeId={props.removeTodoById(item.id)}
+                    text={item.text}
+                    done={item.done}/>)}
+        </ul> :
+    'Have a nice day'
 
 });
 
