@@ -1,7 +1,9 @@
 import React from "react"
-import {calendarBem} from "../../helpers/bem"
+import bem from "../../helpers/bem"
 
 import "./Calendar.scss"
+
+const calendarBem = bem("calendar")
 
 const daysInMonth = (iMonth, iYear) => 32 - new Date(iYear, iMonth, 32).getDate()
 const monthNames = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
@@ -10,11 +12,11 @@ const weekDayNames = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"]
 export default class Calendar extends React.Component{
     handleOnClick = (dayOfTheMonth) => {
         const {date} = this.props
-        this.props.changeDateCallback(new Date(date.getFullYear(), date.getMonth(), dayOfTheMonth))
+        this.props.onChangeDate(new Date(date.getFullYear(), date.getMonth(), dayOfTheMonth))
     }
     handleMonthChange = (delta) => {
         const {date} = this.props
-        this.props.changeDateCallback(new Date(date.getFullYear(), date.getMonth() + delta, date.getDate()))
+        this.props.onChangeDate(new Date(date.getFullYear(), date.getMonth() + delta, date.getDate()))
     }
 
     render(){
