@@ -33,6 +33,8 @@ class Todo extends React.Component {
 
     async postData(data) {
         this.state.data.push(data);
+        this.state.id = this.state.id + 1;
+        
         let options = {
             method: 'POST',
             headers: {
