@@ -7,11 +7,11 @@ class Calendar extends React.Component {
         return (
             <section className="calendar">
                 <header className="calendar__header">
-                    <button aria-label="Previous month" className="calendar__button" onClick={this.props.previous}>
+                    <button aria-label="Previous month" className="calendar__button" onClick={this.props.previousMonth}>
                         navigate_before
                     </button>
                     <h1 className="calendar__date">{this.props.months[this.props.month]}</h1>
-                    <button aria-label="Next month" className="calendar__button" onClick={this.props.next}>
+                    <button aria-label="Next month" className="calendar__button" onClick={this.props.nextMonth}>
                         navigate_next
                     </button>
                 </header>

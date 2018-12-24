@@ -13,14 +13,14 @@ class TodoCalendar extends React.Component {
         ]
     };
 
-    next = () => {
+    nextMonth = () => {
         this.setState({
             year:  (this.state.month === 11) ? this.state.year + 1 : this.state.year,
             month: (this.state.month + 1) % 12,
         }, this.setDay);
     }
 
-    previous = () => {  
+    previousMonth = () => {  
         this.setState({
             year:  (this.state.month === 0) ? this.state.year - 1 : this.state.year,
             month: (this.state.month === 0) ? 11 : this.state.month - 1,
@@ -35,15 +35,15 @@ class TodoCalendar extends React.Component {
         this.setState({day: (this.state.day > this.daysInMonth()) ? 1 : this.state.day});
     }
 
-    select = e => {
+    onSelect = e => {
         if (e.target.value) this.setState({day: e.target.value});
     }
 
     render() {
         return (
             [
-                <Calendar key='0' {...this.state} next={this.next} previous={this.previous} 
-                    select={this.select} daysInMonth={this.daysInMonth} />,
+                <Calendar key='0' {...this.state} nextMonth={this.nextMonth} previousMonth={this.previousMonth} 
+                    onSelect={this.onSelect} daysInMonth={this.daysInMonth} />,
                 <Todo key='1'  {...this.state} />
             ]
         );

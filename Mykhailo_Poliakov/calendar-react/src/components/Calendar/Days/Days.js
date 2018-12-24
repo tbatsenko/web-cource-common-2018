@@ -43,7 +43,7 @@ class Days extends React.Component {
                 }
 
                 row.push(
-                    <li key={j} value={value} onClick={this.props.select} className={className}>{value}</li>
+                    <li key={j} value={value} onClick={this.props.onSelect} className={className}>{value}</li>
                 );
             }
             rows.push(<ul key={i} className="days">{row}</ul>);
