@@ -1,4 +1,5 @@
 import React from 'react'
+
 import { getCalendarDays } from '../../helpers/date'
 
 const CalendarBody = ({ onSelectDate, activeDate, children }) => (
@@ -6,7 +7,7 @@ const CalendarBody = ({ onSelectDate, activeDate, children }) => (
     {getCalendarDays(activeDate).map(
       (day, index) =>
         !day ? (
-          <div className="day day--empty" key={index} />
+          <div className="day day--empty" key={index}/>
         ) : (
           <div
             className={
@@ -20,7 +21,7 @@ const CalendarBody = ({ onSelectDate, activeDate, children }) => (
           >
             {children(day)}
           </div>
-        )
+        ),
     )}
   </div>
 )

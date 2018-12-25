@@ -1,0 +1,42 @@
+.calendar{
+    &__calendar{
+        width: 100%;
+    }
+
+    &__row{
+    }
+
+    &__cell{
+        cursor: pointer;
+        text-align: center;
+    }
+
+    &__cell_disabled{
+        background-color: red;
+        cursor: auto;
+    }
+
+    &__cell_selected{
+        background-color: green;
+    }
+
+    &__header{
+        color: blue;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+
+    &__header-text{
+        flex-grow: 2;
+        text-align: center;
+    }
+
+    &__header-month-forward{
+
+    }
+
+    &__header-month-backward{
+
+    }
+}

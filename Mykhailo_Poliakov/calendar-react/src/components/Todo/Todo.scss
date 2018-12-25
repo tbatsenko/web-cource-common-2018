@@ -1,0 +1,84 @@
+.todo {
+	display: flex;
+	flex-direction: column;
+	background: #0096cf;
+	width: 350px;
+	height: 450px;
+	border-top-right-radius: 5px;
+	border-bottom-right-radius: 5px;
+
+	&__header {
+		width: 350px;
+		height: 70px;
+		display: flex;
+		justify-content: flex-end;
+		align-content: center;
+	}
+
+	&__date {
+		display: flex;
+		align-items: center;
+		color: #ffffff;
+		margin-right: 16px;
+		font-size: 16px;
+	}
+
+	&__main {
+		flex: 2;
+		padding: 16px;
+		overflow: auto;
+		-ms-overflow-style: none;
+		&::-webkit-scrollbar {
+			display: none;
+		}
+	}
+	&__list {
+		margin: 0;
+		padding-left: 24px;
+	}
+
+	&__item {
+		height: 40px;
+		line-height: 40px;
+		margin-bottom: 16px;
+		color: #ffffff;
+	}
+
+	&__text {
+		display: inline-block;
+		vertical-align: bottom;
+		margin-left: 8px;
+		width: 256px;
+		white-space: nowrap;
+		text-overflow: ellipsis;
+		overflow: hidden;
+	}
+
+	&__done {
+		font-family: 'Material Icons';
+		font-size: 18px;
+		line-height: 40px;
+		background: transparent;
+		color: #ffffff;
+		border: 0;
+		outline: 0;
+		padding: 0;
+		cursor: pointer;
+		float: right;
+	}
+
+	&__input {
+		background: #008ec4;
+		border: none;
+		font-family: 'Montserrat', sans-serif;
+		padding: 16px;
+		width: 318px;
+		outline: none;
+		color: #ffffff;
+		border-bottom-right-radius: 5px;
+
+		&::placeholder {
+			color: #ffffff;
+		}
+	}
+}

@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 
-import { setDate, addMonths } from 'date-fns'
-import { getCalendarDays } from '../../helpers/date'
+import { addMonths } from 'date-fns'
+import { calendarDaysList } from '../../helpers/date'
 
 import PropTypes from 'prop-types'
 
@@ -17,8 +17,6 @@ class Calendar extends Component {
   static defaultProps = {
     date: new Date(),
   }
-
-  daysOfWeek = ['mo', 'tu', 'wd', 'th', 'fr', 'sa', 'su']
 
   setActiveDate = date => {
     this.props.onChange(date)
@@ -38,31 +36,21 @@ class Calendar extends Component {
     return (
       <div className="Calendar">
         <div className="Calendar__header">
-          <button
-            className="Calendar__header-arrow"
-            onClick={this.setPrevMonth}
-          >
-            ←
-          </button>
+          <button className="Calendar__header-arrow" onClick={this.setPrevMonth}>←</button>
           <h3 className="Calendar__header-title">
-            {date.toLocaleString('en-us', { month: 'long' })}{' '}
-            {date.getFullYear()}
+            {date.toLocaleString('en-us', { month: 'long', year: 'numeric' })}
           </h3>
-          <button
-            className="Calendar__header-arrow"
-            onClick={this.setNextMonth}
-          >
-            →
-          </button>
+          <button className="Calendar__header-arrow" onClick={this.setNextMonth}>→</button>
         </div>
 
         <div className="Calendar__days-of-week">
-          {this.daysOfWeek.map(day => (
+          {calendarDaysList.map(day => (
             <div className="day day--week" key={day}>
               {day}
             </div>
           ))}
         </div>
+
         <CalendarBody activeDate={date} onSelectDate={this.setActiveDate}>
           {date => children(date)}
         </CalendarBody>

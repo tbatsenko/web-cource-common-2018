@@ -42,7 +42,9 @@
       align-items: center; }
     .calendar-section .calendar__active-cell {
       color: white;
-      background: #AC3B61; }
+      background: #AC3B61;
+      font-weight: bold;
+      font-size: 25px; }
     .calendar-section .calendar__day-cell:hover {
       cursor: pointer; }
 
@@ -51,18 +53,29 @@
   background: white;
   color: var(--text-color);
   margin-left: 5px;
+  margin-bottom: 5px;
   border-radius: 5px;
   height: 30px;
   width: 95%;
   font-size: 15px;
-  margin-bottom: 5px;
   display: flex;
   align-items: center;
   justify-content: space-between; }
   .item__text {
     white-space: nowrap;
     overflow: hidden;
-    text-overflow: ellipsis; }
+    text-overflow: ellipsis;
+    margin-left: 5px; }
+  .item__button {
+    width: 20px;
+    height: 20px;
+    margin-right: 5px;
+    background: transparent; }
+    .item__button:focus {
+      outline: none; }
+  .item__img {
+    width: 20px;
+    height: 20px; }
 
 .todo-section {
   width: 40%; }
@@ -132,6 +145,7 @@ button {
     margin: 100px auto;
     border: 1px var(--text-color) solid;
     border-radius: 5px;
-    display: flex; }
+    display: flex;
+    box-shadow: 5px 5px 10px var(--text-color); }
 
 /*# sourceMappingURL=index.css.map */

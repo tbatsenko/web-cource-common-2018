@@ -110,7 +110,7 @@ class Calendar {
 
         if (d == null) {
             localStorage.setItem('storage', JSON.stringify(
-                [{"day": 0, "month": 0, "year": 0, "items": ["0"]}]
+                [{"day": 0, "month": 0, "year": 0, "items": ["-"]}]
             ));
         } else {
             for (let i = 0; i < d.length; i++) {
@@ -139,6 +139,7 @@ class Calendar {
                     d[i].items.push(item);
                     localStorage.setItem('storage', JSON.stringify(d));
                     isDayFound = true;
+                    break;
                 }
             } 
 
