@@ -1,30 +1,32 @@
 import React from "react"
-import {todoListBem} from "../../../helpers/bem"
+import bem from "../../../helpers/bem"
+
+const todoListBem = bem("todoList")
 
 export default class TodoNav extends React.Component{
     render(){
         const {
-            checkAllTodosCallback,
-            uncheckAllTodosCallback,
-            deleteSelectedTodosCallback
+            onCheckAllTodos,
+            onUncheckAllTodos,
+            onDeleteSelectedTodos
         } = this.props
         return (
             <div className={todoListBem({element: "todoNav"})}>
                 <button
                     className={todoListBem({element: "todoNav-item"})}
-                    onClick={checkAllTodosCallback}
+                    onClick={onCheckAllTodos}
                 >
                     Check all
                 </button>
                 <button
                     className={todoListBem({element: "todoNav-item"})}
-                    onClick={uncheckAllTodosCallback}
+                    onClick={onUncheckAllTodos}
                 >
                     Uncheck all
                 </button>
                 <button
                     className={todoListBem({element: "todoNav-item"})}
-                    onClick={deleteSelectedTodosCallback}
+                    onClick={onDeleteSelectedTodos}
                 >
                     Delete Selected
                 </button>

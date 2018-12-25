@@ -1,24 +1,36 @@
 import React from "react"
-import {todoListBem} from "../../../helpers/bem"
+import bem from "../../../helpers/bem"
 
 import "./TodoCreator.scss"
 
+const todoListBem = bem("todoList")
+
 export default class TodoCreator extends React.Component{
-    state = {disabled: true}
+    state = {
+        showErrorHeader: false
+    }
 
     validateInput = () => this.textInput.value.trim() !== ""
 
-    onTextInputChange = () => this.setState({disabled: !this.validateInput()})
+    onTextInputChange = () => {
+        this.setState({
+            disabled: !this.validateInput(),
+            showErrorHeader: !this.validateInput()
+        })
+    }
 
     onFormSubmit = (ev) => {
         ev.preventDefault()
 
-        if(!this.validateInput())
+        if(!this.validateInput()){
+            this.setState({showErrorHeader: true})
             return
+        }
         
-        this.props.addTodoCallback(this.textInput.value)
+        this.props.onAddTodo(this.textInput.value)
         this.textInput.value = ""
         this.onTextInputChange()
+        this.setState({showErrorHeader: false})
     }
 
     render(){
@@ -35,10 +47,10 @@ export default class TodoCreator extends React.Component{
                             ref={(node) => this.textInput = node}
                             onChange={this.onTextInputChange}
                         />
-                        <button type="submit" disabled={this.state.disabled}>Submit</button>
+                        <button type="submit">Submit</button>
                     </label>
                 </form>
-                <p className={todoListBem({element: "todoCreator-error"})}>{this.state.disabled? "Text is too short": null}</p>
+                <p className={todoListBem({element: "todoCreator-error"})}>{this.state.showErrorHeader? "Text is too short": null}</p>
             </div>
         )
     }

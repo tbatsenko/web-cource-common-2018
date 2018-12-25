@@ -1,7 +1,7 @@
 import React from "react"
 import Calendar from "../Calendar/Calendar"
 import TodoList from "../TodoList/TodoList"
-import {appBem} from "../../helpers/bem"
+import bem from "../../helpers/bem"
 import "./App.scss"
 
 const sameDate = (lhs, rhs) => {
@@ -11,6 +11,8 @@ const sameDate = (lhs, rhs) => {
         lhs.getDate() === rhs.getDate()
     )
 }
+
+const appBem = bem("app")
 
 let todoIdCounter = 0
 
@@ -57,18 +59,18 @@ export default class App extends React.Component{
             <div className={appBem()}>
                 <div className={appBem({element: "calendar"})}>
                     <Calendar
-                        changeDateCallback={this.changeDate}
+                        onChangeDate={this.changeDate}
                         date={this.state.date}
                     />
                 </div>
                 <div className={appBem({element: "todoList"})}>
                     <TodoList
-                        addTodoCallback={this.addTodo}
-                        deleteTodoCallback={this.deleteTodo}
-                        toggleTodoCallback={this.toggleTodo}
-                        checkAllTodosCallback={this.checkAllTodos}
-                        uncheckAllTodosCallback={this.uncheckAllTodos}
-                        deleteSelectedTodosCallback={this.deleteSelectedTodos}
+                        onAddTodo={this.addTodo}
+                        onDeleteTodo={this.deleteTodo}
+                        onToggleTodo={this.toggleTodo}
+                        onCheckAllTodos={this.checkAllTodos}
+                        onUncheckAllTodos={this.uncheckAllTodos}
+                        onDeleteSelectedTodos={this.deleteSelectedTodos}
                         todos={todos.filter((todo) => sameDate(todo.date, date))}
                     />
                 </div>
