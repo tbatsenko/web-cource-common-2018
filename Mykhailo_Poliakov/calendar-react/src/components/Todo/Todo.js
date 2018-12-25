@@ -34,12 +34,9 @@ class Todo extends React.Component {
 	async postData(data) {
 		this.state.data.push(data);
 		this.state.id = this.state.id + 1;
-
 		let options = {
 			method: 'POST',
-			headers: {
-				'Content-Type': 'application/json'
-			},
+			headers: { 'Content-Type': 'application/json' },
 			body: JSON.stringify(data)
 		};
 		return fetch('http://localhost:4000/dates', options).then((response) => response.json);
@@ -48,9 +45,7 @@ class Todo extends React.Component {
 	async putData(data) {
 		let options = {
 			method: 'PUT',
-			headers: {
-				'Content-Type': 'application/json'
-			},
+			headers: { 'Content-Type': 'application/json' },
 			body: JSON.stringify(data)
 		};
 		return fetch('http://localhost:4000/dates/' + data.id, options).then((response) => response.json);

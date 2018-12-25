@@ -40,8 +40,8 @@ class Days extends React.Component {
 				else if ((i === 1 && j < firstDay) || day > this.daysInMonth()) {
 				} else {
 					value = day;
-					className += ' ' + b('day--date');
-					if (day === this.props.day) className += ' ' + b('day--active');
+					className = b('day', [ 'date' ]);
+					if (day === this.props.day) className = b('day', [ 'date', 'active' ]);
 					day++;
 				}
 
