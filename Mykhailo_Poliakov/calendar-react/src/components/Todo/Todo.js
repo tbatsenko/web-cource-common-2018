@@ -79,15 +79,30 @@ class Todo extends React.Component {
 		}
 	}
 
+	deleteItem = (e) => {
+		for (let i = 0; i < this.state.data.length; i++) {
+			if (this.isSameDate(this.state.data[i])) {
+				let data = this.state.data;
+				data[i].items.splice(e.target.value, 1);
+				this.setState({ data: data });
+				this.putData(this.state.data[i]);
+			}
+		}
+	};
+
 	render() {
 		let items = [];
+
 		if (this.state.data != null) {
 			for (let i = 0; i < this.state.data.length; i++) {
 				if (this.isSameDate(this.state.data[i])) {
 					for (let j = 0; j < this.state.data[i].items.length; j++) {
 						items.push(
 							<li key={j} className={b('item')}>
-								{this.state.data[i].items[j]}
+								<span className={b('text')}>{this.state.data[i].items[j]}</span>
+								<button aria-label="Done" className={b('done')} value={j} onClick={this.deleteItem}>
+									done
+								</button>
 							</li>
 						);
 					}

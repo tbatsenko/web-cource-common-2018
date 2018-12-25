@@ -19,7 +19,7 @@
 		display: flex;
 		align-items: center;
 		color: #ffffff;
-		margin-right: 18px;
+		margin-right: 16px;
 		font-size: 16px;
 	}
 
@@ -34,8 +34,7 @@
 	}
 	&__list {
 		margin: 0;
-		padding-right: 16px;
-		padding-left: 16px;
+		padding-left: 24px;
 	}
 
 	&__item {
@@ -43,10 +42,29 @@
 		line-height: 40px;
 		margin-bottom: 16px;
 		color: #ffffff;
-		overflow: hidden;
-		list-style-position: inside;
+	}
+
+	&__text {
+		display: inline-block;
+		vertical-align: bottom;
+		margin-left: 8px;
+		width: 256px;
 		white-space: nowrap;
 		text-overflow: ellipsis;
+		overflow: hidden;
+	}
+
+	&__done {
+		font-family: 'Material Icons';
+		font-size: 18px;
+		line-height: 40px;
+		background: transparent;
+		color: #ffffff;
+		border: 0;
+		outline: 0;
+		padding: 0;
+		cursor: pointer;
+		float: right;
 	}
 
 	&__input {
