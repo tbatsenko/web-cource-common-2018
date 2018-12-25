@@ -1,0 +1,31 @@
+/*@import "../../fonts/fonts.css";*/
+.introduction_blue {
+  background-color: #1da1f2;
+}
+.introduction-text {
+  margin-left: 5px;
+  font-size: 18px;
+  line-height: 24px;
+  text-align: center;
+}
+.segoe_white {
+  font-family: Segoe-UI-Bold, Arial, sans-serif;
+  color: #ffffff;
+}
+.introduction-text-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.introduction-text__img {
+  width: 50px;
+  height: 50px;
+}
+.introduction-text__row {
+  display: flex;
+  align-items: center;
+  margin-top: 25px;
+  margin-bottom: 25px;
+}
+/*# sourceMappingURL=introduction.css.map */
