@@ -4,11 +4,19 @@ import Calendar from './Calendar/Calendar'
 import './App.css';
 
 class App extends Component {
+
+
+
+  static handleCellClick(key="awd", date="awd") {
+    console.log("FROM APP: Click has been handled, key: " + key + " date: " + date);
+    return date
+  }
+
   render() {
     return (
       <div className="App">
-        <TodoList />
         <Calendar />
+        <TodoList />
       </div>
     );
   }
