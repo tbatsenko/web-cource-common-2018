@@ -1,18 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import Login from "./components/login_components/Login"
-
-
-function App(){
-    return (
-        <div>
-            <h1>HELLO FROM REACT</h1>
-        </div>
-    )
-}
+import MainPage from "./components/main_page_components/MainPage.js"
 
 
 
-ReactDOM.render(<Login />, document.getElementById('root'));
+
+ReactDOM.render(<MainPage />, document.getElementById('root'));
 
 

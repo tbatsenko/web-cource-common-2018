@@ -1,0 +1,13 @@
+.search-form {
+  border-radius: 30px;
+  background-color: #f5f8fa;
+  display: flex;
+  align-items: center;
+  padding: 5px;
+}
+.search-form__input {
+  background-color: transparent;
+  outline: none;
+  border: 0;
+}
+/*# sourceMappingURL=search-form.css.map */

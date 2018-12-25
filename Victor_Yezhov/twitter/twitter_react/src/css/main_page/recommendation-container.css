@@ -1,0 +1,33 @@
+.recommendation-container {
+  width: 20%;
+  margin-left: 10px;
+}
+.recommendations {
+  background-color: white;
+}
+.recommendation {
+  display: flex;
+  margin-top: 10px;
+}
+.recommendation__photo {
+  border-radius: 100%;
+  margin-left: 5px;
+  width: 50px;
+  height: 50px;
+}
+.recommendation__read_button {
+  border-radius: 30px;
+  width: 90px;
+  height: 30px;
+  background-color: white;
+  margin-top: 5px;
+  border: 1px solid #1da1f2;
+  color: #1da1f2;
+}
+.recommendation__read_button:hover {
+  background-color: #e8f5fd;
+}
+.recommendation__info {
+  margin-left: 10px;
+}
+/*# sourceMappingURL=recommendation-container.css.map */

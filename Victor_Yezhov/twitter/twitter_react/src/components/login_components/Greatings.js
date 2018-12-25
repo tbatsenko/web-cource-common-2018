@@ -8,6 +8,7 @@ class Greatings extends Component {
 
     render() {
 
+
         return (
             <div>
                 <div className="introduction-text__row"><img src={search}
