@@ -86,6 +86,7 @@ $font: 'Nunito', sans-serif;
 
   &_left {
     position: relative;
+
     &:after {
       color: #f1c40f;
       position: absolute;
@@ -102,6 +103,7 @@ $font: 'Nunito', sans-serif;
 
   &_right {
     position: relative;
+
     &:after {
       color: #f1c40f;
       top: 0;
