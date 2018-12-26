@@ -154,16 +154,15 @@ export default class App extends React.Component {
   changeDate = newDate => {
     if (this.state.dateHash === hashDate(newDate)) return
 
-    this.state.dateHash = hashDate(newDate)
-
-    if (this.state.todos.has(this.state.dateHash))
-      return this.setState({ date: newDate })
+    if (this.state.todos.has(hashDate(newDate)))
+      return this.setState({ date: newDate, dateHash: hashDate(newDate) })
 
     this._getTodos(newDate).then(data => {
       this.setState({
         date: newDate,
+        dateHash: hashDate(newDate),
         todos: this.state.todos.set(
-          this.state.dateHash,
+          hashDate(newDate),
           immutable.List.of(...data)
         ),
       })

@@ -15,10 +15,7 @@ export default class TodoCreator extends React.Component {
   onFormSubmit = ev => {
     ev.preventDefault()
 
-    if (!this.validateInput()) {
-      this.setState({ showErrorHeader: true })
-      return
-    }
+    if (!this.validateInput()) return this.setState({ showErrorHeader: true })
 
     this.props.onAddTodo(this.textInput.value)
     this.textInput.value = ''
