@@ -4,7 +4,7 @@ import React from "react";
 /** @namespace props.todo */
 export default props =>
   (
-    <li className="container__todo">
+    <li style={{display: "flex", justifyContent: "center"}}>
       <input type="checkbox" className="check-box" onChange={props.toggleCompleted}/>
       <div
         style={{
@@ -12,8 +12,7 @@ export default props =>
         }}
       >
         {props.todo.text}
-        <span>{props.todo.date.toString()}</span>
       </div>
-      <button className="container__todo--delete-button" onClick={props.onDelete}>X</button>
+      <button onClick={props.onDelete}>X</button>
     </li>
   );
