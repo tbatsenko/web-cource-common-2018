@@ -1,7 +1,7 @@
-const BLOCK_AND_ELEMENT_DELIMITER = "__"
-const ELEMENT_AND_MODIFIER_SEPARATOR = "_"
+const BLOCK_AND_ELEMENT_DELIMITER = '__'
+const ELEMENT_AND_MODIFIER_SEPARATOR = '_'
 
-export default (blockName) => elementOrModifiersArray => {
+export default blockName => elementOrModifiersArray => {
   elementOrModifiersArray = Array.isArray(elementOrModifiersArray)
     ? elementOrModifiersArray
     : [elementOrModifiersArray]
@@ -12,7 +12,9 @@ export default (blockName) => elementOrModifiersArray => {
 
       const name =
         blockName +
-        (elementOrModifiers.element ? BLOCK_AND_ELEMENT_DELIMITER + elementOrModifiers.element : '')
+        (elementOrModifiers.element
+          ? BLOCK_AND_ELEMENT_DELIMITER + elementOrModifiers.element
+          : '')
 
       const modifiers = Object.keys(elementOrModifiers)
         .filter(modifier => modifier !== 'element')
