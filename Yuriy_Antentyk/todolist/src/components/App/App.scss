@@ -1,12 +1,12 @@
-.app{
-    display: flex;
-    flex-direction: row;
-    align-items: flex-start;
+.app {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
 
-    &__calendar{
-        width: 75%;
-    }
-    &__todoList{
-        width: 25%;
-    }
+  &__calendar {
+    width: 75%;
+  }
+  &__todoList {
+    width: 25%;
+  }
 }
