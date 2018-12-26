@@ -1,11 +1,17 @@
 import React, {Component} from 'react';
 import TodoForm from './TodoForm'
 import Todo from './Todo'
+import CalendarBody from '../Calendar/CalendarBody'
+
+import './TodoList.css'
 
 class TodoList extends Component {
 
+
+
   state = {
-    todos: []
+    todos: [],
+    currDate: new Date()
   };
 
   addTodo = (todo) => {
@@ -37,9 +43,10 @@ class TodoList extends Component {
 
   render() {
     return (
-      <div>
+      <section className="todo__container">
+        <h2>TodoList</h2>
         <TodoForm onSubmit={this.addTodo}/>
-        <ul style={{paddingLeft: 0}}>
+        <ul className="main-todo-list" style={{paddingLeft: 0}}>
           {this.state.todos.map(todo => (
             <Todo
               key={todo.id}
@@ -51,7 +58,7 @@ class TodoList extends Component {
 
         </ul>
         <div>todos left: {this.state.todos.filter(todo => !todo.completed).length}</div>
-      </div>
+      </section>
     )
   }
 }

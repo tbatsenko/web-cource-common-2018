@@ -1,0 +1,7 @@
+.main-container {
+  display: grid;
+  grid-template-rows: auto;
+  grid-template-columns: 50% 50%;
+  grid-template-areas: "left-side right-side" "footer footer";
+}
+/*# sourceMappingURL=main-container.css.map */

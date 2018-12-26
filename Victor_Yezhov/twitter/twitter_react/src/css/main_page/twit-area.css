@@ -1,0 +1,36 @@
+.twit-area {
+  background-color: #e8f5fd;
+  grid-area: twitts;
+}
+.twit-area__icon {
+  width: 25px;
+  height: 25px;
+  padding: 10px;
+  border: 1px solid transparent;
+}
+.twit-area__icon:hover {
+  border-radius: 5px;
+  border: 1px solid #a4d8fa;
+}
+.twit-area__additional-row {
+  margin-top: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.twit-area__visible-row {
+  display: flex;
+  align-items: center;
+  padding: 20px;
+}
+.twit-area__twit-input {
+  width: -webkit-fill-available;
+  margin-left: 5px;
+  color: #a4d8fa;
+  outline: none;
+  border: 1px solid #a4d8fa;
+  border-radius: 10px;
+  height: 50px;
+  padding: 5px;
+}
+/*# sourceMappingURL=twit-area.css.map */
