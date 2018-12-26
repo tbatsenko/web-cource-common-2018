@@ -1,0 +1,25 @@
+<article class="post">
+    <section class="post-head">
+        <img class="pr-photo" src="https://res.cloudinary.com/dag8ejzhi/image/facebook/w_36,h_36,c_fill,r_max/100012757339021.jpg"/>
+        <section class="post-head__head-title">
+            <h5 class="post-head__title5"><a class="post-head__link">{{name}}</a> updated his cover photo.</h5>
+            <small class="post-head__date post-head__date_after">{{post.date}}</small>
+        </section>
+        <div class="post-head__settings"></div>
+    </section>
+    <img class="post__pic" src="{{post.photo}}"/>
+    <section class="post-bottom">
+        <section class="post-bottom__likes">
+            <div class="reaction1"></div>
+            <div class="reaction2"></div>
+            <span class="post-bottom__text">Oles Kozak and 30 others</span>
+            <span class="post-bottom__text post-bottom__comment">{{post.comment}} comments</span>
+        </section>
+        <hr/>
+        <section class="post-buttons">
+            <button class="post-buttons__button "><span class="post-buttons__text post-buttons__text_before1">Like</span></button>
+            <button class="post-buttons__button"><span class="post-buttons__text post-buttons__text_before2">Comment</span></button>
+            <button class="post-buttons__button"><span class="post-buttons__text post-buttons__text_before3">Share</span></button>
+        </section>
+    </section>
+</article>
