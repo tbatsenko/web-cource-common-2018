@@ -1,24 +1,23 @@
-.todoList{
+.todoList {
+  &__todoCreator {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+  }
 
-    &__todoCreator{
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        align-items: center;
-    }
+  &__todoCreator-input {
+    flex-grow: 2;
+  }
 
-    &__todoCreator-input{
-        flex-grow: 2;
-    }
+  &__todoCreator-submit {
+  }
 
-    &__todoCreator-submit{
-    }
+  &__todoCreator-header {
+    width: 100%;
+  }
 
-    &__todoCreator-header{
-        width: 100%;
-    }
-
-    &__todoCreator-error{
-        color: #e74c3c;
-    }
+  &__todoCreator-error {
+    color: #e74c3c;
+  }
 }

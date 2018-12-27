@@ -21,7 +21,10 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+<<<<<<< HEAD
 
 .vscode
 
 db.json
+=======
+>>>>>>> b6dc1d76c05ac86256349157aaf843307e90a439

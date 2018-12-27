@@ -1,11 +1,13 @@
 {
-	"dates": [
-		{
-			"id": 1,
-			"day": 0,
-			"month": 0,
-			"year": 0,
-			"items": [ "-" ]
-		}
-	]
+  "dates": [
+    {
+      "id": 1,
+      "day": 0,
+      "month": 0,
+      "year": 0,
+      "items": [
+        "-"
+      ]
+    }
+  ]
 }

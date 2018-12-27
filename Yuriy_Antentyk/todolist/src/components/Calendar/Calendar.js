@@ -1,77 +1,147 @@
-import React from "react"
-import bem from "../../helpers/bem"
+import React from 'react'
+import { range } from 'ramda'
 
-import "./Calendar.scss"
+import bem from '../../helpers/bem'
+import {
+  getDaysInMonth,
+  getMonthName,
+  getWeekDayName,
+  getWeekDayIndex,
+  makeOrdinal,
+  weekDayNames,
+  isWeekEnd,
+} from '../../helpers/date'
 
-const calendarBem = bem("calendar")
+import './Calendar.scss'
 
-const daysInMonth = (iMonth, iYear) => 32 - new Date(iYear, iMonth, 32).getDate()
-const monthNames = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
-const weekDayNames = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"]
+const calendarBem = bem('calendar')
 
-export default class Calendar extends React.Component{
-    handleOnClick = (dayOfTheMonth) => {
-        const {date} = this.props
-        this.props.onChangeDate(new Date(date.getFullYear(), date.getMonth(), dayOfTheMonth))
-    }
-    handleMonthChange = (delta) => {
-        const {date} = this.props
-        this.props.onChangeDate(new Date(date.getFullYear(), date.getMonth() + delta, date.getDate()))
-    }
+export default class Calendar extends React.Component {
+  handleOnClick = (ev, dayOfTheMonth) => {
+    ev.preventDefault()
+    const { date } = this.props
+    this.props.onChangeDate(
+      new Date(date.getFullYear(), date.getMonth(), dayOfTheMonth)
+    )
+  }
+  handleMonthChange = delta =>
+    this.props.onChangeDate(
+      new Date(
+        this.props.date.getFullYear(),
+        this.props.date.getMonth() + delta,
+        this.props.date.getDate()
+      )
+    )
 
-    render(){
-        const {date} = this.props
+  render() {
+    const { date, holidaysMap } = this.props
 
-        const headerText = `
-            ${weekDayNames[(date.getDay() + 6) % 7]},
-            ${date.getDate()}${date.getDate() <= 3? ["st", "nd", "rd"][date.getDate() - 1]: "th"} of
-            ${monthNames[date.getMonth()]},
-            ${date.getFullYear()}
-        `
+    const headerText = [
+      getWeekDayName(date),
+      [makeOrdinal(date.getDate()), 'of', getMonthName(date)].join(' '),
+      date.getFullYear(),
+    ]
+      .concat(
+        holidaysMap.has(date.getDate()) ? [holidaysMap.get(date.getDate())] : []
+      )
+      .join(', ')
 
-        let days = new Array((new Date(date.getFullYear(), date.getMonth(), 1).getDay() + 6) % 7).fill(null)
-        days = days = days.concat([...Array(daysInMonth(date.getMonth(), date.getFullYear())).keys()].map(num => num + 1))
-        days = days.concat(new Array(days.length % 7 === 0? 0: 7 - (days.length % 7)).fill(null))
-        days = days.map((dayNumber, index) => {
-            return (<td
-                key={index}
-                className={
-                    calendarBem({
-                        element: "cell",
-                        disabled: dayNumber === null,
-                        selected: dayNumber === date.getDate()
-                    })
-                }
-                onClick={dayNumber? () => this.handleOnClick(dayNumber): null}
+    const startOfTheMonth = new Date(date.getFullYear(), date.getMonth(), 1)
+    const endOfTheMonth = new Date(
+      date.getFullYear(),
+      date.getMonth(),
+      getDaysInMonth(date)
+    )
+
+    const emptyCell = key => (
+      <td
+        key={key}
+        className={calendarBem({ element: 'cell', disabled: true })}
+      />
+    )
+
+    const beforeEmpty = range(0, getWeekDayIndex(startOfTheMonth))
+      .map(val => val - 100)
+      .map(key => emptyCell(key))
+    const afterEmpty = range(0, 6 - getWeekDayIndex(endOfTheMonth))
+      .map(val => val + 100)
+      .map(key => emptyCell(key))
+
+    const days = beforeEmpty
+      .concat(
+        range(1, getDaysInMonth(date) + 1).map(dayNumber => {
+          const currentDate = new Date(
+            date.getFullYear(),
+            date.getMonth(),
+            dayNumber
+          )
+          return (
+            <td
+              title={holidaysMap.get(dayNumber)}
+              key={dayNumber}
+              className={calendarBem({
+                element: 'cell',
+                disabled: false,
+                selected: dayNumber === date.getDate(),
+                holiday:
+                  (holidaysMap.has(dayNumber) || isWeekEnd(currentDate)) &&
+                  dayNumber !== date.getDate(),
+              })}
             >
-                {dayNumber? dayNumber: ""}
-            </td>)
+              <a
+                className={calendarBem({ element: 'link' })}
+                href={currentDate.toISOString()}
+                onClick={ev => this.handleOnClick(ev, dayNumber)}
+              >
+                {dayNumber}
+              </a>
+            </td>
+          )
         })
+      )
+      .concat(afterEmpty)
 
-        let weeks = [<tr key={-1} className={calendarBem({element: "row"})}>{weekDayNames.map((weekDay) => <td className={calendarBem({element: "cell"})}>{weekDay}</td>)}</tr>]
-        while(days.length > 0) weeks.push(<tr key={days.length} className={calendarBem({element: "row"})}> {days.splice(0, 7)} </tr>)
+    let weeks = [
+      <tr key={-1} className={calendarBem({ element: 'row' })}>
+        {weekDayNames.map((weekDay, index) => (
+          <td key={index} className={calendarBem({ element: 'cell' })}>
+            {weekDay}
+          </td>
+        ))}
+      </tr>
+    ]
+    while (days.length > 0)
+      weeks.push(
+        <tr key={days.length} className={calendarBem({ element: 'row' })}>
+          {days.splice(0, 7)}
+        </tr>
+      )
 
-        return(
-            <div className={calendarBem()}>
-                <div className={calendarBem({element: "header"})}>
-                    <button
-                        className={calendarBem({element: "header-month-backward"})}
-                        onClick={() => this.handleMonthChange(-1)}
-                    >
-                        Backward
-                    </button>
+    return (
+      <div className={calendarBem()}>
+        <div className={calendarBem({ element: 'header' })}>
+          <button
+            className={calendarBem({ element: 'header-month-backward' })}
+            onClick={() => this.handleMonthChange(-1)}
+          >
+            Backward
+          </button>
 
-                    <h3 className={calendarBem({element: "header-text"})}>{headerText}</h3>
+          <h3 className={calendarBem({ element: 'header-text' })}>
+            {headerText}
+          </h3>
 
-                    <button
-                        className={calendarBem({element: "header-month-forward"})}
-                        onClick={() => this.handleMonthChange(1)}
-                    >
-                        Forward
-                    </button>
-                </div>
-                <table className={calendarBem({element: "calendar"})}>{weeks}</table>
-            </div>
-        )
-    }
+          <button
+            className={calendarBem({ element: 'header-month-forward' })}
+            onClick={() => this.handleMonthChange(1)}
+          >
+            Forward
+          </button>
+        </div>
+        <table className={calendarBem({ element: 'calendar' })}>
+          <tbody>{weeks}</tbody>
+        </table>
+      </div>
+    )
+  }
 }
