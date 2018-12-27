@@ -7,207 +7,234 @@ import Calendar from '../Calendar/Calendar'
 import TodoList from '../TodoList/TodoList'
 
 import { retrieveDateFromUrlString, hashDate } from '../../helpers/date'
+import rest from '../../helpers/rest'
 import getDbHost from '../../helpers/db'
 import bem from '../../helpers/bem'
 import getHolidays from '../../helpers/holidays'
 
+import {
+  withState,
+  compose,
+  withProps,
+  lifecycle,
+  branch,
+  renderComponent,
+} from 'recompose'
+
 import './App.scss'
+import '../../columnGridLayout/columnGridLayout.scss'
 
-const dbHost = getDbHost()
-const appBem = bem('app')
+const columnGridLayout = bem('grid-12')
 
-export default class App extends React.Component {
-  state = {
-    todos: new immutable.Map(),
-    date: undefined,
-    dateHash: undefined,
-    holidays: undefined,
-  }
+const todoRest = rest(getDbHost())('todos')
 
-  constructor(props) {
-    super(props)
-    this.state.date = retrieveDateFromUrlString(window.location.href)
-    this.state.dateHash = hashDate(this.state.date)
-  }
-
-  componentDidMount() {
-    this._getTodos(this.state.date).then(data => {
-      this.setState({
-        todos: this.state.todos.set(
-          hashDate(this.state.date),
-          immutable.List.of(...data)
-        ),
-      })
-
-      window.history.replaceState(
-        { date: this.state.date },
-        this.state.date.toISOString(),
-        this.state.date.toISOString()
-      )
+const getTodos = async date => {
+  const response = await Axios.get(
+    todoRest.get({
+      year: date.getFullYear(),
+      month: date.getMonth(),
+      date: date.getDate(),
     })
+  )
 
-    getHolidays().then(holidays =>
-      this.setState({ holidays: immutable.List.of(...holidays) })
+  return response.data.map(todoDbRepresentation => ({
+    id: todoDbRepresentation.id,
+    text: todoDbRepresentation.text,
+    checked: false,
+  }))
+}
+
+const App = ({
+  date,
+  todos,
+  holidays,
+  dateHash,
+
+  onDeleteTodo,
+  onChangeDate,
+  onAddTodo,
+  onCheckAllTodos,
+  onUncheckAllTodos,
+  onDeleteSelectedTodos,
+  onToggleTodo,
+}) => {
+  const holidaysMap = holidays
+    .filter(holiday => holiday.month === date.getMonth())
+    .reduce(
+      (accum, holiday) => accum.set(holiday.date, holiday.name),
+      new immutable.Map()
     )
 
-    this.stateChangeEventListener = window.addEventListener('popstate', ev =>
-      this.changeDate(ev.state.date)
-    )
-  }
-  componentWillUnmount() {
-    this.stateChangeEventListener.removeEventListener()
-  }
+  return (
+    <div className={columnGridLayout({ highlight: true })}>
+      <div className={columnGridLayout({ element: 'grid-6' })}>
+        <Calendar
+          onChangeDate={onChangeDate}
+          date={date}
+          holidaysMap={holidaysMap}
+        />
+      </div>
+      <div className={columnGridLayout({ element: 'grid-6' })}>
+        <TodoList
+          onAddTodo={onAddTodo}
+          onDeleteTodo={onDeleteTodo}
+          onCheckAllTodos={onCheckAllTodos}
+          onUncheckAllTodos={onUncheckAllTodos}
+          onDeleteSelectedTodos={onDeleteSelectedTodos}
+          onToggleTodo={onToggleTodo}
+          todos={todos.get(dateHash)}
+        />
+      </div>
+    </div>
+  )
+}
 
-  _getTodos = async date =>
-    await Axios.get(
-      `${dbHost}todos?year=${date.getFullYear()}&month=${date.getMonth()}&date=${date.getDate()}`
-    ).then(response =>
-      response.data.map(todoDbRepresentation => {
-        return {
-          id: todoDbRepresentation.id,
-          text: todoDbRepresentation.text,
+const enhancer = compose(
+  withState('todos', 'setTodos', new immutable.Map()),
+  withState('date', 'setDate', new Date()),
+  withState('holidays', 'setHolidays'),
+  withState('dateHash', 'setDateHash'),
+
+  withProps(({ todos, setTodos, dateHash, date, setDate, setDateHash }) => {
+    const setCheckedForAllTodos = checkValue =>
+      setTodos(
+        todos.set(
+          dateHash,
+          todos.get(dateHash).reduce((accum, todo) => {
+            todo.checked = checkValue
+            return accum.push(todo)
+          }, new immutable.List())
+        )
+      )
+
+    return {
+      onCheckAllTodos: () => setCheckedForAllTodos(true),
+      onUncheckAllTodos: () => setCheckedForAllTodos(false),
+
+      onDeleteSelectedTodos: () => {
+        Promise.all(
+          todos
+            .get(dateHash)
+            .filter(todo => todo.checked)
+            .map(todo => Axios.delete(todoRest.delete(todo.id)))
+        ).then(() => {
+          setTodos(
+            todos.set(
+              dateHash,
+              todos.get(dateHash).filter(todo => !todo.checked)
+            )
+          )
+        })
+      },
+
+      onToggleTodo: id => {
+        setTodos(
+          todos.set(
+            dateHash,
+            todos.get(dateHash).reduce((accum, todo) => {
+              todo.checked = todo.checked ^ (todo.id === id)
+              return accum.push(todo)
+            }, new immutable.List())
+          )
+        )
+      },
+
+      onChangeDate: newDate => {
+        if (dateHash === hashDate(newDate)) return
+
+        if (todos.has(hashDate(newDate))) {
+          setDate(newDate)
+          setDateHash(hashDate(newDate))
+        }
+
+        getTodos(newDate).then(data => {
+          setDate(newDate)
+          setTodos(todos.set(hashDate(newDate), immutable.List.of(...data)))
+          setDateHash(hashDate(newDate))
+
+          window.history.pushState(
+            { date: newDate },
+            newDate.toISOString(),
+            newDate.toISOString()
+          )
+        })
+      },
+
+      onAddTodo: async text => {
+        const todoAppRepresentation = {
+          text: text,
+          id: new Date().getTime(),
           checked: false,
         }
-      })
-    )
 
-  addTodo = text => {
-    const todoAppRepresentation = {
-      text: text,
-      id: new Date().getTime(),
-      checked: false,
+        const todoDbRepresentation = {
+          text: todoAppRepresentation.text,
+          id: todoAppRepresentation.id,
+          date: date.getDate(),
+          month: date.getMonth(),
+          year: date.getFullYear(),
+        }
+
+        await Axios.post(todoRest.post(), todoDbRepresentation)
+
+        setTodos(
+          todos.set(dateHash, todos.get(dateHash).push(todoAppRepresentation))
+        )
+      },
+
+      onDeleteTodo: id =>
+        Axios.delete(todoRest.delete(id)).then(() => {
+          setTodos(
+            todos.set(
+              dateHash,
+              todos.get(dateHash).filter(todo => todo.id !== id)
+            )
+          )
+        }),
     }
-    const todoDbRepresentation = {
-      text: todoAppRepresentation.text,
-      id: todoAppRepresentation.id,
-      date: this.state.date.getDate(),
-      month: this.state.date.getMonth(),
-      year: this.state.date.getFullYear(),
-    }
+  }),
 
-    Axios.post(`${dbHost}todos`, todoDbRepresentation).then(() => {
-      this.setState({
-        todos: this.state.todos.set(
-          this.state.dateHash,
-          this.state.todos.get(this.state.dateHash).push(todoAppRepresentation)
-        ),
-      })
-    })
-  }
+  lifecycle({
+    async componentDidMount() {
+      const {
+        date,
+        setDate,
+        setDateHash,
+        onChangeDate,
+        todos,
+        setTodos,
+        setHolidays,
+      } = this.props
 
-  _setCheckedForAllTodos = checkValue => {
-    this.setState({
-      todos: this.state.todos.set(
-        this.state.dateHash,
-        this.state.todos.get(this.state.dateHash).reduce((accum, todo) => {
-          todo.checked = checkValue
-          return accum.push(todo)
-        }, new immutable.List())
-      ),
-    })
-  }
-  checkAllTodos = () => this._setCheckedForAllTodos(true)
-  uncheckAllTodos = () => this._setCheckedForAllTodos(false)
+      const data = await getTodos(date)
+      setTodos(todos.set(hashDate(date), immutable.List.of(...data)))
 
-  deleteSelectedTodos = () => {
-    Promise.all(
-      this.state.todos
-        .get(this.state.dateHash)
-        .filter(todo => todo.checked)
-        .map(todo => Axios.delete(`${dbHost}todos/${todo.id}`))
-    ).then(() =>
-      this.setState({
-        todos: this.state.todos.set(
-          this.state.dateHash,
-          this.state.todos
-            .get(this.state.dateHash)
-            .filter(todo => !todo.checked)
-        ),
-      })
-    )
-  }
-
-  toggleTodo = id => {
-    this.setState({
-      todos: this.state.todos.set(
-        this.state.dateHash,
-        this.state.todos.get(this.state.dateHash).reduce((accum, todo) => {
-          todo.checked = todo.checked ^ (todo.id === id)
-          return accum.push(todo)
-        }, new immutable.List())
-      ),
-    })
-  }
-  deleteTodo = id => {
-    Axios.delete(`${dbHost}todos/${id}`).then(() =>
-      this.setState({
-        todos: this.state.todos.set(
-          this.state.dateHash,
-          this.state.todos
-            .get(this.state.dateHash)
-            .filter(todo => todo.id !== id)
-        ),
-      })
-    )
-  }
-
-  changeDate = newDate => {
-    if (this.state.dateHash === hashDate(newDate)) return
-
-    if (this.state.todos.has(hashDate(newDate)))
-      return this.setState({ date: newDate, dateHash: hashDate(newDate) })
-
-    this._getTodos(newDate).then(data => {
-      this.setState({
-        date: newDate,
-        dateHash: hashDate(newDate),
-        todos: this.state.todos.set(
-          hashDate(newDate),
-          immutable.List.of(...data)
-        ),
-      })
-
-      window.history.pushState(
-        { date: newDate },
-        newDate.toISOString(),
-        newDate.toISOString()
-      )
-    })
-  }
-
-  render() {
-    const { todos, date, dateHash, holidays } = this.state
-
-    if (!todos.has(dateHash) || !holidays) return <div>Loading</div>
-
-    const holidaysMap = holidays
-      .filter(holiday => holiday.month === date.getMonth())
-      .reduce(
-        (accum, holiday) => accum.set(holiday.date, holiday.name),
-        new immutable.Map()
+      window.history.replaceState(
+        { date },
+        date.toISOString(),
+        date.toISOString()
       )
 
-    return (
-      <div className={appBem()}>
-        <div className={appBem({ element: 'calendar' })}>
-          <Calendar
-            onChangeDate={this.changeDate}
-            date={date}
-            holidaysMap={holidaysMap}
-          />
-        </div>
-        <div className={appBem({ element: 'todoList' })}>
-          <TodoList
-            onAddTodo={this.addTodo}
-            onDeleteTodo={this.deleteTodo}
-            onToggleTodo={this.toggleTodo}
-            onCheckAllTodos={this.checkAllTodos}
-            onUncheckAllTodos={this.uncheckAllTodos}
-            onDeleteSelectedTodos={this.deleteSelectedTodos}
-            todos={todos.get(dateHash)}
-          />
-        </div>
-      </div>
-    )
-  }
-}
+      const holidays = await getHolidays()
+      setHolidays(immutable.List.of(...holidays))
+
+      this.stateChangeEventListener = window.addEventListener('popstate', ev =>
+        onChangeDate(ev.state.date)
+      )
+
+      setDate(retrieveDateFromUrlString(window.location.href))
+      setDateHash(hashDate(date))
+    },
+
+    componentWillUnmount() {
+      this.stateChangeEventListener.removeEventListener()
+    },
+  }),
+
+  branch(
+    ({ todos, holidays, dateHash }) => !todos.has(dateHash) || !holidays,
+    renderComponent(() => <div>Loading</div>)
+  )
+)
+
+export default enhancer(App)

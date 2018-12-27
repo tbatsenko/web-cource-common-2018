@@ -5,6 +5,12 @@
     align-items: center;
   }
 
+  &__item-label{
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+  }
+
   &__item-checkbox {
     width: 15px;
     margin: 0;
@@ -19,5 +25,6 @@
 
   &__item-delete {
     margin: 0;
+    margin-left: auto;
   }
 }
