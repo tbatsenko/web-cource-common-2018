@@ -16,7 +16,7 @@ import './Calendar.scss'
 
 const calendarBem = bem('calendar')
 
-export default class Calendar extends React.Component {
+class Calendar extends React.Component {
   handleOnClick = (ev, dayOfTheMonth) => {
     ev.preventDefault()
     const { date } = this.props
@@ -24,6 +24,7 @@ export default class Calendar extends React.Component {
       new Date(date.getFullYear(), date.getMonth(), dayOfTheMonth)
     )
   }
+
   handleMonthChange = delta =>
     this.props.onChangeDate(
       new Date(
@@ -143,3 +144,5 @@ export default class Calendar extends React.Component {
     )
   }
 }
+
+export default Calendar

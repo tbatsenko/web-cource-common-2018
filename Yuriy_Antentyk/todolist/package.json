@@ -13,6 +13,7 @@
     "react": "^16.7.0",
     "react-dom": "^16.7.0",
     "react-scripts": "2.1.1",
+    "recompose": "^0.30.0",
     "simple-server": "^1.1.1"
   },
   "scripts": {
