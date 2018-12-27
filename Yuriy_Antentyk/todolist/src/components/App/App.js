@@ -13,8 +13,10 @@ import bem from '../../helpers/bem'
 import getHolidays from '../../helpers/holidays'
 
 import './App.scss'
+import '../../columnGridLayout/columnGridLayout.scss'
 
 const appBem = bem('app')
+const columnGridLayout = bem('grid-12')
 
 const todoRest = rest(getDbHost())('todos')
 
@@ -62,7 +64,11 @@ export default class App extends React.Component {
 
   getTodos = date =>
     Axios.get(
-        todoRest.get({year: date.getFullYear(), month: date.getMonth(), date: date.getDate()})
+      todoRest.get({
+        year: date.getFullYear(),
+        month: date.getMonth(),
+        date: date.getDate(),
+      })
     ).then(response =>
       response.data.map(todoDbRepresentation => {
         return {
@@ -190,15 +196,19 @@ export default class App extends React.Component {
       )
 
     return (
-      <div className={appBem()}>
-        <div className={appBem({ element: 'calendar' })}>
+      <div className={columnGridLayout({highlight: true})}>
+        <div
+          className={columnGridLayout({ element: 'grid-6'})}
+        >
           <Calendar
             onChangeDate={this.changeDate}
             date={date}
             holidaysMap={holidaysMap}
           />
         </div>
-        <div className={appBem({ element: 'todoList' })}>
+        <div
+          className={columnGridLayout({ element: 'grid-6' })}
+        >
           <TodoList
             onAddTodo={this.addTodo}
             onDeleteTodo={this.deleteTodo}
