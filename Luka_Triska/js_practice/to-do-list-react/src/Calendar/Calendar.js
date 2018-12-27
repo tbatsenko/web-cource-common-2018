@@ -10,30 +10,26 @@ export default class Calendar extends Component {
 
   state = {
     currDate: new Date(),
+    currYear: new Date().getFullYear(),
+    currMonth: new Date().getMonth()
   };
 
 
   render() {
     return (
-      <table className="calendar-table">
+      <table>
         <caption><h2>Calendar</h2></caption>
         <thead>
         <tr className="year">
-          <td id="year-name">{this.state.currDate.getFullYear()}</td>
+          <td id="year-name">{this.state.currYear}</td>
         </tr>
         <tr className="month">
           <td>
-            <button
-              onClick={() => this.setState({currDate: new Date(this.state.currDate.getFullYear(), this.state.currDate.getMonth() - 1)})}
-              className="month__button"
-              id="month-prev-button">{"<"}</button>
+            <button className="month__button" id="month-prev-button">{"<"}</button>
           </td>
-          <td id="month-name">{months[this.state.currDate.getMonth()]}</td>
+          <td id="month-name">{months[this.state.currMonth]}</td>
           <td>
-            <button
-              onClick={() => this.setState({currDate: new Date(this.state.currDate.getFullYear(), this.state.currDate.getMonth() + 1)})}
-              className="month__button"
-              id="month-next-button">{">"}</button>
+            <button className="month__button" id="month-next-button">{">"}</button>
           </td>
         </tr>
         <tr className="day-of-week-header-row">
@@ -42,7 +38,7 @@ export default class Calendar extends Component {
           )}
         </tr>
         </thead>
-        <CalendarBody date={this.state.currDate}/>
+        <CalendarBody/>
       </table>
     )
   }
