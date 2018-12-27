@@ -1,5 +1,5 @@
 const ELEMENT_SEPARATOR = '__',
-  MODIFIER_SEPARATOR = '_'
+  MODIFIER_SEPARATOR = '-'
 
 function getBEMPAth({ b, e, m }) {
   const base = e ? [b, e].join(ELEMENT_SEPARATOR) : b
