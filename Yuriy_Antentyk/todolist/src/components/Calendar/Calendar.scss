@@ -10,9 +10,6 @@
     text-align: center;
   }
 
-  &__cell_disabled {
-    background-color: red;
-  }
   &__cell_holiday {
     background-color: yellow;
   }
@@ -39,11 +36,18 @@
   &__header-month-backward {
   }
 
-  &__link {
+  &__day {
     text-decoration: none;
     color: black;
     display: block;
     width: 100%;
     align-content: center;
+    &_isHoliday {
+      background: blue;
+    }
+
+    &_isActive {
+      background: green;
+    }
   }
 }

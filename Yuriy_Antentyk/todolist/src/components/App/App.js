@@ -10,7 +10,6 @@ import { retrieveDateFromUrlString, hashDate } from '../../helpers/date'
 import rest from '../../helpers/rest'
 import getDbHost from '../../helpers/db'
 import bem from '../../helpers/bem'
-import getHolidays from '../../helpers/holidays'
 
 import {
   withState,
@@ -23,6 +22,7 @@ import {
 
 import './App.scss'
 import '../../columnGridLayout/columnGridLayout.scss'
+import Day from '../Day'
 
 const columnGridLayout = bem('grid-12')
 
@@ -47,7 +47,6 @@ const getTodos = async date => {
 const App = ({
   date,
   todos,
-  holidays,
   dateHash,
 
   onDeleteTodo,
@@ -57,42 +56,34 @@ const App = ({
   onUncheckAllTodos,
   onDeleteSelectedTodos,
   onToggleTodo,
-}) => {
-  const holidaysMap = holidays
-    .filter(holiday => holiday.month === date.getMonth())
-    .reduce(
-      (accum, holiday) => accum.set(holiday.date, holiday.name),
-      new immutable.Map()
-    )
-
-  return (
-    <div className={columnGridLayout({ highlight: true })}>
-      <div className={columnGridLayout({ element: 'grid-6' })}>
-        <Calendar
-          onChangeDate={onChangeDate}
-          date={date}
-          holidaysMap={holidaysMap}
-        />
-      </div>
-      <div className={columnGridLayout({ element: 'grid-6' })}>
-        <TodoList
-          onAddTodo={onAddTodo}
-          onDeleteTodo={onDeleteTodo}
-          onCheckAllTodos={onCheckAllTodos}
-          onUncheckAllTodos={onUncheckAllTodos}
-          onDeleteSelectedTodos={onDeleteSelectedTodos}
-          onToggleTodo={onToggleTodo}
-          todos={todos.get(dateHash)}
-        />
-      </div>
+}) => (
+  <div className={columnGridLayout({ highlight: true })}>
+    <div className={columnGridLayout({ element: 'grid-6' })}>
+      <Calendar
+        date={date}
+        onChangeDate={onChangeDate}
+        children={day => (
+          <Day activeDay={date} onSelect={onChangeDate} date={day} />
+        )}
+      />
     </div>
-  )
-}
+    <div className={columnGridLayout({ element: 'grid-6' })}>
+      <TodoList
+        onAddTodo={onAddTodo}
+        onDeleteTodo={onDeleteTodo}
+        onCheckAllTodos={onCheckAllTodos}
+        onUncheckAllTodos={onUncheckAllTodos}
+        onDeleteSelectedTodos={onDeleteSelectedTodos}
+        onToggleTodo={onToggleTodo}
+        todos={todos.get(dateHash)}
+      />
+    </div>
+  </div>
+)
 
 const enhancer = compose(
   withState('todos', 'setTodos', new immutable.Map()),
   withState('date', 'setDate', new Date()),
-  withState('holidays', 'setHolidays'),
   withState('dateHash', 'setDateHash'),
 
   withProps(({ todos, setTodos, dateHash, date, setDate, setDateHash }) => {
@@ -203,7 +194,6 @@ const enhancer = compose(
         onChangeDate,
         todos,
         setTodos,
-        setHolidays,
       } = this.props
 
       const data = await getTodos(date)
@@ -215,24 +205,21 @@ const enhancer = compose(
         date.toISOString()
       )
 
-      const holidays = await getHolidays()
-      setHolidays(immutable.List.of(...holidays))
-
-      this.stateChangeEventListener = window.addEventListener('popstate', ev =>
-        onChangeDate(ev.state.date)
-      )
+      // this.stateChangeEventListener = window.addEventListener('popstate', ev =>
+      //   onChangeDate(ev.state.date)
+      // )
 
       setDate(retrieveDateFromUrlString(window.location.href))
       setDateHash(hashDate(date))
     },
 
     componentWillUnmount() {
-      this.stateChangeEventListener.removeEventListener()
+      // this.stateChangeEventListener.removeEventListener()
     },
   }),
 
   branch(
-    ({ todos, holidays, dateHash }) => !todos.has(dateHash) || !holidays,
+    ({ todos, dateHash }) => !todos.has(dateHash),
     renderComponent(() => <div>Loading</div>)
   )
 )

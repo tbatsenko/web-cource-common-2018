@@ -1,7 +1,6 @@
 import React from 'react'
 import { range } from 'ramda'
 
-import bem from '../../helpers/bem'
 import {
   getDaysInMonth,
   getMonthName,
@@ -9,22 +8,43 @@ import {
   getWeekDayIndex,
   makeOrdinal,
   weekDayNames,
-  isWeekEnd,
 } from '../../helpers/date'
 
+import { compose, pure, withProps } from 'recompose'
+import { splitEvery } from 'ramda'
 import './Calendar.scss'
-
+import bem from '../../helpers/bem'
 const calendarBem = bem('calendar')
 
-class Calendar extends React.Component {
-  handleOnClick = (ev, dayOfTheMonth) => {
-    ev.preventDefault()
-    const { date } = this.props
-    this.props.onChangeDate(
-      new Date(date.getFullYear(), date.getMonth(), dayOfTheMonth)
-    )
-  }
+const CalendarHeader = ({ date, handleMonthChange }) => {
+  const headerText = [
+    getWeekDayName(date),
+    [makeOrdinal(date.getDate()), 'of', getMonthName(date)].join(' '),
+    date.getFullYear(),
+  ].join(', ')
 
+  return (
+    <div className={calendarBem({ element: 'header' })}>
+      <button
+        className={calendarBem({ element: 'header-month-backward' })}
+        onClick={() => handleMonthChange(-1)}
+      >
+        Backward
+      </button>
+
+      <h3 className={calendarBem({ element: 'header-text' })}>{headerText}</h3>
+
+      <button
+        className={calendarBem({ element: 'header-month-forward' })}
+        onClick={() => handleMonthChange(1)}
+      >
+        Forward
+      </button>
+    </div>
+  )
+}
+
+class Calendar extends React.Component {
   handleMonthChange = delta =>
     this.props.onChangeDate(
       new Date(
@@ -35,114 +55,65 @@ class Calendar extends React.Component {
     )
 
   render() {
-    const { date, holidaysMap } = this.props
-
-    const headerText = [
-      getWeekDayName(date),
-      [makeOrdinal(date.getDate()), 'of', getMonthName(date)].join(' '),
-      date.getFullYear(),
-    ]
-      .concat(
-        holidaysMap.has(date.getDate()) ? [holidaysMap.get(date.getDate())] : []
-      )
-      .join(', ')
-
-    const startOfTheMonth = new Date(date.getFullYear(), date.getMonth(), 1)
-    const endOfTheMonth = new Date(
-      date.getFullYear(),
-      date.getMonth(),
-      getDaysInMonth(date)
-    )
-
-    const emptyCell = key => (
-      <td
-        key={key}
-        className={calendarBem({ element: 'cell', disabled: true })}
-      />
-    )
-
-    const beforeEmpty = range(0, getWeekDayIndex(startOfTheMonth))
-      .map(val => val - 100)
-      .map(key => emptyCell(key))
-    const afterEmpty = range(0, 6 - getWeekDayIndex(endOfTheMonth))
-      .map(val => val + 100)
-      .map(key => emptyCell(key))
-
-    const days = range(1, getDaysInMonth(date) + 1).map(dayNumber => {
-      const currentDate = new Date(
-        date.getFullYear(),
-        date.getMonth(),
-        dayNumber
-      )
-      return (
-        <td
-          title={holidaysMap.get(dayNumber)}
-          key={dayNumber}
-          className={calendarBem({
-            element: 'cell',
-            disabled: false,
-            selected: dayNumber === date.getDate(),
-            holiday:
-              (holidaysMap.has(dayNumber) || isWeekEnd(currentDate)) &&
-              dayNumber !== date.getDate(),
-          })}
-        >
-          <a
-            className={calendarBem({ element: 'link' })}
-            href={currentDate.toISOString()}
-            onClick={ev => this.handleOnClick(ev, dayNumber)}
-          >
-            {dayNumber}
-          </a>
-        </td>
-      )
-    })
-
-    let allDays = beforeEmpty.concat(days).concat(afterEmpty)
-
-    let weeks = [
-      <tr key={-1} className={calendarBem({ element: 'row' })}>
-        {weekDayNames.map((weekDay, index) => (
-          <td key={index} className={calendarBem({ element: 'cell' })}>
-            {weekDay}
-          </td>
-        ))}
-      </tr>,
-    ]
-    while (allDays.length > 0)
-      weeks.push(
-        <tr key={allDays.length} className={calendarBem({ element: 'row' })}>
-          {allDays.splice(0, 7)}
-        </tr>
-      )
+    const { date, children, monthModel } = this.props
 
     return (
       <div className={calendarBem()}>
-        <div className={calendarBem({ element: 'header' })}>
-          <button
-            className={calendarBem({ element: 'header-month-backward' })}
-            onClick={() => this.handleMonthChange(-1)}
-          >
-            Backward
-          </button>
-
-          <h3 className={calendarBem({ element: 'header-text' })}>
-            {headerText}
-          </h3>
-
-          <button
-            className={calendarBem({ element: 'header-month-forward' })}
-            onClick={() => this.handleMonthChange(1)}
-          >
-            Forward
-          </button>
-        </div>
+        <CalendarHeader
+          date={date}
+          handleMonthChange={this.handleMonthChange}
+        />
         <table className={calendarBem({ element: 'calendar' })}>
-          <tbody>{weeks}</tbody>
+          <tbody>
+            <tr className={calendarBem({ element: 'row' })}>
+              {weekDayNames.map((weekDay, index) => (
+                <td key={index} className={calendarBem({ element: 'cell' })}>
+                  {weekDay}
+                </td>
+              ))}
+            </tr>
+
+            {monthModel.map((week, i) => (
+              <tr key={i} className={calendarBem({ element: 'row' })}>
+                {week.map((day, i) => (
+                  <td
+                    key={day ? day.toISOString() : i}
+                    className={calendarBem({ element: 'cell', disabled: !day })}
+                  >
+                    {day && children(day)}
+                  </td>
+                ))}
+              </tr>
+            ))}
+          </tbody>
         </table>
       </div>
     )
   }
 }
 
-export default Calendar
+const enhancer = compose(
+  withProps(({ date }) => ({
+    date: new Date(date.getFullYear(), date.getMonth(), 1),
+  })),
+  pure,
+
+  withProps(({ date }) => {
+    const month = {
+      start: date,
+      end: new Date(date.getFullYear(), date.getMonth(), getDaysInMonth(date)),
+    }
+
+    return {
+      monthModel: splitEvery(7, [
+        ...Array(getWeekDayIndex(month.start)).fill(null),
+        ...range(1, getDaysInMonth(date) + 1).map(
+          day => new Date(date.getFullYear(), date.getMonth(), day)
+        ),
+        ...Array(getWeekDayIndex(month.end)).fill(null),
+      ]),
+    }
+  })
+)
+
+export default enhancer(Calendar)
