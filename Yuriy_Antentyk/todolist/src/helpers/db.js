@@ -1,3 +1,1 @@
-const getDbHost = () => `http://localhost:5000/`
-
-export default getDbHost
+export default () => `http://localhost:5000`

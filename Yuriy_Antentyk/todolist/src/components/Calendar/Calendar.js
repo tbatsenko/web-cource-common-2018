@@ -67,39 +67,37 @@ export default class Calendar extends React.Component {
       .map(val => val + 100)
       .map(key => emptyCell(key))
 
-    const days = beforeEmpty
-      .concat(
-        range(1, getDaysInMonth(date) + 1).map(dayNumber => {
-          const currentDate = new Date(
-            date.getFullYear(),
-            date.getMonth(),
-            dayNumber
-          )
-          return (
-            <td
-              title={holidaysMap.get(dayNumber)}
-              key={dayNumber}
-              className={calendarBem({
-                element: 'cell',
-                disabled: false,
-                selected: dayNumber === date.getDate(),
-                holiday:
-                  (holidaysMap.has(dayNumber) || isWeekEnd(currentDate)) &&
-                  dayNumber !== date.getDate(),
-              })}
-            >
-              <a
-                className={calendarBem({ element: 'link' })}
-                href={currentDate.toISOString()}
-                onClick={ev => this.handleOnClick(ev, dayNumber)}
-              >
-                {dayNumber}
-              </a>
-            </td>
-          )
-        })
+    const days = range(1, getDaysInMonth(date) + 1).map(dayNumber => {
+      const currentDate = new Date(
+        date.getFullYear(),
+        date.getMonth(),
+        dayNumber
       )
-      .concat(afterEmpty)
+      return (
+        <td
+          title={holidaysMap.get(dayNumber)}
+          key={dayNumber}
+          className={calendarBem({
+            element: 'cell',
+            disabled: false,
+            selected: dayNumber === date.getDate(),
+            holiday:
+              (holidaysMap.has(dayNumber) || isWeekEnd(currentDate)) &&
+              dayNumber !== date.getDate(),
+          })}
+        >
+          <a
+            className={calendarBem({ element: 'link' })}
+            href={currentDate.toISOString()}
+            onClick={ev => this.handleOnClick(ev, dayNumber)}
+          >
+            {dayNumber}
+          </a>
+        </td>
+      )
+    })
+
+    let allDays = beforeEmpty.concat(days).concat(afterEmpty)
 
     let weeks = [
       <tr key={-1} className={calendarBem({ element: 'row' })}>
@@ -108,12 +106,12 @@ export default class Calendar extends React.Component {
             {weekDay}
           </td>
         ))}
-      </tr>
+      </tr>,
     ]
-    while (days.length > 0)
+    while (allDays.length > 0)
       weeks.push(
-        <tr key={days.length} className={calendarBem({ element: 'row' })}>
-          {days.splice(0, 7)}
+        <tr key={allDays.length} className={calendarBem({ element: 'row' })}>
+          {allDays.splice(0, 7)}
         </tr>
       )
 

@@ -7,14 +7,16 @@ import Calendar from '../Calendar/Calendar'
 import TodoList from '../TodoList/TodoList'
 
 import { retrieveDateFromUrlString, hashDate } from '../../helpers/date'
+import rest from '../../helpers/rest'
 import getDbHost from '../../helpers/db'
 import bem from '../../helpers/bem'
 import getHolidays from '../../helpers/holidays'
 
 import './App.scss'
 
-const dbHost = getDbHost()
 const appBem = bem('app')
+
+const todoRest = rest(getDbHost())('todos')
 
 export default class App extends React.Component {
   state = {
@@ -31,7 +33,7 @@ export default class App extends React.Component {
   }
 
   componentDidMount() {
-    this._getTodos(this.state.date).then(data => {
+    this.getTodos(this.state.date).then(data => {
       this.setState({
         todos: this.state.todos.set(
           hashDate(this.state.date),
@@ -58,9 +60,9 @@ export default class App extends React.Component {
     this.stateChangeEventListener.removeEventListener()
   }
 
-  _getTodos = async date =>
-    await Axios.get(
-      `${dbHost}todos?year=${date.getFullYear()}&month=${date.getMonth()}&date=${date.getDate()}`
+  getTodos = date =>
+    Axios.get(
+        todoRest.get({year: date.getFullYear(), month: date.getMonth(), date: date.getDate()})
     ).then(response =>
       response.data.map(todoDbRepresentation => {
         return {
@@ -85,7 +87,7 @@ export default class App extends React.Component {
       year: this.state.date.getFullYear(),
     }
 
-    Axios.post(`${dbHost}todos`, todoDbRepresentation).then(() => {
+    Axios.post(todoRest.post(), todoDbRepresentation).then(() => {
       this.setState({
         todos: this.state.todos.set(
           this.state.dateHash,
@@ -95,7 +97,7 @@ export default class App extends React.Component {
     })
   }
 
-  _setCheckedForAllTodos = checkValue => {
+  setCheckedForAllTodos = checkValue => {
     this.setState({
       todos: this.state.todos.set(
         this.state.dateHash,
@@ -106,15 +108,15 @@ export default class App extends React.Component {
       ),
     })
   }
-  checkAllTodos = () => this._setCheckedForAllTodos(true)
-  uncheckAllTodos = () => this._setCheckedForAllTodos(false)
+  checkAllTodos = () => this.setCheckedForAllTodos(true)
+  uncheckAllTodos = () => this.setCheckedForAllTodos(false)
 
   deleteSelectedTodos = () => {
     Promise.all(
       this.state.todos
         .get(this.state.dateHash)
         .filter(todo => todo.checked)
-        .map(todo => Axios.delete(`${dbHost}todos/${todo.id}`))
+        .map(todo => Axios.delete(todoRest.delete(todo.id)))
     ).then(() =>
       this.setState({
         todos: this.state.todos.set(
@@ -139,7 +141,7 @@ export default class App extends React.Component {
     })
   }
   deleteTodo = id => {
-    Axios.delete(`${dbHost}todos/${id}`).then(() =>
+    Axios.delete(todoRest.delete(id)).then(() =>
       this.setState({
         todos: this.state.todos.set(
           this.state.dateHash,
@@ -157,7 +159,7 @@ export default class App extends React.Component {
     if (this.state.todos.has(hashDate(newDate)))
       return this.setState({ date: newDate, dateHash: hashDate(newDate) })
 
-    this._getTodos(newDate).then(data => {
+    this.getTodos(newDate).then(data => {
       this.setState({
         date: newDate,
         dateHash: hashDate(newDate),

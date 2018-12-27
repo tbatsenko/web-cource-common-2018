@@ -17,6 +17,7 @@ export default class TodoItem extends React.Component {
           onDeleteTodo(id)
         }}
       >
+        <label className={todoListBem({element: 'item-label'})}>
         <input
           type="checkbox"
           checked={checked}
@@ -24,6 +25,7 @@ export default class TodoItem extends React.Component {
           onChange={() => onToggleTodo(id)}
         />
         <p className={todoListBem({ element: 'item-text' })}>{text}</p>
+        </label>
         <button
           type="submit"
           className={todoListBem({ element: 'item-delete' })}
