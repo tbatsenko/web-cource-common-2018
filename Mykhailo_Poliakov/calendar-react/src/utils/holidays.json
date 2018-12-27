@@ -6,6 +6,16 @@
 			"name": "New Year's Day"
 		},
 		{
+			"day": 6,
+			"month": 0,
+			"name": "Christmas Eve"
+		},
+		{
+			"day": 7,
+			"month": 0,
+			"name": "Christmas Day"
+		},
+		{
 			"day": 24,
 			"month": 11,
 			"name": "Christmas Eve"

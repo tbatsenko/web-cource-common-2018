@@ -3,7 +3,7 @@ import Calendar from '../Calendar/Calendar';
 import Todo from '../Todo/Todo';
 
 class TodoCalendar extends React.Component {
-	url = 'localhost:3000';
+	url = '10.10.227.209:3000';
 
 	months = [
 		'January',
