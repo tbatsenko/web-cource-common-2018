@@ -60,7 +60,7 @@ class TodoCalendar extends React.Component {
 	onSelect = (e) => {
 		e.preventDefault();
 		let value = parseInt(e.target.innerHTML);
-		let isActive = e.target.parentNode.className.includes('active');
+		let isActive = e.target.className.includes('active');
 		if (!isNaN(value) && !isActive) {
 			this.setState({ day: value }, this.updateURL);
 		}
