@@ -20,7 +20,7 @@ class Calendar extends React.Component {
 					</button>
 				</header>
 				<main className={b('main')}>
-					<Days {...this.props} select={this.props.select} />
+					<Days {...this.props} select={this.props.select} daysinMonth={this.props.daysinMonth} />
 				</main>
 			</section>
 		);

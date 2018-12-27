@@ -1,11 +1,57 @@
 {
-	"dates": [
-		{
-			"id": 1,
-			"day": 0,
-			"month": 0,
-			"year": 0,
-			"items": [ "-" ]
-		}
-	]
+  "dates": [
+    {
+      "id": 1,
+      "day": 0,
+      "month": 0,
+      "year": 0,
+      "items": [
+        "-"
+      ]
+    },
+    {
+      "id": 2,
+      "day": 25,
+      "month": 11,
+      "year": 2018,
+      "items": []
+    },
+    {
+      "id": 3,
+      "day": 26,
+      "month": 11,
+      "year": 2018,
+      "items": [
+        "Test"
+      ]
+    },
+    {
+      "id": 4,
+      "day": 30,
+      "month": 10,
+      "year": 2018,
+      "items": []
+    },
+    {
+      "id": 5,
+      "day": 19,
+      "month": 0,
+      "year": 2019,
+      "items": []
+    },
+    {
+      "id": 6,
+      "day": 3,
+      "month": 11,
+      "year": 2018,
+      "items": []
+    },
+    {
+      "id": 7,
+      "day": 27,
+      "month": 11,
+      "year": 2018,
+      "items": []
+    }
+  ]
 }
