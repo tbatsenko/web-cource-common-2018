@@ -1,0 +1,27 @@
+.days {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	list-style-type: none;
+	padding: 0;
+
+	&__day {
+		width: 40px;
+		height: 40px;
+		line-height: 40px;
+		text-align: center;
+		color: #ffffff;
+
+		&--date {
+			cursor: pointer;
+		}
+
+		&--active {
+			background: #ffffff;
+			color: #00a8e8;
+			border-radius: 40px;
+			font-size: 10px;
+			box-shadow: 7px 7px 3px #009dd9;
+		}
+	}
+}

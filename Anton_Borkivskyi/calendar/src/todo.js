@@ -40,7 +40,7 @@ export class TODOList{
     document.getElementById('todo').innerHTML = ''
     let inner_html = ''
     for (let i = 0; i < items.length; i++) {
-      inner_html += '<div class="item"><p class="item__text">' + items[i] + '</p><button class="cancel_button" id = "' + (100 + i) + '">X</button></div>'
+      inner_html += '<div class="item"><p class="item__text">' + items[i] + '</p><button class="item__button"><img class="item__img" src="images/cancel.png" id = "' + (100 + i) + '"></button></div>'
     }
     document.getElementById('todo').innerHTML = inner_html
   }

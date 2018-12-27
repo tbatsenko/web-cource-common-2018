@@ -1,0 +1,67 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto");
+.left-bar {
+  width: 256px;
+  float: left;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+.left-bar__navigation {
+  min-height: 90px;
+  resize: vertical;
+  overflow: auto;
+  display: flex;
+  flex-direction: column;
+  border-bottom: 2px #eceff1 solid;
+  cursor: ns-resize;
+}
+.left-bar__button {
+  display: flex;
+  height: 48px;
+  margin: 15px 0 15px 10px;
+  padding: 0 25px 0 10px;
+  flex-direction: row;
+  align-items: center;
+  box-sizing: border-box;
+  background-color: transparent;
+  border: 1px;
+  border-radius: 24px;
+  box-shadow: 0 2px 2px 2px lightgray;
+}
+.left-bar__button--image {
+  height: 30px;
+  width: 30px;
+}
+.left-bar__button--text {
+  font-family: "Roboto", "RobotoDraft", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  margin: 0 0 0 10px;
+}
+.left-bar__link {
+  text-decoration: none;
+  color: inherit;
+  padding: 7px 15px;
+  border-radius: 0 15px 15px 0;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.left-bar__link--active {
+  background-color: #fce8e6;
+}
+.left-bar__link--text {
+  font-family: "Roboto", sans-serif;
+  margin-left: 20px;
+}
+.left-bar__link--text-active {
+  font-weight: bold;
+  color: #db3429;
+}
+.left-bar__link--icon-active {
+  color: #db3429;
+}
+.left-bar__link:hover {
+  background-color: #f4f4f4;
+}
+
+/*# sourceMappingURL=left-bar.css.map */

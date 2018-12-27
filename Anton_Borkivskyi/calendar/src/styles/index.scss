@@ -1,3 +1,6 @@
+@import "calendar-section";
+@import "todo-section";
+
 :root {
   --bg-color: #EDC7B7;
   --text-color: #AC3B61;
@@ -21,140 +24,18 @@ button {
   display: flex;
 
   .main {
-    background: white;
+    background: var(--game-color);
     height: 400px;
     width: 700px;
     margin: 100px auto;
 
+    border: 1px var(--text-color) solid;
+    border-radius: 5px;
+
     display: flex;
 
-    .calendar-section {
-      width: 60%;
-      display: flex;
-      flex-direction: column;
+    box-shadow: 5px 5px 10px var(--text-color);
 
-      //border: 1px var(--text-color) solid;
-
-      .header {
-        height: 50px;
-        background: var(--game-color);
-
-        display: flex;
-        align-items: center;
-        justify-content: space-evenly;
-
-        &__text {
-          font-family: "Lato", Helvetica, Arial, sans-serif;
-          width: 60%;
-          font-size: 30px;
-          color: var(--text-color);
-
-          text-align: center;
-        }
-
-        &__button, &__img {
-          width: 30px;
-          height: 30px;
-          background: transparent;
-        }
-
-        &__button:focus {
-          outline: none;
-        }
-
-      }
-
-      .calendar {
-        height: 350px;
-        width: 100%;
-        background: white;
-
-        display: flex;
-        flex-flow: wrap;
-
-        &__cell {
-          width: 10%;
-          margin: 2%;
-          height: 40px;
-
-          border-radius: 5px;
-
-          font-size: 20px;
-
-          background: var(--text2-color);
-          color: white;
-
-          display: flex;
-          justify-content: center;
-          align-items: center;
-        }
-
-        &__active-cell:hover{
-          cursor: pointer;
-        }
-      }
-
-    }
-
-    .todo-section {
-      width: 40%;
-      background: var(--game-color);
-
-      //border: 1px var(--text-color) solid;
-      //border-left: 0;
-
-      .input-item {
-        height: 50px;
-        width: 100%;
-        display: flex;
-        align-items: center;
-
-        &__input {
-          padding: 0 10px;
-          height: 100%;
-          width: 85%;
-          //border: 1px solid red;
-          font-size: 20px;
-
-          color: var(--text-color);
-
-          &:focus {
-            outline: none;
-          }
-        }
-
-        &__button {
-          height: 100%;
-          width: 15%;
-          //border: 1px solid red;
-          background: var(--text-color);
-          color: var(--game-color);
-
-          font-size: 20px;
-
-          &:focus {
-            outline: none;
-          }
-        }
-      }
-
-      .item {
-
-        border: 1px solid var(--text-color);
-        background: white;
-        color: var(--text-color);
-
-        height: 40px;
-        font-size: 20px;
-
-        margin-top: 5px;
-
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-      }
-
-    }
   }
 }
 

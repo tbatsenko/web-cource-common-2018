@@ -1,0 +1,40 @@
+.Chart {
+  margin: 0;
+  padding: 0;
+
+  &__static {
+    opacity: 1;
+  }
+
+  &__dynamic {
+    opacity: 0.7;
+  }
+
+  &__chart-line {
+    stroke-width: 3;
+    &_men {
+      stroke: #55a4a9;
+    }
+    &_women {
+      stroke: #e76e5e;
+    }
+  }
+
+  &__chart-area {
+    stroke-width: 0;
+
+    &_men {
+      fill: rgba(85, 164, 169, 0.71);
+      stroke: #55a4a9;
+    }
+
+    &_women {
+      fill: rgba(231, 110, 94, 0.72);
+    }
+  }
+  &__grid {
+    .vx-line {
+      stroke: #ccc;
+    }
+  }
+}

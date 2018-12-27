@@ -19,15 +19,27 @@
   height: 3.5em;
   margin: 5px;
   box-shadow: 0 0 6px 0px lightgray;
-  padding: 1px 5px;
+  padding: 3px 5px;
   box-sizing: border-box;
   color: #444;
   cursor: pointer; }
   .calendar_table__cell_empty {
-    box-shadow: none; }
+    box-shadow: none;
+    cursor: default; }
   .calendar_table__cell_active {
     font-weight: bolder;
     border: 1px solid grey; }
+
+.calendar_table__cell__date-badge {
+  float: right;
+  color: darkred;
+  width: 20px;
+  height: 20px;
+  text-align: center;
+  border-radius: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center; }
 
 .calendar-subheader {
   display: flex;
@@ -79,7 +91,7 @@
   position: sticky;
   top: 0;
   z-index: 1;
-  box-shadow: 0px 0px 11px lightgray;
+  box-shadow: 0px 0px 15px 10px white;
   background: white; }
 
 .task__text {
@@ -87,7 +99,8 @@
   padding: 0;
   width: 100%;
   margin: 0 0 0 10px;
-  background: transparent; }
+  background: transparent;
+  cursor: pointer; }
 
 .task__timestamp {
   border: 1px solid darkred;
@@ -128,8 +141,6 @@
 .task {
   align-items: center;
   padding: 8px 0;
-  cursor: pointer;
-  height: 30px;
   border-bottom: 1px inset lightgray;
   line-height: 30px;
   display: flex; }

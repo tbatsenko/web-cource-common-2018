@@ -1,0 +1,35 @@
+.day {
+  text-align: center;
+  flex-basis: calc(100% / 7);
+  box-sizing: border-box;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 30px;
+
+
+  &--week {
+    border-right: 1px solid #263238;
+
+    &:last-child {
+      border-right: none;
+    }
+  }
+
+  &--number {
+    &:hover {
+      cursor: pointer;
+    }
+
+    &-active {
+      border: 1px solid #263238;
+      font-weight: bold;
+    }
+  }
+
+  &--empty {
+
+  }
+
+}
