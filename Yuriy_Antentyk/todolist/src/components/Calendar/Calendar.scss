@@ -1,42 +1,53 @@
-.calendar{
-    &__calendar{
-        width: 100%;
+.calendar {
+  &__calendar {
+    width: 100%;
+  }
+
+  &__row {
+  }
+
+  &__cell {
+    text-align: center;
+  }
+
+  &__cell_holiday {
+    background-color: yellow;
+  }
+
+  &__cell_selected {
+    background-color: green;
+  }
+
+  &__header {
+    color: blue;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  &__header-text {
+    flex-grow: 2;
+    text-align: center;
+  }
+
+  &__header-month-forward {
+  }
+
+  &__header-month-backward {
+  }
+
+  &__day {
+    text-decoration: none;
+    color: black;
+    display: block;
+    width: 100%;
+    align-content: center;
+    &_isHoliday {
+      background: blue;
     }
 
-    &__row{
+    &_isActive {
+      background: green;
     }
-
-    &__cell{
-        cursor: pointer;
-        text-align: center;
-    }
-
-    &__cell_disabled{
-        background-color: red;
-        cursor: auto;
-    }
-
-    &__cell_selected{
-        background-color: green;
-    }
-
-    &__header{
-        color: blue;
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-    }
-
-    &__header-text{
-        flex-grow: 2;
-        text-align: center;
-    }
-
-    &__header-month-forward{
-
-    }
-
-    &__header-month-backward{
-
-    }
+  }
 }
