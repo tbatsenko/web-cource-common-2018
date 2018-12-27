@@ -1,22 +1,21 @@
 .days {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    list-style-type: none;
-    padding: 0;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	list-style-type: none;
+	padding: 0;
 
-    &__day {
-        width: 40px;
-        height: 40px;
-        line-height: 40px;
-        text-align: center;
-        color: #ffffff;
+	&__day {
+		width: 40px;
+		height: 40px;
+		line-height: 40px;
+		text-align: center;
+		color: #ffffff;
 
-        &--date {
-            cursor: pointer;
-        }
+		&--date {
+			cursor: pointer;
+		}
 
-<<<<<<< HEAD
 		&--weekend {
 			border-radius: 40px;
 			border: .5px solid #ffffff;
@@ -48,14 +47,3 @@
 		}
 	}
 }
-=======
-        &--active {
-            background: #ffffff;
-            color: #00a8e8;
-            border-radius: 40px;
-            font-size: 10px;
-            box-shadow: 7px 7px 3px #009dd9;
-        }
-    }
-}
->>>>>>> b6dc1d76c05ac86256349157aaf843307e90a439
