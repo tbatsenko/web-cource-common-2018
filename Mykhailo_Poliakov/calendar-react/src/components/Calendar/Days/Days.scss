@@ -11,9 +11,12 @@
 		line-height: 40px;
 		text-align: center;
 		color: #ffffff;
+		text-decoration: none;
+		pointer-events: none;
 
 		&--date {
 			cursor: pointer;
+			pointer-events: all;
 		}
 
 		&--weekend {
@@ -34,16 +37,35 @@
 			box-shadow: 7px 7px 3px #009dd9;
 		}
 	}
-	&__link {
-		width: 40px;
-		height: 40px;
-		display: inline-block;
-		text-decoration: none;
-		color: inherit;
-		cursor: inherit;
+}
 
-		&--disabled {
-			pointer-events: none;
+@media only screen and (max-width: 500px) {
+	.days {
+		margin: 6px;
+
+		&__day {
+			width: 20px;
+			height: 20px;
+			line-height: 20px;
+			font-size: 7px;
+
+			&--weekend {
+				border-radius: 20px;
+				border: .5px solid #ffffff;
+			}
+
+			&--holiday {
+				border-radius: 20px;
+				border: .5px solid #33ffbd;
+			}
+
+			&--active {
+				background: #ffffff;
+				color: #00a8e8;
+				border-radius: 20px;
+				font-size: 6px;
+				box-shadow: 3px 3px 1.5px #009dd9;
+			}
 		}
 	}
 }

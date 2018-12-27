@@ -59,15 +59,14 @@ class Days extends React.Component {
 				}
 
 				row.push(
-					<li key={j} className={className}>
-						<a
-							className={b('link', isNaN(parseInt(value)) ? [ 'disabled' ] : [])}
-							onClick={this.props.onSelect}
-							href={'?year=' + this.props.year + '&month=' + this.props.month + '&day=' + value}
-						>
-							{value}
-						</a>
-					</li>
+					<a
+						key={j}
+						className={className}
+						onClick={this.props.onSelect}
+						href={'?year=' + this.props.year + '&month=' + this.props.month + '&day=' + value}
+					>
+						{value}
+					</a>
 				);
 			}
 

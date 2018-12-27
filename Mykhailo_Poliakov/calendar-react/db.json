@@ -8,6 +8,33 @@
       "items": [
         "-"
       ]
+    },
+    {
+      "id": 2,
+      "day": 20,
+      "month": 11,
+      "year": 2018,
+      "items": []
+    },
+    {
+      "id": 3,
+      "day": 25,
+      "month": 11,
+      "year": 2018,
+      "items": [
+        "Test",
+        "Test",
+        "Test"
+      ]
+    },
+    {
+      "id": 4,
+      "day": 27,
+      "month": 11,
+      "year": 2018,
+      "items": [
+        "Test"
+      ]
     }
   ]
 }
