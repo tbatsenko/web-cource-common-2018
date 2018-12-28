@@ -1,5 +1,6 @@
 import React, {Component} from "react"
 import { withParentSize, AxisBottom, AxisLeft, Grid, Group, LinePath, Line, Point } from "@vx/vx"
+import { extent } from 'd3'
 
 import BEM from "../../utils/BEM"
 import "./Chart.scss"
@@ -15,15 +16,21 @@ class Chart extends Component {
             right: 60,
             bottom: 40,
         },
+        colors: ["#1abc9c", "#2ecc71", "#3498db", "#9b59b6", "#f1c40f",
+            "#e67e22", "#e74c3c", "#95a5a6", "#c0392b", "#16a085"]
+
     }
 
     constructor(props) {
         super(props)
 
-        const { parentHeight, parentWidth, yDomain, xDomain, margins } = this.props
+        const { data, parentHeight, parentWidth, xSelector, margins } = this.props
 
         const width = parentWidth - margins.left - margins.right
         const height = parentHeight - margins.top - margins.bottom
+
+        const xDomain = extent(data[0].map(xSelector))
+        const yDomain = [0, 6000]
 
         const yScale = scaleLinear()
             .range([height, 0])
@@ -42,9 +49,8 @@ class Chart extends Component {
     }
 
     render() {
-        const { data, xColumn, yColumns, colors, parentHeight, parentWidth, margins } = this.props
+        const { data, xSelector, ySelector, colors, parentHeight, parentWidth, margins } = this.props
         const { yScale, xScale, width, height } = this.state
-
 
         return (
             <svg height={parentHeight} width={parentWidth} className={b()}>
@@ -72,15 +78,14 @@ class Chart extends Component {
                         to={new Point({x: xScale(0), y: yScale(6000)})}
                     />
 
-                    {yColumns.map((yColumn, ind) => {
-                        const displayData = data.filter((row) => row[yColumn] !== 0)
+                    {data.map((oneData, ind) => {
                         return <LinePath
                             className={b("line")}
-                            data={displayData}
-                            x={d => xScale(d[xColumn])}
-                            y={d => yScale(d[yColumn])}
+                            data={oneData}
+                            x={d => xScale(xSelector(d))}
+                            y={d => yScale(ySelector(d))}
                             stroke={colors[ind]}
-                            key={yColumn}
+                            key={ind}
                         />
                     })}
                 </Group>

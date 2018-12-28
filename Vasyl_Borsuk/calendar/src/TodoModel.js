@@ -1,6 +1,6 @@
 const fetcher = require('./fetcher')
 
-export default class DataBase {
+export default class TodoModel {
     constructor(url) {
         this.url = url
     }

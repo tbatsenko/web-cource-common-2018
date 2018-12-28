@@ -15,7 +15,24 @@ export default class App extends Component {
   }
 
   render() {
-    return <Chart />
+    if (this.state.data === null) {
+      return null
+    }
+    return (
+      <React.Fragment>
+        <Chart population={this.getYearsData(5)} />
+        <input
+          type="range"
+          min={1989}
+          max={2018}
+          step={1}
+          value={this.state.currentYear}
+          onChange={({ target }) =>
+            this.setState({ currentYear: Number(target.value) })
+          }
+        />
+      </React.Fragment>
+    )
   }
 
   getYearsData(numberOfYears) {
