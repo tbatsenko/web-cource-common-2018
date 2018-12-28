@@ -1,0 +1,12 @@
+{
+  "todos": [
+    {
+      "text": "todo 1",
+      "completed": false
+    },
+    {
+      "text": "todo 2",
+      "completed": false
+    }
+  ]
+}

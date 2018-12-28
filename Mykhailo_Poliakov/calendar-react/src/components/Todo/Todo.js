@@ -1,92 +1,145 @@
 import React from 'react';
 import './Todo.scss';
+import BEM from '../../utils/bem';
+import { holidays } from '../../utils/holidays.json';
+
+const b = BEM('todo');
 
 class Todo extends React.Component {
-    state = {
-        value: ''
-    };
+	url = 'http://localhost:4000/dates/';
 
-    change = (e) => {
-        this.setState({value: e.target.value});
-    }
+	state = {
+		value: '',
+		data: null,
+		id: 1
+	};
 
-    submit = (e) => {
-        e.preventDefault();
+	onChange = (e) => {
+		this.setState({ value: e.target.value });
+	};
 
-        if (this.state.value === 'Clear') localStorage.clear();
-        else this.addItem(this.state.value);
-        this.setState({value: ''});
-    }
+	onSubmit = (e) => {
+		e.preventDefault();
+		this.addItem(this.state.value);
+		this.setState({ value: '' });
+	};
 
-    setStorage(storage) {
-        localStorage.setItem('storage', JSON.stringify(storage));
-    }
+	componentDidMount() {
+		fetch(this.url).then((response) => response.json()).then((data) => {
+			this.setState({ data: data, id: data[data.length - 1].id });
+		});
+	}
 
-    getStorage() {
-        return JSON.parse(localStorage.getItem('storage'));
-    }
+	isSameDate(date) {
+		return (
+			date.day === this.props.date.day && date.month === this.props.date.month && date.year === this.props.date.year
+		);
+	}
 
-    isSameDate(date) {
-        return date.day === this.props.day && date.month === this.props.month && date.year === this.props.year;
-    }
+	async postData(data) {
+		this.state.data.push(data);
+		this.state.id = this.state.id + 1;
+		let options = {
+			method: 'POST',
+			headers: { 'Content-Type': 'application/json' },
+			body: JSON.stringify(data)
+		};
+		return fetch(this.url, options).then((response) => response.json);
+	}
 
-    addItem(item) {
-        let storage = this.getStorage();
-        let isDayFound = false;
+	async putData(data) {
+		let options = {
+			method: 'PUT',
+			headers: { 'Content-Type': 'application/json' },
+			body: JSON.stringify(data)
+		};
+		return fetch(this.url + data.id, options).then((response) => response.json);
+	}
 
-        for (let i = 0; i < storage.length; i++) {
-            if (this.isSameDate(storage[i])) {          
-                storage[i].items.push(item);
-                this.setStorage(storage);
-                isDayFound = true;
-                break;
-            }
-        } 
-        
-        if (!isDayFound) {
-            storage.push({"day": this.props.day, 
-                          "month":  this.props.month, 
-                          "year": this.props.year, 
-                          "items": [item]
-                        })
-            this.setStorage(storage);
-        }
-    }
+	addItem(item) {
+		let isDayFound = false;
 
-    render() {
-        let storage = this.getStorage();
+		for (let i = 0; i < this.state.data.length; i++) {
+			if (this.isSameDate(this.state.data[i])) {
+				isDayFound = true;
+				this.state.data[i].items.push(item);
+				this.putData(this.state.data[i]);
+				break;
+			}
+		}
 
-        if (storage == null) {
-            this.setStorage([{"day": 0, "month": 0, "year": 0, "items": ["-"]}]);
-            storage = this.getStorage();
-        }
-        
-        let items = [];
+		if (!isDayFound) {
+			this.postData({
+				id: this.state.id + 1,
+				day: this.props.date.day,
+				month: this.props.date.month,
+				year: this.props.date.year,
+				items: [ item ]
+			});
+		}
+	}
 
-        for (let i = 0; i < storage.length; i++) {
-            if (this.isSameDate(storage[i])) {           
-                for (let j = 0; j < storage[i].items.length; j++) {
-                    items.push(<li key={j} className="todo__item">{storage[i].items[j]}</li>);
-                }
-            }
-        }
+	deleteItem = (e) => {
+		for (let i = 0; i < this.state.data.length; i++) {
+			if (this.isSameDate(this.state.data[i])) {
+				let data = this.state.data;
+				data[i].items.splice(e.target.value, 1);
+				this.setState({ data: data });
+				this.putData(this.state.data[i]);
+			}
+		}
+	};
 
-        return (
-            <section className="todo">
-                <header className="todo__header">
-                    <h1 className="todo__date">
-                        {this.props.day} {this.props.months[this.props.month]} {this.props.year}
-                    </h1>
-                </header>
-                <main className="todo__main">
-                    <ul className="todo__list">{items}</ul>
-                </main>
-                <form className="todo__form" onSubmit={this.submit}>
-                    <input className="todo__input" value={this.state.value} type="text" onChange={this.change} placeholder="Enter a task for this day" />
-                </form>
-            </section>
-        )
-    }
+	render() {
+		let items = [];
+
+		if (this.state.data != null) {
+			for (let i = 0; i < this.state.data.length; i++) {
+				if (this.isSameDate(this.state.data[i])) {
+					for (let j = 0; j < this.state.data[i].items.length; j++) {
+						items.push(
+							<li key={j} className={b('item')}>
+								<span className={b('text')}>{this.state.data[i].items[j]}</span>
+								<button aria-label="Done" className={b('done')} value={j} onClick={this.deleteItem}>
+									done
+								</button>
+							</li>
+						);
+					}
+				}
+			}
+		}
+
+		let holidayName = '';
+
+		holidays.forEach((holiday) => {
+			if (this.props.date.day === holiday.day && this.props.date.month === holiday.month) {
+				holidayName = holiday.name;
+			}
+		});
+
+		return (
+			<section className={b()}>
+				<header className={b('header')}>
+					<h1 className={b('date')}>
+						{this.props.date.day} {this.props.monthList()[this.props.date.month]} {this.props.date.year} {holidayName}
+					</h1>
+				</header>
+				<main className={b('main')}>
+					<ul className={b('list')}>{items}</ul>
+				</main>
+				<form className={b('form')} onSubmit={this.onSubmit}>
+					<input
+						className={b('input')}
+						value={this.state.value}
+						type="text"
+						onChange={this.onChange}
+						placeholder="Enter a task for this day"
+					/>
+				</form>
+			</section>
+		);
+	}
 }
 
 export default Todo;
