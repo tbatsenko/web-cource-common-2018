@@ -37,8 +37,9 @@ hr {
   vertical-align: middle;
   height: 36px;
   width: 36px;
-  border-radius: 50%;
-  object-fit: cover; }
+  background: url("https://scontent.flwo1-1.fna.fbcdn.net/v/t1.0-1/c0.8.48.48/p48x48/37627900_512381525863754_8817565621010038784_n.jpg?_nc_cat=106&oh=20025ee5c3b7a1524a4a759e2c0948ca&oe=5C20FD90");
+  background-size: 36px;
+  border-radius: 50%; }
 
 .pr-photo_before:before {
   width: 24px;
@@ -326,8 +327,9 @@ hr {
   vertical-align: middle;
   height: 36px;
   width: 36px;
-  border-radius: 50%;
-  object-fit: cover; }
+  background: url("https://scontent.flwo1-1.fna.fbcdn.net/v/t1.0-1/c0.8.48.48/p48x48/37627900_512381525863754_8817565621010038784_n.jpg?_nc_cat=106&oh=20025ee5c3b7a1524a4a759e2c0948ca&oe=5C20FD90");
+  background-size: 36px;
+  border-radius: 50%; }
 
 .pr-photo_before:before {
   width: 24px;
@@ -514,9 +516,7 @@ hr {
   .post__pic {
     display: block;
     width: 487px;
-    height: 300px;
-    object-fit: cover;
-    object-position: 50% 40%; }
+    height: 300px; }
 
 .reaction1, .reaction2 {
   width: 16px;
@@ -545,6 +545,18 @@ hr {
   vertical-align: middle;
   position: relative; }
 
+.stories__thumb-first, .stories__thumb {
+  height: 52px;
+  min-width: 52px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer; }
+
+.stories__thumb-first:hover, .stories__thumb:hover {
+  opacity: 0.8; }
+
 .stories {
   height: auto;
   margin: 0;
@@ -555,24 +567,16 @@ hr {
     width: auto;
     height: 60px;
     flex-direction: row; }
+  .stories__story_m {
+    margin-top: 10px; }
+  .stories__thumb-first {
+    font-size: 35px;
+    font-weight: 300;
+    background: #f5f6f7;
+    border: 1px solid #dadde1;
+    color: #3578e5; }
   .stories__thumb {
-    height: 52px;
-    min-width: 52px;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer; }
-    .stories__thumb_first {
-      font-size: 35px;
-      font-weight: 300;
-      background: #f5f6f7;
-      border: 1px solid #dadde1;
-      color: #3578e5; }
-    .stories__thumb:hover {
-      opacity: 0.8; }
-    .stories__thumb_border {
-      border: 2px solid #3578e5; }
+    border: 2px solid #3578e5; }
   .stories__img {
     height: 48px;
     width: 48px;

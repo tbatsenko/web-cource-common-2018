@@ -12,37 +12,42 @@ import getDbHost from '../../helpers/db'
 import bem from '../../helpers/bem'
 import getHolidays from '../../helpers/holidays'
 
-import {
-  withState,
-  compose,
-  withProps,
-  lifecycle,
-  branch,
-  renderComponent,
-} from 'recompose'
+const sameDate = (lhs, rhs) => {
+    return (
+        lhs.getFullYear() === rhs.getFullYear() &&
+        lhs.getMonth() === rhs.getMonth() &&
+        lhs.getDate() === rhs.getDate()
+    )
+}
 
 import './App.scss'
 import '../../columnGridLayout/columnGridLayout.scss'
 
-const columnGridLayout = bem('grid-12')
+let todoIdCounter = 0
 
-const todoRest = rest(getDbHost())('todos')
+export default class App extends React.Component{
+    state = {
+        todos: [],
+        date: new Date()
+    }
 
-const getTodos = async date => {
-  const response = await Axios.get(
-    todoRest.get({
-      year: date.getFullYear(),
-      month: date.getMonth(),
-      date: date.getDate(),
-    })
-  )
+    addTodo = (text) => {
+        this.setState({todos: this.state.todos.concat([
+            {
+                text: text,
+                id: ++todoIdCounter,
+                checked: false,
+                date: this.state.date
+            }
+        ])})
+    }
 
-  return response.data.map(todoDbRepresentation => ({
-    id: todoDbRepresentation.id,
-    text: todoDbRepresentation.text,
-    checked: false,
-  }))
-}
+    __setCheckedForAllTodos = (value) => {
+        this.state.todos.forEach(todo => todo.checked = (sameDate(todo.date, this.state.date)? value: todo.checked))
+        this.setState(this.state)
+    }
+    checkAllTodos = () => this.__setCheckedForAllTodos(true)
+    uncheckAllTodos = () => this.__setCheckedForAllTodos(false)
 
 const App = ({
   date,

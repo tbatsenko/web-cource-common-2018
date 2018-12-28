@@ -6,17 +6,9 @@ export default class TodoForm extends Component {
     text: ''
   };
 
-  render() {
-    return (
-      <form onSubmit={this.handleSubmit}>
-        <input name="text" type="text" value={this.state.text} onChange={this.handleChange} placeholder="add todo..."/>
-      </form>
-    )
-  }
-
   handleChange = (e) => {
     this.setState({
-      [e.target.name]: e.target.value
+      text: e.target.value
     })
   };
 
@@ -24,6 +16,7 @@ export default class TodoForm extends Component {
     e.preventDefault();
     this.props.onSubmit({
       id: shortid.generate(),
+      date: new Date(),
       text: this.state.text,
       completed: false
     });
@@ -32,4 +25,19 @@ export default class TodoForm extends Component {
     });
 
   };
+
+  render() {
+    return (
+      <form onSubmit={this.handleSubmit}>
+        <input
+          className="container__add-todo-input"
+          name="text"
+          type="text"
+          value={this.state.text}
+          onChange={this.handleChange}
+          placeholder="add todo..."
+        />
+      </form>
+    )
+  }
 }
