@@ -1,5 +1,4 @@
 import React, {Component} from 'react';
-import CalendarBody from './CalendarBody/CalendarBody'
 import './Calendar.scss'
 
 const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
@@ -13,17 +12,42 @@ export default class Calendar extends Component {
 
     this.state = {
       currDate: new Date(),
-      lastClicked: ""
+      lastClickedDay: null
     };
   }
 
-  lastClickedHandler = (state) => {
-    this.setState({
-      lastClickedDay: state.lastClickedDay
-    })
-  };
 
   render() {
+
+    const firstDayOfMonth = new Date(this.state.currDate.getFullYear(), this.state.currDate.getMonth(), 1).getDay();
+    const daysInMonth = new Date(this.state.currDate.getFullYear(), this.state.currDate.getMonth() + 1, 0).getDate();
+    const today = new Date().getDate();
+
+    let cells = [];
+    let emptyDaysAtEnd = 7 - (firstDayOfMonth - 1 + daysInMonth) % 7;
+    for (let i = 1; i <= firstDayOfMonth + daysInMonth + emptyDaysAtEnd; i++) {
+      if (i < firstDayOfMonth || i > daysInMonth + firstDayOfMonth) {
+        cells.push(<td key={i - firstDayOfMonth}
+                       className="day-cell-empty">{""}</td>)
+      } else if (i - firstDayOfMonth === today && this.state.currDate.getMonth() === new Date().getMonth()) {
+        cells.push(<td
+          onClick={() => this.setState({lastClickedDay: i - firstDayOfMonth})}
+          key={i - firstDayOfMonth}
+          className="day-cell day-cell-current">{i - firstDayOfMonth}</td>)
+      } else if (i - firstDayOfMonth === 0) {
+      } else {
+        cells.push(<td
+          onClick={() => this.setState({lastClickedDay: i - firstDayOfMonth})}
+          key={i - firstDayOfMonth}
+          className="day-cell day-cell-full">{i - firstDayOfMonth}</td>)
+      }
+    }
+
+    let weeks = [];
+    for (let i = 0; i < cells.length / 7; i++) {
+      weeks.push(<tr key={i} className="week-row">{cells.slice(i * 7, (i + 1) * 7)}</tr>)
+    }
+
     return (
       <table className="calendar-table">
         <caption><h2>Calendar</h2></caption>
@@ -52,7 +76,10 @@ export default class Calendar extends Component {
           )}
         </tr>
         </thead>
-        <CalendarBody date={this.state.currDate} onSubmit={this.lastClickedHandler}/>
+        {/*<CalendarBody date={this.state.currDate} onSubmit={this.lastClickedHandler}/>*/}
+        <tbody id="table-body">
+        {weeks}
+        </tbody>
       </table>
     )
   }
