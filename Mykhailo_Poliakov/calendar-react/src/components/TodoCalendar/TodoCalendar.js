@@ -2,6 +2,7 @@ import React from 'react';
 import Calendar from '../Calendar/Calendar';
 import Todo from '../Todo/Todo';
 import './TodoCalendar.scss';
+import Day from '../Day/Day';
 
 import BEM from '../../utils/bem';
 
@@ -9,10 +10,17 @@ import { withState, withProps, compose, lifecycle } from 'recompose';
 
 const b = BEM('todocalendar');
 
-const TodoCalendar = (props) => (
+const TodoCalendar = ({ date, monthList, onNextMonth, onPreviousMonth, onSelect, dayIndex }) => (
   <div className={b()}>
-    <Calendar {...props} />
-    <Todo {...props} />
+    <Calendar
+      date={date}
+      monthList={monthList}
+      onNextMonth={onNextMonth}
+      onPreviousMonth={onPreviousMonth}
+      onSelect={onSelect}
+      children={(day) => <Day key={dayIndex} day={day} date={date} onSelect={onSelect} />}
+    />
+    <Todo date={date} monthList={monthList} />
   </div>
 );
 

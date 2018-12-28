@@ -7,7 +7,7 @@ const TodoItem = ({ value, index, deleteItem }) => (
   <li className={b('item')}>
     <span className={b('text')}>{value}</span>
     <button aria-label="Done" className={b('done')} value={index} onClick={deleteItem}>
-      done
+      x
     </button>
   </li>
 );

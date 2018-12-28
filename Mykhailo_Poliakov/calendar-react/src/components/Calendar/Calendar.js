@@ -1,41 +1,25 @@
-import React from 'react'
-import Days from './Days/Days'
-import './Calendar.scss'
+import React from 'react';
+import './Calendar.scss';
 
-import BEM from '../../utils/bem'
+import BEM from '../../utils/bem';
+import CalendarBody from './CalendarBody';
 
-const b = BEM('calendar')
+const b = BEM('calendar');
 
-const Calendar = ({
-  date,
-  onPreviousMonth,
-  onNextMonth,
-  monthList,
-  daysInMonth,
-  onSelect,
-}) => (
+const Calendar = ({ date, onPreviousMonth, onNextMonth, monthList, onSelect, children }) => (
   <section className={b()}>
     <header className={b('header')}>
-      <button
-        aria-label="Previous month"
-        className={b('button')}
-        onClick={onPreviousMonth}
-      >
-        navigate_before
+      <button aria-label="Previous month" className={b('button')} onClick={onPreviousMonth}>
+        &lt;
       </button>
       <h1 className={b('date')}>{monthList[date.month]}</h1>
-      <button
-        aria-label="Next month"
-        className={b('button')}
-        onClick={onNextMonth}
-      >
-        navigate_next
+      <button aria-label="Next month" className={b('button')} onClick={onNextMonth}>
+        &gt;
       </button>
     </header>
-    <main className={b('main')}>
-      <Days daysInMonth={daysInMonth} onSelect={onSelect} date={date} />
-    </main>
-  </section>
-)
 
-export default Calendar
+    <CalendarBody onSelect={onSelect} children={children} date={date} />
+  </section>
+);
+
+export default Calendar;
