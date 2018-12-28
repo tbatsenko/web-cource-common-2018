@@ -31,7 +31,9 @@ class Todo extends React.Component {
 	}
 
 	isSameDate(date) {
-		return date.day === this.props.day && date.month === this.props.month && date.year === this.props.year;
+		return (
+			date.day === this.props.date.day && date.month === this.props.date.month && date.year === this.props.date.year
+		);
 	}
 
 	async postData(data) {
@@ -69,9 +71,9 @@ class Todo extends React.Component {
 		if (!isDayFound) {
 			this.postData({
 				id: this.state.id + 1,
-				day: this.props.day,
-				month: this.props.month,
-				year: this.props.year,
+				day: this.props.date.day,
+				month: this.props.date.month,
+				year: this.props.date.year,
 				items: [ item ]
 			});
 		}
@@ -111,7 +113,7 @@ class Todo extends React.Component {
 		let holidayName = '';
 
 		holidays.forEach((holiday) => {
-			if (this.props.day === holiday.day && this.props.month === holiday.month) {
+			if (this.props.date.day === holiday.day && this.props.date.month === holiday.month) {
 				holidayName = holiday.name;
 			}
 		});
@@ -120,7 +122,7 @@ class Todo extends React.Component {
 			<section className={b()}>
 				<header className={b('header')}>
 					<h1 className={b('date')}>
-						{this.props.day} {this.props.months[this.props.month]} {this.props.year} {holidayName}
+						{this.props.date.day} {this.props.monthList()[this.props.date.month]} {this.props.date.year} {holidayName}
 					</h1>
 				</header>
 				<main className={b('main')}>
