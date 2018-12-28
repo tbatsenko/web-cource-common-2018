@@ -1,19 +1,22 @@
 import React, {Component} from 'react';
-import App from '../App'
 
 export default class CalendarBody extends Component {
 
   constructor(props) {
     super(props);
     this.state = {
-      lastClickedCell: "",
-      lastClickedCellDate: ""
+      lastClickedDay: "",
+      lastClickedDate: ""
     };
   };
 
-  getLastClickedCell = () => this.state.lastClickedCell;
+  // getLastClickedCell = () => this.state.lastClickedCell;
+  //
+  // getLastClickedCellDate = () => this.state.lastClickedCellDate;
 
-  getLastClickedCellDate = () => this.state.lastClickedCellDate;
+  handleClick = () => {
+    this.props.onSubmit(this.state);
+  };
 
   render() {
 
@@ -28,14 +31,22 @@ export default class CalendarBody extends Component {
         cells.push(<td key={i - firstDayOfMonth}
                        className="day-cell-empty">{""}</td>)
       } else if (i - firstDayOfMonth === today && this.props.date.getMonth() === new Date().getMonth()) {
-        cells.push(<td onClick={() => this.setState({lastClickedCell: i - firstDayOfMonth, lastClickedCellDate: this.props.date})}
-                       key={i - firstDayOfMonth}
-                       className="day-cell day-cell-current">{i - firstDayOfMonth}</td>)
+        cells.push(<td
+          onClick={() => {
+            this.setState({lastClickedDay: i - firstDayOfMonth});
+            this.handleClick();
+          }}
+          key={i - firstDayOfMonth}
+          className="day-cell day-cell-current">{i - firstDayOfMonth}</td>)
       } else if (i - firstDayOfMonth === 0) {
       } else {
-        cells.push(<td onClick={() => this.setState({lastClickedCell: i - firstDayOfMonth, lastClickedCellDate: this.props.date})}
-                       key={i - firstDayOfMonth}
-                       className="day-cell day-cell-full">{i - firstDayOfMonth}</td>)
+        cells.push(<td
+          onClick={() => {
+            this.setState({lastClickedDay: i - firstDayOfMonth});
+            this.handleClick();
+          }}
+          key={i - firstDayOfMonth}
+          className="day-cell day-cell-full">{i - firstDayOfMonth}</td>)
       }
     }
 

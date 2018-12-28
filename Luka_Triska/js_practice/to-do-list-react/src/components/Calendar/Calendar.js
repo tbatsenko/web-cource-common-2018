@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import CalendarBody from './CalendarBody'
+import CalendarBody from './CalendarBody/CalendarBody'
 import './Calendar.scss'
 
 const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
@@ -8,10 +8,20 @@ const weekdays = ["mon", "tue", "wed", "thu", "fri", "sat", "sun"];
 
 export default class Calendar extends Component {
 
-  state = {
-    currDate: new Date(),
-  };
+  constructor(props) {
+    super(props);
 
+    this.state = {
+      currDate: new Date(),
+      lastClicked: ""
+    };
+  }
+
+  lastClickedHandler = (state) => {
+    this.setState({
+      lastClickedDay: state.lastClickedDay
+    })
+  };
 
   render() {
     return (
@@ -42,7 +52,7 @@ export default class Calendar extends Component {
           )}
         </tr>
         </thead>
-        <CalendarBody date={this.state.currDate}/>
+        <CalendarBody date={this.state.currDate} onSubmit={this.lastClickedHandler}/>
       </table>
     )
   }

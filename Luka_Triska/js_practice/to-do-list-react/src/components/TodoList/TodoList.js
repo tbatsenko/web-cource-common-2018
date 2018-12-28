@@ -1,12 +1,10 @@
 import React, {Component} from 'react';
-import TodoForm from './TodoForm'
-import Todo from './Todo'
-import CalendarBody from '../Calendar/CalendarBody'
+import TodoForm from './TodoForm/TodoForm'
+import Todo from './Todo/Todo'
 
 import './TodoList.css'
 
-class TodoList extends Component {
-
+export default class TodoList extends Component {
 
 
   state = {
@@ -62,5 +60,3 @@ class TodoList extends Component {
     )
   }
 }
-
-export default TodoList;
