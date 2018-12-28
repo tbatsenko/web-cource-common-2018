@@ -14,6 +14,7 @@ export default class App extends Component {
 
     this.recalculatePosition = this.recalculatePosition.bind(this)
     this.handleAntichristClick = this.handleAntichristClick.bind(this)
+    this.restart = this.restart.bind(this)
   }
 
   recalculatePosition() {
@@ -39,6 +40,11 @@ export default class App extends Component {
 
       anti[i].x += anti[i].xMove
       anti[i].y += anti[i].yMove
+
+      if (anti[i].x < 300) {
+        anti[i].good = false
+      }
+
       if (anti[i].x < 0) {
         anti[i].x = 0
       }
@@ -51,7 +57,7 @@ export default class App extends Component {
       if (anti[i].y > 285) {
         anti[i].y = 285
       }
-      if (this.state.cristians === null) {
+      if (this.state.cristians === null || anti[i].good) {
         continue
       }
       for (let j = 0; j < this.state.cristians.length; j++) {
@@ -74,6 +80,21 @@ export default class App extends Component {
       }
     }
 
+    let newAntichrists = cristi
+      .filter(cristian => punished.includes(cristian.id))
+      .map((cristian, index) => {
+        return {
+          id: anti[anti.length - 1].id + index + 1,
+          x: cristian.x,
+          y: cristian.y,
+          xMove: -Math.floor(Math.random() * 2 + 1),
+          yMove: Math.floor(Math.random() * 2 + 1),
+          good: true,
+        }
+      })
+    for (let i = 0; i < newAntichrists.length; ++i) {
+      anti.push(newAntichrists[i])
+    }
     cristi = cristi.filter(cristian => !punished.includes(cristian.id))
     this.setState({ antichrists: anti, cristians: cristi })
   }
@@ -114,6 +135,7 @@ export default class App extends Component {
         y: Math.floor(Math.random() * 270) + 1,
         xMove: Math.floor(Math.random() * 2 + 1),
         yMove: Math.floor(Math.random() * 2 + 1),
+        good: false,
       }
       antichrist.xMove =
         Math.random() < 0.5 ? antichrist.xMove : -antichrist.xMove
@@ -138,8 +160,17 @@ export default class App extends Component {
   }
 
   render() {
-    if (this.state.antichrists === null || this.state.cristians === null) {
-      return <div className="App">Loading game</div>
+    if (
+      this.state.antichrists === null ||
+      this.state.cristians === null ||
+      this.state.antichrists.length === 0 ||
+      this.state.cristians.length === 0
+    ) {
+      return (
+        <div className="App">
+          <button onClick={this.restart}>New game</button>
+        </div>
+      )
     }
     return (
       <div className="App">
@@ -149,6 +180,7 @@ export default class App extends Component {
             id={antichrist.id}
             x={antichrist.x}
             y={antichrist.y}
+            good={antichrist.good}
             onClick={this.handleAntichristClick}
           />
         ))}
@@ -165,10 +197,13 @@ export default class App extends Component {
     )
   }
 
+  restart() {
+    this.generateRandomAntichrists(this.props.antichrists)
+    this.generateCristians(this.props.cristians)
+  }
+
   componentDidMount() {
-    console.log('mounted')
-    this.generateRandomAntichrists(5)
-    this.generateCristians(9)
+    this.restart()
 
     setInterval(this.recalculatePosition, 70)
   }
@@ -181,10 +216,11 @@ export default class App extends Component {
     let cristi = [...this.state.cristians].map(obj => {
       return { ...obj }
     })
+
     cristi.push({
-      id: cristi[cristi.length-1].id+1,
-      x: this.calculateCristianPosition(cristi[cristi.length-1].id+1)[0],
-      y: this.calculateCristianPosition(cristi[cristi.length-1].id+1)[1],
+      id: cristi[cristi.length - 1].id + 1,
+      x: this.calculateCristianPosition(cristi[cristi.length - 1].id + 1)[0],
+      y: this.calculateCristianPosition(cristi[cristi.length - 1].id + 1)[1],
     })
     this.setState({ antichrists: anti, cristians: cristi })
   }

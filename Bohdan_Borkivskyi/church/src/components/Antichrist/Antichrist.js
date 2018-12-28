@@ -2,10 +2,14 @@ import React, { Component } from 'react'
 import './Antichrist.css'
 
 export default class Antichrist extends Component {
+  getClasses() {
+    return 'Antichrist' + (this.props.good ? ' Antichrist-good' : '')
+  }
+
   render() {
     return (
       <div
-        className="Antichrist"
+        className={this.getClasses()}
         style={{ left: this.props.x, top: this.props.y }}
         onClick={() => this.props.onClick(this.props.id)}
       />

@@ -15,3 +15,7 @@
 .Antichrist:hover {
   cursor: pointer;
 }
+
+.Antichrist-good {
+  background-color: pink;
+}
