@@ -1,110 +1,165 @@
-import React from 'react';
-import './Todo.scss';
+import React from 'react'
+import './Todo.scss'
+import BEM from '../../utils/bem'
+import { holidays } from '../../utils/holidays.json'
+import { withState, withProps, compose, lifecycle } from 'recompose'
+import TodoItem from './TodoItem'
 
-class Todo extends React.Component {
-    state = {
-        value: '',
-        data: null,
-        id: 1
-    };
+const b = BEM('todo')
 
-    change = (e) => {
-        this.setState({value: e.target.value});
-    }
+const Todo = ({
+  date,
+  items,
+  value,
+  deleteItem,
+  onSubmit,
+  onChange,
+  monthList,
+}) => (
+  <section className={b()}>
+    <header className={b('header')}>
+      <h1 className={b('date')}>
+        {date.day} {monthList[date.month]} {date.year}
+        {holidays.map(holiday =>
+          date.day === holiday.day && date.month === holiday.month
+            ? ` (${holiday.name})`
+            : ''
+        )}
+      </h1>
+    </header>
+    <main className={b('main')}>
+      <ul className={b('list')}>
+        {items !== undefined
+          ? items.map((value, index) => (
+              <TodoItem
+                key={index}
+                deleteItem={deleteItem}
+                index={index}
+                value={value}
+              />
+            ))
+          : ''}
+      </ul>
+    </main>
+    <form className={b('form')} onSubmit={onSubmit}>
+      <input
+        className={b('input')}
+        value={value}
+        type="text"
+        onChange={onChange}
+        placeholder="Enter a task for this day"
+      />
+    </form>
+  </section>
+)
 
-    submit = (e) => {
-        e.preventDefault();
-
-        if (this.state.value === 'Clear') localStorage.clear();
-        else this.addItem(this.state.value);
-        this.setState({value: ''});
-    }
-
-    componentDidMount() {
-        fetch('http://localhost:4000/dates').then((response) => response.json()).then(data => {
-            this.setState({data: data, id: data[data.length - 1].id});        
-        })
-    }
-        
-
-    isSameDate(date) {
-        return date.day === this.props.day && date.month === this.props.month && date.year === this.props.year;
-    }
-
-    async postData(data) {
-        this.state.data.push(data);
+const enhancer = compose(
+  withState('value', 'setValue', ''),
+  withState('items', 'setItems', undefined),
+  withState('id', 'setId', 1),
+  withProps(() => {
+    return {
+      post: async data => {
         let options = {
-            method: 'POST',
-            headers: {
-              'Content-Type': 'application/json'
-            },
-            body: JSON.stringify(data)
-          }
-          return fetch('http://localhost:4000/dates', options).then((response) => response.json)
-    }
-
-    async putData(data) {
-        let options = {
-            method: 'PUT',
-            headers: {
-              'Content-Type': 'application/json'
-            },
-            body: JSON.stringify(data)
-          }
-          return fetch('http://localhost:4000/dates/' + data.id, options).then((response) => response.json)
-    }
-
-    addItem(item) {
-        let isDayFound = false;
-
-        for (let i = 0; i < this.state.data.length; i++) {
-            if (this.isSameDate(this.state.data[i])) {   
-                isDayFound = true;       
-                this.state.data[i].items.push(item);
-                this.putData(this.state.data[i]);
-                break;
-            }
-        } 
-        
-        if (!isDayFound) {
-            this.postData(
-            {
-                "id": this.state.id + 1, "day": this.props.day, 
-                "month":  this.props.month, "year": this.props.year, "items": [item]
-            });
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(data),
         }
-    }
-
-    render() {
-        let items = [];
-        if (this.state.data != null) {
-            for (let i = 0; i < this.state.data.length; i++) {
-                if (this.isSameDate(this.state.data[i])) {           
-                    for (let j = 0; j < this.state.data[i].items.length; j++) {
-                        items.push(<li key={j} className="todo__item">{this.state.data[i].items[j]}</li>);
-                    }
-                }
-            }
-
-        }
-       
-
-        return (
-            <section className="todo">
-                <header className="todo__header">
-                    <h1 className="todo__date">
-                        {this.props.day} {this.props.months[this.props.month]} {this.props.year}
-                    </h1>
-                </header>
-                <main className="todo__main">
-                    <ul className="todo__list">{items}</ul>
-                </main>
-                <form className="todo__form" onSubmit={this.submit}>
-                    <input className="todo__input" value={this.state.value} type="text" onChange={this.change} placeholder="Enter a task for this day" />
-                </form>
-            </section>
+        return fetch('http://localhost:4000/dates/', options).then(
+          response => response.json
         )
+      },
+      put: async data => {
+        let options = {
+          method: 'PUT',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(data),
+        }
+        return fetch('http://localhost:4000/dates/' + data.id, options).then(
+          response => response.json
+        )
+      },
     }
-}
+  }),
+  withProps(({ date, items, setItems, id, put, post }) => {
+    return {
+      isSameDate: newDate => {
+        return (
+          newDate.day === date.day &&
+          newDate.month === date.month &&
+          newDate.year === date.year
+        )
+      },
+      addItem: item => {
+        if (items !== undefined) {
+          items.push(item)
+          setItems(items)
+          put({
+            id: id,
+            day: date.day,
+            month: date.month,
+            year: date.year,
+            items: items,
+          })
+        } else {
+          setItems([item])
+          post({
+            id: id,
+            day: date.day,
+            month: date.month,
+            year: date.year,
+            items: [item],
+          })
+        }
+      },
+      deleteItem: e => {
+        items.splice(e.target.value, 1)
+        setItems(items)
+        put({
+          id: id,
+          day: date.day,
+          month: date.month,
+          year: date.year,
+          items: items,
+        })
+      },
+    }
+  }),
+  withProps(({ value, setValue, addItem }) => {
+    return {
+      onChange: e => {
+        setValue(e.target.value)
+      },
 
-export default Todo;
+      onSubmit: e => {
+        e.preventDefault()
+        addItem(value)
+        setValue('')
+      },
+    }
+  }),
+  lifecycle({
+    componentDidUpdate({ date }) {
+      const { isSameDate, setItems, setId } = this.props
+      if (!this.props.isSameDate(date)) {
+        fetch('http://localhost:4000/dates/')
+          .then(response => response.json())
+          .then(data => {
+            let date = data.filter(date => {
+              return isSameDate(date)
+            })[0]
+
+            if (date !== undefined) {
+              setItems(date.items)
+              setId(date.id)
+            } else {
+              setItems(undefined)
+              setId(data[data.length - 1].id + 1)
+            }
+          })
+      }
+    },
+  })
+)
+
+export default enhancer(Todo)

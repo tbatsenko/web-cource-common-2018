@@ -1,0 +1,110 @@
+$borderColor: #cccccc;
+
+:root {
+  --calendar-bg-color: #fff;
+  --calendar-border-radius: 0;
+  --calendar-border-color: #e7e9ed;
+}
+
+.calendar-wrapper {
+  background: #27ae60;
+  width: 50vw;
+  height: 100vh;
+  padding-right: 30px;
+  padding-left: 30px;
+
+  &__header {
+    text-align: center;
+  }
+}
+
+.calendar {
+  background-color: var(--calendar-bg-color);
+  //border-radius: var(--calendar-border-radius);
+  //border: solid 1px var(--calendar-border-color);
+  box-shadow: 0 4px 22px 0 rgba(0, 0, 0, 0.05);
+  margin: 0 auto;
+  overflow: hidden;
+  //width: 100%;
+  display: block;
+  text-align: center;
+  width: 300px;
+  border: solid 1px $borderColor;
+
+  &__header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    color: #fff;
+    cursor: default;
+    display: block;
+    font-size: 1rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    user-select: none;
+
+
+  }
+
+  &__month-display {
+    align-items: center;
+    height: 40px;
+    background: #2875C7;
+
+    display: flex;
+    width: 100%;
+  }
+
+  &__month-label {
+    flex: 1;
+  }
+
+  &__arrow {
+    cursor: pointer;
+  }
+
+  &__day-names {
+    color: #2875C7;
+    font-weight: bold;
+    cursor: default;
+    font-size: 0.8rem;
+    display: flex;
+    width: 100%;
+  }
+
+
+  &__row-week {
+    display: flex;
+    width: 100%;
+
+  }
+
+  &__day {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+    height: 35px;
+    border-left: solid 1px $borderColor;
+    cursor: pointer;
+    transition: all .2s;
+
+    &:hover {
+      background: #eeeeee;
+    }
+
+    &_today {
+      background: rgba(40, 117, 199, 0.45);
+    }
+
+    &_different-month {
+      color: rgb(192, 192, 192);
+    }
+
+    &_selected {
+      background: rgb(40, 117, 199);
+      color: #fff;
+    }
+  }
+}

@@ -1,0 +1,17 @@
+.todocalendar {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+}
+
+@media only screen and (max-width: 860px) {
+  .todocalendar {
+    flex-direction: column;
+  }
+}
+@media only screen and (min-width: 860px) {
+  .todocalendar {
+    height: 100vh;
+  }
+}

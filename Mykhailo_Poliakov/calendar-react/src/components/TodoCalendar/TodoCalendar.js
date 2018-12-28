@@ -1,53 +1,113 @@
-import React from 'react';
-import Calendar from '../Calendar/Calendar';
-import Todo from '../Todo/Todo';
+import React from 'react'
+import Calendar from '../Calendar/Calendar'
+import Todo from '../Todo/Todo'
+import './TodoCalendar.scss'
 
-class TodoCalendar extends React.Component {
-    state = {
-        year:  new Date().getFullYear(),
-        month: new Date().getMonth(),
-        day:   new Date().getDate(),
-        months:  [
-        'January', 'February', 'March', 'April', 'May', 'June', 'July', 
-        'August', 'September', 'October', 'November', 'December'
-        ]
-    };
+import BEM from '../../utils/bem'
 
-    next = () => {
-        this.setState({
-            year:  (this.state.month === 11) ? this.state.year + 1 : this.state.year,
-            month: (this.state.month + 1) % 12,
-        }, this.setDay);
-    }
+import { withState, withProps, compose, lifecycle } from 'recompose'
 
-    previous = () => {  
-        this.setState({
-            year:  (this.state.month === 0) ? this.state.year - 1 : this.state.year,
-            month: (this.state.month === 0) ? 11 : this.state.month - 1,
-        }, this.setDay);
-    }
+const b = BEM('todocalendar')
 
-    daysInMonth() {
-        return new Date(this.state.year, this.state.month + 1, 0).getDate();
-    }
+const TodoCalendar = props => (
+  <div className={b()}>
+    <Calendar {...props} />
+    <Todo {...props} />
+  </div>
+)
 
-    setDay = () => {
-        this.setState({day: (this.state.day > this.daysInMonth()) ? 1 : this.state.day});
-    }
+const enhancer = compose(
+  withState('date', 'setDate', {
+    year: new Date().getFullYear(),
+    month: new Date().getMonth(),
+    day: new Date().getDate(),
+  }),
+  withProps(() => ({
+    monthList: [
+      'January',
+      'February',
+      'March',
+      'April',
+      'May',
+      'June',
+      'July',
+      'August',
+      'September',
+      'October',
+      'November',
+      'December',
+    ],
+    daysInMonth: (year, month) => {
+      return new Date(year, month + 1, 0).getDate()
+    },
 
-    select = e => {
-        if (e.target.value) this.setState({day: e.target.value});
-    }
+    updateURL: (year, month, day) => {
+      let url = `/?year=${year}&month=${month}&day=${day}`
 
-    render() {
-        return (
-            [
-                <Calendar key='0' {...this.state} next={this.next} previous={this.previous} 
-                    select={this.select} daysInMonth={this.daysInMonth} />,
-                <Todo key='1'  {...this.state} />
-            ]
-        );
-    }
-}
+      window.history.pushState(
+        { year: year, month: month, day: day },
+        null,
+        url
+      )
+    },
+  })),
+  withProps(({ date, setDate, daysInMonth, updateURL }) => ({
+    onNextMonth: () => {
+      let newYear = date.month === 11 ? date.year + 1 : date.year
+      let newMonth = (date.month + 1) % 12
+      let newDay = date.day > daysInMonth(newYear, newMonth) ? 1 : date.day
+      setDate({ year: newYear, month: newMonth, day: newDay })
+      updateURL(newYear, newMonth, newDay)
+    },
+    onPreviousMonth: () => {
+      let newYear = date.month === 0 ? date.year - 1 : date.year
+      let newMonth = date.month === 0 ? 11 : date.month - 1
+      let newDay = date.day > daysInMonth(newYear, newMonth) ? 1 : date.day
+      setDate({ year: newYear, month: newMonth, day: newDay })
+      updateURL(newYear, newMonth, newDay)
+    },
+    onSelect: e => {
+      e.preventDefault()
+      let newDay = parseInt(e.target.innerHTML)
+      let isActive = e.target.className.includes('active')
+      if (!isNaN(newDay) && !isActive) {
+        setDate({ year: date.year, month: date.month, day: newDay })
+        updateURL(date.year, date.month, newDay)
+      }
+    },
+    onControlsClick: e => {
+      if (e.state != null) {
+        setDate({ year: e.state.year, month: e.state.month, day: e.state.day })
+      }
+    },
+  })),
+  lifecycle({
+    componentDidMount() {
+      const {
+        date,
+        setDate,
+        daysInMonth,
+        updateURL,
+        onControlsClick,
+      } = this.props
 
-export default TodoCalendar;
+      const params = new URLSearchParams(window.location.search)
+      let newYear = parseInt(params.get('year'))
+      let newMonth = parseInt(params.get('month'))
+      let newDay = parseInt(params.get('day'))
+      if (
+        newYear > 0 &&
+        (newMonth >= 0 && newMonth < 12) &&
+        (newDay > 0 && newDay <= daysInMonth(newMonth, newYear))
+      ) {
+        setDate({ year: newYear, month: newMonth, day: newDay })
+        updateURL(newYear, newMonth, newDay)
+      } else {
+        updateURL(date.year, date.month, date.day)
+      }
+      window.addEventListener('popstate', onControlsClick)
+    },
+  })
+)
+
+export default enhancer(TodoCalendar)

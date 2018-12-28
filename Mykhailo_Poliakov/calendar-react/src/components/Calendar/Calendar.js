@@ -1,26 +1,41 @@
-import React from 'react';
-import Days from './Days/Days';
-import './Calendar.scss';
+import React from 'react'
+import Days from './Days/Days'
+import './Calendar.scss'
 
-class Calendar extends React.Component {
-    render() {
-        return (
-            <section className="calendar">
-                <header className="calendar__header">
-                    <button className="calendar__button" onClick={this.props.previous}>
-                        navigate_before
-                    </button>
-                    <h1 className="calendar__date">{this.props.months[this.props.month]}</h1>
-                    <button className="calendar__button" onClick={this.props.next}>
-                        navigate_next
-                    </button>
-                </header>
-                <main className="calendar__main">
-                    <Days {...this.props} select={this.props.select} />
-                </main>
-            </section>
-        );
-    }
-}
+import BEM from '../../utils/bem'
 
-export default Calendar;
+const b = BEM('calendar')
+
+const Calendar = ({
+  date,
+  onPreviousMonth,
+  onNextMonth,
+  monthList,
+  daysInMonth,
+  onSelect,
+}) => (
+  <section className={b()}>
+    <header className={b('header')}>
+      <button
+        aria-label="Previous month"
+        className={b('button')}
+        onClick={onPreviousMonth}
+      >
+        navigate_before
+      </button>
+      <h1 className={b('date')}>{monthList[date.month]}</h1>
+      <button
+        aria-label="Next month"
+        className={b('button')}
+        onClick={onNextMonth}
+      >
+        navigate_next
+      </button>
+    </header>
+    <main className={b('main')}>
+      <Days daysInMonth={daysInMonth} onSelect={onSelect} date={date} />
+    </main>
+  </section>
+)
+
+export default Calendar

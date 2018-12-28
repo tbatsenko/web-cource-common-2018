@@ -1,14 +1,11 @@
 import React, { Component } from 'react'
-import { csvParse, extent } from 'd3'
+import { csvParse } from 'd3'
 
 import BEM from '../../utils/BEM'
 import Chart from '../Chart'
 import './App.scss'
 
 const b = BEM('App')
-
-const LINE_COLORS = ["#1abc9c", "#2ecc71", "#3498db", "#9b59b6", "#f1c40f",
-    "#e67e22", "#e74c3c", "#95a5a6", "#c0392b", "#16a085"]
 
 class App extends Component {
     state = {
@@ -29,13 +26,15 @@ class App extends Component {
         const response = await fetch('/data.csv')
         const dataText = await response.text()
 
-        const parsedData = csvParse(dataText, (row) => {
-            let newRow = Object.assign({}, row)
-            Object.keys(newRow).forEach((key) => newRow[key] = Number(newRow[key]))
-            return newRow
-        })
-        const data = parsedData.filter((row) => row["Year"] >= -2000)
+        const parsedData = csvParse(dataText, row =>
+            Object.entries(row).reduce(
+                (obj, [key, val]) => {
+                    obj[key] = Number(val)
+                    return obj
+                }, {})
+        )
         const mainColumn = "Year";
+        const data = parsedData.filter((row) => row["Year"] >= -2000)
         const columns = Object.keys(data[0]).filter((key) => key !== mainColumn)
         const activeColumns = {}
         columns.forEach((key) => activeColumns[key] = true)
@@ -45,8 +44,6 @@ class App extends Component {
             mainColumn: mainColumn,
             columns: columns,
             activeColumns: activeColumns,
-            xDomain: extent(data.map((row) => row['Year'])),
-            yDomain: [0, 6000],
         })
     }
 
@@ -65,32 +62,35 @@ class App extends Component {
     render() {
         if (!this.state.data) return <div className="App">'Loading...'</div>
 
-        const { data, mainColumn, columns, activeColumns, xDomain, yDomain } = this.state
+        const { data, mainColumn, columns, activeColumns } = this.state
+
         const displayColumns = columns.filter((key) => activeColumns[key])
-        const colors = LINE_COLORS.filter((color, ind) => activeColumns[columns[ind]])
+        const displayData = displayColumns.map((key) =>
+            data.map(row => [row[mainColumn], row[key]])
+                .filter(([, val]) => val !== 0))
 
         return (
-            <div className={b()}>
+            <figure className={b()}>
                 <div className={b('chart')}>
                     <Chart
-                        data={data}
-                        xColumn={mainColumn}
-                        yColumns={displayColumns}
-                        xDomain={xDomain}
-                        yDomain={yDomain}
-                        colors={colors}
+                        data={displayData}
+                        xSelector={val => val[0]}
+                        ySelector={val => val[1]}
                     />
                 </div>
-                <ul className={b('lines-list')}>
+                <figcaption className={b('legend')}>
                     {columns.map((col) =>
-                        <button
-                            className={b('button', activeColumns[col] ? ['active'] : [])}
-                            onClick={() => this.changeKeyState(col)}
-                            key={col}>
+                        <label key={col} className={b('legend-item')}>
+                            <input
+                                checked={activeColumns[col]}
+                                type="checkbox"
+                                onChange={() => this.changeKeyState(col)}
+                            />
                             {col}
-                        </button>)}
-                </ul>
-            </div>
+                        </label>
+                    )}
+                </figcaption>
+            </figure>
         )
     }
 }
