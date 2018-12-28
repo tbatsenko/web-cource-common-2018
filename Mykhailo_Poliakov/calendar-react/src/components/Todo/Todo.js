@@ -1,10 +1,13 @@
 import React from 'react';
 import './Todo.scss';
 import BEM from '../../utils/bem';
+import { holidays } from '../../utils/holidays.json';
 
 const b = BEM('todo');
 
 class Todo extends React.Component {
+	url = 'http://localhost:4000/dates/';
+
 	state = {
 		value: '',
 		data: null,
@@ -22,13 +25,15 @@ class Todo extends React.Component {
 	};
 
 	componentDidMount() {
-		fetch('http://localhost:4000/dates').then((response) => response.json()).then((data) => {
+		fetch(this.url).then((response) => response.json()).then((data) => {
 			this.setState({ data: data, id: data[data.length - 1].id });
 		});
 	}
 
 	isSameDate(date) {
-		return date.day === this.props.day && date.month === this.props.month && date.year === this.props.year;
+		return (
+			date.day === this.props.date.day && date.month === this.props.date.month && date.year === this.props.date.year
+		);
 	}
 
 	async postData(data) {
@@ -39,7 +44,7 @@ class Todo extends React.Component {
 			headers: { 'Content-Type': 'application/json' },
 			body: JSON.stringify(data)
 		};
-		return fetch('http://localhost:4000/dates', options).then((response) => response.json);
+		return fetch(this.url, options).then((response) => response.json);
 	}
 
 	async putData(data) {
@@ -48,7 +53,7 @@ class Todo extends React.Component {
 			headers: { 'Content-Type': 'application/json' },
 			body: JSON.stringify(data)
 		};
-		return fetch('http://localhost:4000/dates/' + data.id, options).then((response) => response.json);
+		return fetch(this.url + data.id, options).then((response) => response.json);
 	}
 
 	addItem(item) {
@@ -66,9 +71,9 @@ class Todo extends React.Component {
 		if (!isDayFound) {
 			this.postData({
 				id: this.state.id + 1,
-				day: this.props.day,
-				month: this.props.month,
-				year: this.props.year,
+				day: this.props.date.day,
+				month: this.props.date.month,
+				year: this.props.date.year,
 				items: [ item ]
 			});
 		}
@@ -105,11 +110,19 @@ class Todo extends React.Component {
 			}
 		}
 
+		let holidayName = '';
+
+		holidays.forEach((holiday) => {
+			if (this.props.date.day === holiday.day && this.props.date.month === holiday.month) {
+				holidayName = holiday.name;
+			}
+		});
+
 		return (
 			<section className={b()}>
 				<header className={b('header')}>
 					<h1 className={b('date')}>
-						{this.props.day} {this.props.months[this.props.month]} {this.props.year}
+						{this.props.date.day} {this.props.monthList()[this.props.date.month]} {this.props.date.year} {holidayName}
 					</h1>
 				</header>
 				<main className={b('main')}>

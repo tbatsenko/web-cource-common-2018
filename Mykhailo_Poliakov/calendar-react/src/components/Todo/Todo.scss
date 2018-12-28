@@ -4,8 +4,6 @@
 	background: #0096cf;
 	width: 350px;
 	height: 450px;
-	border-top-right-radius: 5px;
-	border-bottom-right-radius: 5px;
 
 	&__header {
 		width: 350px;
@@ -32,6 +30,7 @@
 			display: none;
 		}
 	}
+
 	&__list {
 		margin: 0;
 		padding-left: 24px;
@@ -66,7 +65,6 @@
 		cursor: pointer;
 		float: right;
 	}
-
 	&__input {
 		background: #008ec4;
 		border: none;
@@ -75,10 +73,53 @@
 		width: 318px;
 		outline: none;
 		color: #ffffff;
-		border-bottom-right-radius: 5px;
 
 		&::placeholder {
 			color: #ffffff;
+		}
+	}
+}
+
+@media only screen and (max-width: 500px) {
+	.todo {
+		width: 200px;
+		height: 225px;
+
+		&__header {
+			width: 200px;
+			height: 35px;
+		}
+		&__date {
+			font-size: 9px;
+			margin-right: 8px;
+		}
+		&__input {
+			width: 183px;
+			padding: 8px;
+			font-size: 8px;
+		}
+		&__main {
+			padding: 8px;
+		}
+		&__list {
+			padding-left: 12px;
+		}
+
+		&__item {
+			height: 20px;
+			line-height: 20px;
+			font-size: 10px;
+			margin-bottom: 8px;
+		}
+
+		&__text {
+			margin-left: 4px;
+			width: 128px;
+		}
+
+		&__done {
+			font-size: 9px;
+			line-height: 20px;
 		}
 	}
 }
