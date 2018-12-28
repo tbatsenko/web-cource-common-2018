@@ -120,18 +120,6 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) *
 
 /***/ }),
 
-/***/ "./src/DataBase.js":
-/*!*************************!*\
-  !*** ./src/DataBase.js ***!
-  \*************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"default\", function() { return DataBase; });\nconst fetcher = __webpack_require__(/*! ./fetcher */ \"./src/fetcher.js\")\n\nclass DataBase {\n    constructor(url) {\n        this.url = url\n    }\n\n    normalizeSingle(data) {\n        data.date = new Date(data.date)\n        return data\n    }\n    normalize(data) {\n        data.forEach(el => this.normalizeSingle(el))\n        return data\n    }\n    dateToString(date) {\n        return date.toISOString().substring(0, 10)\n    }\n\n    async get(url) {\n        let resp = await fetcher.get(url)\n        return this.normalize(resp)\n    }\n    async getAll(id) {\n        return await this.get(this.url)\n    }\n    async getById(id) {\n        return await this.get(this.url + '/' + id)\n    }\n    async getByDate(date) {\n        return await this.get(\n            this.url + '?' + 'date=' + this.dateToString(date)\n        )\n    }\n\n    async createFromJson(data) {\n        let resp = await fetcher.post(this.url, data)\n        return this.normalizeSingle(resp)\n    }\n    async create(text, completed, date) {\n        return await this.createFromJson({\n            text: text,\n            completed: completed,\n            date: this.dateToString(date),\n        })\n    }\n\n    async update(data) {\n        let resp = await fetcher.put(this.url + '/' + data.id, {\n            text: data.text,\n            completed: data.completed,\n            date: this.dateToString(data.date),\n        })\n        return this.normalizeSingle(resp)\n    }\n\n    async delete(data) {\n        let resp = await fetcher.del(this.url + '/' + data.id)\n        return this.normalizeSingle(resp)\n    }\n}\n\n\n//# sourceURL=webpack:///./src/DataBase.js?");
-
-/***/ }),
-
 /***/ "./src/TodoItem.js":
 /*!*************************!*\
   !*** ./src/TodoItem.js ***!
@@ -156,6 +144,18 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) *
 
 /***/ }),
 
+/***/ "./src/TodoModel.js":
+/*!**************************!*\
+  !*** ./src/TodoModel.js ***!
+  \**************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"default\", function() { return TodoModel; });\nconst fetcher = __webpack_require__(/*! ./fetcher */ \"./src/fetcher.js\")\n\nclass TodoModel {\n    constructor(url) {\n        this.url = url\n    }\n\n    normalizeSingle(data) {\n        data.date = new Date(data.date)\n        return data\n    }\n    normalize(data) {\n        data.forEach(el => this.normalizeSingle(el))\n        return data\n    }\n    dateToString(date) {\n        return date.toISOString().substring(0, 10)\n    }\n\n    async get(url) {\n        let resp = await fetcher.get(url)\n        return this.normalize(resp)\n    }\n    async getAll(id) {\n        return await this.get(this.url)\n    }\n    async getById(id) {\n        return await this.get(this.url + '/' + id)\n    }\n    async getByDate(date) {\n        return await this.get(\n            this.url + '?' + 'date=' + this.dateToString(date)\n        )\n    }\n\n    async createFromJson(data) {\n        let resp = await fetcher.post(this.url, data)\n        return this.normalizeSingle(resp)\n    }\n    async create(text, completed, date) {\n        return await this.createFromJson({\n            text: text,\n            completed: completed,\n            date: this.dateToString(date),\n        })\n    }\n\n    async update(data) {\n        let resp = await fetcher.put(this.url + '/' + data.id, {\n            text: data.text,\n            completed: data.completed,\n            date: this.dateToString(data.date),\n        })\n        return this.normalizeSingle(resp)\n    }\n\n    async delete(data) {\n        let resp = await fetcher.del(this.url + '/' + data.id)\n        return this.normalizeSingle(resp)\n    }\n}\n\n\n//# sourceURL=webpack:///./src/TodoModel.js?");
+
+/***/ }),
+
 /***/ "./src/fetcher.js":
 /*!************************!*\
   !*** ./src/fetcher.js ***!
@@ -176,7 +176,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) *
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* WEBPACK VAR INJECTION */(function(process) {/* harmony import */ var _Calendar__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Calendar */ \"./src/Calendar.js\");\n/* harmony import */ var _DataBase__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./DataBase */ \"./src/DataBase.js\");\n/* harmony import */ var _TodoList__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./TodoList */ \"./src/TodoList.js\");\n\n\n\n\nconst url = process.env.API_URL || 'http://localhost:3000/'\n\nconst calendar = new _Calendar__WEBPACK_IMPORTED_MODULE_0__[\"default\"](document.getElementById('calendar'))\nconst dataBase = new _DataBase__WEBPACK_IMPORTED_MODULE_1__[\"default\"](url + 'todo')\nconst todoList = new _TodoList__WEBPACK_IMPORTED_MODULE_2__[\"default\"](document.getElementById('todo-list'), dataBase)\n\ncalendar.addDayEvent(() => {\n    todoList.setDate(calendar.curr_date)\n})\ntodoList.addOnAddEvent(() => {\n    let inputField = todoList.container.getElementsByClassName(\n        'todo-list--text-input'\n    )[0]\n    todoList.addTodo(inputField.value, calendar.curr_date)\n    inputField.value = ''\n})\n\n/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../node_modules/process/browser.js */ \"./node_modules/process/browser.js\")))\n\n//# sourceURL=webpack:///./src/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* WEBPACK VAR INJECTION */(function(process) {/* harmony import */ var _Calendar__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Calendar */ \"./src/Calendar.js\");\n/* harmony import */ var _TodoModel__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./TodoModel */ \"./src/TodoModel.js\");\n/* harmony import */ var _TodoList__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./TodoList */ \"./src/TodoList.js\");\n\n\n\n\nconst url = process.env.API_URL || 'http://localhost:3000/'\n\nconst calendar = new _Calendar__WEBPACK_IMPORTED_MODULE_0__[\"default\"](document.getElementById('calendar'))\nconst dataBase = new _TodoModel__WEBPACK_IMPORTED_MODULE_1__[\"default\"](url + 'todo')\nconst todoList = new _TodoList__WEBPACK_IMPORTED_MODULE_2__[\"default\"](document.getElementById('todo-list'), dataBase)\n\ncalendar.addDayEvent(() => {\n    todoList.setDate(calendar.curr_date)\n})\ntodoList.addOnAddEvent(() => {\n    let inputField = todoList.container.getElementsByClassName(\n        'todo-list--text-input'\n    )[0]\n    todoList.addTodo(inputField.value, calendar.curr_date)\n    inputField.value = ''\n})\n\n/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../node_modules/process/browser.js */ \"./node_modules/process/browser.js\")))\n\n//# sourceURL=webpack:///./src/index.js?");
 
 /***/ }),
 

@@ -1,11 +1,11 @@
 import Calendar from './Calendar'
-import DataBase from './DataBase'
+import TodoModel from './TodoModel'
 import TodoList from './TodoList'
 
 const url = process.env.API_URL || 'http://localhost:3000/'
 
 const calendar = new Calendar(document.getElementById('calendar'))
-const dataBase = new DataBase(url + 'todo')
+const dataBase = new TodoModel(url + 'todo')
 const todoList = new TodoList(document.getElementById('todo-list'), dataBase)
 
 calendar.addDayEvent(() => {
