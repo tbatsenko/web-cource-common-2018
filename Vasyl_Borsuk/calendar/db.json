@@ -25,24 +25,6 @@
       "id": 6
     },
     {
-      "text": "dsads",
-      "completed": true,
-      "date": "2018-12-06",
-      "id": 7
-    },
-    {
-      "text": "dsadsav",
-      "completed": false,
-      "date": "2018-12-06",
-      "id": 8
-    },
-    {
-      "text": "dsaasdsaa",
-      "completed": true,
-      "date": "2018-12-06",
-      "id": 9
-    },
-    {
       "text": "1",
       "completed": true,
       "date": "2018-12-10",
@@ -139,72 +121,6 @@
       "id": 26
     },
     {
-      "text": "asd",
-      "completed": false,
-      "date": "2018-12-06",
-      "id": 27
-    },
-    {
-      "text": "asd",
-      "completed": false,
-      "date": "2018-12-06",
-      "id": 28
-    },
-    {
-      "text": "sa",
-      "completed": false,
-      "date": "2018-12-06",
-      "id": 29
-    },
-    {
-      "text": "ds",
-      "completed": false,
-      "date": "2018-12-06",
-      "id": 30
-    },
-    {
-      "text": "a",
-      "completed": false,
-      "date": "2018-12-06",
-      "id": 31
-    },
-    {
-      "text": "a",
-      "completed": false,
-      "date": "2018-12-06",
-      "id": 32
-    },
-    {
-      "text": "",
-      "completed": false,
-      "date": "2018-12-06",
-      "id": 33
-    },
-    {
-      "text": "adg",
-      "completed": false,
-      "date": "2018-12-06",
-      "id": 34
-    },
-    {
-      "text": "",
-      "completed": false,
-      "date": "2018-12-06",
-      "id": 35
-    },
-    {
-      "text": "bv",
-      "completed": false,
-      "date": "2018-12-06",
-      "id": 36
-    },
-    {
-      "text": "",
-      "completed": false,
-      "date": "2018-12-06",
-      "id": 37
-    },
-    {
       "text": "c",
       "completed": false,
       "date": "2018-12-06",
@@ -241,34 +157,40 @@
       "id": 43
     },
     {
-      "text": "dfs",
+      "text": "222",
+      "completed": true,
+      "date": "2018-12-22",
+      "id": 45
+    },
+    {
+      "text": "fff",
       "completed": false,
       "date": "2018-12-22",
       "id": 46
     },
     {
-      "text": "fd",
+      "text": "ddd",
       "completed": true,
       "date": "2018-12-22",
       "id": 47
     },
     {
-      "text": "sf",
+      "text": "ccc",
       "completed": false,
-      "date": "2018-12-22",
+      "date": "2018-12-21",
+      "id": 48
+    },
+    {
+      "text": "asdsa",
+      "completed": false,
+      "date": "2019-01-03",
       "id": 49
     },
     {
-      "text": "asd",
-      "completed": true,
-      "date": "2018-12-28",
-      "id": 52
-    },
-    {
-      "text": "asd",
+      "text": "2222222",
       "completed": false,
-      "date": "2018-12-28",
-      "id": 53
+      "date": "2018-12-22",
+      "id": 50
     }
   ]
 }
