@@ -69,14 +69,15 @@ export default class App extends Component {
         if (this.areOverlapped(anti[i], anti[j])) {
           bumped.push(i)
           bumped.push(j)
-          anti[i].xMove *= -1
-          anti[i].yMove *= -1
-          anti[i].x += anti[i].xMove * 2
-          anti[i].y += anti[i].yMove * 2
-          anti[j].xMove *= -1
-          anti[j].yMove *= -1
-          anti[j].x += anti[j].xMove * 2
-          anti[j].y += anti[j].yMove * 2
+
+          let tempXMove = anti[j].xMove
+          let tempYMove = anti[j].yMove
+
+          anti[j].xMove = anti[i].xMove
+          anti[j].yMove = anti[i].yMove
+
+          anti[i].xMove = tempXMove
+          anti[i].yMove = tempYMove
         }
       }
 
