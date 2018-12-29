@@ -9,13 +9,9 @@ const b = BEM('calendar');
 const Calendar = ({ date, onPreviousMonth, onNextMonth, monthList, children, daysInMonth }) => (
   <section className={b()}>
     <header className={b('header')}>
-      <button aria-label="Previous month" className={b('button')} onClick={onPreviousMonth}>
-        &lt;
-      </button>
+      <button aria-label="Previous month" className={b('button', [ 'previous' ])} onClick={onPreviousMonth} />
       <h1 className={b('date')}>{monthList[date.month]}</h1>
-      <button aria-label="Next month" className={b('button')} onClick={onNextMonth}>
-        &gt;
-      </button>
+      <button aria-label="Next month" className={b('button', [ 'next' ])} onClick={onNextMonth} />
     </header>
 
     <CalendarBody children={children} date={date} daysInMonth={daysInMonth} />
@@ -23,20 +19,7 @@ const Calendar = ({ date, onPreviousMonth, onNextMonth, monthList, children, day
 );
 const enhancer = compose(
   withProps(() => ({
-    monthList: [
-      'January',
-      'February',
-      'March',
-      'April',
-      'May',
-      'June',
-      'July',
-      'August',
-      'September',
-      'October',
-      'November',
-      'December'
-    ],
+    monthList: [ 'January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December' ],
     daysInMonth: (year, month) => {
       return new Date(year, month + 1, 0).getDate();
     }

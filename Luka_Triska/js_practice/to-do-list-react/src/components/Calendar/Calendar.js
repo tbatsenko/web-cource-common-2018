@@ -17,13 +17,16 @@ export default class Calendar extends Component {
 
   }
 
+  highlightCurrent = () => {
+
+  };
+
   handleClick = (dateClicked) => {
     this.state.currDate.setDate(dateClicked);
     this.props.onClick(this.state.currDate);
   };
 
   render() {
-
 
     const firstDayOfMonth = new Date(this.state.currDate.getFullYear(), this.state.currDate.getMonth(), 1).getDay();
     const daysInMonth = new Date(this.state.currDate.getFullYear(), this.state.currDate.getMonth() + 1, 0).getDate();
@@ -40,8 +43,12 @@ export default class Calendar extends Component {
         cells.push(
           <td
             key={currCell}
-            onClick={() => this.handleClick(currCell)}
+            onClick={() => {
+              this.highlightCurrent();
+              return this.handleClick(currCell);
+            }}
             className={
+              (this.state.currDate.getDate() === currCell ? "current" : "") +
               "day-cell day-cell-" +
               (currCell === today && this.state.currDate.getMonth() === new Date().getMonth() ? "current" : "full")
             }

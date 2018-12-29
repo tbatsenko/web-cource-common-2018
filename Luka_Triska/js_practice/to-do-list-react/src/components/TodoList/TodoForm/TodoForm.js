@@ -2,8 +2,14 @@ import React, {Component} from 'react';
 import shortid from "shortid"
 
 export default class TodoForm extends Component {
-  state = {
-    text: ''
+
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      currDate: this.props.currDate,
+      text: ''
+    };
   };
 
   handleChange = (e) => {
@@ -12,11 +18,23 @@ export default class TodoForm extends Component {
     })
   };
 
+  // getDerivedStateFromProps() {
+  //   this.setState({
+  //     currDate: this.props.currDate
+  //   });
+  // };
+
+  // componentDidUpdate(prevProps, prevState, snapshot) {
+  //   this.setState({
+  //     currDate: this.props.currDate
+  //   });
+  // }
+
   handleSubmit = (e) => {
     e.preventDefault();
     this.props.onSubmit({
       id: shortid.generate(),
-      date: new Date(),
+      currDate: new Date(),
       text: this.state.text,
       completed: false
     });
