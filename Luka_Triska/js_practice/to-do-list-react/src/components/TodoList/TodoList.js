@@ -17,6 +17,7 @@ export default class TodoList extends Component {
 
 
   addTodo = (todo) => {
+    todo.currDate = this.props.currDate;
     this.setState({
       todos: [todo, ...this.state.todos]
     });
@@ -47,17 +48,18 @@ export default class TodoList extends Component {
     return (
       <section className="todo__container">
         <h2>TodoList</h2>
-        <TodoForm onSubmit={this.addTodo}/>
-        <ul className="main-todo-list" style={{paddingLeft: 0}}>
+        <TodoForm onSubmit={this.addTodo} currDate={this.state.currDate}/>
+        <ul className="main-todo-list">
           {this.state.todos.map(todo => (
             <Todo
               key={todo.id}
               toggleCompleted={() => this.toggleCompleted(todo.id)}
               onDelete={() => this.handleDeleteTodo(todo.id)}
-              todo={todo}
+              completed={todo.completed}
+              text={todo.text}
+              currDate={todo.currDate}
             />
           ))}
-
         </ul>
         <div>todos left: {this.state.todos.filter(todo => !todo.completed).length}</div>
       </section>
