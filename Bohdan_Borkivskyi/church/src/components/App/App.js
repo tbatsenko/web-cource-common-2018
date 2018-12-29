@@ -38,9 +38,9 @@ export default class App extends Component {
       if (anti[i].y <= 0 || anti[i].y >= 285) {
         anti[i].yMove *= -1
       }
-
-      anti[i].x += anti[i].xMove
-      anti[i].y += anti[i].yMove
+      let multiplier = anti.length <= 2 ? 3 : 1
+      anti[i].x += anti[i].xMove*multiplier
+      anti[i].y += anti[i].yMove*multiplier
 
       if (anti[i].x < 300) {
         anti[i].good = false
