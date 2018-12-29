@@ -2,36 +2,21 @@
 @import "../../css-utils/variables";
 
 .todo-list {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   color: $font-color;
   width: $todo-list-width;
   height: $todo-list-height;
-  margin: 0;
-  padding: 0;
   border: 1px solid $calendar-border-color;
 
   &--header {
-    display: flex;
-    flex-direction: row;
     width: $todo-list-header-width;
     height: $todo-list-header-height;
-    align-items: center;
-    justify-content: center;
-    padding: 0;
-    margin: 0;
-    border: none;
-    box-sizing: border-box;
-    flex-shrink: 0;
+    line-height: $todo-list-header-height;
+    text-align: center;
   }
 
   &--text-input, &--add-button {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    padding: 0;
+    display: inline-block;
+    height: 30px;
     margin: 0;
     background-color: transparent;
     color: $font-color;
@@ -41,54 +26,50 @@
 
   &--text-input {
     width: 80%;
-    height: 30px;
     padding: 0 8px 0 8px;
     border-radius: 4px 0 0 4px;
   }
 
   &--add-button {
-    min-width: 40px;
-    height: 30px;
+    width: 40px;
+    padding: 0;
     border-radius: 0 4px 4px 0;
   }
 
   &--list {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
     list-style-type: none;
     padding: 0;
     margin: 0;
-    width: 100%;
-    height: 100%;
+    height: $calendar-height - $calendar-header-height;
+    overflow-y: scroll;
   }
 
   &--item {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
+    margin: auto;
+    line-height: $todo-list-item-height;
     width: $todo-list-item-width;
     height: $todo-list-item-height;
   }
 
   &--item-text {
-    width: 100%;
+    display: inline-block;
+    line-height: $todo-list-item-height;
+    width: 80%;
   }
 
   &--item-checkbox, &--item-remove {
-    display: flex;
-    min-width: $todo-list-item-button-width;
+    display: inline-block;
+    width: $todo-list-item-button-width;
     height: $todo-list-item-button-height;
-    justify-content: center;
-    align-items: center;
     padding: 0;
     margin: 0;
     background-color: transparent;
     border: 1px solid $font-color;
-    color: $font-color;
+    color: inherit;
   }
 
   &--item-checkbox {
+    vertical-align: middle;
     margin-right: 5px;
   }
 

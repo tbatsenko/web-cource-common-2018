@@ -63,9 +63,9 @@ class Calendar extends Component{
             <article className={b()}>
                 <header className={b("header")}>
                     <button className={b("button")} onClick={() => this.prevMonth()}>{"<"}</button>
-                    <p className={b("month-name")}>
+                    <h2 className={b("month-name")}>
                         {date.toLocaleString("en-us", {month: "long", year: "numeric"})}
-                    </p>
+                    </h2>
                     <button className={b("button")} onClick={() => this.nextMonth()}>{">"}</button>
                 </header>
 
