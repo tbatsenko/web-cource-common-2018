@@ -39,8 +39,8 @@ export default class App extends Component {
         anti[i].yMove *= -1
       }
       let multiplier = anti.length <= 2 ? 3 : 1
-      anti[i].x += anti[i].xMove*multiplier
-      anti[i].y += anti[i].yMove*multiplier
+      anti[i].x += anti[i].xMove * multiplier
+      anti[i].y += anti[i].yMove * multiplier
 
       if (anti[i].x < 300) {
         anti[i].good = false
@@ -131,29 +131,35 @@ export default class App extends Component {
   }
 
   static calculateCristianPosition(index) {
-    let baselineX = 450
+    let interval = 20
+    let baselineX = 480
     let baselineY = 150
     let groupNumber = 0
     let inGroupNumber = 0
-    let groupCount = 1
+    let groupCount = [1, 2, 3, 4, 5, 6, 7]
+    let groupCountIndex = 0
     let iter = 0
     while (iter !== index) {
-      if (inGroupNumber === groupCount) {
-        groupCount += 2
+      if (inGroupNumber === groupCount[groupCountIndex]) {
+        groupCountIndex += 1
         inGroupNumber = 0
         groupNumber += 1
       }
       inGroupNumber += 1
       iter += 1
-      if (inGroupNumber === groupCount) {
-        groupCount += 2
+      if (inGroupNumber === groupCount[groupCountIndex]) {
+        groupCountIndex += 1
         inGroupNumber = 0
         groupNumber += 1
       }
     }
-    let calculatedX = baselineX - groupNumber * 20
+    let calculatedX = baselineX - groupNumber * interval
+    if (groupCount[groupCountIndex] % 2 === 0) {
+      baselineY += interval / 2
+    }
     let calculatedY =
-      baselineY - (Math.floor(groupCount / 2) - inGroupNumber) * 20
+      baselineY -
+      (Math.floor(groupCount[groupCountIndex] / 2) - inGroupNumber) * interval
     return [calculatedX, calculatedY]
   }
 
