@@ -1,4 +1,4 @@
-.todocalendar {
+.app {
   display: flex;
   width: 100%;
   align-items: center;
@@ -6,12 +6,12 @@
 }
 
 @media only screen and (max-width: 860px) {
-  .todocalendar {
+  .app {
     flex-direction: column;
   }
 }
 @media only screen and (min-width: 860px) {
-  .todocalendar {
+  .app {
     height: 100vh;
   }
 }

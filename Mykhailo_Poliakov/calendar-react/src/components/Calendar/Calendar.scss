@@ -45,6 +45,14 @@
     list-style-type: none;
     padding: 0;
   }
+
+  &__cell {
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    color: #ffffff;
+  }
 }
 
 @media only screen and (max-width: 500px) {
@@ -64,6 +72,12 @@
     }
     &__row {
       margin: 6px;
+    }
+    &__cell {
+      width: 20px;
+      height: 20px;
+      line-height: 20px;
+      font-size: 7px;
     }
   }
 }
