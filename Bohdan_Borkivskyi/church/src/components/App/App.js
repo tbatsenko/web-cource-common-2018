@@ -127,16 +127,44 @@ export default class App extends Component {
     cristi = cristi.filter(
       cristian => !punished.map(pair => pair[0]).includes(cristian.id)
     )
+
+    for (let i = 0; i < cristi.length; ++i) {
+      cristi[i].id = i
+      cristi[i].x = App.calculateCristianPosition(i, cristi.length)[0]
+      cristi[i].y = App.calculateCristianPosition(i, cristi.length)[1]
+    }
+
     this.setState({ antichrists: anti, cristians: cristi })
   }
 
-  static calculateCristianPosition(index) {
+  static generatePyramidStructure(total) {
+    let steps = [1]
+    while (steps.reduce((a, b) => a + b, 0) < total) {
+      let next = steps[steps.length - 1] + 1
+      if (steps.reduce((a, b) => a + b, 0) + next <= total) {
+        steps.push(next)
+      } else {
+        break
+      }
+    }
+    let rest = total - steps.reduce((a, b) => a + b, 0)
+
+    if (rest > 0) {
+      steps.push(rest)
+    }
+
+    steps.sort((a, b) => a - b)
+
+    return steps
+  }
+
+  static calculateCristianPosition(index, total) {
     let interval = 20
     let baselineX = 480
     let baselineY = 150
     let groupNumber = 0
     let inGroupNumber = 0
-    let groupCount = [1, 2, 3, 4, 5, 6, 7]
+    let groupCount = App.generatePyramidStructure(total)
     let groupCountIndex = 0
     let iter = 0
     while (iter !== index) {
@@ -154,12 +182,19 @@ export default class App extends Component {
       }
     }
     let calculatedX = baselineX - groupNumber * interval
+    let extraShift = 0
     if (groupCount[groupCountIndex] % 2 === 0) {
-      baselineY += interval / 2
+      extraShift = Number(interval / 2)
     }
+    if (groupCount[groupCountIndex] === undefined) {
+      groupCountIndex -= 1
+    }
+
     let calculatedY =
-      baselineY -
+      baselineY +
+      extraShift -
       (Math.floor(groupCount[groupCountIndex] / 2) - inGroupNumber) * interval
+    // console.log(calculatedX, calculatedY)
     return [calculatedX, calculatedY]
   }
 
@@ -188,8 +223,8 @@ export default class App extends Component {
     for (let i = 0; i < n; ++i) {
       let cristian = {
         id: i,
-        x: App.calculateCristianPosition(i)[0],
-        y: App.calculateCristianPosition(i)[1],
+        x: App.calculateCristianPosition(i, n)[0],
+        y: App.calculateCristianPosition(i, n)[1],
       }
       cristi.push(cristian)
     }
@@ -266,9 +301,14 @@ export default class App extends Component {
 
     cristi.push({
       id: cristi[cristi.length - 1].id + 1,
-      x: App.calculateCristianPosition(cristi[cristi.length - 1].id + 1)[0],
-      y: App.calculateCristianPosition(cristi[cristi.length - 1].id + 1)[1],
     })
+
+    for (let i = 0; i < cristi.length; ++i) {
+      cristi[i].id = i
+      cristi[i].x = App.calculateCristianPosition(i, cristi.length)[0]
+      cristi[i].y = App.calculateCristianPosition(i, cristi.length)[1]
+    }
+
     this.setState({ antichrists: anti, cristians: cristi })
   }
 }
