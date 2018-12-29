@@ -66,7 +66,13 @@ export default class App extends Component {
         if (i === j) {
           continue
         }
-        if (App.areOverlapped(anti[i], anti[j])) {
+        if (App.areVeryOverlapped(anti[i], anti[j])) {
+          if (anti[i].xMove < anti[j].xMove) {
+            anti[i].x += 15
+          } else {
+            anti[j].x += 15
+          }
+        } else if (App.areOverlapped(anti[i], anti[j])) {
           bumped.push(i)
           bumped.push(j)
 
@@ -86,7 +92,9 @@ export default class App extends Component {
       }
       for (let j = 0; j < this.state.cristians.length; j++) {
         let cristi = this.state.cristians[j]
-        if (App.areOverlapped(anti[i], cristi)) {
+        if (App.areVeryOverlapped(anti[i], cristi)) {
+          anti[i].x -= 15
+        } else if (App.areOverlapped(anti[i], cristi)) {
           if (!anti[i].good) {
             punished.push([cristi.id, anti[i].id])
           }
@@ -229,6 +237,16 @@ export default class App extends Component {
       cristi.push(cristian)
     }
     this.setState({ cristians: cristi })
+  }
+
+  static areVeryOverlapped(instance1, instance2) {
+    return (
+      Math.pow(
+        Math.pow(instance1.x - instance2.x, 2) +
+          Math.pow(instance1.y - instance2.y, 2),
+        0.5
+      ) < 13
+    )
   }
 
   static areOverlapped(instance1, instance2) {
