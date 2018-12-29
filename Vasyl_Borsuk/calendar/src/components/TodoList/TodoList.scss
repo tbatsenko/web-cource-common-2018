@@ -28,6 +28,10 @@
     width: 80%;
     padding: 0 8px 0 8px;
     border-radius: 4px 0 0 4px;
+
+    &:focus {
+      border-color: $selected-font-color;
+    }
   }
 
   &--add-button {
