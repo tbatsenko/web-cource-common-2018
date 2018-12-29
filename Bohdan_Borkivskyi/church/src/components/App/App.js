@@ -81,13 +81,15 @@ export default class App extends Component {
         }
       }
 
-      if (this.state.cristians === null || anti[i].good) {
+      if (this.state.cristians === null) {
         continue
       }
       for (let j = 0; j < this.state.cristians.length; j++) {
         let cristi = this.state.cristians[j]
         if (this.areOverlapped(anti[i], cristi)) {
-          punished.push([cristi.id, anti[i].id])
+          if (!anti[i].good) {
+            punished.push([cristi.id, anti[i].id])
+          }
           punishment = true
         }
       }
