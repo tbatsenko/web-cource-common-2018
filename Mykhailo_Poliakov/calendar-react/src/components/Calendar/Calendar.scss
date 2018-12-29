@@ -1,58 +1,69 @@
 .calendar {
-	background: #00a8e8;
-	width: 400px;
-	height: 450px;
-	border-top-left-radius: 5px;
-	border-bottom-left-radius: 5px;
-	padding: 24px;
+  background: #00a8e8;
+  width: 400px;
+  height: 450px;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  padding: 24px;
 
-	&__header {
-		display: flex;
-		justify-content: space-around;
-		color: #ffffff;
-		height: 70px;
-	}
+  &__header {
+    display: flex;
+    justify-content: space-around;
+    color: #ffffff;
+    height: 70px;
+  }
 
-	&__button {
-		font-family: 'Material Icons';
-		font-size: 24px;
-		background: transparent;
-		color: #ffffff;
-		border: 0;
-		outline: 0;
-		cursor: pointer;
-	}
+  &__button {
+    font-size: 24px;
+    background: transparent;
+    color: #ffffff;
+    border: 0;
+    outline: 0;
+    cursor: pointer;
+    font-weight: bold;
+  }
 
-	&__button {
-		font-family: 'Material Icons';
-		font-size: 24px;
-		background: transparent;
-		color: #ffffff;
-		border: 0;
-		outline: 0;
-		cursor: pointer;
-	}
+  &__button {
+    font-family: 'Material Icons';
+    font-size: 24px;
+    background: transparent;
+    color: #ffffff;
+    border: 0;
+    outline: 0;
+    cursor: pointer;
+  }
 
-	&__date {
-		width: 250px;
-		text-align: center;
-	}
+  &__date {
+    width: 250px;
+    text-align: center;
+  }
+
+  &__row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    list-style-type: none;
+    padding: 0;
+  }
 }
 
 @media only screen and (max-width: 500px) {
-	.calendar {
-		width: 200px;
-		height: 225px;
-		padding: 4px;
-		&__header {
-			height: 35px;
-		}
-		&__button {
-			font-size: 12px;
-		}
-		&__date {
-			width: 100px;
-			font-size: 12px;
-		}
-	}
+  .calendar {
+    width: 200px;
+    height: 225px;
+    padding: 4px;
+    &__header {
+      height: 35px;
+    }
+    &__button {
+      font-size: 12px;
+    }
+    &__date {
+      width: 100px;
+      font-size: 12px;
+    }
+    &__row {
+      margin: 6px;
+    }
+  }
 }
