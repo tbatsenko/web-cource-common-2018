@@ -50,12 +50,13 @@ const enhancer = compose(
         (newDay > 0 && newDay <= new Date(newYear, newMonth + 1, 0).getDate())
       ) {
         setDate({ year: newYear, month: newMonth, day: newDay });
-      } else
+      } else {
         setDate({
           year: new Date().getFullYear(),
           month: new Date().getMonth(),
           day: new Date().getDate()
         });
+      }
       window.addEventListener('popstate', onControlsClick);
     }
   })
