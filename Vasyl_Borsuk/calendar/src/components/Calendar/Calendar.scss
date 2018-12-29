@@ -6,7 +6,6 @@
   color: $font-color;
   width: $calendar-width;
   height: $calendar-height;
-  border: 1px solid $calendar-border-color;
 
   &--header {
     width: $calendar-header-width;
@@ -44,7 +43,6 @@
     background: transparent;
     border: none;
     color: inherit;
-    box-sizing: content-box;
   }
 
   &--button {
@@ -72,6 +70,8 @@
 
   &--day {
     cursor: pointer;
+    text-decoration: none;
+    box-sizing: border-box;
 
     &:hover {
       background-color: $hover-color;

@@ -4,8 +4,6 @@
 .todo-list {
   color: $font-color;
   width: $todo-list-width;
-  height: $todo-list-height;
-  border: 1px solid $calendar-border-color;
 
   &--header {
     width: $todo-list-header-width;
@@ -45,7 +43,6 @@
     padding: 0;
     margin: 0;
     height: $calendar-height - $calendar-header-height;
-    overflow-y: scroll;
   }
 
   &--item {
