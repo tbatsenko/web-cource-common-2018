@@ -2,35 +2,28 @@
   background: #00a8e8;
   width: 400px;
   height: 450px;
-  border-top-left-radius: 5px;
-  border-bottom-left-radius: 5px;
   padding: 24px;
 
   &__header {
     display: flex;
     justify-content: space-around;
+    align-items: center;
     color: #ffffff;
     height: 70px;
   }
 
   &__button {
-    font-size: 24px;
-    background: transparent;
-    color: #ffffff;
     border: 0;
     outline: 0;
     cursor: pointer;
-    font-weight: bold;
-  }
-
-  &__button {
-    font-family: 'Material Icons';
-    font-size: 24px;
-    background: transparent;
-    color: #ffffff;
-    border: 0;
-    outline: 0;
-    cursor: pointer;
+    width: 24px;
+    height: 24px;
+    &--next {
+      background: url('next.svg');
+    }
+    &--previous {
+      background: url('previous.svg');
+    }
   }
 
   &__date {
@@ -45,6 +38,14 @@
     list-style-type: none;
     padding: 0;
   }
+
+  &__cell {
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    color: #ffffff;
+  }
 }
 
 @media only screen and (max-width: 500px) {
@@ -55,15 +56,19 @@
     &__header {
       height: 35px;
     }
-    &__button {
-      font-size: 12px;
-    }
+
     &__date {
       width: 100px;
       font-size: 12px;
     }
     &__row {
       margin: 6px;
+    }
+    &__cell {
+      width: 20px;
+      height: 20px;
+      line-height: 20px;
+      font-size: 7px;
     }
   }
 }

@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.scss';
-import TodoCalendar from './components/TodoCalendar/TodoCalendar';
+import App from './components/App/App';
 
-ReactDOM.render(<TodoCalendar />, document.getElementById('root'));
+ReactDOM.render(<App />, document.getElementById('root'));

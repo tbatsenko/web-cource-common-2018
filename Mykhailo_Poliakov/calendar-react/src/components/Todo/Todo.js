@@ -44,6 +44,20 @@ const enhancer = compose(
   withState('id', 'setId', 1),
   withProps(() => {
     return {
+      monthList: [
+        'January',
+        'February',
+        'March',
+        'April',
+        'May',
+        'June',
+        'July',
+        'August',
+        'September',
+        'October',
+        'November',
+        'December'
+      ],
       post: async (data) => {
         let options = {
           method: 'POST',
