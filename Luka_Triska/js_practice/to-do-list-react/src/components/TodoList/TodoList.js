@@ -6,11 +6,15 @@ import './TodoList.css'
 
 export default class TodoList extends Component {
 
+  constructor(props) {
+    super(props);
 
-  state = {
-    todos: [],
-    currDate: new Date()
-  };
+    this.state = {
+      todos: [],
+      currDate: this.props.currDate,
+    };
+  }
+
 
   addTodo = (todo) => {
     this.setState({

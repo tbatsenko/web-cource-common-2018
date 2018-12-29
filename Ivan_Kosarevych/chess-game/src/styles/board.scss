@@ -1,0 +1,39 @@
+.board{
+  &__row:after{
+    margin: auto;
+    clear: both;
+    content: "";
+    display: table;
+  }
+  &__square {
+    //background: #fff;
+    border: 1px solid #999;
+    float: left;
+    width: 75px;
+    height: 75px;
+
+    font-size: 24px;
+    font-weight: bold;
+    line-height: 34px;
+
+    margin-right: -1px;
+    margin-top: -1px;
+    padding: 0;
+
+    text-align: center;
+
+    &--white{
+      background-color: #a2a6a7;
+    }
+    &--black{
+      background-color: #4a5758;
+    }
+    &--figure-white{
+      color: #dcdcdc;
+    }
+    &--figure-black{
+      color: black;
+    }
+  }
+
+}
