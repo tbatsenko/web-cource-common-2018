@@ -1,34 +1,34 @@
 {
-	"holidays": [
-		{
-			"day": 1,
-			"month": 0,
-			"name": "New Year's Day"
-		},
-		{
-			"day": 6,
-			"month": 0,
-			"name": "Christmas Eve"
-		},
-		{
-			"day": 7,
-			"month": 0,
-			"name": "Christmas Day"
-		},
-		{
-			"day": 24,
-			"month": 11,
-			"name": "Christmas Eve"
-		},
-		{
-			"day": 25,
-			"month": 11,
-			"name": "Christmas Day"
-		},
-		{
-			"day": 31,
-			"month": 11,
-			"name": "New Year's Eve"
-		}
-	]
+  "holidays": [
+    {
+      "day": 1,
+      "month": 0,
+      "name": "New Year's Day"
+    },
+    {
+      "day": 6,
+      "month": 0,
+      "name": "Christmas Eve"
+    },
+    {
+      "day": 7,
+      "month": 0,
+      "name": "Christmas Day"
+    },
+    {
+      "day": 24,
+      "month": 11,
+      "name": "Christmas Eve"
+    },
+    {
+      "day": 25,
+      "month": 11,
+      "name": "Christmas Day"
+    },
+    {
+      "day": 31,
+      "month": 11,
+      "name": "New Year's Eve"
+    }
+  ]
 }
