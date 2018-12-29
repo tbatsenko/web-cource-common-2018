@@ -12,16 +12,14 @@ export default class Calendar extends Component {
 
     this.state = {
       currDate: new Date(),
-      // currDate: null
     };
 
 
   }
 
-  handleClick = () => {
+  handleClick = (dateClicked) => {
+    this.state.currDate.setDate(dateClicked);
     this.props.onClick(this.state.currDate);
-    // this.state.currDate.setDate(this.state.currDate);
-    console.log(this.state.currDate);
   };
 
   render() {
@@ -34,28 +32,22 @@ export default class Calendar extends Component {
     let cells = [];
     let emptyDaysAtEnd = 7 - (firstDayOfMonth - 1 + daysInMonth) % 7;
     for (let i = 1; i <= firstDayOfMonth + daysInMonth + emptyDaysAtEnd; i++) {
+      let currCell = i - firstDayOfMonth;
       if (i < firstDayOfMonth || i > daysInMonth + firstDayOfMonth) {
-        cells.push(<td key={i - firstDayOfMonth}
-                       className="day-cell-empty">{""}</td>)
-      } else if (i - firstDayOfMonth === today && this.state.currDate.getMonth() === new Date().getMonth()) {
-        cells.push(<td
-          onClick={() => {
-            this.handleClick();
-            this.state.currDate.setDate(i - firstDayOfMonth);
-            return this.setState({currDate: this.state.currDate});
-          }}
-          key={i - firstDayOfMonth}
-          className="day-cell day-cell-current">{i - firstDayOfMonth}</td>)
-      } else if (i - firstDayOfMonth === 0) {
+        cells.push(<td key={currCell} className="day-cell-empty">{""}</td>)
+      } else if (currCell === 0) {
       } else {
-        cells.push(<td
-          onClick={() => {
-            this.handleClick();
-            this.state.currDate.setDate(i - firstDayOfMonth);
-            return this.setState({currDate: this.state.currDate});
-          }}
-          key={i - firstDayOfMonth}
-          className="day-cell day-cell-full">{i - firstDayOfMonth}</td>)
+        cells.push(
+          <td
+            key={currCell}
+            onClick={() => this.handleClick(currCell)}
+            className={
+              "day-cell day-cell-" +
+              (currCell === today && this.state.currDate.getMonth() === new Date().getMonth() ? "current" : "full")
+            }
+          >{currCell}
+          </td>
+        )
       }
     }
 
