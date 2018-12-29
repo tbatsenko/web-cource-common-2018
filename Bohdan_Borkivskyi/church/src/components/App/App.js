@@ -28,6 +28,7 @@ export default class App extends Component {
       return { ...obj }
     })
     let punished = []
+    let bumped = []
     for (let i = 0; i < anti.length; ++i) {
       let punishment = false
       if (anti[i].x <= 0 || anti[i].x >= 485) {
@@ -57,6 +58,31 @@ export default class App extends Component {
       if (anti[i].y > 285) {
         anti[i].y = 285
       }
+
+      if(bumped.includes(i)){continue}
+      for (let j = 0; j < this.state.antichrists.length; j++) {
+        if (i === j) {
+          continue
+        }
+        if (
+          anti[i].x + 15 >= anti[j].x &&
+          anti[i].x - 15 <= anti[j].x &&
+          anti[i].y + 15 >= anti[j].y &&
+          anti[i].y - 15 <= anti[j].y
+        ) {
+          bumped.push(i)
+          bumped.push(j)
+          anti[i].xMove *= -1
+          anti[i].yMove *= -1
+          anti[i].x += anti[i].xMove*2
+          anti[i].y += anti[i].yMove*2
+          anti[j].xMove *= -1
+          anti[j].yMove *= -1
+          anti[j].x += anti[j].xMove*2
+          anti[j].y += anti[j].yMove*2
+        }
+      }
+
       if (this.state.cristians === null || anti[i].good) {
         continue
       }
