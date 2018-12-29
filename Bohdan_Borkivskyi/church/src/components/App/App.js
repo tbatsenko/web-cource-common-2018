@@ -87,7 +87,7 @@ export default class App extends Component {
       for (let j = 0; j < this.state.cristians.length; j++) {
         let cristi = this.state.cristians[j]
         if (this.areOverlapped(anti[i], cristi)) {
-          punished.push(cristi.id)
+          punished.push([cristi.id, anti[i].id])
           punishment = true
         }
       }
@@ -99,22 +99,32 @@ export default class App extends Component {
       }
     }
 
-    let newAntichrists = cristi
-      .filter(cristian => punished.includes(cristian.id))
-      .map((cristian, index) => {
-        return {
-          id: anti[anti.length - 1].id + index + 1,
-          x: cristian.x,
-          y: cristian.y,
-          xMove: -Math.floor(Math.random() * 2 + 1),
-          yMove: Math.floor(Math.random() * 2 + 1),
-          good: true,
-        }
+    let newAntichrists = []
+    for (let i = 0; i < punished.length; ++i) {
+      let cristiId = punished[i][0]
+      let cristi = this.state.cristians.filter(
+        cristi => cristi.id === cristiId
+      )[0]
+      let antiId = punished[i][1]
+      let antic = this.state.antichrists.filter(
+        antichrist => antichrist.id === antiId
+      )[0]
+      newAntichrists.push({
+        id: anti[anti.length - 1].id + i + 1,
+        x: cristi.x,
+        y: cristi.y,
+        xMove: antic.xMove,
+        yMove: antic.yMove,
+        good: true,
       })
+    }
+
     for (let i = 0; i < newAntichrists.length; ++i) {
       anti.push(newAntichrists[i])
     }
-    cristi = cristi.filter(cristian => !punished.includes(cristian.id))
+    cristi = cristi.filter(
+      cristian => !punished.map(pair => pair[0]).includes(cristian.id)
+    )
     this.setState({ antichrists: anti, cristians: cristi })
   }
 
