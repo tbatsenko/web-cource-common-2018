@@ -1,0 +1,78 @@
+@import "../../css-utils/colors";
+@import "../../css-utils/variables";
+
+.todo-list {
+  color: $font-color;
+  width: $todo-list-width;
+  height: $todo-list-height;
+  border: 1px solid $calendar-border-color;
+
+  &--header {
+    width: $todo-list-header-width;
+    height: $todo-list-header-height;
+    line-height: $todo-list-header-height;
+    text-align: center;
+  }
+
+  &--text-input, &--add-button {
+    display: inline-block;
+    height: 30px;
+    margin: 0;
+    background-color: transparent;
+    color: $font-color;
+    border: 1px solid $font-color;
+    box-sizing: border-box;
+  }
+
+  &--text-input {
+    width: 80%;
+    padding: 0 8px 0 8px;
+    border-radius: 4px 0 0 4px;
+  }
+
+  &--add-button {
+    width: 40px;
+    padding: 0;
+    border-radius: 0 4px 4px 0;
+  }
+
+  &--list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    height: $calendar-height - $calendar-header-height;
+    overflow-y: scroll;
+  }
+
+  &--item {
+    margin: auto;
+    line-height: $todo-list-item-height;
+    width: $todo-list-item-width;
+    height: $todo-list-item-height;
+  }
+
+  &--item-text {
+    display: inline-block;
+    line-height: $todo-list-item-height;
+    width: 80%;
+  }
+
+  &--item-checkbox, &--item-remove {
+    display: inline-block;
+    width: $todo-list-item-button-width;
+    height: $todo-list-item-button-height;
+    padding: 0;
+    margin: 0;
+    background-color: transparent;
+    border: 1px solid $font-color;
+    color: inherit;
+  }
+
+  &--item-checkbox {
+    vertical-align: middle;
+    margin-right: 5px;
+  }
+
+  &--item-remove {
+  }
+}
