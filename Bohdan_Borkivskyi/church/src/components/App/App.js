@@ -66,7 +66,7 @@ export default class App extends Component {
         if (i === j) {
           continue
         }
-        if (this.areOverlapped(anti[i], anti[j])) {
+        if (App.areOverlapped(anti[i], anti[j])) {
           bumped.push(i)
           bumped.push(j)
 
@@ -86,7 +86,7 @@ export default class App extends Component {
       }
       for (let j = 0; j < this.state.cristians.length; j++) {
         let cristi = this.state.cristians[j]
-        if (this.areOverlapped(anti[i], cristi)) {
+        if (App.areOverlapped(anti[i], cristi)) {
           if (!anti[i].good) {
             punished.push([cristi.id, anti[i].id])
           }
@@ -130,7 +130,7 @@ export default class App extends Component {
     this.setState({ antichrists: anti, cristians: cristi })
   }
 
-  calculateCristianPosition(index) {
+  static calculateCristianPosition(index) {
     let baselineX = 450
     let baselineY = 150
     let groupNumber = 0
@@ -182,15 +182,15 @@ export default class App extends Component {
     for (let i = 0; i < n; ++i) {
       let cristian = {
         id: i,
-        x: this.calculateCristianPosition(i)[0],
-        y: this.calculateCristianPosition(i)[1],
+        x: App.calculateCristianPosition(i)[0],
+        y: App.calculateCristianPosition(i)[1],
       }
       cristi.push(cristian)
     }
     this.setState({ cristians: cristi })
   }
 
-  areOverlapped(instance1, instance2) {
+  static areOverlapped(instance1, instance2) {
     return (
       Math.pow(
         Math.pow(instance1.x - instance2.x, 2) +
@@ -260,8 +260,8 @@ export default class App extends Component {
 
     cristi.push({
       id: cristi[cristi.length - 1].id + 1,
-      x: this.calculateCristianPosition(cristi[cristi.length - 1].id + 1)[0],
-      y: this.calculateCristianPosition(cristi[cristi.length - 1].id + 1)[1],
+      x: App.calculateCristianPosition(cristi[cristi.length - 1].id + 1)[0],
+      y: App.calculateCristianPosition(cristi[cristi.length - 1].id + 1)[1],
     })
     this.setState({ antichrists: anti, cristians: cristi })
   }
