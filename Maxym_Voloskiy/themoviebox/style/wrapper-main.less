@@ -1,0 +1,126 @@
+.wrapper-main{
+  padding: 70px 5%;
+
+  hr{
+    margin: 0;
+  }
+
+  &__nav{
+    display: flex;
+    justify-content: space-between;
+
+    &-placeholder{
+
+      ul{
+        list-style: none;
+        display: flex;
+        color: #80818a;
+        padding: 0;
+        margin: 0;
+        text-align: center;
+
+        li{
+          padding-bottom: 20px;
+          font-size: 20px;
+          transition: all 0.2s ease;
+        }
+
+        a {
+          text-decoration: none;
+          color: #80818a;
+          transition: all 0.2s ease;
+        }
+
+        li:hover{
+          a{
+            color: #ff0079;
+          }
+          cursor: pointer;
+          padding-bottom: 18px;
+          border-bottom: 2px solid #ff0079;
+        }
+      }
+
+      .list-navigation{
+        li{
+          width: 150px;
+
+          .info{
+            display: none;
+          }
+        }
+      }
+
+      .list-view{
+        li{
+          width: 70px;
+        }
+      }
+    }
+  }
+
+
+  &__items{
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+
+    &-item{
+      width: 350px;
+      height: 500px;
+      background-color: #ffffff;
+      margin: 35px 20px;
+
+      .image{
+        width: 100%;
+        height: 400px;
+        background: no-repeat center;
+        background-size: cover;
+        position: relative;
+
+        .year{
+          position: absolute;
+          color: #babbc3;
+          bottom: 0;
+          margin: 15px;
+          font-size: 20px;
+        }
+      }
+
+      .description{
+        height: 100px;
+        display: flex;
+        justify-content: space-around;
+
+        &__name{
+          margin: 20px;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+
+          &-name{
+            color: #494c62;
+            font-size: 22px;
+          }
+
+          &-genres{
+            font-size: 16px;
+            color: #80818a;
+            opacity: 0.5;
+          }
+        }
+
+        .rating{
+          height: 25px;
+          margin: auto 0;
+          font-size: 22px;
+          color: #ff0079;
+          border: 1px solid #ff0079;
+          padding: 5px;
+        }
+      }
+    }
+  }
+
+}

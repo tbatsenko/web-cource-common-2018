@@ -1,0 +1,134 @@
+{{#header}}
+<header class="wrapper-header" style="background: url({{image}}) 0;">
+    <div class="wrapper-header__up">
+        <div class="wrapper-header__up-placeholder">
+            <span>THEMOVIE<b>BOX</b></span>
+        </div>
+        <div class="wrapper-header__up-placeholder">
+            <ul>
+                <li id="search">Search</li>
+                <li id="login"><a href="#">Login</a></li>
+                <li id="sign-up"><a href="#">Sign Up</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="wrapper-header__down">
+        <div class="wrapper-header__left">
+            <div class="wrapper-header__left-placeholder">
+                <span class="film-name">{{name}}</span>
+                {{#info}}
+                <ul class="info">
+                    <li>{{genre-1}}</li>
+                    <li>{{genre-2}}</li>
+                    <li>{{genre-3}}</li>
+                    <li> | </li>
+                    <li>Duration: {{duration}}</li>
+                </ul>
+                {{/info}}
+            </div>
+            <div class="wrapper-header__left-placeholder">
+                <ul class="buttons">
+                    <li id="watch-movie">Watch movie</li>
+                    <li id="view-info">View info</li>
+                    <li id="add-to-wishlist">+ Add to wishlist</li>
+                </ul>
+            </div>
+        </div>
+        <div class="wrapper-header__right">
+            <p>Rating <span>based on 3.546 reviews</span></p>
+            <div class="rating">
+                <div class="star-ratings-css">
+                    <div class="star-ratings-css-top" style="width: 68%">
+                        <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+                    </div>
+                    <div class="star-ratings-css-bottom">
+                        <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+                    </div>
+                </div>
+                <span class="rating-number">{{rating}}</span>
+            </div>
+
+        </div>
+    </div>
+</header>
+{{/header}}
+
+{{#main}}
+<main class="wrapper-main">
+    <nav class="wrapper-main__nav">
+        <div class="wrapper-main__nav-placeholder">
+            <ul class="list-navigation">
+                <li><a href="#">Trending</a></li>
+                <li><a href="#">Top Rated</a></li>
+                <li><a href="#">New Arrivals</a></li>
+                <li>
+                    <a href="#">Genre</a>
+                    <ul class="info">
+                        <li><a href="#">Genre 1</a></li>
+                        <li><a href="#">Genre 2</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <div class="wrapper-main__nav-placeholder">
+            <ul class="list-view">
+                <li><a href=""><span class="blocks">Blocks</span></a></li>
+                <li><a href=""><span class="list">List</span></a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <hr>
+
+    <div class="wrapper-main__items">
+    {{#films}}
+        <div class="wrapper-main__items-item">
+            <div class="image" style="background-image: url({{image}});">
+                <span class="year">{{year}}</span>
+            </div>
+            <div class="description">
+                <div class="description__name">
+                    <span class="description__name-name">{{name}}</span>
+                    {{#info}}
+                    <span class="description__name-genres">{{genre-1}}, {{genre-2}}, {{genre-3}}</span>
+                    {{/info}}
+                </div>
+                <span class="rating">{{rating}}</span>
+            </div>
+        </div>
+    {{/films}}
+    </div>
+    <footer class="wrapper-main__footer"></footer>
+</main>
+{{/main}}
+
+<footer class="wrapper-footer">
+    <nav class="wrapper-footer__nav">
+        <div class="wrapper-footer__nav-placeholder">
+            <span>THEMOVIE<b>BOX</b></span>
+        </div>
+        <div class="wrapper-footer__nav-placeholder">
+            <ul class="footer-menu">
+                <li><a href="#">About</a></li>
+                <li><a href="#">Movies</a></li>
+                <li><a href="#">Ratings</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+    <hr>
+    <div class="wrapper-footer__down">
+        <div class="wrapper-footer__down-placeholder">
+            <span id="copyrights">Designed by Milan Houter. All rights reserved.</span>
+        </div>
+        <div class="wrapper-footer__down-placeholder">
+            <ul class="social">
+                <li><a href=""><span id="facebook">fb</span></a></li>
+                <li><a href=""><span id="pinterest">pt</span></a></li>
+                <li><a href=""><span id="twitter">tw</span></a></li>
+                <li><a href=""><span id="linkedin">in</span></a></li>
+            </ul>
+        </div>
+    </div>
+</footer>
