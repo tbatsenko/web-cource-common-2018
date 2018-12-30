@@ -1,119 +1,112 @@
 import React from 'react'
-import { range } from 'ramda'
+import { range, reverse, splitEvery } from 'ramda'
+
+import { changeMonth } from '../../helpers/js/date'
+
+import Day from './Day'
+import Header from './Header'
 
 import {
   getDaysInMonth,
-  getMonthName,
-  getWeekDayName,
   getWeekDayIndex,
-  makeOrdinal,
+  changeDay,
+  getStartOfTheMonth,
+  getEndOfTheMonth,
+  sameMonth,
+  sameDate,
   weekDayNames,
-} from '../../helpers/date'
+} from '../../helpers/js/date'
 
-import { compose, pure, withProps } from 'recompose'
-import { splitEvery } from 'ramda'
-import './Calendar.scss'
-import bem from '../../helpers/bem'
+import bem from '../../helpers/js/bem'
+
+import './calendar.scss'
+
 const calendarBem = bem('calendar')
 
-const CalendarHeader = ({ date, handleMonthChange }) => {
-  const headerText = [
-    getWeekDayName(date),
-    [makeOrdinal(date.getDate()), 'of', getMonthName(date)].join(' '),
-    date.getFullYear(),
-  ].join(', ')
+const BasicCalendar = ({ selectedDate, calendarDate, onChangeDate }) => {
+  const startOfTheMonth = getStartOfTheMonth(calendarDate)
+  const endOfTheMonth = getEndOfTheMonth(calendarDate)
+
+  let datesToRender = []
+
+  datesToRender = datesToRender.concat(
+    reverse(range(1, getWeekDayIndex(startOfTheMonth) + 1)).map(delta =>
+      changeDay(startOfTheMonth, -delta)
+    )
+  )
+
+  datesToRender = datesToRender.concat(
+    range(0, getDaysInMonth(calendarDate)).map(delta =>
+      changeDay(startOfTheMonth, delta)
+    )
+  )
+
+  datesToRender = datesToRender.concat(
+    range(0, 6 - getWeekDayIndex(endOfTheMonth))
+      .map(delta => delta + 1)
+      .map(delta => changeDay(endOfTheMonth, delta))
+  )
+
+  datesToRender = datesToRender.map((currentDate, index) => (
+    <td key={index}>
+      <Day
+        date={currentDate}
+        disabled={!sameMonth(calendarDate, currentDate)}
+        selected={sameDate(currentDate, selectedDate)}
+        onChangeDate={onChangeDate}
+      />
+    </td>
+  ))
 
   return (
-    <div className={calendarBem({ element: 'header' })}>
-      <button
-        className={calendarBem({ element: 'header-month-backward' })}
-        onClick={() => handleMonthChange(-1)}
-      >
-        Backward
-      </button>
-
-      <h3 className={calendarBem({ element: 'header-text' })}>{headerText}</h3>
-
-      <button
-        className={calendarBem({ element: 'header-month-forward' })}
-        onClick={() => handleMonthChange(1)}
-      >
-        Forward
-      </button>
-    </div>
+    <table
+      className={[
+        calendarBem({ element: 'cells' }),
+        calendarBem({ element: 'months-item' }),
+      ].join(" ")}
+    >
+      <tbody>
+        <tr key={-1}>
+          {weekDayNames.map((weekDayName, index) => (
+            <td key={index} className={calendarBem({ element: 'weekDayName' })}>
+              {weekDayName}
+            </td>
+          ))}
+        </tr>
+        {splitEvery(7, datesToRender).map((week, index) => (
+          <tr key={index}>{week}</tr>
+        ))}
+      </tbody>
+    </table>
   )
 }
 
-class Calendar extends React.Component {
-  handleMonthChange = delta =>
-    this.props.onChangeDate(
-      new Date(
-        this.props.date.getFullYear(),
-        this.props.date.getMonth() + delta,
-        this.props.date.getDate()
-      )
-    )
-
-  render() {
-    const { date, children, monthModel } = this.props
-
-    return (
-      <div className={calendarBem()}>
-        <CalendarHeader
-          date={date}
-          handleMonthChange={this.handleMonthChange}
-        />
-        <table className={calendarBem({ element: 'calendar' })}>
-          <tbody>
-            <tr className={calendarBem({ element: 'row' })}>
-              {weekDayNames.map((weekDay, index) => (
-                <td key={index} className={calendarBem({ element: 'cell' })}>
-                  {weekDay}
-                </td>
-              ))}
-            </tr>
-
-            {monthModel.map((week, i) => (
-              <tr key={i} className={calendarBem({ element: 'row' })}>
-                {week.map((day, i) => (
-                  <td
-                    key={day ? day.toISOString() : i}
-                    className={calendarBem({ element: 'cell', disabled: !day })}
-                  >
-                    {day && children(day)}
-                  </td>
-                ))}
-              </tr>
-            ))}
-          </tbody>
-        </table>
-      </div>
-    )
-  }
-}
-
-const enhancer = compose(
-  withProps(({ date }) => ({
-    date: new Date(date.getFullYear(), date.getMonth(), 1),
-  })),
-  pure,
-
-  withProps(({ date }) => {
-    const month = {
-      start: date,
-      end: new Date(date.getFullYear(), date.getMonth(), getDaysInMonth(date)),
-    }
-
-    return {
-      monthModel: splitEvery(7, [
-        ...Array(getWeekDayIndex(month.start)).fill(null),
-        ...range(1, getDaysInMonth(date) + 1).map(
-          day => new Date(date.getFullYear(), date.getMonth(), day)
-        ),
-        ...Array(getWeekDayIndex(month.end)).fill(null),
-      ]),
-    }
-  })
+const Calendar = ({
+  selectedDate,
+  calendarDate,
+  onChangeDate,
+  onIncrementMonth,
+  onDecrementMonth,
+}) => (
+  <div className={calendarBem()}>
+    <Header
+      date={calendarDate}
+      onIncrementMonth={onIncrementMonth}
+      onDecrementMonth={onDecrementMonth}
+    />
+    <div className={calendarBem({ element: 'months' })}>
+      {[-1, 0, 1]
+        .map(delta => changeMonth(calendarDate, delta))
+        .map((date, index) => (
+          <BasicCalendar
+            key={index}
+            selectedDate={selectedDate}
+            calendarDate={date}
+            onChangeDate={onChangeDate}
+          />
+        ))}
+    </div>
+  </div>
 )
 
-export default enhancer(Calendar)
+export default Calendar
