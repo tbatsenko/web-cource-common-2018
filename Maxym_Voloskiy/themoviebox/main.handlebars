@@ -1,6 +1,6 @@
 {{#header}}
 <header class="wrapper-header" style="background: url({{image}}) 0;">
-    <div class="wrapper-header__up">
+    <section class="wrapper-header__up">
         <div class="wrapper-header__up-placeholder">
             <span>THEMOVIE<b>BOX</b></span>
         </div>
@@ -11,10 +11,10 @@
                 <li id="sign-up"><a href="#">Sign Up</a></li>
             </ul>
         </div>
-    </div>
+    </section>
 
-    <div class="wrapper-header__down">
-        <div class="wrapper-header__left">
+    <section class="wrapper-header__down">
+        <section class="wrapper-header__left">
             <div class="wrapper-header__left-placeholder">
                 <span class="film-name">{{name}}</span>
                 {{#info}}
@@ -34,10 +34,10 @@
                     <li id="add-to-wishlist">+ Add to wishlist</li>
                 </ul>
             </div>
-        </div>
-        <div class="wrapper-header__right">
+        </section>
+        <section class="wrapper-header__right">
             <p>Rating <span>based on 3.546 reviews</span></p>
-            <div class="rating">
+            <section class="rating">
                 <div class="star-ratings-css">
                     <div class="star-ratings-css-top" style="width: 68%">
                         <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
@@ -47,10 +47,10 @@
                     </div>
                 </div>
                 <span class="rating-number">{{rating}}</span>
-            </div>
+            </section>
 
-        </div>
-    </div>
+        </section>
+    </section>
 </header>
 {{/header}}
 
@@ -83,7 +83,7 @@
 
     <div class="wrapper-main__items">
     {{#films}}
-        <div class="wrapper-main__items-item">
+        <article class="wrapper-main__items-item">
             <div class="image" style="background-image: url({{image}});">
                 <span class="year">{{year}}</span>
             </div>
@@ -96,7 +96,7 @@
                 </div>
                 <span class="rating">{{rating}}</span>
             </div>
-        </div>
+        </article>
     {{/films}}
     </div>
     <footer class="wrapper-main__footer"></footer>
