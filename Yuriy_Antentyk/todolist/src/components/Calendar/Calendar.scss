@@ -1,53 +1,49 @@
-.calendar {
-  &__calendar {
-    width: 100%;
-  }
+@import "../../helpers/css/colors.scss";
+@import "../../helpers/css/fonts.scss";
 
-  &__row {
-  }
-
-  &__cell {
-    text-align: center;
-  }
-
-  &__cell_holiday {
-    background-color: yellow;
-  }
-
-  &__cell_selected {
-    background-color: green;
-  }
-
-  &__header {
-    color: blue;
+.calendar{
     display: flex;
-    flex-direction: row;
-    align-items: center;
-  }
+    flex-direction: column;
 
-  &__header-text {
-    flex-grow: 2;
-    text-align: center;
-  }
+    background-color: $color--primary;
+    border-radius: 15px;
+    padding: 15px;
 
-  &__header-month-forward {
-  }
+    width: 750px;
 
-  &__header-month-backward {
-  }
-
-  &__day {
-    text-decoration: none;
-    color: black;
-    display: block;
-    width: 100%;
-    align-content: center;
-    &_isHoliday {
-      background: blue;
+    &__cells{
+        
+        table-layout: fixed;
     }
 
-    &_isActive {
-      background: green;
+    &__months{
+        display: flex;
+        flex-direction: row;
     }
-  }
+
+    &__months-item{
+        margin-right: 10px;
+    }
+    &__months-item:last-child{
+        margin-right: 0;
+    }
+
+    &__weekDayName{
+        text-align: center;
+        color: $color--white;
+        font-family: $font-family--regular;
+        font-size: $font-size--regular;
+        opacity: 0.9;
+    }
+
+    &__header{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+
+    &__header-title{
+        margin: 0 auto;
+        text-align: center;
+    }
 }
