@@ -1,45 +1,44 @@
-import React from "react"
-import TodoItem from "./TodoItem/TodoItem"
-import TodoCreator from "./TodoCreator/TodoCreator"
-import TodoNav from "./TodoNav/TodoNav"
-import bem from "../../helpers/bem";
+import React from 'react'
+
+import Item from './Item'
+import Creator from './Creator'
+import Header from "./Header"
+import Nav from './Nav'
+
+import bem from "../../helpers/js/bem"
+import "./TodoList.scss"
 
 const todoListBem = bem("todoList")
 
-export default class TodoList extends React.Component{
-    render() {
-        const {
-            onAddTodo,
-            onDeleteTodo,
-            onToggleTodo,
-            onCheckAllTodos,
-            onUncheckAllTodos,
-            onDeleteSelectedTodos,
-            todos
-        } = this.props
+const TodoList = ({
+  date,
+  onAddTodo,
+  onDeleteTodo,
+  onToggleTodo,
+  onCheckAllTodos,
+  onUncheckAllTodos,
+  onDeleteSelectedTodos,
+  todos,
+}) => (
+  <div className={todoListBem()}>
+    <Header date={date} />
+    <Creator onAddTodo={onAddTodo} />
+    {todos.map(todo => (
+      <Item
+        key={todo.id}
+        id={todo.id}
+        text={todo.text}
+        checked={todo.checked}
+        onDeleteTodo={onDeleteTodo}
+        onToggleTodo={onToggleTodo}
+      />
+    ))}
+    <Nav
+      onCheckAllTodos={onCheckAllTodos}
+      onUncheckAllTodos={onUncheckAllTodos}
+      onDeleteSelectedTodos={onDeleteSelectedTodos}
+    />
+  </div>
+)
 
-        return (
-            <div className={todoListBem()}>
-                <TodoCreator onAddTodo={onAddTodo} />
-                {
-                    todos.map(
-                        todo => 
-                        <TodoItem
-                            key={todo.id}
-                            id={todo.id}
-                            text={todo.text}
-                            checked={todo.checked}
-                            onDeleteTodo={onDeleteTodo}
-                            onToggleTodo={onToggleTodo}
-                        />
-                    )
-                }
-                <TodoNav
-                    onCheckAllTodos={onCheckAllTodos}
-                    onUncheckAllTodos={onUncheckAllTodos}
-                    onDeleteSelectedTodos={onDeleteSelectedTodos}
-                />
-            </div>
-        )
-    }
-}
+export default TodoList
