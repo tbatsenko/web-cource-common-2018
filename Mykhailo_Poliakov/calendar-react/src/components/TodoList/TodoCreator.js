@@ -5,7 +5,7 @@ import API from '../../utils/api';
 import { withState, compose, withHandlers } from 'recompose';
 
 const b = BEM('todo');
-const api = API('127.0.0.1:4000', 'todos');
+const api = API(process.env.REACT_APP_API_URL, process.env.REACT_APP_API_ENDPOINT);
 
 const TodoCreator = ({ todo, onChange, onSubmit }) => (
   <form className={b('form')} onSubmit={onSubmit}>
