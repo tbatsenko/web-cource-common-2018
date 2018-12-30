@@ -25,7 +25,6 @@
     flex: 2;
     padding: 16px;
     overflow: auto;
-    -ms-overflow-style: none;
     &::-webkit-scrollbar {
       display: none;
     }
@@ -47,23 +46,34 @@
     display: inline-block;
     vertical-align: bottom;
     margin-left: 8px;
-    width: 256px;
+    width: 230px;
     white-space: nowrap;
     text-overflow: ellipsis;
     overflow: hidden;
+    &--done {
+      text-decoration: line-through;
+    }
   }
 
-  &__done {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 18px;
-    line-height: 40px;
-    background: transparent;
-    color: #ffffff;
+  &__button {
+    width: 18px;
+    height: 40px;
+
     border: 0;
     outline: 0;
     padding: 0;
     cursor: pointer;
     float: right;
+
+    &--done {
+      background: url('done.svg') no-repeat center;
+      background-size: 18px 18px;
+    }
+    &--delete {
+      background: url('delete.svg') no-repeat center;
+      background-size: 18px 18px;
+      margin-left: 12px;
+    }
   }
   &__input {
     background: #008ec4;
@@ -114,12 +124,13 @@
 
     &__text {
       margin-left: 4px;
-      width: 128px;
+      width: 130px;
     }
 
-    &__done {
-      font-size: 9px;
-      line-height: 20px;
+    &__button {
+      width: 9px;
+      height: 20px;
+      background-size: 9px 9px;
     }
   }
 }

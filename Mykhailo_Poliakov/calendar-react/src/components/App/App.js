@@ -1,6 +1,6 @@
 import React from 'react';
 import Calendar from '../Calendar/Calendar';
-import Todo from '../Todo/Todo';
+import TodoList from '../TodoList/TodoList';
 import './App.scss';
 import Day from '../Day/Day';
 import BEM from '../../utils/bem';
@@ -9,55 +9,54 @@ import { withState, withHandlers, compose, lifecycle } from 'recompose';
 
 const b = BEM('app');
 
-const App = ({ date, setDate, onSelect }) => (
+const App = ({ activeDate, onDaySelect, setCalendarDate, calendarDate }) => (
   <div className={b()}>
     <Calendar
-      date={date}
-      setDate={setDate}
-      children={(day, index) => <Day key={index} day={day} date={date} onSelect={onSelect} />}
+      calendarDate={calendarDate}
+      setCalendarDate={setCalendarDate}
+      children={(day, index) => <Day key={index} day={day} activeDate={activeDate} calendarDate={calendarDate} onDaySelect={onDaySelect} />}
     />
-    <Todo date={date} />
+    <TodoList activeDate={activeDate} />
   </div>
 );
 
 const enhancer = compose(
-  withState('date', 'setDate', { year: 0, month: 0, day: 0 }),
+  withState('activeDate', 'setActiveDate', {
+    year: new Date().getFullYear(),
+    month: new Date().getMonth(),
+    day: new Date().getDate()
+  }),
+  withState('calendarDate', 'setCalendarDate', {
+    year: new Date().getFullYear(),
+    month: new Date().getMonth()
+  }),
   withHandlers({
-    onSelect: ({ setDate, date }) => (e) => {
-      e.preventDefault();
-      let newDay = parseInt(e.target.innerHTML);
-      if (newDay !== date.day) {
-        setDate({ year: date.year, month: date.month, day: newDay });
+    onBrowserControlsSelect: ({ setActiveDate, setCalendarDate }) => e => {
+      if (e.state != null) {
+        setActiveDate({ year: e.state.year, month: e.state.month, day: e.state.day });
+        setCalendarDate({ year: e.state.year, month: e.state.month });
       }
     },
-    onControlsClick: ({ setDate }) => (e) => {
-      if (e.state != null) {
-        setDate({ year: e.state.year, month: e.state.month, day: e.state.day });
-      }
+    onDaySelect: ({ setActiveDate, setCalendarDate, calendarDate }) => day => {
+      setActiveDate({ year: calendarDate.year, month: calendarDate.month, day: day });
+      setCalendarDate({ year: calendarDate.year, month: calendarDate.month });
     }
   }),
   lifecycle({
     componentDidMount() {
-      const { setDate, onControlsClick } = this.props;
-
+      const { setActiveDate, setCalendarDate, onBrowserControlsSelect } = this.props;
       const params = new URLSearchParams(window.location.search);
+
       let newYear = parseInt(params.get('year'));
       let newMonth = parseInt(params.get('month'));
       let newDay = parseInt(params.get('day'));
-      if (
-        newYear > 0 &&
-        (newMonth >= 0 && newMonth < 12) &&
-        (newDay > 0 && newDay <= new Date(newYear, newMonth + 1, 0).getDate())
-      ) {
-        setDate({ year: newYear, month: newMonth, day: newDay });
-      } else {
-        setDate({
-          year: new Date().getFullYear(),
-          month: new Date().getMonth(),
-          day: new Date().getDate()
-        });
+
+      if (!isNaN(new Date(newYear, newMonth, newDay).getTime())) {
+        setActiveDate({ year: newYear, month: newMonth, day: newDay });
+        setCalendarDate({ year: newYear, month: newMonth });
       }
-      window.addEventListener('popstate', onControlsClick);
+
+      window.addEventListener('popstate', onBrowserControlsSelect);
     }
   })
 );
