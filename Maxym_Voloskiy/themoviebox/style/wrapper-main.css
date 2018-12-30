@@ -1,0 +1,99 @@
+.wrapper-main {
+  padding: 70px 5%;
+}
+.wrapper-main hr {
+  margin: 0;
+}
+.wrapper-main__nav {
+  display: flex;
+  justify-content: space-between;
+}
+.wrapper-main__nav-placeholder ul {
+  list-style: none;
+  display: flex;
+  color: #80818a;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+}
+.wrapper-main__nav-placeholder ul li {
+  padding-bottom: 20px;
+  font-size: 20px;
+  transition: all 0.2s ease;
+}
+.wrapper-main__nav-placeholder ul a {
+  text-decoration: none;
+  color: #80818a;
+  transition: all 0.2s ease;
+}
+.wrapper-main__nav-placeholder ul li:hover {
+  cursor: pointer;
+  padding-bottom: 18px;
+  border-bottom: 2px solid #ff0079;
+}
+.wrapper-main__nav-placeholder ul li:hover a {
+  color: #ff0079;
+}
+.wrapper-main__nav-placeholder .list-navigation li {
+  width: 150px;
+}
+.wrapper-main__nav-placeholder .list-navigation li .info {
+  display: none;
+}
+.wrapper-main__nav-placeholder .list-view li {
+  width: 70px;
+}
+.wrapper-main__items {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+.wrapper-main__items-item {
+  width: 350px;
+  height: 500px;
+  background-color: #ffffff;
+  margin: 35px 20px;
+}
+.wrapper-main__items-item .image {
+  width: 100%;
+  height: 400px;
+  background: no-repeat center;
+  background-size: cover;
+  position: relative;
+}
+.wrapper-main__items-item .image .year {
+  position: absolute;
+  color: #babbc3;
+  bottom: 0;
+  margin: 15px;
+  font-size: 20px;
+}
+.wrapper-main__items-item .description {
+  height: 100px;
+  display: flex;
+  justify-content: space-around;
+}
+.wrapper-main__items-item .description__name {
+  margin: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.wrapper-main__items-item .description__name-name {
+  color: #494c62;
+  font-size: 22px;
+}
+.wrapper-main__items-item .description__name-genres {
+  font-size: 16px;
+  color: #80818a;
+  opacity: 0.5;
+}
+.wrapper-main__items-item .description .rating {
+  height: 25px;
+  margin: auto 0;
+  font-size: 22px;
+  color: #ff0079;
+  border: 1px solid #ff0079;
+  padding: 5px;
+}
+/*# sourceMappingURL=wrapper-main.css.map */

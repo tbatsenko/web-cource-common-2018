@@ -1,7 +1,7 @@
 import React, { Component } from "react"
 
-import TodoItem from "./TodoItem/TodoItem"
 import BEM from "../../utils/BEM"
+import TodoItem from "./TodoItem/TodoItem"
 import "./TodoList.scss"
 
 const b = BEM("todo-list")
@@ -79,6 +79,9 @@ class TodoList extends Component{
             addItemValue: event.target.value
         });
     }
+    onButtonPressed(event) {
+        if (event.key === "Enter") this.onAddTodo()
+    }
 
     render() {
         const { todoItems, addItemValue } = this.state
@@ -91,6 +94,7 @@ class TodoList extends Component{
                         type={"text"}
                         value={addItemValue}
                         onChange={event => this.updateInputValue(event)}
+                        onKeyPress={event => this.onButtonPressed(event)}
                     />
                     <button
                         className={b("add-button")}
