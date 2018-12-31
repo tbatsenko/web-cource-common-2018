@@ -9,6 +9,7 @@ export default class App extends Component {
 
   constructor(props) {
     super(props);
+    this.child = React.createRef();
     this.state = {
       currDate: null
     };
@@ -18,13 +19,14 @@ export default class App extends Component {
     this.setState({
       currDate: currDate
     });
+    this.child.current.setCurrDate(this.state.currDate)
   };
 
 
   render() {
     return <div className="App">
       <Calendar onClick={this.handleCalendarClick}/>
-      <TodoList currDate={this.state.currDate}/>
+      <TodoList ref={this.child} currDate={this.state.currDate}/>
     </div>;
   }
 }

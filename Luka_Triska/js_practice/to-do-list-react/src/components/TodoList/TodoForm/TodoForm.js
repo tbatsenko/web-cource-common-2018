@@ -18,23 +18,11 @@ export default class TodoForm extends Component {
     })
   };
 
-  // getDerivedStateFromProps() {
-  //   this.setState({
-  //     currDate: this.props.currDate
-  //   });
-  // };
-
-  // componentDidUpdate(prevProps, prevState, snapshot) {
-  //   this.setState({
-  //     currDate: this.props.currDate
-  //   });
-  // }
-
   handleSubmit = (e) => {
     e.preventDefault();
     this.props.onSubmit({
       id: shortid.generate(),
-      currDate: new Date(),
+      currDate: this.props.currDate,
       text: this.state.text,
       completed: false
     });

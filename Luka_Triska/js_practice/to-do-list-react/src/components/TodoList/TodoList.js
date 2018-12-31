@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+
 import TodoForm from './TodoForm/TodoForm'
 import Todo from './Todo/Todo'
 
@@ -17,7 +18,7 @@ export default class TodoList extends Component {
 
 
   addTodo = (todo) => {
-    todo.currDate = this.props.currDate;
+    // todo.currDate = this.props.currDate;
     this.setState({
       todos: [todo, ...this.state.todos]
     });
@@ -41,6 +42,12 @@ export default class TodoList extends Component {
   handleDeleteTodo = (id) => {
     this.setState({
       todos: this.state.todos.filter(todo => todo.id !== id)
+    })
+  };
+
+  setCurrDate = (currDate) => {
+    this.setState({
+      currDate: currDate
     })
   };
 
