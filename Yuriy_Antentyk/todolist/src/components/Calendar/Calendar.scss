@@ -1,0 +1,49 @@
+@import "../../helpers/css/colors.scss";
+@import "../../helpers/css/fonts.scss";
+
+.calendar{
+    display: flex;
+    flex-direction: column;
+
+    background-color: $color--primary;
+    border-radius: 15px;
+    padding: 15px;
+
+    width: 750px;
+
+    &__cells{
+        
+        table-layout: fixed;
+    }
+
+    &__months{
+        display: flex;
+        flex-direction: row;
+    }
+
+    &__months-item{
+        margin-right: 10px;
+    }
+    &__months-item:last-child{
+        margin-right: 0;
+    }
+
+    &__weekDayName{
+        text-align: center;
+        color: $color--white;
+        font-family: $font-family--regular;
+        font-size: $font-size--regular;
+        opacity: 0.9;
+    }
+
+    &__header{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+
+    &__header-title{
+        margin: 0 auto;
+        text-align: center;
+    }
+}

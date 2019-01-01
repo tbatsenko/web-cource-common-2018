@@ -1,0 +1,17 @@
+@import '../../helpers/css/colors.scss';
+@import '../../helpers/css/fonts.scss';
+
+.todoList {
+  background-color: $color--primary;
+  border-radius: 15px;
+  padding: 15px;
+  width: 300px;
+
+  display: flex;
+  flex-direction: column;
+
+  &__header {
+    margin: 0;
+    text-align: center;
+  }
+}

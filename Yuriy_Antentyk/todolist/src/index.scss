@@ -1,0 +1,9 @@
+@import "./helpers/css/colors.scss";
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  background-color: $color--light-grey;
+  min-width: 400px;
+}
