@@ -30,8 +30,9 @@ const CalendarMonth = ({
     <tbody>
       {
         <tr key={-1}>
-          {weekDaysNames.map(dayName => (
+          {weekDaysNames.map((dayName, dayNameIndex) => (
             <td
+              key={dayNameIndex}
               className={[
                 calendarBem({ element: 'month-cell' }),
                 calendarBem({ element: 'month-weekDays' }),
