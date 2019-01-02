@@ -1,7 +1,6 @@
 import React from "react";
 
-export default function Todo(props) {
-  /** @namespace props.todo */
+export default function CalendarCell(props) {
   return <li className='container__todo'>
     <input type='checkbox' defaultChecked={props.todo.completed} className='check-box'
            onChange={() => {

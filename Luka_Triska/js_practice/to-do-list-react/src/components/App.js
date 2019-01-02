@@ -10,23 +10,14 @@ export default class App extends Component {
   constructor(props) {
     super(props);
     this.child = React.createRef();
-    this.state = {
-      currDate: null
-    };
   }
 
-  handleCalendarClick = (currDate) => {
-    this.setState({
-      currDate: currDate
-    });
-    this.child.current.setCurrDate(this.state.currDate)
-  };
-
+  handleCalendarClick = (currDate) => this.child.current.setLastClickedDate(currDate);
 
   render() {
     return <div className="App">
       <Calendar onClick={this.handleCalendarClick}/>
-      <TodoList ref={this.child} currDate={this.state.currDate}/>
+      <TodoList ref={this.child}/>
     </div>;
   }
 }

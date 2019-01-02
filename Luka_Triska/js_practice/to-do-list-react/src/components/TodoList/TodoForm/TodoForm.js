@@ -7,7 +7,7 @@ export default class TodoForm extends Component {
     super(props);
 
     this.state = {
-      currDate: this.props.currDate,
+      currDate: this.props.lastClickedDate,
       text: ''
     };
   };
@@ -21,10 +21,10 @@ export default class TodoForm extends Component {
   handleSubmit = (e) => {
     e.preventDefault();
     this.props.onSubmit({
-      id: shortid.generate(),
-      currDate: this.props.currDate,
       text: this.state.text,
-      completed: false
+      date: this.props.lastClickedDate,
+      completed: false,
+      id: shortid.generate()
     });
     this.setState({
       text: ''

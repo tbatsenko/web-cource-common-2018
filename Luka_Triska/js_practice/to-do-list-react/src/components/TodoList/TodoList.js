@@ -4,29 +4,38 @@ import TodoForm from './TodoForm/TodoForm'
 import Todo from './Todo/Todo'
 
 import './TodoList.css'
+import axios from 'axios';
 
 export default class TodoList extends Component {
 
   constructor(props) {
     super(props);
-
+    this.baseURL = 'http://localhost:4000/todos/';
     this.state = {
-      todos: [],
-      currDate: this.props.currDate,
+      lastClickedDate: new Date(),
+      todos: []
     };
   }
 
+  addTodo = async (todo) => {
+    this.setState((prevState) => ({
+      todos: [todo, ...prevState.todos]
+    }));
 
-  addTodo = (todo) => {
-    // todo.currDate = this.props.currDate;
-    this.setState({
-      todos: [todo, ...this.state.todos]
-    });
+    await axios.post(this.baseURL, todo);
   };
 
-  toggleCompleted(id) {
-    this.setState({
-      todos: this.state.todos.map(todo => {
+  handleDeleteTodo = async (id) => {
+    this.setState((prevState) => ({
+      todos: prevState.todos.filter(todo => todo.id !== id)
+    }))
+
+    await axios.delete(this.baseURL + id);
+  };
+
+  toggleCompleted = async (id) => {
+    this.setState((prevState) => ({
+      todos: prevState.todos.map(todo => {
         if (todo.id === id) {
           return {
             ...todo,
@@ -36,39 +45,50 @@ export default class TodoList extends Component {
           return todo;
         }
       })
+    }));
+    await axios.get(this.baseURL + id).then(async response => {
+      await axios.put(this.baseURL + id,
+        {
+          'text': response.data.text,
+          'date': response.data.date,
+          'completed': !response.data.completed,
+          'id': response.data.id
+        });
     });
+  };
+
+  setLastClickedDate = (lastClickedDate) => {
+    this.setState({
+      lastClickedDate: lastClickedDate.toDateString()
+    })
+  };
+
+  async componentDidMount() {
+    await axios.get(this.baseURL).then(res => {
+      this.setState({todos: res.data});
+    })
   }
 
-  handleDeleteTodo = (id) => {
-    this.setState({
-      todos: this.state.todos.filter(todo => todo.id !== id)
-    })
-  };
-
-  setCurrDate = (currDate) => {
-    this.setState({
-      currDate: currDate
-    })
-  };
-
   render() {
+
     return (
-      <section className="todo__container">
+      <section className='todo__container'>
         <h2>TodoList</h2>
-        <TodoForm onSubmit={this.addTodo} currDate={this.state.currDate}/>
-        <ul className="main-todo-list">
-          {this.state.todos.map(todo => (
-            <Todo
-              key={todo.id}
-              toggleCompleted={() => this.toggleCompleted(todo.id)}
-              onDelete={() => this.handleDeleteTodo(todo.id)}
-              completed={todo.completed}
-              text={todo.text}
-              currDate={todo.currDate}
-            />
-          ))}
+        <TodoForm onSubmit={this.addTodo} lastClickedDate={this.state.lastClickedDate}/>
+        <ul className='main-todo-list'>
+          {
+            this.state.todos
+              .filter(todo => new Date(todo.date).toDateString() === new Date(this.state.lastClickedDate).toDateString())
+              .map(todo => (
+                <Todo
+                  todo={todo}
+                  key={todo.id}
+                  toggleCompleted={() => this.toggleCompleted(todo.id)}
+                  onDelete={() => this.handleDeleteTodo(todo.id)}
+                />
+              ))
+          }
         </ul>
-        <div>todos left: {this.state.todos.filter(todo => !todo.completed).length}</div>
       </section>
     )
   }
