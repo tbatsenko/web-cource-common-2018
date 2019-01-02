@@ -1,12 +1,17 @@
 
-.form-create-task__btn {
+.form-new-task__btn {
   background: transparent;
   border-width: 0;
   font-size: 30px;
   color: lightgray;
+  cursor: pointer;
+  width: 1.5em;
+  box-shadow: 0 0 10px 0px lightgray;
+  height: 1.5em;
+  border-radius: 100%;
 }
 
-.form-create-task__input {
+.form-new-task__input {
   border: 0;
   width: 100%;
   font-size: 17px;
