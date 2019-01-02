@@ -1,48 +1,33 @@
 import React from 'react'
+import { compose, pure, withState } from 'recompose'
 
 import Calendar from '../Calendar'
 import TodoList from '../TodoList'
 
-import { getStartOfTheMonth, hashDate } from '../../helpers/js/date'
-import bem from '../../helpers/js/bem'
+import bem from '../../helpers/bem'
 
-import './app.scss'
+import './App.scss'
 
 const appBem = bem('app')
 
-const App = ({
-  date,
-  onChangeDate,
-  onAddTodo,
-  onDeleteTodo,
-  onToggleTodo,
-  onCheckAllTodos,
-  onUncheckAllTodos,
-  onDeleteSelectedTodos,
-  todos,
-}) => (
+const App = ({ date, onChangeDate }) => (
   <div className={appBem()}>
     <div className={appBem({ element: 'calendar' })}>
       <Calendar
-        calendarDate={getStartOfTheMonth(date)}
         selectedDate={date}
+        calendarDate={date}
         onChangeDate={onChangeDate}
       />
     </div>
     <div className={appBem({ element: 'todoList' })}>
-      <TodoList
-        date={date}
-        onChangeDate={onChangeDate}
-        onAddTodo={onAddTodo}
-        onDeleteTodo={onDeleteTodo}
-        onToggleTodo={onToggleTodo}
-        onCheckAllTodos={onCheckAllTodos}
-        onUncheckAllTodos={onUncheckAllTodos}
-        onDeleteSelectedTodos={onDeleteSelectedTodos}
-        todos={todos.get(hashDate(date))}
-      />
+      <TodoList date={date} />
     </div>
   </div>
 )
 
-export default App
+const enhancer = compose(
+  pure,
+  withState('date', 'onChangeDate', ({ date }) => date)
+)
+
+export default enhancer(App)

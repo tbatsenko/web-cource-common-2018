@@ -1,22 +1,7 @@
 import React from 'react'
 
-import bem from '../../helpers/js/bem'
+import bem from '../../helpers/bem'
 
-import './loading.scss'
+import './Loading.scss'
 
-const loadingBem = bem('lds-ring')
-
-const Loading = () => (
-  <div className={loadingBem()}>
-    <div />
-    <div />
-    <div />
-    <div />
-    <div />
-    <div />
-    <div />
-    <div />
-  </div>
-)
-
-export default Loading
+export default () => <div className={bem('lds-dual-ring')()} />

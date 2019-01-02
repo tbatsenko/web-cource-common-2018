@@ -1,11 +1,11 @@
-@import '../../helpers/css/colors.scss';
-@import '../../helpers/css/fonts.scss';
+@import '../../css/colors.scss';
+@import '../../css/fonts.scss';
 
 .todoList {
   background-color: $color--primary;
   border-radius: 15px;
   padding: 15px;
-  width: 300px;
+  width: 320px;
 
   display: flex;
   flex-direction: column;
