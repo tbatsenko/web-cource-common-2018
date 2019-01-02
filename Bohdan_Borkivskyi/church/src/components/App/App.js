@@ -67,11 +67,7 @@ export default class App extends Component {
           continue
         }
         if (App.areVeryOverlapped(anti[i], anti[j])) {
-          if (anti[i].xMove < anti[j].xMove) {
-            anti[i].x += 15
-          } else {
-            anti[j].x += 15
-          }
+          anti[i] = this.movedToSafePlace(anti[i])
         } else if (App.areOverlapped(anti[i], anti[j])) {
           bumped.push(i)
           bumped.push(j)
@@ -93,7 +89,7 @@ export default class App extends Component {
       for (let j = 0; j < this.state.cristians.length; j++) {
         let cristi = this.state.cristians[j]
         if (App.areVeryOverlapped(anti[i], cristi)) {
-          anti[i].x -= 15
+          anti[i] = this.movedToSafePlace(anti[i])
         } else if (App.areOverlapped(anti[i], cristi)) {
           if (!anti[i].good) {
             punished.push([cristi.id, anti[i].id])
@@ -143,6 +139,39 @@ export default class App extends Component {
     }
 
     this.setState({ antichrists: anti, cristians: cristi })
+  }
+
+  movedToSafePlace(obj, isCristian = false) {
+    let overlap = true
+    while (overlap) {
+      obj.x += obj.xMove
+      obj.y += obj.yMove
+      overlap = false
+      for (let i = 0; i < this.state.antichrists.length; ++i) {
+        let anti = this.state.antichrists[i]
+        if (!isCristian && obj.id === anti.id) {
+          continue
+        }
+        if (App.areOverlapped(obj, anti)) {
+          overlap = true
+          break
+        }
+      }
+      if (overlap) {
+        continue
+      }
+      for (let i = 0; i < this.state.cristians.length; ++i) {
+        let cristi = this.state.cristians[i]
+        if (isCristian && obj.id === cristi.id) {
+          continue
+        }
+        if (App.areOverlapped(obj, cristi)) {
+          overlap = true
+          break
+        }
+      }
+    }
+    return obj
   }
 
   static generatePyramidStructure(total) {
