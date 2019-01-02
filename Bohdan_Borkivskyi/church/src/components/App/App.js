@@ -38,9 +38,9 @@ export default class App extends Component {
       if (anti[i].y <= 0 || anti[i].y >= 285) {
         anti[i].yMove *= -1
       }
-
-      anti[i].x += anti[i].xMove
-      anti[i].y += anti[i].yMove
+      let multiplier = anti.length <= 2 ? 3 : 1
+      anti[i].x += anti[i].xMove * multiplier
+      anti[i].y += anti[i].yMove * multiplier
 
       if (anti[i].x < 300) {
         anti[i].good = false
@@ -66,7 +66,13 @@ export default class App extends Component {
         if (i === j) {
           continue
         }
-        if (this.areOverlapped(anti[i], anti[j])) {
+        if (App.areVeryOverlapped(anti[i], anti[j])) {
+          if (anti[i].xMove < anti[j].xMove) {
+            anti[i].x += 15
+          } else {
+            anti[j].x += 15
+          }
+        } else if (App.areOverlapped(anti[i], anti[j])) {
           bumped.push(i)
           bumped.push(j)
 
@@ -86,7 +92,9 @@ export default class App extends Component {
       }
       for (let j = 0; j < this.state.cristians.length; j++) {
         let cristi = this.state.cristians[j]
-        if (this.areOverlapped(anti[i], cristi)) {
+        if (App.areVeryOverlapped(anti[i], cristi)) {
+          anti[i].x -= 15
+        } else if (App.areOverlapped(anti[i], cristi)) {
           if (!anti[i].good) {
             punished.push([cristi.id, anti[i].id])
           }
@@ -127,33 +135,74 @@ export default class App extends Component {
     cristi = cristi.filter(
       cristian => !punished.map(pair => pair[0]).includes(cristian.id)
     )
+
+    for (let i = 0; i < cristi.length; ++i) {
+      cristi[i].id = i
+      cristi[i].x = App.calculateCristianPosition(i, cristi.length)[0]
+      cristi[i].y = App.calculateCristianPosition(i, cristi.length)[1]
+    }
+
     this.setState({ antichrists: anti, cristians: cristi })
   }
 
-  calculateCristianPosition(index) {
-    let baselineX = 450
+  static generatePyramidStructure(total) {
+    let steps = [1]
+    while (steps.reduce((a, b) => a + b, 0) < total) {
+      let next = steps[steps.length - 1] + 1
+      if (steps.reduce((a, b) => a + b, 0) + next <= total) {
+        steps.push(next)
+      } else {
+        break
+      }
+    }
+    let rest = total - steps.reduce((a, b) => a + b, 0)
+
+    if (rest > 0) {
+      steps.push(rest)
+    }
+
+    steps.sort((a, b) => a - b)
+
+    return steps
+  }
+
+  static calculateCristianPosition(index, total) {
+    let interval = 20
+    let baselineX = 480
     let baselineY = 150
     let groupNumber = 0
     let inGroupNumber = 0
-    let groupCount = 1
+    let groupCount = App.generatePyramidStructure(total)
+    let groupCountIndex = 0
     let iter = 0
     while (iter !== index) {
-      if (inGroupNumber === groupCount) {
-        groupCount += 2
+      if (inGroupNumber === groupCount[groupCountIndex]) {
+        groupCountIndex += 1
         inGroupNumber = 0
         groupNumber += 1
       }
       inGroupNumber += 1
       iter += 1
-      if (inGroupNumber === groupCount) {
-        groupCount += 2
+      if (inGroupNumber === groupCount[groupCountIndex]) {
+        groupCountIndex += 1
         inGroupNumber = 0
         groupNumber += 1
       }
     }
-    let calculatedX = baselineX - groupNumber * 20
+    let calculatedX = baselineX - groupNumber * interval
+    let extraShift = 0
+    if (groupCount[groupCountIndex] % 2 === 0) {
+      extraShift = Number(interval / 2)
+    }
+    if (groupCount[groupCountIndex] === undefined) {
+      groupCountIndex -= 1
+    }
+
     let calculatedY =
-      baselineY - (Math.floor(groupCount / 2) - inGroupNumber) * 20
+      baselineY +
+      extraShift -
+      (Math.floor(groupCount[groupCountIndex] / 2) - inGroupNumber) * interval
+    // console.log(calculatedX, calculatedY)
     return [calculatedX, calculatedY]
   }
 
@@ -182,15 +231,25 @@ export default class App extends Component {
     for (let i = 0; i < n; ++i) {
       let cristian = {
         id: i,
-        x: this.calculateCristianPosition(i)[0],
-        y: this.calculateCristianPosition(i)[1],
+        x: App.calculateCristianPosition(i, n)[0],
+        y: App.calculateCristianPosition(i, n)[1],
       }
       cristi.push(cristian)
     }
     this.setState({ cristians: cristi })
   }
 
-  areOverlapped(instance1, instance2) {
+  static areVeryOverlapped(instance1, instance2) {
+    return (
+      Math.pow(
+        Math.pow(instance1.x - instance2.x, 2) +
+          Math.pow(instance1.y - instance2.y, 2),
+        0.5
+      ) < 13
+    )
+  }
+
+  static areOverlapped(instance1, instance2) {
     return (
       Math.pow(
         Math.pow(instance1.x - instance2.x, 2) +
@@ -260,9 +319,14 @@ export default class App extends Component {
 
     cristi.push({
       id: cristi[cristi.length - 1].id + 1,
-      x: this.calculateCristianPosition(cristi[cristi.length - 1].id + 1)[0],
-      y: this.calculateCristianPosition(cristi[cristi.length - 1].id + 1)[1],
     })
+
+    for (let i = 0; i < cristi.length; ++i) {
+      cristi[i].id = i
+      cristi[i].x = App.calculateCristianPosition(i, cristi.length)[0]
+      cristi[i].y = App.calculateCristianPosition(i, cristi.length)[1]
+    }
+
     this.setState({ antichrists: anti, cristians: cristi })
   }
 }

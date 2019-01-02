@@ -1,0 +1,20 @@
+@import 'student-header';
+@import 'aside-skills';
+@import 'projects';
+
+.student-wrapper {
+  margin: 40px;
+  box-shadow: 0 0 13px rgb(120, 120, 120);
+}
+
+.student-main-content-wrapper {
+  height: auto;
+  display: flex;
+}
+
+.projects-wrapper {
+  width: 841px;
+  display: flex;
+  background-color: whitesmoke;
+  flex-direction: column;
+}

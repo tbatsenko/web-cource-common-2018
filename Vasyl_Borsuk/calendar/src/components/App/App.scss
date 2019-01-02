@@ -1,26 +1,21 @@
 @import "../../css-utils/colors";
 
 
-html, body {
-  padding: 0;
-  margin: 0;
-  height: 100%;
-  width: 100%;
-}
-
 body {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  background: $calendar-background-color;
 }
 
-.pretty-body-for-presentation {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  width: 1000px;
-  height: 500px;
-  border-radius: 8px;
-  background: $calendar-background-color;
+.app {
+  margin: 100px auto;
+  width: 700px;
+  height: 100%;
+
+  &--calendar, &--todo-list {
+    display: inline-block;
+    vertical-align: top;
+  }
+
+  &--calendar {
+    margin-right: 1rem;
+  }
 }

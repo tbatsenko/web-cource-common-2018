@@ -1,0 +1,76 @@
+.portfolio-header {
+  height: 65px;
+  background-color: rgb(32, 32, 32);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 0 13px rgb(120, 120, 120);
+  transition: all .5s;
+
+  &__portfolio-logo {
+    width: 70px;
+    height: 50px;
+    opacity: .8;
+    margin-left: 30px;
+  }
+
+  &__icon-container {
+    width: 145px;
+    margin-right: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__search-icon {
+    width: 20px;
+    height: 44px;
+    background: url("../images/search_icon.svg") no-repeat center;
+    opacity: .8;
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+
+  &__cv-icon {
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 21px;
+    letter-spacing: 1px;
+    opacity: .8;
+    font-family: 'Roboto', sans-serif;
+    color: whitesmoke;
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+
+  &__envelope-icon {
+    width: 20px;
+    height: 16px;
+    background: url("../images/envelope.svg") no-repeat;
+    opacity: .8;
+    background-size: contain;
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+
+  &__header-avatar-link {
+    opacity: .8;
+    width: 35px;
+    height: 35px;
+    cursor: pointer;
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+
+  &__header-avatar-img {
+    border-radius: 50%;
+  }
+}

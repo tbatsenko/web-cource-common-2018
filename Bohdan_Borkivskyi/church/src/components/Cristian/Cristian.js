@@ -3,7 +3,7 @@ import './Cristian.css'
 
 export default class Cristian extends Component {
   getClasses(){
-    return "Cristian"+(this.props.id === 0 ? " Cristian-Pop": "")
+    return "Cristian"+(this.props.id === 0 ? " Cristian_pop": "")
   }
 
   render() {

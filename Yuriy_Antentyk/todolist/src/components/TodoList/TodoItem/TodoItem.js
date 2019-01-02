@@ -1,33 +1,44 @@
-import React from "react"
-import bem from "../../../helpers/bem"
+import React from 'react'
+import { compose, pure, withHandlers } from 'recompose'
 
-import "./TodoItem.scss"
+import bem from '../../../helpers/bem'
 
-const todoListBem = bem("todoList")
+import './TodoItem.scss'
+import '../../../css/bem/button.scss'
 
-export default class TodoItem extends React.Component{
-    render(){
-        const {id, text, onDeleteTodo, checked, onToggleTodo} = this.props
+const itemBem = bem('todoItem')
+const buttonBem = bem('button')
 
-        return (
-            <form
-                className={todoListBem({element: "item"})}
-                onSubmit={(ev) => {ev.preventDefault(); onDeleteTodo(id)}}
-            >
-                <input
-                    type="checkbox"
-                    checked={checked}
-                    className={todoListBem({element: "item-checkbox"})}
-                    onClick={() => onToggleTodo(id)}
-                />
-                <p className={todoListBem({element: "item-text"})}>{text}</p>
-                <button
-                    type="submit"
-                    className={todoListBem({element: "item-delete"})}
-                >
-                    Delete Todo
-                </button>
-            </form>
-        )
-    }
-}
+const TodoItem = ({ text, checked, onDeleteTodo, onToggleTodo }) => (
+  <form onSubmit={onDeleteTodo} className={itemBem()}>
+    <label className={itemBem({ element: 'label' })}>
+      <input
+        type="checkbox"
+        checked={checked}
+        onChange={onToggleTodo}
+      />
+      <p className={itemBem({ element: 'text' })}>{text}</p>
+    </label>
+    <button
+      type="submit"
+      className={[buttonBem(), itemBem({ element: 'delete' })].join(' ')}
+    >
+      Delete Todo
+    </button>
+  </form>
+)
+
+const enhancer = compose(
+  pure,
+  withHandlers({
+    onDeleteTodo: ({ id, onDeleteTodo }) => ev => {
+      ev.preventDefault()
+      onDeleteTodo(id)
+    },
+    onToggleTodo: ({ id, onToggleTodo }) => ev => {
+      onToggleTodo(id)
+    },
+  })
+)
+
+export default enhancer(TodoItem)

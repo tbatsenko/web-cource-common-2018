@@ -5,14 +5,14 @@ import { splitEvery } from 'ramda';
 
 const b = BEM('calendar');
 
-const CalendarBody = ({ monthModel, children }) => (
+const CalendarBody = ({ monthModel, children, calendarDate }) => (
   <section className={b('body')}>
     {monthModel().map((row, rowIndex) => (
       <ul key={rowIndex} className={b('row')}>
         {row.map(
           (day, dayIndex) =>
             !isNaN(parseInt(day)) ? (
-              children(day, dayIndex)
+              children(calendarDate, day, dayIndex)
             ) : (
               <li key={dayIndex} className={b('cell')}>
                 {day}
@@ -25,19 +25,22 @@ const CalendarBody = ({ monthModel, children }) => (
 );
 
 const enhancer = compose(
-  withProps(({ date }) => ({
+  withProps(({ calendarDate }) => ({
     daysList: (startMonday = true) => {
       let days = [ 'Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat' ];
-      let firstDay = new Date(date.year, date.month).getDay();
+      let firstDay = new Date(calendarDate.year, calendarDate.month).getDay();
 
       if (startMonday) {
         days.push(days.shift());
         firstDay = (firstDay + 6) % 7;
       }
       return [ days, firstDay ];
+    },
+    daysInMonth: (year, month) => {
+      return new Date(year, month + 1, 0).getDate();
     }
   })),
-  withProps(({ daysList, daysInMonth, date }) => ({
+  withProps(({ daysList, daysInMonth, calendarDate }) => ({
     monthModel: () => {
       let [ days, firstDay ] = daysList();
       return splitEvery(
@@ -45,8 +48,8 @@ const enhancer = compose(
         days.concat(
           Array(firstDay)
             .fill(undefined)
-            .concat(Array(daysInMonth(date.year, date.month)).fill(1).map((d, i) => i + 1))
-            .concat(Array(42 - daysInMonth(date.year, date.month) - firstDay).fill(undefined))
+            .concat(Array(daysInMonth(calendarDate.year, calendarDate.month)).fill(1).map((d, i) => i + 1))
+            .concat(Array(42 - daysInMonth(calendarDate.year, calendarDate.month) - firstDay).fill(undefined))
         )
       );
     }

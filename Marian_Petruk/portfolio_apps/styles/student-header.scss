@@ -1,0 +1,81 @@
+.student-header {
+  display: flex;
+  height: 180px;
+  //overflow: hidden;
+  background-color: rgb(101, 57, 152);
+
+  &:after {
+    content: '';
+    width: 62px;
+    height: 32px;
+    background: url('../images/shevron.svg') center no-repeat;
+    margin-top: 180px;
+    margin-left: -432px;
+    position: inherit;
+    display: block;
+    z-index: 100;
+  }
+
+  &__student-avatar {
+    width: 120px;
+    height: 120px;
+    margin: 20px 40px 0 45px;
+    border-radius: 50%;
+    border: 10px solid white;
+  }
+
+  &__student-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 5px;
+    padding-bottom: 28px;
+    padding-top: 28px;
+    //color: whitesmoke;
+  }
+
+  &__student-name {
+    //margin-bottom: 8px;
+    font-weight: 900;
+    font-size: 40px;
+    font-family: 'Roboto', sans-serif;
+    color: whitesmoke;
+  }
+
+  &__student-occupation {
+    display: inline-block;
+    height: 50px;
+    font-weight: 300;
+    font-size: 13px;
+    border-bottom: 1px solid white;
+    padding-bottom: 9px;
+    font-family: 'Roboto', sans-serif;
+    color: whitesmoke;
+  }
+
+  &__social-info {
+    margin-top: 20px;
+  }
+
+  &__facebook-logo {
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+
+    &:hover {
+      opacity: .8;
+    }
+
+  }
+
+  &__github-logo {
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    margin-left: 6px;
+
+    &:hover {
+      opacity: .8;
+    }
+  }
+}

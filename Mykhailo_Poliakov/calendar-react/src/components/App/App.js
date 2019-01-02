@@ -1,63 +1,54 @@
 import React from 'react';
 import Calendar from '../Calendar/Calendar';
-import Todo from '../Todo/Todo';
+import TodoList from '../TodoList/TodoList';
 import './App.scss';
 import Day from '../Day/Day';
 import BEM from '../../utils/bem';
+import History from '../../utils/History';
 
-import { withState, withHandlers, compose, lifecycle } from 'recompose';
+import { withState, compose, lifecycle, withProps } from 'recompose';
 
 const b = BEM('app');
 
-const App = ({ date, setDate, onSelect }) => (
+const App = ({ activeDate, history }) => (
   <div className={b()}>
     <Calendar
-      date={date}
-      setDate={setDate}
-      children={(day, index) => <Day key={index} day={day} date={date} onSelect={onSelect} />}
+      history={history}
+      activeDate={activeDate}
+      children={(calendarDate, day, id) => <Day key={id} day={day} activeDate={activeDate} calendarDate={calendarDate} history={history} />}
     />
-    <Todo date={date} />
+    <TodoList activeDate={activeDate} />
   </div>
 );
 
 const enhancer = compose(
-  withState('date', 'setDate', { year: 0, month: 0, day: 0 }),
-  withHandlers({
-    onSelect: ({ setDate, date }) => (e) => {
-      e.preventDefault();
-      let newDay = parseInt(e.target.innerHTML);
-      if (newDay !== date.day) {
-        setDate({ year: date.year, month: date.month, day: newDay });
-      }
-    },
-    onControlsClick: ({ setDate }) => (e) => {
-      if (e.state != null) {
-        setDate({ year: e.state.year, month: e.state.month, day: e.state.day });
-      }
-    }
-  }),
-  lifecycle({
-    componentDidMount() {
-      const { setDate, onControlsClick } = this.props;
-
+  withProps({
+    history: new History(),
+    dateFromURL: () => {
       const params = new URLSearchParams(window.location.search);
+
       let newYear = parseInt(params.get('year'));
       let newMonth = parseInt(params.get('month'));
       let newDay = parseInt(params.get('day'));
-      if (
-        newYear > 0 &&
-        (newMonth >= 0 && newMonth < 12) &&
-        (newDay > 0 && newDay <= new Date(newYear, newMonth + 1, 0).getDate())
-      ) {
-        setDate({ year: newYear, month: newMonth, day: newDay });
-      } else {
-        setDate({
-          year: new Date().getFullYear(),
-          month: new Date().getMonth(),
-          day: new Date().getDate()
-        });
-      }
-      window.addEventListener('popstate', onControlsClick);
+
+      return !isNaN(new Date(newYear, newMonth, newDay).getTime())
+        ? { year: newYear, month: newMonth, day: newDay }
+        : {
+            year: new Date().getFullYear(),
+            month: new Date().getMonth(),
+            day: new Date().getDate()
+          };
+    }
+  }),
+  withState('activeDate', 'setActiveDate', ({ dateFromURL }) => ({
+    year: dateFromURL().year,
+    month: dateFromURL().month,
+    day: dateFromURL().day
+  })),
+  lifecycle({
+    componentDidMount() {
+      const { history, setActiveDate } = this.props;
+      history.subscribe(e => setActiveDate(e.state));
     }
   })
 );

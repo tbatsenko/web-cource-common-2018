@@ -3,7 +3,7 @@ import './Antichrist.css'
 
 export default class Antichrist extends Component {
   getClasses() {
-    return 'Antichrist' + (this.props.good ? ' Antichrist-good' : '')
+    return 'Antichrist' + (this.props.good ? ' Antichrist_good' : '')
   }
 
   render() {

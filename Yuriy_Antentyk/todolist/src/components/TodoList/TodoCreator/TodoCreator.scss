@@ -1,24 +1,32 @@
-.todoList{
+@import "../../../css/colors.scss";
+@import "../../../css/fonts.scss";
 
-    &__todoCreator{
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        align-items: center;
-    }
+.todoCreator {
+  display: flex;
+  flex-direction: column;
+  margin-top: 10px;
 
-    &__todoCreator-input{
-        flex-grow: 2;
-    }
+  &__form {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap;
+  }
 
-    &__todoCreator-submit{
-    }
+  &__textInput {
+    margin-bottom: 5px;
+    margin-right: 5px;
+  }
 
-    &__todoCreator-header{
-        width: 100%;
-    }
+  &__submit {
+    margin-bottom: 5px;
+  }
 
-    &__todoCreator-error{
-        color: #e74c3c;
-    }
+  &__errorMessage {
+    color: $color--white;
+    font-size: $font-size--regular;
+    font-family: $font-family--regular;
+    font-weight: 800;
+    margin: 3px 0;
+  }
 }

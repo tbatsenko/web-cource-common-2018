@@ -1,7 +1,7 @@
 import React from 'react';
 import './Day.scss';
 import BEM from '../../utils/bem';
-import { withProps, compose, withPropsOnChange } from 'recompose';
+import { withProps, compose, withHandlers } from 'recompose';
 import { holidays } from '../../utils/holidays.json';
 
 const b = BEM('day');
@@ -13,17 +13,22 @@ const Day = ({ day, onSelect, isActive, isHoliday, isWeekend, url }) => (
 );
 
 const enhancer = compose(
-  withProps(({ day, date }) => ({
-    url: `/?year=${date.year}&month=${date.month}&day=${date.day}`,
-    isActive: day === date.day,
-    isHoliday: holidays.find((holiday) => {
-      return day === holiday.day && date.month === holiday.month;
+  withProps(({ day, activeDate, calendarDate }) => ({
+    url: `/?year=${calendarDate.year}&month=${calendarDate.month}&day=${day}`,
+    isActive: activeDate.day === day && activeDate.month === calendarDate.month && activeDate.year === calendarDate.year,
+    isHoliday: holidays.find(holiday => {
+      return day === holiday.day && calendarDate.month === holiday.month;
     }),
-    isWeekend: [ 0, 6 ].includes(new Date(date.year, date.month, day).getDay())
+    isWeekend: [ 0, 6 ].includes(new Date(calendarDate.year, calendarDate.month, day).getDay())
   })),
-  withPropsOnChange([ 'date' ], ({ isActive, date, url }) => {
-    if (isActive) {
-      window.history.pushState({ year: date.year, month: date.month, day: date.day }, null, url);
+  withHandlers({
+    onSelect: ({ calendarDate, isActive, url, day, history }) => e => {
+      e.preventDefault();
+      if (!isActive) {
+        e.state = { year: calendarDate.year, month: calendarDate.month, day: day };
+        history.pushState(e.state, url);
+        history.publish(e);
+      }
     }
   })
 );

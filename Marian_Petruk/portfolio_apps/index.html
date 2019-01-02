@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <title>Profile</title>
+    <meta charset="utf-8">
+    <link rel="shortcut icon" href="https://pf.ucu.edu.ua/static/images/logo.ico" type="image/ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1">
+    <meta name="description" content="This helps you to create your portfolio">
+    <link href="styles/common.css" rel="stylesheet">
+    <link rel="shortcut icon" href="https://pf.ucu.edu.ua/static/images/logo.ico" type="image/ico">
+    <script src="scripts/student_switcher.js"></script>
+</head>
+<body>
+<header class="portfolio-header">
+    <a class="portfolio-header__portfolio-logo" href="https://pf.ucu.edu.ua/">
+        <img src="images/portfolio_logo.svg" alt="portfolio logo">
+    </a>
+    <section class="portfolio-header__icon-container">
+        <a class="portfolio-header__search-icon" href="https://pf.ucu.edu.ua/search/"></a>
+        <a class="portfolio-header__cv-icon" href="https://pf.ucu.edu.ua/generate-cv/48/">CV</a>
+        <a class="portfolio-header__envelope-icon" href="https://pf.ucu.edu.ua/user-show-requests/"></a>
+        <a class="portfolio-header__header-avatar-link">
+            <img class="portfolio-header__header-avatar-img"
+                 src="https://res.cloudinary.com/firex/image/upload/c_scale,r_30,w_35/v1546077102/portfolio_apps_refactoring/48.jpg"
+                 alt="user avatar">
+        </a>
+    </section>
+</header>
+<main class="student-wrapper">
+    <header class="student-header">
+        <img src="https://res.cloudinary.com/firex/image/upload/w_120/v1546077102/portfolio_apps_refactoring/48.jpg"
+             alt="profile-photo" class="student-header__student-avatar">
+        <section class="student-header__student-info">
+            <span class="student-header__student-name">Marian Petruk</span>
+            <span class="student-header__student-occupation">BA Computer Science, 3</span>
+            <section class="student-header__social-info">
+                <a class="student-header__facebook-logo" href="https://www.facebook.com/marian.petruk">
+                    <img src="images/facebook.svg" alt="facebook logo">
+                </a>
+                <a class="student-header__github-logo" href="https://github.com/marianpetruk">
+                    <img src="images/github.svg" alt="github logo">
+                </a>
+            </section>
+        </section>
+    </header>
+    <section class="student-main-content-wrapper">
+        <aside class="skills">
+            <h3 class="skills__block-title skills__block-title_hard-skills">LANGUAGES</h3>
+            <dl class="skills__block">
+                <dt class="skills__item skills__item_language">English</dt>
+                <dd class="skills__item-value skills__item-value_language-level">C1</dd>
+                <dt class="skills__item skills__item_language">Italian</dt>
+                <dd class="skills__item-value skills__item-value_language-level">B1</dd>
+                <dt class="skills__item skills__item_language">German</dt>
+                <dd class="skills__item-value skills__item-value_language-level">A2</dd>
+                <dt class="skills__item skills__item_language">Polish</dt>
+                <dd class="skills__item-value skills__item-value_language-level">A1</dd>
+                <dt class="skills__item skills__item_language">Russian</dt>
+                <dd class="skills__item-value skills__item-value_language-level">C1</dd>
+                <dt class="skills__item skills__item_language">Ukrainian</dt>
+                <dd class="skills__item-value skills__item-value_language-level">C2</dd>
+            </dl>
+            <h3 class="skills__block-title">HARD SKILLS</h3>
+            <ul class="skills__block">
+                <li class="skills__item">Kotlin</li>
+                <li class="skills__item">Bootstrap</li>
+                <li class="skills__item">Flask</li>
+                <li class="skills__item">Linux/Unix administration</li>
+                <li class="skills__item">AWS</li>
+                <li class="skills__item">Adobe Photoshop</li>
+                <li class="skills__item">Adobe Illustrator</li>
+                <li class="skills__item">CI/CD</li>
+                <li class="skills__item">OOP</li>
+                <li class="skills__item">Networking theory (TCP/IP)</li>
+                <li class="skills__item">Bash</li>
+                <li class="skills__item">Git</li>
+                <li class="skills__item">Microsoft Office Suite</li>
+                <li class="skills__item">Experience with cutting-edge technological trends</li>
+                <li class="skills__item">Understanding of business process modeling</li>
+                <li class="skills__item">Understanding of SDLC</li>
+            </ul>
+            <h3 class="skills__block-title">PROGRAMMING LANGUAGES</h3>
+            <ul class="skills__block">
+                <li class="skills__item">Python</li>
+                <li class="skills__item">C</li>
+                <li class="skills__item">C++</li>
+                <li class="skills__item">Java</li>
+                <li class="skills__item">JavaScript</li>
+                <li class="skills__item">R</li>
+                <li class="skills__item">MySql</li>
+                <li class="skills__item">Scratch</li>
+                <li class="skills__item">HTML&amp;CSS</li>
+                <li class="skills__item">Pascal</li>
+                <li class="skills__item">Unix shell</li>
+            </ul>
+            <h3 class="skills__block-title">SOFT SKILLS</h3>
+            <ul class="skills__block">
+                <li class="skills__item">Communication</li>
+                <li class="skills__item">Team work</li>
+                <li class="skills__item">Collaboration</li>
+                <li class="skills__item">Attention to Detail</li>
+                <li class="skills__item">Problem-Solving</li>
+                <li class="skills__item">Self-Motivated</li>
+                <li class="skills__item">Self-management</li>
+            </ul>
+        </aside>
+        <section class="projects-wrapper">
+            <nav class="project-type-switchers">
+                <button onclick="project()"
+                        class="project-type-switchers__switch  project-type-switchers__switch_active">
+                    <span class="project-type-switchers__switch-item project-type-switchers__switch-item_active">Projects</span>
+                </button>
+                <button onclick="internship()" class="project-type-switchers__switch">
+                    <span class="project-type-switchers__switch-item">Internships</span>
+                </button>
+                <button onclick="volunteer()" class="project-type-switchers__switch">
+                    <span class="project-type-switchers__switch-item">Volunteering</span>
+                </button>
+            </nav>
+            <section class="projects" onload="project()"></section>
+        </section>
+        <aside class="skills">
+            <h3 class="skills__block-title">PROFESSIONAL INTERESTS</h3>
+            <ul class="skills__block">
+                <li class="skills__item">Artificial intelligence</li>
+                <li class="skills__item">Data Science</li>
+                <li class="skills__item">Machine learning</li>
+                <li class="skills__item">Computer vision</li>
+                <li class="skills__item">Information Security</li>
+                <li class="skills__item">Computer Networks</li>
+                <li class="skills__item">Concurrent, Parallel and Distributed Systems</li>
+                <li class="skills__item">Robotics</li>
+            </ul>
+            <h3 class="skills__block-title">HOBBIES</h3>
+            <ul class="skills__block">
+                <li class="skills__item">Cycling</li>
+                <li class="skills__item">Hiking</li>
+                <li class="skills__item">Travelling</li>
+            </ul>
+        </aside>
+    </section>
+</main>
+</body>
+</html>

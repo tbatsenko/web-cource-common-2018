@@ -1,36 +1,41 @@
-import React from "react"
-import bem from "../../../helpers/bem"
+import React from 'react'
+import { pure } from 'recompose'
 
-const todoListBem = bem("todoList")
+import bem from '../../../helpers/bem'
 
-export default class TodoNav extends React.Component{
-    render(){
-        const {
-            onCheckAllTodos,
-            onUncheckAllTodos,
-            onDeleteSelectedTodos
-        } = this.props
-        return (
-            <div className={todoListBem({element: "todoNav"})}>
-                <button
-                    className={todoListBem({element: "todoNav-item"})}
-                    onClick={onCheckAllTodos}
-                >
-                    Check all
-                </button>
-                <button
-                    className={todoListBem({element: "todoNav-item"})}
-                    onClick={onUncheckAllTodos}
-                >
-                    Uncheck all
-                </button>
-                <button
-                    className={todoListBem({element: "todoNav-item"})}
-                    onClick={onDeleteSelectedTodos}
-                >
-                    Delete Selected
-                </button>
-            </div>
-        )
-    }
-}
+import './TodoNav.scss'
+import '../../../css/bem/button.scss'
+
+const buttonBem = bem('button')
+const navBem = bem('todoNav')
+
+const TodoNav = ({
+  onCheckAllTodos,
+  onUncheckAllTodos,
+  onDeleteSelectedTodos,
+}) => (
+  <div className={navBem()}>
+    <button
+      onClick={onCheckAllTodos}
+      className={[buttonBem(), navBem({ element: 'item' })].join(' ')}
+    >
+      Check all
+    </button>
+    <button
+      onClick={onUncheckAllTodos}
+      className={[buttonBem(), navBem({ element: 'item' })].join(' ')}
+    >
+      Uncheck all
+    </button>
+    <button
+      onClick={onDeleteSelectedTodos}
+      className={[buttonBem(), navBem({ element: 'item' })].join(' ')}
+    >
+      Delete Selected
+    </button>
+  </div>
+)
+
+const enhancer = pure
+
+export default enhancer(TodoNav)
