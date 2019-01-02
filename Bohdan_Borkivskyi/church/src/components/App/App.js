@@ -260,15 +260,20 @@ export default class App extends Component {
   }
 
   render() {
-    if (
-      this.state.antichrists === null ||
-      this.state.cristians === null ||
-      this.state.antichrists.length === 0 ||
-      this.state.cristians.length === 0
-    ) {
+    if (this.state.antichrists === null || this.state.cristians === null) {
+      return <p>Loading...</p>
+    } else if (this.state.antichrists.length === 0) {
       return (
-        <div className="App">
+        <div className="App App_win">
           <button onClick={this.restart}>New game</button>
+          <h1 className="App__text">Catholics won</h1>
+        </div>
+      )
+    } else if (this.state.cristians.length === 0) {
+      return (
+        <div className="App App_lose">
+          <button onClick={this.restart}>New game</button>
+          <h1 className="App__text">Antichrists won</h1>
         </div>
       )
     }
