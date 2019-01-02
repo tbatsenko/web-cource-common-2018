@@ -1,1 +1,10 @@
-{"version":3,"sourceRoot":"","sources":["student-page.scss"],"names":[],"mappings":"AAAA;EACE;EACA;EACA","file":"student-page.css"}
+{
+  "version": 3,
+  "sourceRoot": "",
+  "sources": [
+    "student-page.scss"
+  ],
+  "names": [],
+  "mappings": "AAAA;EACE;EACA;EACA",
+  "file": "student-page.css"
+}

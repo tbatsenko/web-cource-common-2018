@@ -10,7 +10,6 @@
 .portfolio-header__portfolio-logo {
   width: 70px;
   height: 50px;
-  background: url("../images/portfolio_logo.svg");
   opacity: 0.8;
   margin-left: 30px;
 }
@@ -52,15 +51,17 @@
 .portfolio-header__envelope-icon:hover {
   opacity: 1;
 }
-.portfolio-header__header-avatar {
-  background: url("https://res.cloudinary.com/firex/image/upload/c_scale,r_60,w_35/v1546077102/portfolio_apps_refactoring/48.png") center no-repeat;
+.portfolio-header__header-avatar-link {
   opacity: 0.8;
   width: 35px;
   height: 35px;
   cursor: pointer;
 }
-.portfolio-header__header-avatar:hover {
+.portfolio-header__header-avatar-link:hover {
   opacity: 1;
+}
+.portfolio-header__header-avatar-img {
+  border-radius: 50%;
 }
 
 .student-header {
@@ -74,21 +75,25 @@
   height: 32px;
   background: url("../images/shevron.svg") center no-repeat;
   margin-top: 180px;
-  margin-left: -430px;
+  margin-left: -432px;
   position: inherit;
   display: block;
   z-index: 100;
 }
 .student-header__student-avatar {
-  width: 140px;
-  height: 140px;
+  width: 120px;
+  height: 120px;
   margin: 20px 40px 0 45px;
+  border-radius: 50%;
+  border: 10px solid white;
 }
 .student-header__student-info {
   display: flex;
   flex-direction: column;
   justify-content: center;
   padding-left: 5px;
+  padding-bottom: 28px;
+  padding-top: 28px;
 }
 .student-header__student-name {
   font-weight: 900;
@@ -97,6 +102,8 @@
   color: whitesmoke;
 }
 .student-header__student-occupation {
+  display: inline-block;
+  height: 50px;
   font-weight: 300;
   font-size: 13px;
   border-bottom: 1px solid white;
@@ -105,13 +112,12 @@
   color: whitesmoke;
 }
 .student-header__social-info {
-  margin-top: 10px;
+  margin-top: 20px;
 }
 .student-header__facebook-logo {
   display: inline-block;
   width: 25px;
   height: 25px;
-  background: url("https://res.cloudinary.com/firex/image/upload/c_scale,h_25,w_25/v1546077102/portfolio_apps_refactoring/facebook.png");
 }
 .student-header__facebook-logo:hover {
   opacity: 0.8;
@@ -120,7 +126,6 @@
   display: inline-block;
   width: 25px;
   height: 25px;
-  background: url("https://res.cloudinary.com/firex/image/upload/c_scale,h_25,w_25/v1546077102/portfolio_apps_refactoring/github.png");
   margin-left: 6px;
 }
 .student-header__github-logo:hover {

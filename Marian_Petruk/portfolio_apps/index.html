@@ -10,28 +10,37 @@
     <link href="styles/common.css" rel="stylesheet">
     <link rel="shortcut icon" href="https://pf.ucu.edu.ua/static/images/logo.ico" type="image/ico">
     <script src="scripts/student_switcher.js"></script>
-    <script src="scripts/project_resizer.js"></script>
-    <script src="scripts/menu_mover.js"></script>
 </head>
 <body>
 <header class="portfolio-header">
-    <a class="portfolio-header__portfolio-logo" href="https://pf.ucu.edu.ua/"></a>
+    <a class="portfolio-header__portfolio-logo" href="https://pf.ucu.edu.ua/">
+        <img src="images/portfolio_logo.svg" alt="portfolio logo">
+    </a>
     <section class="portfolio-header__icon-container">
-        <a class="portfolio-header__search-icon"href="https://pf.ucu.edu.ua/search/"></a>
+        <a class="portfolio-header__search-icon" href="https://pf.ucu.edu.ua/search/"></a>
         <a class="portfolio-header__cv-icon" href="https://pf.ucu.edu.ua/generate-cv/48/">CV</a>
         <a class="portfolio-header__envelope-icon" href="https://pf.ucu.edu.ua/user-show-requests/"></a>
-        <a class="portfolio-header__header-avatar"></a>
+        <a class="portfolio-header__header-avatar-link">
+            <img class="portfolio-header__header-avatar-img"
+                 src="https://res.cloudinary.com/firex/image/upload/c_scale,r_30,w_35/v1546077102/portfolio_apps_refactoring/48.jpg"
+                 alt="user avatar">
+        </a>
     </section>
 </header>
 <main class="student-wrapper">
     <header class="student-header">
-        <img src="https://res.cloudinary.com/firex/image/upload/w_120/v1546077102/portfolio_apps_refactoring/48.png" alt="profile-photo" class="student-header__student-avatar">
+        <img src="https://res.cloudinary.com/firex/image/upload/w_120/v1546077102/portfolio_apps_refactoring/48.jpg"
+             alt="profile-photo" class="student-header__student-avatar">
         <section class="student-header__student-info">
             <span class="student-header__student-name">Marian Petruk</span>
             <span class="student-header__student-occupation">BA Computer Science, 3</span>
             <section class="student-header__social-info">
-                <a class="student-header__facebook-logo" href="https://www.facebook.com/marian.petruk"></a
-                ><a class="student-header__github-logo" href="https://github.com/marianpetruk"></a>
+                <a class="student-header__facebook-logo" href="https://www.facebook.com/marian.petruk">
+                    <img src="images/facebook.svg" alt="facebook logo">
+                </a>
+                <a class="student-header__github-logo" href="https://github.com/marianpetruk">
+                    <img src="images/github.svg" alt="github logo">
+                </a>
             </section>
         </section>
     </header>
@@ -98,15 +107,16 @@
         </aside>
         <section class="projects-wrapper">
             <nav class="project-type-switchers">
-                    <button onclick="project()" class="project-type-switchers__switch  project-type-switchers__switch_active">
-                        <span  class="project-type-switchers__switch-item project-type-switchers__switch-item_active">Projects</span>
-                    </button>
-                    <button onclick="internship()" class="project-type-switchers__switch">
-                        <span class="project-type-switchers__switch-item">Internships</span>
-                    </button>
-                    <button onclick="volunteer()" class="project-type-switchers__switch">
-                        <span class="project-type-switchers__switch-item">Volunteering</span>
-                    </button>
+                <button onclick="project()"
+                        class="project-type-switchers__switch  project-type-switchers__switch_active">
+                    <span class="project-type-switchers__switch-item project-type-switchers__switch-item_active">Projects</span>
+                </button>
+                <button onclick="internship()" class="project-type-switchers__switch">
+                    <span class="project-type-switchers__switch-item">Internships</span>
+                </button>
+                <button onclick="volunteer()" class="project-type-switchers__switch">
+                    <span class="project-type-switchers__switch-item">Volunteering</span>
+                </button>
             </nav>
             <section class="projects" onload="project()"></section>
         </section>

@@ -10,28 +10,29 @@
   &__portfolio-logo {
     width: 70px;
     height: 50px;
-    background: url("../images/portfolio_logo.svg");
-    opacity:.8;
+    opacity: .8;
     margin-left: 30px;
   }
 
   &__icon-container {
-    width:145px;
+    width: 145px;
     margin-right: 30px;
     display: flex;
     align-items: center;
     justify-content: space-between;
   }
 
-  &__search-icon{
-    width:20px;
-    height:44px;
+  &__search-icon {
+    width: 20px;
+    height: 44px;
     background: url("../images/search_icon.svg") no-repeat center;
     opacity: .8;
-    &:hover{
-      opacity:1;
+
+    &:hover {
+      opacity: 1;
     }
   }
+
   &__cv-icon {
     text-decoration: none;
     font-weight: bold;
@@ -40,29 +41,36 @@
     opacity: .8;
     font-family: 'Roboto', sans-serif;
     color: whitesmoke;
-    &:hover{
-      opacity:1;
+
+    &:hover {
+      opacity: 1;
     }
   }
 
-  &__envelope-icon{
+  &__envelope-icon {
     width: 20px;
     height: 16px;
     background: url("../images/envelope.svg") no-repeat;
     opacity: .8;
     background-size: contain;
-    &:hover{
-      opacity:1;
+
+    &:hover {
+      opacity: 1;
     }
   }
-  &__header-avatar {
-    background: url("https://res.cloudinary.com/firex/image/upload/c_scale,r_60,w_35/v1546077102/portfolio_apps_refactoring/48.png") center no-repeat;
+
+  &__header-avatar-link {
     opacity: .8;
     width: 35px;
     height: 35px;
     cursor: pointer;
+
     &:hover {
       opacity: 1;
     }
+  }
+
+  &__header-avatar-img {
+    border-radius: 50%;
   }
 }
