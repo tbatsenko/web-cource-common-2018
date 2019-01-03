@@ -48,23 +48,6 @@ export default class App extends Component {
       anti[i].x += anti[i].xMove * multiplier
       anti[i].y += anti[i].yMove * multiplier
 
-      if (anti[i].x < 300) {
-        anti[i].good = false
-      }
-
-      if (anti[i].x < 0) {
-        anti[i].x = 0
-      }
-      if (anti[i].y < 0) {
-        anti[i].y = 0
-      }
-      if (anti[i].x > 485) {
-        anti[i].x = 485
-      }
-      if (anti[i].y > 285) {
-        anti[i].y = 285
-      }
-
       if (bumped.includes(i)) {
         continue
       }
@@ -87,6 +70,9 @@ export default class App extends Component {
 
           anti[i].xMove = tempXMove
           anti[i].yMove = tempYMove
+
+          anti[i].x += anti[i].xMove
+          anti[i].y += anti[i].yMove
         }
       }
 
@@ -109,6 +95,23 @@ export default class App extends Component {
         anti[i].yMove *= -1
         anti[i].x += anti[i].xMove
         anti[i].y += anti[i].yMove
+      }
+
+      if (anti[i].x < 285) {
+        anti[i].good = false
+      }
+
+      if (anti[i].x < 0) {
+        anti[i].x = 0
+      }
+      if (anti[i].y < 0) {
+        anti[i].y = 0
+      }
+      if (anti[i].x > 485) {
+        anti[i].x = 485
+      }
+      if (anti[i].y > 285) {
+        anti[i].y = 285
       }
     }
 
@@ -248,7 +251,7 @@ export default class App extends Component {
     while (i < n) {
       let antichrist = {
         id: i,
-        x: Math.floor(Math.random() * 200) + 1,
+        x: Math.floor(Math.random() * 270) + 1,
         y: Math.floor(Math.random() * 270) + 1,
         xMove: Math.floor(Math.random() * 2 + 1),
         yMove: Math.floor(Math.random() * 2 + 1),
