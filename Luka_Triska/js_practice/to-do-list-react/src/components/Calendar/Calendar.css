@@ -18,7 +18,7 @@
 
 .day-cell-empty {
   width: 36px; }
-.day-cell-current {
+.day-cell-today {
   width: 36px;
   text-align: center;
   cursor: pointer;

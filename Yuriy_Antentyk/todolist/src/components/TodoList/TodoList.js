@@ -1,31 +1,36 @@
 import React from 'react'
+import { compose, pure } from 'recompose'
 
-import Item from './Item'
-import Creator from './Creator'
-import Header from "./Header"
-import Nav from './Nav'
+import todosEnhancer from '../HOC/todos'
 
-import bem from "../../helpers/js/bem"
-import "./TodoList.scss"
+import TodoHeader from './TodoHeader'
+import TodoCreator from './TodoCreator'
+import TodoNav from './TodoNav'
+import TodoItem from './TodoItem'
 
-const todoListBem = bem("todoList")
+import bem from '../../helpers/bem'
+
+import './TodoList.scss'
+
+const todoListBem = bem('todoList')
 
 const TodoList = ({
   date,
   onAddTodo,
+
   onDeleteTodo,
   onToggleTodo,
+
   onCheckAllTodos,
   onUncheckAllTodos,
   onDeleteSelectedTodos,
   todos,
 }) => (
   <div className={todoListBem()}>
-    <Header date={date} />
-    <Creator onAddTodo={onAddTodo} />
+    <TodoHeader date={date} />
+    <TodoCreator date={date} onAddTodo={onAddTodo} />
     {todos.map(todo => (
-      <Item
-        key={todo.id}
+      <TodoItem
         id={todo.id}
         text={todo.text}
         checked={todo.checked}
@@ -33,7 +38,7 @@ const TodoList = ({
         onToggleTodo={onToggleTodo}
       />
     ))}
-    <Nav
+    <TodoNav
       onCheckAllTodos={onCheckAllTodos}
       onUncheckAllTodos={onUncheckAllTodos}
       onDeleteSelectedTodos={onDeleteSelectedTodos}
@@ -41,4 +46,9 @@ const TodoList = ({
   </div>
 )
 
-export default TodoList
+const enhancer = compose(
+  pure,
+  todosEnhancer
+)
+
+export default enhancer(TodoList)

@@ -2,7 +2,7 @@ import React from 'react';
 import './Calendar.scss';
 import BEM from '../../utils/bem';
 import CalendarBody from './CalendarBody';
-import { withProps, compose, withHandlers } from 'recompose';
+import { withProps, compose, withHandlers, withState, lifecycle } from 'recompose';
 
 const b = BEM('calendar');
 
@@ -18,6 +18,10 @@ const Calendar = ({ calendarDate, onPreviousMonth, onNextMonth, monthList, child
   </section>
 );
 const enhancer = compose(
+  withState('calendarDate', 'setCalendarDate', ({ activeDate }) => ({
+    year: activeDate.year,
+    month: activeDate.month
+  })),
   withProps(() => ({
     monthList: [ 'January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December' ]
   })),
@@ -31,6 +35,12 @@ const enhancer = compose(
       let newYear = calendarDate.month === 0 ? calendarDate.year - 1 : calendarDate.year;
       let newMonth = calendarDate.month === 0 ? 11 : calendarDate.month - 1;
       setCalendarDate({ year: newYear, month: newMonth });
+    }
+  }),
+  lifecycle({
+    componentDidMount() {
+      const { history, setCalendarDate } = this.props;
+      history.subscribe(e => setCalendarDate(e.state));
     }
   })
 );

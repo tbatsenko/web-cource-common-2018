@@ -5,14 +5,14 @@ import { splitEvery } from 'ramda';
 
 const b = BEM('calendar');
 
-const CalendarBody = ({ monthModel, children }) => (
+const CalendarBody = ({ monthModel, children, calendarDate }) => (
   <section className={b('body')}>
     {monthModel().map((row, rowIndex) => (
       <ul key={rowIndex} className={b('row')}>
         {row.map(
           (day, dayIndex) =>
             !isNaN(parseInt(day)) ? (
-              children(day, dayIndex)
+              children(calendarDate, day, dayIndex)
             ) : (
               <li key={dayIndex} className={b('cell')}>
                 {day}

@@ -8,7 +8,7 @@ import TodoItem from './TodoItem';
 import TodoCreator from './TodoCreator';
 
 const b = BEM('todo');
-const api = API('127.0.0.1:4000', 'todos');
+const api = API(process.env.REACT_APP_API_URL, process.env.REACT_APP_API_ENDPOINT);
 
 const TodoList = ({ activeDate, todos, getTodos, monthList }) => (
   <section className={b()}>

@@ -22,11 +22,12 @@ const enhancer = compose(
     isWeekend: [ 0, 6 ].includes(new Date(calendarDate.year, calendarDate.month, day).getDay())
   })),
   withHandlers({
-    onSelect: ({ calendarDate, isActive, url, day, onDaySelect }) => e => {
+    onSelect: ({ calendarDate, isActive, url, day, history }) => e => {
       e.preventDefault();
       if (!isActive) {
-        window.history.pushState({ year: calendarDate.year, month: calendarDate.month, day: day }, null, url);
-        onDaySelect(day);
+        e.state = { year: calendarDate.year, month: calendarDate.month, day: day };
+        history.pushState(e.state, url);
+        history.publish(e);
       }
     }
   })
