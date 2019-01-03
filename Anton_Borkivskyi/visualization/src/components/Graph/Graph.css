@@ -1,0 +1,56 @@
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 50px auto;
+  width: 1000px;
+  height: 600px; }
+
+.graph {
+  width: 1000px;
+  height: 500px;
+  display: flex;
+  border: 1px solid black; }
+  .graph__text-container {
+    height: 100%;
+    width: 20%;
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: space-between; }
+    .graph__text-container_text {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 15px; }
+  .graph__bar-container {
+    background: #ddd;
+    height: 100%;
+    width: 80%;
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    justify-content: space-between; }
+
+.left {
+  align-items: flex-end; }
+  .left .bar {
+    background: #e05b42;
+    color: #e05b42; }
+
+.right {
+  align-items: flex-start; }
+  .right .bar {
+    background: #1da1f2;
+    color: #1da1f2; }
+
+.bar {
+  border: 1px solid black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 15px;
+  font-weight: bold; }
+  .bar:hover {
+    background: transparent; }
+
+/*# sourceMappingURL=Graph.css.map */
