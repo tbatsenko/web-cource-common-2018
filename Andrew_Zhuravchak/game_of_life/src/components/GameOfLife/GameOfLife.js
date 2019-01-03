@@ -26,18 +26,16 @@ export default class GameOfLife extends Component {
     const offsets = [[1, 0], [0, 1], [-1, 0], [0, -1], [-1, -1], [-1, 1], [1, -1], [1, 1]]
     const { cellsPerLine, lines } = this.props
 
-    let neighbours = 0
-
-    offsets.forEach((offset) => {
+    return offsets.reduce((previousValue, offset) => {
       const newRow = row + offset[1]
       const newCol = col + offset[0]
 
       if (!(newRow < 0 || newCol < 0 || newRow >= lines || newCol > cellsPerLine)) // check if "neighbour" cell inside board
-        if (board[newRow][newCol])// check if it's alive
-          neighbours += 1
-    })
+        if (board[newRow][newCol]) // check if it's alive
+          return previousValue + 1
 
-    return neighbours
+      return previousValue
+    }, 0)
   }
 
   nextGeneration = () => {
@@ -88,14 +86,12 @@ export default class GameOfLife extends Component {
               )
             })
           }
-
         </div>
 
         <div className="GameOfLife__toolbar">
           <button className="GameOfLife__toolbar-btn" onClick={this.generateInitPopulation}>Init Population</button>
           <button className="GameOfLife__toolbar-btn" onClick={this.nextGeneration}>Next Population</button>
         </div>
-
       </div>
     )
   }
