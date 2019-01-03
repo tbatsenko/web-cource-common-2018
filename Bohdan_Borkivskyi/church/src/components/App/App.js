@@ -31,13 +31,19 @@ export default class App extends Component {
     let bumped = []
     for (let i = 0; i < anti.length; ++i) {
       let punishment = false
-      if (anti[i].x <= 0 || anti[i].x >= 485) {
-        anti[i].xMove *= -1
+
+      if (anti[i].x <= 0) {
+        anti[i].xMove = Math.abs(anti[i].xMove)
+      } else if (anti[i].x >= 485) {
+        anti[i].xMove = -Math.abs(anti[i].xMove)
       }
 
-      if (anti[i].y <= 0 || anti[i].y >= 285) {
-        anti[i].yMove *= -1
+      if (anti[i].y <= 0) {
+        anti[i].yMove = Math.abs(anti[i].yMove)
+      } else if (anti[i].y >= 285) {
+        anti[i].yMove = -Math.abs(anti[i].yMove)
       }
+
       let multiplier = anti.length <= 2 ? 3 : 1
       anti[i].x += anti[i].xMove * multiplier
       anti[i].y += anti[i].yMove * multiplier
@@ -66,6 +72,7 @@ export default class App extends Component {
         if (i === j) {
           continue
         }
+
         if (App.areVeryOverlapped(anti[i], anti[j])) {
           anti[i] = this.movedToSafePlace(anti[i])
         } else if (App.areOverlapped(anti[i], anti[j])) {
@@ -269,22 +276,16 @@ export default class App extends Component {
   }
 
   static areVeryOverlapped(instance1, instance2) {
-    return (
-      Math.pow(
-        Math.pow(instance1.x - instance2.x, 2) +
-          Math.pow(instance1.y - instance2.y, 2),
-        0.5
-      ) < 13
-    )
+    return App.areOverlapped(instance1, instance2, 12)
   }
 
-  static areOverlapped(instance1, instance2) {
+  static areOverlapped(instance1, instance2, threshold = 15) {
     return (
       Math.pow(
         Math.pow(instance1.x - instance2.x, 2) +
           Math.pow(instance1.y - instance2.y, 2),
         0.5
-      ) < 15
+      ) < threshold
     )
   }
 
@@ -295,14 +296,14 @@ export default class App extends Component {
       return (
         <div className="App App_win">
           <button onClick={this.restart}>New game</button>
-          <h1 className="App__text">Catholics won</h1>
+          <h1 className="App__text">Catholics won😇</h1>
         </div>
       )
     } else if (this.state.cristians.length === 0) {
       return (
         <div className="App App_lose">
           <button onClick={this.restart}>New game</button>
-          <h1 className="App__text">Antichrists won</h1>
+          <h1 className="App__text">Antichrists won😈</h1>
         </div>
       )
     }
