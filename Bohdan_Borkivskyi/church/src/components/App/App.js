@@ -244,7 +244,8 @@ export default class App extends Component {
 
   generateRandomAntichrists(n) {
     let anti = []
-    for (let i = 0; i < n; ++i) {
+    let i = 0
+    while (i < n) {
       let antichrist = {
         id: i,
         x: Math.floor(Math.random() * 200) + 1,
@@ -257,7 +258,19 @@ export default class App extends Component {
         Math.random() < 0.5 ? antichrist.xMove : -antichrist.xMove
       antichrist.yMove =
         Math.random() < 0.5 ? antichrist.yMove : -antichrist.yMove
+
+      let overlapped = false
+      for (let j = 0; j < anti.length; ++j) {
+        if (App.areOverlapped(antichrist, anti[j])) {
+          overlapped = true
+        }
+      }
+      if (overlapped) {
+        continue
+      }
+
       anti.push(antichrist)
+      i += 1
     }
     this.setState({ antichrists: anti })
   }
