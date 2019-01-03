@@ -1,0 +1,26 @@
+.GameOfLife {
+  margin: 100px;
+
+  &__board {
+
+    &-line {
+      height: 10px;
+    }
+
+    &-cell {
+      background: #ccc;
+      display: inline-block;
+      width: 10px;
+      height: 10px;
+      border: 1px solid white;
+
+      &--active {
+        background: red;
+      }
+    }
+  }
+
+  &__toolbar {
+    margin: 20px 0;
+  }
+}
