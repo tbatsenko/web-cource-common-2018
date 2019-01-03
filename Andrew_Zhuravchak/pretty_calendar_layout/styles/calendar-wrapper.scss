@@ -3,4 +3,14 @@
   padding: 60px;
   height: 100%;
   box-sizing: border-box;
+
+  &__controls {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
+
+  &__calendar {
+    position: relative;
+  }
 }

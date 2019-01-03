@@ -1,7 +1,6 @@
 .layout {
   display: grid;
-  //grid-template-columns: 224px 1fr;
-  grid-template-columns: 320px 1fr;
+  grid-template-columns: 260px 1fr;
   grid-template-areas: "sidebar main-section";
 
   height: 100vh;

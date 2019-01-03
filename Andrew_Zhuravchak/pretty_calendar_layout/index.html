@@ -91,7 +91,91 @@
 
     <main class="layout__main-section">
         <div class="calendar-wrapper">
-            Section with the calendar
+            <div class="calendar-wrapper__controls">
+                <div class="toogler">
+                    <button class="toogler__btn">Week</button>
+                    <button class="toogler__btn toogler__btn--active">Month</button>
+                </div>
+
+                <div class="date-switcher">
+                    <button class="date-switcher__btn">‹</button>
+                    <span class="date-switcher__current-date">June 2017</span>
+                    <button class="date-switcher__btn">›</button>
+                </div>
+
+                <form action="POST" class="search-form">
+                    <input type="text"
+                           placeholder="What are you looking for?"
+                           aria-label="Search form"
+                           class="search-form__input">
+                </form>
+            </div>
+
+            <div class="calendar-wrapper__calendar">
+                <table class="calendar">
+                    <thead class="calendar__header">
+                    <tr>
+                        <td class="calendar__header-day">Mon</td>
+                        <td class="calendar__header-day">Tue</td>
+                        <td class="calendar__header-day">Wed</td>
+                        <td class="calendar__header-day">Thu</td>
+                        <td class="calendar__header-day">Fri</td>
+                        <td class="calendar__header-day">Sat</td>
+                        <td class="calendar__header-day">Sun</td>
+                    </tr>
+                    </thead>
+
+                    <tbody class="calendar__body">
+                        <tr>
+                            <td class="calendar__cell calendar__cell--empty"></td>
+                            <td class="calendar__cell calendar__cell--empty"></td>
+                            <td class="calendar__cell">1</td>
+                            <td class="calendar__cell">2</td>
+                            <td class="calendar__cell">3</td>
+                            <td class="calendar__cell">4</td>
+                            <td class="calendar__cell">5</td>
+                        </tr>
+                        <tr>
+                            <td class="calendar__cell">6</td>
+                            <td class="calendar__cell">7</td>
+                            <td class="calendar__cell">8</td>
+                            <td class="calendar__cell">9</td>
+                            <td class="calendar__cell">10</td>
+                            <td class="calendar__cell">11</td>
+                            <td class="calendar__cell">12</td>
+                        </tr>
+                        <tr>
+                            <td class="calendar__cell">13</td>
+                            <td class="calendar__cell">14</td>
+                            <td class="calendar__cell">15</td>
+                            <td class="calendar__cell">16</td>
+                            <td class="calendar__cell">17</td>
+                            <td class="calendar__cell">18</td>
+                            <td class="calendar__cell">19</td>
+                        </tr>
+                        <tr>
+                            <td class="calendar__cell">20</td>
+                            <td class="calendar__cell">21</td>
+                            <td class="calendar__cell">22</td>
+                            <td class="calendar__cell">23</td>
+                            <td class="calendar__cell">24</td>
+                            <td class="calendar__cell">25</td>
+                            <td class="calendar__cell">26</td>
+                        </tr>
+                        <tr>
+                            <td class="calendar__cell">27</td>
+                            <td class="calendar__cell">28</td>
+                            <td class="calendar__cell">29</td>
+                            <td class="calendar__cell">30</td>
+                            <td class="calendar__cell">31</td>
+                            <td class="calendar__cell calendar__cell--empty"></td>
+                            <td class="calendar__cell calendar__cell--empty"></td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <button class="action-btn">+</button>
+            </div>
         </div>
     </main>
 </div>

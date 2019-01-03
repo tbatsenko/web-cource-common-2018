@@ -1,0 +1,35 @@
+.toogler {
+  display: flex;
+
+  &__btn {
+    height: 45px;
+    padding: 14px 32px;
+    text-align: center;
+    font-size: 14px;
+    color: #a8b2b9;
+    border: 1px solid #efefef;
+    border-radius: 5px;
+    background: none;
+    
+    &:hover {
+      cursor: pointer;
+    }
+
+    &:first-child {
+      border-right: none;
+      border-radius: 5px 0 0 5px;
+    }
+
+    &:last-child {
+      border-left: none;
+      border-radius: 0 5px 5px 0;
+    }
+
+    &--active {
+      color: #ed5454;
+      border: none;
+      background-color: #fff;
+      box-shadow: 0 8px 16px 0 rgba(243, 0, 0, 0.1);
+    }
+  }
+}
