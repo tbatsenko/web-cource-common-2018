@@ -9,11 +9,12 @@ export default class App extends Component {
     cristians: null,
   }
 
+  clickHandler = null
+
   constructor() {
     super()
 
     this.recalculatePosition = this.recalculatePosition.bind(this)
-    this.handleAntichristClick = this.handleAntichristClick.bind(this)
     this.restart = this.restart.bind(this)
   }
 
@@ -44,7 +45,7 @@ export default class App extends Component {
         anti[i].yMove = -Math.abs(anti[i].yMove)
       }
 
-      let multiplier = anti.length <= 2 ? 3 : 1
+      let multiplier = anti.length <= 2 ? 1 : 0.5
       anti[i].x += anti[i].xMove * multiplier
       anti[i].y += anti[i].yMove * multiplier
 
@@ -253,8 +254,8 @@ export default class App extends Component {
         id: i,
         x: Math.floor(Math.random() * 270) + 1,
         y: Math.floor(Math.random() * 270) + 1,
-        xMove: Math.floor(Math.random() * 2 + 1),
-        yMove: Math.floor(Math.random() * 2 + 1),
+        xMove: (0.5),
+        yMove: (0.5),
         good: false,
       }
       antichrist.xMove =
@@ -324,7 +325,7 @@ export default class App extends Component {
       )
     }
     return (
-      <div className="App">
+      <div className="App" id="App">
         {this.state.antichrists.map(antichrist => (
           <Antichrist
             key={antichrist.id}
@@ -332,7 +333,6 @@ export default class App extends Component {
             x={antichrist.x}
             y={antichrist.y}
             good={antichrist.good}
-            onClick={this.handleAntichristClick}
           />
         ))}
         {this.state.cristians.map((cristian, index) => (
@@ -355,8 +355,27 @@ export default class App extends Component {
 
   componentDidMount() {
     this.restart()
+    window.webkitRequestAnimationFrame(this.recalculatePosition)
+  }
 
-    setInterval(this.recalculatePosition, 70)
+  componentDidUpdate() {
+    if (this.clickHandler === null) {
+      this.clickHandler = true
+      this.addClickHandler()
+    }
+    window.webkitRequestAnimationFrame(this.recalculatePosition)
+  }
+
+  addClickHandler() {
+    document.getElementById('App').addEventListener('click', (event) => {
+      let click_obj = { x: event.clientX, y: event.clientY }
+      for (let i = 0; i < this.state.antichrists.length; ++i) {
+        if (App.areOverlapped(click_obj, this.state.antichrists[i], 15)) {
+          this.handleAntichristClick(this.state.antichrists[i].id)
+          break
+        }
+      }
+    })
   }
 
   handleAntichristClick(antichrist_id) {
