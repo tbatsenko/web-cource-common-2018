@@ -1,0 +1,14 @@
+.App {
+  background-color: #0fc57c;
+  height: 300px;
+  width: 500px;
+}
+
+.Church {
+  height: 100%;
+  width: 200px;
+  box-sizing: border-box;
+  border-left: 5px solid darkred;
+  background-color: saddlebrown;
+  margin-left: auto;
+}

@@ -1,0 +1,21 @@
+:root {
+  --size: 15px;
+}
+
+.Antichrist {
+  position: absolute;
+  width: var(--size);
+  height: var(--size);
+  border-radius: 100%;
+  background-color: red;
+  box-sizing: border-box;
+  border: 1px solid black;
+}
+
+.Antichrist:hover {
+  cursor: pointer;
+}
+
+.Antichrist_good {
+  background-color: pink;
+}

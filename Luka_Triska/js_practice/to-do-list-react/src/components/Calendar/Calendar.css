@@ -1,0 +1,56 @@
+:root {
+  --contrast-letter-color: #fff;
+  --background-color: black;
+  --white-shadow-color: rgba(255, 255, 255, 0.3);
+  --black-shadow-color: rgba(0, 0, 0, 0.3); }
+
+.day-of-week-header-row {
+  display: flex; }
+  .day-of-week-header-row__item {
+    width: 36px; }
+
+.week-row {
+  display: flex;
+  justify-content: space-around; }
+
+.current {
+  background: darkred; }
+
+.day-cell-empty {
+  width: 36px; }
+.day-cell-today {
+  width: 36px;
+  text-align: center;
+  cursor: pointer;
+  border: 1px solid black; }
+.day-cell-full {
+  width: 36px;
+  text-align: center;
+  cursor: pointer; }
+.day-cell-full:hover {
+  background: var(--contrast-letter-color);
+  color: var(--background-color); }
+
+.day-cell:hover {
+  background: burlywood; }
+
+.month {
+  display: flex;
+  justify-content: space-between; }
+  .month__button {
+    border: 0;
+    width: 38px;
+    height: 21px;
+    padding: 0;
+    background: var(--background-color);
+    color: var(--contrast-letter-color);
+    cursor: pointer; }
+  .month__button:hover {
+    background: var(--contrast-letter-color);
+    color: var(--background-color); }
+
+.year {
+  display: flex;
+  justify-content: center; }
+
+/*# sourceMappingURL=Calendar.css.map */

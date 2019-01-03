@@ -1,0 +1,17 @@
+$color_1: #1d2129;
+$font_family_1: Helvetica, Arial, sans-serif;
+
+body {
+	font-family: $font_family_1;
+	font-size: 12px;
+	background: #e9ebee;
+	color: $color_1;
+	line-height: 1.34;
+	margin: 0;
+	padding: 0;
+}
+main {
+	margin: auto;
+	width: 850px;
+	background: #e9ebee;
+}
