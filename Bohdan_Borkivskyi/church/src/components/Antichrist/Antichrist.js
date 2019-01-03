@@ -11,7 +11,6 @@ export default class Antichrist extends Component {
       <div
         className={this.getClasses()}
         style={{ left: this.props.x, top: this.props.y }}
-        onClick={() => this.props.onClick(this.props.id)}
       />
     )
   }
