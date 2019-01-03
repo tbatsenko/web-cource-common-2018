@@ -15,7 +15,7 @@ export default class GameOfLife extends Component {
   generateInitPopulation = () => {
     const { probabilityOfAliveCell } = this.props
 
-    let newBoard = this.state.board.map((line) => {
+    const newBoard = this.state.board.map((line) => {
       return line.map(() => Math.random() >= (1 - probabilityOfAliveCell))
     })
 
@@ -48,7 +48,7 @@ export default class GameOfLife extends Component {
 
     for (let i = 0; i < lines; i++) {
       for (let j = 0; j < cellsPerLine; j++) {
-        let neighbours_num = this.getAliveNeighboursForCell(board, i, j)
+        const neighbours_num = this.getAliveNeighboursForCell(board, i, j)
 
         if (!board[i][j]) {
           if (neighbours_num === 3) {
@@ -73,26 +73,27 @@ export default class GameOfLife extends Component {
 
           {
             board.map((line, rowIndex) => {
-              return (<div className="GameOfLife__board-line" key={rowIndex}>
+              return (
+                <div className="GameOfLife__board-line" key={rowIndex}>
 
-                {
-                  line.map((el, colIndex) => (
+                  {
+                    line.map((cell, colIndex) => (
+                      <div key={rowIndex * colIndex + colIndex}
+                           className={(board[rowIndex][colIndex]) ? 'GameOfLife__board-cell GameOfLife__board-cell--active' : 'GameOfLife__board-cell'}
+                      />
+                    ))
+                  }
 
-                    <div key={rowIndex * colIndex + colIndex}
-                         className={(board[rowIndex][colIndex]) ? 'GameOfLife__board-cell GameOfLife__board-cell--active' : 'GameOfLife__board-cell'}
-                    />
-                  ))
-                }
-
-              </div>)
+                </div>
+              )
             })
           }
 
         </div>
 
         <div className="GameOfLife__toolbar">
-          <button onClick={this.generateInitPopulation}>Init Population</button>
-          <button onClick={this.nextGeneration}>Next Population</button>
+          <button className="GameOfLife__toolbar-btn" onClick={this.generateInitPopulation}>Init Population</button>
+          <button className="GameOfLife__toolbar-btn" onClick={this.nextGeneration}>Next Population</button>
         </div>
 
       </div>

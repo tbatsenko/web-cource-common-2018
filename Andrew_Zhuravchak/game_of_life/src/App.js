@@ -7,7 +7,9 @@ import './App.scss'
 class App extends Component {
   render() {
     return (
-      <GameOfLife lines={40} cellsPerLine={40} probabilityOfAliveCell={0.6}/>
+      <div className="App">
+        <GameOfLife lines={40} cellsPerLine={40} probabilityOfAliveCell={0.4}/>
+      </div>
     )
   }
 }
