@@ -1,0 +1,29 @@
+.main-nav {
+    display: flex;
+    justify-content: space-between;
+
+    margin-top: 40px;
+    margin-left: 60px;
+    margin-right: 60px;
+
+    max-width: 1400px;
+
+    border-bottom: 2px solid #dfdfdf;
+
+  &__button {
+    font-family: SourceSansPro, sans-serif;
+    font-size: 18px;
+    text-align: left;
+    color: #80818a;
+    background: none;
+    border: none;
+    padding: 0 0 17px 0;
+    margin-right: 60px;
+  }
+
+  &__button--active {
+    color: #ff0079;
+    border-bottom: 4px solid #ff0079;
+  }
+
+}
