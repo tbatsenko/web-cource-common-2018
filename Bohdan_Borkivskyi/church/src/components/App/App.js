@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
 import './App.css'
-import Antichrist from '../Antichrist/Antichrist'
-import Cristian from '../Cristian/Cristian'
+import Person from '../Person/Person'
 
 export default class App extends Component {
   state = {
@@ -254,8 +253,8 @@ export default class App extends Component {
         id: i,
         x: Math.floor(Math.random() * 270) + 1,
         y: Math.floor(Math.random() * 270) + 1,
-        xMove: (0.5),
-        yMove: (0.5),
+        xMove: 0.5,
+        yMove: 0.5,
         good: false,
       }
       antichrist.xMove =
@@ -327,20 +326,21 @@ export default class App extends Component {
     return (
       <div className="App" id="App">
         {this.state.antichrists.map(antichrist => (
-          <Antichrist
+          <Person
             key={antichrist.id}
             id={antichrist.id}
             x={antichrist.x}
             y={antichrist.y}
-            good={antichrist.good}
+            personality={{ isAnti: true, isGoodAnti: antichrist.good }}
           />
         ))}
         {this.state.cristians.map((cristian, index) => (
-          <Cristian
+          <Person
             key={cristian.id}
             id={cristian.id}
             x={cristian.x}
             y={cristian.y}
+            personality={{ isAnti: false, isPop: cristian.id === 0 }}
           />
         ))}
         <div className="Church" />
@@ -367,7 +367,7 @@ export default class App extends Component {
   }
 
   addClickHandler() {
-    document.getElementById('App').addEventListener('click', (event) => {
+    document.getElementById('App').addEventListener('click', event => {
       let click_obj = { x: event.clientX, y: event.clientY }
       for (let i = 0; i < this.state.antichrists.length; ++i) {
         if (App.areOverlapped(click_obj, this.state.antichrists[i], 15)) {
