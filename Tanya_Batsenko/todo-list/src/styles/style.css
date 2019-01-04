@@ -1,5 +1,4 @@
 @import url(https://fonts.googleapis.com/css?family=Roboto:400,500,700);
-
 body {
   font-family: "Roboto";
   padding: 50px;
@@ -15,13 +14,17 @@ li {
   padding: 5px;
   display: flex;
   flex-direction: row;
-
   border-bottom: 1px solid #f2f2f2;
   margin-top: 10px;
 }
 
-li button {
+.todo-when {
+  background: #C51162;
+  color: white;
+  margin: 0;
   margin-left: auto;
+  margin-right: 5px;
+  padding: 0px 5px 0px 5px;
 }
 
 .container {
@@ -30,7 +33,6 @@ li button {
   justify-content: start;
   height: 500px;
   width: 800px;
-
   -webkit-box-shadow: 0px 0px 7px 1px rgba(227, 227, 227, 0.79);
   -moz-box-shadow: 0px 0px 7px 1px rgba(227, 227, 227, 0.79);
   box-shadow: 0px 0px 7px 1px rgba(227, 227, 227, 0.79);
@@ -43,7 +45,6 @@ li button {
 .calendar-card {
   padding: 20px;
   color: white;
-
   background: #C51162;
   /* fallback for old browsers */
 }
@@ -52,9 +53,11 @@ li button {
   width: 320px;
   text-align: center;
 }
+
 .calendar-btn {
   color: white;
 }
+
 .btn {
   width: 40px;
   height: 30px;
@@ -64,24 +67,25 @@ li button {
   border: 1px solid;
 }
 
+.delete-button {
+  align-self: flex-end;
+}
+
 .button-container {
   display: flex;
   flex-flow: row;
   justify-content: center;
-
-  input {
-    width: 300px;
-    height: 25px;
-    border: none;
-    border-bottom: 1px solid;
-    font-size: 14px;
-  }
-
-  input:hover {
-    border-bottom: 1px solid rebeccapurple;
-    font-size: 14px;
-  }
-
+}
+.button-container input {
+  width: 300px;
+  height: 25px;
+  border: none;
+  border-bottom: 1px solid;
+  font-size: 14px;
+}
+.button-container input:hover {
+  border-bottom: 1px solid rebeccapurple;
+  font-size: 14px;
 }
 
 .todo-checkbox {
@@ -99,22 +103,22 @@ td {
 
 td:hover {
   cursor: pointer;
-  background-color: rgb(167, 15, 83);
+  background-color: #a70f53;
   border-radius: 50%;
 }
 
 .bg-info {
   border: 1px solid;
-    border-radius: 50%;
-
+  border-radius: 50%;
 }
 
-.today-date {
-
+.selected-cell {
+  background-color: #a70f53;
+  border-radius: 50%;
 }
 
 .todo__completed {
-
   text-decoration: line-through;
-
 }
+
+/*# sourceMappingURL=style.css.map */
