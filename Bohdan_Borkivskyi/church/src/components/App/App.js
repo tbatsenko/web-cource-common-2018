@@ -355,7 +355,7 @@ export default class App extends Component {
 
   componentDidMount() {
     this.restart()
-    window.webkitRequestAnimationFrame(this.recalculatePosition)
+    window.requestAnimationFrame(this.recalculatePosition)
   }
 
   componentDidUpdate() {
@@ -363,7 +363,7 @@ export default class App extends Component {
       this.clickHandler = true
       this.addClickHandler()
     }
-    window.webkitRequestAnimationFrame(this.recalculatePosition)
+    window.requestAnimationFrame(this.recalculatePosition)
   }
 
   addClickHandler() {
