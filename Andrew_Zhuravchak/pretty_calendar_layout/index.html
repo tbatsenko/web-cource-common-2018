@@ -18,16 +18,19 @@
 <div class="layout">
     <div class="layout__sidebar">
         <div class="sidebar">
-            <a href="#" class="sidebar__logo-wrapper">
+            <a href="#" class="layout__logo">
                 <img src="images/logo.png" alt="Calendar 1104" class="logo">
             </a>
 
-            <div class="sidebar__userpic sidebar__userpic--with-notification">
-                <img src="images/user_picture.png" alt="User picture" class="sidebar__userpic-img">
-            </div>
 
-            <div class="sidebar__username">
-                M. Naminovsky
+            <div class="userinfo">
+                <div class="userinfo__pic-wrapper userinfo__pic-wrapper--with-notification">
+                    <img src="images/user_picture.png" alt="User picture" class="userinfo__pic">
+                </div>
+
+                <div class="userinfo__username">
+                    <a href="#" class="userinfo__username-link">M. Naminovsky</a>
+                </div>
             </div>
 
             <nav class="navigation">
@@ -83,15 +86,15 @@
                 </ul>
             </nav>
 
-            <footer class="sidebar__footer">
+            <footer class="layout__sidebar-footer">
                 <span class="sidebar__footer-text">Smooozy.com | 2019</span>
             </footer>
         </div>
     </div>
 
     <main class="layout__main-section">
-        <div class="calendar-wrapper">
-            <div class="calendar-wrapper__controls">
+        <div class="calendar-layout">
+            <div class="calendar-layout__controls">
                 <div class="toogler">
                     <button class="toogler__btn">Week</button>
                     <button class="toogler__btn toogler__btn--active">Month</button>
@@ -111,7 +114,7 @@
                 </form>
             </div>
 
-            <div class="calendar-wrapper__calendar">
+            <div class="calendar-layout__calendar">
                 <table class="calendar">
                     <thead class="calendar__header">
                     <tr>
@@ -126,51 +129,51 @@
                     </thead>
 
                     <tbody class="calendar__body">
-                        <tr>
-                            <td class="calendar__cell calendar__cell--empty"></td>
-                            <td class="calendar__cell calendar__cell--empty"></td>
-                            <td class="calendar__cell">1</td>
-                            <td class="calendar__cell">2</td>
-                            <td class="calendar__cell">3</td>
-                            <td class="calendar__cell">4</td>
-                            <td class="calendar__cell">5</td>
-                        </tr>
-                        <tr>
-                            <td class="calendar__cell">6</td>
-                            <td class="calendar__cell">7</td>
-                            <td class="calendar__cell">8</td>
-                            <td class="calendar__cell">9</td>
-                            <td class="calendar__cell">10</td>
-                            <td class="calendar__cell">11</td>
-                            <td class="calendar__cell">12</td>
-                        </tr>
-                        <tr>
-                            <td class="calendar__cell">13</td>
-                            <td class="calendar__cell">14</td>
-                            <td class="calendar__cell">15</td>
-                            <td class="calendar__cell">16</td>
-                            <td class="calendar__cell">17</td>
-                            <td class="calendar__cell">18</td>
-                            <td class="calendar__cell">19</td>
-                        </tr>
-                        <tr>
-                            <td class="calendar__cell">20</td>
-                            <td class="calendar__cell">21</td>
-                            <td class="calendar__cell">22</td>
-                            <td class="calendar__cell">23</td>
-                            <td class="calendar__cell">24</td>
-                            <td class="calendar__cell">25</td>
-                            <td class="calendar__cell">26</td>
-                        </tr>
-                        <tr>
-                            <td class="calendar__cell">27</td>
-                            <td class="calendar__cell">28</td>
-                            <td class="calendar__cell">29</td>
-                            <td class="calendar__cell">30</td>
-                            <td class="calendar__cell">31</td>
-                            <td class="calendar__cell calendar__cell--empty"></td>
-                            <td class="calendar__cell calendar__cell--empty"></td>
-                        </tr>
+                    <tr>
+                        <td class="calendar__cell calendar__cell--empty"></td>
+                        <td class="calendar__cell calendar__cell--empty"></td>
+                        <td class="calendar__cell">1</td>
+                        <td class="calendar__cell">2</td>
+                        <td class="calendar__cell">3</td>
+                        <td class="calendar__cell">4</td>
+                        <td class="calendar__cell">5</td>
+                    </tr>
+                    <tr>
+                        <td class="calendar__cell">6</td>
+                        <td class="calendar__cell">7</td>
+                        <td class="calendar__cell">8</td>
+                        <td class="calendar__cell">9</td>
+                        <td class="calendar__cell">10</td>
+                        <td class="calendar__cell">11</td>
+                        <td class="calendar__cell">12</td>
+                    </tr>
+                    <tr>
+                        <td class="calendar__cell">13</td>
+                        <td class="calendar__cell">14</td>
+                        <td class="calendar__cell">15</td>
+                        <td class="calendar__cell">16</td>
+                        <td class="calendar__cell">17</td>
+                        <td class="calendar__cell">18</td>
+                        <td class="calendar__cell">19</td>
+                    </tr>
+                    <tr>
+                        <td class="calendar__cell">20</td>
+                        <td class="calendar__cell">21</td>
+                        <td class="calendar__cell">22</td>
+                        <td class="calendar__cell">23</td>
+                        <td class="calendar__cell">24</td>
+                        <td class="calendar__cell">25</td>
+                        <td class="calendar__cell">26</td>
+                    </tr>
+                    <tr>
+                        <td class="calendar__cell">27</td>
+                        <td class="calendar__cell">28</td>
+                        <td class="calendar__cell">29</td>
+                        <td class="calendar__cell">30</td>
+                        <td class="calendar__cell">31</td>
+                        <td class="calendar__cell calendar__cell--empty"></td>
+                        <td class="calendar__cell calendar__cell--empty"></td>
+                    </tr>
                     </tbody>
                 </table>
 

@@ -5,62 +5,9 @@
   box-sizing: border-box;
   position: relative;
 
-  &__logo-wrapper {
-    display: block;
-    width: 80px;
-    height: 25px;
-    margin: 0 auto;
-  }
-
-  &__userpic {
-    width: 90px;
-    height: 90px;
-    margin: 40px auto 10px;
-    position: relative;
-
-    &-img {
-      width: 100%;
-      height: auto;
-    }
-
-    &--with-notification {
-      &::after {
-        display: block;
-        content: '';
-        width: 30px;
-        height: 30px;
-
-        position: absolute;
-        bottom: 0;
-        right: 0;
-
-        background-color: #fff;
-        background-image: url("../images/notification_icon.png");
-        background-size: 70%;
-        background-position: center center;
-        background-repeat: no-repeat;
-        border-radius: 50%;
-
-        box-shadow: 4px 7px 14px 0 rgba(59, 39, 95, 0.21);
-      }
-    }
-  }
-
-  &__username {
-    text-align: center;
-    color: rgba(41, 37, 41, 0.55);
-  }
-
-  &__footer {
-    position: absolute;
-    bottom: 0;
-    padding-bottom: 50px;
-    width: 100%;
-  }
 
   &__footer-text {
     display: block;
     text-align: center;
   }
-
 }

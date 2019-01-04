@@ -2,16 +2,14 @@
 @import "sidebar";
 @import "logo";
 @import "navigation";
-@import "calendar-wrapper";
+@import "calendar-layout";
 @import "calendar";
 @import "action-btn";
 @import "search-form";
 @import "date-switcher";
 @import "toogler";
+@import "userinfo";
 
-html {
-  height: 100%;
-}
 
 body {
   min-height: 100%;

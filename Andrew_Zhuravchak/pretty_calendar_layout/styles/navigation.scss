@@ -4,11 +4,11 @@
   &__list {
     list-style-type: none;
     padding: 0;
+    margin: 0;
   }
 
   &__item {
     text-transform: uppercase;
-    color: #a8b2b9;
 
     &--active {
       color: #292529;
@@ -21,7 +21,7 @@
         border-left: 5px solid #ed5454;
         left: 0;
         height: 100%;
-        box-shadow: 3px 0 9px 0 #ed5454;
+        box-shadow: 2px 0 9px 0 #ed5454;
       }
 
       .navigation__item-icon {
