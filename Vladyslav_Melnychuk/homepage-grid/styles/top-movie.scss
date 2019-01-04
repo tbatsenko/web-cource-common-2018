@@ -1,19 +1,16 @@
 .top-movie {
   background: url('../img/wrath.jpg') no-repeat 0 -310px;
   background-size: cover;
+  background-position: left center;
   height: 600px;
 
   display: flex;
-  flex-flow: row wrap;
+  flex-direction: column;
+  justify-content: space-between;
 
   &__footer {
-    align-self: flex-end;
     margin-bottom: 30px;
     display: flex;
     justify-content: space-between;
-  }
-
-  &__child {
-    flex: 1 100%;
   }
 }

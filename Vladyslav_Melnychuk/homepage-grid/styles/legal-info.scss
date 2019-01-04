@@ -1,9 +1,13 @@
 .legal-info {
   padding-top: 30px;
   margin: 0px 60px 20px 60px;
-  //   background: white;
+
+  display: flex;
+  justify-content: center;
 
   &__section {
+    max-width: 1400px;
+    flex-shrink: 0; 
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -39,5 +43,10 @@
     opacity: 0.5;
     font-size: 15px;
     color: #80818a;
+  }
+
+  &__wrapper {
+    max-width: 1400px;
+    flex: 0 0 100%;
   }
 }

@@ -11,7 +11,7 @@
   <body>
     <header class="top-movie">
       <!-- <img src="img/wrath.jpg" class="top-movie__image"> -->
-      <nav class="site-nav top-movie__child">
+      <nav class="site-nav">
         <a class="site-nav__logo">TheMovieBox</a>
         <div class="site-nav__button-wrapper">
           <button class="site-nav__button">Search</button>
@@ -21,7 +21,7 @@
           </button>
         </div>
       </nav>
-      <footer class="top-movie__footer top-movie__child">
+      <footer class="top-movie__footer">
         <section class="movie-content">
           <h2 class="movie-content__name">Wrath of the Titans</h2>
           <ul class="movie-info">
@@ -52,10 +52,16 @@
           <h3 class="rating__title">
             Rating <span class="rating__info">based on 3.564 reviews</span>
           </h3>
-          <img
-            src="img/stars.jpg"
-            class="rating__stars"
-          />
+          <section class="rating__vizualization">
+            <div class="rating__stars">
+              <span class="rating__star rating__star--full">☆</span>
+              <span class="rating__star rating__star--full">☆</span>
+              <span class="rating__star rating__star--full">☆</span>
+              <span class="rating__star rating__star--half">☆</span>
+              <span class="rating__star">☆</span>
+            </div>
+            <div class="rating__grade">3.5</div>
+          </section>
         </section>
       </footer>
     </header>
@@ -77,26 +83,28 @@
       </div>
     </main>
     <footer class="legal-info">
-      <section class="legal-info__section legal-info__section--lined">
-        <h3 class="legal-info__logo">TheMovieBox</h3>
-        <nav class="legal-info__nav">
-          <a href="#" class="legal-info__link">About</a>
-          <a href="#" class="legal-info__link">Movies</a>
-          <a href="#" class="legal-info__link">Ratings</a>
-          <a href="#" class="legal-info__link">Contact</a>
-        </nav>
-      </section>
-      <section class="legal-info__section">
-        <p class="legal-info__text">
-          Designed by Milan Houter. All rights reserved.
-        </p>
-        <nav class="legal-info__nav">
-          <a href="#" class="legal-info__link">Facebook</a>
-          <a href="#" class="legal-info__link">Pinterest</a>
-          <a href="#" class="legal-info__link">Twitter</a>
-          <a href="#" class="legal-info__link">LinkedIn</a>
-        </nav>
-      </section>
+      <div class="legal-info__wrapper">
+        <section class="legal-info__section legal-info__section--lined">
+          <h3 class="legal-info__logo">TheMovieBox</h3>
+          <nav class="legal-info__nav">
+            <a href="#" class="legal-info__link">About</a>
+            <a href="#" class="legal-info__link">Movies</a>
+            <a href="#" class="legal-info__link">Ratings</a>
+            <a href="#" class="legal-info__link">Contact</a>
+          </nav>
+        </section>
+        <section class="legal-info__section">
+          <p class="legal-info__text">
+            Designed by Milan Houter. All rights reserved.
+          </p>
+          <nav class="legal-info__nav">
+            <a href="#" class="legal-info__link">Facebook</a>
+            <a href="#" class="legal-info__link">Pinterest</a>
+            <a href="#" class="legal-info__link">Twitter</a>
+            <a href="#" class="legal-info__link">LinkedIn</a>
+          </nav>
+        </section>
+      </div>
     </footer>
     <script src="js/main-bundled.js"></script>
   </body>

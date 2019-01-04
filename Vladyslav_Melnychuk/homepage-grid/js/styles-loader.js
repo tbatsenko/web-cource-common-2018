@@ -9,4 +9,3 @@ import '../styles/rating.scss';
 import '../styles/movie-poster.scss';
 import '../styles/movies.scss';
 import '../styles/legal-info.scss';
-import '../styles/grid.scss';

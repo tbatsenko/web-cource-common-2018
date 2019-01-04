@@ -1,14 +1,19 @@
 .main-nav {
-    display: flex;
-    justify-content: space-between;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
 
-    margin-top: 40px;
-    margin-left: 60px;
-    margin-right: 60px;
+  @media screen and (max-width: 1400px) {
+    justify-content: space-evenly;
+  }
 
-    max-width: 1400px;
+  margin-top: 40px;
+  margin-left: 60px;
+  margin-right: 60px;
 
-    border-bottom: 2px solid #dfdfdf;
+  max-width: 1400px;
+
+  border-bottom: 2px solid #dfdfdf;
 
   &__button {
     font-family: SourceSansPro, sans-serif;
@@ -25,5 +30,4 @@
     color: #ff0079;
     border-bottom: 4px solid #ff0079;
   }
-
 }
