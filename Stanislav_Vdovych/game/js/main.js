@@ -1,50 +1,30 @@
 var canvas = document.getElementById("myCanvas");
 var ctx = canvas.getContext("2d");
-var x = canvas.width/2;
-var y = canvas.height-30;
-var ballRadius = 10;
-var dx = 2;
-var dy = -2;
-var paddleHeight = 10;
-var paddleWidth = 250;
-var paddleX = (canvas.width-paddleWidth)/2;
-var rightPressed = false;
-var leftPressed = false;
-var brickRowCount = 3;
-var brickColumnCount = 5;
-var brickWidth = 75;
-var brickHeight = 20;
-var brickPadding = 10;
-var brickOffsetTop = 30;
-var brickOffsetLeft = 30;
+var ballRadius = 20;
+var jumpHeight = canvas.height-ballRadius*2-60;
+var treeWidth = 10;
+var smallTreeHeight = 25;
+var bigTreeHeight = 40;
+var x = ballRadius*2;
+var y = canvas.height-ballRadius;
+var dx = -8;
+var dy = -6;
+var inJump = false;
 var score = 0;
+var lives = 3;
+var time = 0;
 
-document.addEventListener("keydown", keyDownHandler, false);
-document.addEventListener("keyup", keyUpHandler, false);
-document.addEventListener("mousemove", mouseMoveHandler, false);
+var trees = [];
 
-function mouseMoveHandler(e) {
-  var relativeX = e.clientX - canvas.offsetLeft;
-  if(relativeX > 0 && relativeX < canvas.width) {
-    paddleX = relativeX - paddleWidth/2;
-  }
+document.addEventListener("keydown",keyDownHandler,false);
+
+function getRandomInt(max) {
+  return Math.floor(Math.random() * Math.floor(max));
 }
 
 function keyDownHandler(e) {
-  if(e.key == "Right" || e.key == "ArrowRight") {
-    rightPressed = true;
-  }
-  else if(e.key == "Left" || e.key == "ArrowLeft") {
-    leftPressed = true;
-  }
-}
-
-function keyUpHandler(e) {
-  if(e.key == "Right" || e.key == "ArrowRight") {
-    rightPressed = false;
-  }
-  else if(e.key == "Left" || e.key == "ArrowLeft") {
-    leftPressed = false;
+  if(e.key == "Up" || e.key == "ArrowUp"|| e.key == "Space") {
+    inJump = true;
   }
 }
 function drawScore() {
@@ -52,6 +32,7 @@ function drawScore() {
   ctx.fillStyle = "#0095DD";
   ctx.fillText("Score: "+score, 8, 20);
 }
+
 function drawBall() {
   ctx.beginPath();
   ctx.arc(x, y, ballRadius, 0, Math.PI*2);
@@ -59,94 +40,70 @@ function drawBall() {
   ctx.fill();
   ctx.closePath();
 }
-function drawPaddle() {
-  ctx.beginPath();
-  ctx.rect(paddleX, canvas.height-paddleHeight, paddleWidth, paddleHeight);
-  ctx.fillStyle = "#0095DD";
-  ctx.fill();
-  ctx.closePath();
-}
-function drawBricks() {
-  for(var c=0; c<brickColumnCount; c++) {
-    for(var r=0; r<brickRowCount; r++) {
-      if(bricks[c][r].status == 1) {
-        var brickX = (c*(brickWidth+brickPadding))+brickOffsetLeft;
-        var brickY = (r*(brickHeight+brickPadding))+brickOffsetTop;
-        bricks[c][r].x = brickX;
-        bricks[c][r].y = brickY;
-        ctx.beginPath();
-        ctx.rect(brickX, brickY, brickWidth, brickHeight);
-        ctx.fillStyle = "#0095DD";
-        ctx.fill();
-        ctx.closePath();
-      }
-    }
+function drawTrees() {
+  for(var i=0;i<trees.length;i++) {
+    ctx.beginPath();
+    ctx.rect(trees[i].x, trees[i].y, treeWidth, trees[i].typ == 's'?smallTreeHeight:bigTreeHeight);
+    ctx.fillStyle = "#0095DD";
+    ctx.fill();
+    ctx.closePath();
   }
 }
 
 function collisionDetection() {
-  for(var c=0; c<brickColumnCount; c++) {
-    for(var r=0; r<brickRowCount; r++) {
-      var b = bricks[c][r];
-      if(b.status == 1) {
-        if(x > b.x && x < b.x+brickWidth && y > b.y && y < b.y+brickHeight) {
-          dy = -dy;
-          b.status = 0;
-          score+=10;
-          if(score >= brickRowCount*brickColumnCount*10) {
-            alert("YOU WIN, CONGRATULATIONS!");
-            document.location.reload();
-          }
-        }
-      }
+  for(var i=0;i<trees.length;i++) {
+    if(x>trees[i].x-ballRadius && x<trees[i].x+treeWidth+ballRadius && y>canvas.height-(trees[i].typ=='s'?smallTreeHeight:bigTreeHeight)-ballRadius){
+      alert("LALKA!");
+      document.location.reload();
     }
   }
 }
 
 
 function draw() {
-  if(y + dy < ballRadius) {
-    dy = -dy;
-  } else if(y + dy > canvas.height-ballRadius) {
-    if(x > paddleX && x < paddleX + paddleWidth) {
+  // if(jumpPressed && !inJump){
+  //   inJump = true;
+  // }
+  if(inJump){
+    y += dy;
+    if(y <= jumpHeight){
       dy = -dy;
     }
-    else {
-      alert("GAME OVER");
-      document.location.reload();
-      clearInterval(interval);
+    if(y>=canvas.height-ballRadius) {
+      y = canvas.height-ballRadius;
+      dy = -dy;
+      inJump = false;
+    }
+    if(y<jumpHeight) {
+      y = jumpHeight;
+    }
+  }
+
+  for(var i=trees.length-1;i>=0;--i) {
+    trees[i].x +=dx;
+    if(trees[i].x<0){
+      trees.splice(i,1);
     }
   }
   ctx.clearRect(0, 0, canvas.width, canvas.height);
-  if(rightPressed && paddleX < canvas.width-paddleWidth) {
-    paddleX += 7;
-  }
-  else if(leftPressed && paddleX > 0) {
-    paddleX -= 7;
-  }
-  if(x + dx > canvas.width-ballRadius || x + dx < ballRadius) {
-    dx = -dx;
-  }
 
-  if(y + dy > canvas.height-ballRadius) {
-    dy = -dy;
+  if(time%40 == 0){
+    if(getRandomInt(100)>=40){
+      if(getRandomInt(100)>=30) {
+        trees.push({ x: canvas.width - treeWidth, y: canvas.height-smallTreeHeight, typ:"s"});
+      }
+      else {
+        trees.push({ x: canvas.width - treeWidth, y: canvas.height-bigTreeHeight, typ:"b"});
+      }
+    }
   }
-
-  x += dx;
-  y += dy;
-  drawScore();
-  drawPaddle();
-  collisionDetection();
-  drawBricks();
   drawBall();
+  drawTrees();
+  drawScore();
+  collisionDetection();
+  score++;
+  time++;
   requestAnimationFrame(draw);
-}
-var bricks = [];
-for(var c=0; c<brickColumnCount; c++) {
-  bricks[c] = [];
-  for(var r=0; r<brickRowCount; r++) {
-    bricks[c][r] = { x: 0, y: 0, status: 1 };
-  }
 }
 
 draw();
