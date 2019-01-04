@@ -99,7 +99,7 @@ function draw() {
   }
   drawBall();
   drawTrees();
-  drawScore()
+  drawScore();
   collisionDetection();
   score++;
   time++;
