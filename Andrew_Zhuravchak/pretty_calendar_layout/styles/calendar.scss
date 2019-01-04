@@ -9,20 +9,16 @@
   }
 
   &__header-day {
-    width: 140px;
     height: 60px;
     text-align: center;
     text-transform: uppercase;
     font-size: 12px;
   }
 
-
   &__body {
-
   }
 
   &__cell {
-    width: 140px;
     height: 140px;
     border: 1px solid #efefef;
     text-align: center;
@@ -31,7 +27,6 @@
     &--empty {
       background-color: #f8f7f8;
       opacity: 0.66;
-
     }
   }
 }
