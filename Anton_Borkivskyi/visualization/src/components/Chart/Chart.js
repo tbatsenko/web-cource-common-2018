@@ -1,91 +1,138 @@
 import { Component } from 'react'
 import React from 'react'
+import { scaleLinear } from '@vx/vx'
+import { extent, max, curveMonotoneX } from 'd3'
+import { AreaClosed, Group, LinePath } from '@vx/vx'
+import { csvParse } from 'd3'
+
+import { AxisLeft, AxisBottom } from '@vx/vx'
+
 import './Chart.css'
 
-class Graph extends Component {
-  state = {}
-  text_keys = []
-  text_keys_empty = true
-
-  renderBars(key) {
-    const { women, men, activeYear} = this.props.state
-
-    let gender = null
-    if (key == 'men') {
-      gender = men
-    } else if (key == 'women') {
-      gender = women
-    }
-    let genderNumbers = []
-    let localSum
-    let maxSum = Object.values(gender[gender.length - 1])[activeYear - 2010]
-    let i = 0
-    while (i < gender.length - 1) {
-      let localSum = 0
-      for (let c = 0; c < 5; c++) {
-        if (i < gender.length - 1) {
-          localSum += Object.values(gender[i])[activeYear - 2010]
-          // if (localSum > maxSum) {
-          //   maxSum = localSum
-          // }
-
-        }
-        i = i + 1
-      }
-      if (this.text_keys_empty) {
-        let text_key = (i - 5).toString() + ' - ' + (i - 1).toString()
-        this.text_keys.push(text_key)
-      }
-      genderNumbers.push(localSum)
-    }
-    this.text_keys.pop()
-    this.text_keys.push('85 +')
-    this.text_keys_empty = false
-
-    return genderNumbers.map((number) => {
-      const percent = (number / maxSum) * 1000
-      return (<Bar percent={percent} number={number}/>)
-    })
-  }
+class Chart extends Component {
 
   render() {
-    return (
-      <div className="graph">
-        <BarTextContent keys={this.text_keys}/>
+    const { data, activeYear } = this.props.state
 
-        <div className={'graph__bar-container left'}>
-          {this.renderBars('men')}
-        </div>
-        <div className="graph__bar-container right">
-          {this.renderBars('women')}
-        </div>
+    const width = 800
+    const height = 400
+
+    const dataMale = []
+    const dataFemale = []
+    const staticDataMale = []
+    const staticDataFemale = []
+
+    const dynamic_data = data.filter((row) => row['year'] === activeYear)
+    const static_data = data.filter((row) => row['year'] === 1989)
+
+    for (let i = 0; i < 80; i++) {
+      dataMale.push({ age: i, population: dynamic_data[i]['men'] })
+      dataFemale.push({ age: i, population: dynamic_data[i]['women'] })
+      staticDataMale.push({ age: i, population: static_data[i]['men'] })
+      staticDataFemale.push({ age: i, population: static_data[i]['women'] })
+    }
+
+
+    const x = d => d.age
+    const y = d => d.population
+
+
+    const margin = {
+      top: 0,
+      bottom: 0,
+      left: 0,
+      right: 0,
+    }
+
+    const xMax = width / 2 // - margin.left - margin.right
+    const yMax = height // - margin.top - margin.bottom
+    const yMin = height / 4
+
+    const xScaleFemale = scaleLinear({
+      range: [xMax, 0],
+      domain: extent(staticDataFemale, x),
+    })
+
+    const xScaleMale = scaleLinear({
+      range: [0, xMax],
+      domain: extent(staticDataMale, x),
+    })
+
+    const yScaleFemale = scaleLinear({
+      range: [yMax, yMin],
+      domain: [0, max(staticDataFemale, y)],
+    })
+
+    const yScaleMale = scaleLinear({
+      range: [yMax, yMin],
+      domain: [0, max(staticDataMale, y)],
+    })
+
+    return (
+      <div className={'chart'}>
+        <svg width={width / 2} height={height} className="svg male">
+
+          <AreaClosed
+            data={dataMale}
+
+            x={(d) => xScaleMale(d.age)}
+            y0={yScaleMale(0)}
+            y={(d) => yScaleMale(d.population)}
+
+            fill={'#e45f4d'}
+            stroke={'#e45f4d'}
+            curve={curveMonotoneX}
+            opacity={0.8}
+          />
+
+          <AreaClosed
+            data={staticDataMale}
+
+            x={(d) => xScaleMale(d.age)}
+            y0={yScaleMale(0)}
+            y={(d) => yScaleMale(d.population)}
+
+            fill={'#e45f4d'}
+            stroke={'#e45f4d'}
+            curve={curveMonotoneX}
+
+            opacity={0.4}
+          />
+
+        </svg>
+        <svg width={width / 2} height={height} className="svg female">
+
+          <AreaClosed
+            data={dataFemale}
+
+            x={(d) => xScaleFemale(d.age)}
+            y0={yScaleFemale(0)}
+            y={(d) => yScaleFemale(d.population)}
+
+            fill={'#489ea3'}
+            stroke={'#489ea3'}
+            curve={curveMonotoneX}
+            opacity={0.8}
+          />
+          <AreaClosed
+            data={staticDataFemale}
+
+            x={(d) => xScaleFemale(d.age)}
+            y0={yScaleFemale(0)}
+            y={(d) => yScaleFemale(d.population)}
+
+            fill={'#489ea3'}
+            stroke={'#489ea3'}
+            curve={curveMonotoneX}
+            opacity={0.4}
+          />
+
+        </svg>
       </div>
     )
   }
 }
 
-const BarTextContent = ({ keys }) => {
-  return (
-    <div className="graph__text-container">
-      {
-        keys.map((key) => (
-          <div className='graph__text-container_text'>
-            {key}
-          </div>
-        ))
-      }
+export default Chart
 
-    </div>
-  )
-}
 
-const Bar = ({ percent, number }) => {
-  const barStyle = { width: `${percent}%`, height: 'calc(5.6% - 1px)' }
-  return (
-    <div className="bar" style={barStyle}>
-      {number}
-    </div>
-  )
-}
-
-export default Graph

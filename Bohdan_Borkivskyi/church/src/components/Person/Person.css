@@ -1,0 +1,29 @@
+:root {
+    --size: 15px;
+}
+
+.Person {
+    position: absolute;
+    width: var(--size);
+    height: var(--size);
+    border-radius: 100%;
+    background-color: white;
+    box-sizing: border-box;
+    border: 1px solid black;
+}
+
+.Person_anti {
+    background-color: red;
+}
+
+.Person_anti:hover {
+    cursor: pointer;
+}
+
+.Person_anti-good {
+    background-color: pink;
+}
+
+.Person_pop {
+    background-color: gold;
+}
