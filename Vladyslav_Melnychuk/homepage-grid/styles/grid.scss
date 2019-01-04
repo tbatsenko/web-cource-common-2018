@@ -1,0 +1,28 @@
+$container-12-width: 820px;
+$gutter-width: 5px;
+$row-gap: 15px;
+$basic-cell-width: calc(100% / 12 - 2 * #{$gutter-width});
+$break-small: 820px;
+
+.container_12 {
+  width: $container-12-width;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: red;
+  overflow: hidden;
+  @media screen and (max-width: $break-small) {
+    width: auto;
+    margin: 0 5px;
+  }
+}
+
+@for $i from 1 through 12 {
+    .grid_#{$i} {
+        float: left;
+        margin: 0 $gutter-width $row-gap $gutter-width;
+        width: calc(#{$basic-cell-width} * (#{$i}) + #{$i} * 2 * #{$gutter-width});
+        @media screen and (max-width: $break-small) {
+            width: 150px;
+        }
+    }
+}

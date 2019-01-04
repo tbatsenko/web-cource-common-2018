@@ -1,0 +1,14 @@
+{{#each days}}
+    <div class="day" id="{{date}}">
+        <header>
+            <h2 class="day__number">{{date}}</h2>
+        </header>
+        <ul>
+            <li>
+                {{#each events}}
+                    {{name}}
+                {{/each}}
+            </li>
+        </ul>
+    </div>
+{{/each}}

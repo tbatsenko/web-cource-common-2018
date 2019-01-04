@@ -1,0 +1,26 @@
+.App {
+  background-color: #0fc57c;
+  height: 300px;
+  width: 500px;
+}
+
+.App__text {
+  color: white;
+}
+
+.App_win {
+  background-color: green;
+}
+
+.App_lose {
+  background-color: red;
+}
+
+.Church {
+  height: 100%;
+  width: 200px;
+  box-sizing: border-box;
+  border-left: 5px solid darkred;
+  background-color: saddlebrown;
+  margin-left: auto;
+}

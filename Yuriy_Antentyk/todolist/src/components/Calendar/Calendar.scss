@@ -1,0 +1,44 @@
+@import '../../css/colors.scss';
+@import '../../css/fonts.scss';
+
+.calendar{
+  display: flex;
+  flex-direction: column;
+
+  background-color: $color--primary;
+  border-radius: 15px;
+  padding: 15px;
+
+  width: auto;
+
+  &__header{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  &__header-title {
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  &__months{
+    display: flex;
+    flex-direction: row;
+  }
+
+  &__month{
+    table-layout: fixed;
+    margin: 0 5px;
+  }
+
+  &__month-cell{
+    width: calc(100%/7);
+    text-align: center;
+  }
+  &__month-weekDays{
+    color: $color--white;
+    font-family: $font-family--regular;
+    font-size: $font-size--regular;    
+  }
+}

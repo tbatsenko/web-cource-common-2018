@@ -1,5 +1,5 @@
 <header class="youtube-header">
-  <button class="youtube-header__open_menu" aria-label="Site menu"></button>
+  <button class="youtube-header__open-menu" aria-label="Site menu"></button>
   <a class="youtube-header__homepage-link" href="https://www.youtube.com/">
     <img class="youtube-homepage-link__logo" src="/images/logo_main.png"/>
   </a>
@@ -62,7 +62,7 @@
       <!--TODO:Verified icon-->
     </a>
     <br/>
-    <small class="youtube-info__publish_date">
+    <small class="youtube-info__publish-date">
       Published on
       <time datetime={{video.publish-date-formatted}}>{{video.publish-date}}</time>
     </small>
@@ -73,7 +73,7 @@
     </span>
   </footer>
   <hr/>
-  <aside>
+  <aside class="youtube-comments">
     {{comments.length}} Comments
     <button title="Sort by">Sort By</button>
     {{#comments}}

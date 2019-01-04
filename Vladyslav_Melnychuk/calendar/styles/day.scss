@@ -1,0 +1,20 @@
+$day_color_active: #1abc9c;
+$day_color_idle: #16a085;
+
+.day {
+  width: 200px;
+  height: 150px;
+  background: $day_color_idle;
+
+  &__number {
+    margin-top: 5px;
+    margin-left: 10px;
+    font-size: 30px;
+    color: aliceblue;
+  }
+
+}
+
+.day:hover {
+  background: $day_color_active;
+}

@@ -1,0 +1,136 @@
+.todo {
+  display: flex;
+  flex-direction: column;
+  background: #0096cf;
+  width: 350px;
+  height: 450px;
+
+  &__header {
+    width: 350px;
+    height: 70px;
+    display: flex;
+    justify-content: flex-end;
+    align-content: center;
+  }
+
+  &__date {
+    display: flex;
+    align-items: center;
+    color: #ffffff;
+    margin-right: 16px;
+    font-size: 16px;
+  }
+
+  &__main {
+    flex: 2;
+    padding: 16px;
+    overflow: auto;
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+
+  &__list {
+    margin: 0;
+    padding-left: 24px;
+  }
+
+  &__item {
+    height: 40px;
+    line-height: 40px;
+    margin-bottom: 16px;
+    color: #ffffff;
+  }
+
+  &__text {
+    display: inline-block;
+    vertical-align: bottom;
+    margin-left: 8px;
+    width: 230px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    &--done {
+      text-decoration: line-through;
+    }
+  }
+
+  &__button {
+    width: 18px;
+    height: 40px;
+
+    border: 0;
+    outline: 0;
+    padding: 0;
+    cursor: pointer;
+    float: right;
+
+    &--done {
+      background: url('done.svg') no-repeat center;
+      background-size: 18px 18px;
+    }
+    &--delete {
+      background: url('delete.svg') no-repeat center;
+      background-size: 18px 18px;
+      margin-left: 12px;
+    }
+  }
+  &__input {
+    background: #008ec4;
+    border: none;
+    font-family: 'Montserrat', sans-serif;
+    padding: 16px;
+    width: 318px;
+    outline: none;
+    color: #ffffff;
+
+    &::placeholder {
+      color: #ffffff;
+    }
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .todo {
+    width: 200px;
+    height: 225px;
+
+    &__header {
+      width: 200px;
+      height: 35px;
+    }
+    &__date {
+      font-size: 9px;
+      margin-right: 8px;
+    }
+    &__input {
+      width: 183px;
+      padding: 8px;
+      font-size: 8px;
+    }
+    &__main {
+      padding: 8px;
+    }
+    &__list {
+      padding-left: 12px;
+    }
+
+    &__item {
+      height: 20px;
+      line-height: 20px;
+      font-size: 10px;
+      margin-bottom: 8px;
+    }
+
+    &__text {
+      margin-left: 4px;
+      width: 130px;
+    }
+
+    &__button {
+      width: 9px;
+      height: 20px;
+      background-size: 9px 9px;
+    }
+  }
+}
