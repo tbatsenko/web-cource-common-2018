@@ -3,11 +3,11 @@ const classes = {
   dateDisabled: "calendar__date--disabled",
   dateActive: "calendar__date--active",
   dateToday: "calendar__date--today",
-  dateSelected: "calendar__date--selected"
+  dateSelected: "calendar__date--selected",
 };
 
 class VanillaCalendar {
-  constructor (calendarSelector) {
+  constructor(calendarSelector) {
     this.months = [
       "January",
       "February",
@@ -20,7 +20,7 @@ class VanillaCalendar {
       "September",
       "October",
       "November",
-      "December"
+      "December",
     ];
 
     this.calendarEl = document.querySelector(calendarSelector);
@@ -35,7 +35,7 @@ class VanillaCalendar {
    * disablePastDays
    *
    */
-  init (options) {
+  init(options) {
     this.options = options;
     this.render();
 
@@ -46,21 +46,21 @@ class VanillaCalendar {
     this.previousBtnEl.addEventListener("click", this.onPrevious.bind(this));
   }
 
-  onNext () {
+  onNext() {
     this.clearCalendar();
     const nextMonth = this.date.getMonth() + 1;
     this.date.setMonth(nextMonth);
     this.createMonth();
   }
 
-  onPrevious () {
+  onPrevious() {
     this.clearCalendar();
     const prevMonth = this.date.getMonth() - 1;
     this.date.setMonth(prevMonth);
     this.createMonth();
   }
 
-  createDay (nthDayOfMonth, nthDayOfWeek) {
+  createDay(nthDayOfMonth, nthDayOfWeek) {
     const newDay = document.createElement("div");
 
     newDay.className = classes.date;
@@ -69,14 +69,17 @@ class VanillaCalendar {
     // if it's the first day of the month
     if (nthDayOfMonth === 1) {
       if (nthDayOfWeek === 0) {
-        newDay.style.marginLeft = (6 * 14.28) + "%";
+        newDay.style.marginLeft = 6 * 14.28 + "%";
       } else {
-        newDay.style.marginLeft = ((nthDayOfWeek - 1) * 14.28) + "%";
+        newDay.style.marginLeft = (nthDayOfWeek - 1) * 14.28 + "%";
       }
     }
 
-    if (this.options && this.options.disablePastDays &&
-      this.date.getTime() <= this.todaysDate.getTime() - 1) {
+    if (
+      this.options &&
+      this.options.disablePastDays &&
+      this.date.getTime() <= this.todaysDate.getTime() - 1
+    ) {
       newDay.classList.add(classes.dateDisabled);
     } else {
       newDay.classList.add(classes.dateActive);
@@ -91,16 +94,16 @@ class VanillaCalendar {
     this.monthContainerEl.appendChild(newDay);
   }
 
-  dateClicked () {
+  dateClicked() {
     const _this = this;
     this.activeDates = document.querySelectorAll(
-      "[data-calendar-status=\"active\"]"
+      '[data-calendar-status="active"]'
     );
 
     for (let i = 0; i < this.activeDates.length; i++) {
-      this.activeDates[i].addEventListener("click", function () {
+      this.activeDates[i].addEventListener("click", function() {
         const picked = document.querySelectorAll(
-          "[data-calendar-label=\"picked\"]"
+          '[data-calendar-label="picked"]'
         )[0];
         picked.innerHTML = this.dataset.calendarDate;
         _this.removeActiveClass();
@@ -109,7 +112,7 @@ class VanillaCalendar {
     }
   }
 
-  createMonth () {
+  createMonth() {
     const currentMonth = this.date.getMonth();
     while (this.date.getMonth() === currentMonth) {
       this.createDay(
@@ -128,21 +131,21 @@ class VanillaCalendar {
     this.dateClicked();
   }
 
-  monthsAsString (monthIndex) {
+  monthsAsString(monthIndex) {
     return this.months[monthIndex];
   }
 
-  clearCalendar () {
+  clearCalendar() {
     this.monthContainerEl.innerHTML = "";
   }
 
-  removeActiveClass () {
+  removeActiveClass() {
     for (let i = 0; i < this.activeDates.length; i++) {
       this.activeDates[i].classList.remove(classes.dateSelected);
     }
   }
 
-  render () {
+  render() {
     this.calendarEl.innerHTML = `<div class="calendar__header">
       <button class="calendar__button" data-calendar-toggle="previous">
         <svg class="calendar__svg" height="24" version="1.1" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
@@ -169,10 +172,18 @@ class VanillaCalendar {
     </div>
     <div class="calendar__body" data-calendar-area="month"></div>`;
 
-    this.monthContainerEl = this.calendarEl.querySelectorAll("[data-calendar-area=\"month\"]")[0];
-    this.nextBtnEl = this.calendarEl.querySelectorAll("[data-calendar-toggle=\"next\"]")[0];
-    this.previousBtnEl = this.calendarEl.querySelectorAll("[data-calendar-toggle=\"previous\"]")[0];
-    this.monthLabelEl = this.calendarEl.querySelectorAll("[data-calendar-label=\"month\"]")[0];
+    this.monthContainerEl = this.calendarEl.querySelectorAll(
+      '[data-calendar-area="month"]'
+    )[0];
+    this.nextBtnEl = this.calendarEl.querySelectorAll(
+      '[data-calendar-toggle="next"]'
+    )[0];
+    this.previousBtnEl = this.calendarEl.querySelectorAll(
+      '[data-calendar-toggle="previous"]'
+    )[0];
+    this.monthLabelEl = this.calendarEl.querySelectorAll(
+      '[data-calendar-label="month"]'
+    )[0];
   }
 }
 

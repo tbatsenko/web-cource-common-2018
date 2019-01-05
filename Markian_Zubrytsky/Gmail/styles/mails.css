@@ -1,0 +1,44 @@
+.mails {
+    width: 1520px;
+    position: absolute;
+    top: 65px;
+    left: 240px;
+}
+
+.mails__navigation {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    align-items: center;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.mails__mail {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    align-items: center;
+    border-top: 1px solid #eceff1;
+    border-bottom: 1px solid #eceff1;
+    height: 40px;
+}
+
+.mails__mail__button {
+    background-color: transparent;
+    border: none;
+    padding-left: 10px;
+    padding-right: 0;
+}
+
+.mails__mail__title {
+    padding-left: 10px;
+    margin-right: 20px;
+}
+
+.mails__mail__time {
+    margin-left: auto;
+    margin-right: 10px;
+}
+
+/*# sourceMappingURL=mails.css.map */

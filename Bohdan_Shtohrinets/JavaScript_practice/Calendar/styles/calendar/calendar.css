@@ -1,0 +1,114 @@
+.calendar {
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    width: 500px;
+    height: 400px;
+    font-family: "Nunito", sans-serif;
+    background: #353839;
+}
+
+.calendar__header {
+    display: flex;
+    justify-content: start;
+    border-bottom: 1px solid #f1c40f;
+}
+
+.calendar__month-name {
+    padding: 10px;
+    margin: 0;
+    color: #f1c40f;
+    font-size: 36px;
+}
+
+.calendar__contents {
+    display: flex;
+    flex-direction: column;
+}
+
+.calendar__weekdays {
+    padding: 10px 10px;
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+.calendar__dates {
+    padding: 10px 10px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.calendar__buttons {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+.weekdays__day {
+    flex: 1 0 60px;
+    text-align: center;
+    display: block;
+    color: #f1c40f;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 900;
+    border: 1px solid #f1c40f;
+}
+
+.dates__day {
+    flex: 0 0 66.97px;
+    text-align: center;
+    display: block;
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 900;
+    border: 1px solid #f1c40f;
+}
+
+.buttons {
+    color: transparent;
+    padding: 10px;
+    width: 40%;
+    border-radius: 5%;
+    border: 2px solid #f1c40f;
+    background: inherit;
+}
+
+.buttons_left {
+    position: relative;
+}
+
+.buttons_left:after {
+    color: #f1c40f;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%);
+    font-size: 24px;
+    background-size: cover;
+    width: 10px;
+    height: 10px;
+    content: "<";
+}
+
+.buttons_right {
+    position: relative;
+}
+
+.buttons_right:after {
+    color: #f1c40f;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%);
+    font-size: 24px;
+    background-size: cover;
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    content: ">";
+}
+
+/*# sourceMappingURL=calendar.css.map */

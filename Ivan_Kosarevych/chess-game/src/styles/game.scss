@@ -1,0 +1,9 @@
+.game{
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  margin: auto;
+  &__status{
+    margin-bottom: 10px;
+  }
+}

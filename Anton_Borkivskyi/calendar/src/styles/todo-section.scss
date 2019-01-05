@@ -1,0 +1,72 @@
+@import "todo-item";
+
+.todo-section {
+  width: 40%;
+
+  .input-item {
+    height: 50px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &__input {
+      padding: 0 10px;
+      height: 40px;
+      width: 65%;
+      font-size: 15px;
+
+      border-bottom-left-radius: 10px;
+      border-top-left-radius: 10px;
+
+      color: var(--text-color);
+      border: 1px solid var(--text-color);
+
+      &:focus {
+        outline: none;
+      }
+    }
+
+    &__button {
+      height: 42px;
+      width: 20%;
+      font-size: 15px;
+
+      margin-right: 10px;
+
+      border: 1px solid var(--text-color);
+      border-bottom-right-radius: 10px;
+      border-top-right-radius: 10px;
+      background: var(--text-color);
+      color: var(--game-color);
+
+
+      &:focus {
+        outline: none;
+      }
+    }
+  }
+
+  .todo {
+    height: 350px;
+    border-bottom-right-radius: 5px;
+
+    &::-webkit-scrollbar {
+      width: 10px;
+
+    }
+
+    &::-webkit-scrollbar-track {
+      background-color: transparent;
+      border-radius: 5px;
+    }
+
+    &::-webkit-scrollbar-thumb{
+      background-color: var(--text-color);
+      border-radius: 5px 5px 4px 5px;
+    }
+
+    overflow-y: scroll;
+
+  }
+}

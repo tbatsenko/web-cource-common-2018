@@ -1,0 +1,32 @@
+.Projects__wrapper {
+  margin: 20px 0 20px 0;
+  flex-wrap: wrap;
+  display: flex;
+  justify-content: center;
+}
+.Projects__project-type-switchers {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  background-color: whitesmoke;
+  border-bottom: 2px solid #c3c3c3;
+  box-shadow: 0 0 7px #717171;
+}
+.Projects__switch {
+  text-decoration: none;
+  color: #444444;
+  opacity: 0.8;
+  font-weight: 700;
+  letter-spacing: 1px;
+  padding-bottom: 13px;
+  padding-top: 13px;
+}
+.Projects__switch:hover {
+  opacity: 1;
+}
+.Projects__switch_active {
+  border-bottom: 2px solid #653998;
+  color: #653998;
+}
+
+/*# sourceMappingURL=Projects.css.map */

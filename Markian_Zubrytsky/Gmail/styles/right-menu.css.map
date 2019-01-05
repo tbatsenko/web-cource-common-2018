@@ -1,0 +1,9 @@
+{
+  "version": 3,
+  "mappings": "AAAA,WAAY;EACV,KAAK,EAAE,KAAK;EACZ,KAAK,EAAE,IAAI;EACX,OAAO,EAAE,IAAI;EACb,SAAS,EAAE,aAAa;EACxB,QAAQ,EAAE,KAAK;EACf,KAAK,EAAE,CAAC;EACR,GAAG,EAAE,IAAI;EAET,oBAAW;IACT,MAAM,EAAE,IAAI;IACZ,KAAK,EAAE,IAAI;IACX,UAAU,EAAE,IAAI;IAChB,aAAa,EAAE,IAAI",
+  "sources": [
+    "right-menu.scss"
+  ],
+  "names": [],
+  "file": "right-menu.css"
+}

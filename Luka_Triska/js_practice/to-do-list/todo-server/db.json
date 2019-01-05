@@ -1,34 +1,24 @@
 {
   "todos": [
     {
-      "todoText": "todo 1",
-      "completed": "true",
-      "id": 1
-    },
-    {
-      "todoText": "todo 2",
-      "completed": "true",
-      "id": 2
-    },
-    {
-      "todoText": "oooo",
+      "todoText": "awdawd",
       "completed": "false",
-      "id": 3
-    },
-    {
-      "todoText": "todo 4",
-      "completed": "true",
       "id": 4
     },
     {
-      "todoText": "ppppwwwwpppp",
+      "todoText": "awdawd",
       "completed": "false",
       "id": 5
     },
     {
-      "todoText": "todo 6",
-      "completed": "true",
+      "todoText": "awdawdawd",
+      "completed": "false",
       "id": 6
+    },
+    {
+      "todoText": "vbvbv",
+      "completed": "false",
+      "id": 7
     }
   ]
 }

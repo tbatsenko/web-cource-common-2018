@@ -1,0 +1,106 @@
+.PortfolioHeader {
+  background-color: #202020;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 0 13px #787878;
+  transition: all 0.5s;
+}
+.PortfolioHeader__popup {
+  position: absolute;
+  right: 30px;
+  background-color: whitesmoke;
+  box-shadow: 0 0 8px #ababab;
+  z-index: 10;
+  width: 145px;
+}
+.PortfolioHeader__popup-list {
+  line-height: 35px;
+  margin: 0;
+  padding-left: 10px;
+  list-style: none;
+}
+.PortfolioHeader__popup-list-item {
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  color: #3a3a3a;
+  font-size: 15px;
+}
+.PortfolioHeader__popup-list-item_sign-out {
+  margin-left: -10px;
+  width: 108%;
+  border-top: 1px solid #3a3a3a;
+}
+.PortfolioHeader__popup-list-item-anchor {
+  text-decoration: none;
+  color: #3a3a3a;
+}
+.PortfolioHeader__popup-exit-icon {
+  padding-left: 13px;
+  display: inline-block;
+  background: url("images/exit-icon.svg") center no-repeat;
+  width: 22px;
+  height: 10px;
+}
+.PortfolioHeader__portfolio-logo {
+  opacity: 0.8;
+  margin-left: 30px;
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+.PortfolioHeader__portfolio-logo:hover {
+  opacity: 1;
+}
+.PortfolioHeader__icon-container {
+  width: 145px;
+  margin-right: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  align-content: center;
+}
+.PortfolioHeader__search-icon {
+  width: 20px;
+  height: 44px;
+  background: url("images/search-icon.svg") no-repeat center;
+  opacity: 0.8;
+}
+.PortfolioHeader__search-icon:hover {
+  opacity: 1;
+}
+.PortfolioHeader__cv-icon {
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 21px;
+  letter-spacing: 1px;
+  opacity: 0.8;
+  color: whitesmoke;
+}
+.PortfolioHeader__cv-icon:hover {
+  opacity: 1;
+}
+.PortfolioHeader__envelope-icon {
+  width: 20px;
+  height: 16px;
+  background: url("./images/envelope.svg") no-repeat;
+  opacity: 0.8;
+  background-size: contain;
+}
+.PortfolioHeader__envelope-icon:hover {
+  opacity: 1;
+}
+.PortfolioHeader__header-avatar-link {
+  opacity: 0.8;
+  cursor: pointer;
+}
+.PortfolioHeader__header-avatar-link:hover {
+  opacity: 1;
+}
+.PortfolioHeader__header-avatar-img {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+}
+
+/*# sourceMappingURL=PortfolioHeader.css.map */

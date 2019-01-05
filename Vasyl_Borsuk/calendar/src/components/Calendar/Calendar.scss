@@ -1,0 +1,88 @@
+@import "../../css-utils/variables";
+@import "../../css-utils/colors";
+
+
+.calendar {
+  color: $font-color;
+  width: $calendar-width;
+  height: $calendar-height;
+
+  &--header {
+    width: $calendar-header-width;
+    height: $calendar-header-height;
+    text-align: center;
+  }
+
+  &--main {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: $calendar-height - $calendar-header-height;
+  }
+
+  &--week-line {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  &--month-name {
+    display: inline-block;
+    margin: 0;
+    width: 200px;
+    font-size: 20px;
+    line-height: $calendar-header-height;
+    font-weight: normal;
+  }
+
+  &--day, &--button {
+    display: inline-block;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    background: transparent;
+    border: none;
+    color: inherit;
+  }
+
+  &--button {
+    vertical-align: middle;
+    font-size: 24px;
+    cursor: pointer;
+
+    width: $calendar-header-button-width;
+    height: $calendar-header-button-height;
+  }
+
+  &--weekday {
+    display: inline-block;
+    margin: 0;
+    text-align: center;
+  }
+
+  &--day, &--weekday {
+    line-height: $calendar-days-button-height;
+    font-size: 16px;
+
+    width: $calendar-days-button-width;
+    height: $calendar-days-button-height;
+  }
+
+  &--day {
+    cursor: pointer;
+    text-decoration: none;
+    box-sizing: border-box;
+
+    &:hover {
+      background-color: $hover-color;
+    }
+
+    &__active {
+      border: 2px solid $selected-font-color;
+    }
+
+    &__passive {
+      color: $passive-font-color;
+    }
+  }
+}

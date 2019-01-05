@@ -1,0 +1,117 @@
+body {
+    margin: 0;
+    font-family: 'Open Sans', sans-serif;
+    height: 100vh;
+    background: url("../img/backg.jpg") no-repeat;
+    background-size: cover;
+}
+
+.top-layout {
+    justify-content: space-evenly;
+    display: flex;
+}
+
+.top-layout__main-text {
+    background: black;
+    color: #fdfbfa;
+    border-radius: 4px;
+}
+
+.main-layout {
+    display: grid;
+    justify-content: space-evenly;
+    margin-top: 1em;
+    opacity: 0.7;
+}
+
+.main-layout__input-container {
+    display: flex;
+    margin-bottom: 1em;
+
+}
+
+#main-layout__input {
+    width: 30em;
+    background: whitesmoke;
+    line-height: 200%;
+    color: #510da4;
+    border: 0.1em solid #8a92f8;
+    border-right: none;
+    opacity: 0.8;
+    border-radius: 4px 0 0 4px;
+    padding-left: 0.7em;
+    padding-right: 0.3em;
+}
+
+.main-layout__input:hover {
+    opacity: 1.2;
+}
+
+.main-layout__submit {
+    width: 4em;
+    /*border: none;*/
+    background: #510da4;
+    color: #fdfbfa;
+    border: 0.1em solid #8a92f8;
+    border-left: none;
+    opacity: 0.8;
+    border-radius: 0 4px 4px 0;
+}
+
+.main-layout__submit:hover {
+    opacity: 1.2;
+}
+
+.main-layout__task-container {
+    list-style: none;
+    padding-left: 0;
+}
+
+.main-layout__task {
+    background: aliceblue;
+    border: 0.1em solid;
+    margin-bottom: 0.3em;
+    padding: 0.2em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    opacity: 0.8;
+}
+
+.main-layout__task:hover {
+    opacity: 1.2;
+}
+
+.main-layout__del-task-btn {
+    border: none;
+    background: transparent;
+    padding: 0;
+}
+
+.main-layout__del-task-img {
+    width: 1em;
+    height: 1em;
+}
+
+.main-layout__task__crossed-out {
+    text-decoration: line-through;
+}
+
+.main-layout__top-container {
+
+    padding: 0.8em;
+    margin-bottom: 1em;
+    border-radius: 4px;
+    background: black;
+}
+
+.main-layout__task-text-check{
+    display: flex;
+    align-items: center;
+}
+
+.main-layout__task-text{
+    margin: 0 0 0 0.3em;
+    max-width: 30em;
+    word-wrap: break-word;
+}

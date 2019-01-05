@@ -1,3 +1,4 @@
 import Game from "./Game"
 
-new Game(document.getElementById("field"))
+new Game()
+new Game()

@@ -6,13 +6,14 @@
     },
     "logo":{
       "website-index-link": "https://mail.google.com/mail/u/0/#inbox",
-      "img-source": "images/logo_gmail_lockup_default.png"
+      "img-source": "https://res.cloudinary.com/djr1v3glw/image/upload/v1542661774/logo_gmail_lockup_default.png"
     },
     "top-search":{
       "search-button":{
         "title": "search-button",
         "icon-source": "search"
       },
+      "input-label": "Search mail",
       "search-placeholder": "Search mail",
       "options-button":{
         "title": "options-button",
@@ -21,30 +22,37 @@
     },
     "right-nav-buttons":[
       "apps", "notifications"
-    ]
+    ],
+    "user-ava": {
+      "title": "Users",
+      "ava-src": "https://res.cloudinary.com/djr1v3glw/image/upload/c_scale,h_32,r_0,w_32/v1542662159/07-falklands-7-gentoo-penguin-face-to-face.jpg"
+    }
   },
   "left-bar":{
     "compose-button":{
-      "icon-source": "images/create_32dp.png",
+      "icon-source": "https://res.cloudinary.com/djr1v3glw/image/upload/v1542661866/create_32dp.png",
       "text": "Compose"
     },
-    "navigation": {
-      "inbox": {
-        "url": "https://mail.google.com/mail/u/0/#inbox",
-        "icon-source": "",
-        "text": "Inbox"
+    "navigation": [
+      {
+        "url": "https://mail.google.com/mail/u/1/#inbox",
+        "icon-source": "inbox",
+        "text": "Inbox",
+        "active": true
       },
-      "starred":{
+      {
         "url": "https://mail.google.com/mail/u/0/#starred",
-        "icon-source": "",
-        "text": "Starred"
+        "icon-source": "star",
+        "text": "Starr",
+        "active": false
       },
-      "trash":{
+      {
         "url": "https://mail.google.com/mail/u/0/#trash",
-        "icon-source": "",
-        "text": "Trash"
+        "icon-source": "delete",
+        "text": "Trash",
+        "active": false
       }
-    }
+    ]
   },
   "central-bar":{
     "header":{
@@ -56,6 +64,207 @@
         "msg-filter-text": "1-50",
         "other-buttons": ["chevron_left", "chevron_right", "settings"]
       }
-    }
+    },
+    "feed": [
+      {
+        "control-buttons": ["check_box_outline_blank", "star_border"],
+        "author": "Sir Tim Berners-Lee",
+        "text": "The original idea of the web was that it should be a collaborative space where you can communicate through sharing information.",
+        "datetime": {
+          "text": "31/12/2003",
+          "time": "2003-12-31"
+        }
+      },
+      {
+        "control-buttons": ["check_box_outline_blank", "star_border"],
+        "author": "Sir Tim Berners-Lee",
+        "text": "The original idea of the web was that it should be a collaborative space where you can communicate through sharing information.",
+        "datetime": {
+          "text": "31/12/2003",
+          "time": "2003-12-31"
+        }
+      },
+      {
+        "control-buttons": ["check_box_outline_blank", "star_border"],
+        "author": "Sir Tim Berners-Lee",
+        "text": "The original idea of the web was that it should be a collaborative space where you can communicate through sharing information.",
+        "datetime": {
+          "text": "31/12/2003",
+          "time": "2003-12-31"
+        }
+      },
+      {
+        "control-buttons": ["check_box_outline_blank", "star_border"],
+        "author": "Sir Tim Berners-Lee",
+        "text": "The original idea of the web was that it should be a collaborative space where you can communicate through sharing information.",
+        "datetime": {
+          "text": "31/12/2003",
+          "time": "2003-12-31"
+        }
+      },
+      {
+        "control-buttons": ["check_box_outline_blank", "star_border"],
+        "author": "Sir Tim Berners-Lee",
+        "text": "The original idea of the web was that it should be a collaborative space where you can communicate through sharing information.",
+        "datetime": {
+          "text": "31/12/2003",
+          "time": "2003-12-31"
+        }
+      },
+      {
+        "control-buttons": ["check_box_outline_blank", "star_border"],
+        "author": "Sir Tim Berners-Lee",
+        "text": "The original idea of the web was that it should be a collaborative space where you can communicate through sharing information.",
+        "datetime": {
+          "text": "31/12/2003",
+          "time": "2003-12-31"
+        }
+      },
+      {
+        "control-buttons": ["check_box_outline_blank", "star_border"],
+        "author": "Sir Tim Berners-Lee",
+        "text": "The original idea of the web was that it should be a collaborative space where you can communicate through sharing information.",
+        "datetime": {
+          "text": "31/12/2003",
+          "time": "2003-12-31"
+        }
+      },
+      {
+        "control-buttons": ["check_box_outline_blank", "star_border"],
+        "author": "Sir Tim Berners-Lee",
+        "text": "The original idea of the web was that it should be a collaborative space where you can communicate through sharing information.",
+        "datetime": {
+          "text": "31/12/2003",
+          "time": "2003-12-31"
+        }
+      },
+      {
+        "control-buttons": ["check_box_outline_blank", "star_border"],
+        "author": "Sir Tim Berners-Lee",
+        "text": "The original idea of the web was that it should be a collaborative space where you can communicate through sharing information.",
+        "datetime": {
+          "text": "31/12/2003",
+          "time": "2003-12-31"
+        }
+      },
+      {
+        "control-buttons": ["check_box_outline_blank", "star_border"],
+        "author": "Sir Tim Berners-Lee",
+        "text": "The original idea of the web was that it should be a collaborative space where you can communicate through sharing information.",
+        "datetime": {
+          "text": "31/12/2003",
+          "time": "2003-12-31"
+        }
+      },
+      {
+        "control-buttons": ["check_box_outline_blank", "star_border"],
+        "author": "Sir Tim Berners-Lee",
+        "text": "The original idea of the web was that it should be a collaborative space where you can communicate through sharing information.",
+        "datetime": {
+          "text": "31/12/2003",
+          "time": "2003-12-31"
+        }
+      },
+      {
+        "control-buttons": ["check_box_outline_blank", "star_border"],
+        "author": "Sir Tim Berners-Lee",
+        "text": "The original idea of the web was that it should be a collaborative space where you can communicate through sharing information.",
+        "datetime": {
+          "text": "31/12/2003",
+          "time": "2003-12-31"
+        }
+      },
+      {
+        "control-buttons": ["check_box_outline_blank", "star_border"],
+        "author": "Sir Tim Berners-Lee",
+        "text": "The original idea of the web was that it should be a collaborative space where you can communicate through sharing information.",
+        "datetime": {
+          "text": "31/12/2003",
+          "time": "2003-12-31"
+        }
+      },
+      {
+        "control-buttons": ["check_box_outline_blank", "star_border"],
+        "author": "Sir Tim Berners-Lee",
+        "text": "The original idea of the web was that it should be a collaborative space where you can communicate through sharing information.",
+        "datetime": {
+          "text": "31/12/2003",
+          "time": "2003-12-31"
+        }
+      },
+      {
+        "control-buttons": ["check_box_outline_blank", "star_border"],
+        "author": "Sir Tim Berners-Lee",
+        "text": "The original idea of the web was that it should be a collaborative space where you can communicate through sharing information.",
+        "datetime": {
+          "text": "31/12/2003",
+          "time": "2003-12-31"
+        }
+      },
+      {
+        "control-buttons": ["check_box_outline_blank", "star_border"],
+        "author": "Sir Tim Berners-Lee",
+        "text": "The original idea of the web was that it should be a collaborative space where you can communicate through sharing information.",
+        "datetime": {
+          "text": "31/12/2003",
+          "time": "2003-12-31"
+        }
+      },
+      {
+        "control-buttons": ["check_box_outline_blank", "star_border"],
+        "author": "Sir Tim Berners-Lee",
+        "text": "The original idea of the web was that it should be a collaborative space where you can communicate through sharing information.",
+        "datetime": {
+          "text": "31/12/2003",
+          "time": "2003-12-31"
+        }
+      },
+      {
+        "control-buttons": ["check_box_outline_blank", "star_border"],
+        "author": "Sir Tim Berners-Lee",
+        "text": "The original idea of the web was that it should be a collaborative space where you can communicate through sharing information.",
+        "datetime": {
+          "text": "31/12/2003",
+          "time": "2003-12-31"
+        }
+      },
+      {
+        "control-buttons": ["check_box_outline_blank", "star_border"],
+        "author": "Sir Tim Berners-Lee",
+        "text": "The original idea of the web was that it should be a collaborative space where you can communicate through sharing information.",
+        "datetime": {
+          "text": "31/12/2003",
+          "time": "2003-12-31"
+        }
+      },
+      {
+        "control-buttons": ["check_box_outline_blank", "star_border"],
+        "author": "Sir Tim Berners-Lee",
+        "text": "The original idea of the web was that it should be a collaborative space where you can communicate through sharing information.",
+        "datetime": {
+          "text": "31/12/2003",
+          "time": "2003-12-31"
+        }
+      },
+      {
+        "control-buttons": ["check_box_outline_blank", "star_border"],
+        "author": "Sir Tim Berners-Lee",
+        "text": "The original idea of the web was that it should be a collaborative space where you can communicate through sharing information.",
+        "datetime": {
+          "text": "31/12/2003",
+          "time": "2003-12-31"
+        }
+      },
+      {
+        "control-buttons": ["check_box_outline_blank", "star_border"],
+        "author": "Sir Tim Berners-Lee",
+        "text": "The original idea of the web was that it should be a collaborative space where you can communicate through sharing information.",
+        "datetime": {
+          "text": "31/12/2003",
+          "time": "2003-12-31"
+        }
+      }
+
+    ]
   }
 }

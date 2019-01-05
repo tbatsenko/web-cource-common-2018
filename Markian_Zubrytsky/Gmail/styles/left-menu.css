@@ -1,0 +1,27 @@
+.left-menu {
+    float: left;
+    width: 240px;
+    clear: both;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: flex-start;
+    position: fixed;
+    left: 0;
+    top: 65px;
+}
+
+.left-menu__link {
+    display: flex;
+    align-items: center;
+    margin-left: 30px;
+    min-height: 40px;
+    font-family: Roboto, Arial, sans-serif;
+    font-size: 14px;
+    text-decoration: none;
+    color: black;
+    border: none;
+    background-color: transparent;
+    vertical-align: text-top;
+}
+
+/*# sourceMappingURL=left-menu.css.map */
