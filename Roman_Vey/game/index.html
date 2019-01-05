@@ -4,28 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="dist/styles.css">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet"> 
     <link rel="shortcut icon" href="img/logo.png" type="image/png">
     <title>2048</title>
 </head>
-<body>
-    <div class="layout__score-placeholder">
-        <div class="score">Score: 0</div>
-        <div class="moves">Move: 0</div>
-        <div class="time">Time: 00:00:00</div>
-
-    </div>
-    <div class="layout__game-placeholder"></div>
-    <div class="layout__lose-placeholder">
-        <div class="layout__lose">
-                <div class="layout__lose-score"></div>
-                <div class="layout__lose-moves"></div>
-                <div class="layout__lose-time"></div>
-            </div>
-    </div>
-
-
-    <script src="src/game.js"></script>
+<body  class="layout__games">
+    <div class="game-container game-1"></div>
+    <div class="game-container game-2"></div>
+    <div class="game-container game-3"></div>
+    <script src="dist/bundle.js"></script>
 </body>
 </html>

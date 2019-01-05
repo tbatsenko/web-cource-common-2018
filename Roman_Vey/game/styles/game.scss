@@ -1,0 +1,34 @@
+.game {
+    display: flex;
+    width: 400px;
+    height: 400px;
+    margin: 30px auto;
+    border: 10px solid #8D6E63;
+    border-radius: 20px;
+    background-color: rgba(255, 255, 255, 0.8);
+    cursor: pointer;
+    &__cell{
+        width: 100px;
+        height: 100px;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 32px;
+        font-weight: bold;
+        color: #000;
+        background-color: #fff;
+        border-radius: 20px;
+        box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+        transition: all 0.3s ease 0s;
+        &--empty{
+            width: 100px;
+            height: 100px;
+            display: hidden;
+        }
+    }
+}
+
+.game-container{
+    flex-grow: 1;
+}
