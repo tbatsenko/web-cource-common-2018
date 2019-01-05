@@ -16,4 +16,12 @@ const renderPage = async () => {
 
 renderPage().then(() => {
   let calendar = new Calendar('calendar')
+
+  document.getElementById('left-month-switch').addEventListener('click', function() {
+    calendar.shiftDisplayedMonth(-1)
+  })
+
+  document.getElementById('right-month-switch').addEventListener('click', function() {
+    calendar.shiftDisplayedMonth(1)
+  })
 })
