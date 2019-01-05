@@ -7,7 +7,7 @@ const dbUrl =
     ':' +
     process.env.REACT_APP_DB_PORT +
     '/' +
-    process.env.REACT_APP_TODOS_ENDPOINT || 'http://localhost:4000/users/';
+    process.env.REACT_APP_ENDPOINT || 'http://localhost:4000/users/';
 
 class App extends Component {
   constructor(props) {
