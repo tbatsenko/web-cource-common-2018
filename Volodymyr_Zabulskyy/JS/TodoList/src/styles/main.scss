@@ -1,0 +1,26 @@
+@import "calendar";
+@import "form";
+@import "todolist";
+
+body {
+    margin: 0;
+    font-family: Ubuntu, serif;
+    color: #444;
+    background: #eee;
+
+}
+
+.placeholder {
+    margin: auto;
+    width: 50em;
+    box-shadow: lightgray 0 0 10px;
+    height: 100vh;
+    overflow: auto;
+    box-sizing: border-box;
+    background: white;
+}
+
+.content {
+    padding: .5em 1em 0 2em;
+}
+

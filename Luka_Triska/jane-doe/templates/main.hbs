@@ -1,0 +1,40 @@
+<aside class="brief-resume split">
+    <img class="brief-resume__profile-pic" src="{{profile-pic}}" alt="Profile Pic">
+    <h2 class="brief-resume__user-persona brief-resume-element">User Persona</h2>
+    <div class="brief-resume__bottom-text brief-resume-element">
+        <span class="brief-resume__name">{{name}}</span>
+        <span class="brief-resume__age-job">{{age-job}}</span>
+        <div class="brief-resume__separator"></div>
+        <section class="brief-resume__traits">
+            {{#each traits}}
+                <span class="brief-resume__traits-item">{{this}}</span>
+            {{/each}}
+        </section>
+    </div>
+</aside>
+
+<article class="resume split">
+    <section class="resume--layout">
+        <blockquote class="resume__quote">{{quote}}</blockquote>
+        <section class="resume__about resume-element">
+            <h3 class="resume__header">ABOUT</h3>
+            {{#each about}}
+                <p>{{this}}</p>
+            {{/each}}
+        </section>
+        <section class="resume__goals resume-element">
+            <h3 class="resume__header">GOALS</h3>
+            <ul>
+                {{#each goals}}
+                    <li>{{this}}</li>
+                {{/each}}
+            </ul>
+        </section>
+        <section class="resume__frustrations resume-element">
+            <h3 class="resume__header">FRUSTRATIONS</h3>
+            <ul>{{#each frustrations}}
+                    <li>{{this}}</li>
+                {{/each}}</ul>
+        </section>
+    </section>
+</article>

@@ -1,0 +1,14 @@
+.day {
+  width: 200px;
+  height: 150px;
+  background: #16a085; }
+  .day__number {
+    margin-top: 5px;
+    margin-left: 10px;
+    font-size: 30px;
+    color: aliceblue; }
+
+.day:hover {
+  background: #1abc9c; }
+
+/*# sourceMappingURL=day.css.map */

@@ -1,0 +1,26 @@
+@import "main";
+@import "title";
+
+:root {
+  --bg-color: #EDC7B7;
+  --text-color: #AC3B61;
+  --text2-color: #123C69;
+  --game-color: #EEE2DC;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+button {
+  cursor: pointer;
+}
+
+.body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: var(--bg-color);
+}

@@ -1,0 +1,10 @@
+.profile {
+	display: inline-block;
+}
+.profile__avatar {
+	height: 33px;
+	width: 33px;
+	object-fit: contain;
+	border-radius: 100%;
+	vertical-align: middle;
+}

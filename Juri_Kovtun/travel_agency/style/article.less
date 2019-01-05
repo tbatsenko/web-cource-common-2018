@@ -1,20 +1,20 @@
 .article {
     clear: both;
-    padding: 40px 16%;
+    padding: 40px;
     overflow: hidden;
     position: relative;
     &__caption {
         width: 470px;
         height: 290px;
         box-shadow: 0 2px 40px 0 rgba(0, 0, 0, 0.2);
-        background: url("../assets/decoration-corners.svg") no-repeat center white;
+        background: url("../assets/common/decoration__corners.svg") no-repeat center white;
         background-size: 93% 89%;
         position: absolute;
         z-index: 1;
-        &--odd {
+        &--even {
             top: 110px;
         }
-        &--even {
+        &--odd {
             top: 110px;
             right: 16%;
         }
@@ -25,14 +25,15 @@
     }
     &__reading {
         padding: 10px 40px;
+        display: block;
     }
     &__picture {
         border-radius: 5px;
         width: 570px;
-        &--odd {
+        &--even {
             float: right;
         }
-        &--even {
+        &--odd {
             float: left;
         }
 

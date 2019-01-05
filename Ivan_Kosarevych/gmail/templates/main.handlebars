@@ -1,8 +1,9 @@
-<header>
+<header class="top-bar">
     {{#top-bar}}
+        <div class="top-bar__left">
         {{#menu-button}}
-            <button title={{title}}>
-                <i class="material-icons">{{icon-source}}</i>
+            <button title={{title}} class="top-bar__button top-bar__button--left">
+                <i class="material-icons top-bar__icon">{{icon-source}}</i>
             </button>
         {{/menu-button}}
         {{#logo}}
@@ -10,60 +11,97 @@
                 <img src="{{img-source}}" alt="">
             </a>
         {{/logo}}
+        </div>
         {{#top-search}}
-            <form>
+            <form class="top-bar__middle">
                 {{#search-button}}
-                    <button title="{{title}}">
-                        <i class="material-icons">{{icon-source}}</i>
+                    <button title="{{title}}" class="top-bar__button">
+                        <i class="material-icons top-bar__icon">{{icon-source}}</i>
                     </button>
                 {{/search-button}}
-                <input type="text" placeholder="{{search-placeholder}}">
+                <label for="find-message">{{input-label}}</label>
+                    <input id="find-message" class="top-bar__middle--input" type="text" placeholder="{{search-placeholder}}">
                 {{#options-button}}
-                    <button title="{{title}}">
-                        <i class="material-icons">{{icon-source}}</i>
+                    <button title="{{title}}" class="top-bar__button">
+                        <i class="material-icons top-bar__icon">{{icon-source}}</i>
                     </button>
                 {{/options-button}}
             </form>
         {{/top-search}}
+        <div class="top-bar__right">
         {{#each right-nav-buttons}}
-            <button title="{{this}}"><i class="material-icons">{{this}}</i></button>
+            <button title="{{this}}" class="top-bar__button"><i class="material-icons top-bar__icon">{{this}}</i></button>
         {{/each}}
+            {{#user-ava}}
+                <button title={{title}} class="top-bar__button"><img src="{{ava-src}}" alt="" class="top-bar__user-ava"></button>
+            {{/user-ava}}
+        </div>
     {{/top-bar}}
 </header>
-<main>
-    <aside>
-        {{#left-bar}}
-            {{#compose-button}}
-                <button>
-                    <img src="{{icon-source}}" alt="">
-                    <span>{{text}}</span>
-                </button>
-            {{/compose-button}}
-            <nav>
-                {{#each navigation}}
-                    <a href="{{this.url}}">
-                        <i >{{this.icon-source}}</i>
-                        <span></span>{{this.text}}
-                    </a>
-                {{/each}}
-            </nav>
-        {{/left-bar}}
-    </aside>
-    <section>
-        {{#central-bar}}
-        <header>
+<aside class="left-bar">
+    {{#left-bar}}
+        {{#compose-button}}
+            <button id="compose-button" class="left-bar__button">
+                <img src="{{icon-source}}" alt="" class="left-bar__button--image">
+                <span class="left-bar__button--text">{{text}}</span>
+                <label for="compose-button">{{text}}</label>
+            </button>
+        {{/compose-button}}
+        <nav class="left-bar__navigation">
+            {{#each navigation}}
+                <a href="{{this.url}}" class="left-bar__link {{#active}}left-bar__link--active{{/active}}">
+                    <i class="material-icons {{#active}}left-bar__link--icon-active{{/active}}">{{this.icon-source}}</i>
+                    <span class="left-bar__link--text {{#active}}left-bar__link--text-active{{/active}}">{{this.text}}</span>
+                </a>
+            {{/each}}
+        </nav>
+    {{/left-bar}}
+</aside>
+<main class="central-bar">
+    {{#central-bar}}
+        <header class="central-bar__header">
             {{#header}}
-                <nav>
+                <nav class="central-bar__header--left-buttons">
                     {{#left-navigation}}
-
+                        <div>
+                            {{#select-button}}
+                                <button class="central-bar__button central-bar__header--select"><i class="material-icons">{{.}}</i></button>
+                            {{/select-button}}
+                        </div>
+                        <div>
+                            {{#other-buttons}}
+                                <button class="central-bar__button central-bar__header--other-buttons"><i class="material-icons">{{.}}</i></button>
+                            {{/other-buttons}}
+                        </div>
                     {{/left-navigation}}
                 </nav>
-                <nav>
+                <nav class="central-bar__header--right-buttons">
                     {{#right-navigation}}
+                        <button class="central-bar__button central-bar__header--other-buttons"><span>{{msg-filter-text}}</span></button>
+                        {{#other-buttons}}
+                            <button class="central-bar__button central-bar__header--other-buttons"><i class="material-icons">{{.}}</i></button>
+                        {{/other-buttons}}
                     {{/right-navigation}}
                 </nav>
             {{/header}}
         </header>
-        {{/central-bar}}
-    </section>
+        <section class="central-bar__feed">
+            {{#feed}}
+                <a href="#" class="central-bar__feed--item">
+                    <aside class="central-bar__feed--item-buttons">
+                        {{#control-buttons}}
+                            <label for="">
+                                <input type="checkbox">
+                                <span></span>
+                            </label>
+                            <button class="central-bar__button "><i class="material-icons">{{.}}</i></button>
+                        {{/control-buttons}}
+                    </aside>
+                    <span class="central-bar__feed--item-author">{{author}}</span>
+                    <p class="central-bar__feed--item-message">{{text}}</p>
+                    <time class="central-bar__feed--item-time" datetime="{{datetime.time}}">{{datetime.text}}</time>
+                </a>
+            {{/feed}}
+        </section>
+    {{/central-bar}}
 </main>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Твіттер. Все, що актуально</title>
+    <link rel="stylesheet" href="styles/grid.css">
+    <link rel="stylesheet" href="styles/style_of_quote_part.css">
+    <link rel="stylesheet" href="styles/style_of_login_part.css">
+    <link rel="stylesheet" href="styles/footer.css">
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/login_buttons.css">
+
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
+    <script src="scripts/script.js" type="text/javascript"></script>
+
+    <meta name="google-signin-client_id" content="92268480394-ndtbroh51md527lhsojov7ac7f78aq94.apps.googleusercontent.com">
+</head>
+<body class="grid-container">
+<aside class="aside-quotes">
+    <ul class="quote-list">
+        <li>Читайте те, що вам цікаво.</li>
+        <li>Послухайте, про що говорять люди.</li>
+        <li>Долучайтеся до розмов.</li>
+    </ul>
+
+</aside>
+<article class="login">
+    <div>
+        <img src="img/bird.png" class="little-bird">
+        <h1 class="first-sentence">Дізнайтеся, що відбувається у світі просто зараз</h1>
+        <h2 class="second-sentence">Приєднуйтесь до Твіттера сьогодні.</h2>
+
+        <div class="g-signin2" data-onsuccess="onSignIn"></div>
+
+        <div id="status"></div>
+        <!-- <button onclick="getInfo()">Get Info</button> -->
+        <button onclick="login()">login</button>
+        <button onclick="logout()">logout</button>
+
+
+    </div>
+
+
+
+</article>
+<footer class="twitter-footer">
+    <ul class="list-in-footer">
+        <li>Про нас</li>
+        <li>Довідковий центр</li>
+        <li>Блог</li>
+        <li>Статус</li>
+        <li>Вакансії</li>
+        <li>Умови</li>
+        <li>Політика конфіденційності</li>
+        <li>Файли cookie</li>
+        <li>Рекламна інформація</li>
+        <li>Бренд</li>
+        <li>Додатки</li>
+        <li>Реклама</li>
+        <li>Marketing</li>
+        <li>Компанії</li>
+        <li>Розробники</li>
+        <li>Каталог</li>
+        <li>Налаштування</li>
+        <li>© 2018 Твіттер</li>
+    </ul>
+</footer>
+
+</body>
+</html>

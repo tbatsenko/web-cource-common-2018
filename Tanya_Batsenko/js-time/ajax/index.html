@@ -1,0 +1,30 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>Ajax test</title>
+  <meta name="description" content="some test content">
+</head>
+
+<body>
+    Hello!
+    <button id="btn">Load content</button>
+
+    <script>
+        let btn = document.getElementById("btn").addEventListener("click", () => {
+            const xhr = new XMLHttpRequest();
+            xhr.open("GET", "/data.txt");
+            xhr.send();
+            xhr.onreadystatechange = (resp) => {
+                if (xhr.readyState === 4) {
+                    console.log("tada:\n", xhr.responseText);
+                    console.log(xhr.status);
+                }
+                
+            }
+        })
+    </script>
+</body>
+</html>

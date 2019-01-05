@@ -1,0 +1,21 @@
+{
+  "name": "funny-game",
+  "version": "1.0.0",
+  "description": "This is simple memory game. All you need to do is to find all pairs of fruits which are hidden behind game cards. To reveal a card just click on it. Caution: you have limited time (and other obstacles ^_^) so it's not so easy to win. If you have lost you can restart and begin from scratch.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "handlebars": "^4.0.12",
+    "handlebars-template-loader": "^1.0.0",
+    "jquery": "^3.3.1",
+    "webpack": "^4.26.1",
+    "webpack-cli": "^3.1.2"
+  },
+  "devDependencies": {}
+}

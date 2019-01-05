@@ -4,106 +4,86 @@
     padding: 0.4em 0;
     height: 1.8em;
     position: fixed;
-    top:0;
+    top: 0;
 }
 
-.header-container{
+.header-container {
     display: flex;
-    width: 62em;
+    width: 64em;
     justify-content: space-between;
     align-items: center;
     height: 2em;
-    /*position: fixed;*/
     margin: auto;
 }
+
 .header-left {
     display: flex;
-
+    align-items: center;
 }
 
-.header__facebook-icon{
+.header__facebook-icon {
     float: left;
     margin: 0.3em;
     background-position: 0 -442px;
-    height: 1.7em;
-    width: 1.7em;
+    height: 1.55em;
+    width: 1.6em;
     color: transparent;
     cursor: pointer;
     padding: 0;
 }
 
-.search-form{
+.search-form {
     border: 1px solid #3b5998;
     float: left;
     display: flex;
-    height: 1.45em;
+    height: 1.5em;
     border-radius: 3px;
     margin: 0.2em 0.1em 0.2em 0.1em;
+    width: 28em;
 }
 
-.search-form__input{
+.search-form__input {
     max-width: 100em;
     padding-left: 0.3em;
-    height: 1.6em;
     min-width: 5em;
     width: 100%;
     border: none;
     border-radius: 0.1em 0 0 0.1em;
 }
 
-.search-form__button{
+.search-form__button {
     border-radius: 0 0.1em 0.1em 0;
     border: none;
     cursor: pointer;
     text-align: center;
-
     width: 4.5em;
-
-    height: 1.6em;
     background-color: #ebedf0;
 
 }
 
-.img-header-search{
+.img-header-search {
     background-position: 0 -1445px;
-    /*background-size: 1.1em 1.1em;*/
 }
 
-
-.search-form__search-icon{
+.search-form__search-icon {
     background-position: 6px -1444px;
-    /*background-size: 30px 1475px;*/
-    /*clip-path: inset(20px 20px 20px 20px);*/
     width: 1.4em;
     height: 1.05em;
 }
 
-.header-navigation{
+.header-navigation {
     height: 2.1em;
     float: left;
 }
 
-
-
-.header-right__element{
+.header-right__element {
     display: flex;
     align-items: center;
     float: right;
     padding-left: 1.5em;
-
-
 }
 
-.header-right__element>a{
-    color: rgb(255, 255, 255);
-    line-height: 190%;
-    /*font-size: 85%;*/
-    font-weight: bold;
-    font-size: 80%;
-}
-
-
-.header-right__button{
+.header-right__button {
     line-height: 145%;
     font-weight: bold;
     font-size: 80%;
@@ -113,20 +93,31 @@
     text-align: center;
 }
 
-.header-right__profile-details{
+.header-right__profile-details {
     display: flex;
-
+    color: rgb(255, 255, 255);
+    line-height: 190%;
+    font-weight: bold;
+    font-size: 80%;
 }
 
-.header-right__profile-picture{
+.header-right__profile-details:hover{
+    background: #3b5da0;
+}
+
+.header-right__profile-picture {
     height: 1.9em;
     width: 1.9em;
     border-radius: 50%;
-    padding-right: 0.5em;
+    margin-right: 0.3em;
 }
 
-.header-right__button-create{
+.header-right__button-create {
     color: #fff;
+}
+
+.header-right__button-create:hover{
+    background: #3b5da0;
 }
 
 .header-right {
@@ -138,36 +129,27 @@
     margin: 0.1em;
 }
 
-
-.header-right__button-friends{
+.header-right__button-friends {
     background-position: 0 -892px;;
-    /*background-size: 1.1em 1.1em;*/
-
-
-
     text-align: center;
 }
 
-.header-right__button-messages{
+.header-right__button-messages {
     background-position: 0 -942px;;
-
     text-align: center;
 }
 
-.header-right__button-notifications{
+.header-right__button-notifications {
     background-position: 0 -792px;
-
     text-align: center;
 }
 
-.header-right__button-help{
-
+.header-right__button-help {
     text-align: center;
     background-position: 0 -992px;
 }
 
-.header-right__button-other{
-
+.header-right__button-other {
     text-align: center;
     background-position: 0 -842px;
 }

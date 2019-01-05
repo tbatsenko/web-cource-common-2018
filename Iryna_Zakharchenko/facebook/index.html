@@ -7,7 +7,12 @@
     <link rel="stylesheet" href="css/general.css">
     <link rel="stylesheet" href="css/header.css">
     <link rel="stylesheet" href="css/left-aside.css">
+    <link rel="stylesheet" href="css/main-part-center.css">
+    <link rel="stylesheet" href="css/right-aside.css">
+
+
 </head>
+
 <body>
 
 <header class="header-blue">
@@ -16,17 +21,39 @@
             <a class="icons header__facebook-icon">Facebook</a>
             <form role="search" action="/" class="search-form">
                 <input type="search" placeholder="Пошук " class="search-form__input">
-                <button class="search-form__button"><svg class="icons search-form__search-icon"></svg></button>
+                <button class="search-form__button">
+                    <svg class="icons search-form__search-icon"></svg>
+                </button>
 
             </form>
         </div>
         <nav class="header-navigation">
             <ul class="header-right">
-                <li class="header-right__element"><a href="#" class="header-right__profile-details"><img src="icons/person.jpg" class="header-right__profile-picture "> Ira </a></li>
-                <li class="header-right__element"><a href="#">Головна</a></li>
-                <li class="header-right__element"><button class="header-right__button header-right__button-create">Створити</button></li>
-                <li class="header-right__element"><button class="icons header-right__button header-right__button-friends header-right__button__transparent-w2-h2">друзі</button><button class="icons header-right__button header-right__button-messages header-right__button__transparent-w2-h2">повідомлення</button><button class="icons header-right__button header-right__button-notifications header-right__button__transparent-w2-h2  ">сповіщення</button></li>
-                <li class="header-right__element"><button class="icons header-right__button header-right__button-help header-right__button__transparent-w2-h2">допомога</button><button class="icons header-right__button header-right__button-other header-right__button__transparent-w2-h2">інше</button></li>
+                <li class="header-right__element"><a href="#" class="header-right__profile-details"><img
+                        src="icons/person.jpg" class="header-right__profile-picture "> Ira </a></li>
+                <li class="header-right__element"><a href="#" class="header-right__profile-details">Головна</a></li>
+                <li class="header-right__element">
+                    <button class="header-right__button header-right__button-create">Створити</button>
+                </li>
+                <li class="header-right__element">
+                    <button class="icons header-right__button header-right__button-friends header-right__button__transparent-w2-h2">
+                        друзі
+                    </button>
+                    <button class="icons header-right__button header-right__button-messages header-right__button__transparent-w2-h2">
+                        повідомлення
+                    </button>
+                    <button class="icons header-right__button header-right__button-notifications header-right__button__transparent-w2-h2  ">
+                        сповіщення
+                    </button>
+                </li>
+                <li class="header-right__element">
+                    <button class="icons header-right__button header-right__button-help header-right__button__transparent-w2-h2">
+                        допомога
+                    </button>
+                    <button class="icons header-right__button header-right__button-other header-right__button__transparent-w2-h2">
+                        інше
+                    </button>
+                </li>
             </ul>
         </nav>
     </div>
@@ -46,12 +73,14 @@
                 </li>
                 <li class="left-aside-navigation__element left-aside-navigation__element__margin-top">
                     <a href="#" class="left-aside-navigation__news">
-                        <svg class="left-aside-navigation__news-img"></svg> Новини
+                        <svg class="left-aside-navigation__news-img"></svg>
+                        Новини
                     </a>
                 </li>
                 <li class="left-aside-navigation__element">
-                    <a  href="#" class="left-aside-navigation__news">
-                        <svg class="left-aside-navigation__news-img"></svg> Messenger
+                    <a href="#" class="left-aside-navigation__messenger">
+                        <svg class="left-aside-navigation__messenger-img"></svg>
+                        Messenger
                     </a>
                 </li>
                 <li class="left-aside-navigation__element">
@@ -59,176 +88,285 @@
                 </li>
 
                 <li class="left-aside-navigation__element">
-                    <a href="#" class="left-aside-navigation__news">
-                    <svg class="left-aside-navigation__news-img"></svg> Varta1 ...
+                    <a href="#" class="left-aside-navigation__groups">
+                        <svg class="left-aside-navigation__group-img"></svg>
+                        Varta1 ...<span class="left-aside-navigation__news-number">20+</span>
                     </a></li>
                 <li class="left-aside-navigation__element">
-                    <a href="#" class="left-aside-navigation__news">
-                    <svg class="left-aside-navigation__news-img"></svg> День відкритих дв...
+                    <a href="#" class="left-aside-navigation__groups">
+                        <svg class="left-aside-navigation__news-img"></svg>
+                        День відкритих дв...
                     </a>
                 </li>
                 <li class="left-aside-navigation__element">
+                    <h3 class="left-aside-navigation__element-header">Цікаве</h3>
+                </li>
 
-                    <button> Більше...</button>
-
+                <li class="left-aside-navigation__element">
+                    <a href="#" class="left-aside-navigation__groups">
+                        <svg class="left-aside-navigation__news-img"></svg>
+                        Події<span class="left-aside-navigation__news-number">3</span>
+                    </a>
                 </li>
                 <li class="left-aside-navigation__element">
-                    <h3 class="left-aside-navigation__element-header">Цікаве</h3>
-                    <ul>
-                        <li><svg></svg>Події<span>3</span></li>
-                        <li><svg></svg>Фан-клуби</li>
-                        <li><svg></svg>Групи</li>
-                        <li><svg></svg>Стрічка сторінок</li>
-                        <li><svg></svg>Кампанії зі збору к...</li>
-                    </ul>
-                    <button> Більше...</button>
+                    <a href="#" class="left-aside-navigation__groups">
+                        <svg class="left-aside-navigation__news-img"></svg>
+                        Фан-клуби
+                    </a>
+                </li>
+                <li class="left-aside-navigation__element">
+                    <a href="#" class="left-aside-navigation__groups">
+                        <svg class="left-aside-navigation__news-img"></svg>
+                        Групи
+                    </a>
+                </li>
+                <li class="left-aside-navigation__element">
+                    <a href="#" class="left-aside-navigation__groups">
+                        <svg class="left-aside-navigation__news-img"></svg>
+                        Стрічка сторінок
+                    </a>
+                </li>
+                <li class="left-aside-navigation__element">
+                    <a href="#" class="left-aside-navigation__groups">
+                        <svg class="left-aside-navigation__news-img"></svg>
+                        Кампанії зі збору к...
+                    </a>
+                </li>
+
+                <li class="left-aside-navigation__element">
+                    <button class="left-aside-navigation__btn-more">
+                        <svg class="left-aside-navigation__arrow-down"></svg>
+                        Більше...
+                    </button>
                 </li>
             </ul>
         </nav>
     </aside>
-    <article>
-        <section>
-            <ul>
-                <li><button><svg></svg>Створити допис</button></li>
-                <li><button><svg></svg>Альбом зі світлинами/відео</button></li>
-                <li><button><svg></svg>Відео наживо</button></li>
+    <article class="center-block">
+        <section class="center-first-block">
+            <ul class="center-first-block__upper-buttons">
+                <li class="center-first-block__upper-container-button">
+                    <button class="center-first-block__upper-button-edit">
+                        <svg class="center-first-block__edit-img center-first-block__button-img"></svg>
+                        <span>Створити допис</span></button>
+                </li>
+                <li class="center-first-block__upper-container-button">
+                    <button class="center-first-block__upper-button-album">
+                        <svg class="center-first-block__album-img center-first-block__button-img"></svg>
+                        Альбом зі світлинами/відео
+                    </button>
+                </li>
+                <li class="center-first-block__upper-container-button">
+                    <button class="center-first-block__upper-button-album">
+                        <svg class="center-first-block__video-img center-first-block__button-img"></svg>
+                        Відео наживо
+                    </button>
+                </li>
             </ul>
-            <form role="search" action="/">
-                <img src="icons/person.jpg">
-                <input type="search" placeholder="Що у Вас на думці, Ira?" >
+            <form role="search" action="/" class="center-first-block__write-post">
+                <img src="icons/person.jpg" class="center-first-block__person-img">
+                <input type="search" placeholder="Що у Вас на думці, Ira?" class="center-first-block__post-input">
             </form>
-            <ul>
-                <li><button><svg></svg>Світлини/Ві...</button></li>
-                <li><button><svg></svg>Позначити д...</button></li>
-                <li><button><svg></svg>Почуття або...</button></li>
-                <li><button><svg></svg>Інше</button></li>
+            <ul class="center-first-block__down-buttons">
+                <li class="center-first-block__down-container-button">
+                    <button class="center-first-block__down-button-photo">
+                        <svg class="center-first-block__photo-img center-first-block__button-img"></svg>
+                        Світлини/Ві...
+                    </button>
+                </li>
+                <li class="center-first-block__down-container-button">
+                    <button class="center-first-block__down-button-photo">
+                        <svg class="center-first-block__photo-img center-first-block__button-img"></svg>
+                        Позначити д...
+                    </button>
+                </li>
+                <li class="center-first-block__down-container-button">
+                    <button class="center-first-block__down-button-photo">
+                        <svg class="center-first-block__photo-img center-first-block__button-img"></svg>
+                        Почуття або...
+                    </button>
+                </li>
+                <li class="center-first-block__down-container-button">
+                    <button class="center-first-block__down-button-other">
+                        <svg class="center-first-block__other-img center-first-block__button-img"></svg>
+                    </button>
+                </li>
             </ul>
         </section>
-        <section>
-            <img src="icons/person.jpg"> <h2>Amm Stef</h2>
-            <ul>
-                <li><time>3 год</time></li>
-                <li><svg></svg></li>
-            </ul>
-            <button class="icons"></button>
-            <p>У рекрутів сьогодні загострення.</p>
-            <img src="https://scontent.flwo1-1.fna.fbcdn.net/v/t1.0-9/45406990_2265681446800131_7228119128089821184_n.jpg?_nc_cat=103&_nc_ht=scontent.flwo1-1.fna&oh=0e0f8cea35c8aa1a47f73cb0308a2895&oe=5C425453">
-            <svg><circle r="60" ></circle><circle r="60"></circle><circle r="60"></circle></svg>
-            <p>Ви, Oleg Farenyuk, Yaroslav Prytula та 37 others</p>
-            <p>2 коментарі</p>
-            <p>2 Shares</p>
-            <ul>
-                <li><svg></svg>Подобається</li>
-                <li><svg></svg>Коментувати</li>
-                <li><svg></svg>Поширити</li>
-                <li><img src="icons/person.jpg"><svg></svg></li>
-            </ul>
+        <section class="center-block-post">
+            <div class="center-block-post__main-data">
+                <div class="center-block-post__upper-left-data">
+                    <a href="#" class="center-block-post__img-container"><img src="icons/person1.jpg"
+                                                                              class="center-first-block__post-person-img"></a>
+                    <div class="center-block-post__main-text-data-container">
+                        <a href="#">
+                            <h3 class="enter-block-post__person-name">Amm Stef</h3>
+                        </a>
+                        <a href="#">
+                            <time class="center-block-post__time">3 год</time>
+                        </a>
+                        <svg class="center-block-post__only-for-friends"></svg>
+                    </div>
+                </div>
+                <button class="center-block-post__other-info">
+                    <svg class="center-block-post__other-img"></svg>
+                </button>
+            </div>
+
+            <p class="center-block-post__post-text">У рекрутів сьогодні загострення.</p>
+            <img src="https://scontent.flwo1-1.fna.fbcdn.net/v/t1.0-9/45406990_2265681446800131_7228119128089821184_n.jpg?_nc_cat=103&_nc_ht=scontent.flwo1-1.fna&oh=0e0f8cea35c8aa1a47f73cb0308a2895&oe=5C425453" class="center-block-post__post-img">
+            <div class="center-block-post__reactions">
+                <div class="center-block-post__reactions-emoji">
+                    <svg class="center-block-post__emoji center-block-post__emoji-laugh"></svg>
+                    <svg class="center-block-post__emoji center-block-post__emoji-like"></svg>
+                    <p class="center-block-post__people-react center-block-post__reactions__pointer">Ви, Oleg Farenyuk, Yaroslav Prytula та 37 others</p>
+                </div>
+                <div class="center-block-post__reactions-shares-comments">
+                    <span class="center-block-post__comments center-block-post__reactions__pointer">2 коментарі</span>
+                    <span class="center-block-post__shares center-block-post__reactions__pointer">2 Shares</span>
+                </div>
+            </div>
+            <div class="center-block-post__down-buttons-container">
+                <button class="center-block-post__down-button">
+                    <svg class="center-block-post__like-img"></svg>
+                    Подобається
+                </button>
+                <button class="center-block-post__down-button">
+                    <svg class="center-block-post__like-img"></svg>
+                    Коментувати
+                </button>
+                <button class="center-block-post__down-button center-block-post__down-button__middle">
+                    <svg class="center-block-post__like-img"></svg>
+                    Поширити
+                </button>
+                <button class="center-block-post__down-button center-block-post__down-button__short"><img
+                        src="icons/person.jpg" class="center-block-post__person-img">
+                    <svg class="center-block-post__arrow-down-img"></svg>
+                </button>
+            </div>
 
         </section>
 
-        <section>
-            <img src="icons/person.jpg"> <h2>Баба і кіт</h2>
-            <ul>
-                <li><time>12 год</time></li>
-                <li><svg></svg></li>
-            </ul>
-            <button class="icons"></button>
-            <p>Смачного!</p>
-            <img src="https://scontent.flwo1-1.fna.fbcdn.net/v/t1.0-9/45306496_2161175943927205_3752913496640061440_n.jpg?_nc_cat=104&_nc_ht=scontent.flwo1-1.fna&oh=129be4f465726bec05d0df12ef7ce8d1&oe=5C4759F2">
-            <svg><circle r="60" ></circle><circle r="60"></circle><circle r="60"></circle></svg>
-            <p>284</p>
-            <p>14 коментарів</p>
-            <p>37 Shares</p>
-            <ul>
-                <li><svg></svg>Подобається</li>
-                <li><svg></svg>Коментувати</li>
-                <li><svg></svg>Поширити</li>
-                <li><img src="icons/person.jpg"><svg></svg></li>
-            </ul>
+        <section class="center-block-post">
+            <div class="center-block-post__main-data">
+                <div class="center-block-post__upper-left-data">
+                    <a href="#" class="center-block-post__img-container"><img src="icons/grandma.jpg"
+                                                                              class="center-first-block__post-person-img"></a>
+                    <div class="center-block-post__main-text-data-container">
+                        <a href="#">
+                            <h3 class="enter-block-post__person-name">Баба і кіт</h3>
+                        </a>
+                        <a href="#">
+                            <time class="center-block-post__time">12 год</time>
+                        </a>
+                        <svg class="center-block-post__only-for-friends"></svg>
+                    </div>
+                </div>
+                <button class="center-block-post__other-info">
+                    <svg class="center-block-post__other-img"></svg>
+                </button>
+            </div>
+            <p class="center-block-post__post-text">Смачного!</p>
+            <img src="https://scontent.flwo1-1.fna.fbcdn.net/v/t1.0-9/45306496_2161175943927205_3752913496640061440_n.jpg?_nc_cat=104&_nc_ht=scontent.flwo1-1.fna&oh=129be4f465726bec05d0df12ef7ce8d1&oe=5C4759F2" class="center-block-post__post-img">
+            <div class="center-block-post__reactions">
+                <div class="center-block-post__reactions-emoji">
+                    <svg class="center-block-post__emoji center-block-post__emoji-laugh"></svg>
+                    <svg class="center-block-post__emoji center-block-post__emoji-like"></svg>
+                    <p>284</p>
+                </div>
+                <div class="center-block-post__reactions-shares-comments">
+                    <span class="center-block-post__comments">14 коментарів</span>
+                    <span>37 Shares</span>
+                </div>
+            </div>
+            <div class="center-block-post__down-buttons-container">
+                <button class="center-block-post__down-button">
+                    <svg class="center-block-post__like-img"></svg>
+                    Подобається
+                </button>
+                <button class="center-block-post__down-button">
+                    <svg class="center-block-post__like-img"></svg>
+                    Коментувати
+                </button>
+                <button class="center-block-post__down-button center-block-post__down-button__middle">
+                    <svg class="center-block-post__like-img"></svg>
+                    Поширити
+                </button>
+                <button class="center-block-post__down-button center-block-post__down-button__short"><img
+                        src="icons/person.jpg" class="center-block-post__person-img">
+                    <svg class="center-block-post__arrow-down-img"></svg>
+                </button>
+            </div>
+
         </section>
     </article>
-    <aside>
-        <article>
-            <section>
-                <h3>Розповіді</h3>
-                <ul>
-                    <li><a href="#"><svg></svg>Архів </a></li>
-                    <li><button > Налаштування</button></li>
-                </ul>
-                <ul>
-                    <li>
+    <aside class="right-aside">
+        <section class="right-aside-stories">
+            <div class="right-aside-stories__top-part-container">
+                <h3 class="right-aside-stories__header">Розповіді</h3>
+                <div class="right-aside-stories__top-part-right">
+                    <a href="#" class="right-aside-stories__archieve">
+                        <svg class="right-aside-stories__clock-img"></svg>
+                        Архів </a>
 
-                        <button>
-                            <img src="icons/person.jpg">
-                            Додати до розповіді
-                            <small>Поділіться світлиною, відео або напишіть щось</small>
-                        </button>
+                    <button class="right-aside-stories__settings"> Налаштування</button>
+                </div>
+            </div>
+            <ul class="right-aside-stories__stories-container">
+                <li>
 
-                    </li>
-                    <li>
-                        <button>
-                            <img src="icons/person.jpg">
-                            Alina Yur
-                            <time>15 годин тому</time>
-                        </button>
-                    </li>
-                    <li>
-                        <button>
-                            <img src="icons/person.jpg">
-                            AI & Big Data People Lviv
-                            <time>5 годин тому</time>
-                        </button>
-                    </li>
-                    <li>
-                        <button>
-                            <img src="icons/person.jpg">
-                            Svitlana Yur
-                            <time>2 годин тому</time>
-                        </button>
-                    </li>
-                </ul>
-                <button><svg></svg> Показати більше</button>
-            </section>
-            <section>
-                <ul>
-                    <li><button><svg></svg>3 запрошення на події</button></li>
-                    <li><button><svg></svg><small>Сьогодні день народження у </small>Dima Kulh</button></li>
-                </ul>
-            </section>
-            <section>
-                <button>Ваші сторінки (3) <svg></svg></button>
-                <button><svg></svg></button>
-            </section>
-            <section>
-                <h3>Рекомендовані сторінки</h3>
-                <a href="#">Переглянути всі</a>
+                    <a class="right-aside-stories__one-story">
+                        <div class="right-aside-stories__user-circle">
+                            <svg class="right-aside-stories__user-add-story-img"></svg>
+                        </div>
+                        <div class="right-aside-stories__one-story-text-container">
+                            <h4 class="right-aside-stories__user-name">Додати до розповіді</h4>
+                            <small class="right-aside-stories__time-pass">Поділіться світлиною, відео або напишіть
+                                щось
+                            </small>
+                        </div>
+                    </a>
 
-            </section>
+                </li>
+                <li>
+                    <a class="right-aside-stories__one-story">
+                        <img src="icons/person1.jpg" class="right-aside-stories__story-img">
+                        <div class="right-aside-stories__one-story-text-container">
+                            <h4 class="right-aside-stories__user-name">Alina Yur</h4>
+                            <time class="right-aside-stories__time-pass">15 годин тому</time>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a class="right-aside-stories__one-story">
+                        <img src="icons/person1.jpg" class="right-aside-stories__story-img">
+                        <div class="right-aside-stories__one-story-text-container">
+                            <h4 class="right-aside-stories__user-name">AI & Big Data People Lviv</h4>
+                            <time class="right-aside-stories__time-pass">5 годин тому</time>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a class="right-aside-stories__one-story">
+                        <img src="icons/person1.jpg" class="right-aside-stories__story-img">
+                        <div class="right-aside-stories__one-story-text-container">
+                            <h4 class="right-aside-stories__user-name">Svitlana Yur</h4>
+                            <time class="right-aside-stories__time-pass">2 годин тому</time>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+            <button class="right-aside-stories__show-more-btn">
+                <svg class="right-aside-stories__arrow-down"></svg>
+                Показати більше
+            </button>
+        </section>
 
-            <section>
-                <ul>
-                    <li><button>Українська</button></li>
-                    <li><button>English (US)</button></li>
-                    <li><button>Русский</button></li>
-                </ul>
-                <button><svg></svg></button>
-            </section>
-        </article>
 
     </aside>
 
 </main>
-<footer>
-    <ul>
-        <li><button>Конфіденційність</button></li>
-        <li><button>Умови користування</button></li>
-        <li><button>Розміщення реклами</button></li>
-        <li><button>Типи реклами <svg></svg></button></li>
-        <li><button>Реп'яшки</button></li>
-        <li><button>Ще <svg></svg></button></li>
-    </ul>
-    <p>Facebook © <time>2018</time></p>
-</footer>
+
 </body>
 
 </html>

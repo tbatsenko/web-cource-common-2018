@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/icon?family=Material+Icons');
+
 .gmail-body {
   height: 575px;
   width: calc(100% - var(--gmail-aside-width));
@@ -5,27 +7,256 @@
 }
 
 .header-gmail-emails {
-  height: 48px;
+  height: var(--header-gmail-emails-height);
   width: 100%;
-  background: #ecf0f1;
+  background: white;
+  display: flex;
+  align-items: center;
+
+  &__checkall-checkbox {
+    padding-left: 16px;
+    width: 20px;
+    height: 20px;
+    align-self: center;
+    margin-bottom: 3px;
+  }
+
+  &__checkall-checkbox-input {
+    padding-left: 16px;
+    display: none;
+  }
+
+  &__checkall-checkbox-input + &__checkall-checkbox-style::after {
+    font-family: 'Material Icons';
+    font-size: 24px;
+    background: transparent;
+    content: 'check_box_outline_blank';
+    font-size: 20px;
+    color: #444;
+  }
+
+  &__checkall-checkbox-input:hover + &__checkall-checkbox-style::after {
+    color: #020202;
+    cursor: pointer;
+  }
+
+  &__checkall-checkbox-input:checked + &__checkall-checkbox-style::after {
+    content: 'check_box';
+    color: #020202;
+  }
+
+  &__checkall-options-button {
+    font-family: 'Material Icons';
+    font-size: 20px;
+    background: transparent;
+    color: #6d6d6d;
+    border: none;
+    padding: 0;
+  }
+
+  &__refresh-button {
+    font-family: 'Material Icons';
+    font-size: 20px;
+    background: transparent;
+    color: #444;
+    border: none;
+    padding: 0;
+    margin-left: 20px;
+    margin-right: 8px;
+  }
+
+  &__more-options-button {
+    font-family: 'Material Icons';
+    font-size: 20px;
+    background: transparent;
+    color: #444;
+    border: none;
+    padding: 0;
+    margin-left: 12px;
+    margin-right: 13px;
+  }
+
+  &__old-emails-button {
+    font-family: 'Material Icons';
+    font-size: 20px;
+    background: transparent;
+    color: #b8b8b8;
+    border: none;
+    padding: 0;
+    margin-left: 7px;
+    margin-right: 8px;
+  }
+
+  &__new-emails-button {
+    font-family: 'Material Icons';
+    font-size: 20px;
+    background: transparent;
+    color: #b8b8b8;
+    border: none;
+    padding: 0;
+    margin-left: 12px;
+    margin-right: 13px;
+  }
+
+  &__settings-button {
+    font-family: 'Material Icons';
+    font-size: 20px;
+    background: transparent;
+    border: none;
+    padding: 0;
+    margin-left: 12px;
+    margin-right: 32px;
+    color: #444;
+  }
+
+  &__counter-button {
+    font-size: 0.75rem;
+    letter-spacing: 0.3px;
+    margin-left: auto;
+    padding: 0 8px;
+    color: #5f6368;
+    border: none;
+  }
 }
 
 .gmail-emails-main {
   width: 100%;
-  height: calc(100% - 48px);
-  background: #f39c12;
+  height: calc(100% - var(--header-gmail-emails-height));
+  background: white;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
 }
 
 .gmail-emails {
   width: 100%;
   height: auto;
-  background: #8e44ad;
+  //background: #8e44ad;
 }
 
 .gmail-footer {
-  height: 40px;
+  height: var(--gmail-footer-height);
   width: 100%;
-  margin-top: 16px;
-  margin-bottom: 16px;
-  background: #2c3e50;
+  //margin-bottom: 16px;
+  background: #ffffff;
+  margin-top: auto;
+  display: flex;
+  font-weight: normal;
+  font-size: 0.75rem;
+  letter-spacing: 0.3px;
+  line-height: 20px;
+  color: #5f6368;
+  justify-content: space-between;
+
+  &__content-block {
+    padding-left: 16px;
+    padding-right: 30px;
+  }
+
+  &__content-block--left {
+    text-align: left;
+  }
+
+  &__content-block--middle {
+    text-align: center;
+  }
+
+  &__content-block--right {
+    text-align: right;
+  }
+}
+
+.email {
+  padding-bottom: 4px;
+  padding-top: 4px;
+  box-shadow: inset 0 -1px 0 0 rgba(100, 121, 143, 0.122);
+  display: flex;
+  background: rgba(242, 245, 245, 0.8);
+  color: #202124;
+  height: 20px;
+  flex-direction: row;
+  align-items: center;
+  padding-left: 16px;
+
+  &__checkbox {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+  }
+
+  &__checkbox-input,
+  &__checkbox-input--star {
+    display: none;
+  }
+
+  &__checkbox-input + &__checkbox-style::after {
+    font-family: 'Material Icons';
+    font-size: 24px;
+    background: transparent;
+    content: 'check_box_outline_blank';
+    font-size: 20px;
+    color: #cccfcf;
+  }
+
+  &__checkbox-input--star + &__checkbox-style--star::after {
+    font-family: 'Material Icons';
+    font-size: 24px;
+    background: transparent;
+    content: 'star_border';
+    font-size: 20px;
+    color: #cccfcf;
+  }
+
+  &__checkbox-input:hover + &__checkbox-style::after,
+  &__checkbox-input--star:hover + &__checkbox-style--star::after {
+    color: #020202;
+    cursor: pointer;
+  }
+
+  &__checkbox-input:checked + &__checkbox-style::after {
+    content: 'check_box';
+    color: #020202;
+  }
+
+  &__checkbox-input--star:checked + &__checkbox-style--star::after {
+    content: 'star';
+    color: #f3b200;
+  }
+
+  &__from,
+  &__title,
+  &__text {
+    font-size: 0.875rem;
+    letter-spacing: 0.2px;
+    display: inline-block;
+    white-space: nowrap;
+    font-weight: normal;
+    //overflow: hidden;
+  }
+
+  &__from {
+    min-width: 168px;
+    margin-right: 32px;
+  }
+
+  &__title {
+  }
+
+  &__text {
+    color: #5f6368;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    margin-left: 3px;
+    margin-right: 78px;
+  }
+
+  &__date {
+    font-size: 0.75rem;
+    letter-spacing: 0.3px;
+    max-width: 56px;
+    color: #5f6368;
+    margin-right: 16px;
+    white-space: nowrap;
+    text-align: left;
+  }
 }

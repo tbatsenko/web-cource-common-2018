@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Homepage</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" />
+  </head>
+  <body>
+    <header class="top-movie">
+      <!-- <img src="img/wrath.jpg" class="top-movie__image"> -->
+      <nav class="site-nav">
+        <a class="site-nav__logo">TheMovieBox</a>
+        <div class="site-nav__button-wrapper">
+          <button class="site-nav__button">Search</button>
+          <button class="site-nav__button">Log In</button>
+          <button class="site-nav__button site-nav__button--focus">
+            Sign Up
+          </button>
+        </div>
+      </nav>
+      <footer class="top-movie__footer">
+        <section class="movie-content">
+          <h2 class="movie-content__name">Wrath of the Titans</h2>
+          <ul class="movie-info">
+            <li class="movie-info__item">Fantasy</li>
+            <li class="movie-info__item">Animation</li>
+            <li class="movie-info__item movie-info__item--last">Family</li>
+            <li class="movie-info__item">Duration <time>1h 52m</time></li>
+          </ul>
+          <nav class="movie-content__nav">
+            <button
+              class="movie-content__nav-button movie-content__nav-button--active"
+            >
+              Watch Movie
+            </button>
+            <button
+              class="movie-content__nav-button movie-content__nav-button--info"
+            >
+              View Info
+            </button>
+            <button
+              class="movie-content__nav-button movie-content__nav-button--other"
+            >
+              + Add to Wishlist
+            </button>
+          </nav>
+        </section>
+        <section class="rating">
+          <h3 class="rating__title">
+            Rating <span class="rating__info">based on 3.564 reviews</span>
+          </h3>
+          <section class="rating__vizualization">
+            <div class="rating__stars">
+              <span class="rating__star rating__star--full">☆</span>
+              <span class="rating__star rating__star--full">☆</span>
+              <span class="rating__star rating__star--full">☆</span>
+              <span class="rating__star rating__star--half">☆</span>
+              <span class="rating__star">☆</span>
+            </div>
+            <div class="rating__grade">3.5</div>
+          </section>
+        </section>
+      </footer>
+    </header>
+    <main class="main-content">
+      <nav class="main-nav">
+        <section class="main-nav__filter">
+          <a class="main-nav__button main-nav__button--active">Trending</a>
+          <button class="main-nav__button">Top Rated</button>
+          <button class="main-nav__button">New Arricals</button>
+          <button class="main-nav__button">Genre</button>
+        </section>
+        <section class="main-nav__display">
+          <button class="main-nav__button">Grid</button>
+          <button class="main-nav__button">List</button>
+        </section>
+      </nav>
+      <div class="main-content__wrapper">
+        <section class="movies grid-container" id="movies"><!-- handlebars here --></section>
+      </div>
+    </main>
+    <footer class="legal-info">
+      <div class="legal-info__wrapper">
+        <section class="legal-info__section legal-info__section--lined">
+          <h3 class="legal-info__logo">TheMovieBox</h3>
+          <nav class="legal-info__nav">
+            <a href="#" class="legal-info__link">About</a>
+            <a href="#" class="legal-info__link">Movies</a>
+            <a href="#" class="legal-info__link">Ratings</a>
+            <a href="#" class="legal-info__link">Contact</a>
+          </nav>
+        </section>
+        <section class="legal-info__section">
+          <p class="legal-info__text">
+            Designed by Milan Houter. All rights reserved.
+          </p>
+          <nav class="legal-info__nav">
+            <a href="#" class="legal-info__link">Facebook</a>
+            <a href="#" class="legal-info__link">Pinterest</a>
+            <a href="#" class="legal-info__link">Twitter</a>
+            <a href="#" class="legal-info__link">LinkedIn</a>
+          </nav>
+        </section>
+      </div>
+    </footer>
+    <script src="js/main-bundled.js"></script>
+  </body>
+</html>

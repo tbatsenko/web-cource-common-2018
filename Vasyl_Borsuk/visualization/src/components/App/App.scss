@@ -1,0 +1,22 @@
+.App {
+  height: 600px;
+  width: 100%;
+  background-color: #ecf0f1;
+  color: #2c3e50;
+  margin: 0;
+
+  &__chart {
+    height: 500px;
+  }
+
+  &__legend {
+    text-align: center;
+  }
+
+  &__legend-item {
+    margin: 5px;
+  }
+
+  &__button {
+  }
+}

@@ -1,0 +1,45 @@
+.brief-resume {
+  display: flex;
+  &__profile-pic {
+    width: 100%;
+  }
+  &__bottom-text {
+    display: flex;
+    flex-flow: column;
+    overflow: auto;
+    position: absolute;
+    width: 82.5%;
+    bottom: 19%;
+  }
+  &__user-persona {
+    position: absolute;
+    top: 4.1%;
+    font-size: 19px;
+    color: #ffffff;
+  }
+  &__name {
+    font-size: 97px;
+    font-weight: bold;
+  }
+  &__age-job {
+    font-size: 30px;
+  }
+  &__separator {
+    margin-top: 15px;
+    height: 2px;
+    background-color: red;
+  }
+  &__traits {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin: 10px 0 10px 0;
+    &-item {
+      background: aliceblue;
+      font-size: 20px;
+    }
+  }
+}
+.brief-resume-element {
+  left: 8.75%;
+}

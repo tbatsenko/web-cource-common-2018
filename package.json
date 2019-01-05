@@ -19,10 +19,17 @@
   "homepage": "https://github.com/ucu-web-2018/web-cource-common#readme",
   "devDependencies": {
     "prettier": "1.14.3",
-    "sass": "^1.14.3"
+    "sass": "^1.14.3",
+    "webpack": "^4.27.1",
+    "webpack-cli": "^3.1.2"
   },
   "dependencies": {
+    "date-fns": "^2.0.0-alpha.26",
+    "handlebars": "^4.0.12",
+    "jquery": "^3.3.1",
     "node-sass": "^4.9.4",
-    "scss": "^0.2.4"
+    "react": "^16.6.3",
+    "scss": "^0.2.4",
+    "serve": "^10.1.1"
   }
 }

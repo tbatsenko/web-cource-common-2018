@@ -1,11 +1,13 @@
-@import "header";
-@import "aside";
-@import "main-payload";
+@import 'header';
+@import 'aside';
+@import 'main-payload';
 
 body {
   margin: 0;
   padding: 0;
+  outline: 0;
   background: #ffffff;
+  font-family: 'Roboto', Arial, Helvetica, sans-serif;
 }
 
 .google-mail-main {
@@ -14,6 +16,7 @@ body {
 
 button {
   background: transparent;
+
   &:hover {
     cursor: pointer;
   }
@@ -22,17 +25,6 @@ button {
 //
 :root {
   --window-header-height: 32px;
+  --gmail-footer-height: 60px;
+  --header-gmail-emails-height: calc(48px);
 }
-
-//window{
-//  box-shadow: 0 0 20px 0 rgba(0,0,0,0.11);
-//  height:var(--window-header-height);
-//  width:250px;
-//
-//  &__header{
-//
-//  }
-//  &__payload{
-//
-//  }
-//}

@@ -1,0 +1,66 @@
+.Skills {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+  max-width: 224px;
+  background-color: #444444;
+  text-align: center;
+  padding-top: 15px;
+  color: whitesmoke;
+  letter-spacing: 2px;
+}
+.Skills__block-title {
+  font-size: 1em;
+  margin-top: 2px;
+}
+.Skills__block-title_hard-skills {
+  margin-top: 33px;
+}
+.Skills__block {
+  margin: 0;
+  list-style-position: inside;
+  width: 130px;
+  padding-left: 27px;
+}
+.Skills__block_languages {
+  padding-left: 4px;
+}
+.Skills__block_interests {
+  margin-top: 14px;
+}
+.Skills__item {
+  float: left;
+  clear: left;
+  font-size: 14px;
+  font-weight: 300;
+  list-style-type: none;
+  text-align: left;
+  margin-bottom: 8px;
+}
+.Skills__item_language {
+  margin-bottom: 0;
+  line-height: 27.5px;
+  width: 82px;
+  height: auto;
+}
+.Skills__item_interests {
+  height: 53px;
+}
+.Skills__item-value {
+  display: inline-block;
+  text-align: left;
+  width: 80px;
+  font-size: 14px;
+  font-weight: 300;
+}
+.Skills__item-value_language-level {
+  margin-left: 10px;
+  font-size: medium;
+  width: 25px;
+  text-align: right;
+  font-weight: bold;
+  line-height: 28.5px;
+}
+
+/*# sourceMappingURL=Skills.css.map */

@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAAA,OAAO;EACL,KAAK,EAAE,KAAK;EACZ,MAAM,EAAE,KAAK;EACb,MAAM,EAAE,SAAS;EACjB,gBAAgB,EAAE,KAAK;EACvB,MAAM,EAAE,iBAAiB;EACzB,aAAa,EAAE,IAAI",
+"sources": ["rubiks.scss"],
+"names": [],
+"file": "rubiks.css"
+}

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dino</title>
+    <link rel="stylesheet" href="styles/style.css">
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+</head>
+<body>
+    <div class="hide"></div>
+
+    <div class="game">
+        <div class="ground">
+            <div class="dino"></div>
+            <div class="cactus"></div>
+            <h1 class="info">Press Space to start</h1>
+        </div>
+    </div>
+
+    <div class="hide"></div>
+
+    <script>
+        function getRandomInt(min, max) {
+            return Math.floor(Math.random() * (max - min + 1)) + min;
+        }
+
+        var isPaused = false;
+        var changeCactus = true;
+        
+        var handler = setInterval(game, 100);
+
+        dinoPosY = $(".dino").offset().top;
+        
+        function game() {
+           
+            cactusPosX = $(".cactus").offset().left;
+        
+            if (cactusPosX > $(".ground").width() + 150 && changeCactus) {
+                $(".cactus").css("width", 35 * getRandomInt(1, 3) + "px")
+                changeCactus = false;
+            } 
+            
+            if (cactusPosX < $(".ground").width() + 150 && !changeCactus) {
+                changeCactus = true;
+            }
+
+            dinoPosX = $(".dino").offset().left;
+            dinoPosYCurr = $(".dino").offset().top;
+            dinoWidth = $(".dino").width();
+            cactusWidth = $(".cactus").width() - 10;
+            cactusHeight = $(".cactus").height() - 10;
+
+            if (cactusPosX < dinoPosX + dinoWidth && 
+                cactusPosX + cactusWidth > dinoPosX && 
+                dinoPosY - dinoPosYCurr < cactusHeight) {
+                animation("paused");
+                $(".info").removeClass("info--hidden");
+                $(".info").text("Game over! Press Space to reload");
+                spaceKeyCount = -1;
+            }
+        }
+
+        function animation(status) {
+            $(".ground").css("animation-play-state", status);
+            $(".dino").css("animation-play-state", status);
+            $(".cactus").css("animation-play-state", status);
+        }
+
+        var spaceKeyCount = 0;
+
+        $(document).keypress(function(e) {
+            if (e.key == " ") {
+                if (spaceKeyCount == 0) {
+                    $(".ground").addClass("ground--move");
+                    $(".dino").addClass("dino--move");
+                    $(".cactus").addClass("cactus--move");
+                    $(".info").addClass("info--hidden");
+                }
+
+                if (spaceKeyCount == -1) {
+                    document.location.reload();
+                }
+                
+                $(".dino").bind("animationend", function() {
+                    $(this).removeClass("dino--jump");
+                }).addClass("dino--jump");
+
+                spaceKeyCount++;    
+            }
+
+            if (e.key == "p") {
+                if (isPaused) animation("running");
+                else animation("paused");
+                isPaused = !isPaused;
+            }
+        });   
+    </script>
+</body>
+</html>

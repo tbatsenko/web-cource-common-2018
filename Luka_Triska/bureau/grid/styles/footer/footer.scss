@@ -1,0 +1,48 @@
+.footer {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  margin: 100px 0 50px 0;
+  padding: 109px 89px 0 89px;
+
+  &-left {
+    display: grid;
+    grid-auto-columns: min-content;
+    grid-gap: 14px;
+
+    &__top {
+      font-size: 16px;
+    }
+
+    &__bottom {
+      &--link {
+        color: rgb(226, 0, 22);
+      }
+
+      &--link:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  &-middle {
+    display: grid;
+    grid-auto-columns: min-content;
+    grid-gap: 14px;
+
+    &__bottom {
+      width: 348px;
+    }
+
+    &__top {
+      color: rgb(226, 0, 22);
+    }
+
+    &__top:hover {
+      text-decoration: underline;
+    }
+
+  }
+
+  &-right {
+  }
+}

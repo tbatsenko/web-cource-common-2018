@@ -1,0 +1,17 @@
+.movie-info-small {
+  display: inline-block;
+  padding: 0;
+
+  &__item {
+    display: inline-block;
+    font-size: 15px;
+    font-weight: 450;
+    color: #babbc3;
+  }
+
+  &__item:not(:last-child)::after {
+    content: ',';
+    width: 5px;
+    height: 5px;
+  }
+}

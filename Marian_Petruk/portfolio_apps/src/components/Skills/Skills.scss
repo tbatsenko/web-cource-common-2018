@@ -1,0 +1,64 @@
+.Skills {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+  max-width: 224px;
+  background-color: rgb(68, 68, 68);
+  text-align: center;
+  padding-top: 15px;
+  color: whitesmoke;
+  letter-spacing: 2px;
+  &__block-title {
+    font-size: 1em;
+    margin-top: 2px;
+    &_hard-skills {
+      margin-top: 33px;
+    }
+  }
+  &__block {
+    margin: 0;
+    list-style-position: inside;
+    width: 130px;
+    padding-left: 27px;
+    &_languages {
+      padding-left: 4px;
+    }
+    &_interests {
+      margin-top: 14px;
+    }
+  }
+  &__item {
+    float: left;
+    clear: left;
+    font-size: 14px;
+    font-weight: 300;
+    list-style-type: none;
+    text-align: left;
+    margin-bottom: 8px;
+    &_language {
+      margin-bottom: 0;
+      line-height: 27.5px;
+      width: 82px;
+      height: auto;
+    }
+    &_interests {
+      height: 53px;
+    }
+  }
+  &__item-value {
+    display: inline-block;
+    text-align: left;
+    width: 80px;
+    font-size: 14px;
+    font-weight: 300;
+    &_language-level {
+      margin-left: 10px;
+      font-size: medium;
+      width: 25px;
+      text-align: right;
+      font-weight: bold;
+      line-height: 28.5px;
+    }
+  }
+}

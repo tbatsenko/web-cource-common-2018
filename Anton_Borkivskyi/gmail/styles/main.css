@@ -1,0 +1,49 @@
+.main {
+  display: flex;
+  flex-direction: row;
+  height: calc(100% - 65px); }
+  .main .letters {
+    overflow-y: scroll; }
+    .main .letters .letter {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      border-bottom: 1px silver solid;
+      border-left: 1px white solid;
+      height: 40px; }
+      .main .letters .letter .letter__square {
+        background: url("../images/square.png") center no-repeat;
+        background-size: 20px 20px;
+        height: 30px;
+        width: 30px; }
+      .main .letters .letter .letter__star {
+        background: url("../images/star.png") center no-repeat;
+        background-size: 20px 20px;
+        height: 30px;
+        width: 30px; }
+      .main .letters .letter .letter__sender {
+        width: 200px; }
+      .main .letters .letter .letter__content {
+        flex: 1;
+        padding-right: 20px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis; }
+      .main .letters .letter .letter__date {
+        justify-self: flex-end;
+        padding: 0 10px; }
+    .main .letters .letter:hover {
+      border: 1px gray solid;
+      border-right: 0;
+      border-top: 0;
+      box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1); }
+  .main .letters::-webkit-scrollbar-track {
+    background-color: #F5F5F5; }
+  .main .letters::-webkit-scrollbar {
+    width: 10px;
+    background-color: #F5F5F5; }
+  .main .letters::-webkit-scrollbar-thumb {
+    background-color: #cccccc;
+    border: 1px #b7b7b7 solid; }
+
+/*# sourceMappingURL=main.css.map */

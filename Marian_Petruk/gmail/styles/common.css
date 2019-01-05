@@ -1,49 +1,35 @@
+@import url("https://fonts.googleapis.com/icon?family=Material+Icons");
 .header {
   height: 64px;
   padding: 8px;
+  display: flex;
   box-sizing: border-box;
-  display: flex;
-  justify-content: space-between;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  box-shadow: inset 0 -1px 0 rgba(100, 121, 143, 0.122);
+  flex-grow: 1;
+  align-items: center;
 }
-
-.logo_part {
-  padding-right: 32px;
-  display: flex;
-  box-sizing: content-box;
-}
-.logo_part__menu-button {
+.header__menu-button {
   width: 24px;
   height: 24px;
   padding: 12px;
-  margin: 0 4px;
+  margin: 0 5px 0 4px;
   border-radius: 50%;
   border: 0;
   box-sizing: content-box;
 }
-.logo_part__menu-button:hover {
+.header__menu-button:hover {
   background: rgba(0, 0, 0, 0.071);
 }
-.logo_part__menu-icon {
+.header__menu-icon {
   width: 24px;
   height: 24px;
 }
-.logo_part__logo-icon {
+.header__logo-icon {
   width: 109px;
   height: 40px;
   margin: 4px 0px 0px -1px;
 }
-
-.search-part {
-  background: rgba(0, 0, 0, 0.04);
-  width: 722px;
-  height: 48px;
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  border-radius: 4px;
-}
-.search-part__search-button, .search-part__options-button, .search-part__clear-button {
+.header__google-apps-button, .header__notification-button {
   width: 46px;
   height: 46px;
   padding-left: 2px;
@@ -53,10 +39,20 @@
   box-sizing: content-box;
   vertical-align: middle;
 }
-.search-part__search-button:focus, .search-part__options-button:focus {
+.header__google-apps-button:active, .header__notification-button:active {
   background-color: rgba(0, 0, 0, 0.2);
 }
-.search-part__search_icon, .search-part__options-icon {
+.header__google-apps-button {
+  margin-right: -2px;
+  margin-left: auto;
+}
+.header__notification-button {
+  padding-right: 13px;
+}
+.header__google-profile-button {
+  margin-right: 6px;
+}
+.header__google-apps-icon, .header__notification-icon {
   width: 24px;
   height: 24px;
   padding: 7px;
@@ -64,50 +60,7 @@
   color: black;
   opacity: 0.54;
 }
-.search-part__input-text {
-  width: 100%;
-  height: 24px;
-  background: transparent;
-  border: none;
-  color: gray;
-  font: normal 16px Roboto, sans-serif;
-  padding: 11px 16px 11px 10px;
-}
-.search-part__options-button {
-  padding-left: 4px;
-  padding-right: 4px;
-}
-
-.buttons-part {
-  display: flex;
-  height: 48px;
-  justify-content: flex-end;
-  align-items: center;
-  box-sizing: border-box;
-  padding-left: 32px;
-}
-.buttons-part__google-apps-button, .buttons-part__notification-button {
-  width: 46px;
-  height: 46px;
-  padding-left: 2px;
-  padding-right: 2px;
-  border-radius: 50%;
-  border: 0;
-  box-sizing: content-box;
-  vertical-align: middle;
-}
-.buttons-part__google-apps-button:focus, .buttons-part__notification-button:focus {
-  background-color: rgba(0, 0, 0, 0.2);
-}
-.buttons-part__google-apps-icon, .buttons-part__notification-icon {
-  width: 24px;
-  height: 24px;
-  padding: 7px;
-  margin: 4px;
-  color: black;
-  opacity: 0.54;
-}
-.buttons-part__google-profile-button {
+.header__google-profile-button {
   width: 132px;
   border: 1px solid #dadce0;
   box-sizing: border-box;
@@ -116,42 +69,145 @@
   display: flex;
   align-items: center;
 }
-.buttons-part__google-profile-button:hover {
+.header__google-profile-button:hover {
   border: 1px solid #d2e3fc;
   background-color: rgba(248, 250, 255, 0.88);
 }
-.buttons-part__ucu-logo {
+.header__ucu-logo {
   width: 78px;
   line-height: 32px;
 }
-.buttons-part__user-avatar {
+.header__user-avatar {
   width: 32px;
   height: 32px;
-  padding: 3px 3px 3px 4px;
+  padding: 3px 0 3px 5px;
+}
+
+.search-form {
+  flex: 1 1 auto;
+  display: flex;
+  flex-direction: row;
+  margin-left: 83px;
+  margin-right: 40px;
+  max-width: 720px;
+  border: 1px solid #f5f5f5;
+  background: #f5f5f5;
+  border-radius: 4px;
+}
+.search-form__search-button {
+  margin-right: -15px;
+  margin-left: -5px;
+}
+.search-form__search-button, .search-form__options-button, .search-form__clear-button {
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  border: 0;
+  box-sizing: content-box;
+  vertical-align: middle;
+}
+.search-form__search-button:active, .search-form__options-button:active, .search-form__clear-button:active {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+.search-form__options-button {
+  margin-right: 0px;
+}
+.search-form__search_icon, .search-form__options-icon {
+  width: 24px;
+  height: 24px;
+  padding: 7px;
+  margin: 4px;
+  color: black;
+  opacity: 0.54;
+}
+.search-form__input-text {
+  width: 100%;
+  height: 24px;
+  border: none;
+  color: gray;
+  font: normal 16px Roboto, sans-serif;
+  padding: 11px 16px 11px 10px;
+  background: #f5f5f5;
+  flex-grow: 1;
+}
+.search-form__options-button {
+  padding-left: 4px;
+  padding-right: 4px;
 }
 
 :root {
-  --gmail-aside-width: 64px;
+  --gmail-aside-width: 256px;
 }
 
 .google-mail-aside {
   width: var(--gmail-aside-width);
   height: 575px;
-  background: #27ae60;
 }
 .google-mail-aside__write-button {
-  width: 72px;
-  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
   border-radius: 28px;
-  font-size: 0;
-  padding: 0;
+  background: transparent;
+  margin: 16px 0 16px 8px;
+  height: 48px;
+  width: 146px;
+  border: 0;
+  box-shadow: 0 1px 2px 0 rgba(60, 64, 67, 0.302), 0 1px 3px 1px rgba(60, 64, 67, 0.149);
+  font-family: "Google Sans", Roboto, RobotoDraft, Helvetica, Arial, sans-serif;
+  letter-spacing: 0.25px;
+  color: #3c4043;
+  font-weight: 500;
+  font-size: 14px;
+  padding-right: 12px;
+  padding-left: 1px;
+}
+.google-mail-aside__write-button:hover {
+  box-shadow: 0 1px 3px 0 rgba(60, 64, 67, 0.302), 0 4px 8px 3px rgba(60, 64, 67, 0.149);
+  background-color: #fafafb;
 }
 .google-mail-aside__write-button-logo {
   width: 32px;
   height: 32px;
 }
 .google-mail-aside__navigation {
+  padding-right: 16px;
+}
+.google-mail-aside__link {
   height: 24px;
+  color: #202124;
+  background: transparent;
+  line-height: 20px;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  border-radius: 0 16px 16px 0;
+  font-size: 0.875rem;
+  letter-spacing: 0.2px;
+}
+.google-mail-aside__link:hover {
+  background: #f0f2f4;
+}
+.google-mail-aside__link--active {
+  background: #fce8e6;
+  font-weight: 900;
+  letter-spacing: 0.2px;
+  color: #d73429;
+}
+.google-mail-aside__icon {
+  margin-left: 26px;
+  margin-right: 18px;
+  color: #747474;
+}
+.google-mail-aside__icon-img {
+  vertical-align: middle;
+}
+.google-mail-aside__footer {
+  position: relative;
+  bottom: 0;
+  height: 32px;
+  background: violet;
+  border-top: 1px solid rgba(0, 0, 0, 0.2);
 }
 
 .gmail-body {
@@ -161,35 +217,229 @@
 }
 
 .header-gmail-emails {
-  height: 48px;
+  height: var(--header-gmail-emails-height);
   width: 100%;
-  background: #ecf0f1;
+  background: white;
+  display: flex;
+  align-items: center;
+}
+.header-gmail-emails__checkall-checkbox {
+  padding-left: 16px;
+  width: 20px;
+  height: 20px;
+  align-self: center;
+  margin-bottom: 3px;
+}
+.header-gmail-emails__checkall-checkbox-input {
+  padding-left: 16px;
+  display: none;
+}
+.header-gmail-emails__checkall-checkbox-input + .header-gmail-emails__checkall-checkbox-style::after {
+  font-family: "Material Icons";
+  font-size: 24px;
+  background: transparent;
+  content: "check_box_outline_blank";
+  font-size: 20px;
+  color: #444;
+}
+.header-gmail-emails__checkall-checkbox-input:hover + .header-gmail-emails__checkall-checkbox-style::after {
+  color: #020202;
+  cursor: pointer;
+}
+.header-gmail-emails__checkall-checkbox-input:checked + .header-gmail-emails__checkall-checkbox-style::after {
+  content: "check_box";
+  color: #020202;
+}
+.header-gmail-emails__checkall-options-button {
+  font-family: "Material Icons";
+  font-size: 20px;
+  background: transparent;
+  color: #6d6d6d;
+  border: none;
+  padding: 0;
+}
+.header-gmail-emails__refresh-button {
+  font-family: "Material Icons";
+  font-size: 20px;
+  background: transparent;
+  color: #444;
+  border: none;
+  padding: 0;
+  margin-left: 20px;
+  margin-right: 8px;
+}
+.header-gmail-emails__more-options-button {
+  font-family: "Material Icons";
+  font-size: 20px;
+  background: transparent;
+  color: #444;
+  border: none;
+  padding: 0;
+  margin-left: 12px;
+  margin-right: 13px;
+}
+.header-gmail-emails__old-emails-button {
+  font-family: "Material Icons";
+  font-size: 20px;
+  background: transparent;
+  color: #b8b8b8;
+  border: none;
+  padding: 0;
+  margin-left: 7px;
+  margin-right: 8px;
+}
+.header-gmail-emails__new-emails-button {
+  font-family: "Material Icons";
+  font-size: 20px;
+  background: transparent;
+  color: #b8b8b8;
+  border: none;
+  padding: 0;
+  margin-left: 12px;
+  margin-right: 13px;
+}
+.header-gmail-emails__settings-button {
+  font-family: "Material Icons";
+  font-size: 20px;
+  background: transparent;
+  border: none;
+  padding: 0;
+  margin-left: 12px;
+  margin-right: 32px;
+  color: #444;
+}
+.header-gmail-emails__counter-button {
+  font-size: 0.75rem;
+  letter-spacing: 0.3px;
+  margin-left: auto;
+  padding: 0 8px;
+  color: #5f6368;
+  border: none;
 }
 
 .gmail-emails-main {
   width: 100%;
-  height: calc(100% - 48px);
-  background: #f39c12;
+  height: calc(100% - var(--header-gmail-emails-height));
+  background: white;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
 }
 
 .gmail-emails {
   width: 100%;
   height: auto;
-  background: #8e44ad;
 }
 
 .gmail-footer {
-  height: 40px;
+  height: var(--gmail-footer-height);
   width: 100%;
-  margin-top: 16px;
-  margin-bottom: 16px;
-  background: #2c3e50;
+  background: #ffffff;
+  margin-top: auto;
+  display: flex;
+  font-weight: normal;
+  font-size: 0.75rem;
+  letter-spacing: 0.3px;
+  line-height: 20px;
+  color: #5f6368;
+  justify-content: space-between;
+}
+.gmail-footer__content-block {
+  padding-left: 16px;
+  padding-right: 30px;
+}
+.gmail-footer__content-block--left {
+  text-align: left;
+}
+.gmail-footer__content-block--middle {
+  text-align: center;
+}
+.gmail-footer__content-block--right {
+  text-align: right;
+}
+
+.email {
+  padding-bottom: 4px;
+  padding-top: 4px;
+  box-shadow: inset 0 -1px 0 0 rgba(100, 121, 143, 0.122);
+  display: flex;
+  background: rgba(242, 245, 245, 0.8);
+  color: #202124;
+  height: 20px;
+  flex-direction: row;
+  align-items: center;
+  padding-left: 16px;
+}
+.email__checkbox {
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+}
+.email__checkbox-input, .email__checkbox-input--star {
+  display: none;
+}
+.email__checkbox-input + .email__checkbox-style::after {
+  font-family: "Material Icons";
+  font-size: 24px;
+  background: transparent;
+  content: "check_box_outline_blank";
+  font-size: 20px;
+  color: #cccfcf;
+}
+.email__checkbox-input--star + .email__checkbox-style--star::after {
+  font-family: "Material Icons";
+  font-size: 24px;
+  background: transparent;
+  content: "star_border";
+  font-size: 20px;
+  color: #cccfcf;
+}
+.email__checkbox-input:hover + .email__checkbox-style::after, .email__checkbox-input--star:hover + .email__checkbox-style--star::after {
+  color: #020202;
+  cursor: pointer;
+}
+.email__checkbox-input:checked + .email__checkbox-style::after {
+  content: "check_box";
+  color: #020202;
+}
+.email__checkbox-input--star:checked + .email__checkbox-style--star::after {
+  content: "star";
+  color: #f3b200;
+}
+.email__from, .email__title, .email__text {
+  font-size: 0.875rem;
+  letter-spacing: 0.2px;
+  display: inline-block;
+  white-space: nowrap;
+  font-weight: normal;
+}
+.email__from {
+  min-width: 168px;
+  margin-right: 32px;
+}
+.email__text {
+  color: #5f6368;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  margin-left: 3px;
+  margin-right: 78px;
+}
+.email__date {
+  font-size: 0.75rem;
+  letter-spacing: 0.3px;
+  max-width: 56px;
+  color: #5f6368;
+  margin-right: 16px;
+  white-space: nowrap;
+  text-align: left;
 }
 
 body {
   margin: 0;
   padding: 0;
+  outline: 0;
   background: #ffffff;
+  font-family: "Roboto", Arial, Helvetica, sans-serif;
 }
 
 .google-mail-main {
@@ -205,6 +455,8 @@ button:hover {
 
 :root {
   --window-header-height: 32px;
+  --gmail-footer-height: 60px;
+  --header-gmail-emails-height: calc(48px);
 }
 
 /*# sourceMappingURL=common.css.map */

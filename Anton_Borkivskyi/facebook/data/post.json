@@ -1,6 +1,37 @@
-{"posts":[
-  {"logo":"images/post1/logo.jpg", "author":"Not National Geographic", "time":"42 mins", "text":"The nature is beautiful", "image":"images/post1/kolibri.jpg"},
-  {"logo":"images/post2/logo.jpg", "author":"Not National Geographic", "time":"42 mins", "text":"The nature is beautiful", "image":"images/post2/mount.jpg"},
-  {"logo":"images/post1/logo.jpg", "author":"Not National Geographic", "time":"42 mins", "text":"The nature is beautiful", "image":"images/post1/kolibri.jpg"},
-  {"logo":"images/post2/logo.jpg", "author":"Not National Geographic", "time":"42 mins", "text":"The nature is beautiful", "image":"images/post2/mount.jpg"}
-]}
+{
+  "posts": [
+    {
+      "logo": "images/post1/logo.jpg",
+      "author": "Not National Geographic",
+      "time": "42 mins",
+      "text": "The nature is beautiful",
+      "image": "images/post1/kolibri.jpg"
+    },
+    {
+      "logo": "images/post2/logo.jpg",
+      "author": "Not National Geographic",
+      "time": "42 mins",
+      "text": "The nature is beautiful",
+      "image": "images/post2/mount.jpg"
+    },
+    {
+      "logo": "images/post1/logo.jpg",
+      "author": "Not National Geographic",
+      "time": "42 mins",
+      "text": "The nature is beautiful",
+      "image": "images/post1/kolibri.jpg"
+    },
+    {
+      "logo": "images/post2/logo.jpg",
+      "author": "Not National Geographic",
+      "time": "42 mins",
+      "text": "The nature is beautiful",
+      "image": "images/post2/mount.jpg"
+    }
+  ],
+  "buttons": [
+    "Like",
+    "Comment",
+    "Share"
+  ]
+}

@@ -1,0 +1,80 @@
+.calendar-layout__container {
+  position: absolute;
+  bottom: 0;
+  left: 3em;
+  box-shadow: 1px 1px 8px lightgray;
+  z-index: 10;
+  background: white;
+}
+
+.calendar__dates-container {
+  display: flex;
+  flex-flow: column;
+}
+
+.calendar__dates-container__row {
+  display: flex;
+  flex-flow: row;
+}
+
+.calendar__dates-container__cell {
+  width: 5em;
+  height: 3.5em;
+  border-radius: 10px;
+  margin: 5px;
+  box-shadow: 0 0 6px 0 lightgray;
+  padding: 5px 8px;
+  box-sizing: border-box;
+  color: #444;
+  cursor: pointer;
+
+  &_empty {
+    box-shadow: none;
+    cursor: default;
+  }
+  &_active {
+    font-weight: bolder;
+    border: 1px solid grey;
+  }
+  &_holiday{
+    box-shadow: 0 0 6px 0 lightcoral;
+  }
+}
+
+.calendar__dates-container__cell__date-badge{
+  float: right;
+  color: darkred;
+  width: 20px;
+  height: 20px;
+  text-align: center;
+  border-radius: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.calendar__subheader {
+  display: flex;
+  justify-content: space-around;
+  padding: 8px 0;
+  font-size: 13px;
+  color: #aaa;
+}
+
+.calendar__navigation-btn {
+  position: relative;
+  border: 0;
+  cursor: pointer;
+  font-weight: bolder;
+  background: transparent;
+  &_shift-right, &_shift-left, &_shift-right, &_hide-calendar {
+    float: right;
+  }
+}
+
+.calendar__header {
+  background: white;
+  height: 1.3em;
+  padding: 5px 3px 5px 20px;
+  box-shadow: 0px 2px 2px #ddd;
+}

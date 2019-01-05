@@ -1,0 +1,14 @@
+.container__module-4 {
+  display: grid;
+  height: 420px;
+  grid-template-columns: 2.5fr 8fr 2fr; }
+  .container__module-4--item-1 {
+    height: 100%;
+    width: 120%; }
+  .container__module-4--item-2 {
+    height: 100%;
+    width: 100%; }
+  .container__module-4--item-3 {
+    margin-left: 50px; }
+
+/*# sourceMappingURL=module-4.css.map */

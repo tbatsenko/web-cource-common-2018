@@ -1,0 +1,23 @@
+$calendar-width: 300px;
+$calendar-height: 300px;
+
+$calendar-header-width: 100%;
+$calendar-header-height: 50px;
+
+$calendar-header-button-width: 50px;
+$calendar-header-button-height: 30px;
+
+$calendar-days-button-width: $calendar-width * 0.13;
+$calendar-days-button-height: ($calendar-height - $calendar-header-height) * 0.13;
+
+$todo-list-width: 300px;
+$todo-list-height: 300px;
+
+$todo-list-header-width: 100%;
+$todo-list-header-height: 50px;
+
+$todo-list-item-width: 90%;
+$todo-list-item-height: 30px;
+
+$todo-list-item-button-width: 20px;
+$todo-list-item-button-height: 20px;

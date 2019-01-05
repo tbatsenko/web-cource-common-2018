@@ -1,0 +1,10 @@
+.profile-container {
+  display: grid;
+  flex-flow: column;
+  align-items: center;
+  grid-template-columns: 40% 60%;
+  grid-template-rows: auto;
+  grid-template-areas: "header header" "aside article";
+  width: 850px; }
+
+/*# sourceMappingURL=common.css.map */

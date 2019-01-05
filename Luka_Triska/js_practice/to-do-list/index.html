@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Practical JS</title>
+    <link rel="stylesheet" href="styles/common.css">
+    <link rel="stylesheet" href="styles/calendar.css">
+    <link rel="stylesheet" href="styles/to-do-list.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700" rel="stylesheet">
+</head>
+<body>
+
+<main class="main-container">
+
+    <table>
+        <caption><h2>Calendar</h2></caption>
+        <thead>
+        <tr class="year">
+            <td id="year-name"></td>
+        </tr>
+        <tr class="month">
+            <td>
+                <button onclick="viewCalendar.displayDiffMonth(false)" class="month__button"
+                        id="month-prev-button"><
+                </button>
+            </td>
+            <td id="month-name"></td>
+            <td>
+                <button onclick="viewCalendar.displayDiffMonth(true)" class="month__button" id="month-next-button">>
+                </button>
+            </td>
+        </tr>
+        <tr class="day-of-week-header-row">
+            <th scope="col" headers="day" class="day-of-week-header-row__item">mon</th>
+            <th scope="col" headers="day" class="day-of-week-header-row__item">tue</th>
+            <th scope="col" headers="day" class="day-of-week-header-row__item">wed</th>
+            <th scope="col" headers="day" class="day-of-week-header-row__item">thu</th>
+            <th scope="col" headers="day" class="day-of-week-header-row__item">fri</th>
+            <th scope="col" headers="day" class="day-of-week-header-row__item">sat</th>
+            <th scope="col" headers="day" class="day-of-week-header-row__item">sun</th>
+        </tr>
+        </thead>
+        <tbody id="table-body">
+        </tbody>
+    </table>
+
+    <section class="todo__container">
+        <h2>Todo List</h2>
+
+        <form onsubmit="handlers.addTodo();return false;">
+            <input class="container__add-todo-input" type="text"
+                   placeholder="Type a todo...">
+        </form>
+
+        <ul></ul>
+    </section>
+
+</main>
+
+<script src="src/jquery-3.3.1.min.js"></script>
+<script src="src/calendar.js"></script>
+<script src="src/to-do.js"></script>
+
+</body>
+</html>

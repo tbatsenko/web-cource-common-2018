@@ -85,7 +85,7 @@ header > div#header-right a {
 /*align-items:center; !*vertical align*!*/
 
 #fb-logo {
-  background: url("../img/sprite.png");
+  background: url('../img/sprite.png');
   background-repeat: no-repeat;
   background-size: auto;
   background-position: 0 -440px;
@@ -123,7 +123,7 @@ header > div#header-right a {
   /*color:white;*/
 
   background: #ebedf0;
-  background-image: url("../img/sprite.png");
+  background-image: url('../img/sprite.png');
   background-position: 0 -1445px;
   background-size: auto;
   background-repeat: no-repeat;
@@ -169,14 +169,14 @@ main {
 }
 
 .friend-icon {
-  background-image: url("../img/sprite.png");
+  background-image: url('../img/sprite.png');
   background-size: auto;
   background-position: 0 -892px;
 }
 
 .avatar-icon {
   border-radius: 50%;
-  background-image: url("../img/cicero.jpg");
+  background-image: url('../img/cicero.jpg');
   background-size: contain;
 }
 
@@ -189,25 +189,25 @@ main {
 }
 
 .messages-icon {
-  background-image: url("../img/sprite.png");
+  background-image: url('../img/sprite.png');
   background-size: auto;
   background-position: 0 -942px;
 }
 
 .notification-icon {
-  background-image: url("../img/sprite.png");
+  background-image: url('../img/sprite.png');
   background-size: auto;
   background-position: 0 -792px;
 }
 
 .quick-help-icon {
-  background-image: url("../img/sprite.png");
+  background-image: url('../img/sprite.png');
   background-size: auto;
   background-position: 0 -992px;
 }
 
 .more-icon {
-  background-image: url("../img/sprite.png");
+  background-image: url('../img/sprite.png');
   background-size: auto;
   background-position: 0 -842px;
 }
@@ -222,58 +222,58 @@ main {
 }
 
 .news-feed-icon {
-  background-image: url("../img/sprite2.png");
+  background-image: url('../img/sprite2.png');
   background-position: 0 -1341px;
 }
 
 .messages-aside-icon {
-  background-image: url("../img/sprite2.png");
+  background-image: url('../img/sprite2.png');
   background-position: 0 -207px;
 }
 
 .shortcut-idea-icon {
-  background-image: url("../img/sprite2.png");
+  background-image: url('../img/sprite2.png');
   background-position: 0 -417px;
 }
 
 .shortcut-group-icon {
-  background-image: url("../img/sprite2.png");
+  background-image: url('../img/sprite2.png');
   background-position: 0 -144px;
 }
 
 .shortcut-page-icon {
-  background-image: url("../img/sprite2.png");
+  background-image: url('../img/sprite2.png');
   background-position: 0 -1509px;
 }
 
 .left-aside-more-icon {
-  background-image: url("../img/sprite3.png");
+  background-image: url('../img/sprite3.png');
   background-position: -221px -270px;
   width: 18px;
 }
 
 .events-icon {
-  background-image: url("../img/sprite4.png");
+  background-image: url('../img/sprite4.png');
   background-position: 0 -63px;
 }
 
 .pages-icon {
-  background-image: url("../img/sprite2.png");
+  background-image: url('../img/sprite2.png');
   background-position: 0 -270px;
 }
 
 .groups-icon {
-  background-image: url("../img/sprite2.png");
+  background-image: url('../img/sprite2.png');
   background-position: 0 -144px;
 }
 
 .fundraisers-icon {
-  background-image: url("../img/sprite2.png");
+  background-image: url('../img/sprite2.png');
   background-position: 0 -963px;
 }
 
 .friend-list-icon {
-  background-image: url("../img/sprite2.png");
+  background-image: url('../img/sprite2.png');
   background-position: 0 -900px;
 }
 

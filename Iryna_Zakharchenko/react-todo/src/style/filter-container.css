@@ -1,0 +1,41 @@
+.main-layout__filters-container {
+    display: flex;
+    justify-content: space-around;
+}
+
+.main-layout__filter-all {
+
+    border: 0.1em solid #8a92f8;
+    padding: 0.4em 1em 0.4em 1em;
+    border-radius: 4px;
+    background: #371070;
+    color: #fdfbfa;
+}
+
+.main-layout__filter-all:hover{
+    opacity: 1.2;
+}
+
+.main-layout__filter-open-to-do {
+    padding: 0.4em 1em 0.4em 1em;
+    border: 0.1em solid #8a92f8;
+    border-radius: 4px;
+    background: #371070;
+    color: #fdfbfa;
+}
+
+.main-layout__filter-open-to-do:hover{
+    opacity: 1.2;
+}
+
+.main-layout__filter-done {
+    padding: 0.4em 1em 0.4em 1em;
+    border: 0.1em solid #8a92f8;
+    border-radius: 4px;
+    background: #371070;
+    color: #fdfbfa;
+}
+
+.main-layout__filter-done:hover{
+    opacity: 1.2;
+}

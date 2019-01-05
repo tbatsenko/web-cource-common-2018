@@ -1,0 +1,26 @@
+body{
+    margin: 0;
+}
+.layout__header {
+    background-color: blue;
+}
+.layout__block{
+    position: absolute;
+    width: 300px;
+    background-color: darkgray;
+}
+.layout__block-a{
+    left: calc(50% - 450px);
+}
+.layout__block-b{
+    left: calc(50% - 150px);
+}
+.layout__block-c{
+    left: calc(50% + 150px);
+}
+.layout__footer {
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    background-color: brown;
+}
