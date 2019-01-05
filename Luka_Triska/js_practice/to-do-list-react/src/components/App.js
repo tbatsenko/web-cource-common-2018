@@ -5,15 +5,19 @@ import Calendar from './Calendar/Calendar'
 
 import './App.css';
 
-class App extends Component {
+export default class App extends Component {
+
+  constructor(props) {
+    super(props);
+    this.child = React.createRef();
+  }
+
+  handleCalendarClick = (currDate) => this.child.current.setLastClickedDate(currDate);
+
   render() {
-    return (
-      <div className="App">
-        <Calendar/>
-        <TodoList/>
-      </div>
-    );
+    return <div className="App">
+      <Calendar onClick={this.handleCalendarClick}/>
+      <TodoList ref={this.child}/>
+    </div>;
   }
 }
-
-export default App;

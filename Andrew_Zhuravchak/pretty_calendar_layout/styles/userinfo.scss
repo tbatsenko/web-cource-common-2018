@@ -1,0 +1,52 @@
+.userinfo {
+  margin-top: 40px;
+
+  &__pic-wrapper {
+    width: 90px;
+    height: 90px;
+    position: relative;
+    margin: 0 auto;
+
+    &--with-notification {
+      &::after {
+        display: block;
+        content: '';
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        box-shadow: 4px 7px 14px 0 rgba(59, 39, 95, 0.21);
+
+        position: absolute;
+        bottom: 0;
+        right: 0;
+
+        background-color: #fff;
+        background-image: url("../images/notification_icon.png");
+        background-size: 65%;
+        background-position: center center;
+        background-repeat: no-repeat;
+
+      }
+    }
+  }
+
+  &__pic {
+    width: 100%;
+    height: auto;
+  }
+
+  &__username {
+    margin-top: 10px;
+
+    &-link {
+      text-decoration: none;
+      text-align: center;
+      display: block;
+      color: rgba(41, 37, 41, 0.55);
+
+      &:hover {
+        color: #292529;
+      }
+    }
+  }
+}

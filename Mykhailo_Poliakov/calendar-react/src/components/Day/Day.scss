@@ -5,24 +5,19 @@
   text-align: center;
   color: #ffffff;
   text-decoration: none;
-  pointer-events: none;
+  cursor: pointer;
 
-  &--date {
-    cursor: pointer;
-    pointer-events: all;
-  }
-
-  &--weekend {
+  &--isWeekend {
     border-radius: 40px;
     border: .5px solid #ffffff;
   }
 
-  &--holiday {
+  &--isHoliday {
     border-radius: 40px;
     border: .5px solid #33ffbd;
   }
 
-  &--active {
+  &--isActive {
     background: #ffffff;
     color: #00a8e8;
     border-radius: 40px;

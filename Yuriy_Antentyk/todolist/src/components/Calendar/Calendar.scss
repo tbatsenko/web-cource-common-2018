@@ -1,53 +1,44 @@
-.calendar {
-  &__calendar {
-    width: 100%;
-  }
+@import '../../css/colors.scss';
+@import '../../css/fonts.scss';
 
-  &__row {
-  }
+.calendar{
+  display: flex;
+  flex-direction: column;
 
-  &__cell {
-    text-align: center;
-  }
+  background-color: $color--primary;
+  border-radius: 15px;
+  padding: 15px;
 
-  &__cell_holiday {
-    background-color: yellow;
-  }
+  width: auto;
 
-  &__cell_selected {
-    background-color: green;
-  }
-
-  &__header {
-    color: blue;
+  &__header{
     display: flex;
     flex-direction: row;
     align-items: center;
   }
 
-  &__header-text {
-    flex-grow: 2;
+  &__header-title {
+    margin: 0 auto;
     text-align: center;
   }
 
-  &__header-month-forward {
+  &__months{
+    display: flex;
+    flex-direction: row;
   }
 
-  &__header-month-backward {
+  &__month{
+    table-layout: fixed;
+    margin: 0 5px;
   }
 
-  &__day {
-    text-decoration: none;
-    color: black;
-    display: block;
-    width: 100%;
-    align-content: center;
-    &_isHoliday {
-      background: blue;
-    }
-
-    &_isActive {
-      background: green;
-    }
+  &__month-cell{
+    width: calc(100%/7);
+    text-align: center;
+  }
+  &__month-weekDays{
+    color: $color--white;
+    font-family: $font-family--regular;
+    font-size: $font-size--regular;    
   }
 }

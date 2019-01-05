@@ -2,8 +2,14 @@ import React, {Component} from 'react';
 import shortid from "shortid"
 
 export default class TodoForm extends Component {
-  state = {
-    text: ''
+
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      currDate: this.props.lastClickedDate,
+      text: ''
+    };
   };
 
   handleChange = (e) => {
@@ -15,10 +21,10 @@ export default class TodoForm extends Component {
   handleSubmit = (e) => {
     e.preventDefault();
     this.props.onSubmit({
-      id: shortid.generate(),
-      date: new Date(),
       text: this.state.text,
-      completed: false
+      date: this.props.lastClickedDate,
+      completed: false,
+      id: shortid.generate()
     });
     this.setState({
       text: ''

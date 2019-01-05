@@ -1,0 +1,25 @@
+.movie-poster {
+    box-shadow: 0 2px 35px 0 rgba(0, 0, 0, 0.1);
+
+    &__image {
+      width: 100%;
+      height: 425px;
+    }
+  
+    &__info {
+      margin-left: 15px;
+      margin-top: 15px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+  
+    &__title {
+      font-family: SourceSansPro, sans-serif;
+      font-size: 15px;
+      font-weight: bold;
+      color: #494c62;
+      margin: 0;
+    }
+  }
+  

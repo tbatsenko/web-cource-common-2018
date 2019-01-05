@@ -1,0 +1,162 @@
+{
+  "header":{
+    "image":"assets/wrath_of_the_titans.jpg",
+    "name":"Wrath of the titans",
+    "info":{
+      "genre-1":"Fantasy",
+      "genre-2":"Animation",
+      "genre-3":"Family",
+      "duration":"1h 52m"
+    },
+    "rating":"3.4"
+  },
+
+  "main":{
+    "films":[
+      {
+        "image":"assets/logan.jpg",
+        "name":"Logan",
+        "year":"2017",
+        "info":{
+          "genre-1":"Action",
+          "genre-2":"Adventure",
+          "genre-3":"Fantasy",
+          "duration":"1h 52m"
+        },
+        "rating":"4.0"
+      },
+      {
+        "image":"assets/logan.jpg",
+        "name":"Logan",
+        "year":"2017",
+        "info":{
+          "genre-1":"Action",
+          "genre-2":"Adventure",
+          "genre-3":"Fantasy",
+          "duration":"1h 52m"
+        },
+        "rating":"4.0"
+      },
+      {
+        "image":"assets/logan.jpg",
+        "name":"Logan",
+        "year":"2017",
+        "info":{
+          "genre-1":"Action",
+          "genre-2":"Adventure",
+          "genre-3":"Fantasy",
+          "duration":"1h 52m"
+        },
+        "rating":"4.0"
+      },
+      {
+        "image":"assets/logan.jpg",
+        "name":"Logan",
+        "year":"2017",
+        "info":{
+          "genre-1":"Action",
+          "genre-2":"Adventure",
+          "genre-3":"Fantasy",
+          "duration":"1h 52m"
+        },
+        "rating":"4.0"
+      },
+      {
+        "image":"assets/logan.jpg",
+        "name":"Logan",
+        "year":"2017",
+        "info":{
+          "genre-1":"Action",
+          "genre-2":"Adventure",
+          "genre-3":"Fantasy",
+          "duration":"1h 52m"
+        },
+        "rating":"4.0"
+      },
+      {
+        "image":"assets/logan.jpg",
+        "name":"Logan",
+        "year":"2017",
+        "info":{
+          "genre-1":"Action",
+          "genre-2":"Adventure",
+          "genre-3":"Fantasy",
+          "duration":"1h 52m"
+        },
+        "rating":"4.0"
+      },
+      {
+        "image":"assets/logan.jpg",
+        "name":"Logan",
+        "year":"2017",
+        "info":{
+          "genre-1":"Action",
+          "genre-2":"Adventure",
+          "genre-3":"Fantasy",
+          "duration":"1h 52m"
+        },
+        "rating":"4.0"
+      },
+      {
+        "image":"assets/logan.jpg",
+        "name":"Logan",
+        "year":"2017",
+        "info":{
+          "genre-1":"Action",
+          "genre-2":"Adventure",
+          "genre-3":"Fantasy",
+          "duration":"1h 52m"
+        },
+        "rating":"4.0"
+      },
+      {
+        "image":"assets/logan.jpg",
+        "name":"Logan",
+        "year":"2017",
+        "info":{
+          "genre-1":"Action",
+          "genre-2":"Adventure",
+          "genre-3":"Fantasy",
+          "duration":"1h 52m"
+        },
+        "rating":"4.0"
+      },
+      {
+        "image":"assets/logan.jpg",
+        "name":"Logan",
+        "year":"2017",
+        "info":{
+          "genre-1":"Action",
+          "genre-2":"Adventure",
+          "genre-3":"Fantasy",
+          "duration":"1h 52m"
+        },
+        "rating":"4.0"
+      },
+      {
+        "image":"assets/logan.jpg",
+        "name":"Logan",
+        "year":"2017",
+        "info":{
+          "genre-1":"Action",
+          "genre-2":"Adventure",
+          "genre-3":"Fantasy",
+          "duration":"1h 52m"
+        },
+        "rating":"4.0"
+      },
+      {
+        "image":"assets/logan.jpg",
+        "name":"Logan",
+        "year":"2017",
+        "info":{
+          "genre-1":"Action",
+          "genre-2":"Adventure",
+          "genre-3":"Fantasy",
+          "duration":"1h 52m"
+        },
+        "rating":"4.0"
+      }
+    ]
+  }
+}

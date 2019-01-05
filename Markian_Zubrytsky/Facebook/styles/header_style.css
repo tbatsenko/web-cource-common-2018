@@ -1,0 +1,40 @@
+.main-header {
+    background-color: #4267b2;
+    height: 5%;
+    width: 100%;
+    position: fixed;
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+.main-header__logo {
+    width: 35px;
+    height: 55%;
+    align-self: center;
+    margin-left: 15%;
+}
+
+.main-header__search {
+    width: 20%;
+    border: none;
+    height: 50%;
+}
+
+.main-header__left-buttons {
+    border: none;
+    background-color: #4267b2;
+    vertical-align: 50%;
+    color: white;
+}
+
+.main-header__right-buttons {
+    background-color: transparent;
+    border: none;
+    vertical-align: center;
+}
+
+/*# sourceMappingURL=header_style.css.map */

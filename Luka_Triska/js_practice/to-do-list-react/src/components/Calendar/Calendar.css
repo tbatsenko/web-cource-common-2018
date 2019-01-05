@@ -13,9 +13,12 @@
   display: flex;
   justify-content: space-around; }
 
+.current {
+  background: darkred; }
+
 .day-cell-empty {
   width: 36px; }
-.day-cell-current {
+.day-cell-today {
   width: 36px;
   text-align: center;
   cursor: pointer;

@@ -1,0 +1,162 @@
+{
+  "header":{
+    "image":"assets/wrath_of_the_titans.jpg",
+    "name":"Wrath of the titans",
+    "info":{
+      "genre-1":"Fantasy",
+      "genre-2":"Animation",
+      "genre-3":"Family",
+      "duration":"1h 52m"
+    },
+    "rating":"3.4"
+  },
+
+  "main":{
+    "films":[
+      {
+        "image":"assets/logan.jpg",
+        "name":"Logan",
+        "year":"2017",
+        "info":{
+          "genre-1":"Action",
+          "genre-2":"Adventure",
+          "genre-3":"Fantasy",
+          "duration":"1h 52m"
+        },
+        "rating":"4.0"
+      },
+      {
+        "image":"assets/john_wick.jpg",
+        "name":"John Wick. Chapter 2",
+        "year":"2017",
+        "info":{
+          "genre-1":"Action",
+          "genre-2":"Thriller",
+          "genre-3":"Fantasy",
+          "duration":"1h 52m"
+        },
+        "rating":"4.0"
+      },
+      {
+        "image":"assets/fantastic_beasts.jpg",
+        "name":"Fantastic Beasts",
+        "year":"2017",
+        "info":{
+          "genre-1":"Action",
+          "genre-2":"Adventure",
+          "genre-3":"Fantasy",
+          "duration":"1h 52m"
+        },
+        "rating":"4.5"
+      },
+      {
+        "image":"assets/fifty_shades_darker.jpg",
+        "name":"Fifty Shades darker",
+        "year":"2017",
+        "info":{
+          "genre-1":"Drama",
+          "genre-2":"Adventure",
+          "genre-3":"Roman",
+          "duration":"1h 52m"
+        },
+        "rating":"4.6"
+      },
+      {
+        "image":"assets/beauty_and_the_beast.jpg",
+        "name":"Beauty and the Beast",
+        "year":"2017",
+        "info":{
+          "genre-1":"Musical",
+          "genre-2":"Drama",
+          "genre-3":"Fantasy",
+          "duration":"1h 52m"
+        },
+        "rating":"4.4"
+      },
+      {
+        "image":"assets/arrival.jpg",
+        "name":"Arrival",
+        "year":"2017",
+        "info":{
+          "genre-1":"Action",
+          "genre-2":"Thriller",
+          "genre-3":"Sci-Fi",
+          "duration":"1h 52m"
+        },
+        "rating":"3.4"
+      },
+      {
+        "image":"assets/justice_league.jpg",
+        "name":"Justice League",
+        "year":"2017",
+        "info":{
+          "genre-1":"Action",
+          "genre-2":"Adventure",
+          "genre-3":"Sci-Fi",
+          "duration":"1h 52m"
+        },
+        "rating":"3.9"
+      },
+      {
+        "image":"assets/pirates_of_the_carribian.jpg",
+        "name":"Pirates of the Carribian",
+        "year":"2017",
+        "info":{
+          "genre-1":"Action",
+          "genre-2":"Adventure",
+          "genre-3":"Fantasy",
+          "duration":"1h 52m"
+        },
+        "rating":"4.2"
+      },
+      {
+        "image":"assets/logan.jpg",
+        "name":"Logan",
+        "year":"2017",
+        "info":{
+          "genre-1":"Action",
+          "genre-2":"Adventure",
+          "genre-3":"Fantasy",
+          "duration":"1h 52m"
+        },
+        "rating":"4.0"
+      },
+      {
+        "image":"assets/logan.jpg",
+        "name":"Logan",
+        "year":"2017",
+        "info":{
+          "genre-1":"Action",
+          "genre-2":"Adventure",
+          "genre-3":"Fantasy",
+          "duration":"1h 52m"
+        },
+        "rating":"4.0"
+      },
+      {
+        "image":"assets/logan.jpg",
+        "name":"Logan",
+        "year":"2017",
+        "info":{
+          "genre-1":"Action",
+          "genre-2":"Adventure",
+          "genre-3":"Fantasy",
+          "duration":"1h 52m"
+        },
+        "rating":"4.0"
+      },
+      {
+        "image":"assets/logan.jpg",
+        "name":"Logan",
+        "year":"2017",
+        "info":{
+          "genre-1":"Action",
+          "genre-2":"Adventure",
+          "genre-3":"Fantasy",
+          "duration":"1h 52m"
+        },
+        "rating":"4.0"
+      }
+    ]
+  }
+}

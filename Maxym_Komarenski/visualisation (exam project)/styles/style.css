@@ -1,0 +1,44 @@
+body{
+    margin: 0;
+}
+
+.container-for-one-team{
+    margin-left: 60px;
+    display: grid;
+    width: 750px;
+    grid-template-columns: 50px  300px 50px 50px 50px 70px 30px 30px 60px 50px;
+    grid-template-rows: auto;
+    grid-template-areas:
+            "number name games moments goals goalsInOur wins draws loses score";
+}
+
+.number {
+    grid-area: number;
+}
+.name {
+    grid-area: name;
+}
+.games {
+    grid-area: games;
+}
+.moments {
+    grid-area: moments;
+}
+.goals {
+    grid-area: goals;
+}
+.goalsInOur {
+    grid-area: goalsInOur;
+}
+.wins{
+    grid-area: wins;
+}
+.draws{
+    grid-area: draws;
+}
+.loses{
+    grid-area: loses;
+}
+.score{
+    grid-area: score;
+}

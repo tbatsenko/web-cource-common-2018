@@ -1,0 +1,85 @@
+.news {
+    display: flex;
+    flex-flow: column nowrap;
+    position: absolute;
+    top: 5%;
+    left: 25%;
+    width: 30%;
+    margin: 1%;
+    background-color: transparent;
+}
+
+.news__new-post {
+    display: flex;
+    flex-flow: column nowrap;
+    background-color: white;
+    margin-bottom: 1%;
+}
+
+.news__new-post__action {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+}
+
+.news__new-post__action__button {
+    width: 30%;
+    height: 10%;
+    margin: 2% 2%;
+    border: none;
+    border-radius: 12px;
+}
+
+.news__new-post__create-post {
+    line-height: 4em;
+    width: 80%;
+    border: none;
+    margin-right: 5%;
+}
+
+.news__post {
+    display: flex;
+    flex-flow: column nowrap;
+    background-color: white;
+    margin: 1% 0;
+}
+
+.news__post__photo {
+    width: 100%;
+    height: 35%;
+    align-self: center;
+}
+
+.news__post__actions {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+}
+
+.news__post__actions__button {
+    margin: 2% 2%;
+    height: 10%;
+    width: 30%;
+    border: none;
+    background-color: white;
+}
+
+.news__post__comment {
+    line-height: 4em;
+    width: 80%;
+    border: none;
+    margin: 1% 5%;
+}
+
+.news__post__content {
+    margin: 10px;
+}
+
+.news__post__title {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+/*# sourceMappingURL=news_style.css.map */

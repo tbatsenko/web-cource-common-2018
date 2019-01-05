@@ -40,7 +40,7 @@
 .calendar__month-display {
   align-items: center;
   height: 40px;
-  background: #2875C7;
+  background: #2875c7;
   display: flex;
   width: 100%;
 }
@@ -51,7 +51,7 @@
   cursor: pointer;
 }
 .calendar__day-names {
-  color: #2875C7;
+  color: #2875c7;
   font-weight: bold;
   cursor: default;
   font-size: 0.8rem;

@@ -1,23 +1,28 @@
 {
     "name": "calendar",
-    "version": "1.0.0",
-    "description": "",
-    "main": "index.js",
-    "scripts": {
-        "watch": "webpack --mode development --config webpack.config.js --watch",
-        "start": "json-server --watch db.json --static .",
-        "build": "webpack --mode production --config webpack.config.js",
-        "dev": "webpack --mode development --config webpack.config.js"
+    "version": "0.1.0",
+    "private": true,
+    "dependencies": {
+        "react": "^16.6.3",
+        "react-dom": "^16.6.3"
     },
-    "author": "Vasyl Borsuk",
-    "license": "ISC",
+    "scripts": {
+        "start": "react-scripts start",
+        "build": "react-scripts build",
+        "test": "react-scripts test",
+        "eject": "react-scripts eject",
+        "start-db": "json-server --watch db.json  --port=3001"
+    },
+    "eslintConfig": {
+        "extends": "react-app"
+    },
+    "browserslist": [
+        ">0.2%",
+        "not dead",
+        "not ie <= 11",
+        "not op_mini all"
+    ],
     "devDependencies": {
-        "extract-text-webpack-plugin": "^4.0.0-beta.0",
-        "node-sass": "^4.11.0",
-        "sass-loader": "^7.1.0",
-        "styles-loader": "^1.0.0",
-        "webpack": "^4.27.1",
-        "webpack-cli": "^3.1.2",
-        "webpack-dev-server": "^3.1.10"
+        "react-scripts": "^2.1.1"
     }
 }

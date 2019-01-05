@@ -1,0 +1,20 @@
+body{
+    margin: 0;
+}
+.layout__header {
+    background-color: blue;
+}
+.layout__block-container{
+    width: 1050px;
+    margin: auto;
+}
+
+.layout__block{
+    float: left;
+    width: 300px;
+    margin: 0 25px 0 25px;
+    background-color: darkgray;
+}
+.layout__footer {
+    background-color: brown;
+}

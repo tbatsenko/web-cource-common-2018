@@ -34,7 +34,8 @@
     margin: 4px 0px 0px -1px;
   }
 
-  &__google-apps-button, &__notification-button {
+  &__google-apps-button,
+  &__notification-button {
     width: 46px;
     height: 46px;
     padding-left: 2px;
@@ -45,7 +46,7 @@
     vertical-align: middle;
 
     &:active {
-      background-color: rgba(0, 0, 0, 0.20);
+      background-color: rgba(0, 0, 0, 0.2);
     }
   }
 
@@ -62,13 +63,14 @@
     margin-right: 6px;
   }
 
-  &__google-apps-icon, &__notification-icon {
+  &__google-apps-icon,
+  &__notification-icon {
     width: 24px;
     height: 24px;
     padding: 7px;
     margin: 4px;
     color: black;
-    opacity: .54;
+    opacity: 0.54;
   }
 
   &__google-profile-button {
@@ -115,7 +117,9 @@
     margin-left: -5px;
   }
 
-  &__search-button, &__options-button, &__clear-button {
+  &__search-button,
+  &__options-button,
+  &__clear-button {
     width: 46px;
     height: 46px;
     border-radius: 50%;
@@ -124,7 +128,7 @@
     vertical-align: middle;
 
     &:active {
-      background-color: rgba(0, 0, 0, 0.20);
+      background-color: rgba(0, 0, 0, 0.2);
     }
   }
 
@@ -132,13 +136,14 @@
     margin-right: 0px;
   }
 
-  &__search_icon, &__options-icon {
+  &__search_icon,
+  &__options-icon {
     width: 24px;
     height: 24px;
     padding: 7px;
     margin: 4px;
     color: black;
-    opacity: .54;
+    opacity: 0.54;
   }
 
   &__input-text {

@@ -6,6 +6,7 @@ body {
     margin: 0;
     font-family: Ubuntu, serif;
     color: #444;
+    background: #eee;
 
 }
 
@@ -16,9 +17,10 @@ body {
     height: 100vh;
     overflow: auto;
     box-sizing: border-box;
+    background: white;
 }
 
 .content {
-    padding: .5em 1em 0em 2em;
+    padding: .5em 1em 0 2em;
 }
 

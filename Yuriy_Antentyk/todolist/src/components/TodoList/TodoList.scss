@@ -1,4 +1,17 @@
-.todoList{
-    display: flex;
-    flex-direction: column;
+@import '../../css/colors.scss';
+@import '../../css/fonts.scss';
+
+.todoList {
+  background-color: $color--primary;
+  border-radius: 15px;
+  padding: 15px;
+  width: 320px;
+
+  display: flex;
+  flex-direction: column;
+
+  &__header {
+    margin: 0;
+    text-align: center;
+  }
 }

@@ -1,0 +1,13 @@
+.sidebar {
+  height: 100%;
+  box-shadow: -8px 0 42px 0 rgba(42, 34, 64, 0.14);
+  padding-top: 50px;
+  box-sizing: border-box;
+  position: relative;
+
+
+  &__footer-text {
+    display: block;
+    text-align: center;
+  }
+}

@@ -1,40 +1,36 @@
 import React from 'react';
 import './Day.scss';
 import BEM from '../../utils/bem';
-import { withProps, compose } from 'recompose';
+import { withProps, compose, withHandlers } from 'recompose';
 import { holidays } from '../../utils/holidays.json';
+
 const b = BEM('day');
-const Day = ({ date, day, onSelect, isDate, isActive, isHoliday, isWeekend }) => (
-  <a
-    className={b([ isDate(), isActive(), isWeekend(), isHoliday() ])}
-    onClick={onSelect}
-    href={'?year=' + date.year + '&month=' + date.month + '&day=' + day}
-  >
+
+const Day = ({ day, onSelect, isActive, isHoliday, isWeekend, url }) => (
+  <a className={b({ isActive, isWeekend, isHoliday })} onClick={onSelect} href={url}>
     {day}
   </a>
 );
 
 const enhancer = compose(
-  withProps(({ day, date }) => ({
-    isDate: () => {
-      if (!isNaN(parseInt(day))) return 'date';
-    },
-    isActive: () => {
-      if (day === date.day) return 'active';
-    },
-    isHoliday: () => {
-      if (
-        holidays.filter((holiday) => {
-          return day === holiday.day && date.month === holiday.month;
-        }).length
-      )
-        return 'holiday';
-    },
-    isWeekend: () => {
-      let dayOfWeek = new Date(date.year, date.month, day).getDay();
-      if (dayOfWeek === 0 || dayOfWeek === 6) return 'weekend';
+  withProps(({ day, activeDate, calendarDate }) => ({
+    url: `/?year=${calendarDate.year}&month=${calendarDate.month}&day=${day}`,
+    isActive: activeDate.day === day && activeDate.month === calendarDate.month && activeDate.year === calendarDate.year,
+    isHoliday: holidays.find(holiday => {
+      return day === holiday.day && calendarDate.month === holiday.month;
+    }),
+    isWeekend: [ 0, 6 ].includes(new Date(calendarDate.year, calendarDate.month, day).getDay())
+  })),
+  withHandlers({
+    onSelect: ({ calendarDate, isActive, url, day, history }) => e => {
+      e.preventDefault();
+      if (!isActive) {
+        e.state = { year: calendarDate.year, month: calendarDate.month, day: day };
+        history.pushState(e.state, url);
+        history.publish(e);
+      }
     }
-  }))
+  })
 );
 
 export default enhancer(Day);

@@ -1,0 +1,12 @@
+@import "base";
+@import "game_block";
+@import "explosion_gif";
+@import "game_over_modal";
+
+.game-name{
+  letter-spacing: 5px;
+  color: #ecf0f1;
+  font-size: 100px;
+  margin: 30px;
+  font-weight: 900;
+}
