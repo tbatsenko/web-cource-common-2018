@@ -4,14 +4,39 @@
   &__list {
     list-style-type: none;
     padding: 0;
+    margin: 0;
   }
 
   &__item {
     text-transform: uppercase;
-    font-size: 14px;
+
+    &--active {
+      color: #292529;
+      position: relative;
+
+      &::before {
+        content: '';
+        display: block;
+        position: absolute;
+        border-left: 5px solid #ed5454;
+        left: 0;
+        height: 100%;
+        box-shadow: 2px 0 9px 0 #ed5454;
+      }
+
+      .navigation__item-icon {
+        color: #ed5454;
+      }
+    }
+  }
+
+  &__item-link {
+    color: inherit;
     padding: 20px;
+    display: block;
+    text-decoration: none;
+    font-size: 14px;
     height: 16px;
-    box-sizing: content-box;
   }
 
   &__item-icon {
