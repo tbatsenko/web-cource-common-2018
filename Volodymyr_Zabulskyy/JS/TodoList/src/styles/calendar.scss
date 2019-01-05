@@ -1,4 +1,4 @@
-.calendar_container {
+.calendar-layout__container {
   position: absolute;
   bottom: 0;
   left: 3em;
@@ -7,22 +7,23 @@
   background: white;
 }
 
-.calendar_table {
+.calendar__dates-container {
   display: flex;
   flex-flow: column;
 }
 
-.calendar_table__row {
+.calendar__dates-container__row {
   display: flex;
   flex-flow: row;
 }
 
-.calendar_table__cell {
+.calendar__dates-container__cell {
   width: 5em;
   height: 3.5em;
+  border-radius: 10px;
   margin: 5px;
-  box-shadow: 0 0 6px 0px lightgray;
-  padding: 3px 5px;
+  box-shadow: 0 0 6px 0 lightgray;
+  padding: 5px 8px;
   box-sizing: border-box;
   color: #444;
   cursor: pointer;
@@ -35,9 +36,12 @@
     font-weight: bolder;
     border: 1px solid grey;
   }
+  &_holiday{
+    box-shadow: 0 0 6px 0 lightcoral;
+  }
 }
 
-.calendar_table__cell__date-badge{
+.calendar__dates-container__cell__date-badge{
   float: right;
   color: darkred;
   width: 20px;
@@ -49,7 +53,7 @@
   justify-content: center;
 }
 
-.calendar-subheader {
+.calendar__subheader {
   display: flex;
   justify-content: space-around;
   padding: 8px 0;
@@ -57,7 +61,7 @@
   color: #aaa;
 }
 
-.calendar__btn {
+.calendar__navigation-btn {
   position: relative;
   border: 0;
   cursor: pointer;
@@ -68,7 +72,7 @@
   }
 }
 
-.calendar-header {
+.calendar__header {
   background: white;
   height: 1.3em;
   padding: 5px 3px 5px 20px;

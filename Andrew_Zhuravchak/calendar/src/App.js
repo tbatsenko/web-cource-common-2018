@@ -1,15 +1,11 @@
-import React, { Component } from 'react'
+import React from 'react'
 import './App.scss'
-import ToDoListWithCalendar from './components/ToDoListWithCalendar/ToDoListWithCalendar'
+import ToDoListWithCalendar from './components/ToDoListWithCalendar'
 
-class App extends Component {
-  render() {
-    return (
-      <div className="App">
-        <ToDoListWithCalendar/>
-      </div>
-    )
-  }
-}
+const App = () => (
+  <div className="App">
+    <ToDoListWithCalendar />
+  </div>
+)
 
 export default App

@@ -1,0 +1,16 @@
+.todoNav{
+    margin-top: 10px;
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    
+    &__item{
+        margin-right: 5px;
+        margin-bottom: 5px;
+    }
+
+    &__item:last-child{
+        margin-right: 0;
+    }
+}

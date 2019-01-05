@@ -1,4 +1,4 @@
-.calendar_container {
+.calendar-layout__container {
   position: absolute;
   bottom: 0;
   left: 3em;
@@ -6,31 +6,34 @@
   z-index: 10;
   background: white; }
 
-.calendar_table {
+.calendar__dates-container {
   display: flex;
   flex-flow: column; }
 
-.calendar_table__row {
+.calendar__dates-container__row {
   display: flex;
   flex-flow: row; }
 
-.calendar_table__cell {
+.calendar__dates-container__cell {
   width: 5em;
   height: 3.5em;
+  border-radius: 10px;
   margin: 5px;
-  box-shadow: 0 0 6px 0px lightgray;
-  padding: 3px 5px;
+  box-shadow: 0 0 6px 0 lightgray;
+  padding: 5px 8px;
   box-sizing: border-box;
   color: #444;
   cursor: pointer; }
-  .calendar_table__cell_empty {
+  .calendar__dates-container__cell_empty {
     box-shadow: none;
     cursor: default; }
-  .calendar_table__cell_active {
+  .calendar__dates-container__cell_active {
     font-weight: bolder;
     border: 1px solid grey; }
+  .calendar__dates-container__cell_holiday {
+    box-shadow: 0 0 6px 0 lightcoral; }
 
-.calendar_table__cell__date-badge {
+.calendar__dates-container__cell__date-badge {
   float: right;
   color: darkred;
   width: 20px;
@@ -41,35 +44,40 @@
   align-items: center;
   justify-content: center; }
 
-.calendar-subheader {
+.calendar__subheader {
   display: flex;
   justify-content: space-around;
   padding: 8px 0;
   font-size: 13px;
   color: #aaa; }
 
-.calendar__btn {
+.calendar__navigation-btn {
   position: relative;
   border: 0;
   cursor: pointer;
   font-weight: bolder;
   background: transparent; }
-  .calendar__btn_shift-right, .calendar__btn_shift-left, .calendar__btn_shift-right, .calendar__btn_hide-calendar {
+  .calendar__navigation-btn_shift-right, .calendar__navigation-btn_shift-left, .calendar__navigation-btn_shift-right, .calendar__navigation-btn_hide-calendar {
     float: right; }
 
-.calendar-header {
+.calendar__header {
   background: white;
   height: 1.3em;
   padding: 5px 3px 5px 20px;
   box-shadow: 0px 2px 2px #ddd; }
 
-.form-create-task__btn {
+.form-new-task__btn {
   background: transparent;
   border-width: 0;
   font-size: 30px;
-  color: lightgray; }
+  color: lightgray;
+  cursor: pointer;
+  width: 1.5em;
+  box-shadow: 0 0 10px 0px lightgray;
+  height: 1.5em;
+  border-radius: 100%; }
 
-.form-create-task__input {
+.form-new-task__input {
   border: 0;
   width: 100%;
   font-size: 17px;
@@ -148,7 +156,8 @@
 body {
   margin: 0;
   font-family: Ubuntu, serif;
-  color: #444; }
+  color: #444;
+  background: #eee; }
 
 .placeholder {
   margin: auto;
@@ -156,7 +165,8 @@ body {
   box-shadow: lightgray 0 0 10px;
   height: 100vh;
   overflow: auto;
-  box-sizing: border-box; }
+  box-sizing: border-box;
+  background: white; }
 
 .content {
-  padding: .5em 1em 0em 2em; }
+  padding: .5em 1em 0 2em; }

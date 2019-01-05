@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAEA,WAAW;EACT,KAAK,EAAE,KAAK;EACZ,MAAM,EAAE,KAAK;EACb,gBAAgB,EAAE,OAAO;EACzB,KAAK,EAAE,OAAO",
+"sources": ["round_info.scss"],
+"names": [],
+"file": "round_info.css"
+}

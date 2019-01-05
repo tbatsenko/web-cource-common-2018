@@ -1,0 +1,14 @@
+.calendar-layout {
+  background-color: #fcfbfc;
+  padding: 60px;
+
+  &__controls {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
+
+  &__calendar {
+    position: relative;
+  }
+}

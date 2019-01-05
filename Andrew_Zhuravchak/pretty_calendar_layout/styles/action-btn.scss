@@ -1,0 +1,18 @@
+.action-btn {
+  position: absolute;
+  bottom: -20px;
+  right: 0;
+  width: 40px;
+  height: 40px;
+  background: #ed5454;
+  border-radius: 50%;
+  border: none;
+  color: #fff;
+  font-size: 22px;
+  font-weight: bold;
+  box-shadow: 3px 3px 15px -1px #ed5454;
+
+  &:hover {
+    cursor: pointer;
+  }
+}

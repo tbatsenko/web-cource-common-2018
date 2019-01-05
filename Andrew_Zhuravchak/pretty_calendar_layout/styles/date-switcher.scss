@@ -1,0 +1,24 @@
+.date-switcher {
+  display: flex;
+  align-items: center;
+
+  &__btn {
+    background: none;
+    border: none;
+    color: #cfd5da;
+    font-size: 34px;
+    line-height: 20px;
+    padding: 0 0 10px;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  &__current-date {
+    font-size: 16px;
+    font-weight: bolder;
+    color: #292529;
+    margin: 0 10px;
+  }
+}

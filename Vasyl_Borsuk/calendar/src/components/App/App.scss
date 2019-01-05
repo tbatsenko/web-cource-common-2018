@@ -1,0 +1,21 @@
+@import "../../css-utils/colors";
+
+
+body {
+  background: $calendar-background-color;
+}
+
+.app {
+  margin: 100px auto;
+  width: 700px;
+  height: 100%;
+
+  &--calendar, &--todo-list {
+    display: inline-block;
+    vertical-align: top;
+  }
+
+  &--calendar {
+    margin-right: 1rem;
+  }
+}

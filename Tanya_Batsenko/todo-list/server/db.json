@@ -1,0 +1,25 @@
+{
+  "selected-date": {
+    "date": "1234"
+  },
+  "todos": [
+    {
+      "title": "pass web exam ",
+      "status": "active",
+      "when": "2019-1-4",
+      "id": 1
+    },
+    {
+      "title": "super task",
+      "status": "active",
+      "when": "2019-1-4",
+      "id": 2
+    },
+    {
+      "title": "mytask",
+      "status": "active",
+      "when": "2019-1-24",
+      "id": 3
+    }
+  ]
+}

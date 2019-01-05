@@ -1,0 +1,21 @@
+.todo-list-wrapper{
+  width: 50vw;
+  height: 100vh;
+  background: #2980b9;
+  padding-left:30px;
+  padding-right:30px;
+
+  &__header{
+    text-align: center;
+  }
+}
+
+.todo-list {
+  &__task-checkbox{
+    margin-right: 20px;
+  }
+
+  &__item{
+    word-wrap: break-word;
+  }
+}
