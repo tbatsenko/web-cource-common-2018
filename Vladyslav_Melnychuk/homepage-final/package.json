@@ -1,8 +1,8 @@
 {
-  "name": "crest",
+  "name": "homepage",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "js/main.js",
   "scripts": {
     "webpack": "webpack"
   },
