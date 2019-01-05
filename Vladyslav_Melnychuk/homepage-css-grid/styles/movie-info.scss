@@ -1,0 +1,23 @@
+.movie-info {
+  display: inline-block;
+  padding: 0;
+
+  color: #babbc3;
+  font-size: 15px;
+  font-family: SourceSansPro, sans-serif;
+
+  &__item {
+    font-weight: 450;
+    text-align: left;
+    display: inline-block;
+    margin-right: 20px;
+
+    &--last::after {
+      content: '|';
+      width: 5px;
+      height: 5px;
+      position: relative;
+      left: 11px;
+    }
+  }
+}
