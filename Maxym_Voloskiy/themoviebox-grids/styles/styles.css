@@ -1,6 +1,5 @@
 .moviebox-header {
   max-height: 800px;
-  max-width: 1903px;
   margin: auto;
 }
 .moviebox-header .bg-image {
@@ -9,9 +8,14 @@
   position: relative;
 }
 .moviebox-header .container_12 {
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: 0 auto;
+  max-width: 1903px;
   height: 800px;
   position: absolute;
-  top: 0;
 }
 .moviebox-header__head {
   margin: 40px 35px auto 35px;
