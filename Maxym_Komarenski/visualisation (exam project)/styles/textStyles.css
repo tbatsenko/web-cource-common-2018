@@ -1,0 +1,20 @@
+.title {
+    font-family: "HelveticaNeueMedium","HelveticaNeue-Medium","Helvetica Neue Medium","Helvetica Neue",Helvetica,Arial,"Lucida Grande",sans-serif;
+    font-size: 27px;
+    margin-left: 57px;
+}
+
+.table-topic{
+    font-weight: bold;
+    cursor: default;
+    height: 24px;
+    font-family: "HelveticaNeueLight","HelveticaNeue-Light","Helvetica Neue Light","Helvetica Neue",Helvetica,Arial,"Lucida Grande",sans-serif;
+    font-size: 15px;
+}
+
+.container-for-all-teams{
+    height: 24px;
+    cursor: default;
+    font-family: "HelveticaNeueLight","HelveticaNeue-Light","Helvetica Neue Light","Helvetica Neue",Helvetica,Arial,"Lucida Grande",sans-serif;
+    font-size: 15px;
+}
