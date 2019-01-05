@@ -6,8 +6,6 @@ export const getCalendarDays = date => {
   const end = endOfMonth(date)
 
   const leadingZeros = start.getDay() !== 0 ? start.getDay() - 1 : 6
-  console.log(start, end, leadingZeros)
-
   let calendarDays = [
     ...Array(leadingZeros).fill(undefined),
     ...Array(getDate(end))

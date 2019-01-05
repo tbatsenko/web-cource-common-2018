@@ -1,4 +1,4 @@
-class Task {
+export default class Task {
   constructor(text, isNotification, isEmpty, type, date) {
     this.text = text
     this.isNotification = isNotification
