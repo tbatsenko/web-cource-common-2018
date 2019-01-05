@@ -70,7 +70,44 @@ export default class Calendar {
           </tbody>
       </table>
       
-      <button class="action-btn">+</button>
+      <a href="#newTask" class="action-btn">+</button>
+      
+      <div class="popup" id="newTask">
+        <figure>
+        <a href="#" class="close"></a>
+        <figcaption>
+            <h3>Add new task to the calendar</h3>
+            
+            <form action="POST">
+            <div>
+              <label for="text">Text: </label>
+              <input id="text"/>
+            </div>
+            
+            <div>
+              <label for="notification">Is notification: </label>
+              <input id="notification" type="checkbox"/>
+            </div>
+            
+            <div>  
+              <label for="date">Date: </label>
+              <input id="date" type="date"/>
+            </div>
+            
+            <div>
+              <label for="type">Type: </label>
+              <select name="type" id="type">
+                <option value="easy">easy</option>
+                <option value="medium">medium</option>
+                <option value="hard">hard</option>
+               </select>
+             <div> 
+             
+             <button type="submit">Send</button> 
+            </form>
+        </figcaption>
+        </figure>
+      </div>
     `
   }
 
