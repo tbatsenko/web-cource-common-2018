@@ -1,46 +1,53 @@
-import React, {useState} from 'react';
+import React from 'react';
+import {withState, compose} from 'recompose';
 
-const TodoContainer = props => {
-    const [ todoItems, setTodoItems ] = useState([]);
-    const [ newTodo, setNewTodo ] = useState([]);
+const withTodoItemsState = compose(
+    withState('todoItems', 'setTodoItems', []),
+    withState('newTodo', 'setNewTodo', [])
+);
 
-    const modifyTodoById = id => (field, value) => {
-        props.setTodoItems(props.todoItems.map(item => {
-            if (item.id === id) {
-                item[field] = value;
-            }
-            return item;
-        }));
-    };
+const TodoContainer = withTodoItemsState(
+    ({todoItems, setTodoItems, newTodo, setNewTodo, ...props}) => {
 
-    const removeTodoById = id => () => {
-        setTodoItems(props.todoItems.filter(item => item.id !== id));
-    };
-    return <div className='todo-container'>
-        <form className='todo-add'>
-            <input name='todo-new' id='todo-add_input' placeholder='Enter your TODO text'
-                   onChange={event => setNewTodo(event.target.value)}/>
-            <div className={typeof newTodo === 'undefined' ? 'todo-add__btn--disabled' : 'todo-add__btn--active'}
-                 onClick={() => {
-                     if (typeof newTodo !== 'undefined') props.setTodoItem([...props.todoItem,
-                         {
-                             text: newTodo,
-                             date: props.currentDate,
-                             done: false,
-                             id: Date.now(),
-                         },]);
-                 }
-                 }>Add
-            </div>
-        </form>
-        <TodoList modifyItemById={modifyTodoById} removeItemById={removeTodoById} items={todoItems}
-                  currentDate={props.currentDate}/>
-    </div>
-};
+        const modifyTodoById = id => (field, value) => {
+            setTodoItems(todoItems.map(item => {
+                if (item.id === id) {
+                    item[field] = value;
+                }
+                return item;
+            }));
+        };
+
+        const removeTodoById = id => () => {
+            setTodoItems(todoItems.filter(item => item.id !== id));
+        };
+        return <div className='todo-container'>
+            <form className='todo-add'>
+                <input name='todo-new' id='todo-add_input' placeholder='Enter your TODO text'
+                       onChange={event => setNewTodo(event.target.value)}/>
+                <div className={typeof newTodo === 'undefined' ? 'todo-add__btn--disabled' : 'todo-add__btn--active'}
+                     onClick={() => {
+                         if (typeof newTodo !== 'undefined') setTodoItems([...todoItems,
+                             {
+                                 text: newTodo,
+                                 date: props.selectedDate,
+                                 done: false,
+                                 id: Date.now(),
+                             },
+                         ]);
+                     }
+                     }>
+                    Add
+                </div>
+            </form>
+            <TodoList modifyItemById={modifyTodoById} removeItemById={removeTodoById} items={todoItems}
+                      currentDate={props.selectedDate}/>
+        </div>
+    });
 
 
 const TodoList = React.memo(props => {
-    const items = props.items.filter(item => item.date === props.currentDate);
+    const items = props.items.filter(item => item.date === props.selectedDate);
     return (items.length > 0) ?
         <ul className='todo-list'>
             {props.items.map(item =>
@@ -51,7 +58,7 @@ const TodoList = React.memo(props => {
                     text={item.text}
                     done={item.done}/>)}
         </ul> :
-    'Have a nice day'
+        'Have a nice day'
 
 });
 

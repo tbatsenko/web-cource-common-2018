@@ -1,57 +1,64 @@
-import React from "react"
+import React from 'react'
+import { compose, pure, withHandlers, withState } from 'recompose'
+
 import bem from "../../../helpers/bem"
 
-import "./TodoCreator.scss"
+import './TodoCreator.scss'
+import '../../../css/bem/textInput.scss'
+import '../../../css/bem/button.scss'
 
-const todoListBem = bem("todoList")
+const buttonBem = bem('button')
+const todoCreatorBem = bem('todoCreator')
+const textInputBem = bem('textInput')
 
-export default class TodoCreator extends React.Component{
-    state = {
-        showErrorHeader: false
-    }
+const TodoCreator = ({
+  onAddTodo,
+  onTodoTextInputChange,
+  setTodoTextInput,
+  errorMessage,
+}) => (
+  <div className={todoCreatorBem()}>
+    <form onSubmit={onAddTodo}>
+      <label className={todoCreatorBem({ element: 'form' })}>
+        <input
+          type="text"
+          ref={setTodoTextInput}
+          onChange={onTodoTextInputChange}
+          className={[
+            textInputBem(),
+            todoCreatorBem({ element: 'textInput' }),
+          ].join(' ')}
+        />
+        <button
+          type="submit"
+          className={[buttonBem(), todoCreatorBem({ element: 'submit' })].join(' ')}
+        >
+          Submit
+        </button>
+      </label>
+    </form>
+    {errorMessage ? (
+      <p className={todoCreatorBem({ element: 'errorMessage' })}>{errorMessage}</p>
+    ) : null}
+  </div>
+)
 
-    validateInput = () => this.textInput.value.trim() !== ""
+const _validateTodoTextInput = text => text.trim() !== ''
 
-    onTextInputChange = () => {
-        this.setState({
-            disabled: !this.validateInput(),
-            showErrorHeader: !this.validateInput()
-        })
-    }
+const enhancer = compose(
+  pure,
+  withState('errorMessage', 'setErrorMessage', undefined),
+  withState('todoTextInput', 'setTodoTextInput'),
+  withHandlers({
+    onAddTodo: ({ todoTextInput, onAddTodo, setErrorMessage }) => ev => {
+      ev.preventDefault()
+      if (_validateTodoTextInput(todoTextInput.value)) {
+        onAddTodo(todoTextInput.value)
+        todoTextInput.value = ''
+      } else setErrorMessage('Todo text fied does not match desired format!')
+    },
+    onTodoTextInputChange: ({ setErrorMessage }) => ev => setErrorMessage(null),
+  })
+)
 
-    onFormSubmit = (ev) => {
-        ev.preventDefault()
-
-        if(!this.validateInput()){
-            this.setState({showErrorHeader: true})
-            return
-        }
-        
-        this.props.onAddTodo(this.textInput.value)
-        this.textInput.value = ""
-        this.onTextInputChange()
-        this.setState({showErrorHeader: false})
-    }
-
-    render(){
-        return (
-            <div>
-                <form
-                    onSubmit={this.onFormSubmit}
-                >
-                    <label className={todoListBem({element: "todoCreator"})}>
-                        <h3 className={todoListBem({element: "todoCreator-header"})}>Create new Todo</h3>
-                        <input
-                            className={todoListBem({element: "todoCreator-input"})}
-                            type="text"
-                            ref={(node) => this.textInput = node}
-                            onChange={this.onTextInputChange}
-                        />
-                        <button type="submit">Submit</button>
-                    </label>
-                </form>
-                <p className={todoListBem({element: "todoCreator-error"})}>{this.state.showErrorHeader? "Text is too short": null}</p>
-            </div>
-        )
-    }
-}
+export default enhancer(TodoCreator)

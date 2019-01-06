@@ -1,0 +1,89 @@
+:root {
+  --calendar-bg-color: #fff;
+  --calendar-border-radius: 0;
+  --calendar-border-color: #e7e9ed;
+}
+
+.calendar-wrapper {
+  background: #27ae60;
+  width: 50vw;
+  height: 100vh;
+  padding-right: 30px;
+  padding-left: 30px;
+}
+.calendar-wrapper__header {
+  text-align: center;
+}
+
+.calendar {
+  background-color: var(--calendar-bg-color);
+  box-shadow: 0 4px 22px 0 rgba(0, 0, 0, 0.05);
+  margin: 0 auto;
+  overflow: hidden;
+  display: block;
+  text-align: center;
+  width: 300px;
+  border: solid 1px #cccccc;
+}
+.calendar__header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  cursor: default;
+  display: block;
+  font-size: 1rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  user-select: none;
+}
+.calendar__month-display {
+  align-items: center;
+  height: 40px;
+  background: #2875c7;
+  display: flex;
+  width: 100%;
+}
+.calendar__month-label {
+  flex: 1;
+}
+.calendar__arrow {
+  cursor: pointer;
+}
+.calendar__day-names {
+  color: #2875c7;
+  font-weight: bold;
+  cursor: default;
+  font-size: 0.8rem;
+  display: flex;
+  width: 100%;
+}
+.calendar__row-week {
+  display: flex;
+  width: 100%;
+}
+.calendar__day {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+  height: 35px;
+  border-left: solid 1px #cccccc;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+.calendar__day:hover {
+  background: #eeeeee;
+}
+.calendar__day_today {
+  background: rgba(40, 117, 199, 0.45);
+}
+.calendar__day_different-month {
+  color: silver;
+}
+.calendar__day_selected {
+  background: #2875c7;
+  color: #fff;
+}
+
+/*# sourceMappingURL=Calendar.css.map */

@@ -30,17 +30,6 @@ class DataBaseHandler {
             });
     }
 
-    getTodoById(id, callback){
-        return this.reqHandler.getById(id)
-            .then(data => {
-                if (callback !== undefined)
-                    callback(data);
-            })
-            .catch(err => {
-                console.error(err);
-            });
-    }
-
     removeTodoById(id, callback){
         return this.reqHandler.delete(id)
             .then(data => {

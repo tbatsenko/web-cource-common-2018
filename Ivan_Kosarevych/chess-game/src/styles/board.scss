@@ -1,0 +1,49 @@
+.board{
+  width: 560px;
+  height: 560px;
+  &__row:after{
+    margin: auto;
+    clear: both;
+    content: "";
+    display: table;
+  }
+  &__square {
+    border: 1px solid #999;
+    float: left;
+    width: 70px;
+    height: 70px;
+
+    font-size: 50px;
+    font-weight: bold;
+    line-height: 34px;
+
+    margin-right: -1px;
+    margin-top: -1px;
+    padding: 0;
+
+    text-align: center;
+
+    &--white{
+      background-color: #a2a6a7;
+    }
+    &--black{
+      background-color: #4a5758;
+    }
+    &--selected{
+      border: #27ae60 6px solid;
+    }
+    &--valid-move{
+      border: greenyellow 4px solid;
+    }
+  }
+
+}
+
+.figure{
+  &-w{
+    color: #dcdcdc;
+  }
+  &-b{
+    color: black;
+  }
+}

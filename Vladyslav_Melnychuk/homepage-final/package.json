@@ -1,0 +1,26 @@
+{
+  "name": "homepage",
+  "version": "1.0.0",
+  "description": "",
+  "main": "js/main.js",
+  "scripts": {
+    "webpack": "webpack"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "css-loader": "^2.1.0",
+    "style-loader": "^0.23.1"
+  },
+  "devDependencies": {
+    "handlebars": "^4.0.12",
+    "handlebars-loader": "^1.7.1",
+    "node-sass": "^4.11.0",
+    "path": "^0.12.7",
+    "sass": "*",
+    "sass-loader": "^7.1.0",
+    "url-loader": "^1.1.2",
+    "webpack": "^4.28.3",
+    "webpack-cli": "^3.1.2"
+  }
+}

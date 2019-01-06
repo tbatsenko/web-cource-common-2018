@@ -1,7 +1,8 @@
-import React from "react"
-import ReactDOM from "react-dom"
+import React from 'react'
+import ReactDOM from 'react-dom'
 
-import App from "./components/App/App"
-import "./index.scss"
+import App from './components/App'
 
-ReactDOM.render(<App/>, document.getElementById("target"))
+import './css/index.scss'
+
+ReactDOM.render(<App date={new Date()} />, document.getElementById('target'))
