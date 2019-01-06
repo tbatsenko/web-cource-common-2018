@@ -1,0 +1,31 @@
+@import '../../css/colors.scss';
+@import '../../css/fonts.scss';
+
+.day {
+  font-family: $font-family--regular;
+  font-size: $font-size--regular;
+
+  text-decoration: none;
+
+  color: $color--white;
+
+  display: block;
+
+  width: 100%;
+  
+  text-align: center;
+  border-radius: 50%;
+
+  &_disabled {
+    opacity: 0.6;
+  }
+
+  &_selected {
+    background-color: $color--secondary;
+    border: 1px solid $color--white;
+  }
+
+  &_holiday {
+    border: 1px solid $color--white;
+  }
+}

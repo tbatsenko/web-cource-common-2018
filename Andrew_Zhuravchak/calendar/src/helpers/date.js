@@ -12,3 +12,5 @@ export const getCalendarDays = date => {
       .map((date, i) => addDays(date, i)),
   ]
 }
+
+export const calendarDaysList = ['mo', 'tu', 'wd', 'th', 'fr', 'sa', 'su']

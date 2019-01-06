@@ -1,0 +1,320 @@
+@import url('https://fonts.googleapis.com/css?family=Helvetica+Neue');
+@import url('https://fonts.googleapis.com/css?family=Gill+Sans');
+@import url('https://fonts.googleapis.com/css?family=Libre+Baskerville');
+
+body{
+  margin: 36px 99px 99px 99px;
+}
+
+.header{
+  display: grid;
+  grid-auto-rows: 29px 70px;
+  &__help-bar{
+    display: grid;
+    justify-self: end;
+    grid-template-columns: repeat(3, 137px);
+    grid-template-rows: 29px;
+    font-family: HelveticaNeue;
+    font-size: 18px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: 0.5px;
+    text-align: right;
+    color: #6c7178;
+    justify-items: end;
+  }
+  &__navigation-bar{
+    display: grid;
+    justify-content: space-between;
+    align-items: center;
+    grid-template-columns: 185px 185px auto 185px 185px;
+    grid-template-rows: 52px;
+    &__input-search{
+      background: url("../imgs/search_icon.png") no-repeat scroll 7px ;
+      background-size: 32px 32px;
+      padding-left:50px;
+      border: solid #a2a2a2;
+      width: 185px;
+      height: 52px;
+      font-family: HelveticaNeue;
+      font-size: 18px;
+      font-weight: 300;
+      font-style: normal;
+      font-stretch: normal;
+      line-height: normal;
+      letter-spacing: 0.8px;
+      text-align: left;
+      &::placeholder{
+        font-family: HelveticaNeue;
+        font-size: 18px;
+        font-weight: 300;
+        font-style: normal;
+        font-stretch: normal;
+        line-height: normal;
+        letter-spacing: 0.8px;
+        text-align: left;
+        color: #a2a2a2;
+      }
+    }
+    &__menu-button{
+      border: none;
+      cursor:pointer;
+      background: none;
+      height: 29px;
+      &__menu-icon{
+        width: 24px;
+        height: 24px;
+        margin-right: 30px;
+      }
+      &__menu-text{
+        width: 120px;
+        height: 29px;
+        font-family: HelveticaNeue;
+        font-size: 24px;
+        font-weight: normal;
+        font-style: normal;
+        font-stretch: normal;
+        line-height: normal;
+        letter-spacing: 1.1px;
+        text-align: left;
+        color: #6c7178;
+      }
+    }
+  }
+}
+
+.section-one{
+  height: 657.6px;
+  background-color: #f5f5f5;
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  justify-items: center;
+  align-items: center;
+  grid-template-columns: 1130px;
+  grid-template-rows: 61px 60px 114px;
+  &__caption{
+    height: 60px;
+    font-family: LibreBaskerville;
+    font-size: 56px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: center;
+    color: #000000;
+  }
+  &__small-caption{
+    height: 25px;
+    font-family: GillSans;
+    font-size: 22px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: center;
+    color: #000000;
+  }
+  &__link{
+    height: 28px;
+    font-family: GillSans;
+    font-size: 24px;
+    font-weight: 300;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.17;
+    letter-spacing: 2.2px;
+    text-align: center;
+    color: #000000;
+    text-decoration: underline;
+  }
+}
+
+.section-two{
+  height: 1000px;
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  justify-items: center;
+  align-items: center;
+  grid-template-columns: repeat(4, 287.75px);
+  grid-template-rows: 60px 152px 340px 340px;
+
+  &__caption{
+    height: 60px;
+    font-family: Baskerville;
+    font-size: 56px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: center;
+    color: #000000;
+    grid-column: 1 / span 4;
+  }
+  &__small-caption{
+    font-family: GillSans;
+    font-size: 27px;
+    font-weight: 300;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #000000;
+    grid-column: 1 / span 4;
+    align-self: start;
+  }
+  &__sample{
+    justify-items: center;
+    align-items: center;
+    $block-color1: #d8d8d8;
+    $block-color2: #d8d8d8;
+    $block-color3: #ececec;
+    $block-color4: #ececec;
+    $block-color5: #eeeeee;
+    $block-color6: #ececec;
+    $block-color7: #d8d8d8;
+    $block-color8: #ececec;
+
+    &--color{
+        width: 260px;
+        height: 260px;
+        margin-bottom: 30px;
+      &.block1{
+        background-color: $block-color1;
+      }
+      &.block2{
+        background-color: $block-color2;
+      }
+      &.block3{
+        background-color: $block-color3;
+      }
+      &.block4{
+        background-color: $block-color4;
+      }
+      &.block5{
+         background-color: $block-color5;
+       }
+      &.block6{
+        background-color: $block-color6;
+      }
+      &.block7{
+         background-color: $block-color7;
+      }
+      &.block8{
+        background-color: $block-color8;
+      }
+    }
+    &--label{
+      width: 111px;
+      height: 32px;
+      font-family: GillSans;
+      font-size: 28px;
+      font-weight: 300;
+      font-style: normal;
+      font-stretch: normal;
+      line-height: normal;
+      letter-spacing: normal;
+      text-align: left;
+      color: #000000;
+    }
+  }
+}
+
+.footer{
+  background-color: #f9f8f6;
+  height: 1349px;
+  display: grid;
+  grid-template-columns: repeat(4, 287.75px);
+  grid-template-rows: 160px 70px 384px 200px 70px;
+  &__subscription-info{
+    grid-column: 1 / span 2;
+    margin-left: 30px;
+    &--main-text{
+      height: 37px;
+      font-family: Baskerville;
+      font-size: 32px;
+      font-weight: normal;
+      font-style: normal;
+      font-stretch: normal;
+      line-height: normal;
+      letter-spacing: normal;
+      text-align: left;
+      color: #000000;
+    }
+    &--subtext{
+      height: 70px;
+      font-family: GillSans;
+      font-size: 20px;
+      font-weight: normal;
+      font-style: normal;
+      font-stretch: normal;
+      line-height: 1.6;
+      letter-spacing: normal;
+      text-align: left;
+      color: #4d4d4d;
+    }
+
+  }
+  &__input-email {
+    background-color: #ffffff;
+    background-size: 32px 32px;
+    padding-left: 30px;
+    border: solid #a2a2a2;
+    width: 185px;
+    height: 52px;
+    font-family: HelveticaNeue;
+    font-size: 18px;
+    font-weight: 300;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: 0.8px;
+    text-align: left;
+    align-self: center;
+    &::placeholder {
+      font-family: HelveticaNeue;
+      font-size: 18px;
+      font-weight: 300;
+      font-style: normal;
+      font-stretch: normal;
+      line-height: normal;
+      letter-spacing: 0.8px;
+      text-align: left;
+      color: #a2a2a2;
+
+    }
+  }
+  &__button-subscribe{
+    width: 185px;
+    height: 52px;
+    background-color: #444444;
+    padding-left: 15px;
+    font-family: HelveticaNeue;
+    font-size: 18px;
+    font-weight: 300;
+    letter-spacing: 0.8px;
+    text-align: center;
+    color: #ffffff;
+    border: none;
+    align-self: center;
+  }
+  &--policy{
+    height: 70px;
+    font-family: GillSans;
+    font-size: 16px;
+    line-height: 2;
+    text-align: center;
+    color: #4d4d4d;
+    grid-column: 1 / span 4;
+    &--link{
+      color: #a8a8a8;
+      text-decoration: underline;
+    }
+  }
+}

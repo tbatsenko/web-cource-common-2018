@@ -1,8 +1,13 @@
 .day {
   text-align: center;
-  padding: 5px;
   flex-basis: calc(100% / 7);
   box-sizing: border-box;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 30px;
+
 
   &--week {
     border-right: 1px solid #263238;
@@ -19,9 +24,7 @@
 
     &-active {
       border: 1px solid #263238;
-      border-radius: 5px;
       font-weight: bold;
-      padding: 4px;
     }
   }
 

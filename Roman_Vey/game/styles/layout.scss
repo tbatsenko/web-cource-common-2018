@@ -1,0 +1,39 @@
+.layout{
+    &__lose{
+        display: none;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        width: 80%;
+        height: 300px;
+        margin-top: 100px;
+        padding: 20px;
+        border-radius: 20px;
+        background-color: rgba(255, 255, 255, 0.8);
+        cursor: pointer;
+        font-size: 24px;
+        font-weight: bold;
+    }
+
+    &__lose-placeholder {
+        display: flex;
+        justify-content: center;
+    }
+
+    &__score-placeholder {
+        height: 100px;
+        width: 100%;
+        background-color: white;
+        border: rgb(180, 172, 172) 1px solid;
+        display: flex;
+        justify-content: space-evenly;
+        font-size: 18px;
+        align-items: center;
+    }
+
+    &__games{
+        height: 100vh;
+        width: 100vw;
+        display: flex;
+    }
+}

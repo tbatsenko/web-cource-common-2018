@@ -1,0 +1,21 @@
+.field {
+  position: relative;
+  width: 450px;
+  height: 430px;
+  padding: 50px;
+  background-color: #f1c40f;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  align-content: space-between; }
+  .field__blockClick {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 100;
+    background-color: transparent;
+    display: block; }
+
+/*# sourceMappingURL=field.css.map */

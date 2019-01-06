@@ -61,6 +61,32 @@ class ToDo {
 
   }
 
+  showAllTasks(){
+    for (let i = 0; i < this.len(); i++) this.task_list[i].htmlRender()
+  }
+
+  showOpenTasks(){
+    for (let i = 0; i < this.len(); i++) {
+      if ( this.task_list[i].checked) {
+        this.task_list[i].removeFromDoc()
+      }
+      else{
+        this.task_list[i].htmlRender()
+      }
+    }
+  }
+
+  showClosedTasks(){
+    for (let i = 0; i < this.len(); i++) {
+      if ( this.task_list[i].checked) {
+        this.task_list[i].htmlRender()
+      }
+      else{
+        this.task_list[i].removeFromDoc()
+      }
+    }
+  }
+
 
 }
 

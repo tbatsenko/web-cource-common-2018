@@ -5,8 +5,9 @@ import DataBaseHandler from './DataBaseHandler'
 class TodoList {
     constructor(container, form, input, calendar, dbUrl) {
         this.dbHandler = new DataBaseHandler(
-            dbUrl === undefined ? "http://localhost:3000/todoList" : dbUrl
+            "http://" + process.env.DB_HOST + ":" + process.env.DB_PORT + "/todoList"
         );
+
         this.form = form;
         this.inputForm = input;
         this.calendar = calendar;
@@ -14,7 +15,7 @@ class TodoList {
             e.preventDefault();
             const text = this.inputForm.value;
             if (!/\S/.test(text)) return;
-            this.addTodoToDB({text:text, date:calendar.today, done:false});
+            this.addTodoToDB({text: text, date: calendar.today, done: false});
             this.inputForm.value = "";
         });
 
@@ -52,10 +53,10 @@ class TodoList {
         this.container.appendChild(this.htmlElem);
     }
 
-    getTodoItemsFromDB(){
+    getTodoItemsFromDB() {
         this.dbHandler.getAllTodos((dataFromResponce) => {
-            let jsonData = JSON.parse(dataFromResponce);
-            for(let i in jsonData){
+            let jsonData = dataFromResponce;
+            for (let i in jsonData) {
                 this.addTodo(jsonData[i])
             }
         })
@@ -98,18 +99,19 @@ class TodoList {
 
     addTodoToDB(jsonData) {
         this.dbHandler.addTodo(jsonData, (dataFromResponce) => {
-            this.addTodo(JSON.parse(dataFromResponce));
+            this.addTodo(dataFromResponce);
         });
     };
 
-    addTodo(jsonData){
+    addTodo(jsonData) {
         let newItem = new TodoItem(jsonData, this);
         this.todoItems.unshift(newItem);
         this.htmlElem.insertBefore(newItem.htmlElem, this.htmlElem.firstChild);
     }
 
     removeTodoFromDB(jsonData) {
-        this.dbHandler.removeTodoById(jsonData.id, ()=>{})
+        this.dbHandler.removeTodoById(jsonData.id, () => {
+        })
     }
 
     removeTodo(item) {
@@ -118,9 +120,9 @@ class TodoList {
         this.htmlElem.removeChild(item.htmlElem);
     };
 
-    replaceTodo(item, jsonDataToReplace){
-        this.dbHandler.replaceTodoById(item.id, jsonDataToReplace, (dataFromResponce)=>{
-            item.changeData(JSON.parse(dataFromResponce));
+    replaceTodo(item, jsonDataToReplace) {
+        this.dbHandler.replaceTodoById(item.id, jsonDataToReplace, (dataFromResponce) => {
+            item.changeData(dataFromResponce);
         });
 
     }

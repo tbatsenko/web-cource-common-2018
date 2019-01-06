@@ -1,0 +1,15 @@
+@import "layout";
+@import "game";
+body {
+    margin: 0;
+    font-family: 'Open Sans', sans-serif;
+    height: 100vh;
+    background-image: url("../img/background.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+}
+.game-container{
+    flex-grow: 1;
+}

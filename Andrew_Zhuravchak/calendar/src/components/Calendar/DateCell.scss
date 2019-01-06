@@ -1,0 +1,65 @@
+@mixin circle-badge {
+  &::after {
+    position: absolute;
+    display: block;
+    content: '';
+    border-radius: 50%;
+    z-index: 999;
+  }
+}
+
+
+.dateCell {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+
+  &--sunday {
+    background: #006273;
+    color: white;
+  }
+
+  &--saturday {
+    background: #31acbf;
+    color: white;
+  }
+
+  &--small {
+    @include circle-badge();
+
+    &::after {
+      top: -2px;
+      right: -2px;
+      width: 6px;
+      height: 6px;
+      background: #4caf50;
+    }
+  }
+
+  &--medium {
+    @include circle-badge();
+
+    &::after {
+      top: -2px;
+      right: -2px;
+      width: 8px;
+      height: 8px;
+      background: #ffc107;
+    }
+  }
+
+  &--big {
+    @include circle-badge();
+
+    &::after {
+      top: -3px;
+      right: -3px;
+      width: 11px;
+      height: 11px;
+      background: #f44336;
+    }
+  }
+}
