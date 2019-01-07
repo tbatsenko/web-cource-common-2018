@@ -1,0 +1,26 @@
+.inputbox {
+  margin-top: 10px;
+  height: 80px;
+  width: 100%;
+  border-top: 2px rgba(200, 200, 200, 0.5) solid;
+  &__message{
+    word-break: break-word;
+    background: none;
+    width: 290px;
+    margin: 0;
+    padding: 15px 0 0 15px;
+    border: none;
+    height: 24px;
+    color: grey;
+    resize: none;
+  }
+  &__mediabox {
+    padding: 0 0 10px 15px;
+  }
+  &__button{
+    color: grey;
+    font-size: 24px;
+    margin-right: 5px;
+  }
+
+}
