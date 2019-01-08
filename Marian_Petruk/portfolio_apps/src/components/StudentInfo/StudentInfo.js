@@ -26,27 +26,25 @@ class StudentInfo extends Component {
       userGithubUrl,
     } = this.props;
     return (
-      <React.Fragment>
-        <header className={b()}>
-          <img
-            src={userAvatarSrc}
-            alt="student avatar"
-            className={b('student-avatar')}
-          />
-          <section className={b('student-short-info')}>
-            <span className={b('student-name')}>{userName}</span>
-            <span className={b('student-occupation')}>{userOccupation}</span>
-            <section className={b('social-info')}>
-              <a href={userFacebookUrl} className={b('facebook-logo')}>
-                <img src={facebookLogo} alt="facebook logo" />
-              </a>
-              <a href={userGithubUrl} className={b('github-logo')}>
-                <img src={githubLogo} alt="github logo" />
-              </a>
-            </section>
+      <header className={b()}>
+        <img
+          src={userAvatarSrc}
+          alt="student avatar"
+          className={b('student-avatar')}
+        />
+        <section className={b('student-short-info')}>
+          <span className={b('student-name')}>{userName}</span>
+          <span className={b('student-occupation')}>{userOccupation}</span>
+          <section className={b('social-info')}>
+            <a href={userFacebookUrl} className={b('facebook-logo')}>
+              <img src={facebookLogo} alt="facebook logo" />
+            </a>
+            <a href={userGithubUrl} className={b('github-logo')}>
+              <img src={githubLogo} alt="github logo" />
+            </a>
           </section>
-        </header>
-      </React.Fragment>
+        </section>
+      </header>
     );
   }
 }
