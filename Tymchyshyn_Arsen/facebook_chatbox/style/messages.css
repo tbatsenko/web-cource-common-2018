@@ -1,0 +1,65 @@
+article{
+    width: 292px;
+    height: 228px;
+    margin-top: 10px;
+}
+
+.chat-box__messages {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    color: #353535;
+    margin-top: 20px;
+}
+
+.messages__your-message {
+    float: right;
+    font-family:Open Sans, sans-serif;
+    margin-left: 101px;
+    margin-right: 16px;
+    background-color: #2979ff;
+    font-size: 12px;
+    color: #ffffff;
+    padding: 5px 12px 6px;
+    border-radius: 100px 100px 0 100px;
+}
+
+.messages__friend-message {
+    float: left;
+    margin-right: 50px;
+    font-family: Open Sans, sans-serif;
+    margin-left: 50px;
+    background-color: #f3f3f3;
+    padding: 5px 12px 6px;
+    border-radius: 100px;
+    font-size: 12px;
+}
+
+
+.messages__friend-message + .messages__friend-message {
+    margin-top: 1px;
+    border-radius: 0 100px 100px 100px;
+}
+
+.messages__friend-message + .messages__your-message{
+    margin-top: 16px;
+}
+
+.messages__your-message + .messages__friend-message {
+    margin-top: 16px;
+    border-radius: 100px 100px 100px 0;
+}
+.messages__your-message + .messages__your-message {
+    margin-top: 1px;
+    border-radius: 100px 0 100px 100px;
+}
+
+.date{
+    font-weight: bold;
+    margin-top: 8px;
+    margin-bottom: 9px;
+    font-size: 10px;
+    color: #828282;
+    float: right;
+    margin-right: 107px;
+}
