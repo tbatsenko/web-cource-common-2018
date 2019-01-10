@@ -1,0 +1,19 @@
+.inputs {
+    border-top: 2px solid #e5e5e5;
+    padding: 12px 16px 12px;
+
+    &__text-input {
+        border: 0;
+        outline: none;
+        width: 100%;
+    }
+
+    &__buttons-item {
+        border: 0;
+        outline: none;
+    }
+
+    &__buttons-item:nth-child(1) {
+        padding-left: 0;
+    }
+}
