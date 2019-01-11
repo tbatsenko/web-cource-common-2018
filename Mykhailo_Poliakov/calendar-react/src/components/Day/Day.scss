@@ -1,4 +1,8 @@
 .day {
+  &:focus {
+    outline: none;
+  }
+
   width: 40px;
   height: 40px;
   line-height: 40px;
