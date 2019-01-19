@@ -1,5 +1,5 @@
 import React from 'react'
-import { compose, pure, withState } from 'recompose'
+import { compose, pure, withState, lifecycle, withProps } from 'recompose'
 
 import Calendar from '../Calendar'
 import TodoList from '../TodoList'
@@ -27,7 +27,27 @@ const App = ({ date, onChangeDate }) => (
 
 const enhancer = compose(
   pure,
-  withState('date', 'onChangeDate', ({ date }) => date)
+  withState('date', 'setDate', ({ date }) => date),
+  withProps(({ setDate }) => ({
+    onChangeDate: date => {
+      window.history.pushState(date, date.toISOString(), date.toISOString())
+      return setDate(date)
+    },
+  })),
+  lifecycle({
+    componentDidMount() {
+      const { date, setDate } = this.props
+
+      window.history.replaceState(date, date.toISOString(), date.toISOString())
+
+      this.popstateEventLitener = ev => setDate(ev.state)
+      window.addEventListener('popstate', this.popstateEventLitener)
+    },
+
+    componentWillUnmount() {
+      window.removeEventListener('popstate', this.popstateEventLitener)
+    },
+  })
 )
 
 export default enhancer(App)
