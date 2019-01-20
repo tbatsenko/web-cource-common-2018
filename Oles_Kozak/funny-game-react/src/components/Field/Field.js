@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import './field.scss'
 import Card from '../Card/Card'
+import CountdownTimer from '../CountdownTimer'
 
 class Field extends Component {
   constructor(props) {
@@ -8,50 +9,10 @@ class Field extends Component {
 
     this.state = {
       children: [],
-      seconds: '00',
-      minutes: '1',
       moves: 0,
       enable: false,
     }
     this.stopTimer = false
-    this.secondsRemaining = 0
-    this.intervalHandle = 0
-    this.startCountDown = this.startCountDown.bind(this)
-    this.tick = this.tick.bind(this)
-  }
-
-  componentDidMount() {
-    this.startCountDown()
-  }
-
-  tick() {
-    let min = Math.floor(this.secondsRemaining / 60)
-    let sec = this.secondsRemaining - min * 60
-    this.setState({
-      minutes: min,
-      seconds: sec,
-    })
-    if (sec < 10) {
-      this.setState({
-        seconds: '0' + this.state.seconds,
-      })
-    }
-    if (min < 10) {
-      this.setState({
-        value: '0' + min,
-      })
-    }
-    if ((min === 0) & (sec === 0) || this.stopTimer) {
-      this.gameOver()
-      clearInterval(this.intervalHandle)
-    }
-    this.secondsRemaining--
-  }
-
-  startCountDown() {
-    this.intervalHandle = setInterval(this.tick, 1000)
-    let time = this.state.minutes
-    this.secondsRemaining = time * 60
   }
 
   onRotation = childReactComponent => {
@@ -139,12 +100,8 @@ class Field extends Component {
 
     return (
       <section id="game">
-        <section className="round-info shadow">
-          <h3 className="round-info__title3">TIME:</h3>
-          <time className="round-info__num-text">
-            {this.state.minutes}:{this.state.seconds}
-          </time>
-        </section>
+        <CountdownTimer seconds={60} onExpired={this.explosion} />
+
         <section className="field shadow">
           <div
             className="field__blockClick"

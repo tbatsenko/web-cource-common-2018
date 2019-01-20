@@ -16,3 +16,9 @@ export const doubleElements = a =>
     acc.push(el, el)
     return acc
   }, [])
+
+export const formatTime = totalSeconds => {
+  const minutes = Math.floor(totalSeconds / 60)
+  const seconds = totalSeconds - minutes * 60
+  return `${minutes}:${seconds}`
+}
