@@ -14,24 +14,26 @@ class Card extends Component {
     }
 
     onClick = () => {
-        this.state.opened = !this.state.opened;
-        this.state.enable = false
-        if(this.state.opened){
+        let opened = !this.state.opened;
+        if(opened){
             this.state.onRef(this)
         }
-        this.setState(this.state)
+        this.setState({
+            opened : opened,
+            enable : false,
+        })
     }
 
     render() {
         return (
             <div className="card">
-                <div className="card__sides" onClick={() => this.onClick()} style={{transform: this.state.opened ? `rotateY( 180deg )` : `rotateY( 0deg )`, pointerEvents: this.state.enable ? "all" : "none" }}>
-                    <div className="card__front">
-                    </div>
-                    <img src={this.state.picture} className="card__back"/>
-                </div>
+            <div className="card__sides" onClick={() => this.onClick()} style={{transform: this.state.opened ? `rotateY( 180deg )` : `rotateY( 0deg )`, pointerEvents: this.state.enable ? "all" : "none" }}>
+    <div className="card__front">
             </div>
-        );
+            <img src={this.state.picture} className="card__back" alt="card"/>
+            </div>
+            </div>
+    );
     }
 }
 

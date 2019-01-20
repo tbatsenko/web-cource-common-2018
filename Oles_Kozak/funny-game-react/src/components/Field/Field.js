@@ -66,17 +66,24 @@ class Field extends Component {
 
         if(this.state.children.length === 2){
             this.setState({enable: true})
+
+            let children = this.state.children
+            let moves = this.state.moves
+
             if(this.state.children[0].state.picture !== this.state.children[1].state.picture){
                 setTimeout(
                     function() {
-                        this.state.children[0].state.opened = false
-                        this.state.children[1].state.opened = false
-                        this.state.children[0].state.enable = true
-                        this.state.children[1].state.enable = true
-                        this.state.children = []
-                        this.state.moves++
-                        this.state.enable=false
-                        this.setState(this.state)
+                        children[0].state.opened = false
+                        children[1].state.opened = false
+                        children[0].state.enable = true
+                        children[1].state.enable = true
+                        moves++
+
+                        this.setState({
+                            children : [],
+                            moves : moves,
+                            enable : false
+                        })
                     }
                         .bind(this),
                     800
@@ -84,12 +91,15 @@ class Field extends Component {
             }else{
                 setTimeout(
                     function() {
-                        this.state.children[0].state.enable = false
-                        this.state.children[1].state.enable = false
-                        this.state.children = []
-                        this.state.moves++
-                        this.state.enable=false
-                        this.setState(this.state)
+                        children[0].state.enable = false
+                        children[1].state.enable = false
+                        moves++
+
+                        this.setState({
+                            children : [],
+                            moves : moves,
+                            enable : false
+                        })
                     }
                         .bind(this),
                     800
@@ -123,26 +133,26 @@ class Field extends Component {
 
         return (
             <section id="game">
-                <section className="round-info shadow">
-                    <h3 className="round-info__title3">TIME:</h3>
-                    <time className="round-info__num-text">{this.state.minutes}:{this.state.seconds}</time>
-                </section>
-                <section className="field shadow">
-                    <div className="field__blockClick" style={{display: this.state.enable ? "block" : "none"}}></div>
-                    {this.state.cards.map((item, index) => (
-                        <Card
-                            key={index}
-                            picture={require("../../../public/img/" + shuffled_pictures[index])}
-                            onRef={child => this.onRotation(child)}
-                        />
-                    ))}
-                </section>
-                <section className="round-info shadow">
-                    <h3 className="round-info__title3">MOVES:</h3>
-                    <span className="round-info__num-text">{this.state.moves}</span>
-                </section>
-            </section>
-        );
+            <section className="round-info shadow">
+            <h3 className="round-info__title3">TIME:</h3>
+        <time className="round-info__num-text">{this.state.minutes}:{this.state.seconds}</time>
+        </section>
+        <section className="field shadow">
+            <div className="field__blockClick" style={{display: this.state.enable ? "block" : "none"}}></div>
+        {this.state.cards.map((item, index) => (
+            <Card
+            key={index}
+            picture={require("../../../public/img/" + shuffled_pictures[index])}
+            onRef={child => this.onRotation(child)}
+            />
+        ))}
+    </section>
+        <section className="round-info shadow">
+            <h3 className="round-info__title3">MOVES:</h3>
+        <span className="round-info__num-text">{this.state.moves}</span>
+        </section>
+        </section>
+    );
     }
 }
 
