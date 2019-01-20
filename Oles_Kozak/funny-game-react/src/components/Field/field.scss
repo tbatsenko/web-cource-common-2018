@@ -1,6 +1,6 @@
 //Field implementation
 
-.field{
+.field {
   position: relative;
   width: 450px;
   height: 430px;
@@ -11,15 +11,15 @@
   flex-wrap: wrap;
   align-content: space-between;
 
-  &__blockClick{
+  &__blockClick {
     position: absolute;
-    top:0;
-    left:0;
-    right:0;
+    top: 0;
+    left: 0;
+    right: 0;
     bottom: 0;
     z-index: 100;
     background-color: transparent;
 
-    display:block;
+    display: block;
   }
 }

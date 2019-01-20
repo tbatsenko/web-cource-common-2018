@@ -1,7 +1,7 @@
 export function shuffle(a) {
   const array = [...a]
 
-  var j, x, i
+  let j, x, i
   for (i = array.length - 1; i > 0; i--) {
     j = Math.floor(Math.random() * (i + 1))
     x = array[i]
@@ -10,3 +10,9 @@ export function shuffle(a) {
   }
   return array
 }
+
+export const doubleElements = a =>
+  a.reduce((acc, el) => {
+    acc.push(el, el)
+    return acc
+  }, [])
