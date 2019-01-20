@@ -7,7 +7,7 @@ import { holidays } from '../../utils/holidays.json';
 const b = BEM('day');
 
 const Day = ({ day, onSelect, isActive, isHoliday, isWeekend, url }) => (
-  <a className={b({ isActive, isWeekend, isHoliday })} onClick={onSelect} href={url}>
+  <a className={b({ isActive, isWeekend, isHoliday })} onClick={onSelect} href={url} tabIndex="-1">
     {day}
   </a>
 );

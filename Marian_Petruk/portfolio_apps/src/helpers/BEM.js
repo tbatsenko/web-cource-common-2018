@@ -1,18 +1,18 @@
-const ELEMENT_SEPARATOR = "__",
-  MODIFIER_SEPARATOR = "_";
+const ELEMENT_SEPARATOR = '__',
+  MODIFIER_SEPARATOR = '_';
 
 function getBEMPAth({ b, e, m }) {
   const base = e ? [b, e].join(ELEMENT_SEPARATOR) : b;
 
   return [base, ...m.map(modifier => [base, modifier].join(MODIFIER_SEPARATOR))]
-    .join(" ")
+    .join(' ')
     .trim();
 }
 
 const b = b => (elementName, modifiers = {}) => {
   let e, m;
 
-  if (typeof elementName === "string") {
+  if (typeof elementName === 'string') {
     e = elementName;
   } else {
     modifiers = elementName || {};

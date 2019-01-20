@@ -1,91 +1,204 @@
 import { Component } from 'react'
 import React from 'react'
+
+import { extent, curveMonotoneX } from 'd3'
+import {
+  scaleLinear,
+  AreaClosed,
+  AxisLeft,
+  AxisBottom,
+  AxisRight,
+} from '@vx/vx'
+
 import './Chart.css'
 
-class Graph extends Component {
-  state = {}
-  text_keys = []
-  text_keys_empty = true
+class Chart extends Component {
+  findMaxValues() {
+    const { data } = this.props.state
 
-  renderBars(key) {
-    const { women, men, activeYear} = this.props.state
-
-    let gender = null
-    if (key == 'men') {
-      gender = men
-    } else if (key == 'women') {
-      gender = women
-    }
-    let genderNumbers = []
-    let localSum
-    let maxSum = Object.values(gender[gender.length - 1])[activeYear - 2010]
-    let i = 0
-    while (i < gender.length - 1) {
-      let localSum = 0
-      for (let c = 0; c < 5; c++) {
-        if (i < gender.length - 1) {
-          localSum += Object.values(gender[i])[activeYear - 2010]
-          // if (localSum > maxSum) {
-          //   maxSum = localSum
-          // }
-
-        }
-        i = i + 1
+    let maxMen = 0
+    let maxWomen = 0
+    for (let i = 0; i < data.length; i++) {
+      if (data[i]['men'] > maxMen) {
+        maxMen = data[i]['men']
       }
-      if (this.text_keys_empty) {
-        let text_key = (i - 5).toString() + ' - ' + (i - 1).toString()
-        this.text_keys.push(text_key)
+      if (data[i]['women'] > maxWomen) {
+        maxWomen = data[i]['women']
       }
-      genderNumbers.push(localSum)
     }
-    this.text_keys.pop()
-    this.text_keys.push('85 +')
-    this.text_keys_empty = false
 
-    return genderNumbers.map((number) => {
-      const percent = (number / maxSum) * 1000
-      return (<Bar percent={percent} number={number}/>)
+    return [maxMen, maxWomen]
+  }
+
+  dataPreparation() {
+    this.dataMale = []
+    this.dataFemale = []
+    this.staticDataMale = []
+    this.staticDataFemale = []
+
+    const dynamic_data = this.data.filter(
+      row => row['year'] === this.activeYear
+    )
+    const static_data = this.data.filter(row => row['year'] === 1989)
+
+    for (let i = 0; i < 80; i++) {
+      this.dataMale.push({ age: i, population: dynamic_data[i]['men'] })
+      this.dataFemale.push({ age: i, population: dynamic_data[i]['women'] })
+      this.staticDataMale.push({ age: i, population: static_data[i]['men'] })
+      this.staticDataFemale.push({
+        age: i,
+        population: static_data[i]['women'],
+      })
+    }
+  }
+
+  makeScales(width, height) {
+    this.xScaleFemale = scaleLinear({
+      range: [this.xMax, 0],
+      domain: extent(this.staticDataFemale, this.x),
+    })
+
+    this.xScaleMale = scaleLinear({
+      range: [0, this.xMax],
+      domain: extent(this.staticDataMale, this.x),
+    })
+
+    this.yScaleFemale = scaleLinear({
+      range: [this.yMax, this.yMin],
+      domain: [0, this.maxWomen],
+    })
+
+    this.yScaleMale = scaleLinear({
+      range: [this.yMax, this.yMin],
+      domain: [0, this.maxMen],
+    })
+
+    this.yScaleAxis = scaleLinear({
+      range: [height - 3, 5],
+      domain: [0, 80],
+    })
+
+    this.xScaleMaleAxis = scaleLinear({
+      range: [0, width],
+      domain: [this.maxMen * 1.33, 0],
+    })
+    this.xScaleFemaleAxis = scaleLinear({
+      range: [0, width],
+      domain: [0, this.maxWomen * 1.33],
     })
   }
 
   render() {
-    return (
-      <div className="graph">
-        <BarTextContent keys={this.text_keys}/>
+    const { data, activeYear, chart_width } = this.props.state
+    this.data = data
+    this.activeYear = activeYear
 
-        <div className={'graph__bar-container left'}>
-          {this.renderBars('men')}
-        </div>
-        <div className="graph__bar-container right">
-          {this.renderBars('women')}
+    const width = chart_width / 2
+    const height = chart_width / 2
+    const axis_size = 50
+
+    const maxValues = this.findMaxValues()
+    this.maxMen = maxValues[0]
+    this.maxWomen = maxValues[1]
+
+    this.dataPreparation()
+
+    this.x = d => d.age
+    this.y = d => d.population
+
+    this.xMax = width // - margin.left - margin.right
+    this.yMax = height // - margin.top - margin.bottom
+    this.yMin = height / 4
+
+    this.makeScales(width, height)
+
+    return (
+      <div className={'chart'}>
+        <svg height={height} width={axis_size} className={'svg'}>
+          <AxisLeft
+            scale={this.yScaleAxis}
+            top={0}
+            left={axis_size}
+            stroke={'white'}
+          />
+        </svg>
+
+        <svg width={width} height={height} className="svg male">
+          <AreaClosed
+            data={this.dataMale}
+            x={d => this.xScaleMale(d.age)}
+            y0={this.yScaleMale(0)}
+            y={d => this.yScaleMale(d.population)}
+            fill={'#e45f4d'}
+            stroke={'#e45f4d'}
+            curve={curveMonotoneX}
+            opacity={0.8}
+          />
+
+          <AreaClosed
+            data={this.staticDataMale}
+            x={d => this.xScaleMale(d.age)}
+            y0={this.yScaleMale(0)}
+            y={d => this.yScaleMale(d.population)}
+            fill={'#e45f4d'}
+            stroke={'#e45f4d'}
+            curve={curveMonotoneX}
+            opacity={0.5}
+          />
+        </svg>
+        <svg width={width} height={height} className="svg female">
+          <AreaClosed
+            data={this.dataFemale}
+            x={d => this.xScaleFemale(d.age)}
+            y0={this.yScaleFemale(0)}
+            y={d => this.yScaleFemale(d.population)}
+            fill={'#489ea3'}
+            stroke={'#489ea3'}
+            curve={curveMonotoneX}
+            opacity={0.8}
+          />
+          <AreaClosed
+            data={this.staticDataFemale}
+            x={d => this.xScaleFemale(d.age)}
+            y0={this.yScaleFemale(0)}
+            y={d => this.yScaleFemale(d.population)}
+            fill={'#489ea3'}
+            stroke={'#489ea3'}
+            curve={curveMonotoneX}
+            opacity={0.5}
+          />
+        </svg>
+
+        <svg height={height} width={axis_size} className={'svg'}>
+          <AxisRight
+            scale={this.yScaleAxis}
+            top={0}
+            left={0}
+            stroke={'white'}
+          />
+        </svg>
+
+        <div className={'chart__bottom-axis'}>
+          <svg
+            height={axis_size}
+            width={width * 2 + axis_size}
+            className={'svg'}
+          >
+            <AxisBottom
+              left={axis_size}
+              scale={this.xScaleMaleAxis}
+              numTicks={5}
+            />
+            <AxisBottom
+              left={axis_size + width}
+              scale={this.xScaleFemaleAxis}
+              numTicks={5}
+            />
+          </svg>
         </div>
       </div>
     )
   }
 }
 
-const BarTextContent = ({ keys }) => {
-  return (
-    <div className="graph__text-container">
-      {
-        keys.map((key) => (
-          <div className='graph__text-container_text'>
-            {key}
-          </div>
-        ))
-      }
-
-    </div>
-  )
-}
-
-const Bar = ({ percent, number }) => {
-  const barStyle = { width: `${percent}%`, height: 'calc(5.6% - 1px)' }
-  return (
-    <div className="bar" style={barStyle}>
-      {number}
-    </div>
-  )
-}
-
-export default Graph
+export default Chart

@@ -1,6 +1,5 @@
-import { compose } from 'ramda'
+import { compose, range } from 'ramda'
 import { isValid, addDays, startOfWeek, format } from 'date-fns'
-import { range } from 'ramda'
 
 export const hashDate = date =>
   date.getDate() + date.getMonth() * 100 + date.getFullYear() * 10000

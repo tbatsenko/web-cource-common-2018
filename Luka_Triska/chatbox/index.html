@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chatbox</title>
+
+    <link rel="stylesheet" href="styles/chat-header.css">
+    <link rel="stylesheet" href="styles/chat-messages.css">
+    <link rel="stylesheet" href="styles/chat-input.css">
+
+    <link rel="stylesheet" href="styles/common.css">
+</head>
+<body>
+
+<script src="node_modules/handlebars/dist/handlebars.js"></script>
+<script>
+  const render = async (templateSrc, dataSrc, container) => {
+    const templateStr = await (await fetch(templateSrc)).text();
+    const data = await (await fetch(dataSrc)).json();
+    const compiled = Handlebars.compile(templateStr);
+    container.innerHTML = compiled(data);
+  };
+
+  const renderPage = async () => {
+    await render("templates/main.hbs", "data/main.json", document.body);
+  };
+
+  renderPage();
+</script>
+
+
+</body>
+</html>

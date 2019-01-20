@@ -9,9 +9,9 @@ const b = BEM('calendar');
 const Calendar = ({ calendarDate, onPreviousMonth, onNextMonth, monthList, children }) => (
   <section className={b()}>
     <header className={b('header')}>
-      <button aria-label="Previous month" className={b('button', [ 'previous' ])} onClick={onPreviousMonth} />
+      <button tabIndex="-1" aria-label="Previous month" className={b('button', [ 'previous' ])} onClick={onPreviousMonth} />
       <h1 className={b('date')}>{monthList[calendarDate.month]}</h1>
-      <button aria-label="Next month" className={b('button', [ 'next' ])} onClick={onNextMonth} />
+      <button tabIndex="-1" aria-label="Next month" className={b('button', [ 'next' ])} onClick={onNextMonth} />
     </header>
 
     <CalendarBody children={children} calendarDate={calendarDate} />

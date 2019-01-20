@@ -1,14 +1,13 @@
 import React from 'react';
 import './Todo.scss';
 import BEM from '../../utils/bem';
-import API from '../../utils/api';
+import api from '../../utils/api';
 import { holidays } from '../../utils/holidays.json';
 import { withState, withProps, compose, lifecycle } from 'recompose';
 import TodoItem from './TodoItem';
 import TodoCreator from './TodoCreator';
 
 const b = BEM('todo');
-const api = API(process.env.REACT_APP_API_URL, process.env.REACT_APP_API_ENDPOINT);
 
 const TodoList = ({ activeDate, todos, getTodos, monthList }) => (
   <section className={b()}>
@@ -44,6 +43,10 @@ const enhancer = compose(
     }
   })),
   lifecycle({
+    componentDidMount() {
+      const { getTodos } = this.props;
+      getTodos();
+    },
     componentDidUpdate(prevProps) {
       const { isSameDate, getTodos } = this.props;
       if (!isSameDate(prevProps.activeDate)) {

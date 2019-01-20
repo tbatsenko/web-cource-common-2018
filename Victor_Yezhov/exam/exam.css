@@ -1,0 +1,35 @@
+body{
+    margin: 0;
+}
+.header{
+    background-color: blue;
+    margin: 0 0  20px 0;
+}
+.menu{
+    display: inline-block;
+    width: 200px;
+    background-color: yellow;
+
+    vertical-align: top;
+}
+.main-content{
+    display: inline-block;
+    width: 400px;
+    background-color: red;
+    vertical-align: top;
+
+}
+.interesting{
+    display: inline-block;
+    width: 200px;
+    background-color: #00e100;
+    vertical-align: top;
+}
+.footer{
+    background-color: blue;
+    display: inline-block;
+}
+.main-container{
+    margin: 0 auto;
+    width: 800px;
+}

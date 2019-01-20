@@ -1,65 +1,52 @@
 import React, { Component } from 'react'
 
+import b from '../../helpers/BEM'
+import { createBoard, getCellNeighbours } from '../../helpers/board'
+
 import './GameOfLife.scss'
 
-export default class GameOfLife extends Component {
-  createEmptyBoard = () => {
-    const { cellsPerLine, lines } = this.props
-    return Array(lines).fill().map(() => Array(cellsPerLine).fill(false))
-  }
+const GoLBlock = b('GameOfLife')
 
+const CELL_ALIVE = true
+const CELL_DEAD = false
+
+export default class GameOfLife extends Component {
   state = {
-    board: this.createEmptyBoard(),
+    board: createBoard(this.props.lines, this.props.cellsPerLine, CELL_DEAD),
   }
 
   generateInitPopulation = () => {
     const { probabilityOfAliveCell } = this.props
 
-    const newBoard = this.state.board.map((line) => {
-      return line.map(() => Math.random() >= (1 - probabilityOfAliveCell))
-    })
+    const board = this.state.board.map((line) =>
+      line.map(() => Math.random() >= (1 - probabilityOfAliveCell)))
 
-    this.setState({ board: newBoard })
+    this.setState({ board })
   }
 
   getAliveNeighboursForCell = (board, row, col) => {
-    const offsets = [[1, 0], [0, 1], [-1, 0], [0, -1], [-1, -1], [-1, 1], [1, -1], [1, 1]]
-    const { cellsPerLine, lines } = this.props
-
-    let neighbours = 0
-
-    offsets.forEach((offset) => {
-      const newRow = row + offset[1]
-      const newCol = col + offset[0]
-
-      if (!(newRow < 0 || newCol < 0 || newRow >= lines || newCol > cellsPerLine)) // check if "neighbour" cell inside board
-        if (board[newRow][newCol])// check if it's alive
-          neighbours += 1
-    })
-
-    return neighbours
+    return getCellNeighbours(board, row, col).reduce((aliveNeighbours, currentNeighbour) =>
+      (currentNeighbour === CELL_DEAD) ? aliveNeighbours : aliveNeighbours + 1, 0)
   }
 
   nextGeneration = () => {
-    const { cellsPerLine, lines } = this.props
     const { board } = this.state
+    const { lines, cellsPerLine } = this.props
 
-    let newBoard = this.createEmptyBoard()
+    let newBoard = createBoard(lines, cellsPerLine, CELL_DEAD)
 
-    for (let i = 0; i < lines; i++) {
-      for (let j = 0; j < cellsPerLine; j++) {
-        const neighbours_num = this.getAliveNeighboursForCell(board, i, j)
+    board.forEach((line, lineIndex) => {
+      line.forEach((cell, cellIndex) => {
+        const cell_neighbours_num = this.getAliveNeighboursForCell(board, lineIndex, cellIndex)
+        cell = board[lineIndex][cellIndex]
 
-        if (!board[i][j]) {
-          if (neighbours_num === 3) {
-            newBoard[i][j] = true
-          }
-        } else {
-          newBoard[i][j] = (neighbours_num === 2 || neighbours_num === 3)
-        }
+        if (cell === CELL_DEAD && cell_neighbours_num === 3)
+          newBoard[lineIndex][cellIndex] = CELL_ALIVE
 
-      }
-    }
+        if (cell === CELL_ALIVE)
+          newBoard[lineIndex][cellIndex] = (cell_neighbours_num === 2 || cell_neighbours_num === 3)
+      })
+    })
 
     this.setState({ board: newBoard })
   }
@@ -68,34 +55,24 @@ export default class GameOfLife extends Component {
     const { board } = this.state
 
     return (
-      <div className="GameOfLife">
-        <div className="GameOfLife__board">
-
-          {
-            board.map((line, rowIndex) => {
-              return (
-                <div className="GameOfLife__board-line" key={rowIndex}>
-
-                  {
-                    line.map((cell, colIndex) => (
-                      <div key={rowIndex * colIndex + colIndex}
-                           className={(board[rowIndex][colIndex]) ? 'GameOfLife__board-cell GameOfLife__board-cell--active' : 'GameOfLife__board-cell'}
-                      />
-                    ))
-                  }
-
-                </div>
-              )
-            })
-          }
-
+      <div className={GoLBlock()}>
+        <div className={GoLBlock('board')}>
+          {board.map((line, rowIndex) => {
+            return (
+              <div className={GoLBlock('board-line')} key={rowIndex}>
+                {line.map((cell, colIndex) => (
+                  <div key={rowIndex * colIndex + colIndex}
+                       className={GoLBlock('board-cell', { active: (board[rowIndex][colIndex]) })}/>
+                ))}
+              </div>
+            )
+          })}
         </div>
 
-        <div className="GameOfLife__toolbar">
-          <button className="GameOfLife__toolbar-btn" onClick={this.generateInitPopulation}>Init Population</button>
-          <button className="GameOfLife__toolbar-btn" onClick={this.nextGeneration}>Next Population</button>
+        <div className={GoLBlock('toolbar')}>
+          <button className={GoLBlock('toolbar-btn')} onClick={this.generateInitPopulation}>Init Population</button>
+          <button className={GoLBlock('toolbar-btn')} onClick={this.nextGeneration}>Next Population</button>
         </div>
-
       </div>
     )
   }
