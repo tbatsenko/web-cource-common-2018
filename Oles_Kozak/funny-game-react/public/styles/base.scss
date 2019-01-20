@@ -6,13 +6,13 @@ body {
   background-color: #3498db;
 }
 
-body{
+body {
   position: relative;
   display: flex;
   align-items: center;
   flex-direction: column;
 
-  #game{
+  .game {
     width: 100%;
     position: relative;
     display: flex;
@@ -21,7 +21,6 @@ body{
   }
 }
 
-.shadow{
-  box-shadow: 10px 10px 0 rgba(0,0,0,0.4);
+.shadow {
+  box-shadow: 10px 10px 0 rgba(0, 0, 0, 0.4);
 }
-

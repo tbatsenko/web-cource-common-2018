@@ -60,7 +60,7 @@ class App extends Component {
 
         <span className="game-name">FUNNY GAME</span>
 
-        <section id="game">
+        <section className={'game'}>
           <CountdownTimer seconds={600} onExpired={this.gameOver} />
 
           <Field
