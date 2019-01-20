@@ -1,121 +1,75 @@
 import React, { Component } from 'react'
 import './field.scss'
 import Card from '../Card/Card'
-import CountdownTimer from '../CountdownTimer'
 
 class Field extends Component {
-  constructor(props) {
-    super(props)
-
-    this.state = {
-      children: [],
-      moves: 0,
-      enable: false,
-    }
-    this.stopTimer = false
+  static defaultProps = {
+    onGameOver: () => {},
+    onWin: () => {},
+    onTry: () => {},
+    onCompareFail: () => {},
+    onCompareSuccess: () => {},
   }
 
-  onRotation = childReactComponent => {
-    this.state.children.push(childReactComponent)
-    if (childReactComponent.state.picture.includes('talon')) {
-      setTimeout(this.explosion, 700)
+  state = {
+    triedCards: [],
+    openedCards: [],
+    children: [],
+  }
+
+  processRotation = index => {
+    const { triedCards, openedCards } = this.state
+    const {
+      gameOverCard,
+      pictures,
+
+      onGameOver,
+      onWin,
+      onTry,
+      onCompareFail,
+      onCompareSuccess,
+    } = this.props
+
+    onTry()
+    if (triedCards.length === 0) {
+      this.setState({ triedCards: [index] })
+    } else if (triedCards.length === 1) {
+      this.setState({ triedCards: [...triedCards, index] })
+      setTimeout(() => {
+        this.setState({ triedCards: [] })
+      }, 1000)
     }
 
-    if (this.state.children.length === 2) {
-      this.setState({ enable: true })
+    if (triedCards.length === 1) {
+      if (pictures[triedCards[0]] === pictures[index]) {
+        const nextOpenedCards = [...openedCards, triedCards[0], index]
+        this.setState({ openedCards: nextOpenedCards })
 
-      let children = this.state.children
-      let moves = this.state.moves
+        if (nextOpenedCards.length === 8) onWin()
 
-      if (
-        this.state.children[0].state.picture !==
-        this.state.children[1].state.picture
-      ) {
-        setTimeout(
-          function() {
-            children[0].state.opened = false
-            children[1].state.opened = false
-            children[0].state.enable = true
-            children[1].state.enable = true
-            moves++
-
-            this.setState({
-              children: [],
-              moves: moves,
-              enable: false,
-            })
-          }.bind(this),
-          800
-        )
+        onCompareSuccess()
       } else {
-        setTimeout(
-          function() {
-            children[0].state.enable = false
-            children[1].state.enable = false
-            moves++
-
-            this.setState({
-              children: [],
-              moves: moves,
-              enable: false,
-            })
-          }.bind(this),
-          800
-        )
+        onCompareFail()
       }
     }
-  }
 
-  gameOver() {
-    const modal = document.getElementById('game-modal')
-    const restart = document.getElementsByClassName(
-      'game-over-window__close-button'
-    )[0]
-
-    modal.style.display = 'flex'
-    restart.onclick = function() {
-      window.location.reload()
-    }
-  }
-
-  explosion = () => {
-    let explosion_sound = document.getElementById('explosion-audio')
-    explosion_sound.volume = 0.4
-    explosion_sound.play()
-
-    document.getElementsByClassName('overlay-explosion')[0].style.display =
-      'block'
-    setTimeout(
-      () =>
-        (document.getElementsByClassName('overlay-explosion')[0].style.display =
-          'none'),
-      2000
-    )
-    this.stopTimer = true
-    setTimeout(this.gameOver, 1800)
+    if (index === gameOverCard) onGameOver()
   }
 
   render() {
     const { pictures } = this.props
+    const { triedCards, openedCards } = this.state
 
     return (
-      <section id="game">
-        <CountdownTimer seconds={60} onExpired={this.explosion} />
-
-        <section className="field shadow">
-          <div
-            className="field__blockClick"
-            style={{ display: this.state.enable ? 'block' : 'none' }}
+      <section className="field shadow">
+        {pictures.map((img, index) => (
+          <Card
+            key={index}
+            picture={img}
+            opened={triedCards.includes(index) || openedCards.includes(index)}
+            onRotate={() => this.processRotation(index)}
           />
-
-          {pictures.map((img, index) => (
-            <Card key={index} picture={'/img/' + img} onRef={this.onRotation} />
-          ))}
-        </section>
-        <section className="round-info shadow">
-          <h3 className="round-info__title3">MOVES:</h3>
-          <span className="round-info__num-text">{this.state.moves}</span>
-        </section>
+        ))}
       </section>
     )
   }
