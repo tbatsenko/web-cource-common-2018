@@ -20,7 +20,6 @@ function drawBarsGraph(data) {
         });
     }));
 
-    // Set x, y and colors
     let x = d3.scale.ordinal()
         .domain(dataset[0].map(function (d) {
             return d.x;
@@ -129,7 +128,6 @@ function drawBarsGraph(data) {
             return chosenCurrencies[i];
         });
 
-    // Prep the tooltip bits, initial display is hidden
     let tooltip = svg.append("g")
         .attr("class", "tooltip")
         .style("display", "none");
@@ -159,9 +157,6 @@ function preprocessData(data) {
             for (let innerKey in rates[key]) {
                 if (rates[key].hasOwnProperty(innerKey)) {
                     if (chosenCurrencies.includes(innerKey)) {
-                        // for (curre in myMoney)
-                        //     console.log(rates["USD"]);
-                        // console.log(elem[innerKey]);
                         console.log(myMoney);
                         elem[innerKey] = myMoney[innerKey];
                     }
@@ -173,7 +168,6 @@ function preprocessData(data) {
         }
     }
     return outData;
-
 }
 
 function createChart() {
