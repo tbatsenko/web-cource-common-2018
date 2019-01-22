@@ -1,12 +1,10 @@
-.portfolio-header {
-  height: 65px;
+.PortfolioHeader {
   background-color: rgb(32, 32, 32);
   display: flex;
   justify-content: space-between;
   align-items: center;
   box-shadow: 0 0 13px rgb(120, 120, 120);
-  transition: all .5s;
-
+  transition: all 0.5s;
   &__popup {
     position: absolute;
     right: 30px;
@@ -15,105 +13,92 @@
     z-index: 10;
     width: 145px;
   }
-
   &__popup-list {
     line-height: 35px;
     margin: 0;
     padding-left: 10px;
     list-style: none;
   }
-
   &__popup-list-item {
     font-weight: 500;
-    letter-spacing: .5px;
+    letter-spacing: 0.5px;
     color: #3a3a3a;
     font-size: 15px;
-
     &_sign-out {
       margin-left: -10px;
       width: 108%;
       border-top: 1px solid #3a3a3a;
     }
   }
-
   &__popup-list-item-anchor {
     text-decoration: none;
     color: #3a3a3a;
   }
-
   &__popup-exit-icon {
     padding-left: 13px;
     display: inline-block;
-    background: url("images/exit-icon.svg") center no-repeat;
+    background: url('images/exit-icon.svg') center no-repeat;
     width: 22px;
     height: 10px;
   }
-
-
   &__portfolio-logo {
-    width: 70px;
-    height: 50px;
-    opacity: .8;
+    opacity: 0.8;
     margin-left: 30px;
-  }
-
-  &__icon-container {
-    width: 145px;
-    margin-right: 30px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
-
-  &__search-icon {
-    width: 20px;
-    height: 44px;
-    background: url("./images/search_icon.svg") no-repeat center;
-    opacity: .8;
-
+    margin-bottom: 20px;
+    margin-top: 20px;
     &:hover {
       opacity: 1;
     }
   }
-
+  &__icon-container {
+    width: 145px;
+    margin-right: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    align-content: center;
+  }
+  &__search-icon {
+    width: 20px;
+    height: 44px;
+    background: url('images/search-icon.svg') no-repeat center;
+    opacity: 0.8;
+    &:hover {
+      opacity: 1;
+    }
+  }
   &__cv-icon {
     text-decoration: none;
     font-weight: bold;
     font-size: 21px;
     letter-spacing: 1px;
-    opacity: .8;
-    font-family: 'Roboto', sans-serif;
+    opacity: 0.8;
     color: whitesmoke;
-
     &:hover {
       opacity: 1;
     }
   }
-
   &__envelope-icon {
     width: 20px;
     height: 16px;
-    background: url("./images/envelope.svg") no-repeat;
-    opacity: .8;
+    background: url('./images/envelope.svg') no-repeat;
+    opacity: 0.8;
     background-size: contain;
-
     &:hover {
       opacity: 1;
     }
   }
-
   &__header-avatar-link {
-    opacity: .8;
+    opacity: 0.8;
+    cursor: pointer;
+    &:hover {
+      opacity: 1;
+    }
+  }
+  &__header-avatar-img {
     width: 35px;
     height: 35px;
-    cursor: pointer;
-
-    &:hover {
-      opacity: 1;
-    }
-  }
-
-  &__header-avatar-img {
     border-radius: 50%;
   }
 }

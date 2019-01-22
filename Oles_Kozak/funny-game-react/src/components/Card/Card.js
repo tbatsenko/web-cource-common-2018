@@ -1,38 +1,17 @@
-import React, { Component } from 'react';
-import './card.css';
+import React from 'react'
+import './card.scss'
 
-class Card extends Component {
-    constructor(props){
-        super(props)
-        this.state={
-            index: props.index,
-            opened: false,
-            picture: props.picture,
-            onRef: props.onRef,
-            enable: true,
-        }
-    }
+const Card = ({ picture, opened, onRotate }) => (
+  <div className="card">
+    <div
+      className="card__sides"
+      onClick={!opened ? () => onRotate() : null}
+      style={{ transform: opened ? `rotateY( 180deg )` : `rotateY( 0deg )` }}
+    >
+      <div className="card__front" />
+      <img src={'/img/' + picture} className="card__back" alt="card" />
+    </div>
+  </div>
+)
 
-    onClick = () => {
-        this.state.opened = !this.state.opened;
-        this.state.enable = false
-        if(this.state.opened){
-            this.state.onRef(this)
-        }
-        this.setState(this.state)
-    }
-
-    render() {
-        return (
-            <div className="card">
-                <div className="card__sides" onClick={() => this.onClick()} style={{transform: this.state.opened ? `rotateY( 180deg )` : `rotateY( 0deg )`, pointerEvents: this.state.enable ? "all" : "none" }}>
-                    <div className="card__front">
-                    </div>
-                    <img src={this.state.picture} className="card__back"/>
-                </div>
-            </div>
-        );
-    }
-}
-
-export default Card;
+export default Card

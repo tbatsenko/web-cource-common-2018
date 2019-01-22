@@ -1,0 +1,17 @@
+.logo-text{
+    font-family: 'Source Sans Pro', sans-serif;
+    color: #ffffff;
+
+}
+.logo-text_big{
+    font-size: 32px;
+}
+.header{
+    padding-top: 41px;
+
+}
+.text_no-margin{
+    margin: 0;
+}
+
+

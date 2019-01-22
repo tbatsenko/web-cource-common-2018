@@ -1,0 +1,23 @@
+.main_hdr {
+    margin-left: auto;
+    background-color: white;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    width: 100%;
+    height: 56px;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    align-items: center;
+    border-bottom: 1px solid #eceff1;
+    margin-bottom: 5px;
+}
+
+.header-buttons {
+    border: none;
+    background-color: transparent;
+}
+
+/*# sourceMappingURL=header.css.map */

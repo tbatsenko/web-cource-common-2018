@@ -1,0 +1,55 @@
+.StudentInfo {
+  background-color: rgb(101, 57, 152);
+  &:after {
+    content: '';
+    width: 62px;
+    height: 32px;
+    background: url('./images/shevron.svg') center no-repeat;
+    margin-left: 80px;
+    position: absolute;
+    display: block;
+    z-index: 100;
+  }
+  &__student-avatar {
+    margin: 17.5px 40px 17.5px 45px;
+    border-radius: 50%;
+    border: 10px solid white;
+    box-shadow: 0 0 13px rgb(80, 80, 80);
+  }
+  &__student-short-info {
+    display: inline-block;
+    vertical-align: top;
+    margin-top: 24px;
+    padding-left: 5px;
+    letter-spacing: 2px;
+  }
+  &__student-name {
+    display: block;
+    font-weight: 900;
+    font-size: 40px;
+    color: whitesmoke;
+  }
+  &__student-occupation {
+    display: block;
+    font-weight: 300;
+    font-size: 13px;
+    border-bottom: 1px solid white;
+    padding-bottom: 8px;
+    padding-top: 10px;
+    color: whitesmoke;
+  }
+  &__social-info {
+    margin-top: 10px;
+  }
+  &__facebook-logo {
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+  &__github-logo {
+    margin-left: 13px;
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+}

@@ -1,78 +1,78 @@
 body {
-    margin: auto;
-    width: 100%;
-    font-family: Helvetica, Arial, sans-serif;
-    /*display: flex;*/
-    background: rgb(233, 235, 238);
-    /*flex-direction: column;*/
+  margin: auto;
+  width: 100%;
+  font-family: Helvetica, Arial, sans-serif;
+  /*display: flex;*/
+  background: rgb(233, 235, 238);
+  /*flex-direction: column;*/
 }
 
 .wrapper {
-    display: flex;
-    flex-flow: row wrap;
-    /*font-weight: bold;*/
-    /*text-align: center;*/
+  display: flex;
+  flex-flow: row wrap;
+  /*font-weight: bold;*/
+  /*text-align: center;*/
 }
 
 .wrapper > * {
-    /*padding: 10px;*/
-    margin-bottom: 10px;
-    flex: 1 100%;
+  /*padding: 10px;*/
+  margin-bottom: 10px;
+  flex: 1 100%;
 }
 
 header {
-    height: 43px;
-    background: #4267b2;
-    display: flex;
-    justify-content: space-around;
+  height: 43px;
+  background: #4267b2;
+  display: flex;
+  justify-content: space-around;
 }
 
 span {
-    /*vertical-align: middle;*/
+  /*vertical-align: middle;*/
 }
 
 header > div#header-left {
-    display: flex;
-    flex-direction: row;
-    align-items: center; /*vertical align*/
+  display: flex;
+  flex-direction: row;
+  align-items: center; /*vertical align*/
 }
 
 header > div#header-right {
-    display: flex;
-    align-items: center;
-    /*flex: 1 60%;*/
+  display: flex;
+  align-items: center;
+  /*flex: 1 60%;*/
 }
 
 header > div#header-right a {
-    text-decoration: none;
-    color: white;
-    font-size: 12px;
-    font-weight: 700;
+  text-decoration: none;
+  color: white;
+  font-size: 12px;
+  font-weight: 700;
 }
 
 #main-div {
-    display: flex;
-    flex-direction: row;
+  display: flex;
+  flex-direction: row;
 }
 
 .flex-start {
-    justify-content: flex-start;
+  justify-content: flex-start;
 }
 
 .flex-end {
-    justify-content: flex-end;
+  justify-content: flex-end;
 }
 
 .center {
-    justify-content: center;
+  justify-content: center;
 }
 
 .space-between {
-    justify-content: space-between;
+  justify-content: space-between;
 }
 
 .space-around {
-    justify-content: space-around;
+  justify-content: space-around;
 }
 
 /*#aside{*/
@@ -85,52 +85,52 @@ header > div#header-right a {
 /*align-items:center; !*vertical align*!*/
 
 #fb-logo {
-    background: url("../img/sprite.png");
-    background-repeat: no-repeat;
-    background-size: auto;
-    background-position: 0 -440px;
-    width: 28px;
-    height: 28px;
-    /*display: inline-block;*/
-    /*display: block;*/
-    /*outline: none;*/
-    /*overflow: hidden;*/
-    text-indent: -999px;
-    /*white-space: nowrap;*/
+  background: url('../img/sprite.png');
+  background-repeat: no-repeat;
+  background-size: auto;
+  background-position: 0 -440px;
+  width: 28px;
+  height: 28px;
+  /*display: inline-block;*/
+  /*display: block;*/
+  /*outline: none;*/
+  /*overflow: hidden;*/
+  text-indent: -999px;
+  /*white-space: nowrap;*/
 }
 
 #search-form {
-    height: 22px;
-    /* This bit sets up the horizontal layout */
-    display: flex;
-    flex-direction: row;
+  height: 22px;
+  /* This bit sets up the horizontal layout */
+  display: flex;
+  flex-direction: row;
 
-    /* This bit draws the box around it */
-    padding: 2px;
+  /* This bit draws the box around it */
+  padding: 2px;
 }
 
 #search-input {
-    /* Tell the input to use all the available space */
-    flex-grow: 2;
-    /* And hide the input's outline, so the form looks like the outline */
-    border: none;
+  /* Tell the input to use all the available space */
+  flex-grow: 2;
+  /* And hide the input's outline, so the form looks like the outline */
+  border: none;
 }
 
 #search-button {
-    /* Just a little styling to make it pretty */
-    /*border:1px solid blue;*/
-    /*background:blue;*/
-    /*color:white;*/
+  /* Just a little styling to make it pretty */
+  /*border:1px solid blue;*/
+  /*background:blue;*/
+  /*color:white;*/
 
-    background: #ebedf0;
-    background-image: url("../img/sprite.png");
-    background-position: 0 -1445px;
-    background-size: auto;
-    background-repeat: no-repeat;
-    display: inline-block;
-    border: none;
-    width: 46px;
-    /*height:24px;*/
+  background: #ebedf0;
+  background-image: url('../img/sprite.png');
+  background-position: 0 -1445px;
+  background-size: auto;
+  background-repeat: no-repeat;
+  display: inline-block;
+  border: none;
+  width: 46px;
+  /*height:24px;*/
 }
 
 /*#search-icon{*/
@@ -140,184 +140,184 @@ header > div#header-right a {
 /*}*/
 
 .aside-left {
-    display: flex;
-    /*background:red;*/
-    flex-direction: column; /*row | row-reverse | column | column-reverse;*/
-    flex: 12em;
-    /*width:12em;*/
+  display: flex;
+  /*background:red;*/
+  flex-direction: column; /*row | row-reverse | column | column-reverse;*/
+  flex: 12em;
+  /*width:12em;*/
 }
 
 .aside-left > h4 {
-    color: #616770;
-    font-weight: 600;
-    font-size: 13px;
+  color: #616770;
+  font-weight: 600;
+  font-size: 13px;
 }
 
 main {
-    display: flex;
-    flex: 43%;
-    /*background:green;*/
-    flex-direction: column;
-    text-align: left;
+  display: flex;
+  flex: 43%;
+  /*background:green;*/
+  flex-direction: column;
+  text-align: left;
 }
 
 .aside-right {
-    display: flex;
-    /*background:blue;*/
-    flex-direction: column;
-    flex: 20%;
+  display: flex;
+  /*background:blue;*/
+  flex-direction: column;
+  flex: 20%;
 }
 
 .friend-icon {
-    background-image: url("../img/sprite.png");
-    background-size: auto;
-    background-position: 0 -892px;
+  background-image: url('../img/sprite.png');
+  background-size: auto;
+  background-position: 0 -892px;
 }
 
 .avatar-icon {
-    border-radius: 50%;
-    background-image: url("../img/cicero.jpg");
-    background-size: contain;
+  border-radius: 50%;
+  background-image: url('../img/cicero.jpg');
+  background-size: contain;
 }
 
 .header-icon {
-    background-repeat: no-repeat;
-    height: 24px;
-    width: 24px;
-    display: inline-block;
-    vertical-align: middle;
+  background-repeat: no-repeat;
+  height: 24px;
+  width: 24px;
+  display: inline-block;
+  vertical-align: middle;
 }
 
 .messages-icon {
-    background-image: url("../img/sprite.png");
-    background-size: auto;
-    background-position: 0 -942px;
+  background-image: url('../img/sprite.png');
+  background-size: auto;
+  background-position: 0 -942px;
 }
 
 .notification-icon {
-    background-image: url("../img/sprite.png");
-    background-size: auto;
-    background-position: 0 -792px;
+  background-image: url('../img/sprite.png');
+  background-size: auto;
+  background-position: 0 -792px;
 }
 
 .quick-help-icon {
-    background-image: url("../img/sprite.png");
-    background-size: auto;
-    background-position: 0 -992px;
+  background-image: url('../img/sprite.png');
+  background-size: auto;
+  background-position: 0 -992px;
 }
 
 .more-icon {
-    background-image: url("../img/sprite.png");
-    background-size: auto;
-    background-position: 0 -842px;
+  background-image: url('../img/sprite.png');
+  background-size: auto;
+  background-position: 0 -842px;
 }
 
 .aside-left-icon {
-    display: inline-block;
-    background-repeat: no-repeat;
-    height: 20px;
-    width: 20px;
-    vertical-align: middle;
-    background-size: auto;
+  display: inline-block;
+  background-repeat: no-repeat;
+  height: 20px;
+  width: 20px;
+  vertical-align: middle;
+  background-size: auto;
 }
 
 .news-feed-icon {
-    background-image: url("../img/sprite2.png");
-    background-position: 0 -1341px;
+  background-image: url('../img/sprite2.png');
+  background-position: 0 -1341px;
 }
 
 .messages-aside-icon {
-    background-image: url("../img/sprite2.png");
-    background-position: 0 -207px;
+  background-image: url('../img/sprite2.png');
+  background-position: 0 -207px;
 }
 
 .shortcut-idea-icon {
-    background-image: url("../img/sprite2.png");
-    background-position: 0 -417px;
+  background-image: url('../img/sprite2.png');
+  background-position: 0 -417px;
 }
 
 .shortcut-group-icon {
-    background-image: url("../img/sprite2.png");
-    background-position: 0 -144px;
+  background-image: url('../img/sprite2.png');
+  background-position: 0 -144px;
 }
 
 .shortcut-page-icon {
-    background-image: url("../img/sprite2.png");
-    background-position: 0 -1509px;
+  background-image: url('../img/sprite2.png');
+  background-position: 0 -1509px;
 }
 
 .left-aside-more-icon {
-    background-image: url("../img/sprite3.png");
-    background-position: -221px -270px;
-    width: 18px;
+  background-image: url('../img/sprite3.png');
+  background-position: -221px -270px;
+  width: 18px;
 }
 
 .events-icon {
-    background-image: url("../img/sprite4.png");
-    background-position: 0 -63px;
+  background-image: url('../img/sprite4.png');
+  background-position: 0 -63px;
 }
 
 .pages-icon {
-    background-image: url("../img/sprite2.png");
-    background-position: 0 -270px;
+  background-image: url('../img/sprite2.png');
+  background-position: 0 -270px;
 }
 
 .groups-icon {
-    background-image: url("../img/sprite2.png");
-    background-position: 0 -144px;
+  background-image: url('../img/sprite2.png');
+  background-position: 0 -144px;
 }
 
 .fundraisers-icon {
-    background-image: url("../img/sprite2.png");
-    background-position: 0 -963px;
+  background-image: url('../img/sprite2.png');
+  background-position: 0 -963px;
 }
 
 .friend-list-icon {
-    background-image: url("../img/sprite2.png");
-    background-position: 0 -900px;
+  background-image: url('../img/sprite2.png');
+  background-position: 0 -900px;
 }
 
 .aside-left > nav {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 
 .aside-left > a,
 .aside-left > nav > a {
-    font-size: 13px;
-    font-weight: 400;
-    line-height: 28px;
-    text-decoration: none;
-    color: rgb(29, 33, 41);
-    display: inline-block;
-    vertical-align: middle;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 28px;
+  text-decoration: none;
+  color: rgb(29, 33, 41);
+  display: inline-block;
+  vertical-align: middle;
 }
 
 .aside-left > nav > a {
-    margin: 2px;
+  margin: 2px;
 }
 
 .avatar-name {
-    margin: 3px;
+  margin: 3px;
 }
 
 .avatar-name:hover {
-    margin-top: 1px;
+  margin-top: 1px;
 }
 
 .aside-left > nav > a:hover {
-    background-color: #f5f6f7;
-    border: 1px solid #dddfe2;
-    border-radius: 2px;
-    margin: 1px;
+  background-color: #f5f6f7;
+  border: 1px solid #dddfe2;
+  border-radius: 2px;
+  margin: 1px;
 }
 
 .profile {
-    margin: 0 0 15px 0;
+  margin: 0 0 15px 0;
 }
 
 .aside-left-active {
-    border: 1px solid #ddd;
-    background: #f5f6f7;
-    font-weight: bold;
+  border: 1px solid #ddd;
+  background: #f5f6f7;
+  font-weight: bold;
 }

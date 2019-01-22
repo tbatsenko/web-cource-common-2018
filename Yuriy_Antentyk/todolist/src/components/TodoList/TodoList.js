@@ -31,6 +31,7 @@ const TodoList = ({
     <TodoCreator date={date} onAddTodo={onAddTodo} />
     {todos.map(todo => (
       <TodoItem
+        key={todo.id}
         id={todo.id}
         text={todo.text}
         checked={todo.checked}

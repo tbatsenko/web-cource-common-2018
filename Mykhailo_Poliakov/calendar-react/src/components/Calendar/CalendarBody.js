@@ -12,9 +12,9 @@ const CalendarBody = ({ monthModel, children, calendarDate }) => (
         {row.map(
           (day, dayIndex) =>
             !isNaN(parseInt(day)) ? (
-              children(calendarDate, day, dayIndex)
+              children(calendarDate, day)
             ) : (
-              <li key={dayIndex} className={b('cell')}>
+              <li key={dayIndex + 100} className={b('cell')}>
                 {day}
               </li>
             )
@@ -36,22 +36,19 @@ const enhancer = compose(
       }
       return [ days, firstDay ];
     },
-    daysInMonth: (year, month) => {
-      return new Date(year, month + 1, 0).getDate();
+    daysInMonth: () => {
+      return new Date(calendarDate.year, calendarDate.month + 1, 0).getDate();
     }
   })),
-  withProps(({ daysList, daysInMonth, calendarDate }) => ({
+  withProps(({ daysList, daysInMonth }) => ({
     monthModel: () => {
       let [ days, firstDay ] = daysList();
-      return splitEvery(
-        7,
-        days.concat(
-          Array(firstDay)
-            .fill(undefined)
-            .concat(Array(daysInMonth(calendarDate.year, calendarDate.month)).fill(1).map((d, i) => i + 1))
-            .concat(Array(42 - daysInMonth(calendarDate.year, calendarDate.month) - firstDay).fill(undefined))
-        )
-      );
+      return splitEvery(7, [
+        ...days,
+        ...Array(firstDay).fill(undefined),
+        ...Array(daysInMonth()).fill(1).map((d, i) => i + 1),
+        ...Array(42 - daysInMonth() - firstDay).fill(undefined)
+      ]);
     }
   }))
 );

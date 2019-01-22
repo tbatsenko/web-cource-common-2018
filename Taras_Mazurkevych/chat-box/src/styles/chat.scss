@@ -1,0 +1,54 @@
+.chat {
+    width: 292px;
+    height: 384px;
+    border-radius: 8px;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.11);
+    font-family: Arial, serif;
+
+    &__header {
+        height: 32px;
+        border-radius: 4px 4px 0 0;
+        background-color: #2979ff;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 12px 0;
+    }
+
+    &__header-title {
+        display: flex;
+        align-items: center;
+    }
+
+    &__header-user-status {
+        width: 6px;
+        height: 6px;
+        background-color: #69f0ae;
+        border-radius: 50%;
+        margin-right: 10px;
+    }
+
+    &__header-user-name {
+        color: #fff;
+        font-weight: bold;
+        font-size: 12px
+    }
+
+    &__header-controls {
+        display: flex;
+        align-items: center;
+    }
+
+    &__header-controls-button {
+        border: 0;
+        outline: none;
+        padding: 0;
+        background: transparent;
+    }
+
+    &__header-controls-icon {
+        height: 12px;
+        width: 12px;
+        margin-left: 12px;
+    }
+}

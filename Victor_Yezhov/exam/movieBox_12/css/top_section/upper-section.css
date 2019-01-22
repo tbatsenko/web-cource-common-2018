@@ -1,0 +1,14 @@
+
+.upper-section{
+    width: 100%;
+    height: 500px;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: 1fr 1fr;
+}
+
+
+.upper-section_film_background {
+    background: url('../../img/wrath.jpg') no-repeat 0 -343px;
+    background-size: cover;
+}

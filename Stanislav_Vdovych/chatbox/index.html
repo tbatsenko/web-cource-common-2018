@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chatbox</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+<body class="chat">
+<header class="window-header">
+    <div class="window-header__online-dot window-header__online-dot--online" aria-label="Online" title="Online"></div>
+    <p class="window-header__username">Taras Mazurkevych</p>
+    <div class="window-header__controls">
+        <button class="window-header__button button" aria-label="Add" title="Add"><img class="window-header__icon" src="images/plus.svg"></button>
+        <button class="window-header__button button" aria-label="Video call" title="Video call"><img class="window-header__icon" src="images/video.svg"></button>
+        <button class="window-header__button button" aria-label="Settings" title="Settings"><img class="window-header__icon" src="images/cog.svg"></button>
+        <button class="window-header__button button" aria-label="Close" title="Close"><img class="window-header__icon" src="images/close.svg"></button>
+    </div>
+</header>
+<section>
+    <div class="chat-box">
+        <div class="chat-box__message-group">
+            <img class="chat-box__icon" src="images/profile_photo.jpg">
+            <p class="chat-box__textbox chat-box__textbox--in chat-box__textbox--next-exists">Hello dear human!</p>
+            <p class="chat-box__textbox chat-box__textbox--in chat-box__textbox--prev-exists">Hello dear human!</p>
+        </div>
+        <p class="chat-box__timestamp">FRI 11:30AM</p>
+        <p class="chat-box__textbox chat-box__textbox--out chat-box__textbox--next-exists ">Aloha</p>
+        <p class="chat-box__textbox chat-box__textbox--out chat-box__textbox--prev-exists chat-box__textbox--next-exists">Much text</p>
+        <p class="chat-box__textbox chat-box__textbox--out chat-box__textbox--prev-exists ">So coooooooooooool</p>
+        </div>
+    <form class="inputbox">
+        <textarea class="inputbox__message" rows="1" placeholder="Type a message..."></textarea>
+        <div class="inputbox__mediabox">
+            <button class="inputbox__button button" aria-label="Insert picture" title="Insert picture"><img src="images/picture.svg"></button>
+            <button class="inputbox__button button" aria-label="Insert gif" title="Insert gif"><img src="images/gif.svg"></button>
+            <button class="inputbox__button button" aria-label="Emoji" title="Emoji"><img src="images/smile.svg"></button>
+            <button class="inputbox__button button" aria-label="Insert date" title="Insert date"><img src="images/calendar.svg"></button>
+            <button class="inputbox__button button" aria-label="Make photo" title="Make photo"><img src="images/camera.svg"></button>
+        </div>
+    </form>
+</section>
+</body>
+</html>

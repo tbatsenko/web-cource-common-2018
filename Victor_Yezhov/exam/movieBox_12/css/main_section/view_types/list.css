@@ -1,0 +1,7 @@
+.list__rectangle{
+    width: 30px;
+    height: 6px;
+    margin: 1px;
+    border-radius: 2px;
+    border: 1px #ff0079 solid;
+}
