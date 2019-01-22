@@ -1,0 +1,14 @@
+@import "top_section/upper-section.css";
+@import "page/page.css";
+@import "top_section/header/header.css";
+@import "top_section/header/login-sign_up-section/login-sign_up-section.css";
+@import "positioning/positioning.css";
+@import "top_section/header/login-sign_up-section/grid_positions.css";
+@import "top_section/rating-bar/rating.css";
+@import "top_section/rating-bar/rating-container.css";
+@import "main_section/main-content-container.css";
+@import "main_section/navigation.css";
+@import "main_section/view_types/grid.css";
+@import "main_section/view_types/list.css";
+@import "main_section/view_types/view-types.css";
+@import "main_section/film_description.css";

@@ -1,0 +1,9 @@
+{
+  "version": 3,
+  "mappings": "AAAA,UAAW;EACT,OAAO,EAAE,IAAI;EACb,SAAS,EAAE,aAAa;EACxB,eAAe,EAAE,aAAa;EAC9B,QAAQ,EAAE,KAAK;EACf,GAAG,EAAE,EAAE;EACP,IAAI,EAAE,GAAG;EACT,MAAM,EAAE,GAAG;EACX,KAAK,EAAE,GAAG;EACV,MAAM,EAAE,EAAE;EAEV,mBAAW;IACT,OAAO,EAAE,IAAI;IACb,WAAW,EAAE,MAAM;IACnB,eAAe,EAAE,IAAI;IACrB,KAAK,EAAE,KAAK",
+  "sources": [
+    "left-menu_style.scss"
+  ],
+  "names": [],
+  "file": "left-menu_style.css"
+}

@@ -1,7 +1,7 @@
 class HistoryPubSub {
   constructor() {
     this.subscriptions = [];
-    window.addEventListener("popstate", event => {
+    window.addEventListener('popstate', event => {
       this.publish(event);
     });
   }
@@ -12,14 +12,13 @@ class HistoryPubSub {
 
   subscribe(callback) {
     this.subscriptions.push(callback);
-    return () => this.subscriptions = this.subscriptions.filter(
-      (fn) => fn !== callback,
-    );
+    return () =>
+      (this.subscriptions = this.subscriptions.filter(fn => fn !== callback));
   }
 
   pushState(state, stateUrl) {
     const index = this.subscriptions.length + 1;
-    window.history.pushState(state, "history" + index.toString(), stateUrl);
+    window.history.pushState(state, 'history' + index.toString(), stateUrl);
   }
 }
 

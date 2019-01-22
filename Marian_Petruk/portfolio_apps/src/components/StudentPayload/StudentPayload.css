@@ -1,0 +1,17 @@
+.StudentPayload {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.StudentPayload__aside-left {
+  order: 1;
+}
+.StudentPayload__main {
+  order: 2;
+  flex: 1 1 auto;
+}
+.StudentPayload__aside-right {
+  order: 3;
+}
+
+/*# sourceMappingURL=StudentPayload.css.map */

@@ -1,0 +1,77 @@
+.layout__lose {
+  display: none;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 80%;
+  height: 300px;
+  margin-top: 100px;
+  padding: 20px;
+  border-radius: 20px;
+  background-color: rgba(255, 255, 255, 0.8);
+  cursor: pointer;
+  font-size: 24px;
+  font-weight: bold; }
+
+.layout__lose-placeholder {
+  display: flex;
+  justify-content: center; }
+
+.layout__score-placeholder {
+  height: 100px;
+  width: 100%;
+  background-color: white;
+  border: #b4acac 1px solid;
+  display: flex;
+  justify-content: space-evenly;
+  font-size: 18px;
+  align-items: center; }
+
+.layout__games {
+  height: 100vh;
+  width: 100vw;
+  display: flex; }
+
+.game {
+  display: flex;
+  width: 400px;
+  height: 400px;
+  margin: 30px auto;
+  border: 10px solid #8D6E63;
+  border-radius: 20px;
+  background-color: rgba(255, 255, 255, 0.8);
+  cursor: pointer; }
+  .game__cell {
+    width: 100px;
+    height: 100px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 32px;
+    font-weight: bold;
+    color: #000;
+    background-color: #fff;
+    border-radius: 20px;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease 0s; }
+    .game__cell--empty {
+      width: 100px;
+      height: 100px;
+      display: hidden; }
+
+.game-container {
+  flex-grow: 1; }
+
+body {
+  margin: 0;
+  font-family: 'Open Sans', sans-serif;
+  height: 100vh;
+  background-image: url(65b83b525d85f371f184f9a4f29acca5.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow: hidden; }
+
+.game-container {
+  flex-grow: 1; }

@@ -1,0 +1,18 @@
+body{
+    margin: 0;
+}
+.layout__header {
+    background-color: blue;
+}
+.layout__block-container{
+text-align: center
+}
+.layout__block{
+    display: inline-block;
+    width: 300px;
+    vertical-align:top;
+    background-color: darkgray;
+}
+.layout__footer {
+    background-color: brown;
+}

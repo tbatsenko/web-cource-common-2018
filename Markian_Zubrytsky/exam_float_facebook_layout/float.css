@@ -1,0 +1,46 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.header {
+    background-color: #4267b2;
+}
+
+.footer {
+    float: left;
+    background-color: gold;
+    margin-top: 5px;
+}
+
+.header, .footer {
+    width: 100%;
+    height: auto;
+    min-height: 100px;
+}
+
+.main__left_menu {
+    float: left;
+    width: 150px;
+    background-color: blue;
+    margin: 5px;
+}
+
+.main__right_menu {
+    float: right;
+    width: 150px;
+    background-color: blue;
+    margin: 5px;
+}
+
+.main__news {
+    float: left;
+    width: 500px;
+    background-color: yellow;
+    margin-top: 5px;
+}
+
+.main {
+    width: 820px;
+    margin: 0 auto;
+}

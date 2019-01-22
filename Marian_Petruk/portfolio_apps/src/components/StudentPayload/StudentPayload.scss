@@ -1,0 +1,15 @@
+.StudentPayload {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  &__aside-left {
+    order: 1;
+  }
+  &__main {
+    order: 2;
+    flex: 1 1 auto;
+  }
+  &__aside-right {
+    order: 3;
+  }
+}

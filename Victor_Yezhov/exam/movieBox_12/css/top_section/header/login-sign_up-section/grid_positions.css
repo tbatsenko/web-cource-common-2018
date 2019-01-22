@@ -1,0 +1,24 @@
+.left-grid-column{
+    justify-self: start;
+    align-self: start;
+    grid-column-start: 1;
+    grid-column-end: 6;
+}
+.right-grid-column{
+    justify-self: end;
+    align-self: start;
+    grid-column-start: 6;
+    grid-column-end: 13;
+}
+.right-grid-column_bottom{
+    justify-self: end;
+    align-self: end;
+    grid-column-start: 6;
+    grid-column-end: 13;
+}
+.left-grid-column_bottom{
+    justify-self: start;
+    align-self: end;
+    grid-column-start: 1;
+    grid-column-end: 6;
+}

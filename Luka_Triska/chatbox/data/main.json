@@ -1,0 +1,39 @@
+{
+  "messages": [
+    {
+      "date": false,
+      "sender": false,
+      "content": "Yo, Can you update views?"
+    },
+    {
+      "date": true,
+      "sender": false,
+      "content": "FRI 11:30AM"
+    },
+    {
+      "date": false,
+      "sender": false,
+      "content": "I can’t see updated views yet"
+    },
+    {
+      "date": false,
+      "sender": true,
+      "content": "Hi, as I noted in Email last week - I am on vacation."
+    },
+    {
+      "date": false,
+      "sender": true,
+      "content": "I will be back next week"
+    },
+    {
+      "date": false,
+      "sender": false,
+      "content": "Ahh sorry, missed that!"
+    },
+    {
+      "date": false,
+      "sender": false,
+      "content": "Let’s talk next week"
+    }
+  ]
+}

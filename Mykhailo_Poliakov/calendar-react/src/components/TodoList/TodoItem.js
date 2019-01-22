@@ -1,17 +1,18 @@
 import React from 'react';
 import './Todo.scss';
 import BEM from '../../utils/bem';
-import API from '../../utils/api';
+import api from '../../utils/api';
 
 import { compose, withHandlers } from 'recompose';
 
 const b = BEM('todo');
-const api = API('127.0.0.1:4000', 'todos');
 
 const TodoItem = ({ done, text, id, onTodoDelete, onTodoDone }) => (
   <li className={b('item')}>
-    <span className={b('text', { done })}>{text}</span>
-    <button aria-label="Delete" className={b('button', [ 'delete' ])} id={id} onClick={onTodoDelete} />
+    <label htmlFor={id} className={b('text', { done })}>
+      {text}
+    </label>
+    <button aria-label="Delete" className={b('button', [ 'delete' ])} id={-id} onClick={onTodoDelete} />
     <button aria-label="Done" className={b('button', [ 'done' ])} id={id} value={done} onClick={onTodoDone} />
   </li>
 );
@@ -26,6 +27,7 @@ const enhancer = compose(
       getTodos();
     },
     onTodoDone: ({ getTodos }) => async e => {
+      console.log('test');
       await api.update({ done: e.target.value !== 'true' }, e.target.id);
       getTodos();
     }

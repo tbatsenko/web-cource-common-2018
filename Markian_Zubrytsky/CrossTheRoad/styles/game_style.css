@@ -1,0 +1,45 @@
+.Game {
+    position: fixed;
+    top: 10%;
+    left: 25%;
+    width: 65%;
+    height: 80%;
+}
+
+.Game__row {
+    display: flex;
+    flex-flow: row nowrap;
+    width: 100%;
+}
+
+.Game__cell__grass {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    height: 58px;
+    width: 58px;
+    background-image: url("../images/grass.png");
+    z-index: 1;
+}
+
+.Game__cell__road {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    height: 58px;
+    width: 58px;
+    background-image: url("../images/road.png");
+    z-index: 1;
+}
+
+.Game__cell__car {
+    height: 24px;
+    width: 48px;
+    z-index: 3;
+}
+
+.Game__cell__spider {
+    height: 24px;
+    width: 48px;
+    z-index: 3;
+}

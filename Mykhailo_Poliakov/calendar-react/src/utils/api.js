@@ -20,4 +20,4 @@ const api = (url, endpoint) => {
   };
 };
 
-export default api;
+export default api(process.env.REACT_APP_API_URL, process.env.REACT_APP_API_ENDPOINT);

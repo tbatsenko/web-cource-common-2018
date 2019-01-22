@@ -1,9 +1,9 @@
 //Card implementation
-%card{
+%card {
   width: 120px;
   height: 120px;
 }
-%card-side{
+%card-side {
   @extend %card;
   backface-visibility: hidden;
   position: absolute;
@@ -16,21 +16,21 @@
   perspective: 1000px;
   margin: 0 13px 0 13px;
 
-  &__sides{
+  &__sides {
     cursor: pointer;
     transition: 0.6s;
     transform-style: preserve-3d;
     position: relative;
   }
 
-  &__front{
+  &__front {
     @extend %card-side;
     z-index: 2;
     transform: rotateY(0deg);
     background-color: #e67e22;
   }
 
-  &__back{
+  &__back {
     @extend %card-side;
     object-fit: cover;
     transform: rotateY(180deg);

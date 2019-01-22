@@ -2,10 +2,17 @@
 @import "sidebar";
 @import "logo";
 @import "navigation";
+@import "calendar-layout";
+@import "calendar";
+@import "action-btn";
+@import "search-form";
+@import "date-switcher";
+@import "toogler";
+@import "userinfo";
+@import "day";
+@import "schedule-item";
+@import "popup";
 
-html {
-  height: 100%;
-}
 
 body {
   min-height: 100%;

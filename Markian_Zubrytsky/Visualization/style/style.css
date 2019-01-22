@@ -1,0 +1,45 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.graph-bar {
+    fill: none;
+    stroke: black;
+    marker-start: url(#dot);
+    marker-end: url(#arrow);
+}
+
+.marker__arrow-ending {
+    stroke: black;
+    stroke-width: 1.5px;
+    fill: white;
+}
+
+.header {
+    margin: 0 200px;
+}
+
+.year-switch {
+    position: absolute;
+    bottom: 70px;
+    left: 900px;
+}
+
+.sex-selector__male {
+    background: cyan;
+}
+
+.sex-selector__female {
+    background: pink;
+}
+
+.sex-selector__male, .sex-selector__female {
+    position: absolute;
+    bottom: 30px;
+    left: 905px;
+    border: none;
+    width: 125px;
+    height: 25px;
+    border-radius: 10%;
+}

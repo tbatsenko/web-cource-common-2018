@@ -1,0 +1,42 @@
+.currencies {
+    display: inline-grid;
+}
+
+.singe-currency {
+    display: inline-grid;
+}
+
+.add-currency {
+    display: block;
+}
+
+body {
+    margin: 0;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
+
+svg {
+    font: 10px sans-serif;
+    shape-rendering: crispEdges;
+
+}
+
+.axis path,
+.axis line {
+    fill: none;
+    stroke: #000;
+}
+
+path.domain {
+    stroke: none;
+}
+
+.y .tick line {
+    stroke: #ddd;
+}
+
