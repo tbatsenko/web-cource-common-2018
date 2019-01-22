@@ -58,11 +58,13 @@ export default class App extends Component {
           continue
         }
 
-        if (App.areVeryOverlapped(anti[i], anti[j])) {
+        if (App.areVeryOverlapped(anti[i], anti[j], this.props.size.person)) {
           anti[i] = this.movedToSafePlace(anti[i])
-        } else if (App.areOverlapped(anti[i], anti[j])) {
+        } else if (
+          App.areOverlapped(anti[i], anti[j], this.props.size.person)
+        ) {
           if (
-            App.areOverlapped(anti[i], anti[j], 16) &&
+            App.areOverlapped(anti[i], anti[j], this.props.size.person, 16) &&
             anti[i].xMove === anti[j].xMove &&
             anti[i].yMove === anti[j].yMove
           ) {
@@ -108,9 +110,9 @@ export default class App extends Component {
       let obstacle_y = 0
       for (let j = 0; j < this.state.cristians.length; j++) {
         let cristi = this.state.cristians[j]
-        if (App.areVeryOverlapped(anti[i], cristi)) {
+        if (App.areVeryOverlapped(anti[i], cristi, this.props.size.person)) {
           anti[i] = this.movedToSafePlace(anti[i])
-        } else if (App.areOverlapped(anti[i], cristi)) {
+        } else if (App.areOverlapped(anti[i], cristi, this.props.size.person)) {
           obstacle_x = cristi.x
           obstacle_y = cristi.y
           if (!anti[i].good) {
@@ -209,7 +211,7 @@ export default class App extends Component {
         if (obj.id === anti.id) {
           continue
         }
-        if (App.areOverlapped(obj, anti)) {
+        if (App.areOverlapped(obj, anti, this.props.size.person)) {
           overlap = true
           break
         }
@@ -220,7 +222,7 @@ export default class App extends Component {
       for (let i = 0; i < this.state.cristians.length; ++i) {
         let cristi = this.state.cristians[i]
 
-        if (App.areOverlapped(obj, cristi)) {
+        if (App.areOverlapped(obj, cristi, this.props.size.person)) {
           overlap = true
           break
         }
@@ -310,7 +312,7 @@ export default class App extends Component {
 
       let overlapped = false
       for (let j = 0; j < anti.length; ++j) {
-        if (App.areOverlapped(antichrist, anti[j])) {
+        if (App.areOverlapped(antichrist, anti[j], this.props.size.person)) {
           overlapped = true
         }
       }
@@ -337,11 +339,15 @@ export default class App extends Component {
     this.setState({ cristians: cristi })
   }
 
-  static areVeryOverlapped(instance1, instance2) {
-    return App.areOverlapped(instance1, instance2, 12)
+  static areVeryOverlapped(instance1, instance2, size) {
+    return App.areOverlapped(instance1, instance2, size, 12)
   }
 
-  static areOverlapped(instance1, instance2, threshold = 15) {
+  static areOverlapped(instance1, instance2, size, threshold = 15) {
+    if (!App.areSquaresOverlapped(instance1, instance2, size, threshold)) {
+      return false
+    }
+
     return (
       Math.pow(
         Math.pow(instance1.x - instance2.x, 2) +
@@ -349,6 +355,33 @@ export default class App extends Component {
         0.5
       ) < threshold
     )
+  }
+
+  static areSquaresOverlapped(instance1, instance2, size, threshold) {
+    let x_collapse = false
+    let y_collapse = false
+
+    if (instance1.x < instance2.x) {
+      if (instance1.x + size - instance2.x > size - threshold) {
+        x_collapse = true
+      }
+    } else {
+      if (instance2.x + size - instance1.x > size - threshold) {
+        x_collapse = true
+      }
+    }
+
+    if (instance1.y < instance2.y) {
+      if (instance1.y + size - instance2.y > size - threshold) {
+        y_collapse = true
+      }
+    } else {
+      if (instance2.y + size - instance1.y > size - threshold) {
+        y_collapse = true
+      }
+    }
+
+    return x_collapse || y_collapse
   }
 
   render() {
@@ -456,7 +489,13 @@ export default class App extends Component {
       .addEventListener('click', event => {
         let click_obj = { x: event.clientX, y: event.clientY }
         for (let i = 0; i < this.state.antichrists.length; ++i) {
-          if (App.areOverlapped(click_obj, this.state.antichrists[i], 15)) {
+          if (
+            App.areOverlapped(
+              click_obj,
+              this.state.antichrists[i],
+              this.props.size.person,
+            )
+          ) {
             this.handleAntichristClick(this.state.antichrists[i].id)
             break
           }
