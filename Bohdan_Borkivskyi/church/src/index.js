@@ -5,7 +5,14 @@ import App from './components/App/App'
 import * as serviceWorker from './serviceWorker'
 
 ReactDOM.render(
-  <App antichrists={3} cristians={4} />,
+  <React.Fragment>
+    <App
+      id={0}
+      antichrists={5}
+      cristians={5}
+      size={{ width: 500, height: 300, person: 15 }}
+    />
+  </React.Fragment>,
   document.getElementById('root')
 )
 
