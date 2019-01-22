@@ -1,13 +1,14 @@
 import { Component } from 'react'
 import React from 'react'
 
-import { extent, curveMonotoneX } from 'd3'
+import { extent, curveMonotoneX, min, max } from 'd3'
 import {
   scaleLinear,
   AreaClosed,
   AxisLeft,
   AxisBottom,
   AxisRight,
+  GridRows,
 } from '@vx/vx'
 
 import './Chart.css'
@@ -52,7 +53,7 @@ class Chart extends Component {
     }
   }
 
-  makeScales(width, height) {
+  makeScales() {
     this.xScaleFemale = scaleLinear({
       range: [this.xMax, 0],
       domain: extent(this.staticDataFemale, this.x),
@@ -74,17 +75,24 @@ class Chart extends Component {
     })
 
     this.yScaleAxis = scaleLinear({
-      range: [height - 3, 5],
-      domain: [0, 80],
+      range: [this.height - 3, 5],
+      domain: [
+        min(this.staticDataMale, this.x),
+        max(this.staticDataMale, this.x) + 1,
+      ],
     })
 
     this.xScaleMaleAxis = scaleLinear({
-      range: [0, width],
+      range: [0, this.width],
       domain: [this.maxMen * 1.33, 0],
     })
     this.xScaleFemaleAxis = scaleLinear({
-      range: [0, width],
+      range: [0, this.width],
       domain: [0, this.maxWomen * 1.33],
+    })
+    this.xScaleFemaleAxisInv = scaleLinear({
+      range: [0, this.width],
+      domain: [this.maxWomen * 1.33, 0],
     })
   }
 
@@ -93,8 +101,8 @@ class Chart extends Component {
     this.data = data
     this.activeYear = activeYear
 
-    const width = chart_width / 2
-    const height = chart_width / 2
+    this.width = chart_width / 2
+    this.height = chart_width / 2
     const axis_size = 50
 
     const maxValues = this.findMaxValues()
@@ -106,15 +114,14 @@ class Chart extends Component {
     this.x = d => d.age
     this.y = d => d.population
 
-    this.xMax = width // - margin.left - margin.right
-    this.yMax = height // - margin.top - margin.bottom
-    this.yMin = height / 4
-
-    this.makeScales(width, height)
+    this.xMax = this.width // - margin.left - margin.right
+    this.yMax = this.height // - margin.top - margin.bottom
+    this.yMin = this.height / 4
+    this.makeScales()
 
     return (
       <div className={'chart'}>
-        <svg height={height} width={axis_size} className={'svg'}>
+        <svg height={this.height} width={axis_size}>
           <AxisLeft
             scale={this.yScaleAxis}
             top={0}
@@ -123,53 +130,76 @@ class Chart extends Component {
           />
         </svg>
 
-        <svg width={width} height={height} className="svg male">
-          <AreaClosed
-            data={this.dataMale}
-            x={d => this.xScaleMale(d.age)}
-            y0={this.yScaleMale(0)}
-            y={d => this.yScaleMale(d.population)}
-            fill={'#e45f4d'}
-            stroke={'#e45f4d'}
-            curve={curveMonotoneX}
-            opacity={0.8}
-          />
+        <svg width={this.width} height={this.height}>
+          {/*<g style={{ transform: 'rotate(45deg)' }}>*/}
+          <g transform="rotate(-90 200 200)">
+            <GridRows
+              lineStyle={{ pointerEvents: 'none' }}
+              scale={this.xScaleMaleAxis}
+              width={this.xMax}
+              stroke="grey"
+              numTicks={5}
+            />
 
-          <AreaClosed
-            data={this.staticDataMale}
-            x={d => this.xScaleMale(d.age)}
-            y0={this.yScaleMale(0)}
-            y={d => this.yScaleMale(d.population)}
-            fill={'#e45f4d'}
-            stroke={'#e45f4d'}
-            curve={curveMonotoneX}
-            opacity={0.5}
-          />
+            <AreaClosed
+              data={this.dataMale}
+              x={d => this.xScaleMale(d.age)}
+              y0={this.yScaleMale(0)}
+              y={d => this.yScaleMale(d.population)}
+              fill={'#e45f4d'}
+              stroke={'#e45f4d'}
+              curve={curveMonotoneX}
+              opacity={0.8}
+            />
+
+            <AreaClosed
+              data={this.staticDataMale}
+              x={d => this.xScaleMale(d.age)}
+              y0={this.yScaleMale(0)}
+              y={d => this.yScaleMale(d.population)}
+              fill={'#e45f4d'}
+              stroke={'#e45f4d'}
+              curve={curveMonotoneX}
+              opacity={0.5}
+            />
+          </g>
         </svg>
-        <svg width={width} height={height} className="svg female">
-          <AreaClosed
-            data={this.dataFemale}
-            x={d => this.xScaleFemale(d.age)}
-            y0={this.yScaleFemale(0)}
-            y={d => this.yScaleFemale(d.population)}
-            fill={'#489ea3'}
-            stroke={'#489ea3'}
-            curve={curveMonotoneX}
-            opacity={0.8}
-          />
-          <AreaClosed
-            data={this.staticDataFemale}
-            x={d => this.xScaleFemale(d.age)}
-            y0={this.yScaleFemale(0)}
-            y={d => this.yScaleFemale(d.population)}
-            fill={'#489ea3'}
-            stroke={'#489ea3'}
-            curve={curveMonotoneX}
-            opacity={0.5}
-          />
+        <svg width={this.width} height={this.height}>
+          <g transform="rotate(90 200 200)">
+            <GridRows
+              lineStyle={{ pointerEvents: 'none' }}
+              scale={this.xScaleFemaleAxisInv}
+              width={this.xMax}
+              stroke="grey"
+              numTicks={5}
+              // top={-0.57 * axis_size}
+              top={0}
+            />
+
+            <AreaClosed
+              data={this.dataFemale}
+              x={d => this.xScaleFemale(d.age)}
+              y0={this.yScaleFemale(0)}
+              y={d => this.yScaleFemale(d.population)}
+              fill={'#489ea3'}
+              stroke={'#489ea3'}
+              curve={curveMonotoneX}
+              opacity={0.8}
+            />
+            <AreaClosed
+              data={this.staticDataFemale}
+              x={d => this.xScaleFemale(d.age)}
+              y0={this.yScaleFemale(0)}
+              y={d => this.yScaleFemale(d.population)}
+              fill={'#489ea3'}
+              stroke={'#489ea3'}
+              curve={curveMonotoneX}
+              opacity={0.5}
+            />
+          </g>
         </svg>
 
-        <svg height={height} width={axis_size} className={'svg'}>
+        <svg height={this.height} width={axis_size}>
           <AxisRight
             scale={this.yScaleAxis}
             top={0}
@@ -177,22 +207,19 @@ class Chart extends Component {
             stroke={'white'}
           />
         </svg>
-
         <div className={'chart__bottom-axis'}>
-          <svg
-            height={axis_size}
-            width={width * 2 + axis_size}
-            className={'svg'}
-          >
+          <svg height={axis_size} width={this.width * 2 + axis_size}>
             <AxisBottom
               left={axis_size}
               scale={this.xScaleMaleAxis}
               numTicks={5}
+              tickFormat={this.xScaleMaleAxis.tickFormat(5, 's')}
             />
             <AxisBottom
-              left={axis_size + width}
+              left={axis_size + this.width}
               scale={this.xScaleFemaleAxis}
               numTicks={5}
+              tickFormat={this.xScaleFemaleAxis.tickFormat(5, 's')}
             />
           </svg>
         </div>
