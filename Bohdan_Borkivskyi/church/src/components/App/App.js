@@ -299,8 +299,15 @@ export default class App extends Component {
       let randomXMove = Math.random()
       let antichrist = {
         id: i,
-        x: Math.floor(Math.random() * 270) + 1,
-        y: Math.floor(Math.random() * 270) + 1,
+        x:
+          Math.floor(
+            Math.random() *
+            (this.props.size.width - this.props.size.person - 200),
+          ) + 1,
+        y:
+          Math.floor(
+            Math.random() * (this.props.size.height - this.props.size.person),
+          ) + 1,
         xMove: randomXMove,
         yMove: Math.pow(1 - randomXMove ** 2, 0.5),
         good: false,
