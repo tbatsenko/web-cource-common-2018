@@ -157,16 +157,16 @@ function preprocessData(data) {
             for (let innerKey in rates[key]) {
                 if (rates[key].hasOwnProperty(innerKey)) {
                     if (chosenCurrencies.includes(innerKey)) {
-                        console.log(myMoney);
+
                         elem[innerKey] = myMoney[innerKey];
                     }
 
                 }
             }
-            console.log(elem);
             outData.push(elem);
         }
     }
+    console.log(myMoney);
     return outData;
 }
 
@@ -203,4 +203,3 @@ function sortOnKeys(dict) {
     return tempDict;
 }
 
-createChart();

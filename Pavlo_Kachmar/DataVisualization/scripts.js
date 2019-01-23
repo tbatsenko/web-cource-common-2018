@@ -1,4 +1,5 @@
 const currencyOptions = ["USD", "CAD", "GBP", "CHF"];
+const baseCurrencyOptions = ["USD", "CAD", "GBP", "CHF"];
 let chosenCurrencies = [currencyOptions[0]];
 let baseCurrency = "USD";
 let myMoney = {"USD": 1};
@@ -20,10 +21,10 @@ function tasksCreator() {
         option.text = currencyOptions[i];
         currencySelectList.appendChild(option);
     }
-    currencySelectList.onclick = function () {
+    currencySelectList.change = function () {
         if (!(chosenCurrencies.includes(currencySelectList.value)))
             chosenCurrencies.push(currencySelectList.value);
-        countAmount(currencySelectList.value, inputBox.value, moneyAmount)
+        countAmount(currencySelectList.value, inputBox.value, moneyAmount, false)
     };
 
     inputBox.id = "input-box";
@@ -33,7 +34,11 @@ function tasksCreator() {
     inputBox.onchange = function () {
         if (!(chosenCurrencies.includes(currencySelectList.value)))
             chosenCurrencies.push(currencySelectList.value);
-        countAmount(currencySelectList.value, inputBox.value, moneyAmount)
+        currencySelectList.disabled = "disabled";
+        let index = currencyOptions.indexOf(currencySelectList.value);
+        if (index > -1)
+            currencyOptions.splice(index, 1);
+        countAmount(currencySelectList.value, inputBox.value, moneyAmount, true)
     };
     singleCurrency.appendChild(inputBox);
 
@@ -42,14 +47,14 @@ function tasksCreator() {
     singleCurrency.appendChild(moneyAmount);
 }
 
-function countAmount(currency, amount, moneyAmount) {
+function countAmount(currency, amount, moneyAmount, redraw) {
     let line = "https://api.exchangeratesapi.io/latest?base={1}";
     line = line.replace("{1}", baseCurrency);
-    convert(line, currency, parseFloat(amount), moneyAmount);
+    convert(line, currency, parseFloat(amount), moneyAmount, redraw);
 }
 
 
-function convert(line, currency, amount, moneyAmount) {
+function convert(line, currency, amount, moneyAmount, redraw) {
     let request = new XMLHttpRequest();
 
     request.open('GET', line, true);
@@ -57,11 +62,12 @@ function convert(line, currency, amount, moneyAmount) {
         // Begin accessing JSON data here
         let data = JSON.parse(this.response);
         moneyAmount.innerText = ((amount / parseFloat(data["rates"][currency])).toFixed(3)).toString();
-        myMoney[currency] = moneyAmount.innerText;
-        createChart();
+        if (redraw) {
+            myMoney[currency] = moneyAmount.innerText;
+            createChart();
+        }
     };
     request.send();
-    createChart();
 }
 
 function start() {
@@ -69,8 +75,8 @@ function start() {
     let baseCurrencySelectList = document.createElement("select");
     for (let i = 0; i < currencyOptions.length; i++) {
         let option = document.createElement("option");
-        option.value = currencyOptions[i];
-        option.text = currencyOptions[i];
+        option.value = baseCurrencyOptions[i];
+        option.text = baseCurrencyOptions[i];
         baseCurrencySelectList.appendChild(option);
     }
     selectCreator.id = "currency-select-dropdown";
