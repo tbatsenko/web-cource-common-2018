@@ -1,7 +1,0 @@
-{
-"version": 3,
-"mappings": "AAAA,kBAAkB;EAChB,QAAQ,EAAE,QAAQ;EAClB,KAAK,EAAE,IAAI;EACX,MAAM,EAAE,IAAI;EACZ,UAAU,EAAE,6EAA6E;EACzF,OAAO,EAAE,CAAC",
-"sources": ["explosion_gif.scss"],
-"names": [],
-"file": "explosion_gif.css"
-}
