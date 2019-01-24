@@ -7,14 +7,17 @@ import Chart from '../Chart';
 class App extends Component {
   state = {
     ecgData: null,
+    sampleRate: null,
     filtered: null,
     rpeaks: null,
     start: 0,
+    zoomValue: 500,
   };
 
   constructor(props) {
     super(props);
     const id = 0;
+    this.state.sampleRate = 480;
     this.getRawECG(id);
     this.getFilteredECG(id);
     this.getRpeaks(id);
@@ -25,10 +28,7 @@ class App extends Component {
     const rawData = await response.text();
 
     const parseData = csvParse(rawData);
-    let data = parseData.columns
-      .map(parseFloat)
-      .filter(value => !isNaN(value))
-      .slice(0, 3000);
+    let data = parseData.columns.map(parseFloat).filter(value => !isNaN(value));
     this.setState({ ecgData: data });
   };
 
@@ -40,8 +40,7 @@ class App extends Component {
     let data = parseData.columns
       .map(value => Number(value).toFixed(2))
       .map(parseFloat)
-      .filter(value => !isNaN(value))
-      .slice(0, 3000);
+      .filter(value => !isNaN(value));
     this.setState({ filtered: data });
   };
 
@@ -55,12 +54,25 @@ class App extends Component {
   };
 
   render() {
-    if (!this.state.ecgData) return <div className="App"> Loading...</div>;
-    if (!this.state.filtered) return <div className="App"> Loading...</div>;
-    if (!this.state.rpeaks) return <div className="App"> Loading...</div>;
+    if (!this.state.ecgData)
+      return <div className="App"> Loading raw ECG data...</div>;
+    if (!this.state.filtered)
+      return <div className="App"> Loading filtered ECG data...</div>;
+    if (!this.state.rpeaks)
+      return <div className="App"> Loading rpeaks indices...</div>;
+    if (!this.state.sampleRate)
+      return <div className="App"> Loading sample rate value...</div>;
+    if (!this.state.zoomValue)
+      return <div className="App"> Loading zoomValue...</div>;
 
-    const { ecgData, filtered, rpeaks } = this.state;
-    const sampleRate = 200;
+    const {
+      ecgData,
+      filtered,
+      rpeaks,
+      sampleRate,
+      zoomValue,
+      start,
+    } = this.state;
 
     const rawECGYRange = [Math.min(...ecgData), Math.max(...ecgData)];
     const filteredECGYRange = [Math.min(...filtered), Math.max(...filtered)];
@@ -68,34 +80,49 @@ class App extends Component {
     return (
       <main className="App">
         <Chart
-          ecgData={ecgData.slice(this.state.start, this.state.start + 500)}
+          ecgData={ecgData.slice(start, start + zoomValue)}
           sampleRate={sampleRate}
-          startValue={this.state.start}
-          endValue={this.state.start + 500}
+          startValue={start}
+          endValue={start + zoomValue}
           yRange={rawECGYRange}
           title={'Raw ECG data'}
         />
         <Chart
-          ecgData={filtered.slice(this.state.start, this.state.start + 500)}
+          ecgData={filtered.slice(start, start + zoomValue)}
           rpeaks={rpeaks.filter(
-            value =>
-              value >= this.state.start && value <= this.state.start + 500
+            value => value >= start && value <= start + zoomValue
           )}
           sampleRate={sampleRate}
-          startValue={this.state.start}
-          endValue={this.state.start + 500}
+          startValue={start}
+          endValue={start + zoomValue}
           yRange={filteredECGYRange}
-          title={'Filtered ECG data with Rpeaks'}
+          title={'Filtered ECG data with R-peaks'}
         />
         <input
           type="range"
           min={0}
-          max={2500}
+          max={ecgData.length - zoomValue}
           step={1}
-          value={this.state.start}
+          value={start}
           onChange={({ target }) =>
             this.setState({ start: Number(target.value) })
           }
+        />
+        <input
+          type="button"
+          value={'Zoom In'}
+          onClick={() => {
+            if (this.state.zoomValue - 100 >= 0)
+              this.setState({ zoomValue: this.state.zoomValue - 100 });
+          }}
+        />
+        <input
+          type="button"
+          value={'Zoom Out'}
+          onClick={() => {
+            if (this.state.zoomValue + 100 <= ecgData.length)
+              this.setState({ zoomValue: this.state.zoomValue + 100 });
+          }}
         />
       </main>
     );

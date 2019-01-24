@@ -39,8 +39,6 @@ class Chart extends Component {
   constructor(props) {
     super(props);
 
-    const { ecgData, yRange } = props;
-
     const axeSize = 70;
     const margin = { top: 5, right: 0, bottom: 0, left: 0 },
       width = 1000,
@@ -49,6 +47,47 @@ class Chart extends Component {
     // bounds
     const xMax = width - margin.left - margin.right;
     const yMax = height - margin.top - margin.bottom;
+
+    this.state = {
+      width,
+      height,
+      axeSize,
+      margin,
+      yMax,
+      xMax,
+    };
+  }
+
+  static reformatData(rawData) {
+    let data = [];
+
+    for (let i = 0; i < rawData.length; ++i) {
+      data.push({ index: i, value: rawData[i] });
+    }
+    return data;
+  }
+
+  static reformatRpeaksData(rpeaks, rawData, startValue) {
+    let data = [];
+
+    for (let i = 0; i < rpeaks.length; ++i) {
+      const idx = Math.abs(startValue - rpeaks[i]);
+      data.push({ index: idx, value: rawData[idx] });
+    }
+    return data;
+  }
+
+  render() {
+    const { width, height, axeSize, margin, yMax, xMax } = this.state;
+    const {
+      ecgData,
+      title,
+      startValue,
+      endValue,
+      sampleRate,
+      rpeaks,
+      yRange,
+    } = this.props;
 
     // scales
     const xScale = scaleLinear({
@@ -61,59 +100,8 @@ class Chart extends Component {
       nice: true,
     });
 
-    this.state = {
-      yScale,
-      xScale,
-      width,
-      height,
-      axeSize,
-      margin,
-      yMax,
-      xMax,
-    };
-  }
-
-  reformatData(rawData) {
-    let data = [];
-
-    for (let i = 0; i < rawData.length; ++i) {
-      data.push({ index: i, value: rawData[i] });
-    }
-    return data;
-  }
-
-  reformatRpeaksData(rpeaks, rawData, startValue) {
-    let data = [];
-
-    for (let i = 0; i < rpeaks.length; ++i) {
-      const idx = Math.abs(startValue - rpeaks[i]);
-      data.push({ index: idx, value: rawData[idx] });
-    }
-    return data;
-  }
-
-  render() {
-    const {
-      yScale,
-      xScale,
-      width,
-      height,
-      axeSize,
-      margin,
-      yMax,
-      xMax,
-    } = this.state;
-    const {
-      ecgData,
-      title,
-      startValue,
-      endValue,
-      sampleRate,
-      rpeaks,
-    } = this.props;
-
-    const data = this.reformatData(ecgData);
-    const rpeaksData = this.reformatRpeaksData(rpeaks, ecgData, startValue);
+    const data = Chart.reformatData(ecgData);
+    const rpeaksData = Chart.reformatRpeaksData(rpeaks, ecgData, startValue);
 
     const sectionStyle = {
       width: width + axeSize + 50,
