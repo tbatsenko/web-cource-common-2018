@@ -1,3 +1,9 @@
-
+.Chart {
+  border: 1px solid green;
+  margin: 5px;
+}
+.Chart__title {
+  text-align: center;
+}
 
 /*# sourceMappingURL=Chart.css.map */

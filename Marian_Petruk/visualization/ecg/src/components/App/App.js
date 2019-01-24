@@ -2,8 +2,7 @@ import React, { Component } from 'react';
 import './App.scss';
 import '../Chart';
 import { csvParse } from 'd3';
-import Chart from "../Chart";
-
+import Chart from '../Chart';
 
 class App extends Component {
   state = {
@@ -11,7 +10,7 @@ class App extends Component {
     rpeaks: null,
   };
 
-  constructor(props){
+  constructor(props) {
     super(props);
     this.getData();
   }
@@ -21,18 +20,25 @@ class App extends Component {
     const rawData = await response.text();
 
     const parseData = csvParse(rawData);
-    const ecgData = parseData.columns.map(parseFloat);
 
-    this.setState({ecgData:ecgData});
+    const ecgData = parseData.columns
+      .map(parseFloat)
+      .filter(value => !isNaN(value));
+    this.setState({ ecgData: ecgData });
   };
 
   render() {
     if (!this.state.ecgData) return <div className="App"> 'Loading...'</div>;
-    const {ecgData, rpeaks} = this.state;
+    const { ecgData, rpeaks } = this.state;
+    const sampleRate = 200;
     return (
-      <div className="App">
-       <Chart ecgData={ecgData}/>
-      </div>
+      <main className="App">
+        <Chart
+          ecgData={ecgData}
+          sampleRate={sampleRate}
+          title={'Raw ECG data'}
+        />
+      </main>
     );
   }
 }
