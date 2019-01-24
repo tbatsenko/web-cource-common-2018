@@ -2,8 +2,8 @@ import React from 'react';
 import './Cell.css';
 
 
-const Cell = ({number}) => (
-    <div className="Cell active">
+const Cell = ({number, inPosition}) => (
+    <div className={"Cell " + inPosition}>
         {number}
     </div>
 );

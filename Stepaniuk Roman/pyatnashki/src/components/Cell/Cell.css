@@ -11,7 +11,10 @@
   font-family: "Baloo Thumbi";
   font-weight: bold; }
 
-.active {
+.inPosition {
   border: 3px solid #10d60c; }
+
+.notPosition {
+  border: 3px solid #ff0000; }
 
 /*# sourceMappingURL=Cell.css.map */
