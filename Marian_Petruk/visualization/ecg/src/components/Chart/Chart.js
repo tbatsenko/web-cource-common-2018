@@ -35,10 +35,10 @@ class Chart extends Component {
   constructor(props) {
     super(props);
 
-    const { ecgData, sampleRate } = props;
+    const { ecgData } = props;
 
-    const axeSize = 50;
-    const margin = { top: 0, right: 0, bottom: 0, left: 0 },
+    const axeSize = 70;
+    const margin = { top: 5, right: 0, bottom: 0, left: 0 },
       width = 1000,
       height = 150;
 
@@ -51,10 +51,6 @@ class Chart extends Component {
       range: [0, xMax],
       domain: [0, ecgData.length - 1],
     });
-    const xScaleBottomAxes = scaleLinear({
-      range: [0, xMax],
-      domain: [0, (ecgData.length - 1) / sampleRate],
-    });
     const yScale = scaleLinear({
       range: [yMax, 0],
       domain: [Math.min(...ecgData), Math.max(...ecgData)],
@@ -64,7 +60,6 @@ class Chart extends Component {
     this.state = {
       yScale,
       xScale,
-      xScaleBottomAxes,
       width,
       height,
       axeSize,
@@ -73,6 +68,7 @@ class Chart extends Component {
       xMax,
     };
   }
+
   reformatData(rawData) {
     let data = [];
 
@@ -86,7 +82,6 @@ class Chart extends Component {
     const {
       yScale,
       xScale,
-      xScaleBottomAxes,
       width,
       height,
       axeSize,
@@ -94,19 +89,19 @@ class Chart extends Component {
       yMax,
       xMax,
     } = this.state;
-    const { ecgData, title } = this.props;
+    const { ecgData, title, startValue, endValue, sampleRate } = this.props;
 
     const data = this.reformatData(ecgData);
 
     const sectionStyle = {
-      width: width + axeSize,
+      width: width + axeSize + 50,
       height: height + axeSize + 32 + 20 * 2,
     };
     return (
       <section className={b()} style={sectionStyle}>
-        <h1 className={b('title')}>{title}</h1>
+        <h3 className={b('title')}>{title}</h3>
         <svg
-          width={width + axeSize}
+          width={width + axeSize + 20}
           height={height + axeSize}
           className={b('svg')}
         >
@@ -168,7 +163,10 @@ class Chart extends Component {
             <AxisBottom
               top={height}
               left={axeSize}
-              scale={xScaleBottomAxes}
+              scale={scaleLinear({
+                range: [0, xMax],
+                domain: [startValue / sampleRate, endValue / sampleRate],
+              })}
               numTicks={numTicksForWidth(width)}
               label="Time (s)"
               labelProps={{
