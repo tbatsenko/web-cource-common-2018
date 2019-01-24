@@ -1,8 +1,8 @@
 import React from 'react';
 import './Cell.css';
 
-const CellEmpty = () => (
-        <div className="CellEmpty">
+const CellEmpty = (difficulty) => (
+        <div className={"CellEmpty " + difficulty}>
         </div>
 );
 

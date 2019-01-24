@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css?family=Baloo+Thambi');
+
+.Panel{
+  position: absolute;
+  right: -300px;
+  top: 125px;
+  background-color: #5c90ce;
+  width: 200px;
+  height: 250px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  &__button{
+    width: 160px;
+    height: 36px;
+    font-size: 24px;
+    border: none;
+    cursor: pointer;
+    margin-top: 20px;
+    font-family: "Baloo Thumbi";
+    background-color: #1f4b82;
+    &:hover{
+      background-color: #1b3d68;
+    }
+    &:focus{
+      background-color: #143863;
+      border: 3px solid #10d60c;
+    }
+  }
+  &__caption{
+    margin-top: 20px;
+    font-family: "Baloo Thumbi";
+    font-size: 24px;
+  }
+}
+
+.selected{
+  border: 3px solid #10d60c;
+}

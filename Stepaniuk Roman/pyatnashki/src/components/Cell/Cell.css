@@ -1,15 +1,26 @@
 @import url("https://fonts.googleapis.com/css?family=Baloo+Thambi");
 .Cell {
-  width: 112.5px;
-  height: 112.5px;
   background-color: rebeccapurple;
   justify-self: center;
   align-self: center;
-  line-height: 112.5px;
   text-align: center;
-  font-size: 68px;
   font-family: "Baloo Thumbi";
   font-weight: bold; }
+  .Cell--easy {
+    width: 112.5px;
+    height: 112.5px;
+    line-height: 112.5px;
+    font-size: 68px; }
+  .Cell--medium {
+    width: 90px;
+    height: 90px;
+    line-height: 90px;
+    font-size: 48px; }
+  .Cell--hard {
+    width: 75px;
+    height: 75px;
+    line-height: 75px;
+    font-size: 32px; }
 
 .inPosition {
   border: 3px solid #10d60c; }
