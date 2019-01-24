@@ -1,0 +1,17 @@
+@import url("https://fonts.googleapis.com/css?family=Baloo+Thambi");
+.Cell {
+  width: 112.5px;
+  height: 112.5px;
+  background-color: rebeccapurple;
+  justify-self: center;
+  align-self: center;
+  line-height: 112.5px;
+  text-align: center;
+  font-size: 68px;
+  font-family: "Baloo Thumbi";
+  font-weight: bold; }
+
+.active {
+  border: 3px solid #10d60c; }
+
+/*# sourceMappingURL=Cell.css.map */

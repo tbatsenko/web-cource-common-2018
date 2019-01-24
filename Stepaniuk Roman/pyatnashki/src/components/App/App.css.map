@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAAA,IAAK;EACH,KAAK,EAAE,KAAK;EACZ,MAAM,EAAE,KAAK;EACb,WAAW,EAAE,GAAG;EAChB,UAAU,EAAE,EAAE;EACd,gBAAgB,EAAE,OAAO;EACzB,UAAU,EAAE,sBAAsB;EAClC,QAAQ,EAAE,QAAQ;EAClB,OAAO,EAAE,IAAI;EACb,eAAe,EAAE,YAAY;EAC7B,qBAAqB,EAAE,gBAAgB;EACvC,kBAAkB,EAAE,gBAAgB",
+"sources": ["../../../../../../%D0%A0%D0%BE%D0%BC%D0%B0%D0%BD/WebstormProjects/youtube/src/components/App/App.scss"],
+"names": [],
+"file": "App.css"
+}
