@@ -50,20 +50,20 @@ class App extends Component {
     const rawData = await response.text();
 
     const parseData = csvParse(rawData);
-    let data = parseData.columns
-      .map(value => Number(value).toFixed(2))
-      .filter(value => !isNaN(value));
+    let data = parseData.columns.map(parseFloat).filter(value => !isNaN(value));
     this.setState({ rpeaks: data });
   };
 
   render() {
+    if (!this.state.ecgData) return <div className="App"> Loading...</div>;
     if (!this.state.filtered) return <div className="App"> Loading...</div>;
-    console.log('ecgData = ', this.state.ecgData);
-    console.log('filtered = ', this.state.filtered);
-    console.log('filtered = ', this.state.rpeaks);
+    if (!this.state.rpeaks) return <div className="App"> Loading...</div>;
 
     const { ecgData, filtered, rpeaks } = this.state;
     const sampleRate = 200;
+
+    const rawECGYRange = [Math.min(...ecgData), Math.max(...ecgData)];
+    const filteredECGYRange = [Math.min(...filtered), Math.max(...filtered)];
 
     return (
       <main className="App">
@@ -72,14 +72,20 @@ class App extends Component {
           sampleRate={sampleRate}
           startValue={this.state.start}
           endValue={this.state.start + 500}
+          yRange={rawECGYRange}
           title={'Raw ECG data'}
         />
         <Chart
           ecgData={filtered.slice(this.state.start, this.state.start + 500)}
+          rpeaks={rpeaks.filter(
+            value =>
+              value >= this.state.start && value <= this.state.start + 500
+          )}
           sampleRate={sampleRate}
           startValue={this.state.start}
           endValue={this.state.start + 500}
-          title={'Filtered ECG data'}
+          yRange={filteredECGYRange}
+          title={'Filtered ECG data with Rpeaks'}
         />
         <input
           type="range"

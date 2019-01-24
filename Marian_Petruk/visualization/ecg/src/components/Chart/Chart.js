@@ -5,6 +5,7 @@ import './Chart.scss';
 import { Grid } from '@vx/grid';
 import { Group } from '@vx/group';
 import { curveBasis } from '@vx/curve';
+import { GlyphDot } from '@vx/glyph';
 import { AxisLeft, AxisBottom } from '@vx/axis';
 import { LinePath, Bar } from '@vx/shape';
 import { scaleLinear } from '@vx/scale';
@@ -32,10 +33,13 @@ function numTicksForWidth(width) {
 }
 
 class Chart extends Component {
+  static defaultProps = {
+    rpeaks: [],
+  };
   constructor(props) {
     super(props);
 
-    const { ecgData } = props;
+    const { ecgData, yRange } = props;
 
     const axeSize = 70;
     const margin = { top: 5, right: 0, bottom: 0, left: 0 },
@@ -53,7 +57,7 @@ class Chart extends Component {
     });
     const yScale = scaleLinear({
       range: [yMax, 0],
-      domain: [Math.min(...ecgData), Math.max(...ecgData)],
+      domain: yRange,
       nice: true,
     });
 
@@ -78,6 +82,16 @@ class Chart extends Component {
     return data;
   }
 
+  reformatRpeaksData(rpeaks, rawData, startValue) {
+    let data = [];
+
+    for (let i = 0; i < rpeaks.length; ++i) {
+      const idx = Math.abs(startValue - rpeaks[i]);
+      data.push({ index: idx, value: rawData[idx] });
+    }
+    return data;
+  }
+
   render() {
     const {
       yScale,
@@ -89,14 +103,28 @@ class Chart extends Component {
       yMax,
       xMax,
     } = this.state;
-    const { ecgData, title, startValue, endValue, sampleRate } = this.props;
+    const {
+      ecgData,
+      title,
+      startValue,
+      endValue,
+      sampleRate,
+      rpeaks,
+    } = this.props;
 
     const data = this.reformatData(ecgData);
+    const rpeaksData = this.reformatRpeaksData(rpeaks, ecgData, startValue);
 
     const sectionStyle = {
       width: width + axeSize + 50,
       height: height + axeSize + 32 + 20 * 2,
     };
+
+    // colors
+    const primary = '#8921e0';
+    const secondary = '#00f2ff';
+    const contrast = '#ffffff';
+
     return (
       <section className={b()} style={sectionStyle}>
         <h3 className={b('title')}>{title}</h3>
@@ -114,6 +142,7 @@ class Chart extends Component {
             orientation={['vertical', 'horizontal']}
           />
           <Bar
+            top={margin.top}
             fill={`url(#dhLines)`}
             height={height}
             width={width}
@@ -141,6 +170,31 @@ class Chart extends Component {
               strokeWidth={2}
               curve={curveBasis}
             />
+            {rpeaksData.map((d, i) => {
+              const cx = xScale(x(d));
+              const cy = yScale(y(d));
+              return (
+                <g key={`line-point-${i}`}>
+                  <GlyphDot
+                    cx={cx}
+                    cy={cy}
+                    r={4}
+                    fill={contrast}
+                    stroke={secondary}
+                    strokeWidth={5}
+                  />
+                  <GlyphDot
+                    cx={cx}
+                    cy={cy}
+                    r={4}
+                    fill={secondary}
+                    stroke={primary}
+                    strokeWidth={1}
+                  />
+                  <GlyphDot cx={cx} cy={cy} r={2} fill={contrast} />
+                </g>
+              );
+            })}
           </Group>
           <Group left={margin.left}>
             <AxisLeft
