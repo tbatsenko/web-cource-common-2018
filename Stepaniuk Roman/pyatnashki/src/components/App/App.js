@@ -33,24 +33,29 @@ function shuffle(array) {
     return array;
 }
 
-var emptyX = 3;
-var emptyY = 3;
-var movetoX = 3;
-var movetoY = 3;
-var numbers = shuffle(Array.from({length: 15}, (v, k) => k+1));
+var emptyX, emptyY, movetoX, movetoY
+var numbers, cellList, chunkedList, i,j,temparray, chunk;
+startGame()
+function startGame() {
+    emptyX = 3;
+    emptyY = 3;
+    movetoX = 3;
+    movetoY = 3;
+    numbers = shuffle(Array.from({length: 15}, (v, k) => k+1));
 
-var cellList = numbers.map(function(i, index){
-    return <Cell key={index} number={i} inPosition={"notPosition"}/>;
-});
-cellList.push(<CellEmpty key={15}/>);
+    cellList = numbers.map(function(i, index){
+        return <Cell key={index} number={i} inPosition={"notPosition"}/>;
+    });
+    cellList.push(<CellEmpty key={15}/>);
 
-var chunkedList = [];
-var i,j,temparray, chunk = 4;
-for (i=0,j=cellList.length; i<j; i+=chunk) {
-    temparray = cellList.slice(i,i+chunk);
-    chunkedList.push(temparray)
+    chunkedList = [];
+    chunk = 4;
+    for (i=0,j=cellList.length; i<j; i+=chunk) {
+        temparray = cellList.slice(i,i+chunk);
+        chunkedList.push(temparray)
+    }
+    checkCell()
 }
-checkCell()
 
 const KEY_DOWN = 40;
 const KEY_LEFT = 37;
@@ -93,7 +98,8 @@ function replaceCell(){
     temp = chunkedList[movetoY][movetoX]
     chunkedList[movetoY][movetoX] = chunkedList[emptyY][emptyX]
     chunkedList[emptyY][emptyX] = temp
-    cellList = chunkedList[0].concat(chunkedList[1], chunkedList[2], chunkedList[3])
+    // cellList = chunkedList[0].concat(chunkedList[1], chunkedList[2], chunkedList[3])
+    cellList = [].concat.apply([], chunkedList)
     emptyX = movetoX
     emptyY = movetoY
     checkCell()
@@ -113,7 +119,8 @@ function checkCell() {
         }
     }
     if (curVic){
-        setTimeout(function() { alert("YOU WON!!!"); }, 102);
+        setTimeout(function() { alert("YOU WON!!!\nPress enter to play more"); }, 102);
+        startGame()
     }
 
 }
