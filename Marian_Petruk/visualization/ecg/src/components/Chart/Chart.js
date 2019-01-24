@@ -42,7 +42,7 @@ class Chart extends Component {
     const axeSize = 70;
     const margin = { top: 5, right: 0, bottom: 0, left: 0 },
       width = 1000,
-      height = 150;
+      height = 120;
 
     // bounds
     const xMax = width - margin.left - margin.right;
