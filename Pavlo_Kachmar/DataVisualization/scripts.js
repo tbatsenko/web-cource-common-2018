@@ -38,7 +38,7 @@ function tasksCreator() {
         let index = currencyOptions.indexOf(currencySelectList.value);
         if (index > -1)
             currencyOptions.splice(index, 1);
-        countAmount(currencySelectList.value, inputBox.value, moneyAmount, true)
+        countAmount(currencySelectList.value, inputBox, moneyAmount, true)
     };
     singleCurrency.appendChild(inputBox);
 
@@ -50,7 +50,7 @@ function tasksCreator() {
 function countAmount(currency, amount, moneyAmount, redraw) {
     let line = "https://api.exchangeratesapi.io/latest?base={1}";
     line = line.replace("{1}", baseCurrency);
-    convert(line, currency, parseFloat(amount), moneyAmount, redraw);
+    convert(line, currency, amount, moneyAmount, redraw);
 }
 
 
@@ -61,9 +61,11 @@ function convert(line, currency, amount, moneyAmount, redraw) {
     request.onload = function () {
         // Begin accessing JSON data here
         let data = JSON.parse(this.response);
-        moneyAmount.innerText = ((amount / parseFloat(data["rates"][currency])).toFixed(3)).toString();
+        moneyAmount.innerText = ((parseFloat(amount.value) / parseFloat(data["rates"][currency])).toFixed(3)).toString();
         if (redraw) {
             myMoney[currency] = moneyAmount.innerText;
+            myMoney[currency+"-data"] = [amount, moneyAmount];
+            // moneyAmount.innerText = 900;
             createChart();
         }
     };
@@ -79,7 +81,7 @@ function start() {
         option.text = baseCurrencyOptions[i];
         baseCurrencySelectList.appendChild(option);
     }
-    selectCreator.id = "currency-select-dropdown";
+    baseCurrencySelectList.id = "currency-select-dropdown";
     baseCurrencySelectList.onclick = function () {
         baseCurrency = baseCurrencySelectList.value;
         createChart();
