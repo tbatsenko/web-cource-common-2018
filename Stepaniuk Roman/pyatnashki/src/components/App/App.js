@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
+import Stopwatch from '../Stopwatch/Stopwatch';
+import Highscore from '../Highscore/Highscore';
 import Cell from '../Cell/Cell';
 import Panel from '../Panel/Panel';
 import CellEmpty from "../Cell/CellEmpty";
@@ -11,11 +13,18 @@ class App extends Component {
       <div className={"App " + difficultyApp}>
           {cellList}
           {difficultyPanel}
+          <Stopwatch starter={checkToStart()}/>
+          <Highscore difficulty={difficultyIndex}/>
       </div>
     );
   }
 }
 
+function checkToStart() {
+    if(stopwatch === 0)
+        return 0;
+    return 1
+}
 
 function shuffle(array) {
     var currentIndex = array.length, temporaryValue, randomIndex;
@@ -37,7 +46,8 @@ function shuffle(array) {
 }
 
 var emptyX, emptyY, movetoX, movetoY
-var numbers, cellList, chunkedList,j,temparray, chunk, difficulty, rows, numOfCells, difficultyApp, solvable;
+var numbers, cellList, chunkedList,j,temparray, chunk;
+var difficulty, rows, numOfCells, difficultyApp, solvable, stopwatch;
 
 var i = 0
 var buttonTypes = [{regionName:"Easy"}, {regionName:"Medium"}, {regionName:"Hard"}];
@@ -49,7 +59,6 @@ var buttons = buttonTypes.map(item => {
 var difficultyPanel = <Panel buttons={buttons} />
 // var difficultyIndex = difficultyPanel.props.difficulty
 var difficultyIndex = 0;
-console.log(difficultyPanel)
 
 function gameFormat() {
     if (difficultyIndex === 0) {
@@ -72,13 +81,17 @@ function gameFormat() {
     }
 }
 
+// localStorage.clear()
+var scoreTable = localStorage.getItem("scores") === null ? {easy : [],medium : [], hard : []} : JSON.parse(localStorage.getItem("scores"));
+
 startGame()
 function startGame() {
+    stopwatch = 0;
     gameFormat()
     emptyX = rows - 1;
     emptyY = rows - 1;
-    movetoX =rows - 1;
-    movetoY =rows - 1;
+    movetoX = rows - 1;
+    movetoY = rows - 1;
     solvable = false;
     while(!solvable){
         numbers = shuffle(Array.from({length: numOfCells - 1}, (v, k) => k+1));
@@ -145,6 +158,7 @@ function moveCell(direction){
     else if (direction === 'LEFT' && emptyX > 0) movetoX--;
     else if (direction === 'RIGHT' && emptyX < rows - 1) movetoX++
     replaceCell()
+    stopwatch++
 }
 
 // var assert = require('assert');
@@ -158,7 +172,6 @@ function replaceCell(){
     emptyX = movetoX
     emptyY = movetoY
     checkCell()
-    //console.log(chunkedList[3][2])
 }
 
 var curVic;
@@ -174,12 +187,37 @@ function checkCell() {
         }
     }
     if (curVic){
+        checkHighscore(document.getElementsByClassName("Stopwatch__label")[0].innerHTML)
+        localStorage.setItem("scores", JSON.stringify(scoreTable))
         setTimeout(function() { alert("YOU WON!!!\nPress enter to play more"); }, 102);
-        startGame()
+        setTimeout(startGame, 150);
     }
-
 }
 
+
+function stringToSeconds(str) {
+    var sands = str.split(":")
+    return parseInt(sands[0] * 60) + parseInt(sands[1])
+}
+
+function numberAs(a,b) {
+    return a-b;
+}
+
+function checkHighscore(score){
+    if (difficultyIndex === 0) {
+        scoreTable.easy.push(stringToSeconds(score))
+        scoreTable.easy = scoreTable.easy.sort(numberAs).slice(0,10)
+    }
+    else if (difficultyIndex === 1) {
+        scoreTable.medium.push(stringToSeconds(score))
+        scoreTable.medium = scoreTable.medium.sort(numberAs).slice(0,10)
+    }
+    else if (difficultyIndex === 2) {
+        scoreTable.hard.push(stringToSeconds(score))
+        scoreTable.hard = scoreTable.hard.sort(numberAs).slice(0,10)
+    }
+}
 
 function handleRegionClick(region) {
     i = 0
@@ -196,7 +234,6 @@ function handleRegionClick(region) {
         difficultyIndex = 2
     }
     buttons[difficultyIndex] = <button key={difficultyIndex} className="Panel__button selected" onClick={() => handleRegionClick(region)}>{region}</button>
-    // console.log(difficultyIndex)
     startGame()
 }
 

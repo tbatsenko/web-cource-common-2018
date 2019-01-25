@@ -7,6 +7,7 @@
   width: 200px;
   height: 250px;
   display: flex;
+  font-family: Baloo Thambi, serif;
   flex-direction: column;
   align-items: center; }
   .Panel__button {
@@ -16,7 +17,6 @@
     border: none;
     cursor: pointer;
     margin-top: 20px;
-    font-family: "Baloo Thumbi";
     background-color: #1f4b82; }
     .Panel__button:hover {
       background-color: #1b3d68; }
@@ -25,7 +25,6 @@
       border: 3px solid #10d60c; }
   .Panel__caption {
     margin-top: 20px;
-    font-family: "Baloo Thumbi";
     font-size: 24px; }
 
 .selected {
