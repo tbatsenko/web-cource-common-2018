@@ -37,7 +37,7 @@ function shuffle(array) {
 }
 
 var emptyX, emptyY, movetoX, movetoY
-var numbers, cellList, chunkedList,j,temparray, chunk, difficulty, rows, numOfCells, difficultyApp;
+var numbers, cellList, chunkedList,j,temparray, chunk, difficulty, rows, numOfCells, difficultyApp, solvable;
 
 var i = 0
 var buttonTypes = [{regionName:"Easy"}, {regionName:"Medium"}, {regionName:"Hard"}];
@@ -48,7 +48,7 @@ var buttons = buttonTypes.map(item => {
 
 var difficultyPanel = <Panel buttons={buttons} />
 // var difficultyIndex = difficultyPanel.props.difficulty
-var difficultyIndex = 2;
+var difficultyIndex = 0;
 console.log(difficultyPanel)
 
 function gameFormat() {
@@ -72,7 +72,6 @@ function gameFormat() {
     }
 }
 
-
 startGame()
 function startGame() {
     gameFormat()
@@ -80,7 +79,11 @@ function startGame() {
     emptyY = rows - 1;
     movetoX =rows - 1;
     movetoY =rows - 1;
-    numbers = shuffle(Array.from({length: numOfCells - 1}, (v, k) => k+1));
+    solvable = false;
+    while(!solvable){
+        numbers = shuffle(Array.from({length: numOfCells - 1}, (v, k) => k+1));
+        solvable = checkNumbers(numbers)
+    }
 
     cellList = numbers.map(function(i, index){
         return <Cell key={index} number={i} inPosition={"notPosition"} difficulty={difficulty}/>;
@@ -94,6 +97,19 @@ function startGame() {
         chunkedList.push(temparray)
     }
     checkCell()
+}
+
+var counter;
+function checkNumbers(nums) {
+    counter = 0;
+    for(i=0;i<nums.length;i++){
+        for(j=0;j<i;j++){
+            if(nums[j] > nums[i]){
+                counter++;
+            }
+        }
+    }
+    return (counter + rows) % 2 !== 1;
 }
 
 const KEY_DOWN = 40;
