@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Tetris</title>
+    <link rel='stylesheet' type="text/css" href='main.css'/>
+</head>
+<body>
+
+<div id="tetris">
+    <canvas id="tetriscanvas" width="300" height="600"></canvas>
+        <div align="center"><b>T E T R I S</b></div>
+        <p class="info">&harr;: move left/right;
+            <br>&uarr;: rotate;
+            <br>&darr; or _: drop;
+            <br>Esc: pause
+        </p>
+        <canvas id="figurecanvas" width="120" height="120"></canvas>
+        <p class="info" id="tetriscount"></p>
+    <div class="clear"></div>
+</div>
+<script src='js/game.js'></script>
+<script src='js/controller.js'></script>
+<script src='js/canvas.js'></script>
+
+</body>
+</html>
