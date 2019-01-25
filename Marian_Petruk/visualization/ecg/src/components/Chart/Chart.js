@@ -7,9 +7,10 @@ import { Group } from '@vx/group';
 import { curveBasis } from '@vx/curve';
 import { GlyphDot } from '@vx/glyph';
 import { AxisLeft, AxisBottom } from '@vx/axis';
-import { LinePath, Bar } from '@vx/shape';
+import { Line, LinePath, Bar } from '@vx/shape';
 import { scaleLinear } from '@vx/scale';
 import { PatternLines } from '@vx/pattern';
+import { Point } from '@vx/point';
 
 import BEM from '../../helpers/BEM';
 
@@ -96,6 +97,7 @@ class Chart extends Component {
       sampleRate,
       rpeaks,
       yRange,
+      totalECGLength,
     } = this.props;
 
     // bounds
@@ -163,6 +165,26 @@ class Chart extends Component {
             numTicksColumns={numTicksForWidth(width)}
           />
           <Group top={margin.top} left={axeSize}>
+            <Line
+              strokeWidth={3}
+              stroke={'red'}
+              from={
+                new Point({
+                  x:
+                    (width * startValue) /
+                    (totalECGLength - endValue + startValue),
+                  y: 0,
+                })
+              }
+              to={
+                new Point({
+                  x:
+                    (width * startValue) /
+                    (totalECGLength - endValue + startValue),
+                  y: height,
+                })
+              }
+            />
             <LinePath
               data={data}
               x={d => xScale(x(d))}
