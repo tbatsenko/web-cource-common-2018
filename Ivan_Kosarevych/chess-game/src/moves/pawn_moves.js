@@ -4,7 +4,7 @@ export default function pawnValidMoves(board, [row, col]) {
     let pawn = board[row][col];
 
     let moves = pawnMovedCheck(pawn, [row, col]);
-    moves = moves.concat(pawnFilterFigures(board, [row, col]));
+    moves = pawnFilterFigures(board, [row, col], moves);
     moves = moves.concat(pawnFindEnemies(board, [row, col]));
 
     console.log(moves);
@@ -24,10 +24,11 @@ function pawnMovedCheck(pawn, [row, col]){
     return moves;
 }
 
-function pawnFilterFigures(board, [row, col]) {
+function pawnFilterFigures(board, [row, col], moves) {
     // eliminate other figures in front
-    let moves = [];
     let nearest_figure = getNearestFigure(moves, board, [row, col]);
+    console.log(nearest_figure);
+
     if (nearest_figure != null) {
         let nf_row = nearest_figure[0];
         moves = moves.filter(([r, c]) =>
