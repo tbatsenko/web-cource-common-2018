@@ -135,6 +135,7 @@ export default class Game extends React.Component {
         <div className="board">
           <Board
             figures={this.state.figures}
+            current_player={this.state.current_player}
             HEIGHT={this.constants.HEIGHT}
             WIDTH={this.constants.WIDTH}
             COLOR_MAP={this.constants.COLOR_MAP}

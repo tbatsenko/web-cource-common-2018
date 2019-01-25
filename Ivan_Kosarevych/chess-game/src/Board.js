@@ -36,6 +36,7 @@ export default class Board extends React.Component {
 
     return (
       <Square
+          key={row*8+col}
         icon={icon}
         color={color}
         figure_color={figure_color}
@@ -60,9 +61,9 @@ export default class Board extends React.Component {
         square_id = square_id + 1;
       }
       color = (color + 1) % 2;
-      board.push(<div className={"board__row"}>{row}</div>);
+      board.push(row);
     }
-    return board;
+    return board.map((row, i) => <div key={64+i} className={"board__row"}>{row}</div>);
   }
 
   render() {
