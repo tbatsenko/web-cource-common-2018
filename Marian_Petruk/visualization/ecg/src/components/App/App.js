@@ -90,6 +90,7 @@ class App extends Component {
           endValue={start + zoomValue}
           yRange={rawECGYRange}
           title={'Raw ECG data'}
+          totalECGLength={ecgData.length}
         />
         <Chart
           ecgData={filtered.slice(start, start + zoomValue)}
@@ -101,6 +102,7 @@ class App extends Component {
           endValue={start + zoomValue}
           yRange={filteredECGYRange}
           title={'Filtered ECG data with R-peaks'}
+          totalECGLength={ecgData.length}
         />
         <form className={b('form')}>
           <input
@@ -115,14 +117,6 @@ class App extends Component {
           />
           <input
             type="button"
-            value={'Zoom In'}
-            onClick={() => {
-              if (zoomValue - 100 > 0)
-                this.setState({ zoomValue: zoomValue - 100 });
-            }}
-          />
-          <input
-            type="button"
             value={'Zoom Out'}
             onClick={() => {
               if (zoomValue + start + 100 <= ecgData.length)
@@ -133,6 +127,14 @@ class App extends Component {
                   start: start - 100,
                 });
               }
+            }}
+          />
+          <input
+            type="button"
+            value={'Zoom In'}
+            onClick={() => {
+              if (zoomValue - 100 > 0)
+                this.setState({ zoomValue: zoomValue - 100 });
             }}
           />
         </form>
