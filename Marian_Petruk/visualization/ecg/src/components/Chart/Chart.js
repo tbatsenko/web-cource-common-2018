@@ -41,21 +41,30 @@ class Chart extends Component {
 
     const axeSize = 70;
     const margin = { top: 5, right: 0, bottom: 0, left: 0 },
-      width = 1000,
+      width = window.innerWidth - axeSize * 2,
       height = 120;
 
-    // bounds
-    const xMax = width - margin.left - margin.right;
-    const yMax = height - margin.top - margin.bottom;
+    this.updateWindowDimensions = this.updateWindowDimensions.bind(this);
 
     this.state = {
       width,
       height,
       axeSize,
       margin,
-      yMax,
-      xMax,
     };
+  }
+
+  componentDidMount() {
+    this.updateWindowDimensions();
+    window.addEventListener('resize', this.updateWindowDimensions);
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener('resize', this.updateWindowDimensions);
+  }
+
+  updateWindowDimensions() {
+    this.setState({ width: window.innerWidth - this.state.axeSize * 2 });
   }
 
   static reformatData(rawData) {
@@ -78,7 +87,7 @@ class Chart extends Component {
   }
 
   render() {
-    const { width, height, axeSize, margin, yMax, xMax } = this.state;
+    const { width, height, axeSize, margin } = this.state;
     const {
       ecgData,
       title,
@@ -88,6 +97,10 @@ class Chart extends Component {
       rpeaks,
       yRange,
     } = this.props;
+
+    // bounds
+    const xMax = width - margin.left - margin.right;
+    const yMax = height - margin.top - margin.bottom;
 
     // scales
     const xScale = scaleLinear({

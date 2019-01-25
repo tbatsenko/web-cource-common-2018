@@ -4,6 +4,10 @@ import '../Chart';
 import { csvParse } from 'd3';
 import Chart from '../Chart';
 
+import BEM from '../../helpers/BEM';
+
+const b = BEM('App');
+
 class App extends Component {
   state = {
     ecgData: null,
@@ -16,8 +20,8 @@ class App extends Component {
 
   constructor(props) {
     super(props);
-    const id = 0;
-    this.state.sampleRate = 480;
+    const id = 1;
+    this.state.sampleRate = 200;
     this.getRawECG(id);
     this.getFilteredECG(id);
     this.getRpeaks(id);
@@ -78,7 +82,7 @@ class App extends Component {
     const filteredECGYRange = [Math.min(...filtered), Math.max(...filtered)];
 
     return (
-      <main className="App">
+      <main className={b()}>
         <Chart
           ecgData={ecgData.slice(start, start + zoomValue)}
           sampleRate={sampleRate}
@@ -98,32 +102,40 @@ class App extends Component {
           yRange={filteredECGYRange}
           title={'Filtered ECG data with R-peaks'}
         />
-        <input
-          type="range"
-          min={0}
-          max={ecgData.length - zoomValue}
-          step={1}
-          value={start}
-          onChange={({ target }) =>
-            this.setState({ start: Number(target.value) })
-          }
-        />
-        <input
-          type="button"
-          value={'Zoom In'}
-          onClick={() => {
-            if (this.state.zoomValue - 100 >= 0)
-              this.setState({ zoomValue: this.state.zoomValue - 100 });
-          }}
-        />
-        <input
-          type="button"
-          value={'Zoom Out'}
-          onClick={() => {
-            if (this.state.zoomValue + 100 <= ecgData.length)
-              this.setState({ zoomValue: this.state.zoomValue + 100 });
-          }}
-        />
+        <form className={b('form')}>
+          <input
+            type="range"
+            min={0}
+            max={ecgData.length - zoomValue}
+            step={1}
+            value={start}
+            onChange={({ target }) =>
+              this.setState({ start: Number(target.value) })
+            }
+          />
+          <input
+            type="button"
+            value={'Zoom In'}
+            onClick={() => {
+              if (zoomValue - 100 > 0)
+                this.setState({ zoomValue: zoomValue - 100 });
+            }}
+          />
+          <input
+            type="button"
+            value={'Zoom Out'}
+            onClick={() => {
+              if (zoomValue + start + 100 <= ecgData.length)
+                this.setState({ zoomValue: zoomValue + 100 });
+              else if (start > 0) {
+                this.setState({
+                  zoomValue: zoomValue + 100,
+                  start: start - 100,
+                });
+              }
+            }}
+          />
+        </form>
       </main>
     );
   }
