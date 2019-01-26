@@ -6,8 +6,9 @@
 
 
 
-.films-container{
-}
+/*.films-container:nth-child(-n+4) .film-description{*/
+    /*margin-top: 0;*/
+/*}*/
 .film_description__film-image{
     width: 100%;
     height: 400px;
