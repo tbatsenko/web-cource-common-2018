@@ -63,8 +63,8 @@ function convert(line, currency, amount, moneyAmount, redraw) {
         let data = JSON.parse(this.response);
         moneyAmount.innerText = ((parseFloat(amount.value) / parseFloat(data["rates"][currency])).toFixed(3)).toString();
         if (redraw) {
-            myMoney[currency] = moneyAmount.innerText;
-            myMoney[currency+"-data"] = [amount, moneyAmount];
+            myMoney[currency] = amount.value;
+            myMoney[currency + "-data"] = [amount, moneyAmount];
             // moneyAmount.innerText = 900;
             createChart();
         }
