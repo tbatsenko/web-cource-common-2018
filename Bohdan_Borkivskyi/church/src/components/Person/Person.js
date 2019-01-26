@@ -19,7 +19,12 @@ export default class Person extends Component {
     return (
       <div
         className={this.getClasses()}
-        style={{ left: this.props.x, top: this.props.y }}
+        style={{
+          left: this.props.x,
+          top: this.props.y,
+          width: this.props.size,
+          height: this.props.size,
+        }}
       />
     )
   }

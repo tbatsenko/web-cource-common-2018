@@ -15,7 +15,7 @@ const App = ({ activeDate, history }) => (
     <Calendar
       history={history}
       activeDate={activeDate}
-      children={(calendarDate, day, id) => <Day key={id} day={day} activeDate={activeDate} calendarDate={calendarDate} history={history} />}
+      children={(calendarDate, day) => <Day key={day} day={day} activeDate={activeDate} calendarDate={calendarDate} history={history} />}
     />
     <TodoList activeDate={activeDate} />
   </div>

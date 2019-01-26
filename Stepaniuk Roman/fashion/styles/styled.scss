@@ -16,10 +16,6 @@ body{
     grid-template-rows: 29px;
     font-family: HelveticaNeue;
     font-size: 18px;
-    font-weight: normal;
-    font-style: normal;
-    font-stretch: normal;
-    line-height: normal;
     letter-spacing: 0.5px;
     text-align: right;
     color: #6c7178;
@@ -41,18 +37,12 @@ body{
       font-family: HelveticaNeue;
       font-size: 18px;
       font-weight: 300;
-      font-style: normal;
-      font-stretch: normal;
-      line-height: normal;
       letter-spacing: 0.8px;
       text-align: left;
       &::placeholder{
         font-family: HelveticaNeue;
         font-size: 18px;
         font-weight: 300;
-        font-style: normal;
-        font-stretch: normal;
-        line-height: normal;
         letter-spacing: 0.8px;
         text-align: left;
         color: #a2a2a2;
@@ -73,10 +63,6 @@ body{
         height: 29px;
         font-family: HelveticaNeue;
         font-size: 24px;
-        font-weight: normal;
-        font-style: normal;
-        font-stretch: normal;
-        line-height: normal;
         letter-spacing: 1.1px;
         text-align: left;
         color: #6c7178;
@@ -100,10 +86,6 @@ body{
     font-family: LibreBaskerville;
     font-size: 56px;
     font-weight: normal;
-    font-style: normal;
-    font-stretch: normal;
-    line-height: normal;
-    letter-spacing: normal;
     text-align: center;
     color: #000000;
   }
@@ -112,10 +94,6 @@ body{
     font-family: GillSans;
     font-size: 22px;
     font-weight: normal;
-    font-style: normal;
-    font-stretch: normal;
-    line-height: normal;
-    letter-spacing: normal;
     text-align: center;
     color: #000000;
   }
@@ -124,8 +102,6 @@ body{
     font-family: GillSans;
     font-size: 24px;
     font-weight: 300;
-    font-style: normal;
-    font-stretch: normal;
     line-height: 1.17;
     letter-spacing: 2.2px;
     text-align: center;
@@ -149,10 +125,6 @@ body{
     font-family: Baskerville;
     font-size: 56px;
     font-weight: normal;
-    font-style: normal;
-    font-stretch: normal;
-    line-height: normal;
-    letter-spacing: normal;
     text-align: center;
     color: #000000;
     grid-column: 1 / span 4;
@@ -161,10 +133,6 @@ body{
     font-family: GillSans;
     font-size: 27px;
     font-weight: 300;
-    font-style: normal;
-    font-stretch: normal;
-    line-height: normal;
-    letter-spacing: normal;
     color: #000000;
     grid-column: 1 / span 4;
     align-self: start;
@@ -216,10 +184,6 @@ body{
       font-family: GillSans;
       font-size: 28px;
       font-weight: 300;
-      font-style: normal;
-      font-stretch: normal;
-      line-height: normal;
-      letter-spacing: normal;
       text-align: left;
       color: #000000;
     }
@@ -228,10 +192,13 @@ body{
 
 .footer{
   background-color: #f9f8f6;
-  height: 1349px;
+  //height: 1349px;
+  height: 760px;
   display: grid;
+  font-family: Baskerville;
   grid-template-columns: repeat(4, 287.75px);
   grid-template-rows: 160px 70px 384px 200px 70px;
+  margin-bottom: 0;
   &__subscription-info{
     grid-column: 1 / span 2;
     margin-left: 30px;
@@ -240,10 +207,6 @@ body{
       font-family: Baskerville;
       font-size: 32px;
       font-weight: normal;
-      font-style: normal;
-      font-stretch: normal;
-      line-height: normal;
-      letter-spacing: normal;
       text-align: left;
       color: #000000;
     }
@@ -251,9 +214,6 @@ body{
       height: 70px;
       font-family: GillSans;
       font-size: 20px;
-      font-weight: normal;
-      font-style: normal;
-      font-stretch: normal;
       line-height: 1.6;
       letter-spacing: normal;
       text-align: left;
@@ -271,9 +231,6 @@ body{
     font-family: HelveticaNeue;
     font-size: 18px;
     font-weight: 300;
-    font-style: normal;
-    font-stretch: normal;
-    line-height: normal;
     letter-spacing: 0.8px;
     text-align: left;
     align-self: center;
@@ -281,9 +238,6 @@ body{
       font-family: HelveticaNeue;
       font-size: 18px;
       font-weight: 300;
-      font-style: normal;
-      font-stretch: normal;
-      line-height: normal;
       letter-spacing: 0.8px;
       text-align: left;
       color: #a2a2a2;
@@ -316,5 +270,35 @@ body{
       color: #a8a8a8;
       text-decoration: underline;
     }
+  }
+  &__link-block{
+    display: grid;
+    grid-template-rows: 84px 300px;
+    &__header{
+      font-size: 32px;
+      color: #444444;
+    }
+    &__links-group{
+      font-size: 24px;
+      color: #949494;
+      &--link{
+        line-height: 48px;
+        cursor:pointer;
+
+      }
+    }
+  }
+  &__horizontal-line{
+    background-color: #a8a8a8;
+    height: 1px;
+    width: 100%;
+    grid-column: 1 / span 4;
+  }
+  &__copyright-info{
+    grid-column: 1 / span 4;
+    color: #b2b2b2;
+    font-size: 20px;
+    font-family: GillSans;
+    letter-spacing: 0.17px;
   }
 }

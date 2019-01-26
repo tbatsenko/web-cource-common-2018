@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import './App.scss'
-import { csvParse, extent } from 'd3'
+import { csvParse } from 'd3'
 import Chart from '../Chart/Chart'
 
 class App extends Component {

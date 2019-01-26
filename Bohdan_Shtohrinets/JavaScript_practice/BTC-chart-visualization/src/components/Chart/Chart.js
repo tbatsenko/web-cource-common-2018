@@ -28,8 +28,6 @@ class Chart extends Component {
     super(props)
     const { data, width, height, margin } = props
 
-    console.log(width, height)
-
     const xMax = width - margin.left - margin.right
     const yMax = height - margin.top - margin.bottom
 
@@ -68,6 +66,7 @@ class Chart extends Component {
 
     const d0 = data[index - 1]
     const d1 = data[index]
+
     let d = d0
     if (d1 && d1.date) {
       d = x0 - xSelector(d0) > xSelector(d1) - x0 ? d1 : d0
@@ -96,203 +95,120 @@ class Chart extends Component {
     const formatDate = timeFormat('%b %d, \'%y')
 
     return (
-      < div
-    className = 'Chart' >
-      < svg
-    width = { width }
-    height = { height } >
-      < AxisLeft
-    scale = { yScale }
-    top = { - 100
-  }
-    left = { 100 }
-    numTicks = { 4 }
-    stroke = '#2c3e50'
-    strokeWidth = { 2 }
-    tickLabelProps = {(value, index)
-  =>
-    ({
-      fontSize: 11,
-      fill: '#2c3e50',
-      textAnchor: 'end',
-    })
-  }
-    tickComponent = {({ formattedValue, ...tickProps })
-  =>
-    (
-    < text
-    {...
-      tickProps
-    }
-  >
-    Price($)
-    {
-      formattedValue
-    }
-  <
-    /text>
-  )
-  }
-    />
-    < AxisBottom
-    top = { 0 }
-    data = { data }
-    scale = { xScale }
-    x = { xSelector }
-    numTicks = { 4 }
-    stroke = '#2c3e50'
-    strokeWidth = { 3 }
-    tickLabelProps = {(value, index)
-  =>
-    ({
-      fontSize: 11,
-      fill: '#2c3e50',
-      textAnchor: 'end',
-    })
-  }
-    tickComponent = {({ formattedValue, ...tickProps })
-  =>
-    (
-    < text
-    {...
-      tickProps
-    }
-  >
-    {
-      formattedValue
-    }
-  <
-    /text>
-  )
-  }
-    />
-    < LinePath
-    data = { data }
-    xScale = { xScale }
-    yScale = { yScale }
-    x = { xSelector }
-    y = { ySelector }
-    strokeWidth = { 5 }
-    stroke = '#2980b9'
-    strokeOpacity = '0.8'
-    strokeLinecap = 'round'
-    fill = 'transparent'
-      / >
-      < Bar
-    x = { 0 }
-    y = { 0 }
-    width = { width }
-    height = { height }
-    fill = 'transparent'
-    data = { data }
-    onMouseMove = { data
-  =>
-    event =>
-      this.handleToolTip({
-        event,
-        data,
-        xSelector,
-        ySelector,
-        xScale,
-        yScale,
-      })
-  }
-    onMouseLeave = { data
-  =>
-    event => hideTooltip()
-  }
-    />
-    {
-      tooltipData && (
-      < g >
-      < Line
-      from = {
-      {
-        x: tooltipLeft, y
-      :
-        0
-      }
-    }
-      to = {
-      {
-        x: tooltipLeft, y
-      :
-        yMax - 90
-      }
-    }
-      stroke = '#2ecc71'
-      strokeWidth = { 5 }
-      style = {
-      {
-        pointerEvents: 'none'
-      }
-    }
-      strokeDasharray = '4,6'
-        / >
-        < circle
-      cx = { tooltipLeft }
-      cy = { tooltipTop }
-      r = { 5 }
-      fill = '#5C77EB'
-      stroke = 'white'
-      strokeWidth = { 2 }
-      style = {
-      {
-        pointerEvents: 'none'
-      }
-    }
-      />
-      < /g>
+      <div className='Chart'>
+        <svg width={width} height={height}>
+          <AxisLeft
+            scale={yScale}
+            top={-100}
+            left={100}
+            numTicks={4}
+            stroke='#2c3e50'
+            strokeWidth={2}
+            tickLabelProps={(value, index) => ({
+              fontSize: 11,
+              fill: '#2c3e50',
+              textAnchor: 'end',
+            })}
+            tickComponent={({ formattedValue, ...tickProps }) => (
+              <text {...tickProps}>Price ($){formattedValue}</text>
+            )}
+          />
+          <AxisBottom
+            top={0}
+            data={data}
+            scale={xScale}
+            x={xSelector}
+            numTicks={5}
+            stroke='#2c3e50'
+            strokeWidth={3}
+            tickLabelProps={(value, index) => ({
+              fontSize: 11,
+              fill: '#2c3e50',
+              textAnchor: 'end',
+            })}
+            tickComponent={({ formattedValue, ...tickProps }) => (
+              <text {...tickProps}>{formattedValue}</text>
+            )}
+          />
+          <LinePath
+            data={data}
+            xScale={xScale}
+            yScale={yScale}
+            x={xSelector}
+            y={ySelector}
+            strokeWidth={5}
+            stroke="#2980b9"
+            strokeOpacity="0.8"
+            strokeLinecap="round"
+            fill="transparent"
+          />
+          <Bar
+            x={0}
+            y={0}
+            width={width}
+            height={height}
+            fill='transparent'
+            data={data}
+            onMouseMove={data => event =>
+              this.handleToolTip({
+                event,
+                data,
+                xSelector,
+                ySelector,
+                xScale,
+                yScale,
+              })}
+            onMouseLeave={data => event => hideTooltip()}
+          />
+          {tooltipData && (
+            <g>
+              <Line
+                from={{ x: tooltipLeft, y: 0 }}
+                to={{ x: tooltipLeft, y: yMax - 90 }}
+                stroke="#2ecc71"
+                strokeWidth={5}
+                style={{ pointerEvents: 'none' }}
+                strokeDasharray="4,6"
+              />
+              <circle
+                cx={tooltipLeft}
+                cy={tooltipTop}
+                r={5}
+                fill="#5C77EB"
+                stroke="white"
+                strokeWidth={2}
+                style={{ pointerEvents: 'none' }}
+              />
+            </g>
+          )}
+        </svg>
+        {tooltipData && (
+          <div>
+            <Tooltip
+              top={tooltipTop - 12}
+              left={tooltipLeft + 12}
+              style={{
+                backgroundColor: '#5C77EB',
+                color: '#FFF',
+              }}
+            >
+              {`$${ySelector(tooltipData)}`}
+            </Tooltip>
+            <Tooltip
+              top={yMax - 110}
+              left={tooltipLeft}
+              style={{
+                transform: 'translateX(-50%)',
+                backgroundColor: 'white',
+                color: '#000',
+              }}
+            >
+              {formatDate(xSelector(tooltipData))}
+            </Tooltip>
+          </div>
+        )}
+      </div>
     )
-    }
-  <
-    /svg>
-    {
-      tooltipData && (
-      < div >
-      < Tooltip
-      top = { tooltipTop -12 }
-      left = { tooltipLeft +12 }
-      style = {
-      {
-        backgroundColor: '#5C77EB',
-          color
-      :
-        '#FFF',
-      }
-    }
-    >
-      {
-        `$${ySelector(tooltipData)}`
-      }
-    <
-      /Tooltip>
-      < Tooltip
-      top = { yMax -110 }
-      left = { tooltipLeft }
-      style = {
-      {
-        transform: 'translateX(-50%)',
-          backgroundColor
-      :
-        'white',
-          color
-      :
-        '#000',
-      }
-    }
-    >
-      {
-        formatDate(xSelector(tooltipData))
-      }
-    <
-      /Tooltip>
-      < /div>
-    )
-    }
-  <
-    /div>
-  )
   }
 }
 

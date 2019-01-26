@@ -1,0 +1,44 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.header {
+    min-height: 100px;
+    background-color: #4267b2;
+}
+
+.footer {
+    display: block;
+    min-height: 10px;
+    background-color: gold;
+    margin-top: 5px;
+}
+
+.main {
+    width: 840px;
+    margin: 0 auto;
+    vertical-align: top;
+}
+
+.main__left_menu {
+    width: 150px;
+    background-color: blue;
+}
+
+.main__news {
+    width: 500px;
+    background-color: yellow;
+}
+
+.main__right_menu {
+    width: 150px;
+    background-color: blue;
+}
+
+.main__left_menu, .main__news, .main__right_menu {
+    display: inline-block;
+    min-height: 100px;
+    margin: 5px 0;
+    vertical-align: top;
+}

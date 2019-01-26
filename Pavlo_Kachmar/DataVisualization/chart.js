@@ -1,14 +1,9 @@
 function drawBarsGraph(data) {
-    // Setup svg using Bostock's margin convention
-
+    console.log(myMoney)
     d3.select("svg").remove();
-
     let margin = {top: 20, right: 160, bottom: 35, left: 30};
-
-
     let width = 700 - margin.left - margin.right,
         height = 400 - margin.top - margin.bottom;
-
 
     let svg = d3.select("body")
         .append("svg")
@@ -17,25 +12,19 @@ function drawBarsGraph(data) {
         .append("g")
         .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
-    /* Data in strings like it would be if imported from a csv */
-
     let parse = d3.time.format("%Y-%m-%d").parse;
 
     // Transpose the data into layers
-    let dataset = d3.layout.stack()(chosenCurrencies.map(function(currency) {
-        return data.map(function(d) {
-            // console.log(d);
+    let dataset = d3.layout.stack()(chosenCurrencies.map(function (currency) {
+        return data.map(function (d) {
             return {x: parse(d.year), y: +d[currency]};
         });
     }));
 
-
-    // Set x, y and colors
     let x = d3.scale.ordinal()
         .domain(dataset[0].map(function (d) {
             return d.x;
-        }))
-        .rangeRoundBands([10, width - 10], 0.02);
+        })).rangeRoundBands([10, width - 10], 0.02);
 
     let y = d3.scale.linear()
         .domain([0, d3.max(dataset, function (d) {
@@ -48,15 +37,10 @@ function drawBarsGraph(data) {
     let colorsOptions = ["#d25c4d", "#f2b447", "#d9d574", "b33040"];
     let colors = [];
     let i = 0;
-    for (elem in chosenCurrencies){
-        colors.push(colorsOptions[i])
+    for (let elem in chosenCurrencies) {
+        colors.push(colorsOptions[i]);
         i += 1;
     }
-
-
-
-
-    // Define and draw axes
     let yAxis = d3.svg.axis()
         .scale(y)
         .orient("left")
@@ -119,7 +103,6 @@ function drawBarsGraph(data) {
             tooltip.select("text").text(d.y);
         });
 
-
     // Draw legend
     let legend = svg.selectAll(".legend")
         .data(colors)
@@ -146,8 +129,6 @@ function drawBarsGraph(data) {
             return chosenCurrencies[i];
         });
 
-
-    // Prep the tooltip bits, initial display is hidden
     let tooltip = svg.append("g")
         .attr("class", "tooltip")
         .style("display", "none");
@@ -164,14 +145,12 @@ function drawBarsGraph(data) {
         .style("text-anchor", "middle")
         .attr("font-size", "12px")
         .attr("font-weight", "bold");
-
 }
 
-
 function preprocessData(data) {
-    console.log(chosenCurrencies);
     let outData = [];
     let rates = data["rates"];
+
     rates = sortOnKeys(rates);
     for (let key in rates) {
         if (rates.hasOwnProperty(key)) {
@@ -179,29 +158,30 @@ function preprocessData(data) {
             elem["year"] = key;
             for (let innerKey in rates[key]) {
                 if (rates[key].hasOwnProperty(innerKey)) {
-                    if (chosenCurrencies.includes(innerKey))
-                        elem[innerKey] = rates[key][innerKey];
+                    if (chosenCurrencies.includes(innerKey)) {
+                        elem[innerKey] = (myMoney[innerKey] * rates[key][innerKey]).toFixed(3);
+                    }
+
                 }
             }
-
             outData.push(elem);
         }
     }
-
-
     return outData;
-
 }
 
-function createChart(){
+function createChart() {
     let request = new XMLHttpRequest();
-    let line = "https://api.exchangeratesapi.io/history?start_at=2018-12-21&end_at=2019-01-01&symbols=USD,GBP,CAD,CHF";
+    let line = "https://api.exchangeratesapi.io/history?start_at=2018-12-21&end_at=2019-01-01&symbols=USD,GBP,CAD,CHF&base={1}";
+
+    line = line.replace("{1}", baseCurrency);
 
     request.open('GET', line, true);
     request.onload = function () {
 
         // Begin accessing JSON data here
         let testData = JSON.parse(this.response);
+
         let data = preprocessData(testData);
 
         drawBarsGraph(data);
@@ -212,18 +192,16 @@ function createChart(){
 function sortOnKeys(dict) {
 
     let sorted = [];
-    for(let key in dict) {
+    for (let key in dict) {
         sorted[sorted.length] = key;
     }
     sorted.sort();
 
     let tempDict = {};
-    for(let i = 0; i < sorted.length; i++) {
+    for (let i = 0; i < sorted.length; i++) {
         tempDict[sorted[i]] = dict[sorted[i]];
     }
 
     return tempDict;
 }
 
-
-createChart();

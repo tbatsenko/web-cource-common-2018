@@ -8,6 +8,8 @@ export default class App extends Component {
     cristians: null,
   }
 
+  use_requestFrames = false
+
   clickHandler = null
 
   constructor() {
@@ -34,13 +36,13 @@ export default class App extends Component {
 
       if (anti[i].x <= 0) {
         anti[i].xMove = Math.abs(anti[i].xMove)
-      } else if (anti[i].x >= 485) {
+      } else if (anti[i].x >= this.props.size.width - this.props.size.person) {
         anti[i].xMove = -Math.abs(anti[i].xMove)
       }
 
       if (anti[i].y <= 0) {
         anti[i].yMove = Math.abs(anti[i].yMove)
-      } else if (anti[i].y >= 285) {
+      } else if (anti[i].y >= this.props.size.height - this.props.size.person) {
         anti[i].yMove = -Math.abs(anti[i].yMove)
       }
 
@@ -56,12 +58,40 @@ export default class App extends Component {
           continue
         }
 
-        if (App.areVeryOverlapped(anti[i], anti[j])) {
+        if (App.areVeryOverlapped(anti[i], anti[j], this.props.size.person)) {
           anti[i] = this.movedToSafePlace(anti[i])
-        } else if (App.areOverlapped(anti[i], anti[j])) {
+        } else if (
+          App.areOverlapped(anti[i], anti[j], this.props.size.person)
+        ) {
+          if (
+            App.areOverlapped(anti[i], anti[j], this.props.size.person, 16) &&
+            anti[i].xMove === anti[j].xMove &&
+            anti[i].yMove === anti[j].yMove
+          ) {
+            let newXMove = Math.abs(anti[i].xMove) - 0.1
+            if (anti[i].xMove < 0) {
+              newXMove *= -1
+            }
+            anti[i].xMove = newXMove
+            anti[i].yMove = Math.pow(1 - Math.pow(anti[i].xMove, 2), 0.5)
+            console.log(anti[i].xMove, anti[i].yMove)
+            if (anti[i].x < anti[j].x) {
+              anti[i].x -= 1
+            } else {
+              anti[j].x -= 1
+            }
+            if (anti[i].y < anti[j].y) {
+              anti[i].y -= 1
+            } else {
+              anti[j].y -= 1
+            }
+          }
           bumped.push(i)
           bumped.push(j)
-
+          anti[i].x -= anti[i].xMove
+          anti[i].y -= anti[i].yMove
+          anti[j].x -= anti[j].xMove
+          anti[j].y -= anti[j].yMove
           let tempXMove = anti[j].xMove
           let tempYMove = anti[j].yMove
 
@@ -70,34 +100,53 @@ export default class App extends Component {
 
           anti[i].xMove = tempXMove
           anti[i].yMove = tempYMove
-
-          anti[i].x += anti[i].xMove
-          anti[i].y += anti[i].yMove
         }
       }
 
       if (this.state.cristians === null) {
         continue
       }
+      let obstacle_x = 0
+      let obstacle_y = 0
       for (let j = 0; j < this.state.cristians.length; j++) {
         let cristi = this.state.cristians[j]
-        if (App.areVeryOverlapped(anti[i], cristi)) {
+        if (App.areVeryOverlapped(anti[i], cristi, this.props.size.person)) {
           anti[i] = this.movedToSafePlace(anti[i])
-        } else if (App.areOverlapped(anti[i], cristi)) {
+        } else if (App.areOverlapped(anti[i], cristi, this.props.size.person)) {
+          obstacle_x = cristi.x
+          obstacle_y = cristi.y
           if (!anti[i].good) {
-            punished.push([cristi.id, anti[i].id])
+            punished.push({
+              id: cristi.id,
+              x: cristi.x,
+              y: cristi.y,
+              xMove: anti[i].xMove,
+              yMove: anti[i].yMove,
+            })
           }
           punishment = true
+          break
         }
       }
+
       if (punishment) {
-        anti[i].xMove *= -1
-        anti[i].yMove *= -1
-        anti[i].x += anti[i].xMove
-        anti[i].y += anti[i].yMove
+        anti[i].good = true
+        if (anti[i].xMove < 0) {
+          anti[i].yMove *= -1
+        } else {
+          if (
+            Math.abs(anti[i].x - obstacle_x) > Math.abs(anti[i].y - obstacle_y)
+          ) {
+            anti[i].xMove *= -1
+          } else {
+            anti[i].yMove *= -1
+          }
+        }
+        anti[i].x += anti[i].xMove * 2
+        anti[i].y += anti[i].yMove * 2
       }
 
-      if (anti[i].x < 285) {
+      if (anti[i].x < this.props.size.width - this.props.size.person - 200) {
         anti[i].good = false
       }
 
@@ -107,30 +156,22 @@ export default class App extends Component {
       if (anti[i].y < 0) {
         anti[i].y = 0
       }
-      if (anti[i].x > 485) {
-        anti[i].x = 485
+      if (anti[i].x > this.props.size.width - this.props.size.person) {
+        anti[i].x = this.props.size.width - this.props.size.person
       }
-      if (anti[i].y > 285) {
-        anti[i].y = 285
+      if (anti[i].y > this.props.size.height - this.props.size.person) {
+        anti[i].y = this.props.size.height - this.props.size.person
       }
     }
 
     let newAntichrists = []
     for (let i = 0; i < punished.length; ++i) {
-      let cristiId = punished[i][0]
-      let cristi = this.state.cristians.filter(
-        cristi => cristi.id === cristiId
-      )[0]
-      let antiId = punished[i][1]
-      let antic = this.state.antichrists.filter(
-        antichrist => antichrist.id === antiId
-      )[0]
       newAntichrists.push({
         id: anti[anti.length - 1].id + i + 1,
-        x: cristi.x,
-        y: cristi.y,
-        xMove: antic.xMove,
-        yMove: antic.yMove,
+        x: punished[i].x,
+        y: punished[i].y,
+        xMove: punished[i].xMove,
+        yMove: punished[i].yMove,
         good: true,
       })
     }
@@ -139,19 +180,27 @@ export default class App extends Component {
       anti.push(newAntichrists[i])
     }
     cristi = cristi.filter(
-      cristian => !punished.map(pair => pair[0]).includes(cristian.id)
+      cristian => !punished.map(obj => obj.id).includes(cristian.id),
     )
 
     for (let i = 0; i < cristi.length; ++i) {
       cristi[i].id = i
-      cristi[i].x = App.calculateCristianPosition(i, cristi.length)[0]
-      cristi[i].y = App.calculateCristianPosition(i, cristi.length)[1]
+      cristi[i].x = App.calculateCristianPosition(
+        i,
+        cristi.length,
+        this.props.size,
+      )[0]
+      cristi[i].y = App.calculateCristianPosition(
+        i,
+        cristi.length,
+        this.props.size,
+      )[1]
     }
 
     this.setState({ antichrists: anti, cristians: cristi })
   }
 
-  movedToSafePlace(obj, isCristian = false) {
+  movedToSafePlace(obj) {
     let overlap = true
     while (overlap) {
       obj.x += obj.xMove
@@ -159,10 +208,10 @@ export default class App extends Component {
       overlap = false
       for (let i = 0; i < this.state.antichrists.length; ++i) {
         let anti = this.state.antichrists[i]
-        if (!isCristian && obj.id === anti.id) {
+        if (obj.id === anti.id) {
           continue
         }
-        if (App.areOverlapped(obj, anti)) {
+        if (App.areOverlapped(obj, anti, this.props.size.person)) {
           overlap = true
           break
         }
@@ -172,10 +221,8 @@ export default class App extends Component {
       }
       for (let i = 0; i < this.state.cristians.length; ++i) {
         let cristi = this.state.cristians[i]
-        if (isCristian && obj.id === cristi.id) {
-          continue
-        }
-        if (App.areOverlapped(obj, cristi)) {
+
+        if (App.areOverlapped(obj, cristi, this.props.size.person)) {
           overlap = true
           break
         }
@@ -205,10 +252,10 @@ export default class App extends Component {
     return steps
   }
 
-  static calculateCristianPosition(index, total) {
+  static calculateCristianPosition(index, total, size) {
     let interval = 20
-    let baselineX = 480
-    let baselineY = 150
+    let baselineX = size.width - size.person - 5
+    let baselineY = size.height / 2
     let groupNumber = 0
     let inGroupNumber = 0
     let groupCount = App.generatePyramidStructure(total)
@@ -249,12 +296,20 @@ export default class App extends Component {
     let anti = []
     let i = 0
     while (i < n) {
+      let randomXMove = Math.random()
       let antichrist = {
         id: i,
-        x: Math.floor(Math.random() * 270) + 1,
-        y: Math.floor(Math.random() * 270) + 1,
-        xMove: 0.5,
-        yMove: 0.5,
+        x:
+          Math.floor(
+            Math.random() *
+            (this.props.size.width - this.props.size.person - 200),
+          ) + 1,
+        y:
+          Math.floor(
+            Math.random() * (this.props.size.height - this.props.size.person),
+          ) + 1,
+        xMove: randomXMove,
+        yMove: Math.pow(1 - randomXMove ** 2, 0.5),
         good: false,
       }
       antichrist.xMove =
@@ -264,7 +319,7 @@ export default class App extends Component {
 
       let overlapped = false
       for (let j = 0; j < anti.length; ++j) {
-        if (App.areOverlapped(antichrist, anti[j])) {
+        if (App.areOverlapped(antichrist, anti[j], this.props.size.person)) {
           overlapped = true
         }
       }
@@ -283,19 +338,23 @@ export default class App extends Component {
     for (let i = 0; i < n; ++i) {
       let cristian = {
         id: i,
-        x: App.calculateCristianPosition(i, n)[0],
-        y: App.calculateCristianPosition(i, n)[1],
+        x: App.calculateCristianPosition(i, n, this.props.size)[0],
+        y: App.calculateCristianPosition(i, n, this.props.size)[1],
       }
       cristi.push(cristian)
     }
     this.setState({ cristians: cristi })
   }
 
-  static areVeryOverlapped(instance1, instance2) {
-    return App.areOverlapped(instance1, instance2, 12)
+  static areVeryOverlapped(instance1, instance2, size) {
+    return App.areOverlapped(instance1, instance2, size, 12)
   }
 
-  static areOverlapped(instance1, instance2, threshold = 15) {
+  static areOverlapped(instance1, instance2, size, threshold = 15) {
+    if (!App.areSquaresOverlapped(instance1, instance2, size, threshold)) {
+      return false
+    }
+
     return (
       Math.pow(
         Math.pow(instance1.x - instance2.x, 2) +
@@ -305,32 +364,79 @@ export default class App extends Component {
     )
   }
 
+  static areSquaresOverlapped(instance1, instance2, size, threshold) {
+    let x_collapse = false
+    let y_collapse = false
+
+    if (instance1.x < instance2.x) {
+      if (instance1.x + size - instance2.x > size - threshold) {
+        x_collapse = true
+      }
+    } else {
+      if (instance2.x + size - instance1.x > size - threshold) {
+        x_collapse = true
+      }
+    }
+
+    if (instance1.y < instance2.y) {
+      if (instance1.y + size - instance2.y > size - threshold) {
+        y_collapse = true
+      }
+    } else {
+      if (instance2.y + size - instance1.y > size - threshold) {
+        y_collapse = true
+      }
+    }
+
+    return x_collapse || y_collapse
+  }
+
   render() {
     if (this.state.antichrists === null || this.state.cristians === null) {
       return <p>Loading...</p>
     } else if (this.state.antichrists.length === 0) {
       return (
-        <div className="App App_win">
+        <div
+          className="App App_win"
+          style={{
+            width: this.props.size.width,
+            height: this.props.size.height,
+          }}
+        >
           <button onClick={this.restart}>New game</button>
           <h1 className="App__text">Catholics won😇</h1>
         </div>
       )
     } else if (this.state.cristians.length === 0) {
       return (
-        <div className="App App_lose">
+        <div
+          className="App App_lose"
+          style={{
+            width: this.props.size.width,
+            height: this.props.size.height,
+          }}
+        >
           <button onClick={this.restart}>New game</button>
           <h1 className="App__text">Antichrists won😈</h1>
         </div>
       )
     }
+
+    let div_id = 'App' + this.props.id
+
     return (
-      <div className="App" id="App">
-        {this.state.antichrists.map(antichrist => (
+      <div
+        className="App"
+        id={div_id}
+        style={{ width: this.props.size.width, height: this.props.size.height }}
+      >
+        {this.state.antichrists.map((antichrist, index) => (
           <Person
             key={antichrist.id}
             id={antichrist.id}
             x={antichrist.x}
-            y={antichrist.y}
+            y={antichrist.y - this.props.size.person * index}
+            size={this.props.size.person}
             personality={{ isAnti: true, isGoodAnti: antichrist.good }}
           />
         ))}
@@ -339,23 +445,39 @@ export default class App extends Component {
             key={cristian.id}
             id={cristian.id}
             x={cristian.x}
-            y={cristian.y}
+            y={
+              cristian.y -
+              this.props.size.person * (index + this.state.antichrists.length)
+            }
+            size={this.props.size.person}
             personality={{ isAnti: false, isPop: cristian.id === 0 }}
           />
         ))}
-        <div className="Church" />
+        <div
+          className="Church"
+          style={{
+            top:
+              -this.props.size.person *
+              (this.state.cristians.length + this.state.antichrists.length),
+          }}
+        />
       </div>
     )
   }
 
   restart() {
+    this.setState({ antichrists: null, cristians: null })
     this.generateRandomAntichrists(this.props.antichrists)
     this.generateCristians(this.props.cristians)
   }
 
   componentDidMount() {
     this.restart()
-    window.webkitRequestAnimationFrame(this.recalculatePosition)
+    if (this.use_requestFrames) {
+      window.requestAnimationFrame(this.recalculatePosition)
+    } else {
+      setInterval(this.recalculatePosition, 5)
+    }
   }
 
   componentDidUpdate() {
@@ -363,19 +485,29 @@ export default class App extends Component {
       this.clickHandler = true
       this.addClickHandler()
     }
-    window.webkitRequestAnimationFrame(this.recalculatePosition)
+    if (this.use_requestFrames) {
+      window.requestAnimationFrame(this.recalculatePosition)
+    }
   }
 
   addClickHandler() {
-    document.getElementById('App').addEventListener('click', event => {
-      let click_obj = { x: event.clientX, y: event.clientY }
-      for (let i = 0; i < this.state.antichrists.length; ++i) {
-        if (App.areOverlapped(click_obj, this.state.antichrists[i], 15)) {
-          this.handleAntichristClick(this.state.antichrists[i].id)
-          break
+    document
+      .getElementById('App' + this.props.id)
+      .addEventListener('click', event => {
+        let click_obj = { x: event.clientX, y: event.clientY }
+        for (let i = 0; i < this.state.antichrists.length; ++i) {
+          if (
+            App.areOverlapped(
+              click_obj,
+              this.state.antichrists[i],
+              this.props.size.person,
+            )
+          ) {
+            this.handleAntichristClick(this.state.antichrists[i].id)
+            break
+          }
         }
-      }
-    })
+      })
   }
 
   handleAntichristClick(antichrist_id) {
@@ -388,13 +520,21 @@ export default class App extends Component {
     })
 
     cristi.push({
-      id: cristi[cristi.length - 1].id + 1,
+      id: 0,
     })
 
     for (let i = 0; i < cristi.length; ++i) {
       cristi[i].id = i
-      cristi[i].x = App.calculateCristianPosition(i, cristi.length)[0]
-      cristi[i].y = App.calculateCristianPosition(i, cristi.length)[1]
+      cristi[i].x = App.calculateCristianPosition(
+        i,
+        cristi.length,
+        this.props.size,
+      )[0]
+      cristi[i].y = App.calculateCristianPosition(
+        i,
+        cristi.length,
+        this.props.size,
+      )[1]
     }
 
     this.setState({ antichrists: anti, cristians: cristi })

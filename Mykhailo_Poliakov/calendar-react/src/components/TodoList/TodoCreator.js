@@ -1,11 +1,10 @@
 import React from 'react';
 import './Todo.scss';
 import BEM from '../../utils/bem';
-import API from '../../utils/api';
+import api from '../../utils/api';
 import { withState, compose, withHandlers } from 'recompose';
 
 const b = BEM('todo');
-const api = API(process.env.REACT_APP_API_URL, process.env.REACT_APP_API_ENDPOINT);
 
 const TodoCreator = ({ todo, onChange, onSubmit }) => (
   <form className={b('form')} onSubmit={onSubmit}>
@@ -27,7 +26,7 @@ const enhancer = compose(
     },
     onSubmit: ({ onTodoCreate, setTodo, todo }) => e => {
       e.preventDefault();
-      onTodoCreate(todo);
+      if (todo.length) onTodoCreate(todo);
       setTodo('');
     }
   })
