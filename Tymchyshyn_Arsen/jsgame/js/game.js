@@ -75,7 +75,7 @@ function newShape() {
   currentX = Math.floor((columns-4)/2); currentY = 0;
 }
 
-function init() { //Очистить стакан
+function init() {
   for (var y=0; y<rows; ++y) {
     board[y] = [];
     for (var x=0; x<columns; x++) board[y][x] = 0;
@@ -118,7 +118,7 @@ function clearLines() {
         break;
       }
     }
-    if (rowFilled) {
+    if (rowFilled) { //Очистить линию
       cleared++;
       document.getElementById ('clearsound').play();
       for (var yy=y; yy>0; yy--) {
@@ -188,7 +188,7 @@ function playGame() {
   }
 }
 
-function newGame() { //Новая игра
+function newGame() {
   clearInterval (interval);
   init ();
   shaped = 0; newShape ();
