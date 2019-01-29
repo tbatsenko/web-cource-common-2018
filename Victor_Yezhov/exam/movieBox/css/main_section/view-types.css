@@ -5,9 +5,9 @@
 
 .view-type-icon_grid{
     width: 32px;
-    background: url("../../img/grid-view.svg");
-    background-size: 32px 32px;
-    height: 32px;
+    background: url("../../img/grid-view.svg") no-repeat center;
+    background-size: 28px 28px;
+    height: 28px;
     margin-left: 10px;
     border: 0;
 }

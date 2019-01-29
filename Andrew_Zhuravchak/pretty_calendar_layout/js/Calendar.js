@@ -38,6 +38,12 @@ export default class Calendar {
     this.render()
   }
 
+  removeTask(id) {
+    this.tasks = this.tasks.filter(task => task.id.toString() !== id)
+
+    this.render()
+  }
+
   shiftDisplayedMonth(monthsNumber) {
     this.currentDisplayDate = addMonths(this.currentDisplayDate, monthsNumber)
 
@@ -93,11 +99,16 @@ export default class Calendar {
                             <ul class="day__schedule-list">
                               ${day ? this.getTasksForDate(day).map(task => `
                               
-                                  ${task.isEmpty ? `<li class="schedule-item schedule-item--empty"></li>`
-      : `<li class="schedule-item
-                                            ${task.isNotification ? `schedule-item__notification schedule-item__notification--${task.type}">`
-        : `schedule-item__task schedule-item__task--${task.type}">`}
+                                  ${task.isEmpty 
+                                      ? `<li class="schedule-item schedule-item--empty"></li>`
+                                      : `<li class="schedule-item ${task.isNotification
+                                                                  ? `schedule-item__notification schedule-item__notification--${task.type}`
+                                                                  : `schedule-item__task schedule-item__task--${task.type}`
+                                                                  }
+                                          ">
                                             ${task.text}
+                                            
+                                            <button type="button" class="schedule-item__remove-btn" data-id="${task.id}" data-action="remove">X</button>
                                           </li>`
       }                            
                               `) : ``}
@@ -164,6 +175,16 @@ export default class Calendar {
     document.querySelector(`#${this.block_id} #right-month-switch`).addEventListener('click', () => {
       this.shiftDisplayedMonth(1)
     })
+
+    this.block.addEventListener('click', (e) => {
+      try {
+        const { action, id } = e.srcElement.dataset
+
+        if(e.type === "click" && action === "remove")
+          this.removeTask(id)
+      } catch (e) {}
+    })
+
   }
 
 }

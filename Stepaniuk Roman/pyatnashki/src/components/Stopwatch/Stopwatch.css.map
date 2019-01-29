@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAAQ,mEAA2D;AAEnE,UAAW;EACT,QAAQ,EAAE,QAAQ;EAClB,GAAG,EAAE,KAAK;EACV,IAAI,EAAC,KAAK;EACV,gBAAgB,EAAE,OAAO;EACzB,KAAK,EAAE,KAAK;EACZ,MAAM,EAAE,IAAI;EACZ,WAAW,EAAE,IAAI;EACjB,UAAU,EAAE,MAAM;EAClB,SAAS,EAAE,IAAI;EACf,WAAW,EAAE,MAAM;EACnB,WAAW,EAAE,mBAAmB",
+"sources": ["../../../../../../%D0%A0%D0%BE%D0%BC%D0%B0%D0%BD/WebstormProjects/pyatnashki/src/components/Stopwatch/Stopwatch.scss"],
+"names": [],
+"file": "Stopwatch.css"
+}
