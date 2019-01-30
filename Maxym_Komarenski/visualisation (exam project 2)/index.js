@@ -5,7 +5,22 @@ var svg = d3.select("svg").attr("width", width).attr("height", height);
 
 var projection = d3.geoAlbersUsa().scale(900).translate([width/2, height/2])
 
-d3.json("./data.json", function(data) {
+let line = "https://earthquake.usgs.gov/fdsnws/event/1/query?format=geojson&starttime=2017-01-01&endtime=2017-01-08"
+
+let request = new XMLHttpRequest();
+
+request.open('GET', line, true);
+request.onload = function () {
+  let testData = JSON.parse(this.response);
+  //console.log(testData)
+
+  var data = testData["features"].map(function(d) {
+    return {"magnitude": d["properties"]["mag"], "coordinates":[d["geometry"]["coordinates"][0], d["geometry"]["coordinates"][1]]}
+  }).filter(function(d) {
+    return projection(d.coordinates) !== null
+  })
+
+  console.log(data)
 
   var scale  = d3.scaleLinear()
     .domain([1, 10])
@@ -23,7 +38,12 @@ d3.json("./data.json", function(data) {
       return projection(d.coordinates)[1];
     })
     .attr("r", function(d) {
-      return scale(d.magnitude)
+      if (scale(d.magnitude) > 0){
+        return scale(d.magnitude)
+      }else {
+        return 0
+      }
+
     })
     .attr("stroke-width", 0)
     .attr("fill", "steelblue")
@@ -37,4 +57,10 @@ d3.json("./data.json", function(data) {
         .attr("fill-opacity", 0.5)
     });
 
-})
+}
+request.send();
+
+
+
+
+
