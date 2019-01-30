@@ -1,5 +1,5 @@
 function drawBarsGraph(data) {
-    console.log(myMoney)
+    d3.select("svg").remove();
     d3.select("svg").remove();
     let margin = {top: 20, right: 160, bottom: 35, left: 30};
     let width = 700 - margin.left - margin.right,
@@ -145,6 +145,7 @@ function drawBarsGraph(data) {
         .style("text-anchor", "middle")
         .attr("font-size", "12px")
         .attr("font-weight", "bold");
+
 }
 
 function preprocessData(data) {
@@ -159,9 +160,8 @@ function preprocessData(data) {
             for (let innerKey in rates[key]) {
                 if (rates[key].hasOwnProperty(innerKey)) {
                     if (chosenCurrencies.includes(innerKey)) {
-                        elem[innerKey] = (myMoney[innerKey] * rates[key][innerKey]).toFixed(3);
+                        elem[innerKey] = (myMoney[innerKey] / rates[key][innerKey]).toFixed(3);
                     }
-
                 }
             }
             outData.push(elem);
@@ -172,10 +172,9 @@ function preprocessData(data) {
 
 function createChart() {
     let request = new XMLHttpRequest();
-    let line = "https://api.exchangeratesapi.io/history?start_at=2018-12-21&end_at=2019-01-01&symbols=USD,GBP,CAD,CHF&base={1}";
+    let line = "https://api.exchangeratesapi.io/history?start_at=2019-01-20&end_at=2019-01-26&symbols=USD,GBP,CAD,CHF&base={1}";
 
     line = line.replace("{1}", baseCurrency);
-
     request.open('GET', line, true);
     request.onload = function () {
 
@@ -183,8 +182,11 @@ function createChart() {
         let testData = JSON.parse(this.response);
 
         let data = preprocessData(testData);
-
+        console.log(data);
         drawBarsGraph(data);
+        // console.log(myMoney);
+        drawLineGraph(data);
+
     };
     request.send();
 }
