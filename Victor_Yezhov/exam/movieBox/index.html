@@ -19,7 +19,7 @@
                 <div class="col-6">
                     <section title="login-sign_up" class="login-sign-up-section">
                         <img src="img/search.png" class="login-sign-up-section__search-icon">
-                        <p class="text_no_margin login-sign_up-section__login-text">Login</p>
+                        <button class="button  button_theme-transparent button__view-bold">Login</button>
                         <button class="button button_theme-pink button__sign-up">SIGN UP</button>
                     </section>
                 </div>
@@ -39,7 +39,7 @@
                         <div class="film-actions">
                             <button class="button button_theme-pink button__watch-movie">WATCH MOVIE</button>
                             <button class="button button_theme-dark button__view-info">VIEW INFO</button>
-                            <button class="button  button_theme-transparent button__view-add-to-wish-list">+ ADD TO WISHLIST</button>
+                            <button class="button  button_theme-transparent button__view-bold">+ ADD TO WISHLIST</button>
                         </div>
                     </section>
                 </div>
@@ -127,11 +127,14 @@
                    {{/each}}
                </script>
            </section>
-        <div>
-           <p class="bottom-text">Loading</p>
+
+
+        <div class="col-12" style="display: flex; justify-content: center">
+            <img src="img/loading.PNG" class="loading-image">
         </div>
+           <p class="bottom-text col-12">Loading</p>
     </div>
-    <footer class="footer">
+    <footer class="footer col-12">
         <div class="clearfix">
             <div class="col-6">
                 <p class="footer__logo-text">THEMOVIEBOX</p>

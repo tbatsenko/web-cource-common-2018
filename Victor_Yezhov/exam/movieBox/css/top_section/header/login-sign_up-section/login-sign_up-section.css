@@ -1,6 +1,6 @@
 .login-sign-up-section{
     display: flex;
-    align-items: center;
+    align-items: baseline;
     justify-content: flex-end;
 }
 
@@ -46,9 +46,10 @@
     width: 130px;
     height: 55px;
 }
-.button__view-add-to-wish-list{
+.button__view-bold{
     font-weight: 600;
 }
+
 
 .login-sign-up-section__search-icon{
     margin-right: 15px;
