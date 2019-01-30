@@ -1,21 +1,19 @@
 
 .main{
-  //display: flex;
   width: 100%;
-  //align-items: center;
-  //flex-direction: column;
+
 }
 
 .header {
-  display: flex;
+  //display: flex;
   height: 96px;
-  flex-wrap: wrap;
+  //flex-wrap: wrap;
   width: 100%;
-  flex-direction: row;
-  justify-content: space-between;
+  //flex-direction: row;
+  //justify-content: space-between;
 
   &__search{
-    display: inherit;
+    //display: inherit;
     &__input{
       width: 114px;
 
@@ -24,7 +22,7 @@
       height: 24px;
       padding: 5px;
       font-size: 14px;
-      vertical-align: middle;
+      //vertical-align: middle;
       box-sizing: border-box;
       margin-right: 0;
     }
@@ -32,13 +30,13 @@
 
   &__main{
     width: 100%;
-    display: inherit;
-    justify-content: space-between;
+    //display: inherit;
+    //justify-content: space-between;
     padding: 26px;
   }
 
   &__menu-cnt{
-    display: inherit;
+    //display: inherit;
   }
 
   &__menu-btn{
@@ -51,7 +49,7 @@
   }
 
   &__logo {
-    justify-self: center;
+    //justify-self: center;
     text-decoration: none;
     color: black;
   }
@@ -61,7 +59,7 @@
 
     &--main{
       width: 100%;
-      justify-self: end;
+      //justify-self: end;
     }
   }
 
@@ -96,7 +94,7 @@
   }
 }
 
-.content-block-centered {
+.content-block {
   width: 100%;
 
 
@@ -104,7 +102,7 @@
     height: 60px;
     font-family: Baskerville, sans-serif;
     font-size: 36px;
-    justify-self: center;
+;
     text-align: center;
 
   }
@@ -112,9 +110,14 @@
     text-align: center;
   }
 
-  &__link{
+  &__name{
+    text-align: center;
+  }
 
+  &__link{
+    text-align: center;
     color: black;
+    display: block;
   }
 
   &__img-block{
@@ -138,9 +141,10 @@
     object-fit: cover;
     margin: 7px;
   }
+
   &__img-medium{
     width: 340px;
-    height: 470px;
+    height: 340px;
     object-fit: cover;
     margin: 7px;
   }
@@ -149,8 +153,33 @@
     padding: 0 0 0 48px;
   }
 
-  &__img-grid{
-
-  }
 }
 
+.footer{
+  width: 100%;
+  background-color: #f9f8f6;
+
+  &__subscription{
+    display: inherit;
+  }
+
+
+  &__subscription-btn{
+    font-size: 15px;
+    border: none;
+    height: 24px;
+    color: white;
+    background-color: #444444;
+  }
+
+  &__email__input{
+    width: 114px;
+    border-radius: 1px 0 0 1px ;
+    border-color: rgba(0, 0, 0, 0.25);
+    height: 24px;
+    padding: 5px;
+    font-size: 15px;
+    box-sizing: border-box;
+    margin-right: 0;
+  }
+}
