@@ -149,7 +149,7 @@ function drawBarsGraph(data) {
 function preprocessData(data) {
     let outData = [];
     let rates = data["rates"];
-    let chosenDates = ["2018-01-22", "2018-04-23", "2018-07-23", "2018-11-23", "2019-01-25"];
+    let chosenDates = ["2018-01-22", "2018-04-23", "2018-07-23", "2018-11-23", "2019-01-25", "2019-04-25"];
     let moneyConverted = [];
     // console.log(rates);
     rates = sortOnKeys(rates);
@@ -169,7 +169,6 @@ function preprocessData(data) {
             }
         }
     }
-
     return moneyConverted;
 }
 
@@ -177,8 +176,10 @@ function createChart() {
     let request = new XMLHttpRequest();
     let line = "https://api.exchangeratesapi.io/history?start_at=2018-01-20&end_at=2019-01-26&symbols={currs}&base={1}";
     let currStr = "";
+    let futureRates = {};
     for (let key in myMoney) {
         if (baseCurrencyOptions.includes(key)) {
+            futureRates[key] = 1;
             currStr += key + ",";
         }
     }
@@ -188,8 +189,9 @@ function createChart() {
     request.open('GET', line, true);
     request.onload = function () {
         // Begin accessing JSON data here
-        let chosenDates = ["2018-01-22", "2018-04-23", "2018-07-23", "2018-11-23", "2019-01-25"];
+        let chosenDates = ["2018-01-22", "2018-04-23", "2018-07-23", "2018-11-23", "2019-01-25", "2019-04-25"];
         let testData = JSON.parse(this.response);
+        testData["rates"]["2019-04-25"] = futureRates;
         let finalData = {};
         for (let key in testData["rates"]) {
             if (chosenDates.includes(key)) {
@@ -199,7 +201,7 @@ function createChart() {
         finalData = sortOnKeys(finalData);
         let data = preprocessData(testData);
         // console.log(data);
-        console.log(finalData);
+        // console.log(finalData);
         drawBarsGraph(data);
         drawLineGraph(finalData);
     };
@@ -207,18 +209,14 @@ function createChart() {
 }
 
 function sortOnKeys(dict) {
-
     let sorted = [];
     for (let key in dict) {
         sorted[sorted.length] = key;
     }
     sorted.sort();
-
     let tempDict = {};
     for (let i = 0; i < sorted.length; i++) {
         tempDict[sorted[i]] = dict[sorted[i]];
     }
-
     return tempDict;
 }
-

@@ -15,13 +15,12 @@ function prepareLineData(data) {
         out += datesKeys;
         for (let curr in value) {
             if (baseCurrencyOptions.includes(curr)) {
-                out += "\t" + (1/value[curr]);
+                out += "\t" + (1 / value[curr]);
             }
         }
         out += "\n";
     }
-    console.log(out);
-
+    // console.log(out);
     return out
 }
 
@@ -71,8 +70,8 @@ function drawLineGraph(dataTry) {
         .append("g")
         .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
-    let data = d3.tsv.parse(myData);
 
+    let data = d3.tsv.parse(myData);
     color.domain(d3.keys(data[0]).filter(function (key) {
         return key !== "date";
     }));
@@ -104,6 +103,7 @@ function drawLineGraph(dataTry) {
             });
         })
     ]);
+
 
     let legend = svg.selectAll('g')
         .data(cities)
@@ -176,6 +176,7 @@ function drawLineGraph(dataTry) {
             return d.name;
         });
 
+
     let mouseG = svg.append("g")
         .attr("class", "mouse-over-effects");
 
@@ -184,7 +185,6 @@ function drawLineGraph(dataTry) {
         .style("stroke", "black")
         .style("stroke-width", "1px")
         .style("opacity", "0");
-
     let lines = document.getElementsByClassName('line');
 
     let mousePerLine = mouseG.selectAll('.mouse-per-line')
@@ -264,5 +264,4 @@ function drawLineGraph(dataTry) {
                     return "translate(" + mouse[0] + "," + pos.y + ")";
                 });
         });
-
 }
