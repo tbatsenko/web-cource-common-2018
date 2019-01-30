@@ -1,109 +1,102 @@
+import ApiService from './ApiService';
+
 export default class TodoList {
   constructor(serverURL = 'http://localhost:3000') {
     this.serverURL = serverURL;
     this.todosURL = `${serverURL}/todos/`;
     this.selectedDate = '';
-    this.updateTodoList();
+    this.tasks = JSON.parse(localStorage.getItem('tasks'));
+    if (this.tasks) {
+      this.updateTodoList();
+    } else this.tasks = [];
 
     document.getElementById('add-btn').addEventListener('click', () => {
       if (this.selectedDate) this.addTodo(this.selectedDate);
       else this.addTodo();
     });
+
+    document.getElementById('add-task').addEventListener('keydown', event => {
+      if (event.code === 'Enter') {
+        if (this.selectedDate) this.addTodo(this.selectedDate);
+        else this.addTodo();
+      }
+    });
+
+    document.getElementById('todo-list');
   }
 
-  async getTodos(filterDate = '') {
-    const url = this.serverURL + (filterDate === '' ? `/todos` : `/todos/?when=${filterDate}`);
-    return (await fetch(url)).json();
+  async getTodos() {
+    const url =
+      this.serverURL + (this.selectedDate === '' ? `/todos` : `/todos/?when=${this.selectedDate}`);
+    const todosResp = await ApiService.getRequest(url);
+    return todosResp;
   }
 
-  async addTodo(date = '2019-1-4') {
+  async addTodo(date = '2019-1-30') {
     const taskTitle = document.getElementById('add-task').value;
 
     if (taskTitle === '') {
       alert("TODO input can't be empty, please add some description"); // eslint-disable-line no-alert
-    } else {
-      const response = await (await fetch(this.todosURL, {
-        method: 'POST',
-        body: JSON.stringify({
-          title: taskTitle,
-          status: 'active',
-          when: date
-        }), // data can be `string` or {object}!
-        headers: {
-          'Content-Type': 'application/json'
-        }
-      })).json();
-
-      const success = resp => {
-        console.log('Success:', JSON.stringify(resp)); // eslint-disable-line no-console
-        this.updateTodoList();
-      };
-
-      try {
-        success(response);
-      } catch (error) {
-        console.error(error); // eslint-disable-line no-console
-      }
+      // Clear the input
+      document.getElementById('add-task').value = '';
+      return;
     }
+
+    const newTask = {
+      uniqueId: TodoList.getUniqueID(),
+      title: taskTitle,
+      status: 'active',
+      when: date
+    };
+
+    this.tasks.push(newTask);
+    localStorage.setItem('tasks', JSON.stringify(this.tasks));
+    // await ApiService.postRequest(this.todosURL, requestBody);
+
+    this.updateTodoList(date);
+
     // Clear the input
     document.getElementById('add-task').value = '';
   }
 
   async deleteTodo(itemId) {
-    const url = `${this.todosURL}${itemId}`;
-
-    const response = await (await fetch(url, {
-      method: 'DELETE',
-      headers: {
-        'Content-Type': 'application/json'
-      }
-    })).json();
-
-    const success = resp => {
-      console.log('Success:', JSON.stringify(resp)); // eslint-disable-line no-console
-      this.updateTodoList();
-    };
-
-    try {
-      success(response);
-    } catch (error) {
-      console.error(error); // eslint-disable-line no-console
-    }
+    // const url = `${this.todosURL}${itemId}`;
+    // await ApiService.deleteRequest(url);
+    this.tasks = this.tasks.filter(task => task.uniqueId !== itemId);
+    localStorage.setItem('tasks', JSON.stringify(this.tasks));
+    this.updateTodoList();
   }
 
   async updateTodoStatus(itemId, status) {
-    const url = `${this.todosURL}${itemId}`;
+    // const url = `${this.todosURL}${itemId}`;
     const statusString = status ? 'completed' : 'active';
 
-    const response = await (await fetch(url, {
-      method: 'PATCH',
-      body: JSON.stringify({
-        status: statusString
-      }),
-      headers: {
-        'Content-Type': 'application/json'
-      }
-    })).json();
-    const success = resp => {
-      console.log('Success:', JSON.stringify(resp)); // eslint-disable-line no-console
-      this.updateTodoList();
-    };
+    // const requestBody = {
+    //   status: statusString
+    // };
 
-    try {
-      success(response);
-      this.updateTodoList();
-    } catch (error) {
-      console.error(error); // eslint-disable-line no-console
-    }
+    // await ApiService.patchRequest(url, requestBody);
+    let taskToEdit = this.tasks.filter(task => task.uniqueId === itemId);
+    this.tasks = this.tasks.filter(task => task.uniqueId !== itemId);
+    console.log(taskToEdit);
+    taskToEdit[0].status = statusString;
+    this.tasks.push(taskToEdit[0]);
+
+    localStorage.setItem('tasks', JSON.stringify(this.tasks));
+
+    this.updateTodoList(this.selectedDate);
   }
 
   async updateTodoList(filterDate = '') {
-    let todos;
+    // try {
+    //   todos = await this.getTodos(filterDate);
+    // } catch (e) {
+    //   console.error(e); // eslint-disable-line no-console
+    // }
 
-    try {
-      todos = await this.getTodos(filterDate);
-    } catch (e) {
-      console.error(e); // eslint-disable-line no-console
+    let todos = JSON.parse(localStorage.getItem('tasks'));
+    if (this.selectedDate !== '' && todos) {
+      todos = todos.filter(todo => todo.when === this.selectedDate);
     }
 
     const todosEl = document.getElementById('todos');
@@ -118,11 +111,11 @@ export default class TodoList {
       const todoDate = document.createElement('p');
 
       todoCheckbox.type = 'checkbox';
-      todoCheckbox.id = `checkbox-${todo.id}`;
+      todoCheckbox.id = `checkbox-${todo.uniqueId}`;
       todoCheckbox.className = 'todo-checkbox';
 
       todoDeleteBtn.innerHTML = 'Delete';
-      todoDeleteBtn.id = `del-btn-${todo.id}`;
+      todoDeleteBtn.id = `del-btn-${todo.uniqueId}`;
       todoDeleteBtn.className = 'delete-button';
 
       todoDate.innerHTML = todo.when;
@@ -164,10 +157,18 @@ export default class TodoList {
           const itemId = event.target.id.split('-').pop(); // checkbox-10
           const checkboxStatus = event.target.checked;
           this.updateTodoStatus(itemId, checkboxStatus);
+          this.updateTodoList();
         } catch (e) {
           console.error(e); // eslint-disable-line no-console
         }
       })
     );
+  }
+
+  static getUniqueID() {
+    // Math.random should be unique because of its seeding algorithm.
+    // Convert it to base 36 (numbers + letters), and grab the first 9 characters
+    // after the decimal.
+    return '_' + Math.random().toString(36).substr(2, 9);
   }
 }

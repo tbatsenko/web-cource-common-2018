@@ -1,7 +1,5 @@
-import TodoList from './TodoList';
-
 export default class Calendar {
-  constructor(todoList = new TodoList()) {
+  constructor() {
     this.today = new Date();
     this.currentMonth = this.today.getMonth();
     this.currentYear = this.today.getFullYear();
@@ -10,7 +8,16 @@ export default class Calendar {
     this.selectedDate = this.today;
     this.selectedCellId = '';
 
-    this.todoList = todoList;
+    this.onSelectDate = date => {
+      const onSelectDateEvent = Calendar.createDateUpdateEvent('onSelectDateEvent', date);
+      document.getElementById('app').dispatchEvent(onSelectDateEvent);
+    };
+
+    this.onResetDate = () => {
+      const date = '';
+      const onResetDateEvent = Calendar.createDateUpdateEvent('onResetDateEvent', date);
+      document.getElementById('app').dispatchEvent(onResetDateEvent);
+    };
 
     this.months = [
       'Jan',
@@ -30,7 +37,7 @@ export default class Calendar {
 
     document.getElementById('reset-date').addEventListener('click', () => {
       this.updateShownDate();
-      this.todoList.updateTodoList();
+      this.onResetDate();
     });
 
     this.showCalendar(this.currentMonth, this.currentYear);
@@ -38,6 +45,7 @@ export default class Calendar {
   }
 
   next() {
+    this.onSelectDate();
     this.currentYear = this.currentMonth === 11 ? this.currentYear + 1 : this.currentYear;
     this.currentMonth = (this.currentMonth + 1) % 12;
     this.showCalendar(this.currentMonth, this.currentYear);
@@ -67,7 +75,7 @@ export default class Calendar {
       const newDate = `${this.months[dateArr[1] - 1]} ${dateArr[2]}, ${dateArr[0]}`; // Dec 9, 2018
       innerText = `Tasks for ${newDate}`;
       this.selectedDate = date;
-      this.todoList.selectedDate = date;
+      this.onSelectDate(date);
     }
     document.getElementById('today-date').innerText = innerText;
   }
@@ -123,10 +131,7 @@ export default class Calendar {
             this.selectedCellId = event.target.id;
 
             this.updateShownDate(filterByDate);
-            this.todoList.updateTodoList(filterByDate);
-
-            const stateObj = { foo: 'bar' };
-            history.pushState(stateObj, 'page 2', '');
+            this.onSelectDate(filterByDate);
           });
           if (
             date === this.today.getDate() &&
@@ -143,5 +148,17 @@ export default class Calendar {
       }
       tbl.appendChild(row); // appending each row into calendar body.
     }
+  }
+
+  static createDateUpdateEvent(eventName, dateToUpdate) {
+    return new CustomEvent(eventName, {
+      detail: {
+        message: 'onSelectDateEvent',
+        time: new Date(),
+        date: dateToUpdate
+      },
+      bubbles: true,
+      cancelable: true
+    });
   }
 }

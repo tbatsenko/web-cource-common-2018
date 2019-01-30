@@ -9,6 +9,7 @@
     "shared-node-browser": true
   },
   "settings": {
-    "no-alert": false
+    "no-alert": false,
+    "class-methods-use-this": false
   }
 }

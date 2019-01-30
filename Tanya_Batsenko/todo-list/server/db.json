@@ -4,22 +4,10 @@
   },
   "todos": [
     {
-      "title": "pass web exam ",
+      "title": "learn Web",
       "status": "active",
-      "when": "2019-1-4",
+      "when": "2019-1-30",
       "id": 1
-    },
-    {
-      "title": "super task",
-      "status": "active",
-      "when": "2019-1-4",
-      "id": 2
-    },
-    {
-      "title": "mytask",
-      "status": "active",
-      "when": "2019-1-24",
-      "id": 3
     }
   ]
 }
