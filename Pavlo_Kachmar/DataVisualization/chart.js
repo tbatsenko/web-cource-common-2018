@@ -14,7 +14,6 @@ function drawBarsGraph(data) {
 
     let parse = d3.time.format("%Y-%m-%d").parse;
 
-    // Transpose the data into layers
     let dataset = d3.layout.stack()(chosenCurrencies.map(function (currency) {
         return data.map(function (d) {
             return {x: parse(d.year), y: +d[currency]};
@@ -65,7 +64,6 @@ function drawBarsGraph(data) {
         .call(xAxis);
 
 
-    // Create groups for each series, rects for each segment
     let groups = svg.selectAll("g.cost")
         .data(dataset)
         .enter().append("g")
@@ -151,42 +149,59 @@ function drawBarsGraph(data) {
 function preprocessData(data) {
     let outData = [];
     let rates = data["rates"];
-
+    let chosenDates = ["2018-01-22", "2018-04-23", "2018-07-23", "2018-11-23", "2019-01-25"];
+    let moneyConverted = [];
+    // console.log(rates);
     rates = sortOnKeys(rates);
     for (let key in rates) {
         if (rates.hasOwnProperty(key)) {
             let elem = {};
             elem["year"] = key;
-            for (let innerKey in rates[key]) {
-                if (rates[key].hasOwnProperty(innerKey)) {
-                    if (chosenCurrencies.includes(innerKey)) {
-                        elem[innerKey] = (myMoney[innerKey] / rates[key][innerKey]).toFixed(3);
+            if (chosenDates.includes(key)) {
+                for (let innerKey in rates[key]) {
+                    if (rates[key].hasOwnProperty(innerKey)) {
+                        if (chosenCurrencies.includes(innerKey)) {
+                            elem[innerKey] = (myMoney[innerKey] / rates[key][innerKey]).toFixed(3);
+                        }
                     }
                 }
+                moneyConverted.push(elem);
             }
-            outData.push(elem);
         }
     }
-    return outData;
+
+    return moneyConverted;
 }
 
 function createChart() {
     let request = new XMLHttpRequest();
-    let line = "https://api.exchangeratesapi.io/history?start_at=2019-01-20&end_at=2019-01-26&symbols=USD,GBP,CAD,CHF&base={1}";
-
+    let line = "https://api.exchangeratesapi.io/history?start_at=2018-01-20&end_at=2019-01-26&symbols={currs}&base={1}";
+    let currStr = "";
+    for (let key in myMoney) {
+        if (baseCurrencyOptions.includes(key)) {
+            currStr += key + ",";
+        }
+    }
+    currStr = currStr.substr(0, currStr.length - 1);
+    line = line.replace("{currs}", currStr);
     line = line.replace("{1}", baseCurrency);
     request.open('GET', line, true);
     request.onload = function () {
-
         // Begin accessing JSON data here
+        let chosenDates = ["2018-01-22", "2018-04-23", "2018-07-23", "2018-11-23", "2019-01-25"];
         let testData = JSON.parse(this.response);
-
+        let finalData = {};
+        for (let key in testData["rates"]) {
+            if (chosenDates.includes(key)) {
+                finalData[key] = testData["rates"][key]
+            }
+        }
+        finalData = sortOnKeys(finalData);
         let data = preprocessData(testData);
-        console.log(data);
+        // console.log(data);
+        console.log(finalData);
         drawBarsGraph(data);
-        // console.log(myMoney);
-        drawLineGraph(data);
-
+        drawLineGraph(finalData);
     };
     request.send();
 }

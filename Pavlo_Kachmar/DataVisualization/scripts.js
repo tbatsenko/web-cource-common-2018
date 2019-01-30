@@ -1,8 +1,8 @@
 const currencyOptions = ["USD", "CAD", "GBP", "CHF"];
 const baseCurrencyOptions = ["USD", "CAD", "GBP", "CHF"];
 let chosenCurrencies = [currencyOptions[0]];
-let baseCurrency = "USD";
-var myMoney = {"USD": 1};
+let baseCurrency = currencyOptions[0];
+let myMoney = {};
 
 function tasksCreator() {
     let inputBox = document.createElement("INPUT");
@@ -21,6 +21,7 @@ function tasksCreator() {
         option.text = currencyOptions[i];
         currencySelectList.appendChild(option);
     }
+
     currencySelectList.change = function () {
         if (!(chosenCurrencies.includes(currencySelectList.value)))
             chosenCurrencies.push(currencySelectList.value);
