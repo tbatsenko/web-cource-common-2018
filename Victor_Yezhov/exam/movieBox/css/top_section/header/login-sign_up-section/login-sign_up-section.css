@@ -24,6 +24,10 @@
      border: 1px solid rgb(255, 0, 121);
      background-color: rgb(255, 0, 121);
  }
+.button_theme-transparent{
+    border: 0;
+    background-color: transparent;
+}
 .button_theme-dark{
     border: 1px solid white;
     background-color: black;
@@ -41,6 +45,9 @@
 .button__view-info{
     width: 130px;
     height: 55px;
+}
+.button__view-add-to-wish-list{
+    font-weight: 600;
 }
 
 .login-sign-up-section__search-icon{
