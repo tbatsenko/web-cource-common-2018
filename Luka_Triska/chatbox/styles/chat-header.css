@@ -24,6 +24,8 @@
   .chat-header__action-button {
     border: 0;
     background: 0; }
+  .chat-header__action-button:hover {
+    cursor: pointer; }
   .chat-header__action-button-img {
     width: 12px;
     height: 12px; }

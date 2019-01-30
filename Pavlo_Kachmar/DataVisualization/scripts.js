@@ -2,7 +2,7 @@ const currencyOptions = ["USD", "CAD", "GBP", "CHF"];
 const baseCurrencyOptions = ["USD", "CAD", "GBP", "CHF"];
 let chosenCurrencies = [currencyOptions[0]];
 let baseCurrency = "USD";
-let myMoney = {"USD": 1};
+var myMoney = {"USD": 1};
 
 function tasksCreator() {
     let inputBox = document.createElement("INPUT");
