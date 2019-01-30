@@ -1,9 +1,9 @@
 
 .main{
-  display: flex;
+  //display: flex;
   width: 100%;
-  align-items: center;
-  flex-direction: column;
+  //align-items: center;
+  //flex-direction: column;
 }
 
 .header {
@@ -98,27 +98,27 @@
 
 .content-block-centered {
   width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
+
 
   &__header{
     height: 60px;
     font-family: Baskerville, sans-serif;
     font-size: 36px;
     justify-self: center;
+    text-align: center;
 
   }
+  &__description{
+    text-align: center;
+  }
+
   &__link{
 
     color: black;
   }
 
   &__img-block{
-    width: 60%;
-    display: flex;
-    flex-wrap: wrap;
+
 
   }
 
@@ -150,8 +150,7 @@
   }
 
   &__img-grid{
-    //display: grid;
-    //grid-template-columns: repeat(4, 185px) ;
+
   }
 }
 
