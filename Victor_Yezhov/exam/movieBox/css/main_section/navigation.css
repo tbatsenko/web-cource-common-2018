@@ -12,14 +12,14 @@
     font-size: 20px;
     color: rgb(128, 129, 138);
 }
-.navigation__link_container{
+.navigation__link-container{
     padding-bottom: 20px;
     border-bottom: 3px solid transparent;
     text-align: center;
 }
-.navigation__link_container:hover{
+.navigation__link-container:hover{
     border-bottom: 3px solid #ff0079;
 }
-.navigation__link_container:hover a{
+.navigation__link-container:hover a{
     color:#ff0079;
 }

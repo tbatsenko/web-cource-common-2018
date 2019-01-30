@@ -5,9 +5,8 @@
 }
 
 .bottom-nav{
-   display: flex;
+    display: flex;
     justify-content: flex-end;
-
 }
 
 .bottom-nav__item{
