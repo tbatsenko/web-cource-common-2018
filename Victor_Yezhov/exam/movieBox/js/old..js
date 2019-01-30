@@ -1,9 +1,7 @@
+let loadJSON = function() {
+    let xobj = new XMLHttpRequest();
+    return new Promise(function (resolve, reject) {
 
-
-
-(async () => {
-    let response = await new Promise((resolve, reject) => {
-        let xobj = new XMLHttpRequest();
         xobj.overrideMimeType("application/json");
         xobj.open('GET', 'js/data.json', true);
         xobj.onreadystatechange = function () {
@@ -16,11 +14,9 @@
                 });
             }
         };
-        xobj.send();
-    });
-    createHTML(response)
-})();
-
+        xobj.send(null);
+    })
+};
 function createHTML(json) {
     let template = document.getElementById("film-template").innerHTML;
     let compiledTemplate = Handlebars.compile(template);
@@ -29,3 +25,6 @@ function createHTML(json) {
     let container = document.getElementById("film-container");
     container.innerHTML = generatedHTML
 }
+loadJSON().then(function (films) {
+    createHTML(films)
+});
