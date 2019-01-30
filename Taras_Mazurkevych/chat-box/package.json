@@ -39,6 +39,7 @@
   },
   "dependencies": {
     "@babel/polyfill": "^7.0.0",
+    "handlebars": "^4.0.12",
     "move-js": "^0.5.0"
   }
 }
