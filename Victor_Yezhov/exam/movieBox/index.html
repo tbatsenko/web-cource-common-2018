@@ -9,11 +9,11 @@
 <body>
 <div class="page">
     <img src="img/wrath.jpg" class="page__background-image">
-    <div class="upper-section col-12">
-        <div class="col-6">
+    <div class="upper-section page__col page__col_12">
+        <div class="page__col page__col_6">
             <p class="logo-text logo-text_big text_no-margin">THEMOVIEBOX</p>
         </div>
-        <div class="col-6">
+        <div class="page__col page__col_6">
             <section title="login-sign_up" class="login-sign-up-section">
                 <img src="img/search.png" class="login-sign-up-section__search-icon">
                 <button class="button  button_theme-transparent button__view-bold button-login" >Login</button>
@@ -21,7 +21,7 @@
             </section>
         </div>
         <div class="upper-section__bottom-line">
-            <div class="col-6">
+            <div class=" page__col page__col_6">
                 <section title="film-info" class="film-info-container">
                     <h1 class="film-name film-name_big film-name_while-theme">WRATH OF TITANS</h1>
                     <div class="film-info">
@@ -40,7 +40,7 @@
                 </section>
             </div>
 
-            <div class="col-6">
+            <div class="page__col page__col_6">
                 <div class="rating-section-container">
                     <section title="rating" class="rating-section">
                         <div class="rating-container__text-container">
@@ -75,24 +75,24 @@
         </div>
 
     </div>
-    <div class="col-12">
-        <div class="col-6">
+    <div class="page__col page__col_12">
+        <div class="page__col page__col_6">
             <nav class="navigation">
-                <div class="navigation__link-container col-3">
+                <div class="navigation__link-container page__col page__col_3">
                     <a href="#" class="navigation__link">Trending</a>
                 </div>
-                <div class="navigation__link-container col-3">
+                <div class="navigation__link-container page__col page__col_3">
                     <a href="#" class="navigation__link">Top Rated</a>
                 </div>
-                <div class="navigation__link-container col-3">
+                <div class="navigation__link-container page__col page__col_3">
                     <a href="#" class="navigation__link">New Arrivals</a>
                 </div>
-                <div class="navigation__link-container col-3">
+                <div class="navigation__link-container page__col page__col_3">
                     <a href="#" class="navigation__link">Genre</a>
                 </div>
             </nav>
         </div>
-        <div class="col-6">
+        <div class="page__col page__col_6">
             <div class="film-list-display-type-container">
                 <button class="film-list-display-type-grid"/>
                 <button class="film-list-display-type-list"/>
@@ -100,10 +100,10 @@
         </div>
     </div>
 
-    <section title="film list" class="films-container col-12" id="film-container">
+    <section title="film list" class="films-container page__col page__col_12" id="film-container">
         <script type="text/x-handlebars-template" id="film-template">
             {{#each films}}
-            <div class="col-3">
+            <div class="page__col page__col_3">
                 <section title="film" class="film-description">
                     <img src="{{image_url}}" class="film-description__film-image">
                     <div class="film-description__info-container">
@@ -126,17 +126,17 @@
     </section>
 
 
-    <div class="col-12" style="display: flex; justify-content: center">
+    <div class="page__col page__col_12" style="display: flex; justify-content: center">
         <img src="img/loading.PNG" class="loading-image">
     </div>
-    <p class="bottom-text col-12">Loading</p>
+    <p class="bottom-text page__col page__col_12">Loading</p>
 </div>
-<footer class="footer col-12">
+<footer class="footer page__col page__col_12">
     <div class="clearfix">
-        <div class="col-6">
+        <div class="page__col page__col_6">
             <p class="footer__logo-text">THEMOVIEBOX</p>
         </div>
-        <div class="col-6">
+        <div class="page__col page__col_6">
             <nav class="bottom-nav">
                 <a href="#" class="bottom-nav__item">About</a>
                 <a href="#" class="bottom-nav__item">Movies</a>
@@ -146,11 +146,11 @@
         </div>
     </div>
     <div class="full-line"></div>
-    <div class="col-6">
+    <div class="page__col page__col_6">
         <p class="footer__signature">Designed by Milan Houter. All rights reserved.</p>
     </div>
 </footer>
 <script src="../movieBox/js/handlebars-v4.0.12.js"></script>
 <script src="js/data-load.js"></script>
-</body>
+</body>s
 </html>
