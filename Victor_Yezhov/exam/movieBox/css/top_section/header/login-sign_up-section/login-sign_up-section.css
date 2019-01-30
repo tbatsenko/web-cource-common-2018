@@ -1,6 +1,6 @@
 .login-sign-up-section{
     display: flex;
-    align-items: baseline;
+    align-items: center;
     justify-content: flex-end;
 }
 
@@ -49,7 +49,9 @@
 .button__view-bold{
     font-weight: 600;
 }
-
+.button-login{
+    margin-top: 0;
+}
 
 .login-sign-up-section__search-icon{
     margin-right: 15px;
