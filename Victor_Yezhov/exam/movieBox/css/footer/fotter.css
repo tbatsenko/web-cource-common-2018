@@ -1,13 +1,12 @@
 .footer{
     padding: 50px;
-    height: 100px;
+    height: 130px;
     background-color: white;
 }
 
 .bottom-nav{
-   display: flex;
+    display: flex;
     justify-content: flex-end;
-
 }
 
 .bottom-nav__item{
