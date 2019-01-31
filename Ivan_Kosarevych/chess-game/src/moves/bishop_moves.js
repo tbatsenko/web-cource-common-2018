@@ -7,7 +7,7 @@ export function bishopValidMoves(board, [row, col]) {
         nw: diagonal_moves.filter(([r, c]) => r < row && c < col),
         ne: diagonal_moves.filter(([r, c]) => r < row && c > col),
         se: diagonal_moves.filter(([r, c]) => r > row && c > col),
-        sw: diagonal_moves.filter(([r, c]) => r > row && c < col)
+        sw: diagonal_moves.filter(([r, c    ]) => r > row && c < col)
     };
     moves = moves.concat(bishopNWMoves(moves_by_directions.nw, board, [row, col]));
     moves = moves.concat(bishopNEMoves(moves_by_directions.ne, board, [row, col]));

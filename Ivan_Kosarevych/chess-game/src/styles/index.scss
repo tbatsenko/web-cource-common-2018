@@ -11,3 +11,19 @@ ol, ul {
 #root{
   display: flex;
 }
+
+.control-button{
+  margin: 5px 20px;
+  background-color: transparent;
+  border-radius: 10px;
+  font-size: 14px;
+  font-family: sans-serif;
+  cursor: pointer;
+  color: #3498db;
+  &--w{
+    background-color: white;
+  }
+  &--b{
+    background-color: #34495e;
+  }
+}

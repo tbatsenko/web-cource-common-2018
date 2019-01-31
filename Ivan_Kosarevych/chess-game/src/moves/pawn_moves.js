@@ -5,10 +5,7 @@ export default function pawnValidMoves(board, [row, col]) {
 
     let moves = pawnMovedCheck(pawn, [row, col]);
     moves = pawnFilterFigures(board, [row, col], moves);
-    moves = moves.concat(pawnFindEnemies(board, [row, col]));
-
-    console.log(moves);
-    return moves;
+    return moves.concat(pawnFindEnemies(board, [row, col]));
 }
 
 function pawnMovedCheck(pawn, [row, col]){

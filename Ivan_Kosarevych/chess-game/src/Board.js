@@ -30,10 +30,12 @@ export default class Board extends React.Component {
       figure_color = figure.color;
     }
 
-    let selected_sq = this.props.selected_square;
+    let selected_sq = "selected_square" in this.props ? this.props.selected_square : null;
     let is_selected = selected_sq && selected_sq[0] === row && selected_sq[1] === col;
-    let is_valid_move = this.props.valid_moves.find(([r, c]) => r === row && c === col);
-
+    let is_valid_move = "valid_moves" in this.props ? this.props.valid_moves.find(([r, c]) => r === row && c === col) : null;
+    let on_click = () => "onClick" in this.props ? () => {
+        return this.props.onClick([row, col])
+    } : () => {};
     return (
       <Square
           key={row*8+col}
@@ -42,9 +44,7 @@ export default class Board extends React.Component {
         figure_color={figure_color}
         is_selected={is_selected}
         is_valid_move={is_valid_move}
-        onClick={() => {
-            return this.props.onClick([row, col]);
-        }}
+        onClick={on_click}
       />
     );
   }

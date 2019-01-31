@@ -7,17 +7,17 @@
   display: flex;
   margin-left: 30px;
   &__key{
-
+    width: 200px;
   }
   &__value{
     margin: 0;
     text-transform: uppercase;
     font-weight: bold;
 
-    &--white{
+    &--w{
       color: white;
     }
-    &--black{
+    &--b{
       color: black;
     }
   }
