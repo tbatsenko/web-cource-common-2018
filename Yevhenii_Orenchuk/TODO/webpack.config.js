@@ -1,8 +1,20 @@
 module.exports = {
-    entry: './src/main.js',
+    entry: './src/index.js',
     output: {
-        filename: 'bundle.js'
+        filename: 'bundle.js',
     },
     mode: 'development',
-    watch: true
+    watch: true,
+    module: {
+        rules: [
+            {
+                test: /\.(js|jsx)$/,
+                exclude: /node_modules/,
+                use: ['babel-loader']
+            }
+        ]
+    },
+    resolve: {
+        extensions: ['*', '.js', '.jsx']
+    }
 };
