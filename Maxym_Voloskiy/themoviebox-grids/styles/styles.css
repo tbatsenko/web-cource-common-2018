@@ -12,8 +12,6 @@
   left: 0;
   right: 0;
   bottom: 0;
-  margin: 0 auto;
-  max-width: 1903px;
   height: 800px;
   position: absolute;
 }
@@ -201,53 +199,60 @@
 .moviebox-content__navigation-view .view-item:hover a {
   color: #ff0079;
 }
-.moviebox-content .articles {
+.moviebox-content .moviebox-content__films {
   margin: 0 auto;
 }
-.moviebox-content__article {
+.moviebox-content__film {
   height: 500px;
   max-width: 350px;
   background-color: #ffffff;
 }
-.moviebox-content__article a {
+.moviebox-content__film a {
   position: relative;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
-.moviebox-content__article .image {
+.moviebox-content__film .film-poster {
   height: 400px;
   width: 350px;
   background: no-repeat center;
   background-size: cover;
 }
-.moviebox-content__article .year {
+.moviebox-content__film .film-year {
   position: absolute;
   color: #babbc3;
   margin: 15px;
   font-size: 20px;
-  top: -40px;
   left: 0;
 }
-.moviebox-content__article .description {
+.moviebox-content__film .film-description {
   height: 100px;
   display: flex;
   justify-content: space-between;
   margin: 0 20px;
   align-items: center;
 }
-.moviebox-content__article .description__name {
+.moviebox-content__film .film-description .film-info {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
-.moviebox-content__article .description__name-name {
+.moviebox-content__film .film-description .film-info__name {
   color: #494c62;
   font-size: 22px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  width: 220px;
+  white-space: nowrap;
 }
-.moviebox-content__article .description__name-genres {
+.moviebox-content__film .film-description .film-info__genres {
   font-size: 16px;
   color: #80818a;
   opacity: 0.5;
 }
-.moviebox-content__article .description .rating {
+.moviebox-content__film .film-description .film-rating {
   height: 25px;
   margin: auto 0;
   font-size: 22px;
@@ -325,5 +330,8 @@ h1 {
   font-size: 38px;
   font-weight: lighter;
   text-transform: uppercase;
+}
+.container_12 {
+  padding: 0 50px;
 }
 /*# sourceMappingURL=styles.css.map */

@@ -14,7 +14,7 @@
   "main":{
     "films":[
       {
-        "image":"assets/logan.jpg",
+        "image":"logan.jpg",
         "name":"Logan",
         "year":"2017",
         "info":{
@@ -26,7 +26,7 @@
         "rating":"4.0"
       },
       {
-        "image":"assets/john_wick.jpg",
+        "image":"john_wick.jpg",
         "name":"John Wick. Chapter 2",
         "year":"2017",
         "info":{
@@ -38,7 +38,7 @@
         "rating":"4.0"
       },
       {
-        "image":"assets/fantastic_beasts.jpg",
+        "image":"fantastic_beasts.jpg",
         "name":"Fantastic Beasts",
         "year":"2017",
         "info":{
@@ -50,7 +50,7 @@
         "rating":"4.5"
       },
       {
-        "image":"assets/fifty_shades_darker.jpg",
+        "image":"fifty_shades_darker.jpg",
         "name":"Fifty Shades darker",
         "year":"2017",
         "info":{
@@ -62,7 +62,7 @@
         "rating":"4.6"
       },
       {
-        "image":"assets/beauty_and_the_beast.jpg",
+        "image":"beauty_and_the_beast.jpg",
         "name":"Beauty and the Beast",
         "year":"2017",
         "info":{
@@ -74,7 +74,7 @@
         "rating":"4.4"
       },
       {
-        "image":"assets/arrival.jpg",
+        "image":"arrival.jpg",
         "name":"Arrival",
         "year":"2017",
         "info":{
@@ -86,7 +86,7 @@
         "rating":"3.4"
       },
       {
-        "image":"assets/justice_league.jpg",
+        "image":"justice_league.jpg",
         "name":"Justice League",
         "year":"2017",
         "info":{
@@ -98,7 +98,7 @@
         "rating":"3.9"
       },
       {
-        "image":"assets/pirates_of_the_carribian.jpg",
+        "image":"pirates_of_the_carribian.jpg",
         "name":"Pirates of the Carribian",
         "year":"2017",
         "info":{
@@ -110,52 +110,52 @@
         "rating":"4.2"
       },
       {
-        "image":"assets/logan.jpg",
-        "name":"Logan",
+        "image":"wonder_woman.jpg",
+        "name":"Wonder Woman",
         "year":"2017",
         "info":{
           "genre-1":"Action",
           "genre-2":"Adventure",
-          "genre-3":"Fantasy",
+          "genre-3":"Sci-Fi",
+          "duration":"1h 52m"
+        },
+        "rating":"3.8"
+      },
+      {
+        "image":"guardians_of_the_galaxy.jpg",
+        "name":"Guardian of the Galaxy",
+        "year":"2017",
+        "info":{
+          "genre-1":"Action",
+          "genre-2":"Sci-Fi",
+          "genre-3":"Comedy",
+          "duration":"1h 52m"
+        },
+        "rating":"3.0"
+      },
+      {
+        "image":"alien.jpg",
+        "name":"Alien: Covenant",
+        "year":"2017",
+        "info":{
+          "genre-1":"Horror",
+          "genre-2":"Action",
+          "genre-3":"Sci-Fi",
           "duration":"1h 52m"
         },
         "rating":"4.0"
       },
       {
-        "image":"assets/logan.jpg",
-        "name":"Logan",
+        "image":"captain_underpants.jpg",
+        "name":"Captain Underpants",
         "year":"2017",
         "info":{
-          "genre-1":"Action",
+          "genre-1":"Animation",
           "genre-2":"Adventure",
-          "genre-3":"Fantasy",
+          "genre-3":"Comedy",
           "duration":"1h 52m"
         },
-        "rating":"4.0"
-      },
-      {
-        "image":"assets/logan.jpg",
-        "name":"Logan",
-        "year":"2017",
-        "info":{
-          "genre-1":"Action",
-          "genre-2":"Adventure",
-          "genre-3":"Fantasy",
-          "duration":"1h 52m"
-        },
-        "rating":"4.0"
-      },
-      {
-        "image":"assets/logan.jpg",
-        "name":"Logan",
-        "year":"2017",
-        "info":{
-          "genre-1":"Action",
-          "genre-2":"Adventure",
-          "genre-3":"Fantasy",
-          "duration":"1h 52m"
-        },
-        "rating":"4.0"
+        "rating":"3.5"
       }
     ]
   }

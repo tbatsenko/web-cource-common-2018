@@ -1,17 +1,17 @@
 {{#header}}
 <header class="moviebox-header">
-    <img src="assets/wrath_of_the_titans.jpg" alt="bg-image" class="bg-image">
+    <img src="https://res.cloudinary.com/maxvoloskiy/image/upload/c_fill,g_south,h_800,w_1900/v1548852696/moviebox/header/wrath_of_the_titans.jpg" alt="bg-image" class="bg-image">
     <div class="container_12">
-        <header class="moviebox-header__head grid_12">
+        <div class="moviebox-header__head grid_12">
             <h1>THEMOVIEBOX</h1>
             <ul class="moviebox-header__head-buttons">
                 <li id="search" class="buttons-item"><a href="#">Search</a></li>
                 <li id="login" class="buttons-item"><a href="#">Login</a></li>
                 <li id="sign-up" class="buttons-item"><a href="#">Sign Up</a></li>
             </ul>
-        </header>
+        </div>
 
-        <footer class="moviebox-header__foot grid_12">
+        <div class="moviebox-header__foot grid_12">
             <section class="moviebox-header__foot-left">
                 <h1>{{name}}</h1>
                 {{#info}}
@@ -43,7 +43,7 @@
                     <span class="rating-number">{{rating}}</span>
                 </section>
             </section>
-        </footer>
+        </div>
     </div>
 </header>
 {{/header}}
@@ -65,21 +65,21 @@
             </ul>
         </nav>
 
-        <div class="articles container_12">
-
+        <div class="moviebox-content__films container_12">
         {{#films}}
-            <article class="moviebox-content__article grid_3">
+            <article class="moviebox-content__film grid_3">
                 <a href="#">
-                    <img src="{{image}}" alt="{{name}}" class="image">
-                    <span class="year">{{year}}</span>
-                    <div class="description">
-                        <div class="description__name">
-                            <span class="description__name-name">{{name}}</span>
+                    <img src="https://res.cloudinary.com/maxvoloskiy/image/upload/c_fill,h_400,w_350/v1548839791/moviebox/{{image}}" alt="{{name}}" class="film-poster">
+                    <span class="film-year">{{year}}</span>
+
+                    <div class="film-description">
+                        <div class="film-info">
+                            <span class="film-info__name">{{name}}</span>
                             {{#info}}
-                            <span class="description__name-genres">{{genre-1}}, {{genre-2}}, {{genre-3}}</span>
+                            <span class="film-info__genres">{{genre-1}}, {{genre-2}}, {{genre-3}}</span>
                             {{/info}}
                         </div>
-                        <span class="rating">{{rating}}</span>
+                        <span class="film-rating">{{rating}}</span>
                     </div>
                 </a>
             </article>

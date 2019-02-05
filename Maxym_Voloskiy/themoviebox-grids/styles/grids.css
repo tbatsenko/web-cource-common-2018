@@ -8,13 +8,13 @@ body {
   align-items: stretch;
   align-content: stretch;
   justify-content: space-between;
-  width: 1903px;
+  width: 1750px;
   margin: 0 auto;
 }
 .row {
   display: flex;
   flex-flow: row wrap;
-  width: 1903px;
+  width: 1750px;
 }
 @media (max-width: 1905px) {
   .container_12 {

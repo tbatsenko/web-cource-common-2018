@@ -55,60 +55,67 @@
     }
   }
 
-  .articles{
+  .moviebox-content__films{
     margin: 0 auto;
   }
 
-  &__article{
+  &__film{
     height: 500px;
     max-width: 350px;
     background-color: #ffffff;
 
     a{
       position: relative;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
     }
 
-    .image{
+    .film-poster{
       height: 400px;
       width: 350px;
       background: no-repeat center;
       background-size: cover;
     }
 
-    .year{
+    .film-year{
       position: absolute;
       color: #babbc3;
       margin: 15px;
       font-size: 20px;
-      top: -40px;
       left: 0;
     }
 
-    .description{
+    .film-description{
       height: 100px;
       display: flex;
       justify-content: space-between;
       margin: 0 20px;
       align-items: center;
 
-      &__name{
+      .film-info{
         display: flex;
         flex-direction: column;
         justify-content: space-between;
 
-        &-name{
+        &__name{
           color: #494c62;
           font-size: 22px;
+          text-overflow: ellipsis;
+          overflow: hidden;
+          width: 220px;
+          white-space: nowrap;
         }
 
-        &-genres{
+        &__genres{
           font-size: 16px;
           color: #80818a;
           opacity: 0.5;
         }
       }
 
-      .rating{
+      .film-rating{
         height: 25px;
         margin: auto 0;
         font-size: 22px;
