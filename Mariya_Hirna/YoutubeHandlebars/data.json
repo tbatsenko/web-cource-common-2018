@@ -1,0 +1,187 @@
+{
+  "header": [
+    {
+      "header_search": [
+        {"icon": "search",
+        "search_icon": "http://www.gstatic.com/inputtools/images/tia.png"}
+      ],
+      "icons": [
+        {"icon": "video_call"},
+        {"icon": "apps"},
+        {"icon": "screen_share"},
+        {"icon": "notifications"}
+      ]
+    }
+  ],
+  "side-menu":[
+    {
+      "containers": [
+        {
+          "icon": "home",
+          "text": "Головна"
+        },
+        {
+          "icon": "trending_up",
+          "text": "Популярне"
+        },
+        {
+          "icon": "subscriptions",
+          "text": "Підписки"
+        }
+      ]
+    },
+    {
+      "header": "БІБЛІОТЕКА",
+      "containers": [
+        {
+          "icon": "history",
+          "text": "Історія"
+        },
+        {
+          "icon": "watch_later",
+          "text": "Переглянути пізніше"
+        },
+        {
+          "icon": "thumb_up",
+          "text": "Відео, які сподобалися"
+        },
+        {
+          "icon": "expand_more",
+          "text": "Показати більше"
+        }
+      ]
+    },
+    {"header": "ПІДПИСКИ",
+      "containers": [
+        {
+          "avatar": "home",
+          "text": "Телебачення Торонто"
+        },
+        {
+          "avatar": "home",
+          "text": "Телебачення Торонто"
+        },
+        {
+          "avatar": "home",
+          "text": "Телебачення Торонто"
+        },
+        {
+          "avatar": "home",
+          "text": "Телебачення Торонто"
+        }
+      ]
+    },
+    {"header": "БІЛЬШЕ З YOUTUBE",
+      "containers": [
+        {
+          "avatar": "youtube",
+          "text": "YouTube Premium"
+        },
+        {
+          "icon": "local_movies",
+          "text": "Фільми YouTube"
+        },
+        {
+          "icon": "videogame_asset",
+          "text": "Ігри"
+        },
+        {
+          "icon": "live_tv",
+          "text": "Прямі трансляції"
+        }
+      ]
+    },
+    {"containers": [
+        {
+          "icon": "settings",
+          "text": "Налаштування"
+        },
+        {
+          "icon": "flag",
+          "text": "Історія скарг"
+        },
+        {
+          "icon": "help",
+          "text": "Довідка"
+        },
+        {
+          "icon": "announcement",
+          "text": "Надіслати відгук"
+        }
+      ]
+    }
+  ],
+  "videos": [
+    {"header": "Мікси YouTube",
+      "subheader": "Нескінченні списки відтворення на основі пісні або виконавця",
+      "container": [
+        {
+          "img": "https://i.ytimg.com/vi/4HuAnM6b2d8/hqdefault.jpg?sqp=-oaymwEjCPYBEIoBSFryq4qpAxUIARUAAAAAGAElAADIQj0AgKJDeAE=&rs=AOn4CLAboPmfxXsvSWYkHt7ZhbuvCvvQGg",
+          "title": "Handlebars Tutorial",
+          "author": "Derek Banas",
+          "views": "117 тис. переглядів",
+          "date": "3 роки тому",
+          "description": "Get the Code Here : http://goo.gl/h81zZA In this video we'll ..."
+        },
+        {
+          "img": "https://i.ytimg.com/vi/4HuAnM6b2d8/hqdefault.jpg?sqp=-oaymwEjCPYBEIoBSFryq4qpAxUIARUAAAAAGAElAADIQj0AgKJDeAE=&rs=AOn4CLAboPmfxXsvSWYkHt7ZhbuvCvvQGg",
+          "title": "Handlebars Tutorial",
+          "author": "Derek Banas",
+          "views": "117 тис. переглядів",
+          "date": "3 роки тому",
+          "description": "Get the Code Here : http://goo.gl/h81zZA In this video we'll ..."
+        },
+        {
+          "img": "https://i.ytimg.com/vi/4HuAnM6b2d8/hqdefault.jpg?sqp=-oaymwEjCPYBEIoBSFryq4qpAxUIARUAAAAAGAElAADIQj0AgKJDeAE=&rs=AOn4CLAboPmfxXsvSWYkHt7ZhbuvCvvQGg",
+          "title": "Handlebars Tutorial",
+          "author": "Derek Banas",
+          "views": "117 тис. переглядів",
+          "date": "3 роки тому",
+          "description": "Get the Code Here : http://goo.gl/h81zZA In this video we'll ..."
+        },
+        {
+          "img": "https://i.ytimg.com/vi/4HuAnM6b2d8/hqdefault.jpg?sqp=-oaymwEjCPYBEIoBSFryq4qpAxUIARUAAAAAGAElAADIQj0AgKJDeAE=&rs=AOn4CLAboPmfxXsvSWYkHt7ZhbuvCvvQGg",
+          "title": "Handlebars Tutorial",
+          "author": "Derek Banas",
+          "views": "117 тис. переглядів",
+          "date": "3 роки тому",
+          "description": "Get the Code Here : http://goo.gl/h81zZA In this video we'll ..."
+        }
+      ]},
+    {
+    "header": "Рекомендовано",
+    "container": [{
+        "img": "https://i.ytimg.com/vi/4HuAnM6b2d8/hqdefault.jpg?sqp=-oaymwEjCPYBEIoBSFryq4qpAxUIARUAAAAAGAElAADIQj0AgKJDeAE=&rs=AOn4CLAboPmfxXsvSWYkHt7ZhbuvCvvQGg",
+        "title": "Handlebars Tutorial",
+        "author": "Derek Banas",
+        "views": "117 тис. переглядів",
+        "date": "3 роки тому",
+        "description": "Get the Code Here : http://goo.gl/h81zZA In this video we'll ..."
+    },
+      {
+        "img": "https://i.ytimg.com/vi/4HuAnM6b2d8/hqdefault.jpg?sqp=-oaymwEjCPYBEIoBSFryq4qpAxUIARUAAAAAGAElAADIQj0AgKJDeAE=&rs=AOn4CLAboPmfxXsvSWYkHt7ZhbuvCvvQGg",
+        "title": "Handlebars Tutorial",
+        "author": "Derek Banas",
+        "views": "117 тис. переглядів",
+        "date": "3 роки тому",
+        "description": "Get the Code Here : http://goo.gl/h81zZA In this video we'll ..."
+      },
+      {
+        "img": "https://i.ytimg.com/vi/4HuAnM6b2d8/hqdefault.jpg?sqp=-oaymwEjCPYBEIoBSFryq4qpAxUIARUAAAAAGAElAADIQj0AgKJDeAE=&rs=AOn4CLAboPmfxXsvSWYkHt7ZhbuvCvvQGg",
+        "title": "Handlebars Tutorial",
+        "author": "Derek Banas",
+        "views": "117 тис. переглядів",
+        "date": "3 роки тому",
+        "description": "Get the Code Here : http://goo.gl/h81zZA In this video we'll ..."
+      },
+      {
+        "img": "https://i.ytimg.com/vi/4HuAnM6b2d8/hqdefault.jpg?sqp=-oaymwEjCPYBEIoBSFryq4qpAxUIARUAAAAAGAElAADIQj0AgKJDeAE=&rs=AOn4CLAboPmfxXsvSWYkHt7ZhbuvCvvQGg",
+        "title": "Handlebars Tutorial",
+        "author": "Derek Banas",
+        "views": "117 тис. переглядів",
+        "date": "3 роки тому",
+        "description": "Get the Code Here : http://goo.gl/h81zZA In this video we'll ..."
+      }
+    ]
+  }]
+}

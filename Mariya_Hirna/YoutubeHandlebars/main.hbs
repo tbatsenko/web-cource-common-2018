@@ -1,0 +1,77 @@
+<header class="header">
+    {{#header}}
+    <div class="header__aside">
+        <i class="material-icons material-icons_inactive">dehaze</i>
+        <img src="img/logo.png" alt="logo" class="header-aside__logo">
+    </div>
+    <div class="header__search">
+        {{#header_search}}
+        <div class="search-bar">
+            <input class="search-bar__input" type="text"/>
+            <img class="search-bar__img" src={{search_icon}} alt="">
+        </div>
+        <button class="header-search__button">
+            <i class="header-search__icon material-icons material-icons_inactive">{{icon}}</i>
+        </button>
+        {{/header_search}}
+    </div>
+    <div class="header__button-menu">
+        {{#icons}}
+            {{#if icon}}
+                <i class="material-icons material-icons_inactive">{{icon}}</i>
+            {{else}}
+                <img src={{avatar}} alt="" class="header__avatar">
+            {{/if}}
+        {{/icons}}
+    </div>
+    {{/header}}
+</header>
+<main class="content">
+    <aside class="side-menu">
+    {{#side-menu}}
+    <section class="side-menu__menu-section">
+            {{#if header}}
+                <h4 class="menu-section__header">{{header}}</h4>
+            {{/if}}
+            {{#containers}}
+                <div class="menu-section__section-container">
+                    {{#if icon}}
+                        <i class="material-icons material-icons_inactive">{{icon}}</i>
+                    {{else}}
+                        <img src={{avatar}} alt="" class="section-container__avatar">
+                    {{/if}}
+                    <h4 class="section-container__text">{{text}}</h4>
+                </div>
+            {{/containers}}
+    </section>
+    <footer class="side-menu__footer">
+    </footer>
+    {{/side-menu}}
+    </aside>
+    <section class="video-menu">
+        {{#videos}}
+        <section class="video-menu__mix">
+            <div class="menu-mix__header">
+                <h3>{{header}}</h3>
+                <p>{{subheader}}</p>
+            </div>
+            <div class="menu-mix__content">
+            {{#container}}
+                <div class="mix-container">
+                    <img src={{img}} alt="" class="mix__photo">
+                    <h4 class="mix__title">{{title}}</h4>
+                    <div class="mix__subtitle">
+                        <p class="mix-subtitle__author">{{author}}</p>
+                        <div class="mix-subtitle__detailed-info">
+                            <p class="mix-subtitle__views">{{views}} •</p>
+                            <p class="mix-subtitle__views">{{date}}</p>
+                        </div>
+                        <!--<p class="mix-subtitle__date">description</p>-->
+                    </div>
+                </div>
+            {{/container}}
+            </div>
+        </section>
+        {{/videos}}
+    </section>
+</main>

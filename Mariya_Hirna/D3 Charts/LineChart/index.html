@@ -1,0 +1,172 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style/line.css">
+    <title>Line Chart</title>
+</head>
+<body>
+    <svg id="lineChart" width="250" height="190"> </svg>
+    <script src="https://d3js.org/d3.v4.min.js"></script>
+    <script>
+        let margin = {top: 20, right: 20, bottom: 20, left: 30},
+            width = 250 - margin.left - margin.right,
+            height = 190 - margin.top - margin.bottom;
+        // parse the date / time
+        let parseTime = d3.timeParse("%Y%m%d");
+
+        // set the ranges
+        let x = d3.scaleTime().range([0, width]);
+        let y = d3.scaleLinear().range([height, 0]);
+
+        // define the USD line
+        let USDLine = d3.line()
+            .x(function(d) { return x(d.date); })
+            .y(function(d) { return y(d.USD); });
+
+        // define the EUR line
+        let EURLine = d3.line()
+            .x(function(d) { return x(d.date); })
+            .y(function(d) { return y(d.EUR); });
+
+        // define the CNY line
+        let CNYLine = d3.line()
+            .x(function(d) { return x(d.date); })
+            .y(function(d) { return y(d.CNY); });
+
+        let svg = d3.select("#lineChart")
+            .append("g")
+            .attr("transform", `translate(${margin.left},${margin.top})`);
+
+        // Get the data
+        d3.csv('./data/data.csv', function(error, data) {
+            if (error) throw error;
+
+            // trigger render
+
+            function make_x_gridlines() {
+                return d3.axisBottom(x)
+                    .ticks(5)
+            }
+
+            function make_y_gridlines() {
+                return d3.axisLeft(y)
+                    .ticks(4)
+            }
+
+            // format the data
+            data.forEach(function(d) {
+                d.date = parseTime(d.date);
+                d.USD = +d.USD;
+                d.EUR = +d.EUR;
+                d.CNY = +d.CNY;
+            });
+
+            // sort data ascending
+            data.sort(function(a, b){
+                return a["date"]-b["date"];
+            })
+
+            // Scale the range of the data
+            x.domain(d3.extent(data, function(d) { return d.date; }));
+            y.domain([0, 100]);
+
+            svg.append("g")
+                .attr("class", "grid")
+                .attr("transform", "translate(0," + height + ")")
+                .call(make_x_gridlines()
+                    .tickSize(-height)
+                    .tickFormat("")
+                )
+
+            svg.append("g")
+                .attr("class", "grid")
+                .call(make_y_gridlines()
+                    .tickSize(-width)
+                    .tickFormat("")
+                )
+
+            // Add the valueline path.
+            svg.append("path")
+                .style("fill", "none")
+                .data([data])
+                .attr("class", "grid__line")
+                .attr("id", "USD-line")
+                .attr("d", USDLine)
+                .attr("stroke", "#ee2222")
+                .attr("stroke-width", 1.25);
+
+            // Add the valueline path.
+            svg.append("path")
+                .style("fill", "none")
+                .data([data])
+                .attr("class", "grid__line")
+                .attr("id", "EUR-line")
+                .attr("d", EURLine)
+                .attr("stroke", "#ff9900")
+                .attr("stroke-width", 1.25);
+
+            // Add the valueline path.
+            svg.append("path")
+                .style("fill", "none")
+                .data([data])
+                .attr("class", "grid__line")
+                .attr("id", "CNY-line")
+                .attr("d", CNYLine)
+                .attr("stroke", "#009933")
+                .attr("stroke-width", 1.25);
+
+            const draggableCircle = (selection, color, className, curr) => {
+                selection
+                    .attr('r', 3.0)
+                    .attr('cx', function(d) { return x(d.date) })
+                    .attr('cy', function(d) { return y(d[curr])})
+                    .attr('class', className)
+                    .attr('id',  function(d) { return d.date})
+                    .style('cursor', 'pointer')
+                    .style('fill', color)
+            }
+
+            svg.selectAll('.circle_eur')
+                .data(data.filter(function(d){return d.date > parseTime("20180901")}))
+                .enter()
+                .append('circle')
+                .call(draggableCircle, '#ff9900', 'circle_eur', 'EUR')
+
+            svg.selectAll('.circle_usd')
+                .data(data.filter(function(d){return d.date > parseTime("20180901")}))
+                .enter()
+                .append('circle')
+                .call(draggableCircle, '#ee2222', 'circle_usd', 'USD')
+
+            svg.selectAll('.circle_cny')
+                .data(data.filter(function(d){return d.date > parseTime("20180901")}))
+                .enter()
+                .append('circle')
+                .call(draggableCircle, "#009933", "circle_cny", "CNY")
+
+            let axisXNames =  ["год назад", "сегодня", "через год"];
+
+            let axisX = d3.scaleBand().domain(axisXNames)
+                .range([0, width])
+                .paddingInner(0.35);
+
+            svg.append("g")
+                .attr("class", "axis-bottom")
+                .attr("transform", "translate(0," + height + ")")
+                .call(d3.axisBottom(axisX).tickSize(0))
+                .attr("font-size", "11px")
+                .attr("stroke-width", "0");
+
+            svg.append("g")
+                .call(d3.axisLeft(y)
+                    .tickSize(0)
+                    .tickValues([20, 40, 60, 80, 100]))
+                .attr("font-size", "13px");
+        });
+    </script>
+</body>
+</html>

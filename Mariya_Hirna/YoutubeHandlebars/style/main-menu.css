@@ -1,0 +1,21 @@
+.video-menu__mix{
+    display: flex;
+    flex-direction: column;
+}
+
+.mix-container{
+    display: flex;
+    flex-direction: column;
+    margin: 0 3px;
+}
+
+.mix-subtitle__detailed-info{
+    display: flex;
+    flex-direction: row;
+}
+
+.menu-mix__content{
+    display: flex;
+    flex-direction: row;
+}
+

@@ -1,0 +1,15 @@
+.menu-section__section-container{
+    width: 240px;
+    height: 40px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.side-menu__menu-section{
+    margin: 10px 20px;
+}
+
+.section-container__text{
+    font-weight: 400;
+}
