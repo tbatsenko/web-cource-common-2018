@@ -1,0 +1,20 @@
+.main-layout-header__cart-container{
+    text-decoration: none;
+    color: black;
+
+    display: grid;
+    grid-template-columns: 1fr auto;
+    grid-column-gap: 0.2em;
+
+    align-items: center;
+    justify-self: center;
+
+    padding: 0 0.2em;
+}
+.main-layout-header__cart-img{
+    height: 1.5em;
+    width: 1.5em;
+}
+.main-layout-header__cart-text{
+    font-size: 0.9em;
+}

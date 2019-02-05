@@ -1,0 +1,19 @@
+.main-layout__header-container {
+    display: grid;
+
+    margin: 0 5em;
+}
+
+.main-layout__contact-info {
+    display: grid;
+    grid-template-columns: 5fr repeat(3, 1fr);
+}
+
+.main-layout__united-st-btn{
+    grid-column: 2/3;
+}
+
+.main-layout__contact-info-btn {
+    border: none;
+    background-color: transparent;
+}
