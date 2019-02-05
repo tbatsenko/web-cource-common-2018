@@ -16,7 +16,7 @@ class App extends Component {
   }
 
   componentDidMount() {
-    fetch('https://api.coindesk.com/v1/bpi/historical/close.json?start=2017-11-01&end=2018-05-05')
+    fetch('https://api.coindesk.com/v1/bpi/historical/close.json?start=2018-08-30&end=2019-01-30')
       .then(res => {
         return res.json()
       })
@@ -51,14 +51,14 @@ class App extends Component {
           <div className='App__Title'>
             <div>BitCoin Price Chart</div>
             <div>
-              <small>last 5 months</small>
+              <small>last 4 months</small>
             </div>
           </div>
           <div className='App__Prices'>
             <div>{FormatPrice(currentPrice)}</div>
             <div className={hasIncreased ? 'Price__Increased' : 'Price__Decreased'}>
               <small>
-                {hasIncreased ? '+' : '-'}
+                {hasIncreased ? '+' : ''}
                 {FormatPrice(differencePrice)}
               </small>
             </div>

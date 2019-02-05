@@ -5,8 +5,9 @@ import { LinePath, Bar, Line } from '@vx/shape'
 import { withScreenSize } from '@vx/responsive'
 import { withTooltip, Tooltip } from '@vx/tooltip'
 import { AxisBottom, AxisLeft } from '@vx/axis'
+import { curveNatural } from '@vx/curve'
 
-import { extent, max, bisector } from 'd3-array'
+import { extent, max, min, bisector } from 'd3-array'
 import { timeFormat } from 'd3-time-format'
 
 import './Chart.css'
@@ -40,10 +41,11 @@ class Chart extends Component {
     })
 
     const maxDataValue = max(data, ySelector)
+    const minDataValue = min(data, ySelector)
 
     const yScale = scaleLinear({
-      range: [yMax, margin.left + margin.right],
-      domain: [0, maxDataValue + (maxDataValue / 3)],
+      range: [yMax, 0],
+      domain: [minDataValue - 1000, maxDataValue + 1000],
     })
 
     this.state = {
@@ -96,10 +98,10 @@ class Chart extends Component {
 
     return (
       <div className='Chart'>
-        <svg width={width} height={height}>
+        <svg width={width} height={height - 85}>
           <AxisLeft
             scale={yScale}
-            top={-100}
+            top={0}
             left={100}
             numTicks={4}
             stroke='#2c3e50'
@@ -113,6 +115,40 @@ class Chart extends Component {
               <text {...tickProps}>Price ($){formattedValue}</text>
             )}
           />
+          <AxisLeft
+            scale={yScale}
+            top={0}
+            left={width - 100}
+            numTicks={4}
+            stroke='#2c3e50'
+            strokeWidth={2}
+            tickLabelProps={(value, index) => ({
+              dx: '10px',
+              fontSize: 11,
+              fill: '#2c3e50',
+              textAnchor: 'start',
+            })}
+            tickComponent={({ formattedValue, ...tickProps }) => (
+              <text {...tickProps}>   {formattedValue}</text>
+            )}
+          />
+          <AxisBottom
+            top={654}
+            data={data}
+            scale={xScale}
+            x={xSelector}
+            numTicks={5}
+            stroke='#2c3e50'
+            strokeWidth={2}
+            tickLabelProps={(value, index) => ({
+              fontSize: 11,
+              fill: '#2c3e50',
+              textAnchor: 'end',
+            })}
+            tickComponent={({ formattedValue, ...tickProps }) => (
+              <text {...tickProps}>{formattedValue}</text>
+            )}
+          />
           <AxisBottom
             top={0}
             data={data}
@@ -124,7 +160,7 @@ class Chart extends Component {
             tickLabelProps={(value, index) => ({
               fontSize: 11,
               fill: '#2c3e50',
-              textAnchor: 'end',
+              textAnchor: 'start',
             })}
             tickComponent={({ formattedValue, ...tickProps }) => (
               <text {...tickProps}>{formattedValue}</text>
@@ -141,12 +177,13 @@ class Chart extends Component {
             strokeOpacity="0.8"
             strokeLinecap="round"
             fill="transparent"
+            curve={curveNatural}
           />
           <Bar
             x={0}
             y={0}
             width={width}
-            height={height}
+            height={height - 85}
             fill='transparent'
             data={data}
             onMouseMove={data => event =>
@@ -164,7 +201,7 @@ class Chart extends Component {
             <g>
               <Line
                 from={{ x: tooltipLeft, y: 0 }}
-                to={{ x: tooltipLeft, y: yMax - 90 }}
+                to={{ x: tooltipLeft, y: yMax }}
                 stroke="#2ecc71"
                 strokeWidth={5}
                 style={{ pointerEvents: 'none' }}
@@ -186,7 +223,7 @@ class Chart extends Component {
           <div>
             <Tooltip
               top={tooltipTop - 12}
-              left={tooltipLeft + 12}
+              left={tooltipLeft - 105}
               style={{
                 backgroundColor: '#5C77EB',
                 color: '#FFF',
@@ -195,8 +232,8 @@ class Chart extends Component {
               {`$${ySelector(tooltipData)}`}
             </Tooltip>
             <Tooltip
-              top={yMax - 110}
-              left={tooltipLeft}
+              top={yMax - 50}
+              left={tooltipLeft + 50}
               style={{
                 transform: 'translateX(-50%)',
                 backgroundColor: 'white',
