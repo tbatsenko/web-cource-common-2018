@@ -1,0 +1,8 @@
+- W3C - semantic HTML
+- HTML Doctor - semantic HTML, scss, handlebars
+- Project Euler - problems 1, 2, 3, 4
+- John Doe - semantic HTML, scss, handlebars
+- Quiz Game
+- Facebook - main page (not finished)
+- Twitter - header
+- Todo list -  react app

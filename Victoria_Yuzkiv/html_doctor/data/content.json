@@ -1,0 +1,24 @@
+{
+  "title": "Computer says NO to HTML5 document outline",
+  "date": "June 9th, 2016",
+  "author": "Steve Faulkner",
+  "article": "What a brilliant idea! For the longest time HTML5 specified, and advised developers, that it no longer mattered what the number (1 to 6) was in a heading element (when used in conjunction with sectioning elements). What mattered was the nesting level of the H1-h6 in sectioning elements, just like the X&lt;H&gt;TML promised land, but […]",
+  "comments": [
+    "Steven Vachon on The details and summary elements",
+    "Mark Excell on The Footer Element Update",
+    "Patanjali on Computer says NO to HTML5 document outline",
+    "Patanjali on The figure & figcaption elements",
+    "Patanjali on Quoting and citing with &lt;blockquote&gt;, &lt;q&gt;, &lt;cite&gt;, and the cite attribute"
+  ],
+  "head": ["doctype", "html", "head", "title", "base", "link", "meta", "style", "script", "noscript"],
+  "sections": ["body", "article", "nav", "aside", "section", "header", "footer", "h1-h6", "main", "address"],
+  "grouping": ["p", "hr", "pre", "blockquote", "ol", "ul", "li", "dl, dt, dd", "figure", "figcaption", "div"],
+  "tables": ["table", "caption", "thead", "tbody", "tfoot", "tr", "th", "td", "col", "colgroup"],
+  "forms": ["form", "fieldset", "legend", "label", "input", "button", "select", "datalist", "optgroup", "option", "textarea"],
+  "forms2": ["keygen", "output", "progress", "meter"],
+  "interactive": ["details", "summary", "command", "menu"],
+  "edits": ["del, ins"],
+  "embedded": ["img", "iframe", "embed", "object", "param", "video", "audio", "source", "canvas", "track", "map", "area"],
+  "text-level": ["a", "em", "strong", "i, b", "u", "s", "small", "abbr", "q", "cite", "dfn", "sub, sup"],
+  "text-level2": ["time", "code", "kbd", "samp", "var", "mark", "bdi", "bdo", "ruby, rt, rp", "span", "br", "wbr"]
+}

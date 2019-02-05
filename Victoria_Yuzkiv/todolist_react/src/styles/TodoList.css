@@ -1,0 +1,35 @@
+.header__input {
+    padding: 10px;
+    border: white;
+}
+
+.header__button {
+    padding: 10px;
+    margin: 10px 0 10px 10px;
+    background-color: #0066FF;
+    color: white;
+    border: #0066FF;
+}
+
+.header__button:hover {
+    background-color: #003399;
+    border: #003399;
+    cursor: pointer;
+}
+
+.todo_items {
+    padding-left: 0;
+}
+
+.todo_item {
+    background-color: rgba(255, 255, 255, .5);
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    list-style: none;
+}
+
+.todo_item:hover {
+    background-color: pink;
+    cursor: pointer;
+}
