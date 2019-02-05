@@ -1,0 +1,82 @@
+<aside class="main-profile">
+    <section class="main-profile__bottom-content">
+        <h1>
+            <sub>User persona</sub>
+            {{ name }}
+        </h1>
+
+        <blockquote>
+            {{ quote }}
+        </blockquote>
+    </section>
+</aside>
+
+<article class="detailed-profile">
+
+    <section class="detailed-profile__main-info">
+        <section class="column">
+            <h3>About</h3>
+            <p>{{ about }}</p>
+        </section>
+
+        <dl class="column">
+            <dt class="column__title">Age</dt>
+            <dd class="column__value">{{ age }}</dd>
+            <dt class="column__title">Occupation</dt>
+            <dd class="column__value">{{ occupation }}</dd>
+            <dt class="column__title">Income</dt>
+            <dd class="column__value">{{ income }}</dd>
+            <dt class="column__title">Status</dt>
+            <dd class="column__value">{{ status }}</dd>
+            <dt class="column__title">Location</dt>
+            <dd class="column__value">{{ location }}</dd>
+        </dl>
+    </section>
+
+    <section class="column">
+        <h3>Needs</h3>
+        <ul>
+            {{#needs}}
+            <li><span>{{.}}</span></li>
+            {{/needs}}
+        </ul>
+    </section>
+
+    <section class="column">
+        <h3>Frustrations</h3>
+        <ul>
+            {{#frustrations}}
+            <li><span>{{.}}</span></li>
+            {{/frustrations}}
+        </ul>
+    </section>
+
+    <section class="column">
+        <h3>Social media activity</h3>
+        <ul class="column__activity">
+            <li class="column__activity--facebook"></li>
+            <li class="column__activity--instagram"></li>
+            <li class="column__activity--twitter"></li>
+            <li class="column__activity--snapchat"></li>
+        </ul>
+    </section>
+
+    <section class="column">
+        <h3>Current feelings</h3>
+        <ul class="column__feelings">
+            <li class="column__feelings--first">{{ feelings.[0] }}</li>
+            <li class="column__feelings--second">{{ feelings.[1] }}</li>
+            <li class="column__feelings--third">{{ feelings.[2] }}</li>
+        </ul>
+    </section>
+
+    <section class="column">
+        <h3>Personality</h3>
+        <ul class="column__personality">
+            {{#personality}}
+            <li class="column__personality--item">{{.}}</li>
+            {{/personality}}
+        </ul>
+    </section>
+
+</article>

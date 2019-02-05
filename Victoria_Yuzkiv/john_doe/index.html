@@ -9,94 +9,18 @@
     <link rel="stylesheet" href="styles/main.css">
 </head>
 <body>
-<aside class="main-profile">
-    <section class="main-profile__bottom-content">
-        <h1>
-            <sub>User persona</sub>
-            John Doe
-        </h1>
 
-        <blockquote>
-            I care deeply about animal rights and to help them live happier lives
-        </blockquote>
-    </section>
-</aside>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.12/handlebars.js"></script>
+<script>
+    const render = async (templateURL, dataURL, container) => {
+        const source = await (await fetch(templateURL)).text();
+        const template = Handlebars.compile(source);
+        const data = await (await fetch(dataURL)).json();
+        container.innerHTML = template(data);
+    };
+    render("templates/profile.hbs", "data/user_data.json", document.body )
 
-<article class="detailed-profile">
+</script>
 
-    <section class="detailed-profile__main-info">
-        <section class="column">
-            <h3>About</h3>
-            <p>John is a graduate student at UCLA who cares deeply about animal rights. He spares his own time to
-                volunteer
-                at the local animal shelter and to promote pet adoption. He wishes to order some design artifacts to
-                raise
-                awareness at his school.</p>
-        </section>
-
-        <dl class="column">
-            <dt class="column__title">Age</dt>
-            <dd class="column__value">28</dd>
-            <dt class="column__title">Occupation</dt>
-            <dd class="column__value">Ph.D Student</dd>
-            <dt class="column__title">Income</dt>
-            <dd class="column__value">Less than $50k</dd>
-            <dt class="column__title">Status</dt>
-            <dd class="column__value">Single</dd>
-            <dt class="column__title">Location</dt>
-            <dd class="column__value">Los Angeles, CA</dd>
-        </dl>
-    </section>
-
-    <section class="column">
-        <h3>Needs</h3>
-        <ul>
-            <li><span>Create designs that promote animal adoption</span></li>
-            <li><span>Order design artifacts such as posters, badges and buttons to distribute them to students</span>
-            </li>
-            <li><span>Help with the crowdfunding</span></li>
-        </ul>
-    </section>
-
-    <section class="column">
-        <h3>Frustrations</h3>
-        <ul>
-            <li><span>Some vendors charge way too much for the designs</span></li>
-            <li><span>Connecting with the local vendors require extra time on his end</span></li>
-            <li><span>If he ends up not getting the funds, he has to put in his own money</span></li>
-        </ul>
-    </section>
-
-    <section class="column">
-        <h3>Social media activity</h3>
-        <ul class="column__activity">
-            <li class="column__activity--facebook"></li>
-            <li class="column__activity--instagram"></li>
-            <li class="column__activity--twitter"></li>
-            <li class="column__activity--snapchat"></li>
-        </ul>
-    </section>
-
-    <section class="column">
-        <h3>Current feelings</h3>
-        <ul class="column__feelings">
-            <li class="column__feelings--first">Stressed</li>
-            <li class="column__feelings--second">Conserned</li>
-            <li class="column__feelings--third">Busy</li>
-        </ul>
-    </section>
-
-    <section class="column">
-        <h3>Personality</h3>
-        <ul class="column__personality">
-            <li class="column__personality--item">Passionate</li>
-            <li class="column__personality--item">Motivational</li>
-            <li class="column__personality--item">Giving</li>
-            <li class="column__personality--item">Loving</li>
-            <li class="column__personality--item">Optimistic</li>
-        </ul>
-    </section>
-
-</article>
 </body>
 </html>
