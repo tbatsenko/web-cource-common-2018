@@ -1,0 +1,19 @@
+.main-layout-header__logo-container{
+    justify-self: center;
+    font-size: 0.8em;
+
+    display: grid;
+    justify-items: center;
+}
+
+.main-layout-header__logo-main-text{
+    margin: 0;
+}
+
+.main-layout-header__logo-small-text:before{
+    content: "--";
+}
+
+.main-layout-header__logo-small-text:after{
+    content: "--";
+}

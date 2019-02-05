@@ -29,7 +29,6 @@ function addItem() {
 
 function removeItem(id){
     // Remove element after click on Delete
-    console.log(id);
     let e = document.getElementById(id);
     e.parentNode.parentNode.removeChild(e.parentNode);
 }
