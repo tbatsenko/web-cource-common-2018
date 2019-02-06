@@ -1,9 +1,19 @@
-.chat-user-input {
-  height: 62px;
-  border-top: 1px solid #f3f3f3; }
-  .chat-user-input__form {
-    width: 100%;
-    border: 0;
-    padding-left: 13px; }
+.chat-input {
+  width: 100%;
+  border: 0;
+  box-sizing: border-box; }
+  .chat-input--layout {
+    padding: 0 15px 0 15px;
+    height: 62px; }
+  .chat-input__form {
+    border-top: 1px solid #f3f3f3; }
+  .chat-input__icon-footer {
+    margin-top: 6px; }
+
+.footer__action-button {
+  border: 0;
+  padding: 0;
+  background: 0;
+  margin: 0 10px 0 0; }
 
 /*# sourceMappingURL=chat-input.css.map */

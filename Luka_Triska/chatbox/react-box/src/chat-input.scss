@@ -1,0 +1,11 @@
+.chat-input {
+  width: 100%;
+  border: 0;
+  box-sizing: border-box;
+
+  &__form {
+    height: 62px;
+    width: 100%;
+    border-top: 1px solid #f3f3f3;
+  }
+}
