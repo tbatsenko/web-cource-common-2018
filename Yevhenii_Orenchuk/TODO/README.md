@@ -1,4 +1,4 @@
-### `json-server --watch db/db.json --port 3004`
+### `npm run db` or `json-server --watch db/db.json --port 3005`
 
 Runs JSON-server database
 

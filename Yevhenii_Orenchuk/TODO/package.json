@@ -19,7 +19,8 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "pack": "webpack-dev-server --config ./webpack.config.js --mode development"
+    "pack": "webpack-dev-server --config ./webpack.config.js --mode development",
+    "db": "json-server --watch db/db.json --port 3005"
   },
   "eslintConfig": {
     "extends": "react-app"
