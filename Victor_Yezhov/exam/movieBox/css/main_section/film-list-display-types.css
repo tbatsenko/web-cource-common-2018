@@ -1,0 +1,22 @@
+.film-list-display-type-container{
+    display: flex;
+    justify-content: flex-end;
+}
+
+.film-list-display-type-grid{
+    width: 32px;
+    background: url("../../img/grid-view.svg") no-repeat center;
+    background-size: 28px 28px;
+    height: 32px;
+    margin-left: 10px;
+    border: 0;
+}
+
+.film-list-display-type-list{
+    border: 0;
+    background: url("../../img/list-view.svg");
+    background-size: 32px 32px;
+    width: 32px;
+    height: 32px;
+    margin-left: 10px;
+}

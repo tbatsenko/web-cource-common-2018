@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style/stackedBar.css">
+    <title>Stacked Bar Chart</title>
+</head>
+<body>
+<svg id="barChart" width="300" height="200"></svg>
+<script src="https://d3js.org/d3.v4.min.js"></script>
+<script>
+    let data = [
+        {"time":"1","USD":0.62,"RUB":0.25,"EUR":0.56,"CYN":0.114},
+        {"time":"2","USD":0.63,"RUB":0.25,"EUR":0.56,"CYN":0.114},
+        {"time":"3","USD":0.68,"RUB":0.25,"EUR":0.6,"CYN":0.18},
+        {"time":"4","USD":0.7,"RUB":0.25,"EUR":0.64,"CYN":0.228}
+    ];
+    let currNames = ["USD", "RUB", "EUR", "CYN"];
+    const myCurr = "₽";
+
+    let totalToday = 0;
+    let totalNextYear = 0;
+
+    currNames.forEach(function (curr) {
+        totalToday += data[0][curr];
+        totalNextYear += data[3][curr];
+    });
+
+    let series = d3.stack()
+        .keys(currNames)
+        .offset(d3.stackOffsetDiverging)(data);
+
+    let svg = d3.select("#barChart"),
+        margin = {top: 20, right: 30, bottom: 30, left: 60},
+        width = +svg.attr("width"),
+        height = +svg.attr("height");
+
+    let x = d3.scaleBand()
+        .domain(data.map((d) => d.time))
+        .rangeRound([margin.left, width - margin.right])
+        .padding(0.02);
+
+    let y = d3.scaleLinear()
+        .domain([0, d3.max(series, (serie) => d3.max(serie,(d) => d[1])) + 1])
+        .rangeRound([height - margin.bottom, margin.top]);
+
+    let z = d3.scaleOrdinal(["#0066cc", "#009933", "#ff9900", "#ee2222"]);
+
+    svg.append("g")
+        .selectAll("g")
+        .data(series)
+        .enter().append("g")
+        .attr("fill", function(d) { return z(d.key); })
+        .selectAll("rect")
+        .data(function(d) { return d; })
+        .enter().append("rect")
+        .attr("width", x.bandwidth)
+        .attr("x", function(d) { return x(d.data.time); })
+        .attr("y", function(d) { return y(d[1]); })
+        .attr("height", function(d) { return y(d[0]) - y(d[1]); })
+
+    svg.append("g")
+        .attr("transform", "translate(" + margin.left + ",0)")
+        .call(d3.axisLeft(y)
+            .tickValues([0.5, 1, 1.5, 2, 2.5])
+            .tickSize(0))
+        .attr("font-size", "12px");
+
+    // Append axis
+    let axisXNames =  ["год назад", "через год"];
+
+    let axisX = d3.scaleBand().domain(axisXNames)
+        .range([margin.left, width - margin.right])
+        .paddingInner(0.65);
+
+    svg.append("g")
+        .attr("class", "axis-bottom")
+        .attr("transform", "translate(0," + (height - margin.bottom) +")")
+        .call(d3.axisBottom(axisX).tickSize(0))
+        .attr("font-size", "10px")
+
+    // Append totals
+    let axisTotals = d3.scaleBand().domain([Math.floor(totalToday * 1000000) + " " + myCurr,
+        Math.floor(totalNextYear * 1000000) + " " + myCurr])
+        .range([margin.left + 25, width - margin.right])
+        .paddingInner(0.8);
+
+    svg.append("g")
+        .attr("class", "axis-bottom")
+        .attr("transform", "translate(0," + (height - margin.bottom + 15) +")")
+        .call(d3.axisBottom(axisTotals).tickSize(0))
+        .attr("font-size", "13px")
+        .attr("font-weight", "bold")
+</script>
+</body>
+</html>

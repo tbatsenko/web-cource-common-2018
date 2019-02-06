@@ -1,0 +1,112 @@
+{{#header}}
+<header class="moviebox-header">
+    <img src="https://res.cloudinary.com/maxvoloskiy/image/upload/c_fill,g_south,h_800,w_1900/v1548852696/moviebox/header/wrath_of_the_titans.jpg" alt="bg-image" class="bg-image">
+    <div class="container_12">
+        <div class="moviebox-header__head grid_12">
+            <h1>THEMOVIEBOX</h1>
+            <ul class="moviebox-header__head-buttons">
+                <li id="search" class="buttons-item"><a href="#">Search</a></li>
+                <li id="login" class="buttons-item"><a href="#">Login</a></li>
+                <li id="sign-up" class="buttons-item"><a href="#">Sign Up</a></li>
+            </ul>
+        </div>
+
+        <div class="moviebox-header__foot grid_12">
+            <section class="moviebox-header__foot-left">
+                <h1>{{name}}</h1>
+                {{#info}}
+                <ul class="moviebox-header__foot-info">
+                    <li>{{genre-1}}</li>
+                    <li>{{genre-2}}</li>
+                    <li>{{genre-3}}</li>
+                    <li>|</li>
+                    <li>Duration: {{duration}}</li>
+                </ul>
+                {{/info}}
+                <ul class="moviebox-header__foot-buttons">
+                    <li class="buttons-item" id="watch-movie"><a href="">Watch Movie</a></li>
+                    <li class="buttons-item" id="view-info"><a href="">View Info</a></li>
+                    <li class="buttons-item" id="add-to-wishlist"><a href="">+ Add to wishlist</a></li>
+                </ul>
+            </section>
+            <section class="moviebox-header__foot-right">
+                <p>Rating <span>based on 3.546 reviews</span></p>
+                <section class="rating">
+                    <div class="star-ratings-css">
+                        <div class="star-ratings-css-top" style="width: 68%">
+                            <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+                        </div>
+                        <div class="star-ratings-css-bottom">
+                            <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+                        </div>
+                    </div>
+                    <span class="rating-number">{{rating}}</span>
+                </section>
+            </section>
+        </div>
+    </div>
+</header>
+{{/header}}
+
+{{#main}}
+<main class="moviebox-content">
+    <div class="container_12">
+
+        <nav class="moviebox-content__navigation">
+            <ul class="moviebox-content__navigation-main">
+                <li class="main-item"><a href="#">Trending</a></li>
+                <li class="main-item"><a href="#">Top Rated</a></li>
+                <li class="main-item"><a href="#">New Arrivals</a></li>
+                <li class="main-item"><a href="#">Genre</a></li>
+            </ul>
+            <ul class="moviebox-content__navigation-view">
+                <li class="view-item"><a href="#">Blocks</a></li>
+                <li class="view-item"><a href="#">List</a></li>
+            </ul>
+        </nav>
+
+        <div class="moviebox-content__films container_12">
+        {{#films}}
+            <article class="moviebox-content__film grid_3">
+                <a href="#">
+                    <img src="https://res.cloudinary.com/maxvoloskiy/image/upload/c_fill,h_400,w_350/v1548839791/moviebox/{{image}}" alt="{{name}}" class="film-poster">
+                    <span class="film-year">{{year}}</span>
+
+                    <div class="film-description">
+                        <div class="film-info">
+                            <span class="film-info__name">{{name}}</span>
+                            {{#info}}
+                            <span class="film-info__genres">{{genre-1}}, {{genre-2}}, {{genre-3}}</span>
+                            {{/info}}
+                        </div>
+                        <span class="film-rating">{{rating}}</span>
+                    </div>
+                </a>
+            </article>
+        {{/films}}
+
+        </div>
+    </div>
+</main>
+{{/main}}
+
+<footer class="moviebox-footer">
+    <div class="container_12">
+        <nav class="moviebox-footer__nav">
+            <h1>TheMovieBox</h1>
+            <ul class="moviebox-footer__nav-list">
+                <li class="item"><a href="">About</a></li>
+                <li class="item"><a href="">Movies</a></li>
+                <li class="item"><a href="">Ratings</a></li>
+                <li class="item"><a href="">Contact</a></li>
+            </ul>
+        </nav>
+        <p class="text">Designed by Milan Houter. All rights reserved.</p>
+        <ul class="moviebox-footer-social">
+            <li class="item"><a href="">fb</a></li>
+            <li class="item"><a href="">Pn</a></li>
+            <li class="item"><a href="">Tw</a></li>
+            <li class="item"><a href="">In</a></li>
+        </ul>
+    </div>
+</footer>

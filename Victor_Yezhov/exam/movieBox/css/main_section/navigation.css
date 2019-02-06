@@ -1,0 +1,25 @@
+.navigation:first-child{
+    padding-left: 0;
+}
+.navigation:last-child{
+    padding-right: 0;
+}
+
+
+.navigation__link{
+    text-decoration: none;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 20px;
+    color: rgb(128, 129, 138);
+}
+.navigation__link-container{
+    padding-bottom: 20px;
+    border-bottom: 3px solid transparent;
+    text-align: center;
+}
+.navigation__link-container:hover{
+    border-bottom: 3px solid #ff0079;
+}
+.navigation__link-container:hover a{
+    color:#ff0079;
+}

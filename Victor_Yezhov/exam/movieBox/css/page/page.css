@@ -1,0 +1,20 @@
+body{
+    background-color: #f8f8f8;
+    margin: 0;
+}
+
+.page{
+    width: 1200px;
+    margin: 0 auto;
+    padding: 20px 75px;
+}
+.page__background-image{
+    position: absolute;
+    object-fit: cover;
+    height: 500px;
+    top: -100px;
+    left: -0px;
+    z-index: -1;
+    width: 100%;
+}
+

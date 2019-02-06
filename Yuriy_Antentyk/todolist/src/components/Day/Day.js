@@ -35,6 +35,8 @@ const enhancer = compose(
   holidayEnhancer,
   withHandlers({
     onChangeDate: ({ date, onChangeDate }) => ev => {
+      if(ev.ctrlKey)
+        return
       ev.preventDefault()
       onChangeDate(date)
     },

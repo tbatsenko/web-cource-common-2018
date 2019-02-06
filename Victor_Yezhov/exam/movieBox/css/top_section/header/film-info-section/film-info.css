@@ -1,0 +1,57 @@
+.add-to-whishes{
+    font-family: 'Source Sans Pro',  sans-serif;
+    font-size: 17px;
+    font-weight: 600;
+    color: white;
+}
+
+.film-actions{
+    display: flex;
+    align-items: baseline;
+}
+.film-name{
+    font-family: 'Source Sans Pro',  sans-serif;
+    text-overflow: ellipsis;
+    /* Required for text-overflow to do anything */
+    white-space: nowrap;
+    overflow: hidden;
+    font-weight: 300;
+    margin: 0;
+}
+
+.film-name_big{
+    font-size: 60px;
+}
+.film-name_small{
+    font-size: 20px;
+}
+.film-name_grey-theme{
+    color: rgb(73, 76, 98);
+}
+.film-name_while-theme{
+    color: white;
+}
+
+
+.film-info__genres{
+    display: flex;
+    padding: 0;
+    list-style-type: none;
+    margin: 0 0 10px;
+}
+
+.film-info{
+    display: flex;
+}
+.film-info-container__text{
+    font-family: 'Source Sans Pro',  sans-serif;
+    margin-right: 10px;
+}
+.film-info-container__text_meduim_white{
+    color: white;
+    font-size: 20px;
+}
+.film-info-container__text_small_grey{
+    color: #babbc3;
+    font-size: 15px;
+}

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Tetris</title>
+    <link rel='stylesheet' type="text/css" href='styles/main.css'/>
+</head>
+<body>
+
+<div id="tetris">
+    <div id="tetrisleft">
+        <canvas id="tetriscanvas" width="300" height="600"></canvas>
+        <audio id="clearsound" src="sound/pop.ogg" preload="auto"></audio>
+    </div>
+    <div id="tetrisright">
+        <div align="center"><b>T E T R I S</b></div>
+        <p class="info">&harr;: move left/right;
+            <br>&uarr;: rotate;
+            <br>&darr; or _: drop;
+            <br>Esc: pause
+        </p>
+        <canvas id="figurecanvas" width="120" height="120"></canvas>
+        <p class="info" id="tetriscount"></p>
+    </div>
+
+</div>
+<div id="tetris2">
+    <div id="tetrisleft2">
+        <canvas id="tetriscanvas2" width="300" height="600"></canvas>
+        <audio id="clearsound2" src="sound/pop.ogg" preload="auto"></audio>
+    </div>
+    <div id="tetrisright2">
+        <div align="center"><b>T E T R I S</b></div>
+        <p class="info">a-d:move left/right;
+            <br>w: rotate;
+            <br>s: drop;
+            <br>Esc: pause
+        </p>
+        <canvas id="figurecanvas2" width="120" height="120"></canvas>
+        <p class="info" id="tetriscount2"></p>
+    </div>
+
+</div>
+<script src='js/game.js'></script>
+<script src='js/controller.js'></script>
+<script src='js/canvas.js'></script>
+</body>
+</html>

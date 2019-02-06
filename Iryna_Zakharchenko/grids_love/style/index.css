@@ -1,0 +1,12 @@
+body{
+    margin-top: 2em;
+    padding: 0;
+    color: #6c7178;
+}
+
+
+.main-layout-header{
+    display: grid;
+    grid-template-columns: 1fr 1fr ;
+}
+

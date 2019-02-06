@@ -1,0 +1,67 @@
+{
+  "films":[
+    {
+      "image_url":"https://res.cloudinary.com/dh2chxfzx/image/upload/c_scale,h_400/v1546699066/latest.jpg",
+      "name":"Logan",
+      "genres":["Action", "Fantastic", "Family"],
+      "mark":"4.0"
+    },{
+      "image_url":"https://res.cloudinary.com/dh2chxfzx/image/upload/c_scale,h_400/v1546698814/mHP0105_1024x1024.jpg",
+      "name":"John Wik",
+      "genres":["Action", "Fantastic", "Family"],
+      "mark":"3.0"
+    },{
+      "image_url":"https://hips.hearstapps.com/digitalspyuk.cdnds.net/16/41/1476120176-fntbst-character-art-newt-2764x4096-intl-master-rev-1.jpg?resize=480:*",
+      "name":"Fantastic Beasts",
+      "genres":["Action", "Fantastic", "Family"],
+      "mark":"5.0"
+    },{
+      "image_url":"https://cdn-static.denofgeek.com/sites/denofgeek/files/styles/gallery_adv/public/2016/09/fifty_shades_darker.jpg?itok=5mBCVK8m",
+      "name":"Fifty Shades Darker ",
+      "genres":["Action", "Fantastic", "Family"],
+      "mark":"4.5"
+    },{
+      "image_url":"https://i.pinimg.com/736x/0f/d6/e7/0fd6e756c506f2d7406cc9f123fd8db5.jpg",
+      "name":"Beauty and the Beast",
+      "genres":["Action", "Fantastic", "Family"],
+      "mark":"5.0"
+    },{
+      "image_url":"https://ichef.bbci.co.uk/news/660/cpsprodpb/48CA/production/_90843681_890a8bd8-6501-11e6-aefa-e8609c477948_486x.jpg",
+      "name":"Arrival",
+      "genres":["Action", "Fantastic", "Family"],
+      "mark":"3.5"
+    },{
+      "image_url":"https://cdn.europosters.eu/image/1300/posters/justice-league-unite-the-league-i48906.jpg",
+      "name":"Justice League",
+      "genres":["Action", "Fantastic", "Family"],
+      "mark":"3.0"
+    },{
+      "image_url":"https://images-na.ssl-images-amazon.com/images/I/710p6N57TFL._SY679_.jpg",
+      "name":"Pirates of the Caribbean",
+      "genres":["Action", "Fantastic", "Family"],
+      "mark":"4.5"
+    },{
+      "image_url":"https://cdn.europosters.eu/image/1300/posters/wonder-woman-kneel-i48833.jpg",
+      "name":"Wonder Woman",
+      "genres":["Action", "Fantastic", "Family"],
+      "mark":"4.0"
+    },{
+      "image_url":"https://www.movieposters4u.com/images/m/MadMaxFuryRoadfinal.jpg",
+      "name":"MAD MAX",
+      "genres":["Action", "Fantastic", "Family"],
+      "mark":"5.0"
+    },{
+      "image_url":"https://movieposteraddict.files.wordpress.com/2008/12/mpaterminatorsalvationposter2b.jpg",
+      "name":"Terminator: Salvation",
+      "genres":["Action", "Fantastic", "Family"],
+      "mark":"4.0"
+    },{
+      "image_url":"https://c1.staticflickr.com/5/4085/4847267571_741cb3e02a_b.jpg",
+      "name":"AVATAR",
+      "genres":["Action", "Fantastic", "Family"],
+      "mark":"5.0"
+    }
+
+
+  ]
+}

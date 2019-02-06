@@ -1,0 +1,19 @@
+.right-menu {
+    display: flex;
+    flex-flow: column nowrap;
+    position: fixed;
+    top: 5%;
+    left: 55%;
+    width: 15%;
+    margin: 1% 2%;
+    background-color: white;
+}
+
+.right-menu__story {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+/*# sourceMappingURL=right-menu_style.css.map */

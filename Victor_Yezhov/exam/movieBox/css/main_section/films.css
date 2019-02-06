@@ -1,0 +1,18 @@
+.film-description{
+    box-shadow: 0 2px 35px 0 rgba(0, 0, 0, 0.1);
+    margin-top: 15px;
+}
+.film-description__film-image{
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+}
+.film-description__film-info{
+    overflow: hidden;
+    white-space: nowrap;
+}
+.film-description__info-container{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}

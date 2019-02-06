@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>TODO list</title>
+  <link rel="stylesheet" type="text/css" href="styles/index.css">
+  <link rel="stylesheet" type="text/css" href="styles/todo.css">
+  <link rel="stylesheet" type="text/css" href="styles/calendar.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <!-- Load React. -->
+  <!-- Note: when deploying, replace "development.js" with "production.min.js". -->
+  <script src="https://unpkg.com/react@16/umd/react.development.js" crossorigin></script>
+  <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js" crossorigin></script>
+  <!-- Load Babel -->
+  <!-- v6 <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script> -->
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+<body class="body">
+<section class="calendar" id="calendar"></section>
+<section class="todo">
+  <h1 class="header">Today is...</h1>
+  <h4 class="quote">Say NO to procrastination and organise your life!</h4>
+  <main class="task-manager">
+    <div class="input">
+      <form class="input__form">
+        <input id="text-input" class="input__text-field" type="text" placeholder="Type here what you're going to accomplish">
+        <button id="submit" class="input__submit-button" type="button">Submit</button>
+      </form>
+    </div>
+    <div class="lists-container">
+      <ul id="list" class="tasks"></ul>
+      <ul id="completed-list" class="tasks"></ul>
+    </div>
+  </main>
+</section>
+<script src="../dist/bundle.js"></script>
+</body>
+</html>

@@ -1,0 +1,86 @@
+@import './reset.scss';
+
+html, body {
+  height: 100%;
+  width: 100%;
+  background-color: white;
+}
+
+.container {
+  display: grid;
+  gap: 1px;
+}
+
+.header {
+  background-color: white;
+  height: 40px;
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.3);
+  display: flex;
+}
+
+.dashboard {
+  width: max-content;
+  margin: auto 40px auto 0;
+}
+
+.dashboard-long {
+  margin: auto;
+}
+
+.img {
+  display: inline-block;
+  border-radius: 50%;
+  background-size: cover;
+  background-position: center;
+  width: 25px;
+  height: 25px;
+  margin: auto 10px;
+}
+
+.logo {
+  display: inline-block;
+  border-radius: 50%;
+  background-size: cover;
+  background-position: center;
+  width: 100px;
+  height: 40px;
+  margin: auto;
+}
+
+.page-content {
+  display: flex;
+}
+
+.feed {
+  width: 750px;
+  margin: auto;
+  border: 1px solid darkgray;
+}
+
+.feed-header {
+  background-color: white;
+  height: 80px;
+  margin: auto 0 auto 40px;
+  display: flex;
+}
+
+
+
+.feed-content {
+  font-family: Helvetica, Arial, sans-serif;
+  height: 300px;
+}
+
+.gray-back {
+  background-color: lightgray;
+}
+
+.white-back {
+  background-color: white;
+}
+
+.menu {
+  background-color: lightgray;
+  height: max-content;
+  width: 250px;
+}

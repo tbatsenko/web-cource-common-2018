@@ -7,6 +7,7 @@
   position: relative;
   min-height: 28px;
   box-sizing: border-box;
+  position: relative;
 
   &:first-child {
     margin-top: 0;
@@ -14,6 +15,20 @@
 
   &:last-child {
     margin-bottom: 0;
+  }
+
+  &__remove-btn {
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 100%;
+    background: none;
+    border: none;
+    z-index: 999;
+
+    &:hover {
+      cursor: pointer;
+    }
   }
 
   &__task {

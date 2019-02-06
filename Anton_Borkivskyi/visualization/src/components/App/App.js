@@ -1,13 +1,13 @@
 import React, { Component } from 'react'
-import './App.css'
-import { csvParse, extent } from 'd3'
+import './App.scss'
+import { csvParse } from 'd3'
 import Chart from '../Chart/Chart'
 
 class App extends Component {
-
   state = {
     data: null,
     activeYear: 0,
+    chart_width: 800,
   }
 
   constructor(props) {
@@ -19,9 +19,15 @@ class App extends Component {
     if (this.state.activeYear === 0) {
       return <div>No data yet.</div>
     }
+
     return (
-      <div>
-        <Chart state={this.state}/>
+      <div className={'main'}>
+        <header className={'header'} style={{ width: this.state.chart_width }}>
+          <p className={'header__male'}>   MALE</p>
+          <p className={'header__year'}>{this.state.activeYear}</p>
+          <p className={'header__female'}>FEMALE</p>
+        </header>
+        <Chart state={this.state} />
 
         <input
           type="range"
@@ -33,8 +39,6 @@ class App extends Component {
             this.setState({ activeYear: Number(target.value) })
           }
         />
-
-        <p>{this.state.activeYear}</p>
       </div>
     )
   }
@@ -48,19 +52,24 @@ class App extends Component {
       age: Number(age),
       men: Number(men),
       women: Number(women),
-    }))
-
+    })).filter(({ age }) => !isNaN(age))
 
     this.setState({
       activeYear: 1989,
       data: parsedData,
     })
-
-
   }
 
+  // componentDidMount() {
+  //   setInterval(() => {
+  //     // let stat = [...this.state]
+  //     let newYear = this.state.activeYear + 1
+  //     if (newYear > 2018) {
+  //       newYear = 1989
+  //     }
+  //     this.setState({ activeYear: newYear })
+  //   }, 100)
+  // }
 }
 
 export default App
-
-

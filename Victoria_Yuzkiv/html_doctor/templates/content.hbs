@@ -1,0 +1,129 @@
+<section class="article">
+    <article class="article__post">
+        <header class="article__post__head">
+            <h1 class="article__post__head-main">
+                <a href="http://html5doctor.com/computer-says-no-to-html5-document-outline/" rel="bookmark"
+                   title="Permanent Link to Computer says NO to HTML5 document outline">{{ title }}</a>
+            </h1>
+
+            <small class="article__post__head-additional">
+                <time datetime="2016-06-09">{{ date }}</time>
+                by
+                <a href="http://html5doctor.com/author/stevef/" title="Posts by Steve Faulkner"
+                   rel="author">{{ author }}</a>.
+            </small>
+
+        </header>
+
+        <p class="article__post__text">{{ article }}</p>
+        <a class="article__post__read-more" href="#">Read full post</a>
+    </article>
+
+    <section class="article__comments">
+        <h3 class="article__comments__header">Recent Comments</h3>
+        <ul class="article__comments__items">
+            {{#comments}}
+                <li class="article__comments__item">{{.}}</li>
+            {{/comments}}
+        </ul>
+    </section>
+</section>
+
+<section class="glossary">
+    <h1>
+        <a href="#">HTML5 Element Index</a>
+    </h1>
+
+    <section class="glossary__section">
+        <h2 class="glossary__section__header">Head</h2>
+        <ul class="glossary__section__group">
+            {{#head}}
+                <li><a href="#">{{.}}</a></li>
+            {{/head}}
+        </ul>
+    </section>
+
+    <section class="glossary__section">
+        <h2 class="glossary__section__header">Sections</h2>
+        <ul class="glossary__section__group">
+            {{#sections}}
+                <li><a href="#">{{.}}</a></li>
+            {{/sections}}
+        </ul>
+    </section>
+
+    <section class="glossary__section">
+        <h2 class="glossary__section__header">Grouping</h2>
+        <ul class="glossary__section__group">
+            {{#grouping}}
+                <li><a href="#">{{.}}</a></li>
+            {{/grouping}}
+        </ul>
+    </section>
+
+    <section class="glossary__section">
+        <h2 class="glossary__section__header">Tables</h2>
+        <ul class="glossary__section__group">
+            {{#tables}}
+                <li><a href="#">{{.}}</a></li>
+            {{/tables}}
+        </ul>
+    </section>
+
+    <section class="glossary__section">
+        <h2 class="glossary__section__header">Forms</h2>
+        <ul class="glossary__section__group">
+            {{#forms}}
+                <li><a href="#">{{.}}</a></li>
+            {{/forms}}
+        </ul>
+    </section>
+
+    <section class="glossary__section">
+        <h2 class="glossary__section__header">Forms 2</h2>
+        <ul class="glossary__section__group">
+            {{#forms2}}
+                <li><a href="#">{{.}}</a></li>
+            {{/forms2}}
+        </ul>
+        <h2 class="glossary__section__header">Interactive</h2>
+        <ul class="glossary__section__group">
+            {{#interactive}}
+                <li><a href="#">{{.}}</a></li>
+            {{/interactive}}
+        </ul>
+        <h2 class="glossary__section__header">Edits</h2>
+        <ul class="glossary__section__group">
+            {{#edits}}
+                <li><a href="#">{{.}}</a></li>
+            {{/edits}}
+        </ul>
+    </section>
+
+    <section class="glossary__section">
+        <h2 class="glossary__section__header">Embedded</h2>
+        <ul class="glossary__section__group">
+            {{#embedded}}
+                <li><a href="#">{{.}}</a></li>
+            {{/embedded}}
+        </ul>
+    </section>
+
+    <section class="glossary__section">
+        <h2 class="glossary__section__header">Text-level</h2>
+        <ul class="glossary__section__group">
+            {{#text-level}}
+                <li><a href="#">{{.}}</a></li>
+            {{/text-level}}
+        </ul>
+    </section>
+
+    <section class="glossary__section">
+        <h2 class="glossary__section__header">Text-level 2</h2>
+        <ul class="glossary__section__group">
+            {{#text-level2}}
+                <li><a href="#">{{.}}</a></li>
+            {{/text-level2}}
+        </ul>
+    </section>
+</section>

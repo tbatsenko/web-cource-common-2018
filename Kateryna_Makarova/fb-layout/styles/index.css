@@ -1,0 +1,65 @@
+@import "reset.css";
+
+html, body {
+    height: 100%;
+    width: 100%;
+    background-color: #E9EBEE;
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 12px;
+}
+
+.container {
+    display: grid;
+    gap: 10px;
+}
+
+.header {
+    width: 100%;
+    background-color: #4469B0;
+    height: 30px;
+}
+
+.outer {
+    display: flex;
+    margin: auto;
+}
+.content {
+    display: grid;
+    grid-template-columns: 170px 530px 320px;
+    grid-template-rows: auto;
+    grid-column-gap: 10px;
+}
+
+.menu {
+    background-color: bisque;
+    height: 400px;
+}
+
+.new-post {
+    background-color: aqua;
+    height: 150px;
+    margin-bottom: 10px;
+}
+
+.feed {
+    background-color: darkolivegreen;
+    height: 2000px;
+}
+
+.stories {
+    background-color: cornflowerblue;
+    margin-bottom: 10px;
+    height: 330px;
+}
+
+.notifications {
+    background-color: coral;
+    margin-bottom: 10px;
+    height: 70px;
+}
+
+.languages {
+    background-color: dimgray;
+    margin-bottom: 10px;
+    height: 60px;
+}

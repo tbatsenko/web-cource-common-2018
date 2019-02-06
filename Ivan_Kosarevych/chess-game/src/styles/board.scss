@@ -1,4 +1,6 @@
 .board{
+  width: 560px;
+  height: 560px;
   &__row:after{
     margin: auto;
     clear: both;
@@ -6,13 +8,12 @@
     display: table;
   }
   &__square {
-    //background: #fff;
     border: 1px solid #999;
     float: left;
-    width: 75px;
-    height: 75px;
+    width: 70px;
+    height: 70px;
 
-    font-size: 24px;
+    font-size: 50px;
     font-weight: bold;
     line-height: 34px;
 
@@ -22,18 +23,27 @@
 
     text-align: center;
 
-    &--white{
+    &--w{
       background-color: #a2a6a7;
     }
-    &--black{
+    &--b{
       background-color: #4a5758;
     }
-    &--figure-white{
-      color: #dcdcdc;
+    &--selected{
+      border: #27ae60 6px solid;
     }
-    &--figure-black{
-      color: black;
+    &--valid-move{
+      border: greenyellow 4px solid;
     }
   }
 
+}
+
+.figure{
+  &-w{
+    color: #dcdcdc;
+  }
+  &-b{
+    color: black;
+  }
 }

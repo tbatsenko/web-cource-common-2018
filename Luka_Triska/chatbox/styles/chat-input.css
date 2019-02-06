@@ -1,0 +1,9 @@
+.chat-user-input {
+  height: 62px;
+  border-top: 1px solid #f3f3f3; }
+  .chat-user-input__form {
+    width: 100%;
+    border: 0;
+    padding-left: 13px; }
+
+/*# sourceMappingURL=chat-input.css.map */

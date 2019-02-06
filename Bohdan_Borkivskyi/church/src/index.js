@@ -5,7 +5,12 @@ import App from './components/App/App'
 import * as serviceWorker from './serviceWorker'
 
 ReactDOM.render(
-  <App antichrists={3} cristians={4} />,
+  <App
+    id={0}
+    antichrists={400}
+    cristians={10}
+    size={{ width: 1000, height: 600, person: 15 }}
+  />,
   document.getElementById('root')
 )
 

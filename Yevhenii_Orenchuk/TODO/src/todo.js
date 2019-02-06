@@ -171,6 +171,14 @@ module.exports = function todo() {
         });
     };
 
-    submitButton.onclick = addTask;
     initList();
+    submitButton.onclick = addTask;
+
+    taskInput.addEventListener("keydown", function (e) {
+        if (e.key === 'Enter') {
+            e.preventDefault();
+            addTask();
+            return false;
+        }
+    });
 };

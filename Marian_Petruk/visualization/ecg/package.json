@@ -1,0 +1,43 @@
+{
+  "name": "ecg",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@vx/axis": "0.0.183",
+    "@vx/curve": "0.0.182",
+    "@vx/glyph": "0.0.183",
+    "@vx/gradient": "0.0.183",
+    "@vx/grid": "0.0.183",
+    "@vx/group": "0.0.183",
+    "@vx/mock-data": "0.0.182",
+    "@vx/pattern": "0.0.183",
+    "@vx/point": "0.0.182",
+    "@vx/scale": "0.0.182",
+    "@vx/shape": "0.0.183",
+    "d3": "^5.7.0",
+    "d3-array": "^2.0.3",
+    "node-sass": "^4.11.0",
+    "package.json": "^2.0.1",
+    "react": "^16.7.0",
+    "react-dom": "^16.7.0"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ],
+  "devDependencies": {
+    "prettier": "^1.16.1",
+    "react-scripts": "^2.1.3"
+  }
+}

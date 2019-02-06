@@ -1,0 +1,31 @@
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#container{
+    display: flex;
+    width: 300px;
+    height: 100px;
+}
+.item{
+    width: 100px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.item-a{
+    background-color: red;
+}
+.item-b{
+    background-color: yellow;
+}
+.item-c{
+    background-color: blue;
+}
+#text{
+    margin-top: 100px;
+    font-size: 14px;
+}

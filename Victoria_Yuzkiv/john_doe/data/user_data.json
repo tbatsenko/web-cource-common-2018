@@ -1,0 +1,34 @@
+{
+  "name": "John Doe",
+  "quote": "I care deeply about animal rights and to help them live happier lives",
+  "about": "John is a graduate student at UCLA who cares deeply about animal rights. He spares his own time to\n                volunteer\n                at the local animal shelter and to promote pet adoption. He wishes to order some design artifacts to raise awareness at his school.",
+  "age": "28",
+  "occupation": "Ph.D Student",
+  "income": "Less than $50k",
+  "status": "Single",
+  "location":"Los Angeles, CA",
+  "needs": [
+    "Create designs that promote animal adoption",
+    "Order design artifacts such as posters, badges and buttons to distribute them to students",
+    "Help with the crowdfunding"
+  ],
+  "frustrations" : [
+    "Some vendors charge way too much for the designs",
+    "Connecting with the local vendors require extra time on his end",
+    "If he ends up not getting the funds, he has to put in his own money"
+  ],
+  "feelings": [
+    "Stressed",
+    "Conserned",
+    "Busy"
+  ],
+  "personality": [
+    "Passionate",
+    "Motivational",
+    "Giving",
+    "Loving",
+    "Optimistic"
+  ]
+
+
+}

@@ -1,0 +1,205 @@
+body {
+  padding: 0;
+  margin: 0;
+}
+.container_12 {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: stretch;
+  align-content: stretch;
+  justify-content: space-between;
+  width: 1750px;
+  margin: 0 auto;
+}
+.row {
+  display: flex;
+  flex-flow: row wrap;
+  width: 1750px;
+}
+@media (max-width: 1905px) {
+  .container_12 {
+    width: auto;
+    margin: 0 10px;
+  }
+}
+@media (max-width: 1170px) {
+  .container_12 {
+    justify-content: space-around;
+  }
+}
+/*grid:*/
+.grid_1 {
+  margin: 20px 20px;
+  flex: 1 1 calc(calc(100%/12 - 2 * 20px) * 1 + (1 - 1) * 2 * 20px);
+}
+.order_1 {
+  order: 1;
+}
+.grid_2 {
+  margin: 20px 20px;
+  flex: 1 1 calc(calc(100%/12 - 2 * 20px) * 2 + (2 - 1) * 2 * 20px);
+}
+.order_2 {
+  order: 2;
+}
+.grid_3 {
+  margin: 20px 20px;
+  flex: 1 1 calc(calc(100%/12 - 2 * 20px) * 3 + (3 - 1) * 2 * 20px);
+}
+.order_3 {
+  order: 3;
+}
+.grid_4 {
+  margin: 20px 20px;
+  flex: 1 1 calc(calc(100%/12 - 2 * 20px) * 4 + (4 - 1) * 2 * 20px);
+}
+.order_4 {
+  order: 4;
+}
+.grid_5 {
+  margin: 20px 20px;
+  flex: 1 1 calc(calc(100%/12 - 2 * 20px) * 5 + (5 - 1) * 2 * 20px);
+}
+.order_5 {
+  order: 5;
+}
+.grid_6 {
+  margin: 20px 20px;
+  flex: 1 1 calc(calc(100%/12 - 2 * 20px) * 6 + (6 - 1) * 2 * 20px);
+}
+.order_6 {
+  order: 6;
+}
+.grid_7 {
+  margin: 20px 20px;
+  flex: 1 1 calc(calc(100%/12 - 2 * 20px) * 7 + (7 - 1) * 2 * 20px);
+}
+.order_7 {
+  order: 7;
+}
+.grid_8 {
+  margin: 20px 20px;
+  flex: 1 1 calc(calc(100%/12 - 2 * 20px) * 8 + (8 - 1) * 2 * 20px);
+}
+.order_8 {
+  order: 8;
+}
+.grid_9 {
+  margin: 20px 20px;
+  flex: 1 1 calc(calc(100%/12 - 2 * 20px) * 9 + (9 - 1) * 2 * 20px);
+}
+.order_9 {
+  order: 9;
+}
+.grid_10 {
+  margin: 20px 20px;
+  flex: 1 1 calc(calc(100%/12 - 2 * 20px) * 10 + (10 - 1) * 2 * 20px);
+}
+.order_10 {
+  order: 10;
+}
+.grid_11 {
+  margin: 20px 20px;
+  flex: 1 1 calc(calc(100%/12 - 2 * 20px) * 11 + (11 - 1) * 2 * 20px);
+}
+.order_11 {
+  order: 11;
+}
+.grid_12 {
+  margin: 20px 20px;
+  flex: 1 1 calc(calc(100%/12 - 2 * 20px) * 12 + (12 - 1) * 2 * 20px);
+}
+.order_12 {
+  order: 12;
+}
+/*no margin*/
+.alpha {
+  margin-left: 0;
+}
+.omega {
+  margin-right: 0;
+}
+/*extra space: prefix(left-spacing) suffix(right-spacing)*/
+.prefix_1 {
+  padding-left: calc(calc(100%/12 - 2 * 20px) * 1 + 1 * 2 * 20px);
+}
+.suffix_1 {
+  padding-right: calc(calc(100%/12 - 2 * 20px) * 1 + 1 * 2 * 20px);
+}
+.prefix_2 {
+  padding-left: calc(calc(100%/12 - 2 * 20px) * 2 + 2 * 2 * 20px);
+}
+.suffix_2 {
+  padding-right: calc(calc(100%/12 - 2 * 20px) * 2 + 2 * 2 * 20px);
+}
+.prefix_3 {
+  padding-left: calc(calc(100%/12 - 2 * 20px) * 3 + 3 * 2 * 20px);
+}
+.suffix_3 {
+  padding-right: calc(calc(100%/12 - 2 * 20px) * 3 + 3 * 2 * 20px);
+}
+.prefix_4 {
+  padding-left: calc(calc(100%/12 - 2 * 20px) * 4 + 4 * 2 * 20px);
+}
+.suffix_4 {
+  padding-right: calc(calc(100%/12 - 2 * 20px) * 4 + 4 * 2 * 20px);
+}
+.prefix_5 {
+  padding-left: calc(calc(100%/12 - 2 * 20px) * 5 + 5 * 2 * 20px);
+}
+.suffix_5 {
+  padding-right: calc(calc(100%/12 - 2 * 20px) * 5 + 5 * 2 * 20px);
+}
+.prefix_6 {
+  padding-left: calc(calc(100%/12 - 2 * 20px) * 6 + 6 * 2 * 20px);
+}
+.suffix_6 {
+  padding-right: calc(calc(100%/12 - 2 * 20px) * 6 + 6 * 2 * 20px);
+}
+.prefix_7 {
+  padding-left: calc(calc(100%/12 - 2 * 20px) * 7 + 7 * 2 * 20px);
+}
+.suffix_7 {
+  padding-right: calc(calc(100%/12 - 2 * 20px) * 7 + 7 * 2 * 20px);
+}
+.prefix_8 {
+  padding-left: calc(calc(100%/12 - 2 * 20px) * 8 + 8 * 2 * 20px);
+}
+.suffix_8 {
+  padding-right: calc(calc(100%/12 - 2 * 20px) * 8 + 8 * 2 * 20px);
+}
+.prefix_9 {
+  padding-left: calc(calc(100%/12 - 2 * 20px) * 9 + 9 * 2 * 20px);
+}
+.suffix_9 {
+  padding-right: calc(calc(100%/12 - 2 * 20px) * 9 + 9 * 2 * 20px);
+}
+.prefix_10 {
+  padding-left: calc(calc(100%/12 - 2 * 20px) * 10 + 10 * 2 * 20px);
+}
+.suffix_10 {
+  padding-right: calc(calc(100%/12 - 2 * 20px) * 10 + 10 * 2 * 20px);
+}
+.prefix_11 {
+  padding-left: calc(calc(100%/12 - 2 * 20px) * 11 + 11 * 2 * 20px);
+}
+.suffix_11 {
+  padding-right: calc(calc(100%/12 - 2 * 20px) * 11 + 11 * 2 * 20px);
+}
+/*justify-content*/
+.justify-content-start {
+  justify-content: start;
+}
+.justify-content-center {
+  justify-content: center;
+}
+.justify-content-around {
+  justify-content: space-around;
+}
+.justify-content-between {
+  justify-content: space-between;
+}
+.justify-content-end {
+  justify-content: end;
+}
+/*# sourceMappingURL=grids.css.map */

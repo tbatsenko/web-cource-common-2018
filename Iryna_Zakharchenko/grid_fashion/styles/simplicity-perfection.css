@@ -1,0 +1,39 @@
+.simplicity-perfection{
+    display: grid;
+    justify-content: center;
+    grid-template-columns: repeat(12, 1fr);
+
+    margin-top: 3em;
+}
+
+.simplicity-perfection__pre-text{
+    justify-self: center;
+    grid-column: 1/13;
+}
+.simplicity-perfection__main-text{
+    justify-self: center;
+    grid-column: 1/13;
+
+}
+.simplicity-perfection__post-text{
+    width: 22em;
+    text-align: center;
+
+    grid-column: 1/13;
+    justify-self: center;
+}
+
+.simplicity-perfection__create-text{
+    grid-column: 1/13;
+    justify-self: center;
+
+    font-size: 0.8em;
+    color: grey;
+    margin-top: 3em;
+}
+
+.simplicity-perfection__photo{
+    grid-column: 3/11;
+    justify-self: center;
+    margin-top: 3em;
+}

@@ -1,0 +1,15 @@
+.main-layout-header__info-container {
+    grid-column: 2/3;
+    grid-template-columns: repeat(4, 1fr);
+    display: grid;
+
+}
+
+.main-layout-header__button__none-border--none-backg {
+    border: none;
+    background: none;
+}
+
+.main-layout-header__button-us {
+    grid-column: 2/3;
+}

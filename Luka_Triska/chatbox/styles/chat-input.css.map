@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAAA,gBAAiB;EACf,MAAM,EAAE,IAAI;EACZ,UAAU,EAAE,iBAAiB;EAE7B,sBAAQ;IACN,KAAK,EAAE,IAAI;IACX,MAAM,EAAE,CAAC;IACT,YAAY,EAAE,IAAI",
+"sources": ["chat-input.scss"],
+"names": [],
+"file": "chat-input.css"
+}
