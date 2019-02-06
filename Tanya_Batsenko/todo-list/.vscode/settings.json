@@ -24,11 +24,18 @@
   "editor.suggest.snippetsPreventQuickSuggestions": false,
   "php.suggest.basic": false,
   "editor.suggest.filterGraceful": false,
-  "javascript.suggest.names": false,
   "editor.parameterHints.enabled": false,
   "workbench.tips.enabled": false,
   "javascript.suggest.paths": false,
   "html.suggest.html5": false,
-  "javascript.suggest.enabled": false,
-  "typescript.suggest.paths": false
+  "typescript.suggest.paths": false,
+  "editor.acceptSuggestionOnCommitCharacter": false,
+  "typescript.autoClosingTags": false,
+  "path-intellisense.absolutePathToWorkspace": false,
+  "git.autofetch": true,
+  "tsimporter.spaceBetweenBraces": false,
+  "tsimporter.emitSemicolon": false,
+  "typescriptHero.imports.removeTrailingIndex": false,
+  "typescriptHero.imports.insertSpaceBeforeAndAfterImportBraces": false,
+  "typescriptHero.imports.insertSemicolons": false
 }

@@ -1,3 +1,5 @@
+import MONTHS from './DATE_CONSTANTS';
+
 export default class Calendar {
   constructor() {
     this.today = new Date();
@@ -6,60 +8,40 @@ export default class Calendar {
     this.selectYear = document.getElementById('year');
     this.selectMonth = document.getElementById('month');
     this.selectedDate = this.today;
-    this.selectedCellId = '';
+    this.selectedCellId = undefined;
 
-    this.onSelectDate = date => {
-      const onSelectDateEvent = Calendar.createDateUpdateEvent('onSelectDateEvent', date);
-      document.getElementById('app').dispatchEvent(onSelectDateEvent);
-    };
-
-    this.onResetDate = () => {
-      const date = '';
-      const onResetDateEvent = Calendar.createDateUpdateEvent('onResetDateEvent', date);
-      document.getElementById('app').dispatchEvent(onResetDateEvent);
-    };
-
-    this.months = [
-      'Jan',
-      'Feb',
-      'Mar',
-      'Apr',
-      'May',
-      'Jun',
-      'Jul',
-      'Aug',
-      'Sep',
-      'Oct',
-      'Nov',
-      'Dec'
-    ];
+    this.months = MONTHS;
     this.monthAndYear = document.getElementById('monthAndYear');
 
     document.getElementById('reset-date').addEventListener('click', () => {
       this.updateShownDate();
-      this.onResetDate();
+      Calendar.onResetDate();
     });
 
     this.showCalendar(this.currentMonth, this.currentYear);
     this.updateShownDate();
   }
 
-  next() {
-    this.onSelectDate();
-    this.currentYear = this.currentMonth === 11 ? this.currentYear + 1 : this.currentYear;
-    this.currentMonth = (this.currentMonth + 1) % 12;
-    this.showCalendar(this.currentMonth, this.currentYear);
+  static onSelectDate(date) {
+    const onSelectDateEvent = Calendar.createDateUpdateEvent('onSelectDateEvent', date);
+    document.getElementById('app').dispatchEvent(onSelectDateEvent);
   }
 
-  previous() {
-    this.currentYear = this.currentMonth === 0 ? this.currentYear - 1 : this.currentYear;
-    this.currentMonth = this.currentMonth === 0 ? 11 : this.currentMonth - 1;
-    this.showCalendar(this.currentMonth, this.currentYear);
+  static onResetDate() {
+    const date = '';
+    const onResetDateEvent = Calendar.createDateUpdateEvent('onResetDateEvent', date);
+    document.getElementById('app').dispatchEvent(onResetDateEvent);
   }
 
-  jump() {
-    this.currentYear = parseInt(this.selectYear.value, 10);
-    this.currentMonth = parseInt(this.selectMonth.value, 10);
+  jump(value) {
+    if (value === -1) {
+      this.currentMonth = 11;
+      this.currentYear -= 1;
+    } else if (value === 12) {
+      this.currentMonth = 0;
+      this.currentYear += 1;
+    } else if (value < 13) this.currentMonth = parseInt(value, 10);
+    if (value > 13) this.currentYear = parseInt(value, 10);
     this.showCalendar(this.currentMonth, this.currentYear);
   }
 
@@ -67,15 +49,16 @@ export default class Calendar {
     let innerText = '';
     if (date === '') {
       innerText = 'All tasks: ';
-      if (this.selectedCellId)
+      if (this.selectedCellId && this) {
         document.getElementById(this.selectedCellId).classList.remove('selected-cell');
+      }
       this.selectedCellId = '';
     } else {
       const dateArr = date.split('-'); // 2018-11-9 -> [2018, 11, 9]
       const newDate = `${this.months[dateArr[1] - 1]} ${dateArr[2]}, ${dateArr[0]}`; // Dec 9, 2018
       innerText = `Tasks for ${newDate}`;
       this.selectedDate = date;
-      this.onSelectDate(date);
+      Calendar.onSelectDate(date);
     }
     document.getElementById('today-date').innerText = innerText;
   }
@@ -124,14 +107,19 @@ export default class Calendar {
           cell.addEventListener('click', event => {
             const filterByDate = event.target.id;
 
-            if (this.selectedCellId)
-              document.getElementById(this.selectedCellId).classList.remove('selected-cell');
+            if (this && this.selectedCellId != null && this.selectedCellId !== undefined) {
+              try {
+                document.getElementById(this.selectedCellId).classList.remove('selected-cell');
+              } catch (e) {
+                console.error(e);
+              }
+            }
 
             cell.classList.add('selected-cell');
             this.selectedCellId = event.target.id;
 
             this.updateShownDate(filterByDate);
-            this.onSelectDate(filterByDate);
+            Calendar.onSelectDate(filterByDate);
           });
           if (
             date === this.today.getDate() &&

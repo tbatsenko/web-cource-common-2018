@@ -56,7 +56,6 @@ select {
   color: white;
 
   background: #C51162;
-  /* fallback for old browsers */
 }
 
 #calendar {
@@ -123,17 +122,11 @@ td:hover {
 
 }
 
-.today-date {
-
-}
-
 .selected-cell {
   background-color: rgb(167, 15, 83);
   border-radius: 50%;
 }
 
 .todo__completed {
-
   text-decoration: line-through;
-
 }

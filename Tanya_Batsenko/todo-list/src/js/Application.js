@@ -13,12 +13,11 @@ export default class Application {
     document.addEventListener('onResetDateEvent', () => {
       this.handleResetDateEvent();
     });
-    // const data = JSON.parse(localStorage.getItem('tasks'));
   }
 
   handleSelectDateEvent(event) {
     this.todoList.selectedDate = event.detail.date;
-    this.todoList.updateTodoList(event.detail.date);
+    this.todoList.updateTodoList();
   }
 
   handleResetDateEvent() {

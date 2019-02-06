@@ -1,9 +1,5 @@
-import ApiService from './ApiService';
-
 export default class TodoList {
-  constructor(serverURL = 'http://localhost:3000') {
-    this.serverURL = serverURL;
-    this.todosURL = `${serverURL}/todos/`;
+  constructor() {
     this.selectedDate = '';
     this.tasks = JSON.parse(localStorage.getItem('tasks'));
     if (this.tasks) {
@@ -21,18 +17,9 @@ export default class TodoList {
         else this.addTodo();
       }
     });
-
-    document.getElementById('todo-list');
   }
 
-  async getTodos() {
-    const url =
-      this.serverURL + (this.selectedDate === '' ? `/todos` : `/todos/?when=${this.selectedDate}`);
-    const todosResp = await ApiService.getRequest(url);
-    return todosResp;
-  }
-
-  async addTodo(date = '2019-1-30') {
+  addTodo(date = '2019-1-30') {
     const taskTitle = document.getElementById('add-task').value;
 
     if (taskTitle === '') {
@@ -51,7 +38,6 @@ export default class TodoList {
 
     this.tasks.push(newTask);
     localStorage.setItem('tasks', JSON.stringify(this.tasks));
-    // await ApiService.postRequest(this.todosURL, requestBody);
 
     this.updateTodoList(date);
 
@@ -60,40 +46,25 @@ export default class TodoList {
   }
 
   async deleteTodo(itemId) {
-    // const url = `${this.todosURL}${itemId}`;
-    // await ApiService.deleteRequest(url);
     this.tasks = this.tasks.filter(task => task.uniqueId !== itemId);
     localStorage.setItem('tasks', JSON.stringify(this.tasks));
     this.updateTodoList();
   }
 
   async updateTodoStatus(itemId, status) {
-    // const url = `${this.todosURL}${itemId}`;
     const statusString = status ? 'completed' : 'active';
 
-    // const requestBody = {
-    //   status: statusString
-    // };
-
-    // await ApiService.patchRequest(url, requestBody);
-    let taskToEdit = this.tasks.filter(task => task.uniqueId === itemId);
+    const taskToEdit = this.tasks.filter(task => task.uniqueId === itemId);
     this.tasks = this.tasks.filter(task => task.uniqueId !== itemId);
-    console.log(taskToEdit);
     taskToEdit[0].status = statusString;
     this.tasks.push(taskToEdit[0]);
 
     localStorage.setItem('tasks', JSON.stringify(this.tasks));
 
-    this.updateTodoList(this.selectedDate);
+    this.updateTodoList();
   }
 
-  async updateTodoList(filterDate = '') {
-    // try {
-    //   todos = await this.getTodos(filterDate);
-    // } catch (e) {
-    //   console.error(e); // eslint-disable-line no-console
-    // }
-
+  async updateTodoList() {
     let todos = JSON.parse(localStorage.getItem('tasks'));
     if (this.selectedDate !== '' && todos) {
       todos = todos.filter(todo => todo.when === this.selectedDate);
@@ -153,7 +124,6 @@ export default class TodoList {
     checkboxes.map(btn =>
       btn.addEventListener('change', event => {
         try {
-          console.log(event); // eslint-disable-line no-console
           const itemId = event.target.id.split('-').pop(); // checkbox-10
           const checkboxStatus = event.target.checked;
           this.updateTodoStatus(itemId, checkboxStatus);
@@ -169,6 +139,8 @@ export default class TodoList {
     // Math.random should be unique because of its seeding algorithm.
     // Convert it to base 36 (numbers + letters), and grab the first 9 characters
     // after the decimal.
-    return '_' + Math.random().toString(36).substr(2, 9);
+    return `_ ${Math.random()
+      .toString(36)
+      .substr(2, 9)}`;
   }
 }
