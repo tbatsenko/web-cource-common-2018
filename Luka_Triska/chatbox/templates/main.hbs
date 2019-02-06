@@ -4,6 +4,48 @@
             <div class="chat-header__user-info--icon"></div>
             <p class="chat-header__user-info--name">Kristaps Elsins</p>
         </section>
+            <div class="chat-header__action-buttons">
+                <button class="chat-header__action-button">
+                    <img class="chat-header__action-button-img" src="../images/Plus.png" alt="Plus">
+                </button>
+                <button class="chat-header__action-button">
+                    <img class="chat-header__action-button-img" src="../images/Video.png" alt="Video">
+                </button>
+                <button class="chat-header__action-button">
+                    <img class="chat-header__action-button-img" src="../images/Cog.png" alt="Setting">
+                </button>
+                <button class="chat-header__action-button">
+                    <img class="chat-header__action-button-img" src="../images/Close.png" alt="Close">
+                </button>
+            </div>
+    </header>
+    <section class="chat-messages" id="chat-messages-kris">
+        {{#each messages}}
+            {{#if date}}
+                <div class="chat-messages__item--date">
+                    {{content}}
+                </div>
+            {{else}}
+                <div class="chat-messages__item-layout">
+                    <div class="chat-messages__item chat-messages__item--{{#if sender}}kris{{else}}else{{/if}}">
+                        {{content}}
+                    </div>
+                </div>
+            {{/if}}
+        {{/each}}
+    </section>
+    <section class="chat-user-input">
+            <input class="chat-user-input__form" id="chat-user-input-kris" type="text" placeholder="Type a message...">
+    </section>
+</main>
+
+
+<main class="main-container">
+    <header class="chat-header">
+        <section class="chat-header__user-info">
+            <div class="chat-header__user-info--icon"></div>
+            <p class="chat-header__user-info--name">Someone Else</p>
+        </section>
         <div class="chat-header__action-buttons">
             <button class="chat-header__action-button">
                 <img class="chat-header__action-button-img" src="../images/Plus.png" alt="Plus">
@@ -19,7 +61,7 @@
             </button>
         </div>
     </header>
-    <section class="chat-messages">
+    <section class="chat-messages" id="chat-messages-else">
         {{#each messages}}
             {{#if date}}
                 <div class="chat-messages__item--date">
@@ -27,7 +69,7 @@
                 </div>
             {{else}}
                 <div class="chat-messages__item-layout">
-                    <div class="chat-messages__item chat-messages__item--{{#if sender}}me{{else}}them{{/if}}">
+                    <div class="chat-messages__item chat-messages__item--{{#if sender}}else{{else}}kris{{/if}}">
                         {{content}}
                     </div>
                 </div>
@@ -35,6 +77,7 @@
         {{/each}}
     </section>
     <section class="chat-user-input">
-            <input class="chat-user-input__form" type="text" placeholder="Type a message...">
+        <input class="chat-user-input__form" id="chat-user-input-else" type="text" placeholder="Type a message...">
     </section>
 </main>
+

@@ -8,10 +8,13 @@
     <link rel="stylesheet" href="styles/chat-messages.css">
     <link rel="stylesheet" href="styles/chat-input.css">
 
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+
     <link rel="stylesheet" href="styles/common.css">
 </head>
 <body>
 
+<!--
 <script src="node_modules/handlebars/dist/handlebars.js"></script>
 <script>
   const render = async (templateSrc, dataSrc, container) => {
@@ -26,8 +29,177 @@
   };
 
   renderPage();
-</script>
 
+</script>
+<script src="src/main.js"></script>
+-->
+
+<main class="main-container">
+    <header class="chat-header">
+        <section class="chat-header__user-info">
+            <div class="chat-header__user-info--icon"></div>
+            <p class="chat-header__user-info--name">Mykhailo Ivankiv</p>
+        </section>
+        <div class="chat-header__action-buttons">
+            <button class="chat-header__action-button">
+                <img class="chat-header__action-button-img" src="images/Plus.png" alt="Plus">
+            </button>
+            <button class="chat-header__action-button">
+                <img class="chat-header__action-button-img" src="images/Video.png" alt="Video">
+            </button>
+            <button class="chat-header__action-button">
+                <img class="chat-header__action-button-img" src="images/Cog.png" alt="Setting">
+            </button>
+            <button class="chat-header__action-button">
+                <img class="chat-header__action-button-img" src="images/Close.png" alt="Close">
+            </button>
+        </div>
+    </header>
+    <section class="chat-messages" id="chat-messages-kris">
+        <!--
+                <div class="chat-messages__item-layout">
+                    <div class="chat-messages__item chat-messages__item&#45;&#45;else">
+                        Yo, Can you update views?
+                    </div>
+                </div>
+                <div class="chat-messages__item&#45;&#45;date">
+                    FRI 11:30AM
+                </div>
+                <div class="chat-messages__item-layout">
+                    <div class="chat-messages__item chat-messages__item&#45;&#45;else">
+                        I can’t see updated views yet
+                    </div>
+                </div>
+                <div class="chat-messages__item-layout">
+                    <div class="chat-messages__item chat-messages__item&#45;&#45;kris">
+                        Hi, as I noted in Email last week - I am on vacation.
+                    </div>
+                </div>
+                <div class="chat-messages__item-layout">
+                    <div class="chat-messages__item chat-messages__item&#45;&#45;kris">
+                        I will be back next week
+                    </div>
+                </div>
+                <div class="chat-messages__item-layout">
+                    <div class="chat-messages__item chat-messages__item&#45;&#45;else">
+                        Ahh sorry, missed that!
+                    </div>
+                </div>
+                <div class="chat-messages__item-layout">
+                    <div class="chat-messages__item chat-messages__item&#45;&#45;else">
+                        Let’s talk next week
+                    </div>
+                </div>
+        -->
+    </section>
+    <section class="chat-input--layout">
+        <form class="chat-input__form" onkeypress="return event.keyCode !== 13">
+            <input class="chat-input" id="chat-user-input-kris" type="text" placeholder="Type a message...">
+        </form>
+        <footer class="chat-input__icon-footer">
+            <button class="footer__action-button">
+                <img class="footer__action-button-img" src="images/picture.png" alt="Picture">
+            </button>
+            <button class="footer__action-button">
+                <img class="footer__action-button-img" src="images/gif.png" alt="Gif">
+            </button>
+            <button class="footer__action-button">
+                <img class="footer__action-button-img" src="images/smile.png" alt="Smile">
+            </button>
+            <button class="footer__action-button">
+                <img class="footer__action-button-img" src="images/calendar.png" alt="Calendar">
+            </button>
+            <button class="footer__action-button">
+                <img class="footer__action-button-img" src="images/camera.png" alt="Camera">
+            </button>
+        </footer>
+    </section>
+</main>
+
+<main class="main-container">
+    <header class="chat-header">
+        <section class="chat-header__user-info">
+            <div class="chat-header__user-info--icon"></div>
+            <p class="chat-header__user-info--name">Luka</p>
+        </section>
+        <div class="chat-header__action-buttons">
+            <button class="chat-header__action-button">
+                <img class="chat-header__action-button-img" src="images/Plus.png" alt="Plus">
+            </button>
+            <button class="chat-header__action-button">
+                <img class="chat-header__action-button-img" src="images/Video.png" alt="Video">
+            </button>
+            <button class="chat-header__action-button">
+                <img class="chat-header__action-button-img" src="images/Cog.png" alt="Setting">
+            </button>
+            <button class="chat-header__action-button">
+                <img class="chat-header__action-button-img" src="images/Close.png" alt="Close">
+            </button>
+        </div>
+    </header>
+    <section class="chat-messages" id="chat-messages-else">
+        <!--
+                <div class="chat-messages__item-layout">
+                    <div class="chat-messages__item chat-messages__item&#45;&#45;kris">
+                        Yo, Can you update views?
+                    </div>
+                </div>
+                <div class="chat-messages__item&#45;&#45;date">
+                    FRI 11:30AM
+                </div>
+                <div class="chat-messages__item-layout">
+                    <div class="chat-messages__item chat-messages__item&#45;&#45;kris">
+                        I can’t see updated views yet
+                    </div>
+                </div>
+                <div class="chat-messages__item-layout">
+                    <div class="chat-messages__item chat-messages__item&#45;&#45;else">
+                        Hi, as I noted in Email last week - I am on vacation.
+                    </div>
+                </div>
+                <div class="chat-messages__item-layout">
+                    <div class="chat-messages__item chat-messages__item&#45;&#45;else">
+                        I will be back next week
+                    </div>
+                </div>
+                <div class="chat-messages__item-layout">
+                    <div class="chat-messages__item chat-messages__item&#45;&#45;kris">
+                        Ahh sorry, missed that!
+                    </div>
+                </div>
+                <div class="chat-messages__item-layout">
+                    <div class="chat-messages__item chat-messages__item&#45;&#45;kris">
+                        Let’s talk next week
+                    </div>
+                </div>
+        -->
+    </section>
+    <section class="chat-input--layout">
+        <form class="chat-input__form" onkeypress="return event.keyCode !== 13">
+            <input class="chat-input" id="chat-user-input-else" type="text" placeholder="Type a message...">
+        </form>
+        <footer class="chat-input__icon-footer">
+            <button class="footer__action-button">
+                <img class="footer__action-button-img" src="images/picture.png" alt="Picture">
+            </button>
+            <button class="footer__action-button">
+                <img class="footer__action-button-img" src="images/gif.png" alt="Gif">
+            </button>
+            <button class="footer__action-button">
+                <img class="footer__action-button-img" src="images/smile.png" alt="Smile">
+            </button>
+            <button class="footer__action-button">
+                <img class="footer__action-button-img" src="images/calendar.png" alt="Calendar">
+            </button>
+            <button class="footer__action-button">
+                <img class="footer__action-button-img" src="images/camera.png" alt="Camera">
+            </button>
+        </footer>
+    </section>
+
+</main>
+
+<script src="src/main.js"></script>
 
 </body>
 </html>

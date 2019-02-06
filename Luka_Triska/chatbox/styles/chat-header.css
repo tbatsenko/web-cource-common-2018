@@ -7,20 +7,21 @@
   border-radius: 4px 4px 0 0; }
   .chat-header__user-info {
     display: flex;
-    flex-flow: row;
     align-items: center;
-    justify-content: space-around;
-    width: 110px;
-    margin-left: 5px; }
+    margin-left: 12px; }
     .chat-header__user-info--icon {
       width: 6px;
       height: 6px;
-      background-color: #69f0ae; }
+      background-color: #69f0ae;
+      border-radius: 100%; }
     .chat-header__user-info--name {
       font-size: 12px;
       font-weight: bold;
-      margin: 0;
-      color: #ffffff; }
+      color: #ffffff;
+      margin: 0 0 0 9px; }
+    .chat-header__user-info--name:hover {
+      cursor: pointer;
+      text-decoration: underline; }
   .chat-header__action-button {
     border: 0;
     background: 0; }
